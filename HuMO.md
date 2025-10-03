@@ -6,5 +6,5 @@ HuMO might work with I2V workflows.
 
 It is not possible to stop characters opening their mouth with HuMO.
 
-Without InifiniteTalk Kijai's node HuMO limited to less than 4 seconds of generation.
+Without InifiniteTalk HuMO is limited to less than 4 seconds of generation.
 
