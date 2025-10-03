@@ -4,6 +4,7 @@ This is a completely unofficial and highly opinionated collection of small tidbi
 WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issues and Pull Requests are welcome via the [github repository](https://github.com/wanx-troopers/wanx-troopers.github.io).
 
 * [Learning Resources](learning-resources.md)
+* [Hidden Knowledge](hidden-knowledge.md)
 * [Lora Alchemy](LoRA-alchemy.md)
 * [HuMO](HuMO.md)
 * [Wan Animate](WanAnimate.md)
