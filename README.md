@@ -6,7 +6,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [Learning Resources](learning-resources.md)
 * [Hidden Knowledge](hidden-knowledge.md)
 * [Lora Alchemy](LoRA-alchemy.md)
-* [HuMO](HuMO.md)
+* [HuMo](HuMo-info.md)
 * [Wan Animate](WanAnimate.md)
 * [Random Claims](random-claims.md)
 
