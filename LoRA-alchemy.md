@@ -34,4 +34,4 @@ Vastly incomplete.
 
 ## Noteworthy Loras
 
-Car consistency: [drnighthan/CarConsistency-Wan2.2-I2V-ConsistencyLoRA1](https://huggingface.co/drnighthan/CarConsistency-Wan2.2-I2V-ConsistencyLoRA1/tree/main)
+Car/Clorth/Product consistency: [drnighthan on HuggingFace](https://huggingface.co/drnighthan)
