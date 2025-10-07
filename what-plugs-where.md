@@ -19,10 +19,25 @@ Bonus nodes: Create Video, Save Video, Points Editor, (Down)Load SAM2Model, Sam2
 
 Not entirely clear if inpainted area needs to be gray-ed out in `control video` input to `WanVaceToVideo`
 
+### Kijai's Wrapper
+
+| Embeds Node | Inputs | Model |
+| :-- | :-- | :-- |
+| WanVideo VACE Encode | input_frames, input_masks, ref_images | VACE + Wan |
+
+### WanVideo VACE Start To End Frame
+
+* inputs: `start_image`, `end_image`, `num_frames` and, confusingly, `control_images` and `inpaint_mask`
+* outputs: `images`, `masks`
+
+Can be used to prepare `input_frames` for `WanVideo VACE Encode`.
+
 ## Notes on Using VACE (2.1 and 2.2 Fun)
 
 ```
-WanVideo VACE Start To End Frame -->  | Replace Images In Batch |
-                                      |                         | --> Preview Image 
-LoadImage  ------------------------>  |                         |
+WanVideo VACE Start To End Frame --------------------> | Replace Images  |
+                                                       | In Batch        | --> Preview Image,
+LoadImage  ---> ResizeImage ---> RepeatImageBatch ---> |                 |     WanVideo VACE Encode --> ..
+                                                       |                 |
+SolidMask  ---> RepeatMask --------------------------> |                 |
 ```
