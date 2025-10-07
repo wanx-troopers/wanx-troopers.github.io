@@ -17,6 +17,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 
 * [Lynx](lynx.md)
 * [Ovi](ovi.md)
+* [Other](other.md)
 
 All content here is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode.txt).
 By contributing to this repository via Issues, Pull Requests, or other means, you agree that your contributions are licensed under the same CC BY 4.0 license.
