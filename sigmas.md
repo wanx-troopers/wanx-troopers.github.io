@@ -17,3 +17,16 @@ WanVideo Scheduler
       v 
 Preview Any
 ```
+
+## Wan 2.2 Switchover
+
+Advice on switching from hight noise to low noise model with WAN 2.2
+
+| Model Type | Switchover Sigma |
+| :--- | :--- |
+| I2V | 0.9 |
+| T2V | 0.875 |
+
+## Alternative Tools
+
+`Get Sigma` from [BlenderNeko/ComfyUI_Noise](https://github.com/BlenderNeko/ComfyUI_Noise)
