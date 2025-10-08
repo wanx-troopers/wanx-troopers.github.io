@@ -32,6 +32,11 @@ Other nodes you will likely see in the same workflow are
 * RandomNoise - noise input for 1st WAN 2.2 sampler
 * DisableNoise - noise input for 2nd WAN 2.2 sampler
 
+Note: `model` input on `Basic Scheduler` in Kijai's words
+> just tells the scheduler that this is flow match model, so any wan model will do
+
+E.g. one `Basic Scheduler`/`Sigmas Split Value` can drive two `Custom Sampler Advanced` nodes with diff models.
+
 ## Wan 2.2 Switchover
 
 Advice on switching from hight noise to low noise model with WAN 2.2
