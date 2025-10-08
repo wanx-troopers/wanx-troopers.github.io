@@ -21,10 +21,17 @@ Not entirely clear if inpainted area needs to be gray-ed out in `control video` 
 
 ### Kijai's Wrapper
 
-| Embeds Node | Inputs | Model |
-| :-- | :-- | :-- |
-| WanVideo VACE Encode | input_frames, input_masks, ref_images | VACE + Wan |
-| WanVideo Empty Embeds | width, height, number_of_frames | Wan? Ovi |
+| Pre Embeds Node| Pre Embeds Inputs -> Output | Embeds Node | Input from Pre / Embeds Inputs -> Output | Model | WanVideo Sampler Input |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| - | - | WanVideo VACE Encode | / input_frames, input_masks, ref_images<br>-> vace_embeds | VACE + Wan T2V family | image_embeds |
+| - | - | WanVideo ImageToVideo Encode | / start_image, end_image, control_embeds?, temporal_mask?, extra_latents?, add_cond_latents?<br>-> image_embeds | Wan I2V family | image_embeds |
+| - | - | - | Kijai: "5B is different as it puts the image in the noise latent"; Ovi based on WAN 5B, so.. | - | - |
+| WanVideo Encode | image, mask<br>-> samples | WanVideo Empty Embeds | **extra_latents** / width, height, number_of_frames<br>-> image_embeds | Ovi | image_embeds |
+| ... | ... | WanVideo Add Extra Latent | embeds, latent_index = 0<br>"can be end image too technically" | Ovi | - |
+| - | - | WanVideo Empty MMAudio Latents | length -> samples | Ovi | samples |
+
+
+Note: ? denotes parts which are not clear enough.
 
 ### WanVideo VACE Start To End Frame
 
