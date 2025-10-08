@@ -17,6 +17,7 @@ As of 08 Oct 2025 please use Ovi branch in the repository. Wiring:
 | ... | ... | WanVideo Add Extra Latent | embeds, latent_index = 0<br>"can be end image too technically" | Ovi | - |
 | - | - | WanVideo Empty MMAudio Latents | length -> samples | Ovi | samples |
 
-Extra nodes: `Ovi MMAudio Loader`, `WanVideo Decode Ovi Audio`, `WanVideo Ovi CFG` - adds negative prompt for audio, `WanVideo EasyCache` (??).
+Extra nodes: `Ovi MMAudio Loader`, `WanVideo Decode Ovi Audio`, `WanVideo Ovi CFG` - adds negative prompt for audio.
+`WanVideo EasyCache`.
 
-MMAudio VAE model weights either to vae or mmaudio folder.
+Put MMAudio VAE model weights into either `vae` or `mmaudio` folder.

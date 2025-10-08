@@ -2,9 +2,7 @@
 
 A big table analysing workflows available online to take note of which embeds node can be used with which model (.safetensors).
 
-## VACE Inpainting
-
-### Native KSampler
+## Native KSampler
 
 * `2.2 Fun VACE` (high/low) loaded by Kijai's `Diffusion Model Selector` nodes
 * `Wan 2.2 T2V` (high/low) loaded by Kiaji's `Diffusion Model Loader KJ` nodes
@@ -19,7 +17,7 @@ Bonus nodes: Create Video, Save Video, Points Editor, (Down)Load SAM2Model, Sam2
 
 Not entirely clear if inpainted area needs to be gray-ed out in `control video` input to `WanVaceToVideo`
 
-### Kijai's Wrapper
+## Kijai's Wrapper
 
 | Pre Embeds Node| Pre Embeds Inputs -> Output | Embeds Node | Input from Pre / Embeds Inputs -> Output | Model | WanVideo Sampler Input |
 | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -28,7 +26,7 @@ Not entirely clear if inpainted area needs to be gray-ed out in `control video` 
 
 Note: ? denotes parts which are not clear enough.
 
-### WanVideo VACE Start To End Frame
+## WanVideo VACE Start To End Frame
 
 * inputs: `start_image`, `end_image`, `num_frames` and, confusingly, `control_images` and `inpaint_mask`
 * outputs: `images`, `masks`
@@ -45,6 +43,6 @@ LoadImage  ---> ResizeImage ---> RepeatImageBatch ---> |                 |     W
 SolidMask  ---> RepeatMask --------------------------> |                 |
 ```
 
-### Ovi
+## Ovi
 
 In [Ovi](ovi.md) section.
