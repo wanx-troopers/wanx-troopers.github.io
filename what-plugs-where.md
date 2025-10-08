@@ -24,6 +24,7 @@ Not entirely clear if inpainted area needs to be gray-ed out in `control video` 
 | Embeds Node | Inputs | Model |
 | :-- | :-- | :-- |
 | WanVideo VACE Encode | input_frames, input_masks, ref_images | VACE + Wan |
+| WanVideo Empty Embeds | width, height, number_of_frames | Wan? Ovi |
 
 ### WanVideo VACE Start To End Frame
 

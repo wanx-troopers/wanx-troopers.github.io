@@ -18,6 +18,9 @@ WanVideo Scheduler
 Preview Any
 ```
 
+`WanVideo Scheduler` outputs `end_step` as float number matching its input.
+This is likely because you can still wire that float number in `WanVideo Sampler` start or end step and it will work correctly - so long as scheduler is in sync between `Wan Video Scheduler` and `WanVideo Sampler` - conjecture.
+
 ## Native Nodes For Working With Sigmas
 
 * Basic Scheduler
