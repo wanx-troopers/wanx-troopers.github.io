@@ -3,6 +3,7 @@
 * [Wan 2.1 T2V Transparent Background](https://github.com/WeChatCV/Wan-Alpha)
 * [LanPaint](https://github.com/scraed/LanPaint)
 * [Low-VRAM-High-RAM-Ostris-AI-Toolkit-Lora-Training](https://x.com/ostrisai/status/1975642220960072047)
+* Unianimate
 
 ## Deliberately Not Covered
 

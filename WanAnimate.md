@@ -21,3 +21,13 @@ Kijai on WanAnimate with Uni3C:
 > I've had it work before, so it definitely can work
 
 Apparently can be used with [Lynx](lynx.md).
+
+## WanAnimate V2
+
+Kijai:
+
+> I named the fixed scaled fp8 model v2, which in hindsight was a mistake as people are taking it too literally  
+> it's a bugfix for native workflows since there was pretty drastic noise issue in the initial fp8 scaled in native  
+> [original version, so called v1 is] very slightly better in the wrapper as the face encoder layers are in bf16  
+
+> [so-called V3 from Eddy1111111] is probably just Lora merge or something
