@@ -37,3 +37,5 @@ Vastly incomplete.
 ## Noteworthy Loras
 
 Car/Clorth/Product consistency: [drnighthan on HuggingFace](https://huggingface.co/drnighthan)
+
+Cseti/wan2.2-14B-Kinestasis_concept-lora-v1: [Cseti/wan2.2-14B-Kinestasis_concept-lora-v1](https://huggingface.co/Cseti/wan2.2-14B-Kinestasis_concept-lora-v1)

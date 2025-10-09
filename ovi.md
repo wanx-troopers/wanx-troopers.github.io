@@ -21,3 +21,11 @@ Extra nodes: `Ovi MMAudio Loader`, `WanVideo Decode Ovi Audio`, `WanVideo Ovi CF
 `WanVideo EasyCache`.
 
 Put MMAudio VAE model weights into either `vae` or `mmaudio` folder.
+
+Fastwan 5B lora seems a better than 5B turbo.
+
+Sample prompt:
+```markdown
+The man says: <S>Hello, how do you do?<E>
+The woman replies: <S>Hello, how do you do?<E>
+```

@@ -1,6 +1,8 @@
 # Statements
 
-## Kijai Q&A
+## Kijai Quotes
+
+### AniSora
 
 > Q: does the anisora model work with the usual lightX2v loras ?  
 > A: the 3.2 is already distilled, so no need for that, the older versions do work with the loras  
@@ -8,9 +10,18 @@
 > 8 steps  
 > I also extracted it into a lora that works ok https://huggingface.co/Kijai/WanVideo_comfy/blob/main/LoRAs/AniSora/Wan2_2_I2V_AniSora_3_2_HIGH_rank_64_fp16.safetensors
 
+### Flash Attention
+
 > Q: In wrapper we can't use flashattn?  
 > A: at least flash2, I never tried 3  
 > [WanVideo Uni3C Controlnet Loader] uses it's own attention so never added [flashattn] there
+
+### Lora Merging
+
+> silly to merge to fp8 scaled model  
+> Q: so merging the bf16 model with any loras then converting them down would be the best way  , yes ?  
+> A: yeah always merge at highest precision you can and only then quant it  
+> if you end up only using the quantized version it may not matter -that- much, but still as rule of thumb
 
 ## Random Claims
 
@@ -21,3 +32,10 @@ Loras trained on Wan2.1-VACE-14B-diffusers work though not perfectly with WanAni
 Negative prompt is ignored with CFG=1 in wrapper samplers but can be re-enabled by using `WanVideoNAG` node.
 
 Not bad for realism: 250928 from [LoRAs/Wan22-Lightning](https://huggingface.co/lightx2v/Wan2.2-Lightning/tree/main) 0.7 strength, 1.4 CFG, 3 steps on WAN 2.2 low noise.
+
+Tiled vae doesn't work with vace extend - makes generated part blurry and the position is slightly shifted ???
+Kijai: looked at the code and since that doesn't set the tile size, it's set by dividing the width and height by half, so that probably creates badly sized tiles for some resolutions or something
+I believe these are the original defaults: tile_size=(34, 34), tile_stride=(18, 16)
+so 720 would be 90 in latent space, than in half you get 45 tile size
+dunno why it wouldn't work really
+unless it's VACE issue in general and it just doesn't like tiled encode
