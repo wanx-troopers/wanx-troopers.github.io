@@ -3,6 +3,10 @@
 This is a completely unofficial and highly opinionated collection of small tidbits of knowledge on [Kijai's nodes](https://github.com/kijai/ComfyUI-WanVideoWrapper),
 WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issues and Pull Requests are welcome via the [github repository](https://github.com/wanx-troopers/wanx-troopers.github.io).
 
+## News
+
+* [Timeline](timeline.md)
+
 ## Core
 
 * [Hidden Knowledge](hidden-knowledge.md)
@@ -10,8 +14,13 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [Lora Alchemy](LoRA-alchemy.md)
 * [HuMo](HuMo-info.md)
 * [Wan Animate](WanAnimate.md)
-* [Statements](statements.md)
 * [What Plugs Where](what-plugs-where.md)
+
+## Misc
+
+* [Tricks](tricks.md)
+* [Statements](statements.md)
+
 
 ## Experimental
 

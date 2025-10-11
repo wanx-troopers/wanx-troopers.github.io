@@ -24,6 +24,10 @@ Put MMAudio VAE model weights into either `vae` or `mmaudio` folder.
 
 Fastwan 5B lora seems a better than 5B turbo.
 
+Kijai: WAN 2.2 VAE is only for 5B model; Ovi is based on 5B.
+
+Ovi means "door" in Finnish.
+
 Sample prompt:
 ```markdown
 The man says: <S>Hello, how do you do?<E>

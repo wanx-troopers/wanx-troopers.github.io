@@ -2,6 +2,8 @@
 
 ## Kijai Quotes
 
+> WAN 2.2 VAE is only for 5B model; Ovi is based on 5B
+
 ### AniSora
 
 > Q: does the anisora model work with the usual lightX2v loras ?  
