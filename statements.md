@@ -41,3 +41,7 @@ I believe these are the original defaults: tile_size=(34, 34), tile_stride=(18, 
 so 720 would be 90 in latent space, than in half you get 45 tile size
 dunno why it wouldn't work really
 unless it's VACE issue in general and it just doesn't like tiled encode
+
+Apparently SDE samplers are not a good fit when distilled loras/models are in use
+> DE samplers add noise they can do harm at low steps  
+> If you want a general good safe sampler then UniPC is good

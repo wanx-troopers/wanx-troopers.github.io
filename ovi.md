@@ -28,6 +28,8 @@ Kijai: WAN 2.2 VAE is only for 5B model; Ovi is based on 5B.
 
 Ovi means "door" in Finnish.
 
+Apparently Ovi can do anime style quite well.
+
 Sample prompt:
 ```markdown
 The man says: <S>Hello, how do you do?<E>
