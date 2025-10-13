@@ -47,6 +47,7 @@ Supplementary
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | - | - | `WanVideo VACE Encode` | / `input_frames`, `input_masks`, `ref_images`<br>-> `vace_embeds` | VACE + Wan T2V family | `image_embeds` |
 | - | - | `WanVideo ImageToVideo Encode` | / `start_image`, `end_image`, `control_embeds`?, `temporal_mask`?, `extra_latents`, `add_cond_latents`?<br>-> `image_embeds` | Wan I2V family | `image_embeds` |
+| - | - | `Multi/Infinite Talk Wav2vec Embeds` | `wav2vec_model`, ... |  Wan 2.1 I2V family | `image_embeds` |
 
 Note: ? denotes parts which are not clear enough.
 
@@ -76,4 +77,6 @@ LoadImage  ---> ResizeImage ---> RepeatImageBatch ---> |                 |     W
 SolidMask  ---> RepeatMask --------------------------> |                 |
 ```
 
-## Ovi: [Ovi](ovi.md) section
+## [Wan Animate](WanAnimate.md#what-plugs-where) Section
+
+## [Ovi](ovi.md) Section

@@ -13,6 +13,10 @@ Important:
 * either have both BG and mask connected (background from driving video)
 * or have both BG and mask disconnected (background from reference image)
 
+There are two ways to produce longer videos in a batched manner
+- specify `frame_window_size` in `Wan VideoAnimate Embeds`
+- connect `Context Options` to `WanVideo Sampler` (`frame_window_size`, likely, to be set to full number of frames same as on `WanVideo Sampler`)
+
 With Kijai's nodes face video can be simply disconnected. In native nodes one may need to connect a black image/video.
 Yes, the mask has to be blocky. Sometimes increasing blocks size can make things better.
 Blocky mask bleeding into produced video might get fixed if face is connected.
@@ -22,7 +26,7 @@ Kijai on WanAnimate with Uni3C:
 
 Apparently can be used with [Lynx](lynx.md).
 
-## WanAnimate V2
+## WanAnimate V2 .safetensors File
 
 Kijai:
 
@@ -31,3 +35,9 @@ Kijai:
 > [original version, so called v1 is] very slightly better in the wrapper as the face encoder layers are in bf16  
 
 > [so-called V3 from Eddy1111111] is probably just Lora merge or something
+
+## What Plugs Where
+
+| Pre Embeds Node| Pre Embeds Inputs -> Output | Embeds Node | Input from Pre / Embeds Inputs -> Output | Model | WanVideo Sampler Input |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| `WanVideo ClipVision Encode` | `clip_vision`, `image_1`, `image_2`<br>-> `image_embeds`  | `Wan VideoAnimate Embeds` | `clip_embeds` / `ref_images`, `pose_images`, `face_images`, `bg_images`, `mask` | Wan 2.1 I2V family | `image_embeds` |

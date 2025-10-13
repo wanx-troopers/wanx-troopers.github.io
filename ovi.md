@@ -35,3 +35,6 @@ Sample prompt:
 The man says: <S>Hello, how do you do?<E>
 The woman replies: <S>Hello, how do you do?<E>
 ```
+
+Kijai's baseline testing setup: 50 steps with easycache skipping 14 steps, cfg 4.0.
+> adding zero star, seems to change audio slightly (whatever that means)

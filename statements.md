@@ -53,3 +53,17 @@ Re choice of attention for RTX3090: flash is deprecated, sage 3 fast but quality
 radial also takes a noticable quality hit, which might not be that bad for a lot of gens;
 another user: "but I noticed in, infinitetalk as an example, it really muted the expressiveness of lip syncs";
 original commenter: "sage 1 is still quite good".
+
+Take a subject and their motion and put it in a new setting/style (via img/txt);
+take a subject's motion but replace the subject (via img/txt) in the same setting/style:
+Wan Animate for humans, VACE for objects.
+
+One way to "uplift" a video: normal t2v workflow, except pass input video to vae encoder, then pass to ksampler with like 0.5-0.7 denoise.
+
+5+5 cfg  3 is nice for closeups.
+
+Florence is too good; Used it for like 2 years at this point lol.
+
+Wan 2.2 High with MPS Reward + Magref Low (RCM distill Lora for both strength 1) - sort of works; LayerForge node to put a character or two, the node can remove their background with Matting button, white background.
+
+The movement tends to be better for t2v; sometimes its great to get a good base video from a good t2V and then u can paint over it.
