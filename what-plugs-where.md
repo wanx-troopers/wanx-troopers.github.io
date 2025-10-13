@@ -39,6 +39,7 @@ Supplementary
 * `WanVideo VAE Loader`
 * `WanVideo Torch Compile Settings` (-> `compile_args` input of `WanVideo Model Loader`)
 * `WanVideo Set Block Swap` (chain after `WanVideo Model Loader`)
+* `WanVideo Lora Block Edit` (switching off block 0 might help remove 1st frame flash)
 
 ### Embeds In Wrapper
 
