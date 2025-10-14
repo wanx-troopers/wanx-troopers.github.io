@@ -33,6 +33,7 @@ New distillation of WAN 2.1 from NVidia associated developers: [code](https://gi
 | --- | --- | --- | --- |
 | Kijai/WanVideo_comfy | LoRAs/Wan22-Lightning/<br>Wan22_A14B_T2V_HIGH_Lightning_4steps_lora_250928_rank128_fp16 | 2.2 | new, recommended |
 | Kijai/WanVideo_comfy | LoRAs/Wan22-Lightning/<br>Wan22_A14B_T2V_LOW_Lightning_4steps_lora_250928_rank64_fp16 | 2.2 | - |
+| Kijai/WanVideo_comfy | [LoRAs/Wan22_Lightx2v/Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/LoRAs/Wan22_Lightx2v/Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors) | 2.2 |  new, recommended, only high worthy of attention |
 | Kijai/WanVideo_comfy | LoRAs/rCM/<br>Wan_2_1_T2V_14B_rCM_lora_average_rank_148_bf16 | 2.1 | new from NVidia, give it a try? should preserve motion |
 | Kijai/WanVideo_comfy | Lightx2v/<br>lightx2v_I2V_14B_480p_cfg_step_distill_rank256_bf16 | 2.1 | Old but good, worth a try on 2.2 |
 | Kijai/WanVideo_comfy | Lightx2v/<br>lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank256_bf16 | 2.1 | - |
