@@ -1,6 +1,8 @@
 # OVI
 
-Ovi is an open-source model capable of sound + video generation. Video quality at 5B level. 24fps. Requires 24Gb VRAM to run in 8fp and 32Gb VRAM to run in 16fp.
+Ovi is an open-source model capable of sound + video generation. Video quality at 5B level. 24fps.
+
+Initially required 24Gb VRAM to run in 8fp and 32Gb VRAM to run in 16fp.
 
 Githubs:
 * [ComfyUI_RH_Ovi](https://github.com/HM-RunningHub/ComfyUI_RH_Ovi)
@@ -20,6 +22,8 @@ There is a sample workflow in Kijai's repository. Wiring:
 Extra nodes: `Ovi MMAudio Loader`, `WanVideo Decode Ovi Audio`, `WanVideo Ovi CFG` - adds negative prompt for audio.
 `WanVideo EasyCache`.
 
+`WanVideo Controlnet Apply` - fed by `WanVideo Controlnet Loader` and with `control_images` (video) - can be chained after `WanVideo Model Loader`.
+
 Kijai: "I don't see much difference between full 50 steps and when using EasyCache, it's pretty safe".  
 Kijai: "it's basically around 11B".
 
@@ -27,7 +31,7 @@ Put MMAudio VAE model weights into either `vae` or `mmaudio` folder.
 
 Fastwan 5B lora seems a better than 5B turbo.
 
-Kijai: WAN 2.2 VAE is only for 5B model; Ovi is based on 5B.
+Kijai: WAN 2.2 VAE is only for 5B model; Ovi is based on Wan 2.2 TI2V 5B so it fits.
 
 Ovi means "door" in Finnish.
 
@@ -43,3 +47,9 @@ Kijai's baseline testing setup: 50 steps with easycache skipping 14 steps, cfg 4
 > adding zero star, seems to change audio slightly (whatever that means)
 
 Possible workflow: put Ovi render into the InfiniteTalk workflow with the audio from the Ovi render and a low denoise in 3 steps for an upscale.
+
+## Controlnets
+
+Ovi has been successfully used with depth control controlnet trained for Wan 2.2 TI2V 5B. It is likely HED and Canny controlnets will also work.
+
+![ovi-controlnet.png](screenshots/ovi-controlnet.png)
