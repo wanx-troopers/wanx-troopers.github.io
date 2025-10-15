@@ -8,7 +8,7 @@ Githubs:
 
 ## Kijai's Support For Ovi
 
-As of 08 Oct 2025 please use Ovi branch in the repository. Wiring:
+There is a sample workflow in Kijai's repository. Wiring:
 
 | Pre Embeds Node| Pre Embeds Inputs -> Output | Embeds Node | Input from Pre / Embeds Inputs -> Output | Model | WanVideo Sampler Input |
 | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -19,6 +19,9 @@ As of 08 Oct 2025 please use Ovi branch in the repository. Wiring:
 
 Extra nodes: `Ovi MMAudio Loader`, `WanVideo Decode Ovi Audio`, `WanVideo Ovi CFG` - adds negative prompt for audio.
 `WanVideo EasyCache`.
+
+Kijai: "I don't see much difference between full 50 steps and when using EasyCache, it's pretty safe".  
+Kijai: "it's basically around 11B".
 
 Put MMAudio VAE model weights into either `vae` or `mmaudio` folder.
 
@@ -38,3 +41,5 @@ The woman replies: <S>Hello, how do you do?<E>
 
 Kijai's baseline testing setup: 50 steps with easycache skipping 14 steps, cfg 4.0.
 > adding zero star, seems to change audio slightly (whatever that means)
+
+Possible workflow: put Ovi render into the InfiniteTalk workflow with the audio from the Ovi render and a low denoise in 3 steps for an upscale.

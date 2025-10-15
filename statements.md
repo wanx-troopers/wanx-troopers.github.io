@@ -67,3 +67,5 @@ Florence is too good; Used it for like 2 years at this point lol.
 Wan 2.2 High with MPS Reward + Magref Low (RCM distill Lora for both strength 1) - sort of works; LayerForge node to put a character or two, the node can remove their background with Matting button, white background.
 
 The movement tends to be better for t2v; sometimes its great to get a good base video from a good t2V and then u can paint over it.
+
+"CFG zero star" seems to mean inputting "0*" into CFG. "was for rectified flow DiTs in general; used a heuristic which might not be good for Wan 2.2; it was an approximation".

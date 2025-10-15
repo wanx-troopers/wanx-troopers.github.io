@@ -42,6 +42,8 @@ Note: `model` input on `Basic Scheduler` in Kijai's words
 
 E.g. one `Basic Scheduler`/`Sigmas Split Value` can drive two `Custom Sampler Advanced` nodes with diff models.
 
+Can plug `Dummy Comfy Wan Model Object` -> `WanVideo Scheduler` -> `WanVideo Sampler`. Then `Dummy Comfy Wan Model Object` sets shift. One way to configure linear quadratic.
+
 ## Wan 2.2 Switchover
 
 Advice on switching from hight noise to low noise model with WAN 2.2

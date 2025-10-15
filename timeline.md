@@ -1,7 +1,8 @@
 # News
 
 2025.14.10 Wan2.2-I2V-A14B-Moe-Distill-Lightx2v/high released: Kijai's [Fix](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Wan22_Lightx2v)  
-low model released is 2.1 so one of old LoRAs advised
+low model released is 2.1 so one of old LoRAs advised; also as [full models](https://huggingface.co/lightx2v/Wan2.2-I2V-A14B-Moe-Distill-Lightx2v/tree/main/distill_models)  
+could use lightx2v_I2V_14B_480p_cfg_step_distill_rank256_bf16.safetensors on low
 
 2025.13.10 Kijai fixed a bug causing clip embeds to be ignored when working with [Wan Animate](WanAnimate.md)
 

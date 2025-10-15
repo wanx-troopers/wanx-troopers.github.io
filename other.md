@@ -7,6 +7,8 @@
 * [SeC 4B](https://github.com/9nate-drake/Comfyui-SecNodes) Video Segmentation
 * [GalaxyTimeMachine's canceller](https://gist.github.com/blepping/99aeb38d7b26a4dbbbbd5034dca8aca8)
 * Chinese Diffsync Studio - a diffuser-based alternative to ComfyUI
+* [StepVideo Repo](https://github.com/hao-ai-lab/FastVideo) it has a sliding window attn kernel for H100s
+* `Pad Image Batch Interleaved` node from Kijai to generate intermediate frames with Wan 2.2
 
 ## Deliberately Not Covered
 

@@ -29,12 +29,17 @@ New distillation of WAN 2.1 from NVidia associated developers: [code](https://gi
 
 ## Noteworthy Loras
 
+Kijai 2025-Oct-14 (this refers to high noise wan 2.2 too):
+> well the thing is that nothing beats the old 2.1 lightx2v still"  
+> 6 steps, split in middle and first step with cfg 2.0  
+> strength 3.0 for high and 1.0 for low
+
 | Repo | Lora | Generation | Comment |
 | --- | --- | --- | --- |
-| Kijai/WanVideo_comfy | LoRAs/Wan22-Lightning/<br>Wan22_A14B_T2V_HIGH_Lightning_4steps_lora_250928_rank128_fp16 | 2.2 | new, recommended |
-| Kijai/WanVideo_comfy | LoRAs/Wan22-Lightning/<br>Wan22_A14B_T2V_LOW_Lightning_4steps_lora_250928_rank64_fp16 | 2.2 | - |
-| Kijai/WanVideo_comfy | [LoRAs/Wan22_Lightx2v/Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/LoRAs/Wan22_Lightx2v/Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors) | 2.2 |  new, recommended, only high worthy of attention |
-| Kijai/WanVideo_comfy | LoRAs/rCM/<br>Wan_2_1_T2V_14B_rCM_lora_average_rank_148_bf16 | 2.1 | new from NVidia, give it a try? should preserve motion |
+| Kijai/WanVideo_comfy | LoRAs/Wan22-Lightning/<br>Wan22_A14B_T2V_HIGH_Lightning_4steps_lora_250928_rank128_fp16 | 2.2 T2V | new, recommended |
+| Kijai/WanVideo_comfy | LoRAs/Wan22-Lightning/<br>Wan22_A14B_T2V_LOW_Lightning_4steps_lora_250928_rank64_fp16 | 2.2 T2V | - |
+| Kijai/WanVideo_comfy | [LoRAs/Wan22_Lightx2v/Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/LoRAs/Wan22_Lightx2v/Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors) | 2.2 I2V |  new, recommended, only high,<br>worthy of attention;<br>ghosting with simple scheduler but not linear quadratic? |
+| Kijai/WanVideo_comfy | LoRAs/rCM/<br>Wan_2_1_T2V_14B_rCM_lora_average_rank_148_bf16 | 2.1 T2V | new from NVidia, give it a try? should preserve motion |
 | Kijai/WanVideo_comfy | Lightx2v/<br>lightx2v_I2V_14B_480p_cfg_step_distill_rank256_bf16 | 2.1 | Old but good, worth a try on 2.2 |
 | Kijai/WanVideo_comfy | Lightx2v/<br>lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank256_bf16 | 2.1 | - |
 | Kijai/WanVideo_comfy | Lightx2v/<br>lightx2v_14B_T2V_cfg_step_distill_lora_adaptive_rank_quantile_0.15_bf16 | 2.1 | some artists find this good on 2.2 |
@@ -54,8 +59,32 @@ Vastly incomplete.
 | both high/low: lightx2v_14B_T2V_cfg_step_distill_lora_adaptive_rank_quantile_0.15_bf16.safetensors | Wan 2.2 T2V High/Low | - | - | [Kijai/WanVideo_comfy](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Lightx2v) |
 | high: lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank256_bf16<br>low: ?|  Wan 2.2 T2V High/Low | 2.5 str on high | - | [Kijai/WanVideo_comfy](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Lightx2v) |
 
+Note: "dyno" model does patching which cannot be done by a lora.
+
 ## Special Use
 
 Car/Clorth/Product consistency: [drnighthan on HuggingFace](https://huggingface.co/drnighthan)
 
 Cseti/wan2.2-14B-Kinestasis_concept-lora-v1: [Cseti/wan2.2-14B-Kinestasis_concept-lora-v1](https://huggingface.co/Cseti/wan2.2-14B-Kinestasis_concept-lora-v1)
+
+## Both Ways
+
+A number of models exist both as models and as LoRA-s.
+
+| Model | Notes |
+| --- | --- |
+| Dyno | T2V Wan 2.2 High |
+| Wan 2.2 I2V Moe Distill Lightx2v | I2V Wan 2.2 High only |
+| CauseVid | Wan 2.1, can be used as Wan 2.2 Low |
+
+## Idea For High CFG
+
+Skimmed CFG from [Extraltodeus/Skimmed_CFG](https://github.com/Extraltodeus/Skimmed_CFG).
+High CFG in the sampler helps to follow the prompt, skimming prevents the burn issue.
+
+## Some Interesting Words
+
+> Lora = low-rank matrix factorisation  
+> Loha = hadamard product matrix factorisation   
+> Lokr = kronecker product matrix decomposition  
+> In bongmath language
