@@ -32,3 +32,7 @@ All content here is licensed under [CC BY 4.0](https://creativecommons.org/licen
 All statements on this site reflect our opinions and editorial decisions.
 By contributing to this repository via Issues, Pull Requests, or other means, you agree that your contributions are licensed under the same CC BY 4.0 license.
 View the full documentation website: [https://wanx-troopers.github.io](https://wanx-troopers.github.io).
+
+## P.S.
+
+* [Extra Tools](extra-tools.md)
