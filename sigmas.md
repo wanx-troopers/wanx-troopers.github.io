@@ -18,10 +18,12 @@ WanVideo Scheduler
 Preview Any
 ```
 
-`WanVideo Scheduler` outputs `end_step` as float number matching its input.
-This is likely because you can still wire that float number in `WanVideo Sampler` start or end step and it will work correctly - so long as scheduler is in sync between `Wan Video Scheduler` and `WanVideo Sampler` - conjecture.
+* `WanVideo Scheduler` outputs `end_step` as float number matching its input.  
+  This is likely because you can still wire that float number in `WanVideo Sampler` start or end step and it will work correctly - so long as scheduler is in sync between `Wan Video Scheduler` and `WanVideo Sampler` - conjecture.
 
-`Create CFG Schedule Float List` - not sigma but often set in the same part of workflow.
+* `String To Float List` - facility to specify sigmas directly
+* `Create CFG Schedule Float List` - not sigma but often set in the same part of workflow.
+* `Preview Any` - easy to way to check output from the two above mentioned nodes
 
 ## Native Nodes For Working With Sigmas
 

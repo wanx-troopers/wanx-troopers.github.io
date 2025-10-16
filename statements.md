@@ -69,3 +69,7 @@ Wan 2.2 High with MPS Reward + Magref Low (RCM distill Lora for both strength 1)
 The movement tends to be better for t2v; sometimes its great to get a good base video from a good t2V and then u can paint over it.
 
 "CFG zero star" seems to mean inputting "0*" into CFG. "was for rectified flow DiTs in general; used a heuristic which might not be good for Wan 2.2; it was an approximation".
+
+Hunyuan video model has horrors in training data, a mild horror lora can bring them out.
+
+nympy 1.26.4 is considered a stable version.

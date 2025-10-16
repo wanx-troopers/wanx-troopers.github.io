@@ -9,6 +9,8 @@
 * Chinese Diffsync Studio - a diffuser-based alternative to ComfyUI
 * [StepVideo Repo](https://github.com/hao-ai-lab/FastVideo) it has a sliding window attn kernel for H100s
 * `Pad Image Batch Interleaved` node from Kijai to generate intermediate frames with Wan 2.2
+* `Pusa`: a LoRA "that allows Wan T2V model to use input images, it can do I2V or frame extentions"
+* [TaylorSeer](https://github.com/philipy1219/ComfyUI-TaylorSeer) like TeaCache but better; 50 steps 50% faster; native not Kijai; not for small # of steps
 
 ## Deliberately Not Covered
 

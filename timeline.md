@@ -5,7 +5,7 @@
 this is part of `triton-windows 3.5.0.post21` release
 
 2025.10.16 Kijai added nodes and an [example workflow](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_1_3B_FlashVSR_upscale_example.json) for FlashVSR upscaler  
-Very fast, 1 step, but likely lesser quality than slow upscalers; context options allow longer than 81 frames upscaling at the cost of minor glitches; alternatives: seedvr2.
+Very fast, 1 step, but likely lesser quality than slow upscalers; context options allow longer than 81 frames upscaling at the cost of minor glitches; no sageattn, use spda; alternatives: seedvr2.
 
 2025.10.15 Ovi has been proven to work with [Controlnets](ovi.md#controlnets)
 
