@@ -69,6 +69,10 @@ Vastly incomplete.
 
 Note: "dyno" model does patching which cannot be done by a lora.
 
+## Reward Loras
+
+Re HPS and MPS "reward" loras: "if it's not human-domain these loras are not going to well well do to rewards heavily biased towards people aesthetics. So say, doing a demon, it'll be more human than demon".
+
 ## Special Use
 
 Car/Clorth/Product consistency: [drnighthan on HuggingFace](https://huggingface.co/drnighthan)

@@ -1,5 +1,9 @@
 # News
 
+2025.10.18 Issues causing increased VRAM usage and excessive/failing triton compilations have hopefully been resolved
+in latest ComfyUI and Wrapper; advice on torch version from Kijai:
+> 2.8.0 problematic, 2.9 and 2.10.0-dev should be fine with latest Comfy and Wrapper
+
 2025.10.17 [lightx2v/Wan2.2-Distill-Loras](https://huggingface.co/lightx2v/Wan2.2-Distill-Loras) HF repo has been re-organized; files moved; fp8 versions for some of the files were added;
 some of the distillations which were previously only available as loars are now offered as full-fat models; some of the loras are offered both in comfy and safetensor compatible versions
 

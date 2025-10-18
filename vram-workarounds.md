@@ -20,3 +20,14 @@ Another source of higher VRAM usage was traced to triton compilation. It seems o
 * clean triton caches manually and restart ComfyUI
 * set `force_parameter_static_shapes` to `false` in `TorchCompileModelWanVideoV2`
 * manually edit `comfy/model_patcher.py` file adding `@torch.compiler.disable()` one line above `class LowVramPatch:`
+* commented out all `run_every_op()` from ops.py - this will undo "fast cancellation" change
+
+Kijai 18 Oct 2025 9:21 GMT:
+> The workarounds for the cancellation call and the torch compile disable on the
+> problematic bit of the code are merged to comfyUI already btw
+
+Kijai re torch 18 Oct 2025 9:27 GMT:
+> 2.8.0 was problematic so sticking with 2.7 was fine  
+> 2.9 has one problematic bit that needed workarounds for Wan VAE,  
+> so that needs latest ComfyUI version to work  
+> I'm on 2.10.0 dev and seems to work too
