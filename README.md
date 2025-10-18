@@ -36,3 +36,4 @@ View the full documentation website: [https://wanx-troopers.github.io](https://w
 ## P.S.
 
 * [Extra Tools](extra-tools.md)
+* [Oct 2025 VRAM Workarounds](vram-workarounds.md)

@@ -46,9 +46,6 @@ Apparently SDE samplers are not a good fit when distilled loras/models are in us
 > DE samplers add noise they can do harm at low steps  
 > If you want a general good safe sampler then UniPC is good
 
-Kijail on SEC segmentation mode
->  the sec model still is SAM2.1, it's just extra guidance for it, the segmentation is still just SAM
-
 Re choice of attention for RTX3090: flash is deprecated, sage 3 fast but quality is bad, sdpa is the best for quality, radial is for longer gens;
 radial also takes a noticable quality hit, which might not be that bad for a lot of gens;
 another user: "but I noticed in, infinitetalk as an example, it really muted the expressiveness of lip syncs";

@@ -22,6 +22,8 @@ Supplementary; chain after model loader
 | :-- | :-- | :-- | :-- |
 | `WanVaceToVideo` | `control_video`, `masks`, `ref_image`, `pos/neg` | VACE + Wan | `trim_latent` from `WanVaceToVideo` to `TrimLatentNode` |
 
+This embeds node gives both `ref_image` and `control_video` the same strength; Kijai: "it's overall strength of the VACE conditioning".
+
 Bonus nodes: `Create Video`, `Save Video`, `Points Editor`, `(Down)Load SAM2Model`, `Sam2Segmentation`, `GrowMask`, `Preview Animation`, `Empty Image` (color 8421504), `ImageComposeMask`.
 
 Not entirely clear if inpainted area needs to be gray-ed out in `control video` input to `WanVaceToVideo`
@@ -41,6 +43,7 @@ Supplementary
 * `WanVideo Set Block Swap` (chain after `WanVideo Model Loader`)
 * `WanVideo Lora Block Edit` (switching off block 0 might help remove 1st frame flash)
 * `WanVideo Text Encoder Cached` (avoid re-running text encoding on each execution, free up a little VRAM)
+* `WanVideo RoPE Function` (check tooltip on `rope_function` in `WanVideoSampler`; see also: [RoPE](hidden-knowledge.md#rope))
 
 ### Embeds In Wrapper
 
@@ -58,6 +61,8 @@ Note: ? denotes parts which are not clear enough.
 * outputs: `images`, `masks`
 
 Can be used to prepare `input_frames` for `WanVideo VACE Encode`.
+Both `start_image` and `end_image` can be sequences of say 10 nodes.
+
 Bonus nodes:
 
 * `Solid Mask`
@@ -77,6 +82,11 @@ LoadImage  ---> ResizeImage ---> RepeatImageBatch ---> |                 |     W
                                                        |                 |
 SolidMask  ---> RepeatMask --------------------------> |                 |
 ```
+
+## Misc
+
+* `Points Editor` from [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) used in workflows utilizing Sam2 for segmentation.
+* `Rope Function Node` from [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) - mysterious but holds promise.
 
 ## [Wan Animate](WanAnimate.md#what-plugs-where) Section
 
