@@ -17,6 +17,9 @@
 * [Create Any 3D and 4D Scenes from a Single Image](https://github.com/wenqsun/DimensionX) Kijai: this was released today after 10 month wait, and honestly it was always pretty damn good
 * fspy, you can make 3d models from 2d images
 * Musubi Trainer for Wan 2.2/2.1, AI Toolkit for 5B?
+* [DiT360](https://fenghora.github.io/DiT360-Page/) open-source AI tool (flux lora?) to generate panaroamic images
+* [KangLiao/Puffin](https://huggingface.co/KangLiao/Puffin) open-source AI model which understands camera angles and can transform images
+* [dvlab-research/DreamOmni2](https://github.com/dvlab-research/DreamOmni2) a flux lora? to help combine up to 4 image references or do image style transfer
 
 ## Deliberately Not Covered
 
@@ -27,5 +30,3 @@
 * [casterpollux/MiniMax-bmo](https://github.com/casterpollux/MiniMax-bmo) 1.3B model, somehow 30Gb download
 
 ## Promising But Not Immediately Useful
-
-* [FaceCLIP](https://huggingface.co/ByteDance/FaceCLIP) from ByteDance - promises of Flux.1 Dev for now - code not yet on Github as of 2025-Oct-14

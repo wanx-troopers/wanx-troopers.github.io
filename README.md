@@ -20,6 +20,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 
 ## Misc
 
+* [Upscalers](upscalers.md)
 * [Tricks](tricks.md)
 * [Statements](statements.md)
 
@@ -34,7 +35,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 
 * [Extra Tools](extra-tools.md)
 * [Tricks](tricks.md)
-* [Oct 2025 VRAM Workarounds](vram-workarounds.md)
+* [Recommended Software Versions](versions.md)
 
 All content here is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode.txt).
 All statements on this site reflect our opinions and editorial decisions.

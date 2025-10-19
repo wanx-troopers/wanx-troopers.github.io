@@ -33,6 +33,12 @@ Can be used with WAN 2.1 and possibly 2.2 T2V models.
 User:
 > rcm at strength 4.0 on high has been working pretty decent for me; I'm using rank148 rcm at high 4.0 shift 7 + lightning at 1.0 on low. 4 steps dpm++sde
 
+Not recommended for I2V, a user:
+> I work mostly in I2V and I found that the rCM Lora changes stuff too much when used in Low.
+> Identify shifts .. don't think it really helped in High either.
+> If I get the strength high enough that it starts having an effect it starts creating more artifacts.
+> In theory an I2V version can be trained, but Nvidia said they weren't going to do it.
+
 ## Noteworthy Loras
 
 Kijai 2025-Oct-14 (this refers to high noise wan 2.2 too):
@@ -48,6 +54,12 @@ Kijai 2025-Oct-18
 
 > If we don't count accvid/fast wan etc. That, in my opinion, changes the output too much from original
 > Though with that criteria I'd forget the 2.2 Lightning as well pretty much
+
+Kijai 2025-Oct-19
+> Q: Kijai, which one are you using still the i2v 480 or t2v rank 64 and 3.0 with high and 1 with low?..  
+> A: Something like that  
+> Q: and a pinch of cfg on high, right?  
+> A: First step at least
 
 | Repo | Lora | Generation | Comment |
 | --- | --- | --- | --- |
@@ -84,13 +96,13 @@ Re HPS and MPS "reward" loras: "if it's not human-domain these loras are not goi
 
 ## Special Use
 
-Car/Clorth/Product consistency: [drnighthan on HuggingFace](https://huggingface.co/drnighthan)
+Wan 2.1 and 2.2 LoRA-s:
 
-[Cseti/wan2.2-14B-Kinestasis_concept-lora-v1](https://huggingface.co/Cseti/wan2.2-14B-Kinestasis_concept-lora-v1)
-
-[Cseti/LTXV-13B-LoRA-Wallace_and_Gromit-v1](https://huggingface.co/Cseti/LTXV-13B-LoRA-Wallace_and_Gromit-v1) aka Walgro
-
-Nebsh's [Lazy Susan Rotation Wan 2.2](https://www.runninghub.ai/model/public/1979104800396709889) trained on I2V but works on T2V too. (Simple but costly way to train: https://wavespeed.ai/models/wavespeed-ai/wan-2.2-i2v-lora-trainer, this one at 150steps was $7.5, trained on 6 videos from Higgsfield).	
+* [Cseti/wan2.2-14B-Kinestasis_concept-lora-v1](https://huggingface.co/Cseti/wan2.2-14B-Kinestasis_concept-lora-v1)
+* [Cseti/LTXV-13B-LoRA-Wallace_and_Gromit-v1](https://huggingface.co/Cseti/LTXV-13B-LoRA-Wallace_and_Gromit-v1) aka Walgro
+* [Charlietooth/wan2.1-14B-lora-punk-style](https://huggingface.co/Charlietooth/wan2.1-14B-lora-punk-style/tree/main) - a mix of cartoonish and realistic look
+* Nebsh's [Lazy Susan Rotation Wan 2.2](https://www.runninghub.ai/model/public/1979104800396709889) trained on I2V but works on T2V too. (Simple but costly way to train: https://wavespeed.ai/models/wavespeed-ai/wan-2.2-i2v-lora-trainer, this one at 150steps was $7.5, trained on 6 videos from Higgsfield).	
+* Car/Clorth/Product consistency: [drnighthan on HuggingFace](https://huggingface.co/drnighthan)
 
 ## Both Ways
 

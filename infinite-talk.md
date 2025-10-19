@@ -10,6 +10,8 @@ They additionally use a "InfiniteTalk Model" such as `Wan_2_1-InfiniteTalk-Multi
 
 `clip_vision_h` and `wav2vec` .safetensors files are loaded as well.
 
+Can do start image + audio to video as well as start video + audio to video. Can use up to 4 audio tracks and masks to show which character is associated with which file.
+
 ## Nodes
 
 |Name In Code (sometimes easier to understand)|Name on Screen|

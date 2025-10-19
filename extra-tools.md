@@ -27,6 +27,9 @@ Sample workflow on HF next to LoRA.
 | --- | --- |
 | lovis93/next-scene-qwen-image-lora-2509 | next-scene_lora_v1-3000.safetensors |
 
+### Face Consistency With Qwen?
+
+[WithAnyone](https://doby-xu.github.io/WithAnyone/)
 
 ## Hunyuan Foley Generator
 
@@ -38,8 +41,15 @@ Sample workflow on HF next to LoRA.
 | ComfyUI-HunyuanVideo-Foley | synchformer_state_dict_fp16 |
 | ComfyUI-HunyuanVideo-Foley | vae_128d_48k_fp16 |
 
+## Honourable Mention
+
+VibeVoice TTS
+
+`SuperPrompt` node from [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes).
+
+[Urabewe/OllamaVision](https://github.com/Urabewe/OllamaVision) a SwarmUI extension to generate prompts.
+
 ## Useful Nodes
 
 * `Resize Image v2` from [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) new mode is `total_pixels` copies what `WanVideo Image Resize To Closest` from [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) does which is original Wan logic
-
-
+* `Video Info` from [Kosinkadink/ComfyUI-VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite) + `Preview Any` to debug dimension errors in ComfyUI etc

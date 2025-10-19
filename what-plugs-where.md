@@ -87,10 +87,16 @@ LoadImage  ---> ResizeImage ---> RepeatImageBatch ---> |                 |     W
 SolidMask  ---> RepeatMask --------------------------> |                 |
 ```
 
+### Video Continuation Generator
+
+`Video Continuation Generator` from [banodoco/Steerable-Motion](https://github.com/banodoco/Steerable-Motion) can be used instead of `WanVideo Start To End Frame` to prepare input for `WanVideo VACE Encode`.
+
 ## Misc
 
 * `Points Editor` from [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) used in workflows utilizing Sam2 for segmentation.
 * `Rope Function Node` from [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) - mysterious but holds promise.
+
+## 3rd Party
 
 ## [Wan Animate](wan-animate.md#what-plugs-where) Section
 

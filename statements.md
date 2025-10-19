@@ -70,3 +70,6 @@ The movement tends to be better for t2v; sometimes its great to get a good base 
 Hunyuan video model has horrors in training data, a mild horror lora can bring them out.
 
 nympy 1.26.4 is considered a stable version.
+
+on tiling VAE decoder: Usually with tiling you want to actually use dimensions that are slightly larger than the exact factors of the original image so the overlap works more efficiently
+

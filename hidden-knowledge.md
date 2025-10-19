@@ -14,7 +14,7 @@ Kijai's nodes can convert between data types such as `bf16` at `safetensors` loa
 | [kijai/ComfyUI-MMAudio](https://github.com/kijai/ComfyUI-MMAudio) | Foley? |
 | [kijai/ComfyUI-GIMM-VFI](https://github.com/kijai/ComfyUI-GIMM-VFI) | frame interpolator |
 
-Resolutions to try with WAN: 1280x768, 1/2 of that, 832x480, 1024x576.
+Resolutions to try with WAN: 1536x864, 1280x768, 1/2 of that, 832x480, 1024x576.
 
 Colored inputs on ComfyUI node designate non-optional inptus, rather than inputs that have something connected to them.
 

@@ -48,6 +48,8 @@ Kijai's baseline testing setup: 50 steps with easycache skipping 14 steps, cfg 4
 
 Possible workflow: put Ovi render into the InfiniteTalk workflow with the audio from the Ovi render and a low denoise in 3 steps for an upscale.
 
+720 might be a good resolution for Ovi.
+
 ## Controlnets
 
 Ovi has been successfully used with depth control controlnet trained for Wan 2.2 TI2V 5B. It is likely HED and Canny controlnets will also work.

@@ -1,5 +1,9 @@
 # News
 
+2025.10.19 Kijai added `total_pixels` mode to `Resize Image v2` node in [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
+
+2025.10.19 Note [loras](LoRA-alchemy.md#special-use): Kinestasis, Walgro, Charlietooth/punk, Lazy Susan
+
 2025.10.18 Issues causing increased VRAM usage and excessive/failing triton compilations have hopefully been resolved
 in latest ComfyUI and Wrapper; advice on torch version from Kijai:
 > 2.8.0 problematic, 2.9 and 2.10.0-dev should be fine with latest Comfy and Wrapper
@@ -11,8 +15,11 @@ some of the distillations which were previously only available as loars are now 
 [link1](https://github.com/woct0rdho/triton-windows/pull/140), [link2](https://github.com/woct0rdho/triton-windows/commit/ffb47c28144b89935208b42c50cdf1f09eb42aba);
 this is part of `triton-windows 3.5.0.post21` release
 
-2025.10.16 Kijai added nodes and an [example workflow](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_1_3B_FlashVSR_upscale_example.json) for FlashVSR upscaler;
+2025.10.16 Kijai added nodes for [FlashVSR upscaler](upscalers.md#flashvsr)
+
+nodes and an [example workflow](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_1_3B_FlashVSR_upscale_example.json) for FlashVSR upscaler;
 very fast, 1 step, but likely lesser quality than slow upscalers; context options allow longer than 81 frames upscaling at the cost of minor glitches; no sageattn, use spda;
+reducing strength can help with oversharpening; not really meant to go as high as 2560x1536; upscaling from 720x512x720 was kind of ok
 can use with Cinescale lora and possibly with [RoPE Scaling](hidden-knowledge.md#rope); alternatives: seedvr2.
 
 2025.10.15 Ovi has been proven to work with [Controlnets](ovi.md#controlnets)
