@@ -37,3 +37,9 @@ Sample workflow on HF next to LoRA.
 | ComfyUI-HunyuanVideo-Foley | hunyuanvideo_foley_xl |
 | ComfyUI-HunyuanVideo-Foley | synchformer_state_dict_fp16 |
 | ComfyUI-HunyuanVideo-Foley | vae_128d_48k_fp16 |
+
+## Useful Nodes
+
+* `Resize Image v2` from [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) new mode is `total_pixels` copies what `WanVideo Image Resize To Closest` from [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) does which is original Wan logic
+
+

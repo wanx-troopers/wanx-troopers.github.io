@@ -26,7 +26,7 @@ Generally when working with Wan 2.2 the expectation is that `WanVideo Context Op
 The rule is not absolute and it might be possible in some cases to connect to high only, especially with lots of VRAM.
 It is also potentially possible to have use different `WanVideo Context Options` on high and low.
 
-Because understanding `overalp` and `stride` is so impossibly difficult, here is a selection of quotes from Kijai to at least hint at the right direction.
+Because understanding `overlap` and `stride` is so impossibly difficult, here is a selection of quotes from Kijai to at least hint at the right direction.
 
 Kijai:
 > context options are in pixel space, so 4 is 1 latent, and overlap or stride at 4 (which is 1 latent) means it's disabled, there's no stride or ovelap, it can't be 0

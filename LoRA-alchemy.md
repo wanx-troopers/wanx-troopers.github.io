@@ -40,6 +40,15 @@ Kijai 2025-Oct-14 (this refers to high noise wan 2.2 too):
 > 6 steps, split in middle and first step with cfg 2.0  
 > strength 3.0 for high and 1.0 for low
 
+Kijai 2025-Oct-18
+> There are only 3 options for the low noise:
+> * original 2.1
+> * lightx2v
+> * 2.2 Lightning rCM
+
+> If we don't count accvid/fast wan etc. That, in my opinion, changes the output too much from original
+> Though with that criteria I'd forget the 2.2 Lightning as well pretty much
+
 | Repo | Lora | Generation | Comment |
 | --- | --- | --- | --- |
 | Kijai/WanVideo_comfy | LoRAs/Wan22-Lightning/<br>Wan22_A14B_T2V_HIGH_Lightning_4steps_lora_250928_rank128_fp16 | 2.2 T2V | new, recommended |
