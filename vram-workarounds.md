@@ -11,7 +11,7 @@ One advice was to use fp32 version of Wan 2.1 VAE safetensors file; possibly a c
 Kijai 17 Oct 2025 evening:
 > torch 2.9.0 has a bug that makes some conv3d operations (when using half precision) use 3x more VRAM, including the Wan VAE;
 > it affects 2.10 too currently;
-> both native and wrapper has workaround for the bug already anyway; they are different workarounds"
+> both native and wrapper has workaround for the bug already anyway; they are different workarounds
 
 ## Higher VRAM Usage Realted To Triton
 

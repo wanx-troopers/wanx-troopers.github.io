@@ -1,0 +1,39 @@
+# Infinite Talk
+
+This section is incomplete.
+
+## Models
+
+Infinite Talk workflows utilize regular Wan I2V safetensors file with regular speed lora of your choice.
+
+They additionally use a "InfiniteTalk Model" such as `Wan_2_1-InfiniteTalk-Multi_fp16.safetensors`. It is loaded by `WanVideo Long I2V Multi/InfiniteTalk` which similar to VACE plugs into `VanVideo Model Loader`.
+
+`clip_vision_h` and `wav2vec` .safetensors files are loaded as well.
+
+## Nodes
+
+|Name In Code (sometimes easier to understand)|Name on Screen|
+|:---|:---|
+|MultiTalkModelLoader|Multi/InfiniteTalk Model Loader|
+|MultiTalkWav2VecEmbeds|Multi/InfiniteTalk Wav2vec2 Embeds|
+|WanVideoImageToVideoMultiTalk|WanVideo Long I2V Multi/InfiniteTalk|
+|Wav2VecModelLoader|Wav2vec2 Model Loader|
+|MultiTalkSilentEmbeds|MultiTalk Silent Embeds|
+
+## What Plugs Where
+
+| Pre Embeds Node| Pre Embeds Inputs -> Output | Embeds Node | Input from Pre / Embeds Inputs -> Output | Model | WanVideo Sampler Input |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+|`WanVideo ClipVision Encode`|`image_1`, `image_2` -> `image_embeds`| `WanVideo Long I2V Multi/InfiniteTalk` | `clip_embeds` / `start_image` -> `image_embeds` | Wan I2V family | `image_embeds` |
+| - | - | `Multi/InfiniteTalk Wav2vec2 Embeds` | `wav2vec_model`, `audio_1`, .. 4, `ref_target_masks` -> `multitalk_embeds` | Wan I2V family | `multitalk_embeds` |
+
+
+### Note
+
+| Node | Setting | Meaning |
+| :--- | :--- | :--- |
+| `WanVideo Long I2V Multi/InfiniteTalk` | `frame_window_size` | how many frames are processed at once, leave at default |
+| `Multi/InfiniteTalk Wav2vec2 Embeds` | `num_frames` | total number of frames in the video |
+
+
+`WanVideo Context Option` is *not* compatible with `Infinite Talk`.

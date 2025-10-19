@@ -13,7 +13,9 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [Sigmas](sigmas.md)
 * [Lora Alchemy](LoRA-alchemy.md)
 * [HuMo](HuMo-info.md)
-* [Wan Animate](WanAnimate.md)
+* [Wan Animate](wan-animate.md)
+* [Infinite Talk](infinite-talk.md)
+* [Phantom and MAGREF](phantom-magref.md)
 * [What Plugs Where](what-plugs-where.md)
 
 ## Misc

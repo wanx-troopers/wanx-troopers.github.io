@@ -16,6 +16,7 @@
 * [cubiq/ComfyUI_essentials](https://github.com/cubiq/ComfyUI_essentials) contains some useful nodes like `Image Enhance Difference`
 * [Create Any 3D and 4D Scenes from a Single Image](https://github.com/wenqsun/DimensionX) Kijai: this was released today after 10 month wait, and honestly it was always pretty damn good
 * fspy, you can make 3d models from 2d images
+* Musubi Trainer for Wan 2.2/2.1, AI Toolkit for 5B?
 
 ## Deliberately Not Covered
 

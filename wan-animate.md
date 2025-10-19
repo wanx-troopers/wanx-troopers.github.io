@@ -13,9 +13,12 @@ Important:
 * either have both BG and mask connected (background from driving video)
 * or have both BG and mask disconnected (background from reference image)
 
-There are two ways to produce longer videos in a batched manner
-- specify `frame_window_size` in `Wan VideoAnimate Embeds`
-- connect `Context Options` to `WanVideo Sampler` (`frame_window_size`, likely, to be set to full number of frames same as on `WanVideo Sampler`)
+There are two ways to produce longer videos in a batched manner: with and without [WanVideo Context Options](what-plugs-where/context-options.md):
+
+|Option|`WanVideo Animate Embeds`|`WanVideo Context Options`|
+|:---|:---|:---|
+|A|set `frame_window_size` to you batch size, say 77<br>set `num_frames` to the length of the video you want to generate|do not connect to `WanVideo Sampler`|
+|B|set both `frame_window_size` and `num_frames` to the length of the video you want to generate|set `context_frames` to your batch size, say 77 or 81<br>4 is possibly correct value for `stride` effectively setting it to 'disabled'|
 
 With Kijai's nodes face video can be simply disconnected. In native nodes one may need to connect a black image/video.
 Yes, the mask has to be blocky. Sometimes increasing blocks size can make things better.
@@ -23,6 +26,8 @@ Blocky mask bleeding into produced video might get fixed if face is connected.
 
 Kijai on WanAnimate with Uni3C:
 > I've had it work before, so it definitely can work
+
+Untested but it is possible `WanAnimate` can take up to 4 reference images.
 
 Apparently can be used with [Lynx](lynx.md).
 

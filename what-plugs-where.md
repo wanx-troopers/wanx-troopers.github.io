@@ -45,6 +45,10 @@ Supplementary
 * `WanVideo Text Encoder Cached` (avoid re-running text encoding on each execution, free up a little VRAM)
 * `WanVideo RoPE Function` (check tooltip on `rope_function` in `WanVideoSampler`; see also: [RoPE](hidden-knowledge.md#rope))
 
+Least `WanVideo Sampler` node grows visually too tall groups of parameters have been placed into their own nodes:
+
+* `WanVideo Context Options` -> `context_options` input; [details](what-plugs-where/context-options.md)
+
 ### Embeds In Wrapper
 
 | Pre Embeds Node| Pre Embeds Inputs -> Output | Embeds Node | Input from Pre / Embeds Inputs -> Output | Model | WanVideo Sampler Input |
@@ -88,6 +92,8 @@ SolidMask  ---> RepeatMask --------------------------> |                 |
 * `Points Editor` from [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) used in workflows utilizing Sam2 for segmentation.
 * `Rope Function Node` from [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) - mysterious but holds promise.
 
-## [Wan Animate](WanAnimate.md#what-plugs-where) Section
+## [Wan Animate](wan-animate.md#what-plugs-where) Section
+
+## [Infinite Talk](infinite-talk.md) Section
 
 ## [Ovi](ovi.md) Section
