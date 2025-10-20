@@ -1,5 +1,9 @@
 # News
 
+2025.10.20 Kijai added [Ditto](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Ditto) LoRa for VACE + WAN 2.1; testing yielded mixed results;
+thee LoRa can convert videos containing humans into animated styles, etc.
+The node chain is VACE -> Wan 2.1 -> Ditto; VACE strength 0.975
+
 2025.10.19 Kijai added `total_pixels` mode to `Resize Image v2` node in [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
 
 2025.10.19 Note [loras](LoRA-alchemy.md#special-use): Kinestasis, Walgro, Charlietooth/punk, Lazy Susan

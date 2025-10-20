@@ -26,6 +26,8 @@ Colored inputs on ComfyUI node designate non-optional inptus, rather than inputs
 
 Too high CFG on low steps can cause "burns" and flashes.
 
+`Resize Image v2` once reported that a 150 frame 480x832 video was taking slightly bellow 0.7Gb.
+
 ## RoPE
 
 When using going beyond trained model resolution with a wrapper workflow can try using `WanVideo RoPE Function`.
