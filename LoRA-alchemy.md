@@ -26,19 +26,6 @@ People sometimes experience a placebo effect - using LoRAs that neither enhance 
 > Q: Is it possible to merge a lora into a GGUF model ?  
 > A: Would need to do that to bf or fp16 model and then conver that to GGUF
 
-## rCM
-
-Kijai extracted LoRA from a new distillation of WAN 2.1 T2V done by NVidia-associated developers: [Kijai/WanVideo_comfy LoRAs/rCM](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/rCM).
-Can be used with WAN 2.1 and possibly 2.2 T2V models.
-User:
-> rcm at strength 4.0 on high has been working pretty decent for me; I'm using rank148 rcm at high 4.0 shift 7 + lightning at 1.0 on low. 4 steps dpm++sde
-
-Not recommended for I2V, a user:
-> I work mostly in I2V and I found that the rCM Lora changes stuff too much when used in Low.
-> Identify shifts .. don't think it really helped in High either.
-> If I get the strength high enough that it starts having an effect it starts creating more artifacts.
-> In theory an I2V version can be trained, but Nvidia said they weren't going to do it.
-
 ## Noteworthy Loras
 
 Kijai 2025-Oct-14 (this refers to high noise wan 2.2 too):
@@ -90,10 +77,6 @@ Vastly incomplete.
 
 Note: "dyno" model does patching which cannot be done by a lora.
 
-## Reward Loras
-
-Re HPS and MPS "reward" loras: "if it's not human-domain these loras are not going to well well do to rewards heavily biased towards people aesthetics. So say, doing a demon, it'll be more human than demon".
-
 ## Special Use
 
 Wan 2.1 and 2.2 LoRA-s:
@@ -125,3 +108,7 @@ High CFG in the sampler helps to follow the prompt, skimming prevents the burn i
 > Loha = hadamard product matrix factorisation   
 > Lokr = kronecker product matrix decomposition  
 > In bongmath language
+
+## To Be Continued...
+
+... in [LoRa-s In The Order Of Arrival](arriving-loras.md)
