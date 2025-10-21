@@ -38,7 +38,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [Tricks](tricks.md)
 * [Recommended Software Versions](versions.md)
 
-All content here is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode.txt).
+Content here is licensed under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode.en).
 All statements on this site reflect our opinions and editorial decisions.
-By contributing to this repository via Issues, Pull Requests, or other means, you agree that your contributions are licensed under the same CC BY 4.0 license.
+By contributing to this repository via Issues, Pull Requests, or other means, you agree that your contributions are licensed under the same CC 1.0 Universal license.
 View the full documentation website: [https://wanx-troopers.github.io](https://wanx-troopers.github.io).
