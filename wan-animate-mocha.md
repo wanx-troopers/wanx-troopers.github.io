@@ -1,4 +1,8 @@
-# Wan Animate
+# Wan Animate And MoCha
+
+Wan Animate and MoCha serve similar goals.
+
+## Wan Animate
 
 [kijai/ComfyUI-WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess) highly recommended esp. [example workflow](https://github.com/kijai/ComfyUI-WanAnimatePreprocess/tree/main/example_workflows).
 
@@ -19,6 +23,10 @@ There are two ways to produce longer videos in a batched manner: with and withou
 |:---|:---|:---|
 |A|set `frame_window_size` to you batch size, say 77<br>set `num_frames` to the length of the video you want to generate|do not connect to `WanVideo Sampler`|
 |B|set both `frame_window_size` and `num_frames` to the length of the video you want to generate|set `context_frames` to your batch size, say 77 or 81<br>4 is possibly correct value for `stride` effectively setting it to 'disabled'|
+
+> The looping is done automatically in the wrapper even without context options when using the WanAnimate node;
+> context options is alternative long gen method, it's biggest benefit is that it doesn't deteriorate longer it goes,
+> and downside is speed and window continuation especially on backgrounds
 
 With Kijai's nodes face video can be simply disconnected. In native nodes one may need to connect a black image/video.
 Yes, the mask has to be blocky. Sometimes increasing blocks size can make things better.
@@ -41,8 +49,36 @@ Kijai:
 
 > [so-called V3 from Eddy1111111] is probably just Lora merge or something
 
-## What Plugs Where
+## What Plugs Where Wan Animate
 
 | Pre Embeds Node| Pre Embeds Inputs -> Output | Embeds Node | Input from Pre / Embeds Inputs -> Output | Model | WanVideo Sampler Input |
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | `WanVideo ClipVision Encode` | `clip_vision`, `image_1`, `image_2`<br>-> `image_embeds`  | `Wan VideoAnimate Embeds` | `clip_embeds` / `ref_images`, `pose_images`, `face_images`, `bg_images`, `mask` | Wan 2.1 I2V family | `image_embeds` |
+
+
+## MoCha
+
+Slightly newer and simpler to use than Wan Animate. Serves one function only - replace a human character for a human character in a video. Excels in applying correct lighting to the character.
+
+Based on Wan 2.1 14B. Inputs:
+
+* source video
+* one or two reference images of the replacement (one of them recommended to be a face close-up)
+* a mask covering the character being replaced *in the 1st frame only* (major difference from Wan Animate which requires mask to be masking the character in all frames)
+
+Links:
+
+* Kijai's [conversion](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main/MoCha) to fp8 e4m3
+* [Article](https://orange-3dv-team.github.io/MoCha/)
+* only [ckpt](https://huggingface.co/Orange-3DV-Team/MoCha/tree/main/preview) file available from the authors which is believed to be bf16
+* Kijai's 1st sample workflow: [wanvideo_mocha_replacement_original_01](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_mocha_replacement_original_01.json)
+* Kijai's 2nd sample workflow: [wanvideo_MoCha_replace_subject_KJ_02](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_MoCha_replace_subject_KJ_02.json)
+
+
+
+> Identity preserved not as strongly as VACE 2.1 / Wan Animate but the lighting is super impressive
+
+2024.10.21 code has been added to latest version of [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) intended to support [WanVideo Context Options](what-plugs-where/context-options.md) with MoCha.
+
+> a big downside of MoCha it's basically double compute; the original frames are concatenated along temporal dimension;
+> the frame count is basically doubled; so memory use for 81 frames would be similar to 161 frames

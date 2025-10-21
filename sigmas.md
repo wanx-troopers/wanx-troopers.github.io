@@ -25,6 +25,9 @@ Preview Any
 * `Create CFG Schedule Float List` - not sigma but often set in the same part of workflow.
 * `Preview Any` - easy to way to check output from the two above mentioned nodes
 
+Wiring two `WanVideo Scheduler`-s into two `WanVideo Scheduler`-s for Wan 2.2:
+![schedulers](screenshots/schedulers.webp)
+
 ## Native Nodes For Working With Sigmas
 
 * Basic Scheduler

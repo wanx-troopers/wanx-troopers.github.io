@@ -1,5 +1,9 @@
 # Statements
 
+## 2024.10.21
+
+> If force_offload is on the memory is freed right after the sampler finishes; if it didn't work, then no 2.2 dual sampler workflow would work at all
+
 ## Kijai Quotes
 
 > WAN 2.2 VAE is only for 5B model; Ovi is based on 5B
@@ -72,4 +76,3 @@ Hunyuan video model has horrors in training data, a mild horror lora can bring t
 nympy 1.26.4 is considered a stable version.
 
 on tiling VAE decoder: Usually with tiling you want to actually use dimensions that are slightly larger than the exact factors of the original image so the overlap works more efficiently
-

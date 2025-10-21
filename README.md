@@ -12,7 +12,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [Hidden Knowledge](hidden-knowledge.md)
 * [Sigmas](sigmas.md)
 * [HuMo](HuMo-info.md)
-* [Wan Animate](wan-animate.md)
+* [Wan Animate/MoCha](wan-animate-mocha.md)
 * [Infinite Talk](infinite-talk.md)
 * [Phantom and MAGREF](phantom-magref.md)
 * [What Plugs Where](what-plugs-where.md)

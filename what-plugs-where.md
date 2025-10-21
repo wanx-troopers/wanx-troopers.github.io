@@ -98,7 +98,7 @@ SolidMask  ---> RepeatMask --------------------------> |                 |
 
 ## 3rd Party
 
-## [Wan Animate](wan-animate.md#what-plugs-where) Section
+## [Wan Animate](wan-animate-mocha.md#what-plugs-where-wan-animate) Section
 
 ## [Infinite Talk](infinite-talk.md) Section
 
