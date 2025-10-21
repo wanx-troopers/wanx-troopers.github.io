@@ -11,13 +11,18 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 
 * [Hidden Knowledge](hidden-knowledge.md)
 * [Sigmas](sigmas.md)
-* [Lora Alchemy](LoRA-alchemy.md)
-* [LoRa-s In The Order Of Arrival](arriving-loras.md)
 * [HuMo](HuMo-info.md)
 * [Wan Animate](wan-animate.md)
 * [Infinite Talk](infinite-talk.md)
 * [Phantom and MAGREF](phantom-magref.md)
 * [What Plugs Where](what-plugs-where.md)
+
+## Loras
+
+* [Loras Alchemy](loras/alchemy.md)
+* [LoRa-s Part I](loras/part-01.md)
+* [LoRa-s Part II](loras/part-02.md)
+* [Both Ways](loras/both-ways.md)
 
 ## Misc
 

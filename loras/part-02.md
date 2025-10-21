@@ -1,7 +1,13 @@
-# LoRa-s In The Order Of Arrival
+# LoRa-s, Part II
 
-..[Lora Alchemy](LoRA-alchemy.md), part II;
-some LoRa-s that attracted attention; mostly in *reverse* order of arrival, new at the top.
+## LoRa-s Table Of Contents
+
+* [Loras Alchemy](alchemy.md)
+* [LoRa-s Part I](part-01.md)
+* LoRa-s Part II; this document
+* [Both Ways](both-ways.md)
+
+Some LoRa-s that attracted attention; mostly in *reverse* order of arrival, new at the top.
 
 ## Ditto
 
@@ -12,10 +18,14 @@ Kijai's [adaptation](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs
 * global_style
 * sim2real
 
+Mora LoRa-s are [promised](https://github.com/EzioBy/Ditto/issues/3) in the future.
+
 Each works on top of for VACE + WAN 2.1 + CausVid;
 testing yielded mixed results;
 can convert videos containing humans into animated styles, etc;
 often insert a human if there isn't one already.
+
+> Ditto is vace minus controlnet, pretty much a restyle
 
 The node chain is VACE -> Wan 2.1 -> Ditto; VACE strength 0.975 recommended;
 [example prompts](https://github.com/EzioBy/Ditto/blob/main/inference/example_prompts.txt).

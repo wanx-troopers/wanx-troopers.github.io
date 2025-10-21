@@ -1,10 +1,10 @@
 # News
 
-2025.10.20 Kijai adapted [Ditto](arriving-loras.md#ditto) LoRas
+2025.10.20 Kijai adapted [Ditto](loras/part-02.md#ditto) LoRas
 
 2025.10.19 Kijai added `total_pixels` mode to `Resize Image v2` node in [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
 
-2025.10.19 Note [loras](LoRA-alchemy.md#special-use): Kinestasis, Walgro, Charlietooth/punk, Lazy Susan
+2025.10.19 Note [loras](loras/alchemy.md#special-use): Walgro, Charlietooth/punk, Lazy Susan
 
 2025.10.18 Issues causing increased VRAM usage and excessive/failing triton compilations have hopefully been resolved
 in latest ComfyUI and Wrapper; advice on torch version from Kijai:
@@ -34,6 +34,6 @@ could use lightx2v_I2V_14B_480p_cfg_step_distill_rank256_bf16.safetensors on low
 
 2025.10.10 Latest version of Kiaji's nodes now supports [Tiny VAE](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/taew2_2.safetensors); not as good; "essentially a 'preview' VAE"
 
-2025.10.10 Kijai extracted [rCM](LoRA-alchemy.md#rcm) distilled loras
+2025.10.10 Kijai extracted [rCM](loras/part-02.md#rcm) distilled loras
 
-2025.10.10 [Cseti](https://github.com/cseti007) published [Kinestasis](LoRA-alchemy.md#special-use) LoRA and [limited-context-options-wan2.2](tricks.md#cseti) process
+2025.10.10 [Cseti](https://github.com/cseti007) published [Kinestasis](loras/alchemy.md#special-use) LoRA and [limited-context-options-wan2.2](tricks.md#cseti) process

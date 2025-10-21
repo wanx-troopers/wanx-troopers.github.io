@@ -13,3 +13,6 @@ It appears difficult to stop characters opening their mouth with `HuMO` (though 
 Without `WanVideo Long I2V Multi/InifiniteTalk` node `HuMo` is limited to less than 4 seconds of generation.
 
 It appears `HuMo` can use multiple reference images.
+
+> Besides having great audio-dependent generation, even without that HuMo is the best one-shot subject-to-video model we have.
+> It also works great in V2V with inpainting simply by using a latent noise mask, especially when combined with differential diffusion.
