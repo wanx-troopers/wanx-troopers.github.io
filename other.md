@@ -1,5 +1,7 @@
 # Other Things to Check Out
 
+* [SVI](https://github.com/vita-epfl/Stable-Video-Infinity) continuation method for I2V; I2V gens chained, with 5 start frames
+
 * [Wan 2.1 T2V Transparent Background](https://github.com/WeChatCV/Wan-Alpha)
 * [LanPaint](https://github.com/scraed/LanPaint)
 * [Low-VRAM-High-RAM-Ostris-AI-Toolkit-Lora-Training](https://x.com/ostrisai/status/1975642220960072047)

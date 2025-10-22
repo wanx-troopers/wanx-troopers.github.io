@@ -4,6 +4,8 @@
 
 > you absolutely can use Qwen VAE for Wan single image gens too, just not video
 
+> nvtop best tool to monitor VRAM for Linux
+
 > In general when it comes to NAG though, the NAG negative prompt should be much simpler and only have things you don't want to see, it shouldn't be the generic negative prompt word salad
 
 > Q: is there any 'control' tech that hooks into wan i2v?   
@@ -14,6 +16,12 @@
 ## 2024.10.21
 
 > If force_offload is on the memory is freed right after the sampler finishes; if it didn't work, then no 2.2 dual sampler workflow would work at all
+
+> VAE was using a good chunk something like 10gb of VRAM;
+> it's normal, it's just not used at same time as the model is;
+> model offload should be automatic in native workflows
+> as long as you don't run comfy with --high-vram
+> which is not advisable anyway
 
 ## Kijai Quotes
 
