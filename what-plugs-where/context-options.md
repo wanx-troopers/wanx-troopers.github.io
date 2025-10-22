@@ -4,9 +4,15 @@ This section is a incomplete.
 `WanVideo Context Options` is a node from [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper). It is plugged into `WanVideo Sampler` and essentially provides extra parameters for it.
 
 Enables batched video generation. Remain somewhat experimental. Known to work with the following models: 
-* [Wan Animate](../wan-animate.md)
+* [Wan Animate](../wan-animate-mocha.md#wan-animate)
 * [MAGREF](../phantom-magref.md#magref)
 * ...
+
+Status of using `WanVideo Context Options` on regular Wan 2.2 workflows:
+> Q: Any improvement to context windows for Wan 2.2 i2v and t2v?
+> A: They're still iffy and fragile, especially for i2v;
+> sometimes ... workflows ... work great for a while, but there's a bit of voodoo with ... input image ... prompt, and what model;
+> like the new LightX distills gave ... better results in a lot of ways but broke some stable context window workflows ...
 
 RAM requirements increase according to total video length across all batches.
 

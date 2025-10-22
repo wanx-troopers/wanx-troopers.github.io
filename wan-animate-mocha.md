@@ -60,7 +60,7 @@ Kijai:
 
 Slightly newer and simpler to use than Wan Animate. Serves one function only - replace a human character for a human character in a video. Excels in applying correct lighting to the character.
 
-Based on Wan 2.1 14B. Inputs:
+Based on Wan 2.1 T2V 14B. Inputs:
 
 * source video
 * one or two reference images of the replacement (one of them recommended to be a face close-up)

@@ -43,11 +43,11 @@ Supplementary
 * `WanVideo Set Block Swap` (chain after `WanVideo Model Loader`)
 * `WanVideo Lora Block Edit` (switching off block 0 might help remove 1st frame flash)
 * `WanVideo Text Encoder Cached` (avoid re-running text encoding on each execution, free up a little VRAM)
-* `WanVideo RoPE Function` (check tooltip on `rope_function` in `WanVideoSampler`; see also: [RoPE](hidden-knowledge.md#rope))
+* `WanVideo RoPE Function` (check tooltip on `rope_function` in `WanVideoSampler`; see also: [RoPE](../hidden-knowledge.md#rope))
 
 Least `WanVideo Sampler` node grows visually too tall groups of parameters have been placed into their own nodes:
 
-* `WanVideo Context Options` -> `context_options` input; [details](what-plugs-where/context-options.md)
+* `WanVideo Context Options` -> `context_options` input; [details](context-options.md)
 
 ### Embeds In Wrapper
 
@@ -98,8 +98,8 @@ SolidMask  ---> RepeatMask --------------------------> |                 |
 
 ## 3rd Party
 
-## [Wan Animate](wan-animate-mocha.md#what-plugs-where-wan-animate) Section
+## [Wan Animate](../wan-animate-mocha.md#what-plugs-where-wan-animate) Section
 
-## [Infinite Talk](infinite-talk.md) Section
+## [Infinite Talk](../infinite-talk.md) Section
 
-## [Ovi](ovi.md) Section
+## [Ovi](../ovi.md) Section

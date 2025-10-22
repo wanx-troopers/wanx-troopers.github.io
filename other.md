@@ -20,6 +20,7 @@
 * [DiT360](https://fenghora.github.io/DiT360-Page/) open-source AI tool (flux lora?) to generate panaroamic images
 * [KangLiao/Puffin](https://huggingface.co/KangLiao/Puffin) open-source AI model which understands camera angles and can transform images
 * [dvlab-research/DreamOmni2](https://github.com/dvlab-research/DreamOmni2) a flux lora? to help combine up to 4 image references or do image style transfer
+* `Qwen3-VL-4B-Instruct-FP8.safetensors` loaded by `QwenVL (Advanced)` node can generate video description according to a prompt
 
 ## Deliberately Not Covered
 

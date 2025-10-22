@@ -1,6 +1,6 @@
 # News
 
-2025.10.21 [MoCha](wan-animate-mocha.md#mocha) Wan 2.1 14B derived character replacement full-fat model released and adapted inside Wrapper   
+2025.10.21 [MoCha](wan-animate-mocha.md#mocha) Wan 2.1 T2V 14B derived character replacement full-fat model released and adapted inside Wrapper   
 2025.10.21 A bug fixed around using [WanVideo Context Options](what-plugs-where/context-options.md) with `Uni3C` ControlNet (in VACE workflows?)  
 2025.10.21 "Krea Realtime" Wan 2.1 T2V 14B distill deemed unremarkable; works as a "full-fat" model, not as a LoRa
 
