@@ -4,6 +4,13 @@
 
 > you absolutely can use Qwen VAE for Wan single image gens too, just not video
 
+> In general when it comes to NAG though, the NAG negative prompt should be much simpler and only have things you don't want to see, it shouldn't be the generic negative prompt word salad
+
+> Q: is there any 'control' tech that hooks into wan i2v?   
+> A: ATI is one; well its a whole model, but i2v based   
+> A: unianimate can also be hooked to any I2V  
+> A: also uni3c
+
 ## 2024.10.21
 
 > If force_offload is on the memory is freed right after the sampler finishes; if it didn't work, then no 2.2 dual sampler workflow would work at all

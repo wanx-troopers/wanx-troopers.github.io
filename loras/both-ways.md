@@ -24,4 +24,5 @@ Doesn't work as a LoRa, somewhat works as a full-fat model. Difficult to use.
 Produces naturally looking vidoes: soft colors, normal contrast.
 Has been used instead of high-noise in Wan 2.2 workflow with rCM lora on high.
 
-> Finally something that looks kind of realistic.. other 4 step models look so artificial
+> Finally something that looks kind of realistic.. other 4 step models look so artificial  
+> krea is causal like causvid

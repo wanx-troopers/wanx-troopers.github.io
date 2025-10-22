@@ -1,7 +1,9 @@
 # News
 
-2025.10.22 wan2.2 i2v lightx2v 4step [1022 loras](loras/part-01.md) released  
-2025.10.22 "Rollingforce" considered unremarkable
+2025.10.22 wan2.2 i2v lightx2v 4step [1022 loras](loras/part-01.md) seems to be produced same way  
+           as how Kijai extracted earlier under Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE name
+
+2025.10.22 "Rollingforce" based on Wan 1.3B promises long generations
 
 2025.10.21 [MoCha](wan-animate-mocha.md#mocha) Wan 2.1 T2V 14B-derived human replacement full-fat model released and adapted inside Wrapper   
 2025.10.21 A bug fixed around using [WanVideo Context Options](what-plugs-where/context-options.md) with `Uni3C` ControlNet (in VACE workflows?)  
