@@ -1,9 +1,9 @@
 # News
 
-2025.10.22 Kijai uploaded Qwen Image VAE adaptation into [Kijai/QwenImage_experimental](https://huggingface.co/Kijai/QwenImage_experimental/tree/main); more details but only works for single images so far
+2025.10.22 Kijai uploaded adappted Qwen Image VAE to [Kijai/QwenImage_experimental](https://huggingface.co/Kijai/QwenImage_experimental/tree/main); more details; only works for single images so far
 
-2025.10.22 wan2.2 i2v lightx2v 4step [1022 loras](loras/part-01.md) seems to be produced same way  
-           as how Kijai extracted earlier under Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE name
+2025.10.22 wan2.2 i2v lightx2v 4step [1022](loras/part-01.md) loras seem to be produced
+           via similar process/from same full-fat models as Kijai used earlier to create Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE
 
 2025.10.22 "Rollingforce" based on Wan 1.3B promises long generations
 
