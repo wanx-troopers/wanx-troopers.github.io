@@ -74,11 +74,10 @@ Links:
 * Kijai's 1st sample workflow: [wanvideo_mocha_replacement_original_01](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_mocha_replacement_original_01.json)
 * Kijai's 2nd sample workflow: [wanvideo_MoCha_replace_subject_KJ_02](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_MoCha_replace_subject_KJ_02.json)
 
-
-
 > Identity preserved not as strongly as VACE 2.1 / Wan Animate but the lighting is super impressive
 
-2024.10.21 code has been added to latest version of [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) intended to support [WanVideo Context Options](what-plugs-where/context-options.md) with MoCha.
+2024.10.21 a node has been added to code has been added to latest version of [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
+to support generating videos with MoCha. Code has been added as well to support [WanVideo Context Options](what-plugs-where/context-options.md) with MoCha.
 
 > a big downside of MoCha it's basically double compute; the original frames are concatenated along temporal dimension;
 > the frame count is basically doubled; so memory use for 81 frames would be similar to 161 frames

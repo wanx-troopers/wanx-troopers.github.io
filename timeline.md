@@ -1,9 +1,8 @@
 # News
 
-2025.10.22 Kijai uploaded adappted Qwen Image VAE to [Kijai/QwenImage_experimental](https://huggingface.co/Kijai/QwenImage_experimental/tree/main); more details; only works for single images so far
-
-2025.10.22 New wan2.2 i2v lightx2v 4step [1022](loras/part-01.md) LoRa-s have been released
-
+2025.10.22 Experiments have started with I2V Wan video extensions using [SVI](svi.md) LoRa-s  
+2025.10.22 Kijai uploaded adapted Qwen Image VAE to [Kijai/QwenImage_experimental](https://huggingface.co/Kijai/QwenImage_experimental/tree/main); more details; only works for single images so far  
+2025.10.22 New wan2.2 i2v lightx2v 4step [1022](loras/part-01.md) LoRa-s have been released  
 2025.10.22 "Rollingforce" based on Wan 1.3B promises long generations; current experiments are yilding very modest results however
 
 2025.10.21 [MoCha](wan-animate-mocha.md#mocha) Wan 2.1 T2V 14B-derived human replacement full-fat model released and adapted inside Wrapper   
