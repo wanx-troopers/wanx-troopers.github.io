@@ -1,8 +1,11 @@
 # News
 
-2025.10.21 [MoCha](wan-animate-mocha.md#mocha) Wan 2.1 T2V 14B derived character replacement full-fat model released and adapted inside Wrapper   
+2025.10.22 wan2.2 i2v lightx2v 4step [1022 loras](loras/part-01.md) released  
+2025.10.22 "Rollingforce" considered unremarkable
+
+2025.10.21 [MoCha](wan-animate-mocha.md#mocha) Wan 2.1 T2V 14B-derived human replacement full-fat model released and adapted inside Wrapper   
 2025.10.21 A bug fixed around using [WanVideo Context Options](what-plugs-where/context-options.md) with `Uni3C` ControlNet (in VACE workflows?)  
-2025.10.21 "Krea Realtime" Wan 2.1 T2V 14B distill deemed unremarkable; works as a "full-fat" model, not as a LoRa
+2025.10.21 [Krea Realtime](loras/both-ways.md#krea-realtime) Wan 2.1 T2V 14B distill difficult to use but realistic; works as a "full-fat" model, not as a LoRa
 
 
 2025.10.20 Kijai adapted [Ditto](loras/part-02.md#ditto) LoRas

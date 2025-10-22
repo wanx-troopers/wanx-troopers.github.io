@@ -31,7 +31,8 @@ Kijai 2025-Oct-19
 
 | Repo | Lora | Generation | Comment |
 | --- | --- | --- | --- |
-| Kijai/WanVideo_comfy | LoRAs/Wan22-Lightning/<br>Wan22_A14B_T2V_HIGH_Lightning_4steps_lora_250928_rank128_fp16 | 2.2 T2V | new, recommended |
+| [lightx2v/Wan2.2-Distill-Lora](https://huggingface.co/lightx2v/Wan2.2-Distill-Loras/tree/main) | wan2.2_i2v_A14b_ (high/low) noise_lora_rank64_lightx2v_4step_1022 | 2.2 I2V | `1022` e.g. 2025-Oct-22 |
+| Kijai/WanVideo_comfy | LoRAs/Wan22-Lightning/<br>Wan22_A14B_T2V_HIGH_Lightning_4steps_lora_250928_rank128_fp16 | 2.2 T2V | - |
 | Kijai/WanVideo_comfy | LoRAs/Wan22-Lightning/<br>Wan22_A14B_T2V_LOW_Lightning_4steps_lora_250928_rank64_fp16 | 2.2 T2V | - |
 | Kijai/WanVideo_comfy | [LoRAs/Wan22_Lightx2v/Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/LoRAs/Wan22_Lightx2v/Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors) | 2.2 I2V |  new, recommended, only high,<br>worthy of attention;<br>ghosting with simple scheduler but not linear quadratic?<br>can do good motion and camera motion |
 | Kijai/WanVideo_comfy | LoRAs/rCM/<br>Wan_2_1_T2V_14B_rCM_lora_average_rank_148_bf16 | 2.1 T2V | new from NVidia, give it a try? should preserve motion |

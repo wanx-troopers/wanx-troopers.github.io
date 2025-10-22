@@ -1,7 +1,7 @@
 # Phantom And MAGREF
 
 This section is a incomplete. 
-Phantom and MAGREF are relatively old finetunes based on Wan 2.1.
+Phantom and MAGREF are relatively old finetunes based on Wan 2.1, so called "reference" models.
 
 |Model|Type|Notes|
 |:---|:---|:---|

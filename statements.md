@@ -1,5 +1,9 @@
 # Statements
 
+## 2024.10.22
+
+> you absolutely can use Qwen VAE for Wan single image gens too, just not video
+
 ## 2024.10.21
 
 > If force_offload is on the memory is freed right after the sampler finishes; if it didn't work, then no 2.2 dual sampler workflow would work at all

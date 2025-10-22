@@ -9,14 +9,16 @@ Enables batched video generation. Remain somewhat experimental. Known to work wi
 * ...
 
 Status of using `WanVideo Context Options` on regular Wan 2.2 workflows:
-> Q: Any improvement to context windows for Wan 2.2 i2v and t2v?
+> Q: Any improvement to context windows for Wan 2.2 i2v and t2v?  
 > A: They're still iffy and fragile, especially for i2v;
 > sometimes ... workflows ... work great for a while, but there's a bit of voodoo with ... input image ... prompt, and what model;
 > like the new LightX distills gave ... better results in a lot of ways but broke some stable context window workflows ...
+> Q: Do you mean that we can provide an starting frame as input for every context window with I2V?  
+> A: Yeah, the context window node was updated a few weeks ago to take latents. You can use vae to put a series of images into latents for each context window you use.
 
 RAM requirements increase according to total video length across all batches.
 
-`reference_latents` input on `WanVideo Context Options` is designed to work specifically for MAGREF. Kijai:
+`reference_latents` input on `WanVideo Context Options` is designed to work specifically for MAGREF - and possibly other I2V models but not T2V:
 > it's the images used beyond the first window when using context options with I2V models
 
 `WanVideo Encode Latent Batch` is the correct node to feed images into `reference_latents` input on `WanVideo Context Options`.
