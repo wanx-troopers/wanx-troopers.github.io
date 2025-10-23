@@ -38,3 +38,8 @@ Kijai 18 Oct 2025:
 For Windows it's `triton-windows 3.5.0.post21` or later.
 
 > pytorch 2.8.0 works fine in Linux
+
+> and then if you happen to decide to update nvidia drivers on Linux you lose a week of your life   
+> Q: ubuntu has nvidia drivers, doesnt it?  
+> A: I mean latest drivers; the prebuilt stuff is fine, but usually very outdated  
+> from distros with nvidia drivers built in I liked PopOs myself, but then I wanted some newer stuff and went with Debian-testing

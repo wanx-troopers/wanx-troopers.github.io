@@ -1,5 +1,11 @@
 # Statements
 
+## 2024.10.23
+
+> for some reason, when i use 15 high noise steps with no lora, and then i use 3 low noise steps with the lightx2v lora it looks better than when i use 25 low noise steps without lora ...
+
+> light and tiny wan vae-s can be used in native by using `WanVideo Latent ReScale` node with `direction`=`wrapper_to_comfy`
+
 ## 2024.10.22
 
 > you absolutely can use Qwen VAE for Wan single image gens too, just not video

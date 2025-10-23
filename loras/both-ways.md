@@ -16,7 +16,7 @@ A number of models exist both as models and as LoRA-s.
 | Wan 2.2 I2V Moe Distill Lightx2v | I2V Wan 2.2 High only | As good as a LoRa? |
 | CausVid | Wan 2.1, can be used as Wan 2.2 Low | Better as full-fat |
 | Krea "Realtime" | Distill of Wan 2.1 14B T2V | Definitely better as full-fat |
-
+| VACE 2.1 | VACE 2.1 was a full T2V derivative 27Gb in size before it was extracted | It is widely believed it works just as well as extracted layers |
 
 ## Krea Realtime
 
