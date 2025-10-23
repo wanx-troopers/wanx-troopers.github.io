@@ -1,12 +1,15 @@
 # SVI
 
-Experimentation with SVI is in its early stages. Loras are on [HF:vita-video-gen/svi-model](https://huggingface.co/vita-video-gen/svi-model/tree/main/version-1.0),
+SVI is a set of - currently - three LoRas for Wan 2.1 480p I2V model:
+[HF:vita-video-gen/svi-model](https://huggingface.co/vita-video-gen/svi-model/tree/main/version-1.0),
 [article](https://github.com/vita-epfl/Stable-Video-Infinity).
 
-The intent is to generate videos longer than 81 frames with smooth transitions.
+The intent is to generate videos longer than 81 frames with smooth transitions using I2V.
 Degradation artifacts such as exposure and contrast increasing with each 81 frames step as well as loss of character consistency are rampant.
 
-These are loras for Wan 2.1 480p I2V model. Distill LoRa is applied by the authors in the article. Workflow/nodes to use are very similar to Fun InP model.
+Distill LoRa is applied by the authors in the article. Workflow/nodes to use are very similar to Fun InP model.
+
+> its meant to be chained through samplers
 
 > shot lora with 1 frame yes, film with 5
 
@@ -20,6 +23,8 @@ These are loras for Wan 2.1 480p I2V model. Distill LoRa is applied by the autho
 
 > Q: need to tick `fun_or_fl2v_model` in `WanVideo ImageToVideo Encode` ?  
 > A: only if you use end img
+
+> the ref is the original, the first frame is the previous last
 
 Rought sketch of a workflow: [link](workflows/wanvideo_480p_I2V_SVI-shot_test.json).
 

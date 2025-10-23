@@ -3,6 +3,10 @@
 A big table analysing workflows available online to take note of which embeds node can be used with which model (.safetensors).
 Very similar workflows apply both to VACE 2.1 and Wan 2.2 Fun Vace.
 
+## VACE
+
+> To do vace inpainting before you need masks set but also the mask reflected on the input at 127 gray
+
 ## Native
 
 ### VACE [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)

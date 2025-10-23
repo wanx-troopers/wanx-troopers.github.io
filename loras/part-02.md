@@ -30,6 +30,9 @@ often insert a human if there isn't one already.
 The node chain is VACE -> Wan 2.1 -> Ditto; VACE strength 0.975 recommended;
 [example prompts](https://github.com/EzioBy/Ditto/blob/main/inference/example_prompts.txt).
 
+> Q: is it possible to use ditto with sec for segmentation to isolate the thing we wanna change?  
+> A: Yes, just like normal vace masking
+
 ## rCM
 
 Kijai extracted LoRA from a new distillation of WAN 2.1 T2V done by NVidia-associated developers: [Kijai/WanVideo_comfy LoRAs/rCM](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/rCM).
