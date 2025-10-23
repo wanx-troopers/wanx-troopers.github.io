@@ -39,6 +39,14 @@ Untested but it is possible `WanAnimate` can take up to 4 reference images.
 
 Apparently can be used with [Lynx](lynx.md).
 
+Advice on how to stop WanAnimate adding a face to a character which doesn't have one:
+> When im doing non human character dance or whatever, I always put in negative prompt - human;  
+> yeah, i have that, in-fact i've translated that word into Chinese and using that
+
+Experienced user:
+> I never use positive prompt, leave it empty, only when gen video with cat then I dont know
+> why but wanimate likes if you put cat in positive prompt but for everything else leave it empty
+
 ## WanAnimate V2 .safetensors File
 
 Kijai:

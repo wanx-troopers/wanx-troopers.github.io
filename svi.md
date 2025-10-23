@@ -1,8 +1,9 @@
 # SVI
 
-SVI is a set of - currently - three LoRas for Wan 2.1 480p I2V model:
-[HF:vita-video-gen/svi-model](https://huggingface.co/vita-video-gen/svi-model/tree/main/version-1.0),
-[article](https://github.com/vita-epfl/Stable-Video-Infinity).
+SVI is a set of - currently - three LoRas for Wan 2.1 480p I2V model
+* original .safetensor-s in fp32 [HF:vita-video-gen/svi-model](https://huggingface.co/vita-video-gen/svi-model/tree/main/version-1.0),
+* Kijai's conversion to fp16 [HF:Kijai/WanVideo_comfy:LoRAs/Stable-Video-Infinity](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Stable-Video-Infinity)
+* [article](https://github.com/vita-epfl/Stable-Video-Infinity)
 
 The intent is to generate videos longer than 81 frames with smooth transitions using I2V.
 Degradation artifacts such as exposure and contrast increasing with each 81 frames step as well as loss of character consistency are rampant.
