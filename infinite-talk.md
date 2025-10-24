@@ -39,3 +39,8 @@ Can do start image + audio to video as well as start video + audio to video. Can
 
 
 `WanVideo Context Option` is *not* compatible with `Infinite Talk`.
+
+## QnA
+
+> Q: is it possible to do v2v with infinitetalk and only inpaining the head? my videos get changed too much  
+> A: yeah, you can use a mask

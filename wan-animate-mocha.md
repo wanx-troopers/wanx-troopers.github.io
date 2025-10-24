@@ -4,7 +4,13 @@ Wan Animate and MoCha serve similar goals.
 
 ## Wan Animate
 
-[kijai/ComfyUI-WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess) highly recommended esp. [example workflow](https://github.com/kijai/ComfyUI-WanAnimatePreprocess/tree/main/example_workflows).
+
+Two example workflows given in [Github:kijai/ComfyUI-WanVideoWrapper:example_workflows](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/main/example_workflows).
+Example workflows differ in pose detection tech they provide.
+[Github:kijai/ComfyUI-WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess) github repo was used to work newer pose detection tech for WanAnimate.
+Not clear if that repository is still relevant.
+As of now this `example_workflow` [folder](https://github.com/kijai/ComfyUI-WanAnimatePreprocess/tree/main/example_workflows) in that repository only contains a native workflow
+- which may still be of interest.
 
 ```bash
 hf download Kijai/sam2-safetensors sam2.1_hiera_base_plus.safetensors # models/sam2
@@ -46,6 +52,8 @@ Advice on how to stop WanAnimate adding a face to a character which doesn't have
 Experienced user:
 > I never use positive prompt, leave it empty, only when gen video with cat then I dont know
 > why but wanimate likes if you put cat in positive prompt but for everything else leave it empty
+
+The only model with Wan 2.2 in the name to use Clip Embeds (possibly because it's truly Wan 2.1 not 2.2).
 
 ## WanAnimate V2 .safetensors File
 

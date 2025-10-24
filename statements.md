@@ -6,6 +6,11 @@
 
 > light and tiny wan vae-s can be used in native by using `WanVideo Latent ReScale` node with `direction`=`wrapper_to_comfy`
 
+> is anisora 3.2 distill that only works with cfg 1? yes; you can use cfg with it but it doesn't really impact much
+
+> Q: does wan2.2 do nothing if clip embeds are provided in native? WanImageToVideo  
+> A: out of 2.2 models, only WanAnimate uses those, otherwise does nothing
+
 ## 2024.10.22
 
 > you absolutely can use Qwen VAE for Wan single image gens too, just not video
