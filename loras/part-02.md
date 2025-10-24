@@ -46,6 +46,8 @@ Artist:
 
 > Ditto can be almost used to fix problems with Ovi generations. Ovi has major issues with mouth etc that the Ditto can fix; prompt: Make it better; ditto kinda destroys colors always
 
+> same as vace but edit directly no need for depth video or edit first frame in edit mode like kontext
+
 ## rCM
 
 Kijai extracted LoRA from a new distillation of WAN 2.1 T2V done by NVidia-associated developers: [Kijai/WanVideo_comfy LoRAs/rCM](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/rCM).
