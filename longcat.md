@@ -7,6 +7,8 @@ MIT license, hurrah!
 
 Promise of long and fast generations, 6 sec fragements stitched with 11 frame overlap; when continuation is used 11 frames is the only context possible, reference images are not taken.
 
+In its own right as a base video generation model LongCat looks pretty nice too. Futher unlike Wan 2.2 it is one model not separate high/low.
+
 > example code does 832x480x93.
 
 
@@ -34,5 +36,7 @@ An attempt to run in ComfyUI in wrapper, does not yet follow the prompt:
 > I tried to generate a 12 second video in one go and it had the same repeating issue as wan
 
 > the multi frame i2v allows extension with motion continuity;
-> those 11 frames are the only context it has for the next segment;
+> those 11 [or 13 ?] frames are the only context it has for the next segment;
 > if your character isnt perfectly in the shot at the boundary, rip
+
+Apparenlty the authors provided an optional distill LoRa too but it is not functioning perfectly.

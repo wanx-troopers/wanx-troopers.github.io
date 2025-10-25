@@ -4,6 +4,9 @@
 
 Qwen VL is capable of writing prompt for the next 5sec fragment, can give nice results paired with [SVI](svi.md)-film.
 
+ffv1 format for storing videos - claims to be lossless and allows to store in rgb.
+
+
 ## 2024.10.24
 
 > VAE encodes single image to first latent
