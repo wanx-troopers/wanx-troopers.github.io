@@ -28,10 +28,6 @@ Too high CFG on low steps can cause "burns" and flashes.
 
 `Resize Image v2` once reported that a 150 frame 480x832 video was taking slightly bellow 0.7Gb.
 
-There is only one CLIP that works with a particular class of model like Wan. It can be in different precision however.
-
-ViT means "vision transformer". h = huge, l = large.
-
 ## RoPE
 
 When using going beyond trained model resolution with a wrapper workflow can try using `WanVideo RoPE Function`.

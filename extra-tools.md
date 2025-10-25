@@ -53,3 +53,8 @@ VibeVoice TTS
 
 * `Resize Image v2` from [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) new mode is `total_pixels` copies what `WanVideo Image Resize To Closest` from [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) does which is original Wan logic
 * `Video Info` from [Kosinkadink/ComfyUI-VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite) + `Preview Any` to debug dimension errors in ComfyUI etc
+
+## Frame Interpolation
+
+To increase FPS: RIFE VFI still good to double frame rate with rife49.pth, can plug after stock `Upscale Image By` with `upscale_method`=`lanczoc`. Faster alternative suggested online: `FL RIFE Frame Interpolation` from [GH:filliptm/ComfyUI_Fill-Nodes](https://github.com/filliptm/ComfyUI_Fill-Nodes) again with rife49.
+

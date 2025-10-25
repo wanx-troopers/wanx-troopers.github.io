@@ -1,5 +1,9 @@
 # Statements
 
+## 2024.10.25
+
+Qwen VL is capable of writing prompt for the next 5sec fragment, can give nice results paired with [SVI](svi.md)-film.
+
 ## 2024.10.24
 
 > VAE encodes single image to first latent
@@ -10,8 +14,6 @@
 > VACE expects temporal latents yes, where first frame is encoded separately;
 > so you can't just take last latents of previous gen because they don't have
 > that single separate encoded frame
-
-RIFE VFI still good to double frame rate with rife49.pth, can plug after stock `Upscale Image By` with `upscale_method`=`lanczoc`
 
 ## 2024.10.23
 

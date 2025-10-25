@@ -1,5 +1,7 @@
 # News
 
+2025.10.25 Doordash 14B parameters LongCat video released, [teaser](https://huggingface.co/meituan-longcat/LongCat-Video)
+
 2025.10.24 [HoloCine](holocine.md) model weights and sample code have been released; early experimentation started in ComfyUI
 
 2025.10.23 Some new hopes for longer videos linked to older MTV Crafter model; despite being limited to 49 frames it might be able to continue; SVI loras might be of help; uses Fun InP as a base model

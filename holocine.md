@@ -18,3 +18,5 @@ The hope/promise is to generate longer videos with consistent characters; in pra
 Models are uploaded as "sparse" and "full", the article says:
 > The sparse model is a computationally efficient approximation of the full model, maintaining
 > almost the same visual and narrative quality while enabling long, coherent cinematic video generation.
+
+Note: 2025-Oct-24 the authors updated slightly tweaked models which are supposed to be better, among them film-opt.
