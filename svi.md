@@ -8,6 +8,8 @@ SVI is a set of LoRas for Wan 2.1 480p I2V model
 The intent is to generate videos longer than 81 frames with smooth transitions using I2V.
 Degradation artifacts such as exposure and contrast increasing with each 81 frames step as well as loss of character consistency are rampant.
 
+Update: there has been a claim that SVI-film lora is a placebo and simply using base I2V model with embeds prepared in the same way produces exactly the same effect.
+
 ## The Whole Point
 
 > Normal I2V doesn't do well with more than one input image; VACE (T2V) works but not the base I2V;

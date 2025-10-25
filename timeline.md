@@ -5,7 +5,7 @@
 2025.10.24 [HoloCine](holocine.md) model released; early experimentation in ComfyUI;
 15sec multi-scene videos generated with characters consistent within those generations
 
-2025.10.22 [SVI](svi.md) LoRa-s released; Wan I2V models now can extend videos using 5 frame overlap with SVI-film; other LoRa-s provide a new way to supply a reference image to I2V generations
+2025.10.22 [SVI](svi.md) LoRa-s released; Wan I2V models now can extend videos using 5 frame overlap with SVI-film; other LoRa-s provide a new way to supply a reference image to I2V generations; 2025.10.25 update: the claim is under investigation that SVI-film is a placebo and base I2V model already has the ability to continue motion if a series of starting images is fed into it
 
 2025.10.22 Kijai uploaded adapted Qwen Image VAE to [Kijai/QwenImage_experimental](https://huggingface.co/Kijai/QwenImage_experimental/tree/main); more details; only works for single images so far  
 2025.10.22 New wan2.2 i2v lightx2v 4step [1022](loras/part-01.md) LoRa-s have been released  
