@@ -1,5 +1,18 @@
 # Statements
 
+## 2024.10.24
+
+> VAE encodes single image to first latent
+
+> phantom latents are encoded 1 latent per image and tacked onto the end of the embedding;
+> they are handled like single images
+
+> VACE expects temporal latents yes, where first frame is encoded separately;
+> so you can't just take last latents of previous gen because they don't have
+> that single separate encoded frame
+
+RIFE VFI still good to double frame rate with rife49.pth, can plug after stock `Upscale Image By` with `upscale_method`=`lanczoc`
+
 ## 2024.10.23
 
 > for some reason, when i use 15 high noise steps with no lora, and then i use 3 low noise steps with the lightx2v lora it looks better than when i use 25 low noise steps without lora ...
@@ -10,6 +23,8 @@
 
 > Q: does wan2.2 do nothing if clip embeds are provided in native? WanImageToVideo  
 > A: out of 2.2 models, only WanAnimate uses those, otherwise does nothing
+
+`Get Latent Range From Batch`, `Insert Latent To Index` - interesting nodes..
 
 ## 2024.10.22
 

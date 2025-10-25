@@ -55,6 +55,11 @@ Experienced user:
 
 The only model with Wan 2.2 in the name to use Clip Embeds (possibly because it's truly Wan 2.1 not 2.2).
 
+> you can adjust the audio scaling down or lock a pose with unianimate
+
+Kijai's retargeting pose node places the stick figure in the centre of frame.
+The position of the character in the reference frame (in screen space) dictates the starting position of the ViT pose (in screen space).
+
 ## WanAnimate V2 .safetensors File
 
 Kijai:

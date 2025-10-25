@@ -1,6 +1,6 @@
 # SVI
 
-SVI is a set of - currently - three LoRas for Wan 2.1 480p I2V model
+SVI is a set of LoRas for Wan 2.1 480p I2V model
 * original .safetensor-s in fp32 [HF:vita-video-gen/svi-model](https://huggingface.co/vita-video-gen/svi-model/tree/main/version-1.0),
 * Kijai's conversion to fp16 [HF:Kijai/WanVideo_comfy:LoRAs/Stable-Video-Infinity](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Stable-Video-Infinity)
 * [article](https://github.com/vita-epfl/Stable-Video-Infinity)
@@ -8,11 +8,29 @@ SVI is a set of - currently - three LoRas for Wan 2.1 480p I2V model
 The intent is to generate videos longer than 81 frames with smooth transitions using I2V.
 Degradation artifacts such as exposure and contrast increasing with each 81 frames step as well as loss of character consistency are rampant.
 
+## The Whole Point
+
+> Normal I2V doesn't do well with more than one input image; VACE (T2V) works but not the base I2V;
+> the "film" loras make that [5 last frames motion continuation] work,
+> and the shot/talk/dance loras add something new - the ability to use reference image.
+
+Indeed shot/talk/dance loras hold the (initial? ref?) image for the whole span of generation.
+I2V only take in image as 1st frame.
+
+## Discussint Workflows
+
 Distill LoRa is applied by the authors in the article. Workflow/nodes to use are very similar to Fun InP model.
 
 > its meant to be chained through samplers
 
 > shot lora with 1 frame yes, film with 5
+
+> no 2.1 lora is ever gonna work proper on 2.2 high noise, it's just too different
+                                                                                  s
+> this was with distill lora actually 8 steps, euler
+
+> don't know if the unmerged lora can affect it negatively, sometimes it does on special loras like this;
+> just in case run merged and fp16
 
 ## Discussion Around Feeding Inputs To SVI
 
@@ -55,6 +73,26 @@ Artist:
 > so when they say they are padding with zeros in their code, that's the same as padding with 0.5 in comfy
 
 > comfyui there is an inversion of the binary mask before sending it to the model - super intuitive
+
+### SVI-Film
+
+> in native comfyui it's black mask is unchanged;
+> in native you send black masks for the overlap frames and white for the rest;
+> in wrapper you send white masks for the overlap frames and black for the rest;
+> but if you are just doing 5 overlap frames using svi-film you don't need to worry about masks, just send in the 5 overlap frames as the start image and that's it
+
+![svi-5-frames](screenshots/svi-5-frames.webp)
+
+### SVI-Shot
+
+> with svi shot you need exactly 1 black mask frame and 80 white mask frames, at least in the wrapper
+
+> the reference padding only works with the shot, talk and dance loras
+
+### SVI-Dance
+
+> Q: How does svi dance is  suppose to be used btw ? 
+> A: with UniAnimate
 
 ## Practice
 

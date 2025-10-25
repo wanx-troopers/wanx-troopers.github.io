@@ -1,6 +1,8 @@
 # News
 
-2025.10.23 Some new hopes for longer videos linked to older MTV Crafter model; despite being limited to 49 frames it might be able to continue; SVI loras might be of help; uses Fun InP as abase model
+2025.10.24 [HoloCine](holocine.md) model weights and sample code have been released; early experimentation started in ComfyUI
+
+2025.10.23 Some new hopes for longer videos linked to older MTV Crafter model; despite being limited to 49 frames it might be able to continue; SVI loras might be of help; uses Fun InP as a base model
 
 2025.10.22 Experiments have started with I2V Wan video extensions using [SVI](svi.md) LoRa-s  
 2025.10.22 Kijai uploaded adapted Qwen Image VAE to [Kijai/QwenImage_experimental](https://huggingface.co/Kijai/QwenImage_experimental/tree/main); more details; only works for single images so far  

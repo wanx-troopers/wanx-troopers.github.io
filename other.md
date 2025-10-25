@@ -6,6 +6,7 @@
 * [LanPaint](https://github.com/scraed/LanPaint)
 * [Low-VRAM-High-RAM-Ostris-AI-Toolkit-Lora-Training](https://x.com/ostrisai/status/1975642220960072047)
 * Unianimate - apparently that is a LoRa?
+* ATI, Uni3c
 * [SeC 4B](https://github.com/9nate-drake/Comfyui-SecNodes) Video Segmentation; Kijail: "still SAM2.1, just extra guidance for it"
 
 
