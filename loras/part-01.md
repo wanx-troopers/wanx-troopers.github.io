@@ -29,6 +29,10 @@ Kijai 2025-Oct-19
 > Q: and a pinch of cfg on high, right?  
 > A: First step at least
 
+Users:
+> Q: what the best lora for t2v ? lightx?  
+> A: ightx quantile 0.15 Lora from Kijai, its very good; for high 3.0 low 1.0 Strength
+
 | Repo | Lora | Generation | Comment |
 | --- | --- | --- | --- |
 | [lightx2v/Wan2.2-Distill-Lora](https://huggingface.co/lightx2v/Wan2.2-Distill-Loras/tree/main) | wan2.2\_i2v\_A14b\_ (high/low) noise\_lora\_rank64\_lightx2v\_4step\_1022 | 2.2 I2V | new |

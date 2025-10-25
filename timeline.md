@@ -1,6 +1,6 @@
 # News
 
-2025.10.25 Doordash LongCat video released: [details](doordash.md)
+2025.10.25 Doordash LongCat video released: [details](longcat.md)
 
 2025.10.24 [HoloCine](holocine.md) model weights and sample code have been released; early experimentation started in ComfyUI
 

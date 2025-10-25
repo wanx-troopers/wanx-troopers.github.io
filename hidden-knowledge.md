@@ -1,5 +1,12 @@
 # Hidden Knowledge
 
+## 2025.10.25
+
+> wan video is only usable with qwen image inputs
+> because those are so soft that they do not cross into the detail level where the vae will fail into noise grids
+
+## Earlier
+
 By default `safetensors` files are loaded via `mmap`.
 
 Kijai's nodes can convert between data types such as `bf16` at `safetensors` loading time.

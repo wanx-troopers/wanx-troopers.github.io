@@ -18,6 +18,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [Phantom and MAGREF](phantom-magref.md)
 * [SVI](svi.md)
 * [HoloCine](holocine.md)
+* [LongCat](longcat.md)
 
 ## What Plugs Where
 
