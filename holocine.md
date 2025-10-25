@@ -7,6 +7,8 @@ Warning: non-commercial license (though it is possible initial release was under
 There is no special code yet in ComfyUI to use them properly even though ppl tried to drop the .safetensor files into T2V workflows to see what happens.
 The hope/promise is to generate longer videos with consistent characters; in practice generated videos are still quite short but longer than 5 seconds.
 
+One of the models in the family, 
+
 > just using the weight at 253fr on low reso (480*480);
 > disabling nag to use the | between each shot (no context windows);
 > keep same formating than in paper /demo
@@ -21,7 +23,7 @@ Models are uploaded as "sparse" and "full", the article says:
 > The sparse model is a computationally efficient approximation of the full model, maintaining
 > almost the same visual and narrative quality while enabling long, coherent cinematic video generation.
 
-Note: 2025-Oct-24 the authors updated slightly tweaked models which are supposed to be better, among them film-opt.
+2025-Oct-24 authors uploaded slightly tweaked models to Huggingface alongside old ones. New .safetensors are supposed to be better. One of the updated model weight files is called film-opt.
 
 30sec video on rtx 4090: swap block 40, 500 sec to generate
 

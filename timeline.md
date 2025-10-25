@@ -1,12 +1,12 @@
 # News
 
-2025.10.25 Doordash LongCat video released: [details](longcat.md)
+2025.10.25 LongCat AI video models released: [details](longcat.md); promise of long and fast generations, 6 sec fragements stitched with 11 frame overlap; when continuation is used 11 frames is the only context possible, reference images are not taken
 
-2025.10.24 [HoloCine](holocine.md) model weights and sample code have been released; early experimentation started in ComfyUI
+2025.10.24 [HoloCine](holocine.md) model weights and sample code released; early experimentation started in ComfyUI;
+15sec multi-scene videos generated with characters consistent within those generations
 
-2025.10.23 Some new hopes for longer videos linked to older MTV Crafter model; despite being limited to 49 frames it might be able to continue; SVI loras might be of help; uses Fun InP as a base model
+2025.10.22 [SVI](svi.md) LoRa-s released; Wan I2V models now can extend videos using 5 frame overlap with SVI-film; other LoRa-s provide a new way to supply a reference image to I2V generations
 
-2025.10.22 Experiments have started with I2V Wan video extensions using [SVI](svi.md) LoRa-s  
 2025.10.22 Kijai uploaded adapted Qwen Image VAE to [Kijai/QwenImage_experimental](https://huggingface.co/Kijai/QwenImage_experimental/tree/main); more details; only works for single images so far  
 2025.10.22 New wan2.2 i2v lightx2v 4step [1022](loras/part-01.md) LoRa-s have been released  
 2025.10.22 "Rollingforce" based on Wan 1.3B promises long generations; current experiments are yilding very modest results however
@@ -16,7 +16,7 @@
 2025.10.21 [Krea Realtime](loras/both-ways.md#krea-realtime) Wan 2.1 T2V 14B distill difficult to use but realistic; works as a "full-fat" model, not as a LoRa
 
 
-2025.10.20 Kijai adapted [Ditto](loras/part-02.md#ditto) LoRas
+2025.10.20 Kijai adapted [Ditto](loras/part-02.md#ditto) LoRas; these allow converting realistic videos to animated styles 
 
 2025.10.19 Kijai added `total_pixels` mode to `Resize Image v2` node in [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
 
@@ -34,11 +34,6 @@ some of the distillations which were previously only available as loars are now 
 this is part of `triton-windows 3.5.0.post21` release
 
 2025.10.16 Kijai added nodes for [FlashVSR upscaler](upscalers.md#flashvsr)
-
-nodes and an [example workflow](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_1_3B_FlashVSR_upscale_example.json) for FlashVSR upscaler;
-very fast, 1 step, but likely lesser quality than slow upscalers; context options allow longer than 81 frames upscaling at the cost of minor glitches; no sageattn, use spda;
-reducing strength can help with oversharpening; not really meant to go as high as 2560x1536; upscaling from 720x512x720 was kind of ok
-can use with Cinescale lora and possibly with [RoPE Scaling](hidden-knowledge.md#rope); alternatives: seedvr2.
 
 2025.10.15 Ovi has been proven to work with [Controlnets](ovi.md#controlnets)
 
