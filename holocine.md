@@ -1,8 +1,10 @@
 # HoloCine
 
+[Holo Cine](https://holo-cine.github.io/) models have been uploaded to Huggingface, Kijai's provided fp8 [conversion](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main/T2V/HoloCine).
+
 Warning: non-commercial license (though it is possible initial release was under ASF license, not certain).
 
-[Holo Cine](https://holo-cine.github.io/) models have been uploaded to Huggingface, Kijai's provided fp8 [conversion](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main/T2V/HoloCine).
+15sec multi-scene videos generated with characters consistent within those generations.
 
 There is no special code yet in ComfyUI to use them properly even though ppl tried to drop the .safetensor files into T2V workflows to see what happens.
 The hope/promise is to generate longer videos with consistent characters; in practice generated videos are still quite short but longer than 5 seconds.

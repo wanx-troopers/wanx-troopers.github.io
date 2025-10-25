@@ -1,8 +1,8 @@
 # News
 
-2025.10.25 LongCat AI video models released: [details](longcat.md); promise of long and fast generations, 6 sec fragements stitched with 11 frame overlap; when continuation is used 11 frames is the only context possible, reference images are not taken
+2025.10.25 [LongCat](longcat.md) models released; early experimentation in ComfyUI; promise of long and fast generations, 6 sec fragements stitched with 11 frame overlap; when continuation is used 11 frames is the only context possible, reference images are not taken
 
-2025.10.24 [HoloCine](holocine.md) model weights and sample code released; early experimentation started in ComfyUI;
+2025.10.24 [HoloCine](holocine.md) model released; early experimentation in ComfyUI;
 15sec multi-scene videos generated with characters consistent within those generations
 
 2025.10.22 [SVI](svi.md) LoRa-s released; Wan I2V models now can extend videos using 5 frame overlap with SVI-film; other LoRa-s provide a new way to supply a reference image to I2V generations

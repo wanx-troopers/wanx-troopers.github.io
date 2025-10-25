@@ -5,7 +5,10 @@ Doordash released 14B parameters video AI model called LongCat,
 
 MIT license, hurrah!
 
-Example code does 832x480x93.
+Promise of long and fast generations, 6 sec fragements stitched with 11 frame overlap; when continuation is used 11 frames is the only context possible, reference images are not taken.
+
+> example code does 832x480x93.
+
 
 > model structure is similar to Wan, just everything named differently, and has fused qkv;
 > 48 blocks, smaller dim (4096);
