@@ -126,3 +126,6 @@ Hunyuan video model has horrors in training data, a mild horror lora can bring t
 nympy 1.26.4 is considered a stable version.
 
 on tiling VAE decoder: Usually with tiling you want to actually use dimensions that are slightly larger than the exact factors of the original image so the overlap works more efficiently
+
+> Q: to use more than one starting frame just pass them to wanvideo encode?
+> A: yep

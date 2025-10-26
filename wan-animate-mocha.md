@@ -102,3 +102,5 @@ to support generating videos with MoCha. Code has been added as well to support 
 
 > a big downside of MoCha it's basically double compute; the original frames are concatenated along temporal dimension;
 > the frame count is basically doubled; so memory use for 81 frames would be similar to 161 frames
+
+> Mocha does better with prompt; you can get by with generic, but the more detailed the better, particularly with character likeness

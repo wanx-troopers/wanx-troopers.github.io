@@ -16,6 +16,8 @@ Countered: "The degradation with svi-film is much much better than Vace or anyth
 
 2025-Oct-24 authors uploaded slightly tweaked models to Huggingface alongside old ones. New .safetensors are supposed to be better. One of the updated model weight files is called film-opt.
 
+Advice for developers is to generate extensions with a seed different from the one used for the original video.
+
 ## The Whole Point
 
 > Normal I2V doesn't do well with more than one input image; VACE (T2V) works but not the base I2V;
@@ -24,6 +26,8 @@ Countered: "The degradation with svi-film is much much better than Vace or anyth
 
 Indeed shot/talk/dance loras hold the (initial? ref?) image for the whole span of generation.
 I2V only take in image as 1st frame.
+
+> the Old Pusa Lora works with the Holocine - Holocine on High noise with 2.1 Pusa 512 with Magref as low noise model
 
 ## Discussint Workflows
 

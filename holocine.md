@@ -4,7 +4,7 @@
 
 Warning: non-commercial license (though it is possible initial release was under ASF license, not certain).
 
-15sec multi-scene videos generated with characters consistent within those generations.
+Multi-scene videos generator trained on 15sec videos.
 
 There is no special code yet in ComfyUI to use them properly even though ppl tried to drop the .safetensor files into T2V workflows to see what happens.
 The hope/promise is to generate longer videos with consistent characters; in practice generated videos are still quite short but longer than 5 seconds.
@@ -54,3 +54,9 @@ with considerable character consistency - rather than ability to produce uninter
 
 Further full support for control over cuts requires additional code to be added to ComfyUI.
 It appears uncertain how soon such support could arrive, given the busy release schedule of other competing models.
+
+> make sure all cuts are 4t+1: 41,81,121,161,201
+> orh 41,89,121,161,201
+
+> which loras with holocine?
+> distil 0.15 T2V

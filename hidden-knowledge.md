@@ -5,6 +5,8 @@
 > wan video is only usable with qwen image inputs
 > because those are so soft that they do not cross into the detail level where the vae will fail into noise grids
 
+`WanVideo Set Block Swap` and similar nodes do not require re-loading `.safetensors` to make changes - that is why they're separate nodes.
+
 ## Earlier
 
 By default `safetensors` files are loaded via `mmap`.

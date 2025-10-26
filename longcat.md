@@ -1,5 +1,36 @@
 # LongCat
 
+## 2025.10.26
+
+Resolutions supported?
+
+```
+ASPECT_RATIO_627 = {
+     '0.26': ([320, 1216], 1), '0.31': ([352, 1120], 1), '0.38': ([384, 1024], 1), '0.43': ([416, 960], 1), 
+     '0.52': ([448, 864], 1), '0.58': ([480, 832], 1), '0.67': ([512, 768], 1), '0.74': ([544, 736], 1), 
+     '0.86': ([576, 672], 1), '0.95': ([608, 640], 1), '1.05': ([640, 608], 1), '1.17': ([672, 576], 1), 
+     '1.29': ([704, 544], 1), '1.35': ([736, 544], 1), '1.50': ([768, 512], 1), '1.67': ([800, 480], 1), 
+     '1.73': ([832, 480], 1), '2.00': ([896, 448], 1), '2.31': ([960, 416], 1), '2.58': ([992, 384], 1), 
+     '2.75': ([1056, 384], 1), '3.09': ([1088, 352], 1), '3.70': ([1184, 320], 1), '3.80': ([1216, 320], 1), 
+     '3.90': ([1248, 320], 1), '4.00': ([1280, 320], 1)
+}
+```
+
+> I2V like with Pusa/Wan 5B
+
+> full 50 steps to me
+
+Currently code in [GH:kijai/ComfyUI-WanVideoWrapper:longcat](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/longcat)
+
+> have to offload about half to run the bf16 on 4090;
+> full offload and it's under 10GB
+
+> their code does schedule like this when using the distll lora:
+> 1000.0000,  994.7090,  988.7640,  982.0360,  974.3589,  965.5172,  955.2239,  943.0895,  923.0769,  904.1096,  880.3089,  849.5575, 808.2901,  750.0000,  661.4174,  510.6383
+> which is in the `longcat_distill_euler`
+
+## Original News
+
 Doordash released 14B parameters video AI model called LongCat,
 [teaser](https://huggingface.co/meituan-longcat/LongCat-Video).
 
