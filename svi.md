@@ -9,6 +9,12 @@ The intent is to generate videos longer than 81 frames with smooth transitions u
 Degradation artifacts such as exposure and contrast increasing with each 81 frames step as well as loss of character consistency are rampant.
 
 Update: there has been a claim that SVI-film lora is a placebo and simply using base I2V model with embeds prepared in the same way produces exactly the same effect.
+Countered: "The degradation with svi-film is much much better than Vace or anything else when used how it was designed (with Wan 2.1 I2V without distill loras)".
+
+> i2v model could even work with multiple frame inputs until recently, but it clearly isn't designed for that because of how fast it degrades;
+> Vace would keep consistency longer
+
+2025-Oct-24 authors uploaded slightly tweaked models to Huggingface alongside old ones. New .safetensors are supposed to be better. One of the updated model weight files is called film-opt.
 
 ## The Whole Point
 

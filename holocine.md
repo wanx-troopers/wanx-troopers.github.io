@@ -25,8 +25,6 @@ Models are uploaded as "sparse" and "full", the article says:
 > The sparse model is a computationally efficient approximation of the full model, maintaining
 > almost the same visual and narrative quality while enabling long, coherent cinematic video generation.
 
-2025-Oct-24 authors uploaded slightly tweaked models to Huggingface alongside old ones. New .safetensors are supposed to be better. One of the updated model weight files is called film-opt.
-
 30sec video on rtx 4090: swap block 40, 500 sec to generate
 
 > believe it's just some sort of Wan T2V finetune  
@@ -48,3 +46,11 @@ Models are uploaded as "sparse" and "full", the article says:
 > stronger strength of lightx high is needed, possibly 3 not 1.5
 
 > another model using wan vae, another model with low quality outputs plagued by noise grids
+
+Apparently HoloCine is able to generate 241 frames in ComfyUI workflows in one go. Examples seen online contain plenty of cuts.
+It seems possible that while generating for 241 frames straight the model always inserts cuts.
+Under this understanding the value of HoloCine is its ability to generate several scenes within 15sec limit
+with considerable character consistency - rather than ability to produce uninterrupted 15sec shots.
+
+Further full support for control over cuts requires additional code to be added to ComfyUI.
+It appears uncertain how soon such support could arrive, given the busy release schedule of other competing models.
