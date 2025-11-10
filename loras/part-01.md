@@ -9,36 +9,54 @@
 
 ## Noteworthy Loras
 
-Kijai 2025-Oct-14 (this refers to high noise wan 2.2 too):
-> well the thing is that nothing beats the old 2.1 lightx2v still"  
+### 2025-Oct-10
+
+There's
+- 2.1 Lightx2v, that works fine with 2.2 low noise
+- 2.2 Lightning for both high and low (and it's different versions), has exposure issue and not best motion
+- 2.2 Lightx2v 4 step distill for high noise, that has 3 versions so far:
+  - the initial called "MoE"
+  - 1022 date update
+  - 1030 date update
+
+### 2025-Oct-14 (this refers to high noise wan 2.2 too):
+
+> well the thing is that nothing beats the old 2.1 lightx2v still  
 > 6 steps, split in middle and first step with cfg 2.0  
 > strength 3.0 for high and 1.0 for low
 
-Kijai 2025-Oct-18
+### 2025-Oct-18
+
 > There are only 3 options for the low noise:
 > * original 2.1
 > * lightx2v
 > * 2.2 Lightning rCM
 
-> If we don't count accvid/fast wan etc. That, in my opinion, changes the output too much from original
+> If we don't count accvid/fast wan etc. That, in my opinion, changes the output too much from original.
 > Though with that criteria I'd forget the 2.2 Lightning as well pretty much
 
-Kijai 2025-Oct-19
-> Q: Kijai, which one are you using still the i2v 480 or t2v rank 64 and 3.0 with high and 1 with low?..  
+### 2025-Oct-19
+> Q: which one are you using still the i2v 480 or t2v rank 64 and 3.0 with high and 1 with low?..  
 > A: Something like that  
 > Q: and a pinch of cfg on high, right?  
 > A: First step at least
 
-Users:
+### 2025-?-?
+
+Users chatting:
+
 > Q: what the best lora for t2v ? lightx?  
-> A: ightx quantile 0.15 Lora from Kijai, its very good; for high 3.0 low 1.0 Strength
+> A: lightx quantile 0.15 Lora from Kijai, its very good; for high 3.0 low 1.0 Strength
+
+### In A Table
 
 | Repo | Lora | Generation | Comment |
 | --- | --- | --- | --- |
-| [lightx2v/Wan2.2-Distill-Lora](https://huggingface.co/lightx2v/Wan2.2-Distill-Loras/tree/main) | wan2.2\_i2v\_A14b\_ (high/low) noise\_lora\_rank64\_lightx2v\_4step\_1022 | 2.2 I2V | new |
+| [HF:Kijai/WanVideo_comfy:LoRAs/Wan22_Lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Wan22_Lightx2v) | Wan\_2\_2\_I2V\_A14B\_HIGH\_lightx2v\_4step\_lora\_v1030_rank_64_bf16: [link](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/LoRAs/Wan22_Lightx2v/Wan_2_2_I2V_A14B_HIGH_lightx2v_4step_lora_v1030_rank_64_bf16.safetensors) | 2.2 I2V | new and reportedly much better with prompt adherence |
+| [HF:lightx2v/Wan2.2-Distill-Loras](https://huggingface.co/lightx2v/Wan2.2-Distill-Loras/tree/main) | wan2.2\_i2v\_A14b\_ (high/low) noise\_lora\_rank64\_lightx2v\_4step\_1022 | 2.2 I2V | new |
+| [HF:Kijai/WanVideo_comfy:LoRAs/Wan22_Lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Wan22_Lightx2v) | Wan\_2\_2\_I2V\_A14B\_HIGH\_lightx2v\_MoE\_distill\_lora\_rank\_64\_bf16: [link](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/LoRAs/Wan22_Lightx2v/Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors) | 2.2 I2V high only |  superceeded by 1022 and 1030<br> ghosting with simple scheduler but not linear quadratic?<br>can do good motion and camera motion |
 | Kijai/WanVideo_comfy | LoRAs/Wan22-Lightning/<br>Wan22_A14B_T2V_HIGH_Lightning_4steps_lora_250928_rank128_fp16 | 2.2 T2V | - |
 | Kijai/WanVideo_comfy | LoRAs/Wan22-Lightning/<br>Wan22_A14B_T2V_LOW_Lightning_4steps_lora_250928_rank64_fp16 | 2.2 T2V | - |
-| Kijai/WanVideo_comfy | LoRAs/Wan22\_Lightx2v/Wan\_2\_2\_I2V\_A14B\_HIGH\_lightx2v\_MoE\_distill\_lora\_rank\_64\_bf16: [link](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/LoRAs/Wan22_Lightx2v/Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors) | 2.2 I2V |  only high is truly new<br><br>worthy of attention;<br>ghosting with simple scheduler but not linear quadratic?<br>can do good motion and camera motion |
 | Kijai/WanVideo_comfy | LoRAs/rCM/<br>Wan_2_1_T2V_14B_rCM_lora_average_rank_148_bf16 | 2.1 T2V | new from NVidia, give it a try? should preserve motion |
 | Kijai/WanVideo_comfy | Lightx2v/<br>lightx2v_I2V_14B_480p_cfg_step_distill_rank256_bf16 | 2.1 I2V | Old but good, worth a try on 2.2 |
 | Kijai/WanVideo_comfy | Lightx2v/<br>lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank256_bf16 | 2.1 T2V | - |

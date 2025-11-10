@@ -1,5 +1,7 @@
 # News
 
+2025.10.30 [1030](loras/part-01.md#2025-Oct-10) I2V high noise lora released superceeding 1022 and MoE
+
 2025.10.25 [LongCat](longcat.md) models released; early experimentation in ComfyUI; promise of long and fast generations, 6 sec fragements stitched with 11 frame overlap; when continuation is used 11 frames is the only context possible, reference images are not taken
 
 2025.10.24 [HoloCine](holocine.md) model released; early experimentation in ComfyUI;
