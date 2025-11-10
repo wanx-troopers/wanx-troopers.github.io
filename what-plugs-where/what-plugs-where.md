@@ -65,7 +65,7 @@ Note: ? denotes parts which are not clear enough.
 
 ### WanVideo VACE Start To End Frame
 
-* inputs: `start_image`, `end_image`, `num_frames` and, confusingly, `control_images` and `inpaint_mask`
+* inputs: `start_image`, `end_image`, `num_frames`, `control_images` (for depth, pose, combined depth/pose etc), and `inpaint_mask`
 * outputs: `images`, `masks`
 
 Can be used to prepare `input_frames` for `WanVideo VACE Encode`.

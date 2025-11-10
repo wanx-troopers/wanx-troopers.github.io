@@ -132,3 +132,5 @@ is generated automatically if the only inputs given are start/end frame.
 > even if passing multiple start frames it's not necessary to mask those - it's done automatically
 
 Hint: SVI lora on 1st clip not needed, just freezes motion.
+
+> when svi film is used with fun inp, it's vanilla fun inp workflow with svi lora? yes

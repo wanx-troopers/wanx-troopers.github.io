@@ -8,7 +8,7 @@
 * Unianimate - apparently that is a LoRa?
 * ATI, Uni3c
 * [SeC 4B](https://github.com/9nate-drake/Comfyui-SecNodes) Video Segmentation; Kijail: "still SAM2.1, just extra guidance for it"
-
+* ToonComposer, [Educational Website](https://tooncomposer.com/)
 
 * [GalaxyTimeMachine's canceller](https://gist.github.com/blepping/99aeb38d7b26a4dbbbbd5034dca8aca8)
 * Chinese Diffsync Studio - a diffuser-based alternative to ComfyUI

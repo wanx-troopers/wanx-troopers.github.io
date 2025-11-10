@@ -16,9 +16,23 @@ ASPECT_RATIO_627 = {
 }
 ```
 
-> I2V like with Pusa/Wan 5B
+> I2V like with 5B or Pusa/Wan 5B,
+> any number of start_frames as extra latents
+> and the code replaces that part of the noise
+> with the image, and sets corresponding timestep to 0
+> after expanding timesteps to be per frame
+
+![longcat-like-pusa-extensions](screenshots/longcat-like-pusa-extensions.webp)
+
+another WF screenshot
+
+![longcat-i2v](screenshots/longcat-i2v.webp)
+
+> the exp args don't do anything at cfg 1.0; left it there as the authors were using zero_star in their code when using cfg
 
 > full 50 steps to me
+
+> which sage version? use the 2.2.0 latest
 
 Currently code in [GH:kijai/ComfyUI-WanVideoWrapper:longcat](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/longcat)
 
