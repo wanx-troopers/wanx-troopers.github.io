@@ -54,3 +54,9 @@ Particularly with Cinescale LoRA can try setting this node to `comfy` and `f/h/w
 > possibly the lora is trained with the scale of 20
 
 Defaults are 1/1/1.
+
+## Skimmed CFG
+
+Skimmed CFG from [Extraltodeus/Skimmed_CFG](https://github.com/Extraltodeus/Skimmed_CFG).
+High CFG in the sampler helps to follow the prompt, skimming prevents the burn issue.
+

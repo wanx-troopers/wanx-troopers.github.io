@@ -33,11 +33,6 @@ People sometimes experience a placebo effect - using LoRAs that neither enhance 
 > Q: Is it possible to merge a lora into a GGUF model ?  
 > A: Would need to do that to bf or fp16 model and then conver that to GGUF
 
-## Idea For High CFG
-
-Skimmed CFG from [Extraltodeus/Skimmed_CFG](https://github.com/Extraltodeus/Skimmed_CFG).
-High CFG in the sampler helps to follow the prompt, skimming prevents the burn issue.
-
 ## Some Interesting Words
 
 > Lora = low-rank matrix factorisation  

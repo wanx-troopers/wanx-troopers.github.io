@@ -19,6 +19,18 @@ Mads:
 
 Can use with Cinescale lora and possibly with [RoPE Scaling](hidden-knowledge.md#rope)
 
+## FlashVSR v1.1
+
+> The new Flash VSR 1.1 upscaler is significantly better than v1;
+> `Image Median Blur` size=4;
+> `FlashVSR_Ultra_Fast` model=FlashVSR-v1.1 mode=tiny scale=2;
+> good after `FL RIFE Frame Interpolation` rife49 from [GH:filliptm/ComfyUI_Fill-Nodes](https://github.com/filliptm/ComfyUI_Fill-Nodes) multiplier=3;
+> I use `Image Median Blur` to make results less sharp, I find FlashVSR to be too sharp
+
+> waiting for Kijai to update it cuz others not optimized for low vram
+
+> new vsr model works in kj wr but its bad
+
 ## What Plugs Where
 
 VSR safetensors loaded by `WanVideo Extra Model Select` plugged into `extra_model` input of `WanVideo Model Loader` loading Wan 2.1 T2V `safetensors`.

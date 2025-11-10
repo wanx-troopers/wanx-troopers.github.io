@@ -2,6 +2,10 @@
 
 The page needs a brush-up. Bugs referenced have been fixed or worked around. Still might be useful info.
 
+## 2025.11.10
+
+Possible startup arguments: comfy --here launch -- --reserve-vram 5 --max-upload-size 500 --use-sage-attention --disable-pinned-memory
+
 Around 16-17 Oct 2025 issues were reported with latest version of Comfy and other packages. Workflows started consuming more VRAM than previously. Among workarounds suggested were
 
 ## VAE Bug

@@ -1,5 +1,36 @@
 # Statements
 
+## 2024.11.10
+
+> I'm getting some okay results with 1030 high at 1, 1022 low at 1, cfg=2 for high and low, lcm/beta.
+> this is using skimmed cfg=1 and 8 for shift. 2+2 steps
+
+> Wan2.2 lownoise might be the best refine model ever; 0.2 denoise with smartphone lora
+
+> I switched everything from cu128 to cu130. It's way faster, but torch compile produces black/static images. Thing is, it's about as fast now on a 1st run as it used to be on a compiled second run
+
+## 2024.11.09
+
+> wan 2.2 i2v seems to handle all kinds of inputs, like how it can do first to last frame and even in-between frames;
+> in-between definitely works, there was also a Lora released recently that further improved that functionality some
+
+Possibly "morphic" LoRa
+
+> You can put a sequence, it'll work to keep motion from that sequence but unlike vace those frames won't be usable in the output,
+> they are a bit glitchy, so they can't be used to crossfade with a previous clip.
+> Also will introduce more color shifting but you can use the svi-film lora, technically isn't for 2.2,  to help reduce the color shifting.
+
+> the way I did is like vace, with grey images for blank frames + matching masks;
+> the masks are inverted from vace, blank image = black mask;
+> svi-film lora, from what I tested it only works with hn model and strength need to be quite high to have an effect, I had it set to 3;
+> it doesn't fix the distorted frames, only keep color from shifting on the rest of the generated frames
+
+> for this to work it also had to match the 4+ rule ... actually hits last; both 28 and 59 are last images in latent
+
+![wan22-i2v-middle-frames](screenshots/wan22-i2v-middle-frames.webp)
+
+Randome unrelated: res_2s and bong tangent
+
 ## 2024.10.25
 
 Qwen VL is capable of writing prompt for the next 5sec fragment, can give nice results paired with [SVI](svi.md)-film.

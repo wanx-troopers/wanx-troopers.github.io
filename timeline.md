@@ -1,5 +1,13 @@
 # News
 
+2025.11.10 UniLumos relight model integration into wrapper is being tested
+
+2025.11.10 --disable-pinned-memory option recommended when launching latest version of Comfy UI
+
+2025.11.08 Experiments with [BindWeave](bindweave.md) in ComfyUI
+
+2025.11.06 ChronoEdit released - model/workflow to generate a short clip making changes to an initial image with the goal of picking one frame that represents edited image, limited to the resolution Wan models work at, [link](https://aistudynow.com/chronoedit-comfyui-workflow-compare-with-qwen-image-edit-2509/); [rodent youtube tutorial](www.youtube.com/watch?v=ZdGpgs2qFWY)
+
 2025.10.30 [1030](loras/part-01.md#2025-Oct-10) I2V high noise lora released superceeding 1022 and MoE
 
 2025.10.25 [LongCat](longcat.md) models released; early experimentation in ComfyUI; promise of long and fast generations, 6 sec fragements stitched with 11 frame overlap; when continuation is used 11 frames is the only context possible, reference images are not taken

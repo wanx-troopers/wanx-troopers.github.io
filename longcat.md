@@ -85,3 +85,10 @@ An attempt to run in ComfyUI in wrapper, does not yet follow the prompt:
 > if your character isnt perfectly in the shot at the boundary, rip
 
 Apparenlty the authors provided an optional distill LoRa too but it is not functioning perfectly.
+
+> Long cat with torch compile turned off and sdpa instead of sageattn proved better in keeping the character consistent for me;
+> Pixarom w/f
+
+Community LoRa-s are missing
+
+Refinement LoRa is for upscaling, distill LoRa is to speed up generation

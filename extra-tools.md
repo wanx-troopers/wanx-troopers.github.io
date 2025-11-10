@@ -59,6 +59,7 @@ VibeVoice TTS
 
 * `Resize Image v2` from [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) new mode is `total_pixels` copies what `WanVideo Image Resize To Closest` from [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) does which is original Wan logic
 * `Video Info` from [Kosinkadink/ComfyUI-VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite) + `Preview Any` to debug dimension errors in ComfyUI etc
+* `Image Batch Extend With Overlap`from [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) to compose extensions created with VACE extend techniques
 
 ## Frame Interpolation
 
