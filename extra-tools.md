@@ -27,9 +27,15 @@ Sample workflow on HF next to LoRA.
 | --- | --- |
 | lovis93/next-scene-qwen-image-lora-2509 | next-scene_lora_v1-3000.safetensors |
 
+### Qwen Piflow
+
+[link](https://huggingface.co/Lakonik/pi-Qwen-Image) - 4-step Qwen image distill
+
 ### Face Consistency With Qwen?
 
 [WithAnyone](https://doby-xu.github.io/WithAnyone/)
+
+[PuLID](https://huggingface.co/guozinan/PuLID) ?
 
 ## Hunyuan Foley Generator
 
