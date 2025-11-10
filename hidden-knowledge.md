@@ -1,5 +1,9 @@
 # Hidden Knowledge
 
+## 2025.11.10
+
+Wan 2.2 vae is for the Wan 5b not the rest though
+
 ## 2025.10.25
 
 > wan video is only usable with qwen image inputs
