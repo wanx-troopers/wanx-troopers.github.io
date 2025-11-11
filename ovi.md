@@ -9,6 +9,8 @@ New weights can be used in Kijai's wrapper.
 Kijai has quantised to fp8_e4m3fn.
 Set length to 314 frames in `WanVideo Empty MMAuidio Latents`.
 
+Note: 10 sec v1.1 model can generate 10 sec clips only. 5 sec clips can be generated via a separate .safetensors v1.1 ovi file.
+
 ## Kijai's Support For Ovi
 
 There is a sample workflow in Kijai's repository. Wiring:
