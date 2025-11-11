@@ -2,11 +2,12 @@
 
 Ovi is an open-source model capable of sound + video generation. Video quality at 5B level. 24fps.
 
-Initially required 24Gb VRAM to run in 8fp and 32Gb VRAM to run in 16fp.
+## V1.1
 
-Githubs:
-* [ComfyUI_RH_Ovi](https://github.com/HM-RunningHub/ComfyUI_RH_Ovi)
-* [ComfyUI-Ovi](https://github.com/snicolast/ComfyUI-Ovi)
+Weights for v1.1 capable of 10 sec generation have been uploaded to Hugging Face.
+New weights can be used in Kijai's wrapper.
+Kijai has quantised to fp8_e4m3fn.
+Set length to 314 frames in `WanVideo Empty MMAuidio Latents`.
 
 ## Kijai's Support For Ovi
 
@@ -55,3 +56,12 @@ Possible workflow: put Ovi render into the InfiniteTalk workflow with the audio 
 Ovi has been successfully used with depth control controlnet trained for Wan 2.2 TI2V 5B. It is likely HED and Canny controlnets will also work.
 
 ![ovi-controlnet.png](screenshots/ovi-controlnet.png)
+
+## Initial Relaese Links
+
+Initially required 24Gb VRAM to run in 8fp and 32Gb VRAM to run in 16fp.
+
+Githubs:
+* [ComfyUI_RH_Ovi](https://github.com/HM-RunningHub/ComfyUI_RH_Ovi)
+* [ComfyUI-Ovi](https://github.com/snicolast/ComfyUI-Ovi)
+

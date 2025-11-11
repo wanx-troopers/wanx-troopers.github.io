@@ -1,5 +1,7 @@
 # News
 
+2025.11.11 Ovi 1.1 capable of 10sec video+sound generation weights have been upoloaded to HuggingFace
+
 2025.11.10 UniLumos relight model integration into wrapper is being tested; [sample workflow](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_1_3B_UniLumos_relight_example_01.json)
 
 2025.11.10 --disable-pinned-memory option recommended when launching latest version of Comfy UI

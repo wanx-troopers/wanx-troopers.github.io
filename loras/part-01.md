@@ -85,6 +85,7 @@ Note: "dyno" model does patching which cannot be done by a lora.
 
 Wan 2.1 and 2.2 LoRA-s:
 
+* Wan 2.2 Smartphone LoRa
 * [Cseti/wan2.2-14B-Kinestasis_concept-lora-v1](https://huggingface.co/Cseti/wan2.2-14B-Kinestasis_concept-lora-v1)
 * [Cseti/LTXV-13B-LoRA-Wallace_and_Gromit-v1](https://huggingface.co/Cseti/LTXV-13B-LoRA-Wallace_and_Gromit-v1) aka Walgro
 * [Charlietooth/wan2.1-14B-lora-punk-style](https://huggingface.co/Charlietooth/wan2.1-14B-lora-punk-style/tree/main) - a mix of cartoonish and realistic look

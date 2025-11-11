@@ -4,6 +4,8 @@
 
 Wan 2.2 vae is for the Wan 5b not the rest though
 
+For wrapper implementations the "null" image is black. For native implementations the "null" image is gray. Also the masks are inverted.
+
 ## 2025.10.25
 
 > wan video is only usable with qwen image inputs
