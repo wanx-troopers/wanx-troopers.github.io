@@ -1,5 +1,9 @@
 # Hidden Knowledge
 
+## 2025.11.11
+
+Massively useful list of WAN-realted models, LoRa-s, controlnets: [link](https://docs.google.com/spreadsheets/d/1HvJ5_ZAzx0Dmw_mifdj1sx2nyIIXoUmqUYj30sMlJpI)
+
 ## 2025.11.10
 
 Wan 2.2 vae is for the Wan 5b not the rest though
