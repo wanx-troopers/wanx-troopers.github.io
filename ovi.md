@@ -7,7 +7,7 @@ Ovi is an open-source model capable of sound + video generation. Video quality a
 Weights for v1.1 capable of 10 sec generation have been uploaded to Hugging Face.
 New weights can be used in Kijai's wrapper.
 Kijai has quantised to fp8_e4m3fn.
-Set length to 314 frames in `WanVideo Empty MMAuidio Latents`.
+Set length to 314 frames in `WanVideo Empty MMAuidio Latents`. We end up with 241 video frames.
 
 Note: 10 sec v1.1 model can generate 10 sec clips only. 5 sec clips can be generated via a separate .safetensors v1.1 ovi file.
 
