@@ -28,7 +28,7 @@
 2025.10.21 [Krea Realtime](loras/both-ways.md#krea-realtime) Wan 2.1 T2V 14B distill difficult to use but realistic; works as a "full-fat" model, not as a LoRa
 
 
-2025.10.20 Kijai adapted [Ditto](loras/part-02.md#ditto) LoRas; these allow converting realistic videos to animated styles 
+2025.10.20 Kijai adapted [Ditto](loras/part-02.md#ditto) LoRas for VACE; these allow converting realistic videos to animated styles
 
 2025.10.19 Kijai added `total_pixels` mode to `Resize Image v2` node in [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
 

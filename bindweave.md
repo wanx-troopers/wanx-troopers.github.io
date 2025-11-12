@@ -24,3 +24,14 @@ bindweave [branch](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/bindwea
 > Not implemented yet either in Wrapper or Native. Unianimate is only available in the wrapper actually.
 > It can be added to any I2V model, but as Bindweave adds 4 latents to the start, you have to compensate for that somehow.
 > I did try normal I2V + references with it and it seemed to work.
+
+> When you pad the input noise latent to match the i2v channels input, do those 4 frames also get set to zeros or do you just pad with "gray" frames?
+> Zeros
+
+> Q: if you had no references hypothetically, your input latent into the model would be 32 channels of just zeros for the first four latent frames? all zeros all the way down? (not including the 4 mask channels I mean, which would be 1's right?) 
+> A: The first 4 in the noise channel are zeros; In the cond channel those are references 
+> Q: yeah but they are also zeros if the references aren't there right? just hypothetically?
+> A: If you only have single reference, then first would be the ref latent + it's I2V mask, which btw is actual box mask not full frame;
+> And the 3 after that, in the cond channel, would be zeroes, mask too;
+> What they do is mark the original area white, and the padded are black if it's for example square reference and you generate wide aspect;
+> They mostly used face crops so those were always padded and thus always masked

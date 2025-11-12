@@ -92,3 +92,7 @@ Apparenlty the authors provided an optional distill LoRa too but it is not funct
 Community LoRa-s are missing
 
 Refinement LoRa is for upscaling, distill LoRa is to speed up generation
+
+> LongCat prompt adherence is closer to Wan 2.1 than 2.2, it's not great.
+> Only thing it's better at is video extension.
+> And none of the Wan stuff like loras work on it so, not very useful model currently.
