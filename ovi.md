@@ -11,6 +11,8 @@ Set length to 314 frames in `WanVideo Empty MMAuidio Latents`. We end up with 24
 
 Note: 10 sec v1.1 model can generate 10 sec clips only. 5 sec clips can be generated via a separate .safetensors v1.1 ovi file.
 
+> Q: SLG 11? It's best?
+
 ## Kijai's Support For Ovi
 
 There is a sample workflow in Kijai's repository. Wiring:

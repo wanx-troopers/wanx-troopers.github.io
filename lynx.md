@@ -55,3 +55,5 @@ There is an unconfirmed report of Lynx working with [Wan Animate](wan-animate-mo
 > The reference adapter somewhat works with more than just face, the ipadapter is only face;
 > lynx reference "too strong"; ip adapter "not very strong"
 
+> Q: Are we limited to 256 on lynx ref image? 
+> A: technically ref can be any size, in practice it doesn't do good with very large ones; ipadapter is hardcoded and limited

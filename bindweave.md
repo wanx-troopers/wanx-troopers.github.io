@@ -19,3 +19,8 @@ bindweave [branch](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/bindwea
 > Q: Can't use open pose video to drive animation or character movement either?
 > A: maybe unianimate
 
+> Q: Does BindWeave have native control?
+> A: No, it's just reference(s) to video. Unianimate could work, but the extra latents at start need to be compensated for.
+> Not implemented yet either in Wrapper or Native. Unianimate is only available in the wrapper actually.
+> It can be added to any I2V model, but as Bindweave adds 4 latents to the start, you have to compensate for that somehow.
+> I did try normal I2V + references with it and it seemed to work.
