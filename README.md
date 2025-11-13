@@ -19,6 +19,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [SVI](svi.md)
 * [HoloCine](holocine.md)
 * [LongCat](longcat.md)
+* [BindWeave](bindweave.md)
 
 ## What Plugs Where
 

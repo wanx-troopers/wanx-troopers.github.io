@@ -53,6 +53,8 @@ VibeVoice TTS
 
 `SuperPrompt` node from [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes).
 
+`Merge Images` node from VideoHelperSuite (so called VHS)
+
 [Urabewe/OllamaVision](https://github.com/Urabewe/OllamaVision) a SwarmUI extension to generate prompts.
 
 ## Useful Nodes
