@@ -10,6 +10,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 ## Core
 
 * [Hidden Knowledge](hidden-knowledge.md)
+* [Conditioning](conditioning.md)
 * [Sigmas](sigmas.md)
 * [Control Techniques](control.md)
 * [HuMo](HuMo-info.md)

@@ -9,6 +9,8 @@
 
 > I switched everything from cu128 to cu130. It's way faster, but torch compile produces black/static images. Thing is, it's about as fast now on a 1st run as it used to be on a compiled second run
 
+> good nodes like florence and qwen vl have 'keep model loaded' boolean option
+
 ## 2024.11.09
 
 > wan 2.2 i2v seems to handle all kinds of inputs, like how it can do first to last frame and even in-between frames;

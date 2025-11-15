@@ -1,5 +1,7 @@
 # Other Things to Check Out
 
+* [time-to-move/TTM](https://github.com/time-to-move/TTM) a promising body of code for converting rough mock-ups into smooth AI videos; existed for CogVideoX; should be possible to adapt to any AI generation framework as it works on latents;
+present iteration of code emphasises integration with Wan 2.2; no implementation in ComfyUI as of 2025.11.15
 * [mattjohnpowell/comfyui-lmstudio-image-to-text-node](https://github.com/mattjohnpowell/comfyui-lmstudio-image-to-text-node) node pack to generate advanced prompts using LLM-s
 * allegedly Holocine/PUSA(merge) + FunVACE (module) & Krea (module) via Extra jacks is possible?..
 * [drozbay/ComfyUI-WanVaceAdvanced](https://github.com/drozbay/ComfyUI-WanVaceAdvanced) nodes for advanced Wan + VACE generation

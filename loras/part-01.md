@@ -9,6 +9,13 @@
 
 ## Noteworthy Loras
 
+### 2025-Nov-13
+
+> Q: Best Wan 2.2 I2V LoRa-s? 
+> Artist: 2.1 LightX2V for 2.2 low noise, new 2.2 LightX2V 4-step distill (1030?) for high noise? 
+> M: 1030 feels like the only alternative so far for the old 2.1 at higher strength (and it is high-noise only)
+
+
 ### 2025-Oct-10
 
 There's

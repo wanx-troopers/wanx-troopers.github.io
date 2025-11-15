@@ -1,6 +1,22 @@
 # Hidden Knowledge
 
+## 2025.11.15
+
+noise grids/dithering problem with Wan models: originally believed to be
+
+> wan video is only usable with qwen image inputs
+> because those are so soft that they do not cross into the detail level where the vae will fail into noise grids
+
+but it looks like the actual explanation is
+
+> It's triggered by the mismatch between real (encoded) and generated latents.
+> Generated latents are usually blurry, although adversarial distillation like lightx (dmd2) helps sharpen the generated latents.
+> The decoder doesn't know how to handle blurry latents, they're out of distribution, so it generates speckle/grid artifacts as its failure mode.
+
 ## 2025.11.11
+
+When switching on tiling in VAE to save VRAM working with WAN models it is advisable to set `temporal_size` setting on VAE to more than the actual number of frames generated.
+For example when generating 81 frames a setting of 84 is advised. Otherwise tiled VAE may introduce flickering.
 
 Massively useful list of WAN-realted models, LoRa-s, controlnets: [link](https://docs.google.com/spreadsheets/d/1HvJ5_ZAzx0Dmw_mifdj1sx2nyIIXoUmqUYj30sMlJpI)
 
@@ -11,9 +27,6 @@ Wan 2.2 vae is for the Wan 5b not the rest though
 For wrapper implementations the "null" image is black. For native implementations the "null" image is gray. Also the masks are inverted.
 
 ## 2025.10.25
-
-> wan video is only usable with qwen image inputs
-> because those are so soft that they do not cross into the detail level where the vae will fail into noise grids
 
 `WanVideo Set Block Swap` and similar nodes do not require re-loading `.safetensors` to make changes - that is why they're separate nodes.
 
@@ -33,7 +46,8 @@ Kijai's nodes can convert between data types such as `bf16` at `safetensors` loa
 | [kijai/ComfyUI-MMAudio](https://github.com/kijai/ComfyUI-MMAudio) | Foley? |
 | [kijai/ComfyUI-GIMM-VFI](https://github.com/kijai/ComfyUI-GIMM-VFI) | frame interpolator |
 
-Resolutions to try with WAN: 1536x864, 1280x768, 1200x960, 1/2 of that, 832x480, 1024x576.
+Resolutions to try with WAN: 1536x864, 1280x768, 1200x960, 1/2 of that, 832x480, 1024x576, 1440x816  
+Resolutions to try with Ovi v1.1: 1280x704, 704x1280
 
 Colored inputs on ComfyUI node designate non-optional inptus, rather than inputs that have something connected to them.
 

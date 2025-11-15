@@ -6,7 +6,9 @@ Trained from Wan 2.1 I2V 720p
 
 Very strong character consistency
 
-bindweave [branch](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/bindweave) on Kijai's wrapper github repository
+BindWeave [branch](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/bindweave) on Kijai's wrapper github repository
+
+BindWeave [fp8 by Kijai](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Bindweave)
 
 > such a hard model to use; 3 different image inputs and all should be handled differently
 
@@ -35,3 +37,10 @@ bindweave [branch](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/bindwea
 > And the 3 after that, in the cond channel, would be zeroes, mask too;
 > What they do is mark the original area white, and the padded are black if it's for example square reference and you generate wide aspect;
 > They mostly used face crops so those were always padded and thus always masked
+
+> Q: Do you per chance know if in bindweave we apply mask to conditioning? 
+> A: there's always a mask in I2V conditioning, 1 marks the input image and 0 is what's generated, usually that's full frame mask, in Bindweave however they mark the original area 1 and possibly padded area 0 in addition. 
+> there's no latent mask per se, it's automatically created with the I2V node already;
+> if you were to add Bindweave references to it, they'd need to be masked similarly
+
+See also: "conditioning" [details](conditioning.md#details).
