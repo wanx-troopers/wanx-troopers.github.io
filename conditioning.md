@@ -66,6 +66,9 @@ When working with I2V models all of the latents in channels 21-36 that overlap w
 latents should be set to gray values, not zeros.
 Only the bindweave references that aren't used should be set to zeros.
 
+Theoretically the masks should be 1 for the reference frames that you're using and 0s for the other reference frames. But there also is ComfyUI inversion, so maybe it should be the opposite.
+Having all of the masks just be 1s and that doesn't seem worse either.
+
 Phantom adds the reference image at the end of the regular noise latent, and the model just understands what that means.
 
 Clip vision inputs are passed in to separate layers, they are not in I2V conditioning channels.

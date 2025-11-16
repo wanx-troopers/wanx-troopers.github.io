@@ -2,6 +2,13 @@
 
 ## 2025.11.15
 
+`umt-xxl-enc-bf16.safetensors` only works with the WanVideoWrapper;
+native workflows need the model without the `enc`
+like `umt5-xxl-fp16.safetensors`.
+
+
+## 2025.11.14
+
 noise grids/dithering problem with Wan models: originally believed to be
 
 > wan video is only usable with qwen image inputs

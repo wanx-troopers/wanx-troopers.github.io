@@ -8,7 +8,7 @@ please see [HuMo](humo.md) section
 
 2025.11.15 [BindWeave](bindweave.md) nodes merged to `main` branch in [GH:kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
 
-2025.11.14 Kandinsky-5 Pro model weights made public: 5sec I2V, 5sec T2V, 10sec T2V; no implementation in ComfyUI yet allowing to run on consumer hardware
+2025.11.14 [Kandinsky-5](k5.md) Pro model weights made public: 5sec I2V, 5sec T2V, 10sec T2V; no implementation in ComfyUI yet allowing to run on consumer hardware
 
 2025.11.11 Ovi 1.1 capable of 10sec video+sound generation weights have been upoloaded to HuggingFace
 

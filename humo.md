@@ -37,3 +37,6 @@ It appears `HuMo` can use multiple reference images.
 
 > Besides having great audio-dependent generation, even without that HuMo is the best one-shot subject-to-video model we have.
 > It also works great in V2V with inpainting simply by using a latent noise mask, especially when combined with differential diffusion.
+
+
+[GH:vrgamegirl19/comfyui-vrgamedevgirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl) is a well-known workflow supporting generation of rather long music videos with HuMo.
