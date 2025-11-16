@@ -1,14 +1,20 @@
 # News
 
-2025.11.15 Kandinsky-5 Pro model weights made public: 5sec I2V, 5sec T2V, 10sec T2V; no implementation in ComfyUI yet allowing to run on consumer hardware
+2025.11.15 [drozbay](https://github.com/drozbay) has created [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments) repository dubbed `WanEx`; it contains his nodes
+for working with [HuMo](humo.md), [SVI-shot](svi.md#svi-shot) and native WF [BindWeave](bindweave.md)
+
+2025.11.15 [drozbay](https://github.com/drozbay) has shared a HuMo continuation workflow;
+please see [HuMo](humo.md) section
+
+2025.11.15 [BindWeave](bindweave.md) nodes merged to `main` branch in [GH:kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
+
+2025.11.14 Kandinsky-5 Pro model weights made public: 5sec I2V, 5sec T2V, 10sec T2V; no implementation in ComfyUI yet allowing to run on consumer hardware
 
 2025.11.11 Ovi 1.1 capable of 10sec video+sound generation weights have been upoloaded to HuggingFace
 
 2025.11.10 UniLumos relight model integration into wrapper is being tested; [sample workflow](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_1_3B_UniLumos_relight_example_01.json)
 
 2025.11.10 --disable-pinned-memory option recommended when launching latest version of Comfy UI
-
-2025.11.08 Experiments with [BindWeave](bindweave.md) in ComfyUI
 
 2025.11.06 ChronoEdit released - model/workflow to generate a short clip making changes to an initial image with the goal of picking one frame that represents edited image, limited to the resolution Wan models work at, [link](https://aistudynow.com/chronoedit-comfyui-workflow-compare-with-qwen-image-edit-2509/); [rodent youtube tutorial](www.youtube.com/watch?v=ZdGpgs2qFWY)
 

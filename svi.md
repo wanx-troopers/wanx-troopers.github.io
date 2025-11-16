@@ -97,6 +97,14 @@ Artist:
 
 ### SVI-Shot
 
+SVI-Shot allows us to supply an additional reference image to an AI video sampling using I2V models.
+One way to format [conditioning](conditioning.md) accordingly is to use `WanEx I2VCustomEmbeds` node
+from [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments) code repository.
+
+[HuMO](humo.md) section contains a workflow which [drozbay](https://github.com/drozbay),
+the node's author, has shared for HuMO. Please refer to this workflow as a general instruction
+on how to use `WanEx I2VCustomEmbeds` node with `SVI-Shot` LoRa.
+
 > with svi shot you need exactly 1 black mask frame and 80 white mask frames, at least in the wrapper
 
 > the reference padding only works with the shot, talk and dance loras

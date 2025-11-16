@@ -1,14 +1,19 @@
 # BindWeave
 
+## BindWeave In ComfyUI
+
+- [GH:kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) contains nodes to run Bindweave in "wrapper" workflows
+- [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments) contains nodes to use Bindweave in native workflows
+
+Fp8 model weights adaptation by Kijai: [link](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Bindweave)
+
+## Comments
+
 2024.11.10 QwenVL part is not working, code still not in wrapper main branch
 
 Trained from Wan 2.1 I2V 720p
 
 Very strong character consistency
-
-BindWeave [branch](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/bindweave) on Kijai's wrapper github repository
-
-BindWeave [fp8 by Kijai](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Bindweave)
 
 > such a hard model to use; 3 different image inputs and all should be handled differently
 

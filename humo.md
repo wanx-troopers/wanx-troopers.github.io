@@ -1,5 +1,26 @@
 # HuMO
 
+## 2025.11.15
+
+[drozbay](https://github.com/drozbay) has shared `droz_wanexperiments_svishot_with_humo_v1.webp` worflow
+![droz_wanexperiments_svishot_with_humo_v1](workflows/droz_wanexperiments_svishot_with_humo_v1.png)
+
+This is a HuMo continuation workflow, it allows generating videos beyond the usual HuMo limit of about 4 seconds.
+Continuation is made possible by the fact that
+- among other types of [conditioning](conditioning.md) accepts Wan 2.1 I2V style 1st frame image -
+  provided that ComfyUI implementation of HuMo model is "patched" not to erase it
+- resulting slight flickering artifacts appear to become better by using [SVI](svi.md) shot LoRa
+
+SVI-shot allows to supply an additional reference image as part of conditioning.
+The manner in which it is supplied is unique to SVI-shot.
+
+Both of these actions - patching HuMo model code and correct formatting of conditioning are
+implemented in this workflow through the use of `WanEx I2VCustomEmbeds` node which 
+[drozbay](https://github.com/drozbay) has shared via the following new code repository:
+[GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments)
+
+## Notes
+
 When using `HuMo` safetensors it may be possible to use `WanVideo Long I2V Multi/InfiniteTalk` in addition to or instead of `HuMo Embeds`.
 If both are used at the same time the embeds need to do be mixed using `WanVideo Combine Embeds`.
 In this case `HuMo Embeds` is plugged first and `WanVideo Long I2V Multi/InfiniteTalk` is plugged second.

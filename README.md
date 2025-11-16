@@ -13,7 +13,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [Conditioning](conditioning.md)
 * [Sigmas](sigmas.md)
 * [Control Techniques](control.md)
-* [HuMo](HuMo-info.md)
+* [HuMo](humo.md)
 * [Wan Animate/MoCha](wan-animate-mocha.md)
 * [Infinite Talk](infinite-talk.md)
 * [Phantom and MAGREF](phantom-magref.md)
