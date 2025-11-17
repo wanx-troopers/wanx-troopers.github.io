@@ -18,6 +18,8 @@ Countered: "The degradation with svi-film is much much better than Vace or anyth
 
 Advice for developers is to generate extensions with a seed different from the one used for the original video.
 
+SVI stands for "Stable Video Infinity".
+
 ## The Whole Point
 
 > Normal I2V doesn't do well with more than one input image; VACE (T2V) works but not the base I2V;
@@ -87,6 +89,8 @@ Artist:
 > comfyui there is an inversion of the binary mask before sending it to the model - super intuitive
 
 ### SVI-Film
+
+`WanImageToVideo` node happens to construct the masks and latents properly for SVI-Film, no custom nodes are necessary.
 
 > in native comfyui it's black mask is unchanged;
 > in native you send black masks for the overlap frames and white for the rest;

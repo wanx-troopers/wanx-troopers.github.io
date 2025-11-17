@@ -3,7 +3,7 @@
 ## BindWeave In ComfyUI
 
 - [GH:kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) contains nodes to run Bindweave in "wrapper" workflows
-- [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments) contains nodes to use Bindweave in native workflows
+- [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments) contains nodes to use Bindweave in native workflows - and said to work quite well including CLIP Vision and QwenVL - which actually don't seem to improve the outputs
 
 Fp8 model weights adaptation by Kijai: [link](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Bindweave)
 
@@ -47,5 +47,7 @@ Very strong character consistency
 > A: there's always a mask in I2V conditioning, 1 marks the input image and 0 is what's generated, usually that's full frame mask, in Bindweave however they mark the original area 1 and possibly padded area 0 in addition. 
 > there's no latent mask per se, it's automatically created with the I2V node already;
 > if you were to add Bindweave references to it, they'd need to be masked similarly
+
+> Q: Bindweave is pretty sensitive to the  positioning and scale of reference?
 
 See also: "conditioning" [details](conditioning.md#details).

@@ -1,9 +1,18 @@
 # Statements
 
+## 2024.11.16
+
+An artist:
+> I use AI Toolkit for training wan loras and they work quite good on likeness with animate and all wan models
+
 ## 2024.11.10
 
 > I'm getting some okay results with 1030 high at 1, 1022 low at 1, cfg=2 for high and low, lcm/beta.
 > this is using skimmed cfg=1 and 8 for shift. 2+2 steps
+
+Doctor about WAN: "10 steps, 5/5 2k input, 720p output, rife 50fps"
+
+Doctor about Qwen Image generation (?): "Res 3S also, it was a game changer, exponential samplers are less brutal in early steps"; "tweaking the denoising .1 by .1 swapping wan with krea"
 
 > Wan2.2 lownoise might be the best refine model ever; 0.2 denoise with smartphone lora
 

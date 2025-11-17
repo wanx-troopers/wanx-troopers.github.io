@@ -2,7 +2,23 @@
 
 The page needs a brush-up. Bugs referenced have been fixed or worked around. Still might be useful info.
 
+## 2025.11.16
+
+[Sam Hodge](https://www.imdb.com/name/nm1668128/) suggested a script to install Sage Attention on Ubuntu 24.04 with an RTX 5090 in the following manner
+
+```
+ENV  TORCH_CUDA_ARCH_LIST='8.0,8.0+PTX,8.6,8.6+PTX,8.9,8.9+PTX'
+RUN git clone https://github.com/thu-ml/SageAttention.git && \
+  cd SageAttention && \
+  git reset --hard eb615cf6cf4d221338033340ee2de1c37fbdba4a && \
+#  sed -i "/compute_capabilities = set()/a compute_capabilities = {\"$TORCH_CUDA_ARCH_LIST\"}" setup.py && \
+  EXT_PARALLEL=4 NVCC_APPEND_FLAGS="--threads 8" \
+  MAX_JOBS=32 uv pip install -e . --no-build-isolation --break-system-packages
+```
+
 ## 2025.11.10
+
+Python 3.12 is probably a good idea
 
 Possible startup arguments: comfy --here launch -- --reserve-vram 5 --max-upload-size 500 --use-sage-attention --disable-pinned-memory
 

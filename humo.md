@@ -2,8 +2,9 @@
 
 ## 2025.11.15
 
-[drozbay](https://github.com/drozbay) has shared `droz_wanexperiments_svishot_with_humo_v1.webp` worflow
-![droz_wanexperiments_svishot_with_humo_v1](workflows/droz_wanexperiments_svishot_with_humo_v1.png)
+[drozbay](https://github.com/drozbay) has shared `droz_wanexperiments_svishot_with_humo_v1.1` worflow
+![droz_wanexperiments_svishot_with_humo_v1.1](workflows/droz_wanexperiments_svishot_with_humo_v1.1.png)
+Earlier version: [droz_wanexperiments_svishot_with_humo_v1.png](workflows/droz_wanexperiments_svishot_with_humo_v1.png)
 
 This is a HuMo continuation workflow, it allows generating videos beyond the usual HuMo limit of about 4 seconds.
 Continuation is made possible by the fact that

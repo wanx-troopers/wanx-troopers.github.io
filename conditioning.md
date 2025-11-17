@@ -1,4 +1,4 @@
-# Conditionioning
+# Conditioning
 
 Sampling in AI video generation is the process of converting noise to a sequence of images.
 Visual data is stored in compressed form = latent space = as "latents".
