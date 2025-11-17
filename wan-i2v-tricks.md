@@ -28,4 +28,18 @@ and provided an [example wf](https://github.com/kijai/ComfyUI-WanVideoWrapper/bl
 Mixed results reported in testing. [Official tool](https://github.com/time-to-move/TTM/tree/main/GUIs) is used to generate driving video.
 Mockups use character pictures with a white outline around them.
 Low noise step is somehow more problematic.
-Removing Lightx2V on low seems to help.
+Removing Lightx2V on low seems to help a bit.
+
+The process requires that a mask is supplied.
+Commonly people take the "control" (e.g. rouch mockup video which is already being fed into the process) and pass it via `Convert Image To Mask` and then connect to `mask` input.
+Thus the end result is a sort of V2V.
+
+`unipc` may be a good scheduler to use. In order to use `dpm++` it is advisable to
+> stop the reference one step before the last step of high noise
+
+Half-cooked 3d can be supplied. One way to produce:
+> blender, put the image on a subdivided plane and use the depth map to displace the geometry, then animating the camera
+
+DepthAnything 3 can be useful generating .glb. Possibly MoGe. Possilby https://huggingface.co/spaces/facebook/vggt
+
+> Try reducing the end step on the LTT node, you might get more motion, so wan is a bit more free earlier during sampling to generate motion since it won't stick as close the reference

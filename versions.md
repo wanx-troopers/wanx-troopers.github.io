@@ -70,4 +70,5 @@ For Windows it's `triton-windows 3.5.0.post21` or later.
 > SageAttenion 2.2.0 latest
 > highly recommended, gets rid of all graph breaks so torch compile works better
 
-[windows install](https://github.com/woct0rdho/SageAttention) - read instructions on the page, not simply `pip install sageattention -U`
+https://github.com/woct0rdho/triton-windows - read instructions on the page, not simply `pip install sageattention -U`
+https://github.com/woct0rdho/SageAttention
