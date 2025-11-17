@@ -3,6 +3,16 @@
 In Nov 2025 community started exploring hidden potential behind Wan 2.2 I2V models.
 This page collects insights into non-obvious workflows.
 
+## HuMo I2V and SVI-shot
+
+Since HuMo is an I2V member of Wan family of models, the [work](humo.md#drozbay) done by Drozbay to enable [SVI-shot](svi.md#svi-shot)-powered HuMo extensions clearly is a new Wan I2V trick.
+
+The node and workflow discussed in the referenced page faciliate using [SVI-shot](svi.md#svi-shot) LoRa to provide an additional reference to I2V generations.
+This counters visual degradation that commonly happens in extension workflows.
+Sadly this approach does not facilitate continuity of motion.
+
+Happily this can be applied in normal I2V workflows unrelated to HuMo.
+
 ## PainterI2V
 
 `princepainter/PainterI2V` node attracted attention and sparked research. It exists into two versions

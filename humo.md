@@ -1,8 +1,8 @@
 # HuMO
 
-## 2025.11.15
+## Drozbay
 
-[drozbay](https://github.com/drozbay) has shared `droz_wanexperiments_svishot_with_humo_v1.1` worflow
+2025.11.15 [drozbay](https://github.com/drozbay) has shared `droz_wanexperiments_svishot_with_humo_v1.1` worflow
 ![droz_wanexperiments_svishot_with_humo_v1.1](workflows/droz_wanexperiments_svishot_with_humo_v1.1.png)
 Earlier version: [droz_wanexperiments_svishot_with_humo_v1.png](workflows/droz_wanexperiments_svishot_with_humo_v1.png)
 
