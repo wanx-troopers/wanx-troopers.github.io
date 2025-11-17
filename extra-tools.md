@@ -18,7 +18,7 @@ Supposedly has affinity to Wan models since both come from Alibaba.
 | lightx2v/Qwen-Image-Lightning | Qwen-Image-Edit-2509/Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16 |
 
 
-### Notable Companion to Qwen Image Edit
+### Notable Loras For Qwen Image Edit
 
 Generates 1st frame for next scene in same location with same character.
 Sample workflow on HF next to LoRA.
@@ -26,6 +26,12 @@ Sample workflow on HF next to LoRA.
 | HF Space | LoRA |
 | --- | --- |
 | lovis93/next-scene-qwen-image-lora-2509 | next-scene_lora_v1-3000.safetensors |
+
+Text editing similar to Nano Banana (dataset [visualizer](https://snazzy-selkie-ebdccf.netlify.app/), [dataset](https://github.com/apple/pico-banana-400k))
+
+| HF Space | LoRA |
+| --- | --- |
+| [eigen-ai-labs/eigen-banana-qwen-image-edit](https://huggingface.co/eigen-ai-labs/eigen-banana-qwen-image-edit/tree/main) | eigen-banana-qwen-image-edit-2509-fp16-lora.safetensors |
 
 ### Qwen Piflow
 
@@ -56,6 +62,8 @@ VibeVoice TTS
 `Merge Images` node from VideoHelperSuite (so called VHS)
 
 [Urabewe/OllamaVision](https://github.com/Urabewe/OllamaVision) a SwarmUI extension to generate prompts.
+
+[GH:chflame163/ComfyUI_LayerStyle](https://github.com/chflame163/ComfyUI_LayerStyle) can add film grain to images.
 
 ## Useful Nodes
 
