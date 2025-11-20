@@ -1,5 +1,8 @@
 # BindWeave
 
+Bindweave is new a video ai generation model in its own right but it also appears to be accepting some of the Wan tools similar to Wan 2.1.
+Bindweave is known for preserving very strong character likeness and has been likened to "a new phantom".
+
 ## BindWeave In ComfyUI
 
 - [GH:kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) contains nodes to run Bindweave in "wrapper" workflows
