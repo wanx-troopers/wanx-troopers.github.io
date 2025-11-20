@@ -20,6 +20,12 @@ implemented in this workflow through the use of `WanEx I2VCustomEmbeds` node whi
 [drozbay](https://github.com/drozbay) has shared via the following new code repository:
 [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments)
 
+## VRGameDevGirl
+
+[VRGameDevGirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl) is prominent artist in Video AI space known for her HuMo workflows for generating AI musical videos.
+2025.11.20 she shared a work-in-progress workflow for `Wan 2.2 Humo I2V First Last Frame`, which is similar to the one above but doesn't offer continuation facility.
+Here's a [copy](workflows/Wan2.2HumoI2VorFLF_WIP.webp), please beware of possible bugs.
+
 ## Notes
 
 When using `HuMo` safetensors it may be possible to use `WanVideo Long I2V Multi/InfiniteTalk` in addition to or instead of `HuMo Embeds`.
