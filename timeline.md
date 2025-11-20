@@ -1,5 +1,9 @@
 # News
 
+2025.11.20 Community is experimenting with Facebook's [SAM3](auxiliary.md#sam3) segmentation/depth map model
+
+2025.11.20 New LoRa-s to supply subjects/objects and background all in 1st from for Wan 2.2 I2V: [FFGO](wan-i2v-tricks.md#ffgo)
+
 2025.11.16 Kijai implemented [TimeToMove](wan-i2v-tricks.md#timetomove) mockup in wrapper
 
 2025.11.16 Community is exploring [PainterI2V](wan-i2v-tricks.md#painteri2v) and [PainterLongVideo](wan-i2v-tricks.md#painterlongvideo) nodes for more dynamic and longer generations with Wan 2.2 I2V
@@ -72,3 +76,5 @@ could use lightx2v_I2V_14B_480p_cfg_step_distill_rank256_bf16.safetensors on low
 2025.10.10 Kijai extracted [rCM](loras/part-02.md#rcm) distilled loras
 
 2025.10.10 [Cseti](https://github.com/cseti007) published [Kinestasis](loras/alchemy.md#special-use) LoRA and [limited-context-options-wan2.2](tricks.md#cseti) process
+
+? [Lynx](lynx.md) Facility to introduce character likeness from a single reference image for Wan 2.1 T2V

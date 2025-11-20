@@ -52,6 +52,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 ## P.S.
 
 * [Extra Tools](extra-tools.md)
+* [Auxiliary Tools](auxiliary.md)
 * [Tricks](tricks.md)
 * [Recommended Software Versions](versions.md)
 

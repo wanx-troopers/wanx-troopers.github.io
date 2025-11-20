@@ -16,8 +16,25 @@ Happily this can be applied in normal I2V workflows unrelated to HuMo.
 ## I2V Video Inpainting
 
 Apparently it has long been possible to use masks when doing V2V processing via I2V models. As of now this website doesn't contain a complete workflow, however here is a hint into how to setup such workflow:
+[i2v-masks](screenshots/i2v-masks.webp)
 
-![i2v-masks](screenshots/i2v-masks.webp)
+## I2V Keyfarming
+
+It has been proven possible to supply middle frames to I2V in addition to start/end frames. Workflow building hints:
+
+- [wrapper-wf-fragment](screenshots/wan22-i2v-middle-frames-wrapper.webp) the wrapper I2V node already does that, you can use the VACE start/end frame node to create the batches and masks, and that goes into the start image and temporal mask
+- [wan22-i2v-middle-frames](screenshots/wan22-i2v-middle-frames.webp)
+- [full wf](workflows/Wan2.2-sub-v0.4.json)
+
+## FFGO
+
+New high/low Wan 2.2 I2V LoRa-s which allow supplying subjects/objects and background all in the 1st frame on white background
+- read [GH:zli12321/FFGO-Video-Customization](https://github.com/zli12321/FFGO-Video-Customization)
+- download [HF:Kijai/WanVideo_comfy:LoRAs/Wan22_FFGO](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Wan22_FFGO)
+
+Workflow building [hint](screenshots/ffgo.webp) Prompt: `ad23r2 the camera view suddenly changes ...`
+
+Works well for anime characters.
 
 ## TimeToMove
 

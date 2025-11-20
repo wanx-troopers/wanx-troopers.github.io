@@ -1,5 +1,10 @@
 # Hidden Knowledge
 
+## 2025.11.20
+
+`res_multistep` in `Wan Video Sampler` (wrapper) is probably similar to `res_2s` in other samplers (Clownshark?)
+> most people using res_2s and similar are not comparing it to other samplers at 2x the steps; not denying it can be better, just skeptical how much, at least with distill loras
+
 ## 2025.11.15
 
 `umt-xxl-enc-bf16.safetensors` only works with the WanVideoWrapper;

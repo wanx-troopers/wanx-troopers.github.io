@@ -146,3 +146,5 @@ is generated automatically if the only inputs given are start/end frame.
 Hint: SVI lora on 1st clip not needed, just freezes motion.
 
 > when svi film is used with fun inp, it's vanilla fun inp workflow with svi lora? yes
+
+> shot lora allows infinite gens with no degradation, film lora allows for motion continuation of generation, so combined would allow infinite continuation

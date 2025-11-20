@@ -16,3 +16,12 @@ For face animation only
 ### MTV crafter
 
 Very different from usual
+
+## Uni3C
+
+Camera control for Wan 2.1 (hmm which one?..)
+
+## Q/A
+
+> Q: Is there anything that does the same thing as Uni3C but for WAN 2.2?
+> A: [TTM](wan-i2v-tricks.md#time-to-move) kinda, uni3C works at higher strength to some extent, combination of both could be interesting... also there's the Fun control camera which works good
