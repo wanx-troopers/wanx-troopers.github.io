@@ -103,3 +103,9 @@ Same GitHub account, now an FLF node: [link](https://github.com/princepainter/Co
 [princepainter/ComfyUI-PainterLongVideo](https://github.com/princepainter/ComfyUI-PainterLongVideo) from that same authrow is being played with.
 Expert conclusion however is that the node is either simply an automation I2V extension via last frame
 or possibly also [PainterI2V](wan-i2v-tricks.md#painter2iv) on top of it.
+
+## Masks
+
+Here is a slightly non-traditional way to build masks. Please note that actual value 0 vs 1 may be opposite between wrapper and native workflows.
+
+![build-masks-manually](../screenshots/build-masks-manually.webp)

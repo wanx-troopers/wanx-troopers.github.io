@@ -100,6 +100,12 @@ SolidMask  ---> RepeatMask --------------------------> |                 |
 * `Points Editor` from [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) used in workflows utilizing Sam2 for segmentation.
 * `Rope Function Node` from [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) - mysterious but holds promise.
 
+## Masks
+
+Here is a slightly non-traditional way to build masks. Please note that actual value 0 vs 1 may be opposite between wrapper and native workflows.
+
+![build-masks-manually](../screenshots/build-masks-manually.webp)
+
 ## 3rd Party
 
 ## [Wan Animate](../wan-animate-mocha.md#what-plugs-where-wan-animate) Section
