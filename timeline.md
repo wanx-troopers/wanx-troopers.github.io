@@ -1,6 +1,6 @@
 # News
 
-2025.11.21 Hunyuan 1.5 generating 5-10 sec 24fps videos announced: [link](https://x.com/TencentHunyuan/status/1991717687706398828)
+2025.11.21 [Hunyuan](hunyuan.md) 1.5 generating 5-10 sec 24fps videos announced: [link](https://x.com/TencentHunyuan/status/1991717687706398828)
 
 2025.11.20 Community is experimenting with Facebook's [SAM3](auxiliary.md#sam3) segmentation/depth map model
 

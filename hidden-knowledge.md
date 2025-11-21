@@ -1,5 +1,9 @@
 # Hidden Knowledge
 
+## 2025.11.21
+
+Wan latent space is compressed by factor of 8 spatially, 4 temporarily
+
 ## 2025.11.20
 
 `res_multistep` in `Wan Video Sampler` (wrapper) is probably similar to `res_2s` in other samplers (Clownshark?)
