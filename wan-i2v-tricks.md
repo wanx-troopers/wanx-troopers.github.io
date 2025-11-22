@@ -24,7 +24,7 @@ It has been proven possible to supply middle frames to I2V in addition to start/
 
 - [wrapper-wf-fragment](screenshots/wan22-i2v-middle-frames-wrapper.webp) the wrapper I2V node already does that, you can use the VACE start/end frame node to create the batches and masks, and that goes into the start image and temporal mask
 - [wan22-i2v-middle-frames](screenshots/wan22-i2v-middle-frames.webp)
-- [full wf](workflows/Wan2.2-sub-v0.4.json)
+- [full wf - fixed](workflows/wan22_4frames_interp.json) (earlier this page had a link to [this](workflows/Wan2.2-sub-v0.4.json) which was likely an error)
 - work-in-progress [wf](workflows/Wan2.2&Humo_FMML_VRGDG_WIP.json) from [VRGameDevGirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl); "Q: HIGH model 2.2 to generate general motion, and HUMO as LOW model to refine and do lipsync? A: you can use any model as the 1st pass: t2v + VACE, Wan2.1FLF, magref, Wananimate"
 
 ## FFGO
