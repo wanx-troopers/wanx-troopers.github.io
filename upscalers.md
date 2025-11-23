@@ -1,5 +1,11 @@
 # Upascalers
 
+## FL13
+
+[FL13-WAN_Ultimate_I2V_Upscaler](workflows/FL13-WAN_Ultimate_I2V_Upscaler.json)
+Reportedly 10 minutes on 4090 to upscale 5 sec video to 2k
+
+
 ## FlashVSR
 
 [Example workflow](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_1_3B_FlashVSR_upscale_example.json)

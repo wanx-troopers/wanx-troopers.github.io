@@ -32,6 +32,8 @@ There's
 > 6 steps, split in middle and first step with cfg 2.0  
 > strength 3.0 for high and 1.0 for low
 
+Old is possibly "the rank 64 one"
+
 ### 2025-Oct-18
 
 > There are only 3 options for the low noise:

@@ -43,6 +43,9 @@ Insipired by [time-to-move/TTM](https://github.com/time-to-move/TTM), a promisin
 which re-juvenates an old approach which existed as early as CogVideoX days Kijai added 
 `WanVideo Add TTMLatents` node now in [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
 and provided an [example wf](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo2_2_I2V_A14B_TimeToMove_example.json)
+
+Additionally Kijai has added `Latent Inpaint TTM` node to [GH:kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) bringing TTM support to native workflows. `Latent Inpaint TTM` [example](screenshots/native-ttm.webp),
+[workflow screenshot](workflows/native-ttm-wf.webp).
   
 The workflows are not very easy to use and require a fair bit of trial and error. [Official tool](https://github.com/time-to-move/TTM/tree/main/GUIs) is used to generate driving video.
 Mockups use character pictures with a white outline around them.
