@@ -37,6 +37,8 @@ Workflow building [hint](screenshots/ffgo.webp) Prompt: `ad23r2 the camera view 
 
 Works well for anime characters.
 
+Apparently works with [holocine](holocine.md)
+
 ## TimeToMove
 
 Insipired by [time-to-move/TTM](https://github.com/time-to-move/TTM), a promising body of code for converting rough mock-ups into smooth AI videos
