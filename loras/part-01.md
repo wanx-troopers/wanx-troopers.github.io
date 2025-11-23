@@ -9,6 +9,13 @@
 
 ## Noteworthy Loras
 
+### 2025-Nov-23
+
+FL13 three sampler setup for Wan 2.2 I2V
+
+![FL13-wan22-i2v-loras1](../screenshots/FL13-wan22-i2v-loras1.webp)
+![FL13-wan22-i2v-loras2](../screenshots/FL13-wan22-i2v-loras2.webp)
+
 ### 2025-Nov-13
 
 > Q: Best Wan 2.2 I2V LoRa-s? 

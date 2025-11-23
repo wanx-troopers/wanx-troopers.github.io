@@ -29,6 +29,9 @@ but it looks like the actual explanation is
 > Generated latents are usually blurry, although adversarial distillation like lightx (dmd2) helps sharpen the generated latents.
 > The decoder doesn't know how to handle blurry latents, they're out of distribution, so it generates speckle/grid artifacts as its failure mode.
 
+> The generated latents are blurry. More steps, use lightx loras, disable sage attn if relevant.
+> 2.2 low noise + lightning or lightx2v is pretty good at minimizing the artifacts 
+
 ## 2025.11.11
 
 When switching on tiling in VAE to save VRAM working with WAN models it is advisable to set `temporal_size` setting on VAE to more than the actual number of frames generated.

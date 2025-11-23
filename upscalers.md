@@ -2,7 +2,9 @@
 
 ## FL13
 
-[FL13-WAN_Ultimate_I2V_Upscaler](workflows/FL13-WAN_Ultimate_I2V_Upscaler.json)
+- [FL13-WAN_Ultimate_I2V_Upscaler.20251123s](workflows/FL13-WAN_Ultimate_I2V_Upscaler.20251123.json)
+- [FL13-WAN_Ultimate_I2V_Upscaler](workflows/FL13-WAN_Ultimate_I2V_Upscaler.json)
+
 Reportedly 10 minutes on 4090 to upscale 5 sec video to 2k
 
 

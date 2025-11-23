@@ -23,6 +23,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [LongCat](longcat.md)
 * [BindWeave](bindweave.md)
 * [Kandinsky-5](k5.md)
+* [Hunyuan](hunyuan.md)
 
 ## What Plugs Where
 
