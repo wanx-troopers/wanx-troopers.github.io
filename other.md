@@ -1,14 +1,17 @@
 # Other Things to Check Out
 
+* [1038lab/ComfyUI-QwenVL](https://github.com/1038lab/ComfyUI-QwenVL) node to use qwen vl 3 for generating image and video prompts; [tutorial](https://www.youtube.com/watch?v=3j9c_-mRKfg)
+* [1038lab/ComfyUI-WildPromptor](https://github.com/1038lab/ComfyUI-WildPromptor)
+
 * [GH:PozzettiAndrea/ComfyUI-MotionCapture](https://github.com/PozzettiAndrea/ComfyUI-MotionCapture) [reddit intro](https://www.reddit.com/r/StableDiffusion/comments/1p4pkbk/release_comfyuimotioncapture_full_3d_human_motion/) full human body 3d motion capture
-* [GH:amao2001/ganloss-latent-space:workflow](https://github.com/amao2001/ganloss-latent-space/tree/main/workflow) lots of example workflows in the repo including Wan 2.1 Unic3C + Sam3D
 * [GH:PozzettiAndrea/ComfyUI-UniRig](https://github.com/PozzettiAndrea/ComfyUI-UniRig) ComfyUI tools for rigging a skeleton
+
+* [GH:amao2001/ganloss-latent-space:workflow](https://github.com/amao2001/ganloss-latent-space/tree/main/workflow) lots of example workflows in the repo including Wan 2.1 Unic3C + Sam3D
 * Depth-Anything 3 model can generate point clouds out of images
 * [mattjohnpowell/comfyui-lmstudio-image-to-text-node](https://github.com/mattjohnpowell/comfyui-lmstudio-image-to-text-node) node pack to generate advanced prompts using LLM-s
 * koboldcpp an external app that can run gguf of qwen3-vl q8 and its mmoj part (llama more prone to hog vram)
 * allegedly Holocine/PUSA(merge) + FunVACE (module) & Krea (module) via Extra jacks is possible?..
 * [drozbay/ComfyUI-WanVaceAdvanced](https://github.com/drozbay/ComfyUI-WanVaceAdvanced) nodes for advanced Wan + VACE generation
-* [1038lab/ComfyUI-WildPromptor](https://github.com/1038lab/ComfyUI-WildPromptor)
 * [ComfyUI-Wan22FMLF](https://github.com/wallen0322/ComfyUI-Wan22FMLF) node to implement Wan 2.2 FMLF - first, middle, last frame
 * [SVI](https://github.com/vita-epfl/Stable-Video-Infinity) continuation method for I2V; I2V gens chained, with 5 start frames
 
@@ -30,7 +33,7 @@
 * [Create Any 3D and 4D Scenes from a Single Image](https://github.com/wenqsun/DimensionX) Kijai: this was released today after 10 month wait, and honestly it was always pretty damn good
 * fspy, you can make 3d models from 2d images
 * Musubi Trainer for Wan 2.2/2.1, AI Toolkit for 5B?
-* [DiT360](https://fenghora.github.io/DiT360-Page/) open-source AI tool (flux lora?) to generate panaroamic images
+* [DiT360](https://fenghora.github.io/DiT360-Page/) open-source AI tool (flux lora?) to generate panoramic images
 * [KangLiao/Puffin](https://huggingface.co/KangLiao/Puffin) open-source AI model which understands camera angles and can transform images
 * [dvlab-research/DreamOmni2](https://github.com/dvlab-research/DreamOmni2) a flux lora? to help combine up to 4 image references or do image style transfer
 * `Qwen3-VL-4B-Instruct-FP8.safetensors` loaded by `QwenVL (Advanced)` node can generate video description according to a prompt

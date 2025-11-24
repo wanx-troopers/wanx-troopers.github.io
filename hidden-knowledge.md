@@ -1,5 +1,18 @@
 # Hidden Knowledge
 
+## 2025.11.24
+
+Full non-accelerated generation of AI videos delivers the greatest quality but takes a long time.
+Faster generation is achieved by adjusting the model weights.
+The process is known as "distillation" producing a "distilled" model.
+In most cases the difference between distilled and non-distilled model can be extracted as a LoRa.
+Distillation can proceed along two separate axes: cfg and steps.
+A model can be distilled in on both at the same time.
+
+> cfg distilled makes it work at cfg 1.0, meaning cfg is disabled and only the positive prompt model pass is done, meaning 2x faster inference
+
+> step distillation just makes it work with less steps
+
 ## 2025.11.21
 
 Wan latent space is compressed by factor of 8 spatially, 4 temporarily
