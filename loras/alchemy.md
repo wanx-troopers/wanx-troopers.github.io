@@ -13,6 +13,8 @@ LoRAs often work with models they were not designed for.
 
 People sometimes experience a placebo effect - using LoRAs that neither enhance nor hinder good results.
 
+If several LoRa-s are used together the order of application does not matter.
+
 ## Kijai on Merging vs Unmerged LoRAs
 
 > Normal ComfyUI behaviour with loras is to merge the weights to the model before inference,
@@ -39,7 +41,6 @@ People sometimes experience a placebo effect - using LoRAs that neither enhance 
 > Loha = hadamard product matrix factorisation   
 > Lokr = kronecker product matrix decomposition  
 > In bongmath language
-
 
 ## Special Use
 
