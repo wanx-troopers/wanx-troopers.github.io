@@ -80,6 +80,7 @@ Kijai:
 ## MoCha
 
 Slightly newer and simpler to use than Wan Animate. Serves one function only - replace a human character for a human character in a video. Excels in applying correct lighting to the character.
+Only supported in wrapper, not supported in native ComfyUI.
 
 Based on Wan 2.1 T2V 14B. Inputs:
 

@@ -67,6 +67,8 @@ One no-LoRa setup shared:
 `unipc` may be a good scheduler to use. In order to use `dpm++` it is advisable to
 > stop the reference one step before the last step of high noise
 
+[VRGameDevGirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl)'s wip native [wf](workflows/VR-native-ttm.json).
+
 ### TimeToMove Masks
 
 The process requires that a mask is supplied.

@@ -1,5 +1,6 @@
 # Other Things to Check Out
 
+* [GH:PozzettiAndrea/ComfyUI-MotionCapture](https://github.com/PozzettiAndrea/ComfyUI-MotionCapture) [reddit intro](https://www.reddit.com/r/StableDiffusion/comments/1p4pkbk/release_comfyuimotioncapture_full_3d_human_motion/) full human body 3d motion capture
 * [GH:amao2001/ganloss-latent-space:workflow](https://github.com/amao2001/ganloss-latent-space/tree/main/workflow) lots of example workflows in the repo including Wan 2.1 Unic3C + Sam3D
 * [GH:PozzettiAndrea/ComfyUI-UniRig](https://github.com/PozzettiAndrea/ComfyUI-UniRig) ComfyUI tools for rigging a skeleton
 * Depth-Anything 3 model can generate point clouds out of images
