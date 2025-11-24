@@ -91,7 +91,7 @@ DepthAnything 3 can be useful generating .glb. Possibly MoGe. Possilby https://h
 
 It has been hypothesised that having the moving character both as part of the initial image and as part of the control video increases the chances of creating an unwanted 2nd copy of the character.
 
-## TTM and FFGO Without TTM or FFGO
+## TTM Without TTM
 
 It has been discovered that specially constructed V2V workflow around Wan 2.2 I2V achieves results similar to TTM and/or FFGO without either of them.
 
@@ -103,6 +103,13 @@ It has been discovered that specially constructed V2V workflow around Wan 2.2 I2
 - set denoise to 0.7-0.8, enable add_noise on 1st sampler
 
 No WF currently available.
+
+## FFGO without FFGO aka VACE at Home aka Phantom at Home
+
+Discovered in Wan 2.1 times I2V model is capable of using FFGO style references on its own.
+The trick was to place the reference into starting frame and issue a prompt like
+
+> Immediate cut to a new scene, a laboratory. The item at the start of the video is on a man's wrist
 
 ## PainterI2V
 
