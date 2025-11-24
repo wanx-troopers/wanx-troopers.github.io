@@ -1,5 +1,18 @@
 # Hidden Knowledge
 
+## The Mystery of Denoise Control Knob
+
+Denoise on sampler is a widely used but often misunderstood parameter.
+
+In `WanVideo Sampler` e.g. in [wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) workflows
+its function is simply to override `start_step` - it doesn't do anything else.
+It is less confusing to always set `start_step` and never touch `denoise`.
+
+In native Sampler the code is more nuanced. One bit of advice we have is
+
+> `denoise_strength` and steps are mutually exclusive and changing both at the same time leads to weirdness,
+> especially with the usual schedulers and small step values.
+
 ## 2025.11.24
 
 Full non-accelerated generation of AI videos delivers the greatest quality but takes a long time.
@@ -31,7 +44,7 @@ like `umt5-xxl-fp16.safetensors`.
 
 ## 2025.11.14
 
-noise grids/dithering problem with Wan models: originally believed to be
+noise mesh/grids/dithering problem with Wan models: originally believed to be
 
 > wan video is only usable with qwen image inputs
 > because those are so soft that they do not cross into the detail level where the vae will fail into noise grids
@@ -44,6 +57,10 @@ but it looks like the actual explanation is
 
 > The generated latents are blurry. More steps, use lightx loras, disable sage attn if relevant.
 > 2.2 low noise + lightning or lightx2v is pretty good at minimizing the artifacts 
+
+another idea
+
+> Doing a second pass with the T2V LOW model with a low denoise (around 0.2) can fix that
 
 ## 2025.11.11
 
