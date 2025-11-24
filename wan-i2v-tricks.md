@@ -91,6 +91,19 @@ DepthAnything 3 can be useful generating .glb. Possibly MoGe. Possilby https://h
 
 It has been hypothesised that having the moving character both as part of the initial image and as part of the control video increases the chances of creating an unwanted 2nd copy of the character.
 
+## TTM and FFGO Without TTM or FFGO
+
+It has been discovered that specially constructed V2V workflow around Wan 2.2 I2V achieves results similar to TTM and/or FFGO without either of them.
+
+- put two people side-by-side facing front into one reference image
+- supply it 4 times
+- put background as 5th reference image
+- create driving video similar to TTM, encode it to latents
+- plug it into the 1st Wan 2.2 I2V sampler as latents
+- set denoise to 0.7-0.8, enable add_noise on 1st sampler
+
+No WF currently available.
+
 ## PainterI2V
 
 `princepainter/PainterI2V` node attracted attention and sparked research. It exists into two versions
