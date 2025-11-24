@@ -16,6 +16,8 @@ FL13 three sampler setup for Wan 2.2 I2V
 ![FL13-wan22-i2v-loras1](../screenshots/FL13-wan22-i2v-loras1.webp)
 ![FL13-wan22-i2v-loras2](../screenshots/FL13-wan22-i2v-loras2.webp)
 
+...or `lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16` on low
+
 ### 2025-Nov-13
 
 > Q: Best Wan 2.2 I2V LoRa-s? 
@@ -74,10 +76,10 @@ Users chatting:
 | [HF:Kijai/WanVideo_comfy:LoRAs/Wan22_Lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Wan22_Lightx2v) | Wan\_2\_2\_I2V\_A14B\_HIGH\_lightx2v\_MoE\_distill\_lora\_rank\_64\_bf16: [link](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/LoRAs/Wan22_Lightx2v/Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors) | 2.2 I2V high only | - |  superceeded by 1022 and 1030<br> ghosting with simple scheduler but not linear quadratic?<br>can do good motion and camera motion |
 | Kijai/WanVideo_comfy | LoRAs/Wan22-Lightning/<br>Wan22_A14B_T2V_HIGH_Lightning_4steps_lora_250928_rank128_fp16 | - | 2.2 T2V | - |
 | Kijai/WanVideo_comfy | LoRAs/Wan22-Lightning/<br>Wan22_A14B_T2V_LOW_Lightning_4steps_lora_250928_rank64_fp16 | - | 2.2 T2V | - |
-| Kijai/WanVideo_comfy | LoRAs/rCM/<br>Wan_2_1_T2V_14B_rCM_lora_average_rank_148_bf16 | 2.1 T2V | - | new from NVidia, give it a try? should preserve motion |
-| Kijai/WanVideo_comfy | Lightx2v/<br>lightx2v_I2V_14B_480p_cfg_step_distill_rank256_bf16 | 2.1 I2V | - | Old but good, worth a try on 2.2 |
+| Kijai/WanVideo_comfy | LoRAs/rCM/<br>Wan_2_1_T2V_14B_rCM_lora_average_rank_148_bf16 | 2.1 T2V | - | by Nvidia, ppl stopped talling about it seemingly |
+| Kijai/WanVideo_comfy | Lightx2v/<br>lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16 | 2.1 I2V | - | Old but good, worth a try on 2.2 low |
 | Kijai/WanVideo_comfy | Lightx2v/<br>lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank256_bf16 | 2.1 T2V | - | - |
-| Kijai/WanVideo_comfy | Lightx2v/<br>lightx2v_14B_T2V_cfg_step_distill_lora_adaptive_rank_quantile_0.15_bf16 | 2.1 T2V | - | some artists find this good on 2.2 |
+| Kijai/WanVideo_comfy | Lightx2v/<br>lightx2v_14B_T2V_cfg_step_distill_lora_adaptive_rank_quantile_0.15_bf16 | 2.1 T2V | - | some artists find this good on 2.2, even recomment it on low I2V ?? |
 | Kijai/WanVideo_comfy | FastWan/<br>FastWan_T2V_14B_480p_lora_rank_128_bf16 | 2.1 T2V | - | very old but worth a try |
 | vrgamedevgirl84/Wan14BT2VFusioniX | FusionX_LoRa/<br>Wan2.1_T2V_14B_FusionX_LoRA | 2.1 T2V | - | very good for 2.1 |
 | vrgamedevgirl84/Wan14BT2VFusioniX | FusionX_LoRa/<br>Wan2.1_I2V_14B_FusionX_LoRA | 2.1 I2V | - | very good for 2.1 |
