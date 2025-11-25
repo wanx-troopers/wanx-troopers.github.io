@@ -66,20 +66,37 @@ Users chatting:
 > Q: what the best lora for t2v ? lightx?  
 > A: lightx quantile 0.15 Lora from Kijai, its very good; for high 3.0 low 1.0 Strength
 
-### In A Table
+### 2.2 T2V
 
 | Repo | Lora | Generation | Approx. Released | Comment |
 | --- | --- | --- | --- | --- |
-| [HF:lightx2v/Wan2.2-Lightning:Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0](https://huggingface.co/lightx2v/Wan2.2-Lightning/tree/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0)|Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0|2.2 T2V| 2025.11.07 | ? available in FP32 only it seems |
-| [HF:Kijai/WanVideo_comfy:LoRAs/Wan22_Lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Wan22_Lightx2v) | Wan\_2\_2\_I2V\_A14B\_HIGH\_lightx2v\_4step\_lora\_v1030_rank_64_bf16: [link](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/LoRAs/Wan22_Lightx2v/Wan_2_2_I2V_A14B_HIGH_lightx2v_4step_lora_v1030_rank_64_bf16.safetensors) | 2.2 I2V high only | 2025.10.30 | new and reportedly much better with prompt adherence <br>Artist: "to be honest I stopped using this lora as I'm getting color and light shifts with it" |
-| [HF:lightx2v/Wan2.2-Distill-Loras](https://huggingface.co/lightx2v/Wan2.2-Distill-Loras/tree/main) | wan2.2\_i2v\_A14b\_ (high/low) noise\_lora\_rank64\_lightx2v\_4step\_1022 | 2.2 I2V | 2025.10.22 | new; high superceeded by 1030 |
-| [HF:Kijai/WanVideo_comfy:LoRAs/Wan22_Lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Wan22_Lightx2v) | Wan\_2\_2\_I2V\_A14B\_HIGH\_lightx2v\_MoE\_distill\_lora\_rank\_64\_bf16: [link](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/LoRAs/Wan22_Lightx2v/Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors) | 2.2 I2V high only | - |  superceeded by 1022 and 1030<br> ghosting with simple scheduler but not linear quadratic?<br>can do good motion and camera motion |
-| Kijai/WanVideo_comfy | LoRAs/Wan22-Lightning/<br>Wan22_A14B_T2V_HIGH_Lightning_4steps_lora_250928_rank128_fp16 | 2.2 T2V | - | - |
-| Kijai/WanVideo_comfy | LoRAs/Wan22-Lightning/<br>Wan22_A14B_T2V_LOW_Lightning_4steps_lora_250928_rank64_fp16 | 2.2 T2V | - | - |
-| Kijai/WanVideo_comfy | LoRAs/rCM/<br>Wan_2_1_T2V_14B_rCM_lora_average_rank_148_bf16 | 2.1 T2V | - | by Nvidia, ppl stopped talking about it seemingly |
-| [HF:Kijai/WanVideo_comfy:Lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Lightx2v) | Lightx2v/<br>lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16 <br>lightx2v_I2V_14B_480p_cfg_step_distill_rank256_bf16 | 2.1 I2V | - | Old but good, worth a try on 2.2 low |
-| [HF:Kijai/WanVideo_comfy:Lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Lightx2v) | Lightx2v/<br>lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank64_bf16 <br>lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank256_bf16 | 2.1 T2V | - | - |
-| Kijai/WanVideo_comfy | Lightx2v/<br>lightx2v_14B_T2V_cfg_step_distill_lora_adaptive_rank_quantile_0.15_bf16 | 2.1 T2V | - | some artists find this good on 2.2, even recomment it on low I2V ?? |
+| [HF:lightx2v/Wan2.2-Lightning:Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0](https://huggingface.co/lightx2v/Wan2.2-Lightning/tree/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0)|Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0|2.2 T2V| 2025.11.07 | ? available in FP32 only it seems, not sure if versions compatible with ComfyUI available |
+| - | - | - | - | - |
+| [HF:Kijai/WanVideo_comfy:LoRAs/Wan22-Lightning](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Wan22-Lightning) | Wan22_A14B_T2V_HIGH_Lightning_4steps_lora_250928_rank128_fp16 | 2.2 T2V High | - | - |
+| [HF:Kijai/WanVideo_comfy:LoRAs/Wan22-Lightning](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Wan22-Lightning) | Wan22_A14B_T2V_LOW_Lightning_4steps_lora_250928_rank64_fp16 | 2.2 T2V Low | - | - |
+| - | - | - | - | - |
+| [HF:Kijai/WanVideo_comfy:LoRAs/rCM](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/rCM) | Wan_2_1_T2V_14B_rCM_lora_average_rank_148_bf16 | 2.1 T2V | - | by Nvidia, ppl stopped talking about it seemingly |
+| - | - | - | - | - |
+| [HF:Kijai/WanVideo_comfy:Lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Lightx2v) | lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank64_bf16<br>lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank256_bf16 | 2.1 T2V | - | - |
+| [HF:Kijai/WanVideo_comfy:Lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Lightx2v) | lightx2v_14B_T2V_cfg_step_distill_lora_adaptive_rank_quantile_0.15_bf16 | 2.1 T2V | - | some artists find this good on 2.2, FL13 recommends on 2.2 I2V Low |
+
+
+### 2.2 I2V
+
+| Repo | Lora | Generation | Approx. Released | Comment |
+| --- | --- | --- | --- | --- |
+| [HF:Kijai/WanVideo_comfy:LoRAs/Wan22_Lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Wan22_Lightx2v) | Wan\_2\_2\_I2V\_A14B\_HIGH\_lightx2v\_4step\_lora\_v1030_rank_64_bf16 | 2.2 I2V High | 2025.10.30 | new and reportedly much better with prompt adherence <br>Artist: "to be honest I stopped using this lora as I'm getting color and light shifts with it" <br>remains the most recommended I2V high LoRa |
+| [HF:lightx2v/Wan2.2-Distill-Loras](https://huggingface.co/lightx2v/Wan2.2-Distill-Loras/tree/main) | wan2.2\_i2v\_A14b\_high\_noise\_lora\_rank64\_lightx2v\_4step\_1022 | 2.2 I2V High | 2025.10.22 | superceeded by 1030 |
+| [HF:lightx2v/Wan2.2-Distill-Loras](https://huggingface.co/lightx2v/Wan2.2-Distill-Loras/tree/main) | wan2.2\_i2v\_A14b\_low\_noise\_lora\_rank64\_lightx2v\_4step\_1022 | 2.2 I2V Low | 2025.10.22 | - |
+| [HF:Kijai/WanVideo_comfy:LoRAs/Wan22_Lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Wan22_Lightx2v) | Wan\_2\_2\_I2V\_A14B\_HIGH\_lightx2v\_MoE\_distill\_lora\_rank\_64\_bf16 | 2.2 I2V High | - |  superceeded by 1022 and 1030<br> ghosting with simple scheduler but not linear quadratic?<br>can do good motion and camera motion |
+| - | - | - | - | - |
+| [HF:Kijai/WanVideo_comfy:Lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Lightx2v) | lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16<br>lightx2v_I2V_14B_480p_cfg_step_distill_rank256_bf16 | 2.1 I2V | - | Recommended on 2.2 I2V Low |
+| [HF:Kijai/WanVideo_comfy:Lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Lightx2v) | lightx2v_14B_T2V_cfg_step_distill_lora_adaptive_rank_quantile_0.15_bf16 | 2.1 T2V | - | some artists find this good on 2.2<br>FL13 recommends on 2.2 I2V Low |
+
+### 2.1
+
+| Repo | Lora | Generation | Approx. Released | Comment |
+| --- | --- | --- | --- | --- |
 | Kijai/WanVideo_comfy | FastWan/<br>FastWan_T2V_14B_480p_lora_rank_128_bf16 | 2.1 T2V | - | very old but worth a try |
 | vrgamedevgirl84/Wan14BT2VFusioniX | FusionX_LoRa/<br>Wan2.1_T2V_14B_FusionX_LoRA | 2.1 T2V | - | very good for 2.1 |
 | vrgamedevgirl84/Wan14BT2VFusioniX | FusionX_LoRa/<br>Wan2.1_I2V_14B_FusionX_LoRA | 2.1 I2V | - | very good for 2.1 |
@@ -97,7 +114,7 @@ The table bellow lists some non-obvious combinations of LoRa-s and models
 | high: lightx2v_I2V_14B_480p_cfg_step_distill_rank256_bf16<br>low: unknown|high: [new distill 4 step I2V base model](https://huggingface.co/lightx2v/Wan2.2-Distill-Models)<br>low:regular Wan 2.2 I2V Low?|accidentally combining seems to massively amp up the amount of motion in shots that just the distill or just the lora doesnt achieve on their own|
 
 
-Note: "dyno" model does patching which cannot be done by a lora.
+Note: LoRa extracted from "dyno" model looses important qualities of "dyno"; e.g. difference between "dyno" and base model cannot be captured by a LoRa.
 
 ## Special Use
 
