@@ -43,15 +43,27 @@ Text editing similar to Nano Banana (dataset [visualizer](https://snazzy-selkie-
 
 [PuLID](https://huggingface.co/guozinan/PuLID) ?
 
-## Hunyuan Foley Generator
+## Foley Generators
+
+### Hunyuan Foley Generator
 
 [github.com/phazei/ComfyUI-HunyuanVideo-Foley](https://github.com/phazei/ComfyUI-HunyuanVideo-Foley)
 
-| HF Space | LoRA |
+| HF Space | safetensors |
 | --- | --- |
 | ComfyUI-HunyuanVideo-Foley | hunyuanvideo_foley_xl |
 | ComfyUI-HunyuanVideo-Foley | synchformer_state_dict_fp16 |
 | ComfyUI-HunyuanVideo-Foley | vae_128d_48k_fp16 |
+
+### MMAudio
+
+[kijai/ComfyUI-MMAudio](https://github.com/kijai/ComfyUI-MMAudio)
+
+### ACE
+
+### Other Ideas
+
+> Inside of Comfy you could Use Stable Audio or ACE... but tbh both are not that good
 
 ## Honourable Mention
 

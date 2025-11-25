@@ -18,6 +18,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [Infinite Talk](infinite-talk.md)
 * [Phantom and MAGREF](phantom-magref.md)
 * [Wan I2V Tricks](wan-i2v-tricks.md)
+* [Extensions](extensions.md)
 * [SVI](svi.md)
 * [HoloCine](holocine.md)
 * [LongCat](longcat.md)

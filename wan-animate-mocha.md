@@ -60,7 +60,7 @@ The only model with Wan 2.2 in the name to use Clip Embeds (possibly because it'
 Kijai's retargeting pose node places the stick figure in the centre of frame.
 The position of the character in the reference frame (in screen space) dictates the starting position of the ViT pose (in screen space).
 
-## WanAnimate V2 .safetensors File
+### WanAnimate V2 .safetensors File
 
 Kijai:
 
@@ -70,12 +70,15 @@ Kijai:
 
 > [so-called V3 from Eddy1111111] is probably just Lora merge or something
 
-## What Plugs Where Wan Animate
+### What Plugs Where Wan Animate
 
 | Pre Embeds Node| Pre Embeds Inputs -> Output | Embeds Node | Input from Pre / Embeds Inputs -> Output | Model | WanVideo Sampler Input |
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | `WanVideo ClipVision Encode` | `clip_vision`, `image_1`, `image_2`<br>-> `image_embeds`  | `Wan VideoAnimate Embeds` | `clip_embeds` / `ref_images`, `pose_images`, `face_images`, `bg_images`, `mask` | Wan 2.1 I2V family | `image_embeds` |
 
+### Sample WF
+
+[GT.WanAnimateLongCartoonCharacterInReal](workflows/GT.WanAnimateLongCartoonCharacterInReal.json) by Gleb.
 
 ## MoCha
 

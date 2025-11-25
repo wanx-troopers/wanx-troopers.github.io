@@ -11,7 +11,7 @@ Controls pose only
 
 ### FantasyPortrait
 
-For face animation only
+For face animation only. Wan 2.1 era. Supported in wrapper. Kijai's sample [wf](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_2_1_I2V_FantasyPortrait_example_01.json).
 
 ### MTV crafter
 
@@ -25,3 +25,13 @@ Camera control for Wan 2.1 (hmm which one?..)
 
 > Q: Is there anything that does the same thing as Uni3C but for WAN 2.2?
 > A: [TTM](wan-i2v-tricks.md#time-to-move) kinda, uni3C works at higher strength to some extent, combination of both could be interesting... also there's the Fun control camera which works good
+
+
+## Fun Control
+
+- original: [HF:alibaba-pai/Wan2.2-Fun-A14B-Control](https://huggingface.co/alibaba-pai/Wan2.2-Fun-A14B-Control/tree/main)
+- comfy adaptation: [HF:Kijai/WanVideo_comfy:Fun](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/tree/main/split_files/diffusion_models)
+
+Comfy contains a template.
+
+Idea: use black-white video with strong gradations as a mask to guide generation.

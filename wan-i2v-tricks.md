@@ -135,6 +135,11 @@ Same GitHub account, now an FLF node: [link](https://github.com/princepainter/Co
 Expert conclusion however is that the node is either simply an automation I2V extension via last frame
 or possibly also [PainterI2V](wan-i2v-tricks.md#painter2iv) on top of it.
 
+> looking closer at PainterLongVideo and the code just ...
+> only one part that attempts to use multiple frames from the previous video, and it feeds that into
+> a conditioning parameter called "reference_motion", which is ... only ever used by the Wan S2V model;
+> other than that it appears to be just standard last frame to first frame continuation with the PainterI2V motion amplitude added in
+
 ## Masks
 
 Here is a slightly non-traditional way to build masks. Please note that actual value 0 vs 1 may be opposite between wrapper and native workflows.
