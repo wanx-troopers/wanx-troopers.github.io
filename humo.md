@@ -4,7 +4,7 @@
 
 2025.11.15 [drozbay](https://github.com/drozbay) has shared `droz_wanexperiments_svishot_with_humo_v1.1` worflow
 ![droz_wanexperiments_svishot_with_humo_v1.1](workflows/droz_wanexperiments_svishot_with_humo_v1.1.png)
-Earlier version: [droz_wanexperiments_svishot_with_humo_v1.png](workflows/droz_wanexperiments_svishot_with_humo_v1.png)
+[droz_wanexperiments_svishot_with_humo_v1.1](workflows/droz_wanexperiments_svishot_with_humo_v1.1.png)
 
 This is a HuMo continuation workflow, it allows generating videos beyond the usual HuMo limit of about 4 seconds.
 Continuation is made possible by the fact that
@@ -19,6 +19,8 @@ Both of these actions - patching HuMo model code and correct formatting of condi
 implemented in this workflow through the use of `WanEx I2VCustomEmbeds` node which 
 [drozbay](https://github.com/drozbay) has shared via the following new code repository:
 [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments)
+
+See also: [Wan I2V Conditioning](wan-i2v-conditioning.md)
 
 ## VRGameDevGirl
 
