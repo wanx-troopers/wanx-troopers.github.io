@@ -71,6 +71,6 @@ likenes problems and countering burnout.
 ## Clip Vision
 
 There is an easy way to determine if a model is using clip vision embeds.
-Look at the model on Hugging face and see if it contains a `img_emb.proj` layer.
-For models which do accept clip embeds they may be a viable way to counter both kinds of degradation.
-Wan 2.2 models don't seem to be clip vision embeds at all, expect Wan Animate which is 2.2 only in name.
+Look at the model on Hugging face and see if it contains a layer called `img_emb.proj`.
+For models which do accept clip embeds this may be a viable way to counter both kinds of degradation.
+Wan 2.2 models unfortunately don't seem to be clip vision aware at all, expect Wan Animate which is 2.2 only in name.
