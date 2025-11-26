@@ -39,6 +39,9 @@ Works well for anime characters.
 
 Apparently works with [holocine](holocine.md)
 
+An artist:
+> tested FFGO ... more trouble to set up correctly ... than i would like to spend time
+
 ## TimeToMove
 
 Insipired by [time-to-move/TTM](https://github.com/time-to-move/TTM), a promising body of code for converting rough mock-ups into smooth AI videos

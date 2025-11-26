@@ -35,3 +35,5 @@ Camera control for Wan 2.1 (hmm which one?..)
 Comfy contains a template.
 
 Idea: use black-white video with strong gradations as a mask to guide generation.
+
+Possible combination: Fun Control 2.2 HN and regular Wan 2.2 LN
