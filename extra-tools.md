@@ -67,6 +67,8 @@ Text editing similar to Nano Banana (dataset [visualizer](https://snazzy-selkie-
 
 ## Honourable Mention
 
+IndexTTS2: "I had Chatterbox, IndexTTS, another IndexTTS node, Chatterboxt5, VibeVoice ... IndexTTS seems a lot better"
+
 VibeVoice TTS
 
 `SuperPrompt` node from [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes).

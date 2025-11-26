@@ -1,6 +1,6 @@
 # News
 
-2025.11.26 Z-Image-Turbo distilled image generation model released under Apache license. Community is raving :) Model re-uses Flux VAE but appears not be based on Flux.
+2025.11.26 6B `Z-Image-Turbo` distilled image generation model released under Apache license. Community is raving :) Model re-uses Flux VAE but appears not be based on Flux.
 [Model page](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo) promises non-distilled and edit versions to be released.
 
 2025.11.25 Flux.2 Dev released under non-commerical license. Community reports memory issues and ComfyUI crashes.
