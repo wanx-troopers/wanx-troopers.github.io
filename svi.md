@@ -118,6 +118,9 @@ on how to use `WanEx I2VCustomEmbeds` node with `SVI-Shot` LoRa.
 > Q: How does svi dance is  suppose to be used btw ? 
 > A: with UniAnimate
 
+> Q: svi-dance is an addition to unianimate and not a replacement?
+> A: it just makes the extension [unianimate] better
+
 ## Practice
 
 Rought sketch of a workflow: [link](workflows/wanvideo_480p_I2V_SVI-shot_test.json).

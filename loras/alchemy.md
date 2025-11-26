@@ -15,6 +15,10 @@ People sometimes experience a placebo effect - using LoRAs that neither enhance 
 
 If several LoRa-s are used together the order of application does not matter.
 
+## Some LoRa-s Have To Be Loaded By Model Loader
+
+Re unianimate LoRa: "you have to load the unianimate lora on the model loader, not the set node because it patches the model too"
+
 ## Kijai on Merging vs Unmerged LoRAs
 
 > Normal ComfyUI behaviour with loras is to merge the weights to the model before inference,

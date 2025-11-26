@@ -9,6 +9,10 @@ Reddit article on combining Unianimate with InfiniteTalk: [link](https://www.red
 
 Controls pose only
 
+> note you have to load the unianimate lora on the model loader, not the set node because it patches the model too
+
+See also: [SVI-dance](svi.md#svi-dance)
+
 ### FantasyPortrait
 
 For face animation only. Wan 2.1 era. Supported in wrapper. Kijai's sample [wf](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_2_1_I2V_FantasyPortrait_example_01.json).
