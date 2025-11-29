@@ -96,6 +96,8 @@ DepthAnything 3 can be useful generating .glb. Possibly MoGe. Possilby https://h
 
 It has been hypothesised that having the moving character both as part of the initial image and as part of the control video increases the chances of creating an unwanted 2nd copy of the character.
 
+> If we want TTM to follow the movements of the original video without adding characters or anything else not requested in the prompt, setting fewer steps on the TTM node helps. .. 2 steps out of 6 steps ... and maybe the denoise should be between 0.7 and 0.8
+
 ## TTM Without TTM
 
 It has been discovered that specially constructed V2V workflow around Wan 2.2 I2V achieves results similar to TTM and/or FFGO without either of them.

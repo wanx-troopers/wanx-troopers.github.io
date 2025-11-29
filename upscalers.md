@@ -62,7 +62,7 @@ VSR safetensors loaded by `WanVideo Extra Model Select` plugged into `extra_mode
 
 Very specific wording to be used in `WanVideo TextEncode`.
 
-## seedvr2
+## SeedVR2
 
 Can also do images, has been used on z-image-turbo produced images.
 ...
