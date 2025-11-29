@@ -120,6 +120,12 @@ The trick was to place the reference into starting frame and issue a prompt like
 
 ## PainterI2V
 
+[GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments) now contains
+`WanEx_PainterMotionAmplitude` which allows to do `PainterI2V`-style
+trick in regular workflows, e.g. it makes `PainterI2V` approach modular.
+The node generates positive/negative conditioning that can be connected to sampler nodes using I2V family
+of Wan image generation models.
+
 `princepainter/PainterI2V` node attracted attention and sparked research. It exists into two versions
 - [Native](https://github.com/princepainter/ComfyUI-PainterI2V)
 - [Wrapper](https://github.com/princepainter/ComfyUI-PainterI2VforKJ)

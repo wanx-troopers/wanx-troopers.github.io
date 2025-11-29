@@ -97,7 +97,7 @@ SolidMask  ---> RepeatMask --------------------------> |                 |
 
 ## Drozbay's WanVaceAdvanced
 
-Drozbay's [WanVaceAdvanced]([drozbay/ComfyUI-WanVaceAdvanced](https://github.com/drozbay/ComfyUI-WanVaceAdvanced) nodes for advanced Wan + VACE generation) nodes, sample [workflow](../screenshots/drozbay_vacedancer_v1.png)
+Drozbay's [WanVaceAdvanced](https://github.com/drozbay/ComfyUI-WanVaceAdvanced) nodes for advanced Wan + VACE generation) nodes, sample [workflow](../screenshots/drozbay_vacedancer_v1.png)
 
 ## Misc
 
