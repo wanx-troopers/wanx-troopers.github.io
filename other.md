@@ -16,7 +16,6 @@
 * Depth-Anything 3 model can generate point clouds out of images
 * koboldcpp an external app that can run gguf of qwen3-vl q8 and its mmoj part (llama more prone to hog vram)
 * allegedly Holocine/PUSA(merge) + FunVACE (module) & Krea (module) via Extra jacks is possible?..
-* [drozbay/ComfyUI-WanVaceAdvanced](https://github.com/drozbay/ComfyUI-WanVaceAdvanced) nodes for advanced Wan + VACE generation
 * [ComfyUI-Wan22FMLF](https://github.com/wallen0322/ComfyUI-Wan22FMLF) node to implement Wan 2.2 FMLF - first, middle, last frame
 * [SVI](https://github.com/vita-epfl/Stable-Video-Infinity) continuation method for I2V; I2V gens chained, with 5 start frames
 
@@ -50,6 +49,8 @@
 ## Unlikely
 
 * [casterpollux/MiniMax-bmo](https://github.com/casterpollux/MiniMax-bmo) 1.3B model, somehow 30Gb download
+
+* [https://civitai.com/models/2113025/cinematic-fast-cutting-previously-quick-cuts](https://civitai.com/models/2113025/cinematic-fast-cutting-previously-quick-cuts) only for wan high noise
 * [https://huggingface.co/neph1/cinematic_quick_cuts_wan](https://huggingface.co/neph1/cinematic_quick_cuts_wan) multi-scene LoRa
 * [https://huggingface.co/neph1/hard_cut_wan_lora](https://huggingface.co/neph1/hard_cut_wan_lora) cut LoRa
 

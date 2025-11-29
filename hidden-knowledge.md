@@ -1,5 +1,9 @@
 # Hidden Knowledge
 
+## 2025.11.29
+
+Self-forcing can mean models that generate video portions progressively, small frame batch by small frame batch, thus enabling longer generations. Mainstream today's models are not SF however. Existing SF models offer lower quality of results generally.
+
 ## 2025.11.27
 
 res_2s runs about 2x slower compared to Euler, the advantage is that with the same number of steps a better result is delivered;
