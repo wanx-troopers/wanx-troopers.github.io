@@ -49,3 +49,7 @@ It appears `HuMo` can use multiple reference images.
 
 
 [GH:vrgamegirl19/comfyui-vrgamedevgirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl) is a well-known workflow supporting generation of rather long music videos with HuMo.
+
+Note: latent output from `WanHuMoImageToVideo` is simply empty just giving the sampler the right resolution and number of frames.
+
+> The conditioning lines carry all of the references and embeddings and such.

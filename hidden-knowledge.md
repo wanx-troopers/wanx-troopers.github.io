@@ -1,5 +1,10 @@
 # Hidden Knowledge
 
+## 2025.11.27
+
+res_2s runs about 2x slower compared to Euler, the advantage is that with the same number of steps a better result is delivered;
+2x steps on euler is a fair comparison for res_2s; the hope behind using res_2s is to get more mileage out of the same .safetensors file
+
 ## The Mystery of Denoise Control Knob
 
 Denoise on sampler is a widely used but often misunderstood parameter.

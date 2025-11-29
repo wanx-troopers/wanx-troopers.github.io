@@ -22,6 +22,8 @@ Python 3.12 is probably a good idea
 
 Possible startup arguments: comfy --here launch -- --reserve-vram 5 --max-upload-size 500 --use-sage-attention --disable-pinned-memory
 
+Note: --async-offload can cause OOM-s
+
 Around 16-17 Oct 2025 issues were reported with latest version of Comfy and other packages. Workflows started consuming more VRAM than previously. Among workarounds suggested were
 
 ## VAE Bug
