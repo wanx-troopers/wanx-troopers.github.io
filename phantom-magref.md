@@ -10,6 +10,14 @@ Phantom and MAGREF are relatively old finetunes based on Wan 2.1, so called "ref
 
 # Phantom
 
+> Phantom can take 4 inputs;
+> Phantom [likely] tries to use 1 reference per subject
+
+> If you're using the HN/LN split, keep in mind that Phantom will only work with the LN part,
+> so you have to either skip the HN stage totally (which is perfectly fine to do),
+> or you have to make the HN stage output look close enough to your target references
+> that Phantom can pick up where it left off and finish the details properly
+
 It has been shown that Phantom generation is a somewhat influenced by [Lynx](lynx.md).
 
 # MAGREF

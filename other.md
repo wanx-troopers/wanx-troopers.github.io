@@ -3,7 +3,7 @@
 * [GH:mattjohnpowell/comfyui-lmstudio-image-to-text-node](https://github.com/mattjohnpowell/comfyui-lmstudio-image-to-text-node) node pack to generate advanced prompts using LLM-s
 * [GH:fblissjr/ComfyUI-QwenImageWanBridge](https://github.com/fblissjr/ComfyUI-QwenImageWanBridge) LLM tool to run z-image and other image generation models
 
-* [Steady Dancer](https://mcg-nju.github.io/steadydancer-web/)
+* [Steady Dancer](https://mcg-nju.github.io/steadydancer-web/) now with basic ComfyUI support
 * [Infinity Rope](https://infinity-rope.github.io/) based on Wan 1.3B so not paticularly powerful but holds promise for future
 
 * [1038lab/ComfyUI-QwenVL](https://github.com/1038lab/ComfyUI-QwenVL) node to use qwen vl 3 for generating image and video prompts; [tutorial](https://www.youtube.com/watch?v=3j9c_-mRKfg)

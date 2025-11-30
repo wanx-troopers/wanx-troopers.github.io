@@ -56,7 +56,7 @@ Can use with Cinescale lora and possibly with [RoPE Scaling](hidden-knowledge.md
 
 FlashVSR "ultra fast": [link](https://github.com/lihaoyun6/ComfyUI-FlashVSR_Ultra_Fast)
 
-## What Plugs Where
+### What Plugs Where
 
 VSR safetensors loaded by `WanVideo Extra Model Select` plugged into `extra_model` input of `WanVideo Model Loader` loading Wan 2.1 T2V `safetensors`.
 
@@ -66,3 +66,10 @@ Very specific wording to be used in `WanVideo TextEncode`.
 
 Can also do images, has been used on z-image-turbo produced images.
 ...
+
+
+## SpacePxl Experimental Latent Upascaler
+
+[GH:spacepxl/ComfyUI-VAE-Utils](https://github.com/spacepxl/ComfyUI-VAE-Utils)
+
+> 2x spatial upscale only, works on images and video
