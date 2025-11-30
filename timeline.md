@@ -1,5 +1,8 @@
 # News
 
+2025.11.30 Kijai's [commit](https://github.com/kijai/ComfyUI-WanVideoWrapper/commit/99c3978da4a55a03249669bef5647d7dbda7a5d1) to [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
+"Reduce peak VRAM usage when not using torch.compile (and some even with it)"
+
 2025.11.29 [GH:ModelTC/ComfyUI-LightVAE](https://github.com/ModelTC/ComfyUI-LightVAE) alternative WAN VAE-s: faster and less VRAM, are now working in native WF-s in ComfyUI
 
 2025.11.28 Kijai experiments with [SteadyDancer](https://github.com/MCG-NJU/SteadyDancer) in ComfyUI; results moderately disappointing: does not work with other Wan models; UniAnimate does and delivers similar results if not better;

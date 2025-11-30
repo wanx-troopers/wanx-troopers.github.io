@@ -1,5 +1,30 @@
 # Hidden Knowledge
 
+## 2025.11.30
+
+> The only difference between `sage attention` and `sage attention compiled` is that the latter ALLOWS for torch compile;
+> normally compilation is disabled for sage as it wouldn't work anyway, and just causes unnecessary warnings and such;
+> even with the new sage it still doesn't actually compile it, the code just handles it graciously so there's no graph breaks.
+
+> Two of the highest peak VRAM hits on the model code are the RoPE appllication
+> (rotary positional embeds) and ffn activation (feed forward),
+> these happen separate from the attention, which is the 3rd highest.
+
+> The chunked option splits both the rope and the ffn calculations, doing it in chunks and thus reducing the peak VRAM
+> usage to below the attention (which cant really be split without affecting results or slowing it down);
+> `torch.compile` also optimises it similarly, that's why it uses less VRAM when it works.
+
+> pytorch now has the fused RMS norm built in, that was one of the biggest benefits of compile;
+> you could just not use compile, use the pytorch RMS norm and the  chunked rope
+
+`WanVideo Model Loader`: set `rms_norm_function` to `pytorch` not `default`.
+
+> this was even more relevant for Kandinsky5 because it has the 10 second model,
+> and it's 24fps, so that's 241 frames to do at once but same applies to Wan
+
+> xformers: No use for it with sageattn being so fast;
+> been ages ... back then it was maybe 5% ahead of sdpa
+
 ## Drozbay
 
 [drozbay](https://github.com/drozbay) is continuing to push boundaries on what can be achieved aroud Wan models.

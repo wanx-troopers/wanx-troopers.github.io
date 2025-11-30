@@ -1,11 +1,23 @@
 # Statements
 
-## 2024.11.16
+## 2025.11.30
+
+> disable blocks of the main model during inference?
+> it's what the simple SLG does, it skips the chosen block when doing the uncond (negative) pass;
+> advised against it, it's too difficult to determine any patterns in it,
+> mostly just that earlier blocks have stronger effect on structure, motion etc. and latter more on details...
+> but that's very crude estimation;
+> SLG can be useful if you use cfg as that's more about just breaking the model in different way to boost the negative
+
+> native doesn't even really (fully) take torch compile into account,
+> there's too many dynamic things there, though it does work if you use Dynamic and the model fully fits in VRAM 
+
+## 2025.11.16
 
 An artist:
 > I use AI Toolkit for training wan loras and they work quite good on likeness with animate and all wan models
 
-## 2024.11.10
+## 2025.11.10
 
 > I'm getting some okay results with 1030 high at 1, 1022 low at 1, cfg=2 for high and low, lcm/beta.
 > this is using skimmed cfg=1 and 8 for shift. 2+2 steps
@@ -20,7 +32,7 @@ Doctor about Qwen Image generation (?): "Res 3S also, it was a game changer, exp
 
 > good nodes like florence and qwen vl have 'keep model loaded' boolean option
 
-## 2024.11.09
+## 2025.11.09
 
 > wan 2.2 i2v seems to handle all kinds of inputs, like how it can do first to last frame and even in-between frames;
 > in-between definitely works, there was also a Lora released recently that further improved that functionality some
@@ -42,14 +54,14 @@ Possibly "morphic" LoRa
 
 Randome unrelated: res_2s and bong tangent
 
-## 2024.10.25
+## 2025.10.25
 
 Qwen VL is capable of writing prompt for the next 5sec fragment, can give nice results paired with [SVI](svi.md)-film.
 
 ffv1 format for storing videos - claims to be lossless and allows to store in rgb.
 
 
-## 2024.10.24
+## 2025.10.24
 
 > VAE encodes single image to first latent
 
@@ -60,7 +72,7 @@ ffv1 format for storing videos - claims to be lossless and allows to store in rg
 > so you can't just take last latents of previous gen because they don't have
 > that single separate encoded frame
 
-## 2024.10.23
+## 2025.10.23
 
 > for some reason, when i use 15 high noise steps with no lora, and then i use 3 low noise steps with the lightx2v lora it looks better than when i use 25 low noise steps without lora ...
 
@@ -73,7 +85,7 @@ ffv1 format for storing videos - claims to be lossless and allows to store in rg
 
 `Get Latent Range From Batch`, `Insert Latent To Index` - interesting nodes..
 
-## 2024.10.22
+## 2025.10.22
 
 > you absolutely can use Qwen VAE for Wan single image gens too, just not video
 
@@ -86,7 +98,7 @@ ffv1 format for storing videos - claims to be lossless and allows to store in rg
 > A: unianimate can also be hooked to any I2V  
 > A: also uni3c
 
-## 2024.10.21
+## 2025.10.21
 
 > If force_offload is on the memory is freed right after the sampler finishes; if it didn't work, then no 2.2 dual sampler workflow would work at all
 

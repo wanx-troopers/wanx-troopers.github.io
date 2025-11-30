@@ -116,6 +116,7 @@ Note: LoRa extracted from "dyno" model looses important qualities of "dyno"; e.g
 
 Wan 2.1 and 2.2 LoRA-s:
 
+* [HF:Ashmotv/exploded_effect_wan](https://huggingface.co/Ashmotv/exploded_effect_wan) exploded effect WAN
 * Wan 2.2 Smartphone LoRa
 * [Cseti/wan2.2-14B-Kinestasis_concept-lora-v1](https://huggingface.co/Cseti/wan2.2-14B-Kinestasis_concept-lora-v1)
 * [Cseti/LTXV-13B-LoRA-Wallace_and_Gromit-v1](https://huggingface.co/Cseti/LTXV-13B-LoRA-Wallace_and_Gromit-v1) aka Walgro
