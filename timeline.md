@@ -16,12 +16,12 @@ on the plus side ability to function with context windows - and thus achieve 6 s
 
 2025.11.16 Kijai implemented [TimeToMove](wan-i2v-tricks.md#timetomove) mockup in wrapper
 
-2025.11.16 Community is exploring [PainterI2V](wan-i2v-tricks.md#painteri2v) and [PainterLongVideo](wan-i2v-tricks.md#painterlongvideo) nodes for more dynamic and longer generations with Wan 2.2 I2V
+2025.11.16 Community is exploring [Painter I2V](wan-i2v-tricks.md#painter-i2v) and [PainterLongVideo](wan-i2v-tricks.md#painterlongvideo) nodes for more dynamic and longer generations with Wan 2.2 I2V
 
-2025.11.15 [drozbay](https://github.com/drozbay) has created [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments) repository dubbed `WanEx`; it contains his nodes
+2025.11.15 [drozbay](hidden-knowledge.md#drozbay) has created [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments) repository dubbed `WanEx`; it contains his nodes
 for I2V and continuations with [HuMo](humo.md), using [SVI-shot](svi.md#svi-shot) and for building a native [BindWeave](bindweave.md) WF
 
-2025.11.15 [drozbay](https://github.com/drozbay) has shared a HuMo continuation workflow;
+2025.11.15 [drozbay](hidden-knowledge.md#drozbay) has shared a HuMo continuation workflow;
 please see [HuMo](humo.md) section
 
 2025.11.15 [BindWeave](bindweave.md) nodes merged to `main` branch in [GH:kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)

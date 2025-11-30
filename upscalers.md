@@ -14,8 +14,8 @@ This is Drozbay's private fork of `Impact Pack` set of ComfyUI nodes, not merged
 Includes example workflows.
 
 Allows selecting part of generated video like a vace or a complete character, upscale it
-to the resolution at which AI video generating models - those which take references
-- say WAN + Phantom - or Humo - work best - run generations, downscale and integrate
+to the resolution at which AI video generating models - those which take references;
+say WAN + Phantom - or Humo - work best - run generations, downscale and integrate
 result back into the original video.
 
 Supports temporal blending across generated video fragments using VACE and context windows.

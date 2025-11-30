@@ -74,3 +74,32 @@ Phantom adds the reference image at the end of the regular noise latent, and the
 Clip vision inputs are passed in to separate layers, they are not in I2V conditioning channels.
 
 VACE conditioning is a completely parallel set of blocks.
+
+## Drozbay's Study
+
+[drozbay](hidden-knowledge.md#drozbay) has shared the following workflow
+
+![drozbay_testembeds_wani2vmasks.png](screenshots/drozbay_testembeds_wani2vmasks.png)
+[drozbay_testembeds_wani2vmasks](screenshots/drozbay_testembeds_wani2vmasks.png)
+
+This workflow is using nodes from his [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments).
+It demonstrates a method for examining embeds created for I2V Wan models.
+It also demonstrates some ways to prepare [conditioning](conditioning.md) data for [Bindweave](bindweave.md) and vanilla Wan 2.2 I2V
+using the aforementioned node pack or, alternatively, the more traditional nodes.
+
+Note: "polarity" of masks - e.g. if 1 means "keep these pixels" and 0 means "generate these pixes" versus the opposite differs between
+[kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) and ComfyUI native nodes.
+The image above shows both ways to prepre the masks and how they look on the previews.
+The difference is due to the fact that one of the implementations inverts the masks in code while the other doesn't.
+
+TODO: a detailed write-up on what the previews on the above image actually mean and why the previews have the number of frames they have.
+The number of frames actually make sense.
+
+A key observation is that `start_image` can be not just one but several images.
+
+Separately it is worth noting that masks don't have to be binary black or white and can contain shades of grey in between.
+
+
+## See Also
+
+- HuMo last-image to first-image [extensions](humo.md#drozbay)

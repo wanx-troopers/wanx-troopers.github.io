@@ -14,8 +14,8 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [Sigmas](sigmas.md)
 * [Control Techniques](control.md)
 * [Wan I2V Tricks](wan-i2v-tricks.md)
+* [Wan T2V VACE Tricks](wan-t2v-vace-tricks.md)
 * [Extensions](extensions.md)
-* [Wan I2V Conditioning](wan-i2v-conditioning.md)
 * [SVI](svi.md)
 
 ## Models

@@ -17,10 +17,10 @@ The manner in which it is supplied is unique to SVI-shot.
 
 Both of these actions - patching HuMo model code and correct formatting of conditioning are
 implemented in this workflow through the use of `WanEx I2VCustomEmbeds` node which 
-[drozbay](https://github.com/drozbay) has shared via the following new code repository:
+[drozbay](hidden-knowledge.md#drozbay) has shared via the following new code repository:
 [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments)
 
-See also: [Wan I2V Conditioning](wan-i2v-conditioning.md)
+See also: [Drozbay's Study](conditioning.md#drozbays-study) on composing and examining embeds.
 
 ## VRGameDevGirl
 

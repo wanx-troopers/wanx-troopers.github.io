@@ -118,11 +118,11 @@ The trick was to place the reference into starting frame and issue a prompt like
 
 > Immediate cut to a new scene, a laboratory. The item at the start of the video is on a man's wrist
 
-## PainterI2V
+## Painter I2V
 
 [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments) now contains
-`WanEx_PainterMotionAmplitude` which allows to do `PainterI2V`-style
-trick in regular workflows, e.g. it makes `PainterI2V` approach modular.
+`WanEx_PainterMotionAmplitude` which allows to do `Painter I2V`-style
+trick in regular workflows, e.g. it makes `Painter I2V` approach modular.
 The node generates positive/negative conditioning that can be connected to sampler nodes using I2V family
 of Wan image generation models.
 
@@ -146,7 +146,7 @@ Same GitHub account, now an FLF node: [link](https://github.com/princepainter/Co
 
 [princepainter/ComfyUI-PainterLongVideo](https://github.com/princepainter/ComfyUI-PainterLongVideo) from that same authrow is being played with.
 Expert conclusion however is that the node is either simply an automation I2V extension via last frame
-or possibly also [PainterI2V](wan-i2v-tricks.md#painter2iv) on top of it.
+or possibly also [Painter I2V](wan-i2v-tricks.md#painter-i2v) on top of it.
 
 > looking closer at PainterLongVideo and the code just ...
 > only one part that attempts to use multiple frames from the previous video, and it feeds that into

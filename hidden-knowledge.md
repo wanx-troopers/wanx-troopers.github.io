@@ -1,5 +1,24 @@
 # Hidden Knowledge
 
+## Drozbay
+
+[drozbay](https://github.com/drozbay) is continuing to push boundaries on what can be achieved aroud Wan models.
+His nodes discussed on this website reside mainly in the following code repositories:
+
+| Drozbay's Repo | Purpose |
+| :-- | :-- |
+| [GH:drozbay/ComfyUI-WanVaceAdvanced](https://github.com/drozbay/ComfyUI-WanVaceAdvanced) | Nodes for advanced Wan + VACE generation |
+| [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments) aka `WanEx` | Nodes for preparing and examining embeds in new ways |
+
+List of Drozbay's contributions discussed on this website:
+
+- [Drozbay's Study](conditioning.md#drozbays-study): nodes in `WanEx` to compose/examine [Bindweave](bindweave.md) and advanced I2V embeds
+- [HuMo - Drozbay](humo.md#drozbay): HuMo continuation workflow
+- [SVI-shot](svi.md#svi-shot): `WanEx` contains `WanEx I2VCustomEmbeds` which works well with SVI-shot
+- [Drozbay's Impact Pack SEGS Detailer For Wan Video And VACE](upscalers.md#drozbays-impact-pack-segs-detailer-for-wan-videoa-and-vace)
+- [Painter I2V Modular Replacment](wan-i2v-tricks.md#painteri2v) `WanEx` contains `WanEx_PainterMotionAmplitude` node which replicates action of `Painter I2V` node in a modular manner
+- [Wan I2V T2V / VACE Tricks](wan-t2v-vace-tricks.md) hoists avdvanced workflows created by Drozbay
+
 ## 2025.11.29
 
 Self-forcing can mean models that generate video portions progressively, small frame batch by small frame batch, thus enabling longer generations. Mainstream today's models are not SF however. Existing SF models offer lower quality of results generally.

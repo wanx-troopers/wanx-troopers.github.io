@@ -105,7 +105,7 @@ SVI-Shot allows us to supply an additional reference image to an AI video sampli
 One way to format [conditioning](conditioning.md) accordingly is to use `WanEx I2VCustomEmbeds` node
 from [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments) code repository.
 
-[HuMO](humo.md) section contains a workflow which [drozbay](https://github.com/drozbay),
+[HuMO](humo.md) section contains a workflow which [drozbay](hidden-knowledge.md#drozbay),
 the node's author, has shared for HuMO. Please refer to this workflow as a general instruction
 on how to use `WanEx I2VCustomEmbeds` node with `SVI-Shot` LoRa.
 

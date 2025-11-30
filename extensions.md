@@ -30,7 +30,7 @@ On those initial frames the 2nd generation would abruptly change overall image b
 These typically last for a few frames only.
 Avoiding this kind of issues is an area of ongoing experimentation.
 
-See also: [WAN I2V Conditioning](wan-i2v-conditioning.md)
+See also: [Drozbay's Study](conditioning.md#drozbays-study) for additional details on how embeds can be preapred and examined.
 
 ## HuMo Last Image to First Image Extensions
 
