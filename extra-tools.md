@@ -79,6 +79,10 @@ VibeVoice TTS
 
 [GH:chflame163/ComfyUI_LayerStyle](https://github.com/chflame163/ComfyUI_LayerStyle) can add film grain to images.
 
+## Z-Image
+
+`CRT-Nodes` added `LoRA Loader (Z-Image)(CRT)`. It can load `zit-ivy.safetensors`
+
 ## Useful Nodes
 
 * `Resize Image v2` from [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) new mode is `total_pixels` copies what `WanVideo Image Resize To Closest` from [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) does which is original Wan logic
