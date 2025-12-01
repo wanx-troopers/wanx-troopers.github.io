@@ -142,3 +142,7 @@ Wan 2.1 and 2.2 LoRA-s:
 * Nebsh's [Lazy Susan Rotation Wan 2.2](https://www.runninghub.ai/model/public/1979104800396709889) trained on I2V but works on T2V too. (Simple but costly way to train: https://wavespeed.ai/models/wavespeed-ai/wan-2.2-i2v-lora-trainer, this one at 150steps was $7.5, trained on 6 videos from Higgsfield).	
 * Car/Clorth/Product consistency: [drnighthan on HuggingFace](https://huggingface.co/drnighthan)
 * [Gouache](https://www.oxen.ai/shadowworks/public/dir/main) - lora and workflows, for Wan 2.1 14B I2V
+
+Wan 2.1 to Wan 2.2 LOW LoRA from [drozbay](hidden-knowledge.md#drozbay)
+
+* [HF:drozbay/Wan2.2_A14B_lora_extract](https://huggingface.co/drozbay/Wan2.2_A14B_lora_extract/tree/main)

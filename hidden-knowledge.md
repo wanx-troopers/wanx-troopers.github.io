@@ -49,6 +49,7 @@ List of Drozbay's contributions discussed on this website:
 - [Drozbay's Impact Pack SEGS Detailer For Wan Video And VACE](upscalers.md#drozbays-impact-pack-segs-detailer-for-wan-videoa-and-vace)
 - [Painter I2V Modular Replacment](wan-i2v-tricks.md#painteri2v) `WanEx` contains `WanEx_PainterMotionAmplitude` node which replicates action of `Painter I2V` node in a modular manner
 - [Wan I2V T2V / VACE Tricks](wan-t2v-vace-tricks.md) hoists avdvanced workflows created by Drozbay
+- [Wan 2.1 to Wan 2.2 LOW LoRA](loras/part-01.md#Special Use)
 
 ## 2025.11.29
 

@@ -20,3 +20,9 @@ Note: `WanVacePhantomDualV2` from `WanVaceAdvanced` is compatible with Phantom b
 
 > and don't use the skeleton+depth mix; send in the depth and the skeleton into separate Vace control inputs;
 > either chain WanVaceToVideo nodes, or use WanVacePhantomDualV2 node
+
+> Q: load FUN VACE module for High Model first, and then VACE 2.1 for the LOW model?
+> A: sometimes
+
+> can try WAN 2.1 + [Wan 2.1 to Wan 2.2 LOW LoRA](loras/part-01.md#Special Use) + VACE 2.1 on LOW  
+> original Vace was pretty weak with pose control
