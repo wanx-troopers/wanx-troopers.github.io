@@ -98,6 +98,24 @@ Users chatting:
 | vrgamedevgirl84/Wan14BT2VFusioniX | FusionX_LoRa/<br>Wan2.1_I2V_14B_FusionX_LoRA | 2.1 I2V | - | very good for 2.1 |
 | vrgamedevgirl84/Wan14BT2VFusioniX | FusionX_LoRa/<br>Phantom_Wan_14B_FusionX_LoRA | 2.1 T2V | - | real trooper for 2.1 |
 
+### "Old" Lightning 2.2
+
+[HF:/Kijai/WanVideo_comfy:LoRAs/Wan22-Lightning/old](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Wan22-Lightning/old) contains fp16 versions of "old" Lightning LoRa-s.
+Seemingly these have disappeared from official "Lightning" repo but are preserved here. Both I2V and T2V high/low .safetensorts available, T2V in two versions - normal and v1.1:
+
+```
+Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16
+Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16
+
+Wan2.2-Lightning_T2V-A14B-4steps-lora_HIGH_fp16
+Wan2.2-Lightning_T2V-A14B-4steps-lora_LOW_fp16
+
+Wan2.2-Lightning_T2V-v1.1-A14B-4steps-lora_HIGH_fp16
+Wan2.2-Lightning_T2V-v1.1-A14B-4steps-lora_LOW_fp16
+```
+
+Of these `Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16` was recently successfully used with WanAnimate.
+
 ## Non-obvious Combinations
 
 The table bellow lists some non-obvious combinations of LoRa-s and models
