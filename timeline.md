@@ -1,12 +1,10 @@
 # News
 
 2025.11.30 Kijai's [commit](https://github.com/kijai/ComfyUI-WanVideoWrapper/commit/99c3978da4a55a03249669bef5647d7dbda7a5d1) to [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
-"Reduce peak VRAM usage when not using torch.compile (and some even with it)"
+"Reduce peak VRAM usage when not using torch.compile (and some even with it)"  
+2025.11.30 [Steady Dancer](wan-animate-mocha-steady-dancer.md#steady-dancer) support merged to ComfyUI `main`
 
 2025.11.29 [GH:ModelTC/ComfyUI-LightVAE](https://github.com/ModelTC/ComfyUI-LightVAE) alternative WAN VAE-s: faster and less VRAM, are now working in native WF-s in ComfyUI
-
-2025.11.28 Kijai experiments with [SteadyDancer](https://github.com/MCG-NJU/SteadyDancer) in ComfyUI; results moderately disappointing: does not work with other Wan models; UniAnimate does and delivers similar results if not better;
-on the plus side ability to function with context windows - and thus achieve 6 second lenght, double of it's native 2 seconds is encouraging; as of 2025.11.30 changes merged to `main`
 
 2025.11.26 6B `Z-Image-Turbo` distilled image generation model released under Apache license. Community is raving :) Model re-uses Flux VAE but appears not be based on Flux.
 [Model page](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo) promises non-distilled and edit versions to be released. "beats flux 2 .. at a fraction of the size ... less plastic than qwen image"
@@ -54,7 +52,7 @@ please see [HuMo](humo.md) section
 2025.10.22 New wan2.2 i2v lightx2v 4step [1022](loras/part-01.md) LoRa-s have been released  
 2025.10.22 "Rollingforce" based on Wan 1.3B promises long generations; current experiments are yilding very modest results however
 
-2025.10.21 [MoCha](wan-animate-mocha.md#mocha) Wan 2.1 T2V 14B-derived human replacement full-fat model released and adapted inside Wrapper   
+2025.10.21 [MoCha](wan-animate-mocha-steady-dancer.md#mocha) Wan 2.1 T2V 14B-derived human replacement full-fat model released and adapted inside Wrapper   
 2025.10.21 A bug fixed around using [WanVideo Context Options](what-plugs-where/context-options.md) with `Uni3C` ControlNet (in VACE workflows?)  
 2025.10.21 [Krea Realtime](loras/both-ways.md#krea-realtime) Wan 2.1 T2V 14B distill difficult to use but realistic; works as a "full-fat" model, not as a LoRa
 
@@ -84,7 +82,7 @@ this is part of `triton-windows 3.5.0.post21` release
 low model released is 2.1 so one of old LoRAs advised; also as [full models](https://huggingface.co/lightx2v/Wan2.2-I2V-A14B-Moe-Distill-Lightx2v/tree/main/distill_models)  
 could use lightx2v_I2V_14B_480p_cfg_step_distill_rank256_bf16.safetensors on low
 
-2025.10.13 Kijai fixed a bug causing clip embeds to be ignored when working with [Wan Animate](wan-animate-mocha.md#wan-animate)
+2025.10.13 Kijai fixed a bug causing clip embeds to be ignored when working with [Wan Animate](wan-animate-mocha-steady-dancer.md#wan-animate)
 
 2025.10.10 Latest version of Kiaji's nodes now supports [Tiny VAE](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/taew2_2.safetensors); not as good; "essentially a 'preview' VAE"
 

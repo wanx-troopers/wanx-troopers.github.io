@@ -21,7 +21,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 ## Models
 
 * [HuMo](humo.md)
-* [Wan Animate/MoCha](wan-animate-mocha.md)
+* [Wan Animate/MoCha/Steady Dancer](wan-animate-mocha-steady-dancer.md)
 * [Infinite Talk](infinite-talk.md)
 * [Phantom and MAGREF](phantom-magref.md)
 * [HoloCine](holocine.md)

@@ -4,7 +4,7 @@ This section is a incomplete.
 `WanVideo Context Options` is a node from [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper). It is plugged into `WanVideo Sampler` and essentially provides extra parameters for it.
 
 Enables batched video generation. Remain somewhat experimental. Known to work with the following models: 
-* [Wan Animate](../wan-animate-mocha.md#wan-animate) ??
+* [Wan Animate](../wan-animate-mocha-steady-dancer.md#wan-animate) ??
 * [MAGREF](../phantom-magref.md#magref) ??
 * ...
 

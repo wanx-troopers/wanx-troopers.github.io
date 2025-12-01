@@ -4,7 +4,6 @@ Wan Animate and MoCha serve similar goals.
 
 ## Wan Animate
 
-
 Two example workflows given in [Github:kijai/ComfyUI-WanVideoWrapper:example_workflows](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/main/example_workflows).
 Example workflows differ in pose detection tech they provide.
 [Github:kijai/ComfyUI-WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess) github repo was used to work newer pose detection tech for WanAnimate.
@@ -108,3 +107,19 @@ to support generating videos with MoCha. Code has been added as well to support 
 > the frame count is basically doubled; so memory use for 81 frames would be similar to 161 frames
 
 > Mocha does better with prompt; you can get by with generic, but the more detailed the better, particularly with character likeness
+
+## Steady Dancer
+
+Nov-2025 single .safetensors model derived from Wan family of video generation models.
+Does not work with other Wan models, not a LoRa.
+Performs functions roughly similar to WanAnimate.
+Works with context windows.
+Support has been integrated into ComfyUI native, likely to the wrapper as well.
+
+- fp8 .safetensors: [HF:Kijai/WanVideo_comfy_fp8_scaled:SteadyDancer](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main/SteadyDancer)
+- fp16 .safetensors: [HF:Kijai/WanVideo_comfy:SteadyDancer](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/SteadyDancer)
+- original article: [GH:MCG-NJU/SteadyDancer](https://github.com/MCG-NJU/SteadyDancer) 
+
+> UniAnimate delivers similar results if not better
+
+> used it with lightx2v and it works

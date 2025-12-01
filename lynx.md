@@ -48,7 +48,7 @@ Lynx has been tested with T2V WAN models. Kijai:
 
 Faster motion with Lynx? Close to 24fps.
 
-There is an unconfirmed report of Lynx working with [Wan Animate](wan-animate-mocha.md#wan-animate).
+There is an unconfirmed report of Lynx working with [Wan Animate](wan-animate-mocha-steady-dancer.md#wan-animate).
 
 ## 2024.11.11
 

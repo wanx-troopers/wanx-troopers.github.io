@@ -113,7 +113,7 @@ Here is a slightly non-traditional way to build masks. Please note that actual v
 
 ## 3rd Party
 
-## [Wan Animate](../wan-animate-mocha.md#what-plugs-where-wan-animate) Section
+## [Wan Animate](../wan-animate-mocha-steady-dancer.md#what-plugs-where-wan-animate) Section
 
 ## [Infinite Talk](../infinite-talk.md) Section
 
