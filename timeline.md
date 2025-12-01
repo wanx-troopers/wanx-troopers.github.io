@@ -6,7 +6,7 @@
 2025.11.29 [GH:ModelTC/ComfyUI-LightVAE](https://github.com/ModelTC/ComfyUI-LightVAE) alternative WAN VAE-s: faster and less VRAM, are now working in native WF-s in ComfyUI
 
 2025.11.28 Kijai experiments with [SteadyDancer](https://github.com/MCG-NJU/SteadyDancer) in ComfyUI; results moderately disappointing: does not work with other Wan models; UniAnimate does and delivers similar results if not better;
-on the plus side ability to function with context windows - and thus achieve 6 second lenght, double of it's native 2 seconds is encouraging
+on the plus side ability to function with context windows - and thus achieve 6 second lenght, double of it's native 2 seconds is encouraging; as of 2025.11.30 changes merged to `main`
 
 2025.11.26 6B `Z-Image-Turbo` distilled image generation model released under Apache license. Community is raving :) Model re-uses Flux VAE but appears not be based on Flux.
 [Model page](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo) promises non-distilled and edit versions to be released. "beats flux 2 .. at a fraction of the size ... less plastic than qwen image"

@@ -25,6 +25,12 @@
 > xformers: No use for it with sageattn being so fast;
 > been ages ... back then it was maybe 5% ahead of sdpa
 
+> `Unload Modules` in ComfyUI manager can potentially fix weird VRAM issues
+
+> Note cfg usage(>1.0) increases resources consumption
+
+> disable smart memory in ComfyUI - then it always offloads [does not try to keep models in VRAM to avoid unnecessary RAM - VRAM transfers]
+
 ## Drozbay
 
 [drozbay](https://github.com/drozbay) is continuing to push boundaries on what can be achieved aroud Wan models.

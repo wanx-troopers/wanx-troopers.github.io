@@ -158,3 +158,9 @@ or possibly also [Painter I2V](wan-i2v-tricks.md#painter-i2v) on top of it.
 Here is a slightly non-traditional way to build masks. Please note that actual value 0 vs 1 may be opposite between wrapper and native workflows.
 
 ![build-masks-manually](../screenshots/build-masks-manually.webp)
+
+## Context Windows PR
+
+PR is outstanding into ComfyUI native by Kijai: [10975](https://github.com/comfyanonymous/ComfyUI/pull/10975).
+PR promises significant upgrades to conditioning handling for Wan I2V and Hunyuan 1.5
+Checkout [contextwindows](https://github.com/kijai/ComfyUI/tree/contextwindows) branch in order to use the new code.
