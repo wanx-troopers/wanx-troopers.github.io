@@ -23,7 +23,8 @@ Supports temporal blending across generated video fragments using VACE and conte
 ## FlashVSR
 
 > but flashvsr is not good quality wise, they made a lot of poor decisions that compromise quality for speed;
-> tiny attention windows that prevent proper motion tracking so details swim
+> tiny attention windows that prevent proper motion tracking so details swim;
+> also the vae is worse but you can use the original vae instead, it's just slower
 
 [Example workflow](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_1_3B_FlashVSR_upscale_example.json)
 
@@ -73,3 +74,5 @@ Can also do images, has been used on z-image-turbo produced images.
 [GH:spacepxl/ComfyUI-VAE-Utils](https://github.com/spacepxl/ComfyUI-VAE-Utils)
 
 > 2x spatial upscale only, works on images and video
+
+> something like LUA could be much better, but this is at least a huge improvement over bilinear/bislerp
