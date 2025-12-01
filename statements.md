@@ -1,5 +1,18 @@
 # Statements
 
+## 2025.12.01
+
+> for maximum speed, assuming compile works, use the 'comfy' rope function, and enable the `allow_unmerged_lora_compile` if the loras are not merged
+
+Though `allow_unmerged_lora_compile` could be "troublesome" when enabled.
+
+Triton caches to clean on updates:
+
+```
+C:\Users\AppData\Local\Temp\torchinductor_**\
+C:\Users<usernam>.triton
+```
+
 ## 2025.11.30
 
 > disable blocks of the main model during inference?

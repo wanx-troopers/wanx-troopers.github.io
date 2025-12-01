@@ -1,5 +1,14 @@
 # Hidden Knowledge
 
+## 2025.12.01
+
+> Wan VAE can use way less VRAM in wrapper if you offload the cache to CPU, makes it also a lot slower, but still beats tiled VAE
+> at 720p it's like ~5GB less VRAM used
+
+![cache-offloaded-vae.webp](screenshots/cache-offloaded-vae.webp)
+
+To similarly save RAM in native use `WanVideo LatentsReScale` node and plug wrapper VAE node into a native WF.
+
 ## 2025.11.30
 
 > The only difference between `sage attention` and `sage attention compiled` is that the latter ALLOWS for torch compile;
