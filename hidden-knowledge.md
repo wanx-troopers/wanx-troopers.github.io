@@ -25,6 +25,8 @@ Sage Attention 3 can be installed at the same time as Sage Attention 2, so there
 > (but also doesn't cause graph break) and the `sageattn_compiled` doesn't wrap it at all,
 > but expects you to have the very latest version of sageattn that has built-in similar workaround 
 
+> fullgraph feature in torch compile is a debug feture; it will error if there's any graph break
+
 ## 2025.11.30 Chunked RoPE
 
 > Two of the highest peak VRAM hits on the model code are the RoPE appllication
