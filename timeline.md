@@ -1,13 +1,15 @@
 # News
 
+2025.12.02 Community started experimenting with 7B Ovis image generation model : [GH](https://github.com/AIDC-AI/Ovis-Image), [HF](https://huggingface.co/AIDC-AI/Ovis-Image-7B);
+the model is likened to and compared with z-image-turbo
+
 2025.11.30 Kijai's [commit](https://github.com/kijai/ComfyUI-WanVideoWrapper/commit/99c3978da4a55a03249669bef5647d7dbda7a5d1) to [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
 "Reduce peak VRAM usage when not using torch.compile (and some even with it)"  
 2025.11.30 [Steady Dancer](wan-animate-mocha-steady-dancer.md#steady-dancer) support merged to ComfyUI `main`
 
 2025.11.29 [GH:ModelTC/ComfyUI-LightVAE](https://github.com/ModelTC/ComfyUI-LightVAE) alternative WAN VAE-s: faster and less VRAM, are now working in native WF-s in ComfyUI
 
-2025.11.26 6B `Z-Image-Turbo` distilled image generation model released under Apache license. Community is raving :) Model re-uses Flux VAE but appears not be based on Flux.
-[Model page](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo) promises non-distilled and edit versions to be released. "beats flux 2 .. at a fraction of the size ... less plastic than qwen image"
+2025.11.26 6B [Z-Image-Turbo](extra-tools.md#z-image-turbo) model has been introduced and is enthusiastically used by the community
 
 2025.11.25 Flux.2 Dev released under non-commerical license. Community reports memory issues and ComfyUI crashes.
 

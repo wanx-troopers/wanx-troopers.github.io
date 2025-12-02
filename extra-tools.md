@@ -11,6 +11,15 @@ Example of it being used in a LongCat wf: [extend-with-overlap](screenshots/exte
 
 `WanVideoBlender` from [GH:banodoco/steerable-motion](https://github.com/banodoco/steerable-motion) is an alternative.
 
+## Z-Image-Turbo
+
+6B `Z-Image-Turbo` introduced around 2025.11.26 is a distilled image generation model released under Apache license. Community is raving :) Model re-uses Flux VAE but appears not be based on Flux.
+[Model page](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo) promises non-distilled and edit versions to be released. "beats flux 2 .. at a fraction of the size ... less plastic than qwen image".
+
+LoRa-s creating is being tried, however just prompting alone goes a very long way.
+Prompts are using an unusual encoder which composes a system - user dialogue at some point.
+Apparently this is how the model has been trained. This leads to unusual tools like the one discussed [here](https://www.reddit.com/r/StableDiffusion/comments/1parzxf) to be created.
+
 ## Qwen
 
 ### Qwen Image Edit
