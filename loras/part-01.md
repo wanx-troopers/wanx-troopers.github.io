@@ -13,7 +13,7 @@
 
 FL13 three sampler setup for Wan 2.2 I2V
 
-![FL13-wan22-i2v-loras1](../screenshots/FL13-wan22-i2v-loras1.webp)
+![FL13-wan22-i2v-loras1](../screenshots/FL13-wan22-i2v-loras1.png)
 ![FL13-wan22-i2v-loras2](../screenshots/FL13-wan22-i2v-loras2.webp)
 
 ...or `lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16` on low
