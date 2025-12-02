@@ -21,6 +21,10 @@ Sage Attention 3 can be installed at the same time as Sage Attention 2, so there
 > *`sageattn_compiled` is sort of redundant now with latest version of the wrapper*
 > *as the workaround to allow even the old version in the graph seems to work now*
 
+> Difference now is that normal `sageattn` is wrapped in a custom op so nothing in it is compiled
+> (but also doesn't cause graph break) and the `sageattn_compiled` doesn't wrap it at all,
+> but expects you to have the very latest version of sageattn that has built-in similar workaround 
+
 ## 2025.11.30 Chunked RoPE
 
 > Two of the highest peak VRAM hits on the model code are the RoPE appllication
