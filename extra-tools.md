@@ -16,9 +16,20 @@ Example of it being used in a LongCat wf: [extend-with-overlap](screenshots/exte
 6B `Z-Image-Turbo` introduced around 2025.11.26 is a distilled image generation model released under Apache license. Community is raving :) Model re-uses Flux VAE but appears not be based on Flux.
 [Model page](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo) promises non-distilled and edit versions to be released. "beats flux 2 .. at a fraction of the size ... less plastic than qwen image".
 
-LoRa-s creating is being tried, however just prompting alone goes a very long way.
-Prompts are using an unusual encoder which composes a system - user dialogue at some point.
-Apparently this is how the model has been trained. This leads to unusual tools like the one discussed [here](https://www.reddit.com/r/StableDiffusion/comments/1parzxf) to be created.
+The stock ComfyUI workflow for z-image is quite traditional: `Clip Encoder` users `qwen_3_4b` to encode user prompt and feed it to `KSampler`.
+The surprise is that `Z-Image-Turbo` had been trained on conversation sequences which have then been encoded by `qwen_3_4b`.
+
+A number of projects have emerged to help take advantage of this.
+Most prominently there is [GH:fblissjr/ComfyUI-QwenImageWanBridge](https://github.com/fblissjr/ComfyUI-QwenImageWanBridge).
+As the [explanation](https://github.com/fblissjr/ComfyUI-QwenImageWanBridge/blob/main/nodes/docs/z_image_intro.md) says:
+
+> There's no LLM running here. Our nodes are text formatters - they assemble your input into the chat template format,
+> wrap it with special tokens, and pass it to the text encoder. The "thinking" and "assistant" content is whatever text YOU provide.
+
+If using an LLM the project recommends using "Qwen3-0.5B through Qwen3-235B" because they also use `qwen_3_4b` and tokens produced by them are passed without re-encoding.
+
+Then there are other projects which do make use of LLM-s to help generate the prompt.
+One is discussed [here](https://www.reddit.com/r/StableDiffusion/comments/1parzxf).
 
 ## Qwen
 
