@@ -159,10 +159,7 @@ Here is a slightly non-traditional way to build masks. Please note that actual v
 
 ![build-masks-manually](../screenshots/build-masks-manually.webp)
 
-## Context Windows PR
+## See Also
 
-PR is outstanding into ComfyUI native by Kijai: [10975](https://github.com/comfyanonymous/ComfyUI/pull/10975).
-PR promises significant upgrades to conditioning handling for Wan I2V and Hunyuan 1.5
-Checkout [contextwindows](https://github.com/kijai/ComfyUI/tree/contextwindows) branch in order to use the new code.
-
-> The context window blends are almost invisible, especially with freenoise enabled
+- [Native Context Windows PR](what-plugs-where/context-options.md#native-context-windows-pr)
+- [Video Blending From Fragments](extra-tools.md#video-blending-from-fragments)

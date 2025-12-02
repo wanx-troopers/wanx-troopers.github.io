@@ -3,6 +3,20 @@
 This section is a incomplete.
 `WanVideo Context Options` is a node from [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper). It is plugged into `WanVideo Sampler` and essentially provides extra parameters for it.
 
+## 2025.12.02
+
+> Q: context windows in native... currently the only way to assign prompts to different window regions is to use conditioning combine right? A: yes
+
+## Native Context Windows PR
+
+PR is outstanding into ComfyUI native by Kijai: [10975](https://github.com/comfyanonymous/ComfyUI/pull/10975).
+PR promises significant upgrades to conditioning handling for Wan I2V and Hunyuan 1.5
+Checkout [contextwindows](https://github.com/kijai/ComfyUI/tree/contextwindows) branch in order to use the new code.
+
+> The context window blends are almost invisible, especially with freenoise enabled
+
+## Earlier
+
 Enables batched video generation. Remain somewhat experimental. Known to work with the following models: 
 * [Wan Animate](../wan-animate-mocha-steady-dancer.md#wan-animate) ??
 * [MAGREF](../phantom-magref.md#magref) ??

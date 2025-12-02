@@ -26,3 +26,8 @@ Note: `WanVacePhantomDualV2` from `WanVaceAdvanced` is compatible with Phantom b
 
 > can try WAN 2.1 + [Wan 2.1 to Wan 2.2 LOW LoRA](loras/part-01.md#Special Use) + VACE 2.1 on LOW  
 > original Vace was pretty weak with pose control
+
+## See Also
+
+- [Native Context Windows PR](what-plugs-where/context-options.md#native-context-windows-pr)
+- [Video Blending From Fragments](extra-tools.md#video-blending-from-fragments)
