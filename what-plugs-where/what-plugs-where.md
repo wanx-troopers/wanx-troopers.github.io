@@ -7,9 +7,16 @@ Very similar workflows apply both to VACE 2.1 and Wan 2.2 Fun Vace.
 
 > To do vace inpainting before you need masks set but also the mask reflected on the input at 127 gray
 
-## Native
+VACE accepts more than one control video. To do this chain multiple VACE embeds nodes:
+[native](../screenshots/WanVaceToVideoChain.webp), [wrapper](../screenshots/WanVideoVaceEncodeChain.webp).
 
-### VACE [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
+To give WAN more creative freedom while still using VACE set `vace_end_percent` to less than `1`.
+This will allow final steps to do sampling without VACE control after VACE has established overall shape of the video.
+Presently exposed on wrapper node but not on native node.
+
+### Native
+
+#### VACE [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
 
 * `Diffusion Model Selector` (VACE safetensors; -> `extra_state_dict` input of `Diffusion Model Loader KJ`)
 * `Diffusion Model Loader KJ` (Wan 2.2 .. T2V ..)
@@ -20,7 +27,7 @@ Supplementary; chain after model loader
 * `TorchCompileModelWanVideo`
 * `Patch Sage Attention KJ`
 
-### Embeds In Native
+#### Embeds In Native
 
 | Embeds Node | Inputs | Model | Bonuses |
 | :-- | :-- | :-- | :-- |
@@ -32,9 +39,9 @@ Bonus nodes: `Create Video`, `Save Video`, `Points Editor`, `(Down)Load SAM2Mode
 
 Not entirely clear if inpainted area needs to be gray-ed out in `control video` input to `WanVaceToVideo`
 
-## Wrapper
+### Wrapper
 
-### VACE [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
+#### VACE [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
 
 * `WanVideo VACE Module Select` (Wan2_2_Fun_VACE..; -> `vace_input` of `VanVideo Model Loader`)
 * `WanVideo Lora Select Multi` (say lightx2v_T2V_14B_ .. v2..; -> `lora` input of `VanVideo Model Loader`)
@@ -53,7 +60,7 @@ Least `WanVideo Sampler` node grows visually too tall groups of parameters have 
 
 * `WanVideo Context Options` -> `context_options` input; [details](context-options.md)
 
-### Embeds In Wrapper
+#### Embeds In Wrapper
 
 | Pre Embeds Node| Pre Embeds Inputs -> Output | Embeds Node | Input from Pre / Embeds Inputs -> Output | Model | WanVideo Sampler Input |
 | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -81,7 +88,7 @@ More bounuses:
 * `Image Preview`
 * `Mask Preview`
 
-#### Wiring
+##### Wiring
 
 ```
 WanVideo VACE Start To End Frame --------------------> | Replace Images  |
