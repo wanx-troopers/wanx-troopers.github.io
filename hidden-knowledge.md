@@ -11,6 +11,9 @@ To similarly save RAM in native use `WanVideo LatentsReScale` node and plug wrap
 
 ## 2025.11.30
 
+`sageattn` and `sageattn_compiled` refer to Sage Attention 2; if you had Sage Attention 1 installed for some odd reason they'd refer to it instead.
+Sage Attention 3 can be installed at the same time as Sage Attention 2, so there is a separate option for it `sage_attn3`.
+
 > The only difference between `sage attention` and `sage attention compiled` is that the latter ALLOWS for torch compile;
 > normally compilation is disabled for sage as it wouldn't work anyway, and just causes unnecessary warnings and such;
 > even with the new sage it still doesn't actually compile it, the code just handles it graciously so there's no graph breaks.
