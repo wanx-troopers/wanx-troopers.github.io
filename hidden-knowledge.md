@@ -1,6 +1,6 @@
 # Hidden Knowledge
 
-## 2025.12.01
+## 2025.12.01 - VRAM Saver
 
 > Wan VAE can use way less VRAM in wrapper if you offload the cache to CPU, makes it also a lot slower, but still beats tiled VAE
 > at 720p it's like ~5GB less VRAM used
@@ -8,6 +8,24 @@
 ![cache-offloaded-vae.webp](screenshots/cache-offloaded-vae.webp)
 
 To similarly save RAM in native use `WanVideo LatentsReScale` node and plug wrapper VAE node into a native WF.
+
+## 2025.11.30 Chunked RoPE - VRAM Saver When Torch Compile Off
+
+> Two of the highest peak VRAM hits on the model code are the RoPE appllication
+> (rotary positional embeds) and ffn activation (feed forward),
+> these happen separate from the attention, which is the 3rd highest.
+
+> The chunked option splits both the rope and the ffn calculations, doing it in chunks and thus reducing the peak VRAM
+> usage to below the attention (which cant really be split without affecting results or slowing it down);
+> `torch.compile` also optimises it similarly, that's why it uses less VRAM when it works.
+
+> pytorch now has the fused RMS norm built in, that was one of the biggest benefits of compile;
+> you could just not use compile, use the pytorch RMS norm and the  chunked rope
+
+## 2025.11.30 rms_norm_function - Time Saver When Torch Compile Off
+
+`WanVideo Model Loader`: set `rms_norm_function` to `pytorch` not `default` for faster gens if torch is new enough and torch compilation is off.
+No time saving if torch compilation is on.
 
 ## 2025.11.30 sageattn
 
@@ -26,23 +44,6 @@ Sage Attention 3 can be installed at the same time as Sage Attention 2, so there
 > but expects you to have the very latest version of sageattn that has built-in similar workaround 
 
 > fullgraph feature in torch compile is a debug feture; it will error if there's any graph break
-
-## 2025.11.30 Chunked RoPE
-
-> Two of the highest peak VRAM hits on the model code are the RoPE appllication
-> (rotary positional embeds) and ffn activation (feed forward),
-> these happen separate from the attention, which is the 3rd highest.
-
-> The chunked option splits both the rope and the ffn calculations, doing it in chunks and thus reducing the peak VRAM
-> usage to below the attention (which cant really be split without affecting results or slowing it down);
-> `torch.compile` also optimises it similarly, that's why it uses less VRAM when it works.
-
-> pytorch now has the fused RMS norm built in, that was one of the biggest benefits of compile;
-> you could just not use compile, use the pytorch RMS norm and the  chunked rope
-
-## 2025.11.30 rms_norm_function IS GOOD
-
-`WanVideo Model Loader`: set `rms_norm_function` to `pytorch` not `default`.
 
 ## 2025.11.30
 
