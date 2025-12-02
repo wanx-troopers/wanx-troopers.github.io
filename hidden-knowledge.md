@@ -9,14 +9,19 @@
 
 To similarly save RAM in native use `WanVideo LatentsReScale` node and plug wrapper VAE node into a native WF.
 
-## 2025.11.30
+## 2025.11.30 sageattn
 
 `sageattn` and `sageattn_compiled` refer to Sage Attention 2; if you had Sage Attention 1 installed for some odd reason they'd refer to it instead.
 Sage Attention 3 can be installed at the same time as Sage Attention 2, so there is a separate option for it `sage_attn3`.
 
-> The only difference between `sage attention` and `sage attention compiled` is that the latter ALLOWS for torch compile;
+> The only difference between `sage attention` and `sage attention compiled` _was_ that the latter ALLOWED for torch compile;
 > normally compilation is disabled for sage as it wouldn't work anyway, and just causes unnecessary warnings and such;
 > even with the new sage it still doesn't actually compile it, the code just handles it graciously so there's no graph breaks.
+
+> *`sageattn_compiled` is sort of redundant now with latest version of the wrapper*
+> *as the workaround to allow even the old version in the graph seems to work now*
+
+## 2025.11.30 Chunked RoPE
 
 > Two of the highest peak VRAM hits on the model code are the RoPE appllication
 > (rotary positional embeds) and ffn activation (feed forward),
@@ -29,7 +34,11 @@ Sage Attention 3 can be installed at the same time as Sage Attention 2, so there
 > pytorch now has the fused RMS norm built in, that was one of the biggest benefits of compile;
 > you could just not use compile, use the pytorch RMS norm and the  chunked rope
 
+## 2025.11.30 rms_norm_function IS GOOD
+
 `WanVideo Model Loader`: set `rms_norm_function` to `pytorch` not `default`.
+
+## 2025.11.30
 
 > this was even more relevant for Kandinsky5 because it has the 10 second model,
 > and it's 24fps, so that's 241 frames to do at once but same applies to Wan
