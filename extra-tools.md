@@ -13,6 +13,12 @@ Example of it being used in a LongCat wf: [extend-with-overlap](screenshots/exte
 
 ## Z-Image-Turbo
 
+[Pull request](https://github.com/comfyanonymous/ComfyUI/pull/11062) to add
+[Z-Image-Turbo-Fun-Controlnet-Union](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union)
+support for Z-Image-Turbo to Comfy has been merged in.
+Technically the new facility is closer to VACE than to ControlNet-s of the past in its architecture.
+The new `Controlnet-Union` supports Pose, Canny, Hed, and Depth guidance.
+
 6B `Z-Image-Turbo` introduced around 2025.11.26 is a distilled image generation model released under Apache license. Community is raving :) Model re-uses Flux VAE but appears not be based on Flux.
 [Model page](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo) promises non-distilled and edit versions to be released. "beats flux 2 .. at a fraction of the size ... less plastic than qwen image".
 
@@ -30,6 +36,9 @@ If using an LLM the project recommends using "Qwen3-0.5B through Qwen3-235B" bec
 
 Then there are other projects which do make use of LLM-s to help generate the prompt.
 One is discussed [here](https://www.reddit.com/r/StableDiffusion/comments/1parzxf).
+
+It has been observed that only one LoRa can be successfully while generating an image with Z-Image-Turbo.
+Apparently due the highly-distilled nature of the model trying to use more than one LoRa leads to bad results.
 
 ## Qwen
 
@@ -102,6 +111,8 @@ VibeVoice TTS
 `SuperPrompt` node from [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes).
 
 `Merge Images` node from VideoHelperSuite (so called VHS)
+
+[GH:stavsap/comfyui-ollama](https://github.com/stavsap/comfyui-ollama) ComfyUI nodes to connect to local-running KoboldCpp executing Qwen3-VL on the CPU in order to tranlate images to descriptions.
 
 [Urabewe/OllamaVision](https://github.com/Urabewe/OllamaVision) a SwarmUI extension to generate prompts.
 

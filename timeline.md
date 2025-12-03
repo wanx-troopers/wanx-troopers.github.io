@@ -1,5 +1,11 @@
 # News
 
+2025.12.03 [Z-Image-Turbo](extra-tools.md#z-image-turbo) 6B image generation model introduced ealier to a great success within community has received a working ControlNet implementations in ComfyUI
+https://huggingface.co/alibaba-pai/FLUX.2-dev-Fun-Controlnet-Union
+
+2025.12.03 Flux.2 Dev released under non-commerical license earlier on 2025.11.25 to enthusiasm of some and unhappiness of others (high VRAM usage, long generations)
+has received a ControlNet [model](https://huggingface.co/alibaba-pai/FLUX.2-dev-Fun-Controlnet-Union); status of integration into ComfyUI unknown
+
 2025.12.02 Community started experimenting with 7B Ovis image generation model : [GH](https://github.com/AIDC-AI/Ovis-Image), [HF](https://huggingface.co/AIDC-AI/Ovis-Image-7B);
 the model is likened to and compared with z-image-turbo
 
@@ -8,10 +14,6 @@ the model is likened to and compared with z-image-turbo
 2025.11.30 [Steady Dancer](wan-animate-mocha-steady-dancer.md#steady-dancer) support merged to ComfyUI `main`
 
 2025.11.29 [GH:ModelTC/ComfyUI-LightVAE](https://github.com/ModelTC/ComfyUI-LightVAE) alternative WAN VAE-s: faster and less VRAM, are now working in native WF-s in ComfyUI
-
-2025.11.26 6B [Z-Image-Turbo](extra-tools.md#z-image-turbo) model has been introduced and is enthusiastically used by the community
-
-2025.11.25 Flux.2 Dev released under non-commerical license. Community reports memory issues and ComfyUI crashes.
 
 2025.11.21 [Hunyuan](hunyuan.md) 1.5 generating 5-10 sec 24fps videos announced: [link](https://x.com/TencentHunyuan/status/1991717687706398828)
 
