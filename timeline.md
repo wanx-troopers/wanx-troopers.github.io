@@ -1,7 +1,6 @@
 # News
 
 2025.12.03 [Z-Image-Turbo](extra-tools.md#z-image-turbo) 6B image generation model introduced ealier to a great success within community has received a working ControlNet implementations in ComfyUI
-https://huggingface.co/alibaba-pai/FLUX.2-dev-Fun-Controlnet-Union
 
 2025.12.03 Flux.2 Dev released under non-commerical license earlier on 2025.11.25 to enthusiasm of some and unhappiness of others (high VRAM usage, long generations)
 has received a ControlNet [model](https://huggingface.co/alibaba-pai/FLUX.2-dev-Fun-Controlnet-Union); status of integration into ComfyUI unknown
@@ -15,7 +14,7 @@ the model is likened to and compared with z-image-turbo
 
 2025.11.29 [GH:ModelTC/ComfyUI-LightVAE](https://github.com/ModelTC/ComfyUI-LightVAE) alternative WAN VAE-s: faster and less VRAM, are now working in native WF-s in ComfyUI
 
-2025.11.21 [Hunyuan](hunyuan.md) 1.5 generating 5-10 sec 24fps videos announced: [link](https://x.com/TencentHunyuan/status/1991717687706398828)
+2025.11.21 [Hunyuan](hunyuan.md) 1.5 generating 5-10 sec 24fps videos released: [link](https://x.com/TencentHunyuan/status/1991717687706398828)
 
 2025.11.20 Community is experimenting with Facebook's [SAM3](auxiliary.md#sam3) segmentation/depth map model
 
