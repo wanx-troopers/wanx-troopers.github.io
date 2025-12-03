@@ -48,7 +48,7 @@ Models are uploaded as "sparse" and "full", the article says:
 > another model using wan vae, another model with low quality outputs plagued by noise grids
 
 Apparently HoloCine is able to generate 241 frames in ComfyUI workflows in one go. Examples seen online contain plenty of cuts.
-It seems possible that while generating for 241 frames straight the model always inserts cuts.
+It is not 100% clear if the model is capable of generating 241 frames straight without inserts cuts or loops.
 Under this understanding the value of HoloCine is its ability to generate several scenes within 15sec limit
 with considerable character consistency - rather than ability to produce uninterrupted 15sec shots.
 
@@ -64,3 +64,6 @@ It appears uncertain how soon such support could arrive, given the busy release 
 > Holocine + [FFGO](wan-i2v-tricks.md#ffgo) makes it I2V
 
 > You can use VACE w/ Holocine....and it will do up to 249 frames
+
+> used with PUSA at 1.4 a lot (giving it help doing i2v along w/ VACE)
+ 
