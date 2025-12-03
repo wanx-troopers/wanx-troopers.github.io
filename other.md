@@ -1,5 +1,6 @@
 # Other Things to Check Out
 
+* [GH:scottmudge/ComfyUI-NAG](https://github.com/scottmudge/ComfyUI-NAG) ComfyUI NAG that has reportedly been made to work with a lot of models as of Dec 2025
 * [GH:Jonseed/ComfyUI-Detail-Daemon](https://github.com/Jonseed/ComfyUI-Detail-Daemon) tool to adjust sigmas while image generation to improve details
 
 * [GH:mattjohnpowell/comfyui-lmstudio-image-to-text-node](https://github.com/mattjohnpowell/comfyui-lmstudio-image-to-text-node) node pack to generate advanced prompts using LLM-s

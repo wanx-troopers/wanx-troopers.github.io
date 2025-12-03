@@ -31,4 +31,13 @@ It has been shown that Phantom generation is a somewhat influenced by [Lynx](lyn
 > can end up with a burned image, over coocked one?  phantom-magref.md  
 > A: With distil Loras, try lcm instead for less burn
 
+## MAGREF with Context Windows
+
 Can be used with [Context Windows](what-plugs-where/context-windows.md).
+
+> Q: context windows and I2V work poorly due to each "window" using the input image as starting point right?
+> A: yes, it can somewhat work with MAGREF
+> Q: Since then it's a reference and not starting frame?
+> A: yes ... [there is a] separate input to `WanVideo Context Options`, you can have the first frame a full
+> frame like normally with I2V, then on the reference samples input you can have same image but with white
+> padding, so it's applied weaker

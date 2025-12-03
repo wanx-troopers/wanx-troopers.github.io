@@ -19,3 +19,12 @@ In native `differential diffusion` is enabled in one of two ways
 
 Setting `latent masks` "normally" is done like this
 ![kj-latent-masking](screenshots/kj-latent-masking.webp)
+
+[Sample T2V Latent Mask Workflow](screenshots/kj-sample-t2v-latent-mask-wf.webp)
+
+Note: latent masks are separate from VACE masks. Latent masks can and should be blurry. VACE masks possibly need to be binary black/white. Both can be used at the same time in VACE workflows.
+
+In Wrapper if a single frame of latent mask is supplied it is automatically duplicated to match `num_frames` in the video.
+
+One way to create latent masks using [WanEx](https://github.com/drozbay/WanExperiments):
+[droz-latent-masks](screenshots/droz-latent-masks.png)

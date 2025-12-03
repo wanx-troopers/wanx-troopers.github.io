@@ -27,15 +27,28 @@ Note: `WanVacePhantomDualV2` from `WanVaceAdvanced` is compatible with Phantom b
 > can try WAN 2.1 + [Wan 2.1 to Wan 2.2 LOW LoRA](loras/part-01.md#Special Use) + VACE 2.1 on LOW  
 > original Vace was pretty weak with pose control
 
-## Latent Masks
-
-[droz-latent-masks](screenshots/droz-latent-masks.png)
-
 ## Vace + Phantom on Low Noise
 
 ![vace-plus-phantom.png](screenshots/vace-plus-phantom.png)
 
+## Combining Latent, VACE Masks, Phantom, and Context Windows
+
+> If you use only Vace for inpainting without a [latent noise mask](wan-masking.md), it samples the entire video, so even the "unchanged" part of the image gets degraded
+
+[drozbay](hidden-knowledge.md#drozbay) has thoughtfully developed a WF for using VACE, latent masks, VACE, [Context Windows](what-plugs-where/context-windows.md) references together. His considerations were
+
+- "You can't split a generation using a latent noise mask into two samplers natively. For that I modified the RES4LYF code because it already had the infrastructure to be able to add that feature. But you can do it with just one sampler just fine"
+- "if you want to use Vace reference, because then you need to account for that frame's noise mask. For that I modified my WanVaceAdvanced node to handle it and I'll push that soon"
+- "the comfyui built-in interpolation ... when you are taking the "average" of the masks for 4 frames ... the resulting masks really fail with fast motion ... I made a small node that I will add to WanVaceAdvanced as well to fix this issue"
+
+WIP wf from him: [droz-dancing-man](screenshots/droz-dancing-man.png)
+
+> My ref image was just the old man with a white background for both Vace and Phantom.
+> The outpainting was handled by Vace entirely and the prompt
+
 ## See Also
 
-- [Native Context Windows PR](what-plugs-where/context-windows.md#native-context-windows-pr)
+- [Wan Masking](wan-masking.md)
 - [Video Blending From Fragments](extra-tools.md#video-blending-from-fragments)
+- [Context Windows](what-plugs-where/context-windows.md)
+- [Native Context Windows PR](what-plugs-where/context-windows.md#native-context-windows-pr)

@@ -1,5 +1,9 @@
 # Hidden Knowledge
 
+## 2025.12.03
+
+[Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) contains `Wan Video Prompt Extender` node; it uses [Qwen2.5](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Qwen) 3B or 7B from KJ HF
+
 ## 2025.12.01 - VRAM Saver
 
 > Wan VAE can use way less VRAM in wrapper if you offload the cache to CPU, makes it also a lot slower, but still beats tiled VAE

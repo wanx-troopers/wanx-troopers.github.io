@@ -56,6 +56,7 @@ Supposedly has affinity to Wan models since both come from Alibaba.
 | lightx2v/Qwen-Image-Lightning | Qwen-Image-Edit-2509/Qwen-Image-Edit-2509-Lightning-8steps-V1.0-bf16 |
 | lightx2v/Qwen-Image-Lightning | Qwen-Image-Edit-2509/Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16 |
 
+Interesting: an [attempt](https://www.reddit.com/r/QwenImageGen/comments/1p3c0r6/controlnet_openpose_qwen_image_edit_2509/) to rig a ControlNet on top of QIE 2509.
 
 ### Notable Loras For Qwen Image Edit
 
