@@ -37,5 +37,5 @@ Note: `WanVacePhantomDualV2` from `WanVaceAdvanced` is compatible with Phantom b
 
 ## See Also
 
-- [Native Context Windows PR](what-plugs-where/context-options.md#native-context-windows-pr)
+- [Native Context Windows PR](what-plugs-where/context-windows.md#native-context-windows-pr)
 - [Video Blending From Fragments](extra-tools.md#video-blending-from-fragments)

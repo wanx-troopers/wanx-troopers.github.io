@@ -29,7 +29,7 @@ Supports temporal blending across generated video fragments using VACE and conte
 [Example workflow](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_1_3B_FlashVSR_upscale_example.json)
 
 Very fast, 1 step, but likely lesser quality than slow upscalers.
-Context options allow longer than 81 frames upscaling at the cost of minor glitches.
+Context windows allow longer than 81 frames upscaling at the cost of minor glitches.
 No sageattn, use spda.
 Reducing strength can help with oversharpening.
 Upscaling from 720x512x720 was kind of ok.

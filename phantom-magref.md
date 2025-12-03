@@ -31,4 +31,4 @@ It has been shown that Phantom generation is a somewhat influenced by [Lynx](lyn
 > can end up with a burned image, over coocked one?  phantom-magref.md  
 > A: With distil Loras, try lcm instead for less burn
 
-Can be used with [WanVideo Context Options](what-plugs-where/context-options.md).
+Can be used with [Context Windows](what-plugs-where/context-windows.md).

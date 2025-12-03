@@ -56,7 +56,7 @@ please see [HuMo](humo.md) section
 2025.10.22 "Rollingforce" based on Wan 1.3B promises long generations; current experiments are yilding very modest results however
 
 2025.10.21 [MoCha](wan-animate-mocha-steady-dancer.md#mocha) Wan 2.1 T2V 14B-derived human replacement full-fat model released and adapted inside Wrapper   
-2025.10.21 A bug fixed around using [WanVideo Context Options](what-plugs-where/context-options.md) with `Uni3C` ControlNet (in VACE workflows?)  
+2025.10.21 A bug fixed around using [Context Windows](what-plugs-where/context-windows.md) with `Uni3C` ControlNet (in VACE workflows?)  
 2025.10.21 [Krea Realtime](loras/both-ways.md#krea-realtime) Wan 2.1 T2V 14B distill difficult to use but realistic; works as a "full-fat" model, not as a LoRa
 
 

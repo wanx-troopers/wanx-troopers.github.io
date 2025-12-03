@@ -13,6 +13,8 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [Conditioning](conditioning.md)
 * [Sigmas](sigmas.md)
 * [Control Techniques](control.md)
+* [Wan Masking](wan-masking.md)
+* [Context Windows](what-plugs-where/context-windows.md)
 * [Wan I2V Tricks](wan-i2v-tricks.md)
 * [Wan T2V VACE Tricks](wan-t2v-vace-tricks.md)
 * [Extensions](extensions.md)
@@ -33,7 +35,6 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 ## What Plugs Where
 
 * [What Plugs Where](what-plugs-where/what-plugs-where.md)
-* [WanVideo Context Options](what-plugs-where/context-options.md)
 
 ## Loras
 

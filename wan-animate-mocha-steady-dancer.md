@@ -22,7 +22,7 @@ Important:
 * either have both BG and mask connected (background from driving video)
 * or have both BG and mask disconnected (background from reference image)
 
-There are two ways to produce longer videos in a batched manner: with and without [WanVideo Context Options](what-plugs-where/context-options.md):
+There are two ways to produce longer videos in a batched manner: with and without [Context Windows](what-plugs-where/context-windows.md):
 
 |Option|`WanVideo Animate Embeds`|`WanVideo Context Options`|
 |:---|:---|:---|
@@ -101,7 +101,7 @@ Links:
 > Identity preserved not as strongly as VACE 2.1 / Wan Animate but the lighting is super impressive
 
 2024.10.21 a node has been added to code has been added to latest version of [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
-to support generating videos with MoCha. Code has been added as well to support [WanVideo Context Options](what-plugs-where/context-options.md) with MoCha.
+to support generating videos with MoCha. Code has been added as well to support [Context Windows](what-plugs-where/context-windows.md) with MoCha.
 
 > a big downside of MoCha it's basically double compute; the original frames are concatenated along temporal dimension;
 > the frame count is basically doubled; so memory use for 81 frames would be similar to 161 frames

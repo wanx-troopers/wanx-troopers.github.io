@@ -1,7 +1,42 @@
-# WanVideo Context Options
+# Context Windows
 
-This section is a incomplete.
-`WanVideo Context Options` is a node from [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper). It is plugged into `WanVideo Sampler` and essentially provides extra parameters for it.
+Wan video models typically cannot generate videos with more than 81 frames.
+If such a generation is attempted the resulting video loops.
+`Context Windows` is one of the attempts to support generating videos longer than 81 frames.
+This method of generation is supported by the regular samplers such as `KSampler` for native and `WanVideo Sampler` for wrapper.
+The method is enabled by plugging in a special options node into the sampler
+
+- in [wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) workflows `WanVideo Context Options` node is used
+- in native workflows `WAN Context Windows (Manual)` node is used ![comfy-wan-context-windows-manual](../screenshots/comfy-wan-context-windows-manual.png)
+
+The way context windows generation works is that
+
+- a buffer is allocated to hold latents (4n + 1 of them) for the whole long video
+- `context_length` frames from start of the video undergo one step of sampling; this can be visualized as positioning a `window` of `context_length` frames at start of the video
+- the `context_window` moves to the right by `context_length - context_overlap` frames; it is now positioned on portion of video which overlaps with the section already processed at the previous step; one run step of video sampling is done
+- the `context_window` keeps moving to the right until all of the video has been covered; then generation resumes by moving the `context_window` back to the start again
+
+The above explanation reflects the best understanding of the maintainer of this website.
+It leaves a number of questions unanswered. If/when a better understanding is attained this website will be updated.
+
+Although both nodes contain `context_stride` option it normally left set to 1.
+The above explanation is only correct for a `context_stride` set to 1.
+Setting `context_stride` to values above 1 makes the code run sampling steps on sequences of frames not immediately adjacent to each other, for example on even or odd frames only - at any given step.
+This way of generation was useful in AnimateDiff days. Since samplers may still support AnimateDiff the option is retained.
+However no good examples have been found where setting this option to values other than 1 is useful with Wan models since the result is very noisy and blurry.
+The only case when it might be remotely useful is running inital high noise steps of generation, and even that is just a conjecture.
+
+[Conditioning](../conditioning.md) presents its own challenge in relation to `Context Windows`.
+Do we apply the same conditioning to all positions of the context window?
+Do we partition conditioning into sections and use the matching section for each context window?
+Are we handling [masking](../wan-masking.md) correctly?
+How do we use a different text prompt for each section?
+What happens with the initial image for I2V models?
+Identity or clothing of our characters drifts throughout our long window, how do we lock it?
+We are using a slightly non-usual model like [HuMo](../humo.md) which requires conditioning to be prepared in a special way, is that taken care of?
+We are using VACE, is its conditioning handled correctly?
+And the list goes on and on.
+Implementing context windows is far from trivial and is an ongoing effort to make them useful in as many scenarios as possible.
 
 ## 2025.12.02
 

@@ -58,7 +58,7 @@ Supplementary
 
 Least `WanVideo Sampler` node grows visually too tall groups of parameters have been placed into their own nodes:
 
-* `WanVideo Context Options` -> `context_options` input; [details](context-options.md)
+* `WanVideo Context Options` -> `context_options` input; [details](context-windows.md)
 
 #### Embeds In Wrapper
 
