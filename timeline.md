@@ -1,5 +1,10 @@
 # News
 
+2025.12.04 Version 2.0 of [SVI-shot](svi.md#20251204) appears disappointing. Both Wan 2.2 and 2.1 are supported and motion is better but quality of generated video seems poor.
+
+2025.12.04 `sageattn_ultravico` option added to [Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) supporting one of the newer [RifleX](https://github.com/thu-ml/DiT-Extrapolation)
+methods to generate videos with a greater number of frames without looping; a not so bad result has been demostrated with [Kandinsky-5](k5.md) but results with Wan did not look particularly good.
+
 2025.12.03 [Z-Image-Turbo](extra-tools.md#z-image-turbo) 6B image generation model introduced ealier to a great success within community has received a working ControlNet implementations in ComfyUI
 
 2025.12.03 Flux.2 Dev released under non-commerical license earlier on 2025.11.25 to enthusiasm of some and unhappiness of others (high VRAM usage, long generations)
@@ -9,7 +14,8 @@ has received a ControlNet [model](https://huggingface.co/alibaba-pai/FLUX.2-dev-
 the model is likened to and compared with z-image-turbo
 
 2025.11.30 Kijai's [commit](https://github.com/kijai/ComfyUI-WanVideoWrapper/commit/99c3978da4a55a03249669bef5647d7dbda7a5d1) to [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
-"Reduce peak VRAM usage when not using torch.compile (and some even with it)"  
+"Reduce peak VRAM usage when not using torch.compile (and some even with it)"
+
 2025.11.30 [Steady Dancer](wan-animate-mocha-steady-dancer.md#steady-dancer) support merged to ComfyUI `main`
 
 2025.11.29 [GH:ModelTC/ComfyUI-LightVAE](https://github.com/ModelTC/ComfyUI-LightVAE) alternative WAN VAE-s: faster and less VRAM, are now working in native WF-s in ComfyUI

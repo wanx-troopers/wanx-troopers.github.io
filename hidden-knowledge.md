@@ -2,7 +2,9 @@
 
 ## 2025.12.03
 
-[Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) contains `Wan Video Prompt Extender` node; it uses [Qwen2.5](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Qwen) 3B or 7B from KJ HF
+[Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) contains `Wan Video Prompt Extender` node; it uses [Qwen2.5](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Qwen) 3B or 7B from KJ HF.
+
+`LoadLatent` node from ComfyUI native can be connected to `samples` input of `WanVideo Sampler` - latents can be saved to disc and loaded from disk.
 
 ## 2025.12.01 - VRAM Saver
 

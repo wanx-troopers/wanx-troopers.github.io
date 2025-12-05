@@ -1,5 +1,18 @@
 # SVI
 
+## 2025.12.04
+
+[Version 2](https://huggingface.co/vita-video-gen/svi-model/tree/main/version-2.0) of SVI lora has been released.
+Apparently the new LoRA is similar in function to SVI-shot.
+It accepts 1st frame and one reference image.
+Wan 2.1 flavor and Wan 2.2 high/low flavors are provided.
+Experiements show that while on the one hand the LoRA seems to have solved frozen motion issue presented by SVI-shot version 1.
+However overall quality doesn't seem to be that great.
+
+Kijai's conversion for use in Comfy: [link](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/LoRAs/Stable-Video-Infinity/v2.0/SVI_Wan2.1-I2V-14B_lora_v2.0_rank_128_fp16.safetensors).
+
+## Summary
+
 SVI is a set of LoRas for Wan 2.1 480p I2V model
 * original .safetensor-s in fp32 [HF:vita-video-gen/svi-model](https://huggingface.co/vita-video-gen/svi-model/tree/main/version-1.0),
 * Kijai's conversion to fp16 [HF:Kijai/WanVideo_comfy:LoRAs/Stable-Video-Infinity](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Stable-Video-Infinity)

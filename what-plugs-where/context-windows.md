@@ -26,6 +26,10 @@ This way of generation was useful in AnimateDiff days. Since samplers may still 
 However no good examples have been found where setting this option to values other than 1 is useful with Wan models since the result is very noisy and blurry.
 The only case when it might be remotely useful is running inital high noise steps of generation, and even that is just a conjecture.
 
+Note: actually in the wrapper node the the lowest value `context_stride` can be set to is 4.
+This is normal and means working on immediatley adjacent frames as described above.
+Thus the advice is to keep the value set to 4 in wrapper.
+
 [Conditioning](../conditioning.md) presents its own challenge in relation to `Context Windows`.
 Do we apply the same conditioning to all positions of the context window?
 Do we partition conditioning into sections and use the matching section for each context window?

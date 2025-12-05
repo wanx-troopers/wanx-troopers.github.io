@@ -13,6 +13,11 @@ Example of it being used in a LongCat wf: [extend-with-overlap](screenshots/exte
 
 ## Z-Image-Turbo
 
+### 2025.12.04
+
+`Josiefied-Qwen3-4B-Instruct-2507-gabliterated-v2` (and potentially `Goekdeniz-Guelmez/Josiefied-Qwen3-14B-abliterated-v3`)
+fine-tunes of Qwen3 have been suggested to generate prompts to Z-Image.
+
 ### 2025.12.03
 
 [Z-Image-Turbo-Fun-Controlnet-Union](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union)

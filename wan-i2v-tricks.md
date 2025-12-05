@@ -120,11 +120,18 @@ The trick was to place the reference into starting frame and issue a prompt like
 
 ## Painter I2V
 
+### 2025.12.04
+
+`augment_empty_frames` parameter added to `WanVideo ImageToVideo Encode` node in [Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
+implementing the experimental latent noise manipulation technique pioneered by `Painter I2V` node
+
 [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments) now contains
 `WanEx_PainterMotionAmplitude` which allows to do `Painter I2V`-style
 trick in regular workflows, e.g. it makes `Painter I2V` approach modular.
 The node generates positive/negative conditioning that can be connected to sampler nodes using I2V family
 of Wan image generation models.
+
+### Painter I2V Summary
 
 `princepainter/PainterI2V` node attracted attention and sparked research. It exists into two versions
 - [Native](https://github.com/princepainter/ComfyUI-PainterI2V)
