@@ -61,3 +61,4 @@ Advice on switching from hight noise to low noise model with WAN 2.2
 ## Alternative Tools
 
 `Get Sigma` from [BlenderNeko/ComfyUI_Noise](https://github.com/BlenderNeko/ComfyUI_Noise)
+`BetaSamplingScheduler` more control over Beta sigma schedule

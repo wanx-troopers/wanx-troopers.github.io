@@ -13,10 +13,31 @@ Example of it being used in a LongCat wf: [extend-with-overlap](screenshots/exte
 
 ## Z-Image-Turbo
 
-### 2025.12.04
+### 2025.12.05
 
-`Josiefied-Qwen3-4B-Instruct-2507-gabliterated-v2` (and potentially `Goekdeniz-Guelmez/Josiefied-Qwen3-14B-abliterated-v3`)
-fine-tunes of Qwen3 have been suggested to generate prompts to Z-Image.
+Z-Image-Turbo consists of 3 parts
+
+- variant of Qwen3 LLM - prompt is passed through most of LLM layers and results are taken out after meaning has been encoded but before they were used to guess the next word
+- Z-Image-Turbo core - that's where image generation happens
+- VAE - converts results from latent space to pixel space
+
+[Scruffy](https://huggingface.co/scruffynerf) has suggested using alternative flavor of Qwen3 and an alternative VAE in order to improve Z-Image-Turbo results.
+His currently preferred LLM is
+[Josiefied-Qwen3-4B-Instruct-2507-gabliterated-v2](https://huggingface.co/Goekdeniz-Guelmez/Josiefied-Qwen3-4B-Instruct-2507-gabliterated-v2)
+and his currently preferred VAE is
+[G-REPA/Self-Attention-W2048-3B-Res256-VAEFLUX-Repa0.5-Depth8-Dinov2-B_100000 VAE](https://huggingface.co/AlekseyCalvin/Custom_VAE-Z-image-FLUX.1-by-G-REPA).
+
+Apparently these can be downloaded separately.
+Scruffy has also assembled all three components into a all-in-one 33 Gb `.safetensors` which he called [JoZiMagic](https://huggingface.co/scruffynerf/JoZiMagic).
+
+Note: had we not been limited by VRAM on present generation of consumer video cards we could have used a bigger version of LLM, namely
+`Goekdeniz-Guelmez/Josiefied-Qwen3-14B-abliterated-v3`. Note: Z-Image-Turbo uses Flux.1 style VAE. Flux.2 VAE meanwhile is apache licensed
+and likely to get used for new models in the future.
+
+Mysterious "shift" formula from Scruffy:
+> (<base_shift> - <max_shift>) / (256 - ((<image_width> * <image_height>) / 256)) * 3840 + <base_shift>
+
+Decrease in image quality and composition has been reported above 2048 resolution.
 
 ### 2025.12.03
 

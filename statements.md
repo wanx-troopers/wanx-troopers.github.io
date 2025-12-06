@@ -1,5 +1,9 @@
 # Statements
 
+## 2025.12.05
+
+"The Face Detailer in the Impact Pack does work with Qwen if you set the sampler to *res_3s* and the scheduler to *bong_tangent.* No more 5D error at the end of the render"
+
 ## 2025.12.01
 
 > for maximum speed, assuming compile works, use the 'comfy' rope function, and enable the `allow_unmerged_lora_compile` if the loras are not merged

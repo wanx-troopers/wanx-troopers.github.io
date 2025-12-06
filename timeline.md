@@ -1,6 +1,12 @@
 # News
 
-2025.12.04 Version 2.0 of [SVI-shot](svi.md#20251204) appears disappointing. Both Wan 2.2 and 2.1 are supported and motion is better but quality of generated video seems poor.
+2025.11.05 [Hunyuan 1.5](hunyuan.md) 5-10sec/24fps videos released 2025.11.21 received distilled 480 model version (no 720 version yet)
+
+2025.12.05 [Z-Image-Turbo](extra-tools.md#z-image-turbo) tested with "Gabliterated" version of Qwen3-4B (which is the model's CLIP) and an alternative VAE
+
+2025.12.05 A series of image generation models under LongCat brand have been released; attention of community remains on Z-Image-Turbo which is viewed as superior
+
+2025.12.05 Version 2.0 of [SVI-shot](svi.md#20251204) combining SVI-shot (reference) and SVI-flim (5 frames overlap) is being tested; both Wan 2.2 and 2.1 are supported
 
 2025.12.04 `sageattn_ultravico` option added to [Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) supporting one of the newer [RifleX](https://github.com/thu-ml/DiT-Extrapolation)
 methods to generate videos with a greater number of frames without looping; a not so bad result has been demostrated with [Kandinsky-5](k5.md) but results with Wan did not look particularly good.
@@ -19,8 +25,6 @@ the model is likened to and compared with z-image-turbo
 2025.11.30 [Steady Dancer](wan-animate-mocha-steady-dancer.md#steady-dancer) support merged to ComfyUI `main`
 
 2025.11.29 [GH:ModelTC/ComfyUI-LightVAE](https://github.com/ModelTC/ComfyUI-LightVAE) alternative WAN VAE-s: faster and less VRAM, are now working in native WF-s in ComfyUI
-
-2025.11.21 [Hunyuan](hunyuan.md) 1.5 generating 5-10 sec 24fps videos released: [link](https://x.com/TencentHunyuan/status/1991717687706398828)
 
 2025.11.20 Community is experimenting with Facebook's [SAM3](auxiliary.md#sam3) segmentation/depth map model
 

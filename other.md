@@ -1,5 +1,8 @@
 # Other Things to Check Out
 
+* [GH:huchenlei/ComfyUI-layerdiffuse](https://github.com/huchenlei/ComfyUI-layerdiffuse) semi-transparent images with Comfy?
+* [Wan 2.1 T2V Transparent Background](https://github.com/WeChatCV/Wan-Alpha)
+
 * [GH:scottmudge/ComfyUI-NAG](https://github.com/scottmudge/ComfyUI-NAG) ComfyUI NAG that has reportedly been made to work with a lot of models as of Dec 2025
 * [GH:Jonseed/ComfyUI-Detail-Daemon](https://github.com/Jonseed/ComfyUI-Detail-Daemon) tool to adjust sigmas while image generation to improve details
 
@@ -22,7 +25,6 @@
 * [ComfyUI-Wan22FMLF](https://github.com/wallen0322/ComfyUI-Wan22FMLF) node to implement Wan 2.2 FMLF - first, middle, last frame
 * [SVI](https://github.com/vita-epfl/Stable-Video-Infinity) continuation method for I2V; I2V gens chained, with 5 start frames
 
-* [Wan 2.1 T2V Transparent Background](https://github.com/WeChatCV/Wan-Alpha)
 * [LanPaint](https://github.com/scraed/LanPaint)
 * [Low-VRAM-High-RAM-Ostris-AI-Toolkit-Lora-Training](https://x.com/ostrisai/status/1975642220960072047)
 * Unianimate - apparently that is a LoRa?
