@@ -1,8 +1,6 @@
-# Auxiliary Tools
+# Segmentation
 
-## Segmentation
-
-### Sam3
+## Sam3
 
 Community is experimenting with SAM3 model from Facebook. The model provides several capabilities
 

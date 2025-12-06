@@ -45,23 +45,18 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 
 ## Misc
 
+* [Extra Tools](extra-tools.md)
 * [Upscalers](upscalers.md)
 * [Tricks](tricks.md)
 * [Statements](statements.md)
+* [Recommended Software Versions](versions.md)
 
-
-## Experimental
+## Less Common
 
 * [Lynx](lynx.md)
 * [Ovi](ovi.md)
 * [Other](other.md)
 
-## P.S.
-
-* [Extra Tools](extra-tools.md)
-* [Auxiliary Tools](auxiliary.md)
-* [Tricks](tricks.md)
-* [Recommended Software Versions](versions.md)
 
 Content here is licensed under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode.en).
 All statements on this site reflect our opinions and editorial decisions.
