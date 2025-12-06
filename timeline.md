@@ -28,11 +28,11 @@ the model is likened to and compared with z-image-turbo
 
 2025.11.20 Community is experimenting with Facebook's [SAM3](auxiliary.md#sam3) segmentation/depth map model
 
-2025.11.20 New LoRa-s to supply subjects/objects and background all in 1st frame image for Wan 2.2 I2V: [FFGO](wan-i2v-tricks.md#ffgo)
+2025.11.20 New LoRa-s to supply subjects/objects and background all in 1st frame image for Wan 2.2 I2V: [FFGO](wan-i2v-advanced.md#ffgo)
 
-2025.11.16 Kijai implemented [TimeToMove](wan-i2v-tricks.md#timetomove) mockup in wrapper
+2025.11.16 Kijai implemented [TimeToMove](wan-i2v-advanced.md#timetomove) mockup in wrapper
 
-2025.11.16 Community is exploring [Painter I2V](wan-i2v-tricks.md#painter-i2v) and [PainterLongVideo](wan-i2v-tricks.md#painterlongvideo) nodes for more dynamic and longer generations with Wan 2.2 I2V
+2025.11.16 Community is exploring [Painter I2V](wan-i2v-advanced.md#painter-i2v) and [PainterLongVideo](wan-i2v-advanced.md#painterlongvideo) nodes for more dynamic and longer generations with Wan 2.2 I2V
 
 2025.11.15 [drozbay](hidden-knowledge.md#drozbay) has created [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments) repository dubbed `WanEx`; it contains his nodes
 for I2V and continuations with [HuMo](humo.md), using [SVI-shot](svi.md#svi-shot) and for building a native [BindWeave](bindweave.md) WF

@@ -5,6 +5,13 @@
 >  found the biggest benefit to running z-image came from having qwen 8b instruct write the prompts;
 > 4b instruct is a close second
 
+> Can anyone suggest the best k-sampler settings for realistic outputs?
+> Euler ancestral and bong tangent are a killer combo. Possibly er_sde & sgm_uniform
+
+ZIT is said to have "ruts" - tendency for repetition: "ruts are medium shot, certain people, certain angles" - because it is distilled.
+
+> using a model like Josie that isn't 'the same old', causes Zimage to hit 'less' ruts.  It's reintroducing triggering tokens finding remaining less used paths that aren't gone but are avoided in favor of the rut.
+
 ## 2025.12.05
 
 Z-Image-Turbo consists of 3 parts
@@ -27,7 +34,7 @@ Note: had we not been limited by VRAM on present generation of consumer video ca
 and likely to get used for new models in the future.
 
 Mysterious "shift" formula from Scruffy:
-> (<base_shift> - <max_shift>) / (256 - ((<image_width> * <image_height>) / 256)) * 3840 + <base_shift>
+> (\<base_shift\> - \<max_shift\>) / (256 - ((\<image_width\> * \<image_height\>) / 256)) * 3840 + \<base_shift\>
 
 Decrease in image quality and composition has been reported above 2048 resolution.
 

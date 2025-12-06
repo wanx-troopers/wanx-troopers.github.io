@@ -1,9 +1,14 @@
-# What Plugs Where
+# Wan VACE
 
-A big table analysing workflows available online to take note of which embeds node can be used with which model (.safetensors).
+This page collects initial knowledge on constructing Wan VACE workflows.
 Very similar workflows apply both to VACE 2.1 and Wan 2.2 Fun Vace.
 
-## VACE
+VACE is an additional AI model that works in tandem with Wan T2V.
+VACE 2.1 consists of a single `.safetensors` file.
+VACE 2.2 - fully named Fun Vace 2.2 - consists of two `.safetensors` files - high and low -
+which are used together with high and low Wan 2.2 T2V `.safetensor` files respectively.
+
+## Facts
 
 > To do vace inpainting before you need masks set but also the mask reflected on the input at 127 gray
 
@@ -14,9 +19,9 @@ To give WAN more creative freedom while still using VACE set `vace_end_percent` 
 This will allow final steps to do sampling without VACE control after VACE has established overall shape of the video.
 Presently exposed on wrapper node but not on native node.
 
-### Native
+## Native
 
-#### VACE [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
+### VACE [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
 
 * `Diffusion Model Selector` (VACE safetensors; -> `extra_state_dict` input of `Diffusion Model Loader KJ`)
 * `Diffusion Model Loader KJ` (Wan 2.2 .. T2V ..)
@@ -27,7 +32,7 @@ Supplementary; chain after model loader
 * `TorchCompileModelWanVideo`
 * `Patch Sage Attention KJ`
 
-#### Embeds In Native
+### Embeds In Native
 
 | Embeds Node | Inputs | Model | Bonuses |
 | :-- | :-- | :-- | :-- |
@@ -39,9 +44,9 @@ Bonus nodes: `Create Video`, `Save Video`, `Points Editor`, `(Down)Load SAM2Mode
 
 Not entirely clear if inpainted area needs to be gray-ed out in `control video` input to `WanVaceToVideo`
 
-### Wrapper
+## Wrapper
 
-#### VACE [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
+### VACE [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
 
 * `WanVideo VACE Module Select` (Wan2_2_Fun_VACE..; -> `vace_input` of `VanVideo Model Loader`)
 * `WanVideo Lora Select Multi` (say lightx2v_T2V_14B_ .. v2..; -> `lora` input of `VanVideo Model Loader`)
@@ -60,7 +65,7 @@ Least `WanVideo Sampler` node grows visually too tall groups of parameters have 
 
 * `WanVideo Context Options` -> `context_options` input; [details](context-windows.md)
 
-#### Embeds In Wrapper
+### Embeds In Wrapper
 
 | Pre Embeds Node| Pre Embeds Inputs -> Output | Embeds Node | Input from Pre / Embeds Inputs -> Output | Model | WanVideo Sampler Input |
 | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -70,7 +75,7 @@ Least `WanVideo Sampler` node grows visually too tall groups of parameters have 
 
 Note: ? denotes parts which are not clear enough.
 
-### WanVideo VACE Start To End Frame
+## WanVideo VACE Start To End Frame
 
 * inputs: `start_image`, `end_image`, `num_frames`, `control_images` (for depth, pose, combined depth/pose etc), and `inpaint_mask`
 * outputs: `images`, `masks`
@@ -88,7 +93,7 @@ More bounuses:
 * `Image Preview`
 * `Mask Preview`
 
-##### Wiring
+### Wiring
 
 ```
 WanVideo VACE Start To End Frame --------------------> | Replace Images  |
@@ -98,7 +103,7 @@ LoadImage  ---> ResizeImage ---> RepeatImageBatch ---> |                 |     W
 SolidMask  ---> RepeatMask --------------------------> |                 |
 ```
 
-### Video Continuation Generator
+## Video Continuation Generator
 
 `Video Continuation Generator` from [banodoco/Steerable-Motion](https://github.com/banodoco/Steerable-Motion) can be used instead of `WanVideo Start To End Frame` to prepare input for `WanVideo VACE Encode`.
 
@@ -116,12 +121,9 @@ Drozbay's [WanVaceAdvanced](https://github.com/drozbay/ComfyUI-WanVaceAdvanced) 
 
 Here is a slightly non-traditional way to build masks. Please note that actual value 0 vs 1 may be opposite between wrapper and native workflows.
 
-![build-masks-manually](../screenshots/build-masks-manually.webp)
+![build-masks-manually](screenshots/build-masks-manually.webp)
 
-## 3rd Party
+## See Also
 
-## [Wan Animate](../wan-animate-mocha-steady-dancer.md#what-plugs-where-wan-animate) Section
+[Wan T2V Advanced](wan-t2v-advanced.md)
 
-## [Infinite Talk](../infinite-talk.md) Section
-
-## [Ovi](../ovi.md) Section

@@ -61,7 +61,7 @@ It appears uncertain how soon such support could arrive, given the busy release 
 > which loras with holocine?
 >s distil 0.15 T2V
 
-> Holocine + [FFGO](wan-i2v-tricks.md#ffgo) makes it I2V
+> Holocine + [FFGO](wan-i2v-advanced.md#ffgo) makes it I2V
 
 > You can use VACE w/ Holocine....and it will do up to 249 frames
 

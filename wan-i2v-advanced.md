@@ -1,4 +1,4 @@
-# Wan I2V Tricks
+# Wan I2V Advanced
 
 In Nov 2025 community started exploring hidden potential behind Wan 2.2 I2V models.
 This page collects insights into non-obvious workflows.
@@ -153,7 +153,7 @@ Same GitHub account, now an FLF node: [link](https://github.com/princepainter/Co
 
 [princepainter/ComfyUI-PainterLongVideo](https://github.com/princepainter/ComfyUI-PainterLongVideo) from that same authrow is being played with.
 Expert conclusion however is that the node is either simply an automation I2V extension via last frame
-or possibly also [Painter I2V](wan-i2v-tricks.md#painter-i2v) on top of it.
+or possibly also [Painter I2V](wan-i2v-advanced.md#painter-i2v) on top of it.
 
 > looking closer at PainterLongVideo and the code just ...
 > only one part that attempts to use multiple frames from the previous video, and it feeds that into

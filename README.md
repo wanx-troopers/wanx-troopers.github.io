@@ -14,11 +14,10 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [Sigmas](sigmas.md)
 * [Control Techniques](control.md)
 * [Wan Masking](wan-masking.md)
-* [Context Windows](what-plugs-where/context-windows.md)
-* [Wan I2V Tricks](wan-i2v-tricks.md)
-* [Wan T2V VACE Tricks](wan-t2v-vace-tricks.md)
+* [Wan T2V VACE](wan-vace.md)
+* [Wan I2V Advanced](wan-i2v-advanced.md)
+* [Wan T2V Advanced](wan-t2v-advanced.md)
 * [Extensions](extensions.md)
-* [SVI](svi.md)
 
 ## Models
 
@@ -31,10 +30,14 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [BindWeave](bindweave.md)
 * [Kandinsky-5](k5.md)
 * [Hunyuan](hunyuan.md)
+* [Ovi](ovi.md)
 
-## What Plugs Where
+## Models+
 
-* [What Plugs Where](what-plugs-where/what-plugs-where.md)
+* [Lynx](lynx.md)
+* [Z-Image-Turbo](extra-tools/z-image.md)
+* [Qwen Image Edit](extra-tools/qwen-image.md)
+* [Flux 2](extra-tools/flux.md)
 
 ## Loras
 
@@ -42,21 +45,17 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [LoRa-s Part I](loras/part-01.md)
 * [LoRa-s Part II](loras/part-02.md)
 * [Both Ways](loras/both-ways.md)
+* [SVI](svi.md)
 
 ## Misc
 
-* [Extra Tools](extra-tools.md)
+* [Segmentation](extra-tools/segmentation.md)
 * [Upscalers](upscalers.md)
+* [Extra Tools](extra-tools.md)
+* [Recommended Software Versions](versions.md)
 * [Tricks](tricks.md)
 * [Statements](statements.md)
-* [Recommended Software Versions](versions.md)
-
-## Less Common
-
-* [Lynx](lynx.md)
-* [Ovi](ovi.md)
 * [Other](other.md)
-
 
 Content here is licensed under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode.en).
 All statements on this site reflect our opinions and editorial decisions.

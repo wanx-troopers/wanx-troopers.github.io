@@ -1,6 +1,6 @@
-# Wan I2V T2V / VACE Tricks
+# Wan T2V Advanced
 
-Note: [What Plugs Where](what-plugs-where/what-plugs-where.md) page contains some information on how native and wrapper workflows for VACE are constructed.
+Note: [Wan VACE](wan-vace.md) page contains initial information on constructing Wan VACE workflows, both native and wrapper.
 This page contains additional/advanced examples.
 
 [drozbay](hidden-knowledge.md#drozbay) has shared the following advanced VACE workflows relying on his
