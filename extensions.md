@@ -49,6 +49,15 @@ Degradation takes two forms:
 to preserve continuity of motion - and this doesn't help with character likeness problems. So right now it seems that we need to choose between countering character
 likenes problems and countering burnout.
 
+It is believed that degradation might be happing as a result of converting data from pixel to latent space and back via VAE too many times.
+An idea that often comes up then is to avoid roundtripping and just take last several latents from generation of the previous segment
+and use them to kick-start generation of the next segment. This will not work however.
+
+This is because the 1st frame in sequence is encoded differently to the rest in WAN latent space.
+It takes up 4x as much bytes and subsequent frames use it as a point of reference.
+If we simply chop off the last 4 latents from the previous generation (and this is 16 frames)
+they will not constitute a correctly encoded sequence of frames in WAN latent encoding.
+
 ## Clip Vision
 
 There is an easy way to determine if a model is using clip vision embeds.
