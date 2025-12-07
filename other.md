@@ -57,6 +57,6 @@
 
 * [https://civitai.com/models/2113025/cinematic-fast-cutting-previously-quick-cuts](https://civitai.com/models/2113025/cinematic-fast-cutting-previously-quick-cuts) only for wan high noise
 * [https://huggingface.co/neph1/cinematic_quick_cuts_wan](https://huggingface.co/neph1/cinematic_quick_cuts_wan) multi-scene LoRa
-* [https://huggingface.co/neph1/hard_cut_wan_lora](https://huggingface.co/neph1/hard_cut_wan_lora) cut LoRa
+* [https://huggingface.co/neph1/hard_cut_wan_lora](https://huggingface.co/neph1/hard_cut_wan_lora) cut LoRa ([same](https://discord.com/channels/1076117621407223829/1342763350815277067/1446907437717127178) ?)
 
 ## Promising But Not Immediately Useful

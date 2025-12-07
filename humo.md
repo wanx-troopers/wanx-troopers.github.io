@@ -1,6 +1,6 @@
 # HuMO
 
-## Drozbay
+## Drozbay Continuation
 
 2025.11.15 [drozbay](https://github.com/drozbay) has shared `droz_wanexperiments_svishot_with_humo_v1.1` worflow
 ![droz_wanexperiments_svishot_with_humo_v1.1](workflows/droz_wanexperiments_svishot_with_humo_v1.1.png)
@@ -19,6 +19,10 @@ Both of these actions - patching HuMo model code and correct formatting of condi
 implemented in this workflow through the use of `WanEx I2VCustomEmbeds` node which 
 [drozbay](hidden-knowledge.md#drozbay) has shared via the following new code repository:
 [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments)
+
+2025.11.29 Drozbay has shared an additional HuMo continuation workflow
+![drozbay_HuMo_contextWindows](workflows/drozbay_HuMo_contextWindows.webp)
+[drozbay_HuMo_contextWindows](workflows/drozbay_HuMo_contextWindows.webp)
 
 See also: [Drozbay's Study](conditioning.md#drozbays-study) on composing and examining embeds.
 

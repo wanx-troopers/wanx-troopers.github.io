@@ -52,3 +52,4 @@ WIP wf from him: [droz-dancing-man](screenshots/droz-dancing-man.png)
 - [Video Blending From Fragments](extra-tools.md#video-blending-from-fragments)
 - [Context Windows](what-plugs-where/context-windows.md)
 - [Native Context Windows PR](what-plugs-where/context-windows.md#native-context-windows-pr)
+- [Trent Nodes](extra-tools.md#trent-nodes) for a node assisting with VACE keyframing

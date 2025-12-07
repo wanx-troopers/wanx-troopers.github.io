@@ -6,6 +6,10 @@
 
 `LoadLatent` node from ComfyUI native can be connected to `samples` input of `WanVideo Sampler` - latents can be saved to disc and loaded from disk.
 
+Running high with CFG 3.5/3.5/3.5 improves prompt adherence compared to 3.5/1/1.
+
+Comfy native contains `Empty Audio` node.
+
 ## 2025.12.01 - VRAM Saver
 
 > Wan VAE can use way less VRAM in wrapper if you offload the cache to CPU, makes it also a lot slower, but still beats tiled VAE
@@ -78,7 +82,7 @@ His nodes discussed on this website reside mainly in the following code reposito
 List of Drozbay's contributions discussed on this website:
 
 - [Drozbay's Study](conditioning.md#drozbays-study): nodes in `WanEx` to compose/examine [Bindweave](bindweave.md) and advanced I2V embeds
-- [HuMo - Drozbay](humo.md#drozbay): HuMo continuation workflow
+- [HuMo - Drozbay](humo.md#drozbay-continuation): HuMo continuation workflow
 - [SVI-shot](svi.md#svi-shot): `WanEx` contains `WanEx I2VCustomEmbeds` which works well with SVI-shot
 - [Drozbay's Impact Pack SEGS Detailer For Wan Video And VACE](upscalers.md#drozbays-impact-pack-segs-detailer-for-wan-videoa-and-vace)
 - [Painter I2V Modular Replacment](wan-i2v-advanced.md#painteri2v) `WanEx` contains `WanEx_PainterMotionAmplitude` node which replicates action of `Painter I2V` node in a modular manner

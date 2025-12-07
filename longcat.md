@@ -1,5 +1,11 @@
 # LongCat
 
+## 2025.12.05
+
+Now the name "LongCat" somewhat confusingly referrs not only to a video ai generation model but also to an image generation and an image editing models.
+Image models failed to gain a lot of traction and thus are not covered on this website beyond a brief mention in [Timeline](timeline.md)
+and in [Other Image Models](extra-tools/other-image-models.md).
+
 ## 2025.10.26
 
 Resolutions supported?

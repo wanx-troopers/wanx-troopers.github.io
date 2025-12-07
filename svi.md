@@ -1,19 +1,32 @@
-# SVI
+﻿# SVI
 
 ## 2025.12.04
 
-Version 2 of SVI lora for VAN 2.1 and 2.2 released:
+Version 2 of SVI lora for WAN 2.1 and 2.2 released:
 - Kijai's [repackaging](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Stable-Video-Infinity/v2.0)
 - [original](https://huggingface.co/vita-video-gen/svi-model/tree/main/version-2.0) (not usable in ComfyUI)
 
-The new LoRa combines SVI-shot and SVI-film functionality:
-- runs with I2V models
+Wan 2.1 version of this LoRa combines SVI-shot and SVI-film functionality:
+- runs with I2V model
 - of the 36 input channels which I2V models take input data in
   - 16 are as usual input noisy latents
   - 16 extra image channels: 5 initial frames + duplicates of the single reference image until the end
   - 4 extra mask channels: mask only initial 1 frame - which is very surprising 
 
+Wan 2.2 version 2 of SVI lora is the new incarnation of SVI-shot: it supports 1 motion frame only.
+
+[Explanation](https://github.com/kijai/ComfyUI-WanVideoWrapper/issues/1718#issuecomment-3620023495) from the makers of SVI 2.0.
+
 ComfyUI testing ongoing.
+
+[Drozbay](hidden-knowledge.md#drozbay) has shared a humongous workflow which allowed generation of a 29sec long video with consistent character, no burn-out and smooth motion.
+The workflow is combining SVI 2.0 with hard-cut LoRA and in the demo case did not require any editing outside of Comfy:
+[drozbay_svi20_wan22](workflows/drozbay_svi20_wan22.png). "Magical" control over reference strength for SVI: [drozbay_svi_ref_strength.webp](screenshots/drozbay_svi_ref_strength.webp).
+
+> 3 overlap frames seems to be the highest I can go with no artifacts ... could probably use SVI 2.0 for Wan 2.1 for Wan 2.2 LN
+
+Simpler work-in-progress WF with SVI 2.0 for Wan 2.2 High Noise LoRA at 0.5 strength: [h_svi2_wan22_HasRnD.json](workflows/h_svi2_wan22_HasRnD.json).
+> WF uses 5 start frames but the correct way apparently is to use 1 start frame... so feel free to experiment
 
 ## Summary
 

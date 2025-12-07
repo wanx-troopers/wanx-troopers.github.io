@@ -34,7 +34,7 @@ See also: [Drozbay's Study](conditioning.md#drozbays-study) for additional detai
 
 ## HuMo Last Image to First Image Extensions
 
-[Drozbay's WF](humo.md#drozbay)
+[Drozbay's WF](humo.md#drozbay-continuation)
 
 ## Degradation
 

@@ -1,4 +1,20 @@
-# Statements
+﻿# Statements
+
+## 2025.12.06
+
+Image scaling nodes:
+
+- [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) has a batch resize node and it can run on GPU;
+- rgtree
+- Comfy native now has `Upscale Image`
+
+Advice on investigating a memory leak:
+
+> did you run with --disable-all-custom-nodes?
+
+> for some reason lanczos is still the best anti-alias method;
+> Mitchell-Netravali can be better Or B-spline for smooth;
+> Lanczos is close to optimal though
 
 ## 2025.12.05
 

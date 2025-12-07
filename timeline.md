@@ -1,12 +1,15 @@
 # News
 
+2025.12.06 [Kandinsky-5](k5.md) Pro video AI model (5sec I2V, 5sec T2V, 10sec T2V) released 2025.11.14 is now supported in ComfyUI native thanks to Kijai's contribution
+
+2025.12.06 A [number](extra-tools/other-image-models.md) of image generation models have been released in December 2025 which failed to gain a lot of attention: 
+aquif-Image-14B, LongCat (now all of image/image edit/video), Ovis 7B
+
 2025.11.05 [Hunyuan 1.5](hunyuan.md) 5-10sec/24fps videos released 2025.11.21 received distilled 480 model version (no 720 version yet)
 
 2025.12.05 [Z-Image-Turbo](extra-tools.md#z-image-turbo) tested with "Gabliterated" version of Qwen3-4B (which is the model's CLIP) and an alternative VAE
 
-2025.12.05 A series of image generation models under LongCat brand have been released; attention of community remains on Z-Image-Turbo which is viewed as superior
-
-2025.12.05 Version 2.0 of [SVI-shot](svi.md#20251204) combining SVI-shot (reference) and SVI-flim (5 frames overlap) is being tested; both Wan 2.2 and 2.1 are supported
+2025.12.05 Version 2.0 of [SVI-shot](svi.md#20251204) combining SVI-shot (reference) and SVI-flim (5 frames overlap) released for Wan 2.1; also Wan 2.2 Version 2.0 only supporting SVI-shot functionality
 
 2025.12.04 `sageattn_ultravico` option added to [Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) supporting one of the newer [RifleX](https://github.com/thu-ml/DiT-Extrapolation)
 methods to generate videos with a greater number of frames without looping; a not so bad result has been demostrated with [Kandinsky-5](k5.md) but results with Wan did not look particularly good.
@@ -15,9 +18,6 @@ methods to generate videos with a greater number of frames without looping; a no
 
 2025.12.03 Flux.2 Dev released under non-commerical license earlier on 2025.11.25 to enthusiasm of some and unhappiness of others (high VRAM usage, long generations)
 has received a ControlNet [model](https://huggingface.co/alibaba-pai/FLUX.2-dev-Fun-Controlnet-Union); status of integration into ComfyUI unknown
-
-2025.12.02 Community started experimenting with 7B Ovis image generation model : [GH](https://github.com/AIDC-AI/Ovis-Image), [HF](https://huggingface.co/AIDC-AI/Ovis-Image-7B);
-the model is likened to and compared with z-image-turbo
 
 2025.11.30 Kijai's [commit](https://github.com/kijai/ComfyUI-WanVideoWrapper/commit/99c3978da4a55a03249669bef5647d7dbda7a5d1) to [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
 "Reduce peak VRAM usage when not using torch.compile (and some even with it)"
@@ -41,8 +41,6 @@ for I2V and continuations with [HuMo](humo.md), using [SVI-shot](svi.md#svi-shot
 please see [HuMo](humo.md) section
 
 2025.11.15 [BindWeave](bindweave.md) nodes merged to `main` branch in [GH:kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
-
-2025.11.14 [Kandinsky-5](k5.md) Pro model weights made public: 5sec I2V, 5sec T2V, 10sec T2V; no implementation in ComfyUI yet allowing to run on consumer hardware
 
 2025.11.11 Ovi 1.1 capable of 10sec video+sound generation weights have been upoloaded to HuggingFace
 

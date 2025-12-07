@@ -53,8 +53,10 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [Upscalers](upscalers.md)
 * [Extra Tools](extra-tools.md)
 * [Recommended Software Versions](versions.md)
+* [OOM Talk](oom-talk.md)
 * [Tricks](tricks.md)
 * [Statements](statements.md)
+* [Other Image Models](extra-tools/other-image-models.md)
 * [Other](other.md)
 
 Content here is licensed under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode.en).
