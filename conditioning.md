@@ -75,6 +75,11 @@ Clip vision inputs are passed in to separate layers, they are not in I2V conditi
 
 VACE conditioning is a completely parallel set of blocks.
 
+## WanVideo Preview Embeds
+
+[Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) has `WanVideo Preview Embeds` which provides
+functionality similar to `WanEx Image Embeds Preview` from [WanEx](https://github.com/drozbay/WanExperiments).
+
 ## Drozbay's Study
 
 [drozbay](hidden-knowledge.md#drozbay) has shared the following workflow
