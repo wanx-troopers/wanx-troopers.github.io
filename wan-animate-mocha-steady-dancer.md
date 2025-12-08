@@ -19,7 +19,7 @@ Goals similar to WanAnimate.
 > token replacement [means] set timestep of next 2 frames after the reference frame to 0 to avoid them changing too much from the init;
 > token replace is only used when continuing from previous frames
 
-Kijai's adaptation of [data](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/OneToAllAnimation), 38Gb.
+Kijai's adaptations: [FP16](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/OneToAllAnimation) 38Gb, [FP8](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main/OneToAllAnimation).
 Kijai's code for now in [onetoall](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/onetoall) branch of Wrapper repo.
 Test [workflow](workflows/kj_WanToAllAnimation_test.json), also needs nodes from [kijai/ComfyUI-WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess).
 

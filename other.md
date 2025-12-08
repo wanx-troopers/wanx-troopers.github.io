@@ -1,5 +1,7 @@
 # Other Things to Check Out
 
+* [GH:maybleMyers/H1111/tree/svi] non-ComfyUI way to generate videos using Wan models with SVI 2.0 LoRA-s
+
 * [GH:huchenlei/ComfyUI-layerdiffuse](https://github.com/huchenlei/ComfyUI-layerdiffuse) semi-transparent images with Comfy?
 * [Wan 2.1 T2V Transparent Background](https://github.com/WeChatCV/Wan-Alpha)
 
