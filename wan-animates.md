@@ -34,12 +34,16 @@ Makes of the model are using 576x1024 resolution in the examples.
 
 > ~15 mins on 4090 at 576x1024; with lightx2v 2 mins; tried 50 steps now but didn't really improve
 
+> the reference adherance suffers greatly from misaligned pose, and also some from lightx2v
+
 ## Wan Animate
 
 ### 2025.12.08
 
 `Pose Detection OneToAll Animation` node can be used with WanAnimate too if face points are disabled  
 ![pose_detection_onetoall_animation](screenshots/pose_detection_onetoall_animation.webp)
+
+One possible set of LoRA-s: [jf-wan-animate-loras](screenshots/jf-wan-animate-loras.webp).
 
 ### Summary
 

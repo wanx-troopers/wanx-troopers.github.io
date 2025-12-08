@@ -1,5 +1,13 @@
 # Context Windows
 
+## 2025.12.08
+
+There is reasonably hope that [drozbay](https://github.com/drozbay)'s changes in some time
+will get added to ComfyUI native.
+
+As of the present moment his latest and greatest code is [contextwin_vace_251208a](https://github.com/drozbay/ComfyUI/tree/contextwin_vace_251208a)
+branch on his Github.
+
 ## 2025.12.07
 
 PR [10975](https://github.com/comfyanonymous/ComfyUI/pull/10975) by Kijai has been merged into ComfyUI native.
@@ -9,6 +17,12 @@ PR [10975](https://github.com/comfyanonymous/ComfyUI/pull/10975) by Kijai has be
 - adds support for "freenoise" (???)
 
 Experimental options to retain "channel cond" from 1st window and some form of prompt travel are committed but commented out for now.
+
+## 2025.12.02
+
+> Q: context windows in native... currently the only way to assign prompts to different window regions is to use conditioning combine right? A: yes
+
+> The context window blends are almost invisible, especially with freenoise enabled
 
 ## Explanation
 
@@ -55,17 +69,7 @@ We are using VACE, is its conditioning handled correctly?
 And the list goes on and on.
 Implementing context windows is far from trivial and is an ongoing effort to make them useful in as many scenarios as possible.
 
-## 2025.12.02
-
-> Q: context windows in native... currently the only way to assign prompts to different window regions is to use conditioning combine right? A: yes
-
-## Native Context Windows PR
-
-PR is outstanding into ComfyUI native by Kijai: [10975](https://github.com/comfyanonymous/ComfyUI/pull/10975).
-PR promises significant upgrades to conditioning handling for Wan I2V and Hunyuan 1.5
-Checkout [contextwindows](https://github.com/kijai/ComfyUI/tree/contextwindows) branch in order to use the new code.
-
-> The context window blends are almost invisible, especially with freenoise enabled
+https://github.com/drozbay/ComfyUI/tree/contextwin_vace_251208a
 
 ## Earlier
 
