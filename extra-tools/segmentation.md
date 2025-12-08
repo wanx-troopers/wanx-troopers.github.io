@@ -16,3 +16,7 @@ Several ComfyUI implementations:
 - [GH:PozzettiAndrea/ComfyUI-SAM3DBody](https://github.com/PozzettiAndrea/ComfyUI-SAM3DBody) "They don't release VRAM quite as well as you'd expect. They work, but lack optimization"
 
 Sentiment: "crazy", "Sec4B still doing better"
+
+## Depth Anything
+
+> Anyone know why depthanything V3 looks like unadulterated garbage compared to V2?

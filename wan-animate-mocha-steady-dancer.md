@@ -21,9 +21,27 @@ Goals similar to WanAnimate.
 
 Kijai's adaptation of [data](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/OneToAllAnimation), 38Gb.
 Kijai's code for now in [onetoall](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/onetoall) branch of Wrapper repo.
-Test [workflow](workflows/kj_WanToAllAnimation_test.json).
+Test [workflow](workflows/kj_WanToAllAnimation_test.json), also needs nodes from [kijai/ComfyUI-WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess).
+
+> 2 modes, either it aligns the input pose to reference, or reference to input pose
+
+Long generations not yet implemented as of 2025.12.08 but once they are the model
+could become a lot better than WanAnimate: "WanAnimate degrades over time".
+
+Makes of the model are using 576x1024 resolution in the examples.
+
+> shift 7 with euler; when using lightx2v none of that really matters, just have to test and see what works
+
+> ~15 mins on 4090 at 576x1024; with lightx2v 2 mins; tried 50 steps now but didn't really improve
 
 ## Wan Animate
+
+### 2025.12.08
+
+`Pose Detection OneToAll Animation` node can be used with WanAnimate too if face points are disabled  
+![pose_detection_onetoall_animation](screenshots/pose_detection_onetoall_animation.webp)
+
+### Summary
 
 Two example workflows given in [Github:kijai/ComfyUI-WanVideoWrapper:example_workflows](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/main/example_workflows).
 Example workflows differ in pose detection tech they provide.

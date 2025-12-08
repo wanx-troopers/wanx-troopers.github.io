@@ -13,6 +13,9 @@ Both cfg and step distilled, allows generations in 4-12 steps.
 
 Note: "sr" in model names on [HF](https://huggingface.co/Comfy-Org/HunyuanVideo_1.5_repackaged/tree/main/split_files/diffusion_models) means "super resolution", e.g. upscaler
 
+> has anyone compared HunyuanVideo-1.5 with Wan 2.2?  Does HunyuanVideo-1.5 have any particular advantages?
+> Not even close; camera very often goes WEEEEEEEEEE. BYEEEE, if you dont prompt it; blurriness
+
 ## Summary
 
 Latest is version 1.5 up to 10 sec generations.

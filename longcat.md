@@ -4,6 +4,8 @@
 
 Test [workflow](workflows/longcat_test.json).
 
+LongCat had an issue with sage 1.0.6
+
 ## 2025.12.05
 
 Now the name "LongCat" somewhat confusingly referrs not only to a video ai generation model but also to an image generation and an image editing models.

@@ -1,6 +1,6 @@
 # News
 
-2025.12.07 Experimentation started with [One-to-All-Animation](wan-animate-mocha-steady-dancer.md#one-to-all-animation) similar to WanAnimate
+2025.12.08 Experimentation started with [One-to-All-Animation](wan-animate-mocha-steady-dancer.md#one-to-all-animation) similar to WanAnimate; Kijai has uploaded adapted fp16 and fp8 weights
 
 2025.12.07 Context Windows [PR](what-plugs-where/context-windows.md#20251207) merged to main branch in ComfyUI improving Context Windows support on native
 
