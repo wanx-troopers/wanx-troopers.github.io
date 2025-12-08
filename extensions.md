@@ -1,7 +1,7 @@
 # Extensions
 
 Wan 2.1 and 2.2 models are typically limited to around 5 seconds of generation.
-Some models have inherent capability to go beyond that but they need an external driving signal: [WanAnimate](wan-animate-mocha-steady-dancer.md), [InfiniteTalk](infinite-talk.md).
+Some models have inherent capability to go beyond that but they need an external driving signal: [WanAnimate](wan-animates.md#wan-animate), [InfiniteTalk](infinite-talk.md).
 An approach that remains mysterious to the maintainer of this website: [ContextOptions](what-plugs-where/context-windows.md).
 
 However there is a separate host of solutions.

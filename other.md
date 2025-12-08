@@ -1,5 +1,6 @@
 # Other Things to Check Out
 
+* [GH:westNeighbor/ComfyUI-ultimate-openpose-editor:issues-31](https://github.com/westNeighbor/ComfyUI-ultimate-openpose-editor/issues/31) issue about open poser node being broken to the point of ComfyUI crashing
 * [GH:maybleMyers/H1111/tree/svi] non-ComfyUI way to generate videos using Wan models with SVI 2.0 LoRA-s
 
 * [GH:huchenlei/ComfyUI-layerdiffuse](https://github.com/huchenlei/ComfyUI-layerdiffuse) semi-transparent images with Comfy?

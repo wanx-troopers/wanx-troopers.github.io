@@ -70,7 +70,7 @@ Checkout [contextwindows](https://github.com/kijai/ComfyUI/tree/contextwindows) 
 ## Earlier
 
 Enables batched video generation. Remain somewhat experimental. Known to work with the following models: 
-* [Wan Animate](../wan-animate-mocha-steady-dancer.md#wan-animate) ??
+* [Wan Animate](../wan-animates.md#wan-animate) ??
 * [MAGREF](../phantom-magref.md#magref) ??
 * ...
 
