@@ -14,6 +14,8 @@ This website doesn't go deep into details but aims to at least list them.
 
 > I call that distill look; but I agree zit looks less AI than other models
 
+A surprising match was found between `.safetensors` shared as Aquif and `Magic-Wan-Image-V1`.
+
 ## 2025.12.05
 
 While previously LongCat referred only to a video generation model now we also have image generation and editing models under the same name

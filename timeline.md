@@ -1,9 +1,13 @@
 # News
 
+2025.12.07 Experimentation started with [One-to-All-Animation](wan-animate-mocha-steady-dancer.md#one-to-all-animation) similar to WanAnimate
+
+2025.12.07 Context Windows [PR](what-plugs-where/context-windows.md#20251207) merged to main branch in ComfyUI improving Context Windows support on native
+
 2025.12.06 [Kandinsky-5](k5.md) Pro video AI model (5sec I2V, 5sec T2V, 10sec T2V) released 2025.11.14 is now supported in ComfyUI native thanks to Kijai's contribution
 
 2025.12.06 A [number](extra-tools/other-image-models.md) of image generation models have been released in December 2025 which failed to gain a lot of attention: 
-aquif-Image-14B, LongCat (now all of image/image edit/video), Ovis 7B
+LongCat (now all of image/image edit/video), Ovis 7B
 
 2025.11.05 [Hunyuan 1.5](hunyuan.md) 5-10sec/24fps videos released 2025.11.21 received distilled 480 model version (no 720 version yet)
 

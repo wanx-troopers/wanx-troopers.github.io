@@ -1,5 +1,17 @@
 # Context Windows
 
+## 2025.12.07
+
+PR [10975](https://github.com/comfyanonymous/ComfyUI/pull/10975) by Kijai has been merged into ComfyUI native.
+
+- "Fixes channel dim cond_concat slicing" Wan I2V models and [HunyuanVideo 1.5](../hunyuan.md)
+- HuMo audio conditioning correctly applied to context windows
+- adds support for "freenoise" (???)
+
+Experimental options to retain "channel cond" from 1st window and some form of prompt travel are committed but commented out for now.
+
+## Explanation
+
 Wan video models typically cannot generate videos with more than 81 frames.
 If such a generation is attempted the resulting video loops.
 `Context Windows` is one of the attempts to support generating videos longer than 81 frames.
@@ -7,7 +19,8 @@ This method of generation is supported by the regular samplers such as `KSampler
 The method is enabled by plugging in a special options node into the sampler
 
 - in [wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) workflows `WanVideo Context Options` node is used
-- in native workflows `WAN Context Windows (Manual)` node is used ![comfy-wan-context-windows-manual](../screenshots/comfy-wan-context-windows-manual.png)
+- in native workflows `WAN Context Windows (Manual)` node is used  
+  ![comfy-wan-context-windows-manual](../screenshots/comfy-wan-context-windows-manual.png)
 
 The way context windows generation works is that
 
@@ -87,9 +100,8 @@ Generally when working with Wan 2.2 the expectation is that `WanVideo Context Op
 The rule is not absolute and it might be possible in some cases to connect to high only, especially with lots of VRAM.
 It is also potentially possible to have use different `WanVideo Context Options` on high and low.
 
-Because understanding `overlap` and `stride` is so impossibly difficult, here is a selection of quotes from Kijai to at least hint at the right direction.
+A selection of quotes about context stride and overlap:
 
-Kijai:
 > context options are in pixel space, so 4 is 1 latent, and overlap or stride at 4 (which is 1 latent) means it's disabled, there's no stride or ovelap, it can't be 0
 
 > usually it's fine with something like 16 overlap, while on high noise you may need up to 48 or something;
@@ -101,7 +113,10 @@ Kijai:
 > how many frames are processed at once, and overlap is how much they overlap;
 > higher overlap = smoother transitions = slower processing
 
-Kijai when asked about stride gave a [link]() to documentation on Animate Diff and then proceeded to say
+This [article](https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved/tree/main/documentation/nodes#context-optionsstandard-uniform)
+documents context windows how they were implemented for AnimateDiff. Interestingly the explanation stays relevant for Wan.
+Note that using stride to cause non-adjacent frames to be processed was a lot more relevant to AnimateDiff than it is to Wan.
+
 > stride is that spread out overlap thing it does as you can see in the animation;
 > it's not very good with Wan model because context windows work with the latents, and every latent has 4 images;
 > so stride will make it very stuttery, only time it's been useful is with 2.2 when used on the high noise only,

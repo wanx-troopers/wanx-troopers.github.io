@@ -1,6 +1,15 @@
 # HoloCine
 
+## 2025.12.07
+
+Outstanding [PR](https://github.com/kijai/ComfyUI-WanVideoWrapper/pull/1615) to Kijai's WanVideo Wrapper to improve HoloCine support.
+
+> It was trained for 249 frames though (Wan fine tune) and specifically for [Scene] [Camera] and timestamping prompts
+
+## Summary
+
 [Holo Cine](https://holo-cine.github.io/) models have been uploaded to Huggingface, Kijai's provided fp8 [conversion](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main/T2V/HoloCine).
+[Paper](https://github.com/yihao-meng/HoloCine).
 
 Warning: non-commercial license (though it is possible initial release was under ASF license, not certain).
 

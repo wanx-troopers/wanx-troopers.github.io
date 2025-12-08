@@ -2,6 +2,27 @@
 
 Wan Animate and MoCha serve similar goals.
 
+## One To All Animation
+
+Experimentation started with [One-to-All-Animation](https://github.com/ssj9596/One-to-All-Animation).
+Goals similar to WanAnimate.
+
+> it's T2V based; pose is via controlnet
+
+> for reference it uses concat to front, reference attention and token replacement;
+> probably the most complicated ... after S2V
+
+> the image cond encoder is hunyuan VAE;
+> the controlnet is Wan forward block;
+> ref extractor is basically mini wan of 7 blocks
+
+> token replacement [means] set timestep of next 2 frames after the reference frame to 0 to avoid them changing too much from the init;
+> token replace is only used when continuing from previous frames
+
+Kijai's adaptation of [data](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/OneToAllAnimation), 38Gb.
+Kijai's code for now in [onetoall](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/onetoall) branch of Wrapper repo.
+Test [workflow](workflows/kj_WanToAllAnimation_test.json).
+
 ## Wan Animate
 
 Two example workflows given in [Github:kijai/ComfyUI-WanVideoWrapper:example_workflows](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/main/example_workflows).

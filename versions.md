@@ -8,6 +8,11 @@ The page needs a brush-up. Bugs referenced have been fixed or worked around. Sti
 
 > Comfy comes with pytorch 2.9.1 ... now
 
+Unfortunately it looks like the [fix](https://github.com/woct0rdho/triton-windows/commit/440e3c42a640a4188dd356225e1b13a56b45a377)
+bringing fp8e4 support to RTX30xx on Windows has not been implemented on Triton
+[mainline](https://github.com/triton-lang/triton/blob/main/third_party/nvidia/backend/compiler.py#L188);
+[issue](https://github.com/triton-lang/triton/issues/8929).
+
 ## 2025.11.16
 
 [Sam Hodge](https://www.imdb.com/name/nm1668128/) suggested a script to install Sage Attention on Ubuntu 24.04 with an RTX 5090 in the following manner

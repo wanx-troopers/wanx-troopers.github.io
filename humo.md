@@ -1,5 +1,10 @@
 # HuMO
 
+## 2025.12.07
+
+Kijai added a change to Wrapper which allows HuMo embeds to be used together with `WanVideo ImageToVideo Encode` embeds.
+HuMo references are appended to the end of `WanVideo ImageToVideo Encode` embeds.
+
 ## Drozbay Continuation
 
 2025.11.15 [drozbay](https://github.com/drozbay) has shared `droz_wanexperiments_svishot_with_humo_v1.1` worflow

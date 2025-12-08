@@ -18,6 +18,8 @@ as well as other nodes for examining videos, taking last N frames, creating late
 
 ## Frame Interpolation
 
+> FILM so far never gave me any of the ghosting RIFE did or the artifact GIMM did, and it's fast enough (only in Fill's pack) and otherwise good enough
+
 To increase FPS: RIFE VFI still good to double frame rate with rife49.pth, can plug after stock `Upscale Image By` with `upscale_method`=`lanczoc`.
 Faster alternative suggested online: `FL RIFE Frame Interpolation` from [GH:filliptm/ComfyUI_Fill-Nodes](https://github.com/filliptm/ComfyUI_Fill-Nodes) again with rife49.
 

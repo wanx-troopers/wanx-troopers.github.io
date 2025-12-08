@@ -1,5 +1,26 @@
 ﻿# Statements
 
+## 2025.12.07
+
+[MAGI](https://github.com/SandAI-org/MAGI-1)
+
+> a hybrid of autoregressive and diffusion models;
+> denoises in blocks, and each block is conditioned on the previous blocks;
+> has a KV cache to “remember” what happened in previous blocks;
+> one can manipulate the KV cache to manipulate how much it remembers
+> and whether it remembers large shapes or small details;
+> used well this is the best tool out there currently [to create long videos];
+> not for low end gpu
+> Its similar situation going from wan to magi or step, you pay with more parameters and time, and get higher video quality 
+
+> cosmos ecosystem; it has a bunch of models, including some fully autoregressive ones, which can be good for image stitching;
+> And cosmos ecosystem has rly good controlnets
+
+> According to some papers video DiTs need around 10x the tokens of img DiTs;
+> Img DiTs get at least somewhat okay at 2B DiTs;
+> ... video DiTs seem to need around 20B;
+> 15-ish B for wan and hunv seems to do ok also
+
 ## 2025.12.06
 
 Image scaling nodes:

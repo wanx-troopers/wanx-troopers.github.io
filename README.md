@@ -17,6 +17,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [Wan T2V VACE](wan-vace.md)
 * [Wan I2V Advanced](wan-i2v-advanced.md)
 * [Wan T2V Advanced](wan-t2v-advanced.md)
+* [Context Windows](what-plugs-where/context-windows.md)
 * [Extensions](extensions.md)
 
 ## Models
