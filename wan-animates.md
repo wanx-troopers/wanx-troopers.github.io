@@ -6,7 +6,7 @@ Wan Animate and MoCha serve similar goals.
 
 ### 2025.12.09
 
-Extended length generations implemented
+Extended length generations implemented, implementation in Kijai's wrapper complete and merged to master.
 
 > 613 frames with One-to-all, sadly it does still burn, at least with lightx2v;
 > though it also seems you can just stop the pose control after few steps and then it keeps the ref better;
@@ -29,9 +29,9 @@ Goals similar to WanAnimate.
 > token replacement [means] set timestep of next 2 frames after the reference frame to 0 to avoid them changing too much from the init;
 > token replace is only used when continuing from previous frames
 
-Kijai's adaptations: [FP16](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/OneToAllAnimation) 38Gb, [FP8](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main/OneToAllAnimation).
-Kijai's code for now in [onetoall](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/onetoall) branch of Wrapper repo.
-Test [workflow](workflows/kj_WanToAllAnimation_test.json), also needs nodes from [kijai/ComfyUI-WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess).
+- Kijai's adaptations: [FP16](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/OneToAllAnimation) 38Gb, [FP8](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main/OneToAllAnimation)
+- Sample [WF](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/Wan21_OneToAllAnimation_example_01.json), (original [test](workflows/kj_WanToAllAnimation_test.json) wf)
+- You also needs nodes from [kijai/ComfyUI-WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess)
 
 > 2 modes, either it aligns the input pose to reference, or reference to input pose
 
