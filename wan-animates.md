@@ -31,7 +31,7 @@ Goals similar to WanAnimate.
 
 - Kijai's adaptations: [FP16](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/OneToAllAnimation) 38Gb, [FP8](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main/OneToAllAnimation)
 - Sample [WF](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/Wan21_OneToAllAnimation_example_01.json), (original [test](workflows/kj_WanToAllAnimation_test.json) wf)
-- You also needs nodes from [kijai/ComfyUI-WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess)
+- You may also need nodes from [kijai/ComfyUI-WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess)
 
 > 2 modes, either it aligns the input pose to reference, or reference to input pose
 
