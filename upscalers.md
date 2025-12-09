@@ -1,24 +1,15 @@
 # Upascalers
 
+## Simplest: Upasclae Image By
+
+Use stock ComfyUI node `Upscale Image By` with `upscale_method`=`lanczoc`
+
 ## FL13
 
 - [FL13-WAN_Ultimate_I2V_Upscaler.20251123](workflows/FL13-WAN_Ultimate_I2V_Upscaler.20251123.json)
 - [FL13-WAN_Ultimate_I2V_Upscaler](workflows/FL13-WAN_Ultimate_I2V_Upscaler.json)
 
 Reportedly 10 minutes on 4090 to upscale 5 sec video to 2k
-
-## Drozbay's Impact Pack SEGS Detailer For Wan Video And VACE
-
-This is Drozbay's private fork of `Impact Pack` set of ComfyUI nodes, not merged into the original project:
-[GH:drozbay/ComfyUI-Impact-Pack](https://github.com/drozbay/ComfyUI-Impact-Pack).
-Includes example workflows.
-
-Allows selecting part of generated video like a vace or a complete character, upscale it
-to the resolution at which AI video generating models - those which take references;
-say WAN + Phantom - or Humo - work best - run generations, downscale and integrate
-result back into the original video.
-
-Supports temporal blending across generated video fragments using VACE and context windows.
 
 ## FlashVSR
 
@@ -43,7 +34,7 @@ Mads:
 
 Can use with Cinescale lora and possibly with [RoPE Scaling](hidden-knowledge.md#rope)
 
-## FlashVSR v1.1
+### FlashVSR v1.1
 
 > The new Flash VSR 1.1 upscaler is significantly better than v1;
 > `Image Median Blur` size=4;
@@ -57,7 +48,7 @@ Can use with Cinescale lora and possibly with [RoPE Scaling](hidden-knowledge.md
 
 FlashVSR "ultra fast": [link](https://github.com/lihaoyun6/ComfyUI-FlashVSR_Ultra_Fast)
 
-### What Plugs Where
+### Wiring FlashVSR
 
 VSR safetensors loaded by `WanVideo Extra Model Select` plugged into `extra_model` input of `WanVideo Model Loader` loading Wan 2.1 T2V `safetensors`.
 
@@ -68,11 +59,27 @@ Very specific wording to be used in `WanVideo TextEncode`.
 Can also do images, has been used on z-image-turbo produced images.
 ...
 
-
 ## SpacePxl Experimental Latent Upascaler
+
+Experimental.
 
 [GH:spacepxl/ComfyUI-VAE-Utils](https://github.com/spacepxl/ComfyUI-VAE-Utils)
 
 > 2x spatial upscale only, works on images and video
 
 > something like LUA could be much better, but this is at least a huge improvement over bilinear/bislerp
+
+## Drozbay's Impact Pack SEGS Detailer For Wan Video And VACE
+
+Highly experimental, requires a lot of work to use.
+
+This is Drozbay's private fork of `Impact Pack` set of ComfyUI nodes, not merged into the original project:
+[GH:drozbay/ComfyUI-Impact-Pack](https://github.com/drozbay/ComfyUI-Impact-Pack).
+Includes example workflows.
+
+Allows selecting part of generated video like a vace or a complete character, upscale it
+to the resolution at which AI video generating models - those which take references;
+say WAN + Phantom - or Humo - work best - run generations, downscale and integrate
+result back into the original video.
+
+Supports temporal blending across generated video fragments using VACE and context windows.
