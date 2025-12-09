@@ -4,6 +4,8 @@
 
 2025.12.09 [One-to-All-Animation](wan-animates.md#one-to-all-animation) similar to WanAnimate support added to Kijai's Wrapper, fp16 and fp8 weights uploaded to HF
 
+2025.12.09 [Wan-Move](wan-move.md) released and received initial support in the Wrapper
+
 2025.12.07 Context Windows [PR](what-plugs-where/context-windows.md#20251207) merged to main branch in ComfyUI improving Context Windows support on native
 
 2025.12.06 [Kandinsky-5](k5.md) Pro video AI model (5sec I2V, 5sec T2V, 10sec T2V) released 2025.11.14 is now supported in ComfyUI native thanks to Kijai's contribution
