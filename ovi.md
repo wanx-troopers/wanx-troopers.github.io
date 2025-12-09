@@ -1,6 +1,7 @@
 # OVI
 
 Ovi is an open-source model capable of sound + video generation. Video quality at 5B level. 24fps.
+Wan 2.2 5B finetune
 
 ## V1.1
 

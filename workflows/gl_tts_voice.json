@@ -1,0 +1,1517 @@
+{
+  "id": "b633f72b-0e6b-431c-9880-bc1c63e5ee45",
+  "revision": 0,
+  "last_node_id": 138,
+  "last_link_id": 247,
+  "nodes": [
+    {
+      "id": 121,
+      "type": "PreviewAny",
+      "pos": [
+        -790.7774047851562,
+        1898.1563720703125
+      ],
+      "size": [
+        486.6275634765625,
+        420.8500061035156
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 232
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "PreviewAny",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 99,
+      "type": "Reroute",
+      "pos": [
+        -1310.1611328125,
+        1099.2926025390625
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "widget": {
+            "name": "value"
+          },
+          "link": 227
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "STRING",
+          "links": [
+            182
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 50,
+      "type": "PreviewAny",
+      "pos": [
+        -637.6661987304688,
+        1254.6448974609375
+      ],
+      "size": [
+        552.7586059570312,
+        174.5865936279297
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 100
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.57",
+        "Node name for S&R": "PreviewAny",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 132,
+      "type": "Reroute",
+      "pos": [
+        -1608.490478515625,
+        709.7468872070312
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "widget": {
+            "name": "value"
+          },
+          "link": 228
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "STRING",
+          "links": [
+            227
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 98,
+      "type": "Reroute",
+      "pos": [
+        -1764.9373779296875,
+        659.0769653320312
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "widget": {
+            "name": "value"
+          },
+          "link": 179
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "STRING",
+          "links": [
+            228
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 100,
+      "type": "Reroute",
+      "pos": [
+        -1765.823974609375,
+        724.1932373046875
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 183
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 53,
+      "type": "Reroute",
+      "pos": [
+        -1484.7437744140625,
+        1770.8671875
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 242
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "TTS_ENGINE",
+          "links": [
+            230
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 56,
+      "type": "MarkdownNote",
+      "pos": [
+        -1477.187255859375,
+        1444.6717529296875
+      ],
+      "size": [
+        340.41461181640625,
+        179.46453857421875
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "# 🎭  **Reference Audio Tips**\n\n1- You can connect any audio from a **Load Audio Core** node directly for **zero-shot voice cloning**\n \n2- or use the **🎭 Character Voices** feature to load a narrator from your `Voices` folder."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 79,
+      "type": "PreviewAudio",
+      "pos": [
+        -746.4139404296875,
+        1771.3372802734375
+      ],
+      "size": [
+        441.48828125,
+        88
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 231
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.39",
+        "Node name for S&R": "PreviewAudio",
+        "ue_properties": {
+          "version": "7.1",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 130,
+      "type": "CharacterVoicesNode",
+      "pos": [
+        -2454.496337890625,
+        1921.8170166015625
+      ],
+      "size": [
+        232.96051025390625,
+        146.08004760742188
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "opt_audio_input",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "opt_narrator",
+          "type": "NARRATOR_VOICE",
+          "links": [
+            221
+          ]
+        },
+        {
+          "name": "character_name",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "tts_audio_suite",
+        "ver": "ee95cad1f155eceb1442723c7f351949b30361e3",
+        "Node name for S&R": "CharacterVoicesNode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "voices_examples/David_Attenborough CC3.wav",
+        ""
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 133,
+      "type": "UnifiedTTSSRTNode",
+      "pos": [
+        -1243.004150390625,
+        1768.7225341796875
+      ],
+      "size": [
+        404.7402648925781,
+        545.216796875
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "TTS_engine",
+          "type": "TTS_ENGINE",
+          "link": 230
+        },
+        {
+          "name": "opt_narrator",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            231
+          ]
+        },
+        {
+          "name": "generation_info",
+          "type": "STRING",
+          "links": [
+            232
+          ]
+        },
+        {
+          "name": "timing_report",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "Adjusted_SRT",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "chatterbox_srt_voice",
+        "ver": "5e4c39b3d25a437f83dd71cf21b2fad282eda9e1",
+        "Node name for S&R": "UnifiedTTSSRTNode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "1\n00:00:01,000 --> 00:00:04,000\nHello! This is unified SRT TTS with character switching.\n\n2\n00:00:04,500 --> 00:00:09,500\n[Alice:crestfallen_original] Hi there! I'm Alice speaking with precise timing.\n\n3\n00:00:10,000 --> 00:00:14,000\n[Bob:crestfallen_original] And I'm Bob! The audio matches these exact SRT timings.",
+        "voices_examples/Clint_Eastwood CC3 (enhanced2).wav",
+        2519695028,
+        "fixed",
+        "smart_natural",
+        true,
+        0.01,
+        1,
+        0.5,
+        2,
+        0
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 57,
+      "type": "MarkdownNote",
+      "pos": [
+        -1729.11279296875,
+        1874.3709716796875
+      ],
+      "size": [
+        343.0154724121094,
+        178.18296813964844
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "# **FROM v4 and up!**\n\nUnified nodes:\n- 🎤 **TTS Text**: Direct text-to-speech module  \n- 🔄 **Voice Changer**: Voice transformation  \n- 📺 **TTS SRT**: Subtitle-compatible TTS output  \n\nThese nodes are now **engine-agnostic**, meaning you can plug in **Chatterbox**, **F5**, or future engines seamlessly.\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 47,
+      "type": "UnifiedTTSTextNode",
+      "pos": [
+        -1096.805419921875,
+        1056.0970458984375
+      ],
+      "size": [
+        400,
+        379.5921325683594
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "TTS_engine",
+          "type": "TTS_ENGINE",
+          "link": 241
+        },
+        {
+          "name": "opt_narrator",
+          "shape": 7,
+          "type": "*",
+          "link": 225
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 182
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            93,
+            239
+          ]
+        },
+        {
+          "name": "generation_info",
+          "type": "STRING",
+          "links": [
+            100
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "tts_audio_suite",
+        "ver": "ee95cad1f155eceb1442723c7f351949b30361e3",
+        "Node name for S&R": "UnifiedTTSTextNode",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "text": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Hello! This is unified TTS with character switching support.\n[Alice] Hi there! I'm Alice speaking with the selected TTS engine.\n[Bob] And I'm Bob! This works with any TTS engine.\nBack to the main narrator voice for the conclusion.",
+        "none",
+        2979319074,
+        "randomize",
+        true,
+        400,
+        "auto",
+        100,
+        true,
+        0
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 128,
+      "type": "Reroute",
+      "pos": [
+        -2068.419677734375,
+        1168.3067626953125
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 221
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "NARRATOR_VOICE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 127,
+      "type": "Reroute",
+      "pos": [
+        -2116.24169921875,
+        1104.413330078125
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 220
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "EMOTION_CONTROL",
+          "links": []
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 15,
+      "type": "PreviewAudio",
+      "pos": [
+        -629.1116943359375,
+        1053.526611328125
+      ],
+      "size": [
+        442.4916687011719,
+        88
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 93
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.39",
+        "Node name for S&R": "PreviewAudio",
+        "ue_properties": {
+          "version": "7.1",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 124,
+      "type": "QwenEmotionNode",
+      "pos": [
+        -2611.97314453125,
+        1681.879638671875
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "emotion_control",
+          "type": "EMOTION_CONTROL",
+          "links": [
+            220
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "chatterbox_srt_voice",
+        "ver": "5e4c39b3d25a437f83dd71cf21b2fad282eda9e1",
+        "Node name for S&R": "QwenEmotionNode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "qwen0.6bemo4-merge",
+        "Sarcastic calm character slowly speaking: {seg}"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 129,
+      "type": "Reroute",
+      "pos": [
+        -2032.5596923828125,
+        1235.5533447265625
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 222
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "AUDIO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 115,
+      "type": "MarkdownNote",
+      "pos": [
+        -3089.947265625,
+        1001.278564453125
+      ],
+      "size": [
+        461.39898681640625,
+        450.9547119140625
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "# [IndexTTS-2 Emotion Control Guide](https://github.com/diodiogod/TTS-Audio-Suite/blob/main/docs/IndexTTS2_Emotion_Control_Guide.md)\n\nIndexTTS-2 features advanced emotion control capabilities that allow you to precisely control the emotional expression of generated speech. This guide covers all available emotion control methods and their applications.\n\n## Overview\n\nIndexTTS-2 supports multiple emotion control methods that can be combined for sophisticated emotional expression:\n\n- **Direct Audio Reference**: Use any audio file as an emotion reference\n- **Character Voices**: Use character audio references from the Character Voices node\n- **Emotion Vectors**: Manual 8-emotion slider control with precise values\n- **Text Emotion**: AI-powered QwenEmotion analysis from text descriptions with dynamic templates\n- **Character Tag Emotions**: Per-character emotion control using `[Character:emotion_ref]` syntax\n\n## Emotion Control Priority\n\nYou can only connect to the Engine node one source of control emotion: Either audio, text, or vectors.\n\nWhen using tags on the text iself, **Character tag emotions** (highest priority) - `[Alice:angry_bob]` overrides all other emotion control settings for that character segment\n\n## Method 1: Direct Audio Reference\n\nConnect any audio file directly to the IndexTTS-2 Engine's `emotion_control` input.\n\n**How it works:**\n\n- IndexTTS-2 analyzes the emotional characteristics of your reference audio\n- The emotional style is applied to all generated speech\n- Works with any audio format (WAV, MP3, etc.)\n\n**Best practices:**\n\n- Use audio clips with clear emotional expression\n- Choose audio with consistent voice characteristics for best results\n- Avoid background music or noise\n\n**Example:**\n\n```\nAUDIO node → IndexTTS-2 Engine (emotion_control)\n```\n\n## Method 2: Character Voices Audio Reference\n\nUse the `opt_narrator` output from the 🎭 Character Voices node as an emotion reference.\n\n**Setup:**\n\n1. Add a 🎭 Character Voices node\n2. Select a voice with the desired emotional expression\n3. Connect `opt_narrator` output to IndexTTS-2 Engine `emotion_control` input\n\n**Advantages:**\n\n- Leverages your existing voice library\n- Consistent character-based emotions\n- Easy to manage and organize\n\n**Example workflow:**\n\n```\n🎭 Character Voices (David_Attenborough) → opt_narrator → IndexTTS-2 Engine (emotion_control)\n```\n\n## Method 3: Emotion Vectors\n\nUse the 🌈 IndexTTS-2 Emotion Vectors node for precise manual control over 8 different emotions.\n\n**Available emotions:**\n\n- **Happy**: Joy, excitement, positivity (0.0-1.2)\n- **Angry**: Aggression, frustration, intensity (0.0-1.2)\n- **Sad**: Melancholy, sorrow, downcast tone (0.0-1.2)\n- **Surprised**: Amazement, shock, wonder (0.0-1.2)\n- **Afraid**: Fear, anxiety, nervousness (0.0-1.2)\n- **Disgusted**: Revulsion, displeasure, rejection (0.0-1.2)\n- **Calm**: Peaceful, relaxed, steady (0.0-1.2)\n- **Melancholic**: Thoughtful sadness, wistfulness (0.0-1.2)\n\n**Usage tips:**\n\n- Values above 1.0 create more intense emotional expression BUT MAY interfear with the cloned voice resemblance\n- Combine multiple emotions for complex feelings (e.g., 0.8 Happy + 0.3 Surprised = excited joy)\n- Start with single emotions, then experiment with combinations\n- Use the `random` buttom to get a completely random emotion pattern. Might be too strong.\n\n## Method 4: Text Emotion (Dynamic Analysis)\n\nUse the 🌈 IndexTTS-2 Text Emotion node for AI-powered emotion analysis with dynamic templates.\n\n### Static Text Emotion\n\nProvide a simple emotion description that applies to all text segments:\n\n```\nInput: \"angry and frustrated\"\nResult: All speech generated with angry, frustrated emotion\n```\n\n### Dynamic Templates with {seg}\n\nUse the `{seg}` placeholder for contextual, per-segment emotion analysis:\n\n**Template examples:**\n\n- `\"Happy character speaking: {seg}\"` - Cheerful narrator\n- `\"Angry boss yelling: {seg}\"` - Aggressive authority figure\n- `\"Calm meditation guide: {seg}\"` - Peaceful instructor\n- `\"Excited game show host: {seg}\"` - Energetic presenter\n\n**How dynamic templates work:**\n\n1. IndexTTS-2 processes each text segment separately\n2. `{seg}` gets replaced with the actual segment text\n3. QwenEmotion analyzes the combined context + content\n4. Unique emotion vector generated for each segment\n\n**Example:**\n\n```\nTemplate: \"Worried parent speaking: {seg}\"\nSegment: \"Where have you been?\"\nAnalysis: \"Worried parent speaking: Where have you been?\"\nResult: Anxious, concerned vocal expression\n```\n\n---\n\n## Character Tag Emotion Control\n\nControl emotions per character using inline tags in your text: `[Character:emotion_ref]`\n\n**Syntax:**\n\n```\n[CharacterName:emotion_reference]\n```\n\n**emotion_reference options:**\n\n- Any character name from your voices library (uses that character's voice as emotion)\n- Custom emotion references\n\n**Examples:**\n\n```\nHello everyone! [Alice:happy_sarah] I'm so excited to be here today!\n[Bob:angry_tom] That's completely unacceptable behavior.\n[Narrator:David] Meanwhile, in a distant galaxy...\n\n*assuming happy_sarah, angry_tom and David are alias or character voices in yout folder with that name\n```\n\n\\*assuming happy_sarah, angry_tom and David are alias or character voices in yout folder with that name\n\n\n\n**Character tag priority:**\n\n- Character tags override ALL other emotion settings for that specific character\n- Other characters use global emotion settings\n- Allows mixing different emotions in the same audio\n\n## Emotion Alpha Control\n\nThe `emotion_alpha` parameter on the IndexTTS-2 Engine controls the intensity of emotion application:\n\n**Values:**\n\n- **0.0**: No emotion applied (neutral voice)\n- **0.5**: 50% emotion blend (subtle emotional influence)\n- **1.0**: Full emotion intensity (standard recommended setting)\n- **1.5**: 150% enhanced emotion (more dramatic)\n- **2.0**: Maximum emotion intensity (very dramatic)\n\n## Practical Workflow Examples\n\n### Example 1: Multi-Character Drama with Individual Emotions\n\n```text\n[Alice:happy_sarah] Welcome to our cooking show!\n[Bob:serious_narrator] Today we'll be making pasta.\n[Alice:excited_sarah] I can't wait to get started!\n```\n\n**Setup:**\n\n- No global emotion control needed\n- Each character gets individual emotion via tags\n- `emotion_alpha=1.0` for more expressiveness\n\n### Example 2: Mixed Emotion Control\n\n**Global setup:**\n\n- 🌈 IndexTTS-2 Text Emotion: `\"Cheerful host presenting: {seg}\"`\n- `emotion_alpha=0.8`\n\n**Text with overrides:**\n\n```text\nWelcome to our show! [Bob:serious_narrator] But first, a serious announcement.\n[Alice:excited_sarah] Now back to our regular programming!\n```\n\n**Result:**\n\n- Default segments use cheerful host emotion\n- Bob's line uses serious narrator emotion (overrides global)\n- Alice's line uses excited emotion (overrides global)\n\n---\n\nThis comprehensive emotion control system gives you unprecedented flexibility in creating expressive, emotionally rich TTS audio for any application."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 82,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -2610.144775390625,
+        722.1431274414062
+      ],
+      "size": [
+        659.7203369140625,
+        226.72232055664062
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            183
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.40",
+        "Node name for S&R": "PrimitiveStringMultiline",
+        "ue_properties": {
+          "version": "7.1",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "On Tuesdays, the pigeons held parliament.\n[Alice:crestfallen_original] They debated the ethics of breadcrumbs and the metaphysics of flight. \n[Bob:Alice] One particularly philosophical pigeon named Thistle believed gravity was just a suggestion.\n[Cowboy:crestfallen_original] He once floated for three minutes straight, fueled by sheer conviction and a gust of rebellious wind."
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 131,
+      "type": "LoadAudio",
+      "pos": [
+        -2491.009765625,
+        2123.96484375
+      ],
+      "size": [
+        270,
+        136
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            222
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "LoadAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Evelynn_ Agony s Embrace _ Voice Lines _ League of Legends (mp3cut.net) (3).mp3",
+        null,
+        null
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 65,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -2271.832275390625,
+        389.4394836425781
+      ],
+      "size": [
+        310.7043762207031,
+        224.9416046142578
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            179
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.40",
+        "Node name for S&R": "PrimitiveStringMultiline",
+        "ue_properties": {
+          "version": "7.1",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "I have a map of every mistake I ever made stitched into the inside of my jacket. Names fade, coins vanish, but I remember which faces I trusted and which storms were worth sailing through. I lead not because I crave praise, but because someone has to turn plans into paths when the mountain roars. My hands are older than my temper, and that’s a mercy—steel learns patience faster than flesh does. If you ask me to teach, I will show you how to tie a knot that won’t betray you and how to speak to a coward so he finds his spine. If you ask me to fight, I will tell you exactly how much danger is worth the promise at the other end. There’s no glory in survival—only the quiet tallying of what we keep. Take that or leave it; I’ll be awake at first light either way."
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 135,
+      "type": "LoadAudio",
+      "pos": [
+        -1871.731201171875,
+        1572.9708251953125
+      ],
+      "size": [
+        274.080078125,
+        136
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            235
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.60",
+        "Node name for S&R": "LoadAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "audio": true,
+            "audioUI": true,
+            "upload": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Voice - Samira, the Desert Rose [SUBBED] - English.mp3",
+        null,
+        null
+      ]
+    },
+    {
+      "id": 51,
+      "type": "CharacterVoicesNode",
+      "pos": [
+        -1415.2496337890625,
+        1236.7845458984375
+      ],
+      "size": [
+        232.96051025390625,
+        146.08004760742188
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "opt_audio_input",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 235
+        }
+      ],
+      "outputs": [
+        {
+          "name": "opt_narrator",
+          "type": "NARRATOR_VOICE",
+          "links": [
+            225
+          ]
+        },
+        {
+          "name": "character_name",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "tts_audio_suite",
+        "ver": "ee95cad1f155eceb1442723c7f351949b30361e3",
+        "Node name for S&R": "CharacterVoicesNode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "none",
+        " The sad mummy! My mama used to tell stories about you when I was a girl. How I loved them. Shurima needs no emperor. I know your type, Draven. The kind of man who's compensated for something. That gauntlet would be better off without you, kid. You seem kind of pale, LeBlanc. Sure you're getting enough, son?  Sarah, is it? I've killed many captains. Let's see how you measure up. A talking turtle? Okay, maybe I did have one too many. Sivir, you say you'll do anything for the right price, but what's the price of one's destiny? Hey, old man, how long you got before that demon takes over? Honestly, Lanternman, not sure you can handle my soul.  Zereth, your people ended my home. I will end your existence! If you can't keep up, don't step up. I don't have time for fools. Listen up, you sorry lot. Only one rule for this mission. Take no prisoners. I've got two rules for every fight.  If they think I kill for fame and fortune, ha! They're idiots, just like all the others. I chose this life. And sure, someday it might get me killed. But till then, I'm unstoppable. Those who followed the Ascendant burned away my home. So don't expect me to follow anyone. Indari was a great captain.  I taught me how to shoot. I taught myself how to kill. I care most about my warband or my family. Order changes depending on who gets on my nerves. Born in Shurima, raised by Noxus. Maybe I'll die in Demacia to make things interesting, huh? People always ask about my weapons. Right hand blaze, left hand thorn. Vanquish on the back? Simple as that. Sometimes I'm the hero,  Other times, I'm the villain. It's all a matter of perspective. Growing up, my maman taught me one lesson. Death isn't the scariest thing, it's a mother's rage. Darius, Swain, those names mean little to me. I answer to myself. I'm not here to make friends. Don't worry, Azir. You'll be remembered as a tyrant.  Maybe you should have smiled more. Ah, what was your dumb name again? Leave the kid, take the gauntlet. Not the first LeBlanc I've killed. Probably not the last either. Your guns have a better home now, Sara. Oh, I'm just getting started. Not sure if I just killed an Ascendant or some kid's lost pet. Ah well. Guess you don't need to run from destiny anymore, Sivir.  Be thankful I got to you before your demon did. Don't say I didn't warn you, Lantern Man. Ugh, gross. At least my boots are looking brighter. Shurima, no. The world is better off without you, Xerath. Flawless. Idiot. Not sorry. Done and dusted. Lucky for you, the last thing you saw was me.  Oh! Did I step on your moment? My time is precious. Your life is not. Ha! I win! Huh. Less than yesterday, at least. Hmm. How come no one ever tells me to reload? Oh. I really gotta check these more often. Ugh! I missed a freaking cliff-diving trip for this crap! Keep the change! You're gonna need it.  You're dead weight. Buy something nice. On me. Get a haircut. Trust me. It's alright if you don't like me. We can't all have good taste. This took years of practice. For everyone else. Taking a quick break. Try not to die while I'm gone. How did that old trick go again? Ah, right. Believe me.  Live fast, die young. Another round, ante up. Look out, guys, gals, and other pals. Samira's back. Over here. Eyes up. Keep up. Too slow. Jackpot. Showtime. My kind of rain. No better time to die. Never look back. Weapons hot. It's about to get messy.  Nah! Nah! Nope! Don't think so! Nice try! Virtues? I've got a few. Vices? A few more. Some choose steel, others bullets. Why not both? In every girl, there is a queen. I am the beauty and the beast. Only need one eye to hit my mark.  Behaved women don't make it in Noxus. I'm not built to win, I'm built to conquer. Oh, how great it would feel to shoot my past in the face. Nothing more lethal than comfort. I don't work, I slay. Last person I loved thought I was too reckless. Their loss, I never go out of style. Hope I get some blood on these boots.  The color's a bit dull. Danger runs from me. The Empire values strength. I value style. We're good partners. I'm the rose that survived the desert. Refugee. That label is where I draw my strength. Money buys a gun or two. Thrill buys a reputation. I be average when I can be savage.  Alive when I'm walking the line! Guns and swords go together like rice and saffron. The Ascended think they own my people. They are wrong. Life's simple. Take the shot or lose the chance. My folks keep telling me to settle down. Not my style. Thrilling! Maybe I'll get a tattoo to celebrate the occasion.  Push my limits, I dare you. Finally, some action. You look promising. I'm bored. Fight me. I fight on my terms. Don't hold back. I won't. Well, look at you. I'll take care of this. Seize the moment. Lookie here. Target practice.  And I'm not even looking. Don't mess with me. You're mine. Next breath might be your last. Bah, like teresh me all over again. On my worst behavior. Came all this way to die? Think fast. Always bet on me. Settle down, sweet cake. Push off. Style never fades.  At least I didn't die of boredom. The term PsyOps, short for Psychic Operations. My name's Samira. Short for Styling on Idiots. I command, BRG, whatever. I go where the thrill goes.  Refugee mercenary, the inspiration of a generation."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 126,
+      "type": "Reroute",
+      "pos": [
+        -2188.42724609375,
+        1047.9219970703125
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 219
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "EMOTION_CONTROL",
+          "links": [
+            247
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 125,
+      "type": "IndexTTSEmotionOptionsNode",
+      "pos": [
+        -2558.6396484375,
+        1048.947998046875
+      ],
+      "size": [
+        340,
+        580
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "emotion_control",
+          "type": "EMOTION_CONTROL",
+          "links": [
+            219
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "chatterbox_srt_voice",
+        "ver": "5e4c39b3d25a437f83dd71cf21b2fad282eda9e1",
+        "Node name for S&R": "IndexTTSEmotionOptionsNode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1.2,
+        0
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 138,
+      "type": "IndexTTSEngineNode",
+      "pos": [
+        -1903.6300048828125,
+        1051.2659912109375
+      ],
+      "size": [
+        331.431640625,
+        538
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "emotion_control",
+          "shape": 7,
+          "type": "*",
+          "link": 247
+        }
+      ],
+      "outputs": [
+        {
+          "name": "TTS_engine",
+          "type": "TTS_ENGINE",
+          "links": [
+            241,
+            242
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "tts_audio_suite",
+        "ver": "4.10.6",
+        "Node name for S&R": "IndexTTSEngineNode",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_path": true,
+            "device": true,
+            "emotion_alpha": true,
+            "use_random": true,
+            "max_text_tokens_per_segment": true,
+            "interval_silence": true,
+            "temperature": true,
+            "top_p": true,
+            "top_k": true,
+            "do_sample": true,
+            "length_penalty": true,
+            "num_beams": true,
+            "repetition_penalty": true,
+            "max_mel_tokens": true,
+            "use_fp16": true,
+            "use_deepspeed": true,
+            "use_cuda_kernel": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "local:IndexTTS-2",
+        "auto",
+        2,
+        false,
+        120,
+        200,
+        0.1,
+        0.8,
+        30,
+        true,
+        0,
+        10,
+        4,
+        1500,
+        true,
+        false,
+        "auto",
+        false,
+        false,
+        false,
+        0
+      ]
+    },
+    {
+      "id": 137,
+      "type": "SaveAudioMP3",
+      "pos": [
+        -546.1192626953125,
+        838.9307861328125
+      ],
+      "size": [
+        270,
+        136
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 239
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.60",
+        "Node name for S&R": "SaveAudioMP3",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename_prefix": true,
+            "quality": true,
+            "audioUI": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Personal/ProjectDelta/Audio/ComfyUI",
+        "V0"
+      ]
+    }
+  ],
+  "links": [
+    [
+      93,
+      47,
+      0,
+      15,
+      0,
+      "AUDIO"
+    ],
+    [
+      100,
+      47,
+      1,
+      50,
+      0,
+      "*"
+    ],
+    [
+      179,
+      65,
+      0,
+      98,
+      0,
+      "*"
+    ],
+    [
+      182,
+      99,
+      0,
+      47,
+      2,
+      "STRING"
+    ],
+    [
+      183,
+      82,
+      0,
+      100,
+      0,
+      "*"
+    ],
+    [
+      219,
+      125,
+      0,
+      126,
+      0,
+      "*"
+    ],
+    [
+      220,
+      124,
+      0,
+      127,
+      0,
+      "*"
+    ],
+    [
+      221,
+      130,
+      0,
+      128,
+      0,
+      "*"
+    ],
+    [
+      222,
+      131,
+      0,
+      129,
+      0,
+      "*"
+    ],
+    [
+      225,
+      51,
+      0,
+      47,
+      1,
+      "*"
+    ],
+    [
+      227,
+      132,
+      0,
+      99,
+      0,
+      "*"
+    ],
+    [
+      228,
+      98,
+      0,
+      132,
+      0,
+      "*"
+    ],
+    [
+      230,
+      53,
+      0,
+      133,
+      0,
+      "TTS_ENGINE"
+    ],
+    [
+      231,
+      133,
+      0,
+      79,
+      0,
+      "AUDIO"
+    ],
+    [
+      232,
+      133,
+      1,
+      121,
+      0,
+      "*"
+    ],
+    [
+      235,
+      135,
+      0,
+      51,
+      0,
+      "AUDIO"
+    ],
+    [
+      239,
+      47,
+      0,
+      137,
+      0,
+      "AUDIO"
+    ],
+    [
+      241,
+      138,
+      0,
+      47,
+      0,
+      "TTS_ENGINE"
+    ],
+    [
+      242,
+      138,
+      0,
+      53,
+      0,
+      "*"
+    ],
+    [
+      247,
+      126,
+      0,
+      138,
+      0,
+      "*"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 6,
+      "title": "Simple text exemple",
+      "bounding": [
+        -2282.97900390625,
+        315.8394470214844,
+        335.19879150390625,
+        312.692138671875
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "Multi-char with [Tags + 🌈 Emotion Reference]",
+      "bounding": [
+        -2625.322021484375,
+        643.7052001953125,
+        681.2470092773438,
+        312.692138671875
+      ],
+      "color": "#a1309b",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 15,
+      "title": "Basic SRT Exemple",
+      "bounding": [
+        -1277.03564453125,
+        1686.265869140625,
+        986.889892578125,
+        659.2364501953125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 16,
+      "title": "⚙️ Engine",
+      "bounding": [
+        -1913.6300048828125,
+        977.6656494140625,
+        351.431640625,
+        525.5999755859375
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 17,
+      "title": "🌈 Emotion Control Options",
+      "bounding": [
+        -2621.97314453125,
+        975.3483276367188,
+        683.9230346679688,
+        1290.792724609375
+      ],
+      "color": "#a1309b",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 18,
+      "title": "TTS TEXT",
+      "bounding": [
+        -1537.4617919921875,
+        979.9266357421875,
+        1462.5540771484375,
+        676.47412109375
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.5989500000000009,
+      "offset": [
+        3641.4773391599306,
+        -857.3611468304696
+      ]
+    },
+    "frontendVersion": "1.33.10",
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
