@@ -22,6 +22,13 @@ as well as other nodes for examining videos, taking last N frames, creating late
 
 Frame Interpolators increase FPS.
 Wan 14B models normally produce video that feels natural when played at 16fps.
+
+One idea is to 2x number of frames arriving at a video that should have been played at 32fps but can probably play well at 29 or 30 too.
+Another idea is to 3x number of frames arriving at a video that should be played at 48fps but play it at 50fps.
+And then possibly 1/2 number of frames arriving at video that plays at 24fps, but could probably be played at 25fps too.
+
+Once you have generated the number of frames you want you are free to package them up into an .mp4 labelled with whatever playback speed you like.
+
 VFI = video frame interpolation.
 
 ### RIFE
