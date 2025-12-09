@@ -71,7 +71,7 @@ Users chatting:
 | Repo | Lora | Generation | Approx. Released | Comment |
 | --- | --- | --- | --- | --- |
 | [HF:lightx2v/Wan2.2-Lightning:Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0](https://huggingface.co/lightx2v/Wan2.2-Lightning/tree/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0)|Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0|2.2 T2V High/Low| 2025.11.07 | No Kijai conversion available<br>Reprotedly can make things too bright |
-| [HF:lightx2v/Wan2.2-Lightning:Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1.1](https://huggingface.co/lightx2v/Wan2.2-Lightning/tree/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1.1)|Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1.1|2.2 T2V High/Low| 2025.11.08 ? | No Kijai conversion available |
+| [HF:lightx2v/Wan2.2-Lightning:Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1.1](https://huggingface.co/lightx2v/Wan2.2-Lightning/tree/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1.1)|Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1.1|2.2 T2V High/Low| 2025.08 ? | No Kijai conversion available |
 | [HF:lightx2v/Wan2.2-Lightning:Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1](https://huggingface.co/lightx2v/Wan2.2-Lightning/tree/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1)|Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1|2.2 T2V High/Low| 2025.08 ? | No Kijai conversion available |  |
 | [HF:Kijai/WanVideo_comfy:LoRAs/Wan22-Lightning](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Wan22-Lightning) | Wan22_A14B_T2V_HIGH_Lightning_4steps_lora_250928_rank128_fp16 | 2.2 T2V High | - | - |
 | [HF:Kijai/WanVideo_comfy:LoRAs/Wan22-Lightning](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Wan22-Lightning) | Wan22_A14B_T2V_LOW_Lightning_4steps_lora_250928_rank64_fp16 | 2.2 T2V Low | - | - |
