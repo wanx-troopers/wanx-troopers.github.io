@@ -33,6 +33,12 @@ See also: [Drozbay's Study](conditioning.md#drozbays-study) on composing and exa
 
 ## VRGameDevGirl
 
+### 2025.12.08
+
+Latest workflow is "Z-image / Wan 2.2 FMML / Humo automation workflow"
+
+### Earlier
+
 [VRGameDevGirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl) is prominent artist in Video AI space known for her HuMo workflows for generating AI musical videos.
 2025.11.20 she shared a work-in-progress workflow for `Wan 2.2 Humo I2V First Last Frame`, which is similar to the one above but doesn't offer continuation facility.
 Here's a [copy](workflows/Wan2.2HumoI2VorFLF_WIP.webp), please beware of possible bugs.

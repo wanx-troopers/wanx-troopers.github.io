@@ -4,6 +4,16 @@ Wan Animate and MoCha serve similar goals.
 
 ## One To All Animation
 
+### 2025.12.09
+
+Extended length generations implemented
+
+> 613 frames with One-to-all, sadly it does still burn, at least with lightx2v;
+> though it also seems you can just stop the pose control after few steps and then it keeps the ref better;
+> with lower lightx2v strength, lower shift, ending pose control early the burnin is not as bad, but do lose some quality otherwise
+
+### Earlier
+
 Experimentation started with [One-to-All-Animation](https://github.com/ssj9596/One-to-All-Animation).
 Goals similar to WanAnimate.
 

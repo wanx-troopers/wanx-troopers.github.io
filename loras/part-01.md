@@ -70,7 +70,9 @@ Users chatting:
 
 | Repo | Lora | Generation | Approx. Released | Comment |
 | --- | --- | --- | --- | --- |
-| [HF:lightx2v/Wan2.2-Lightning:Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0](https://huggingface.co/lightx2v/Wan2.2-Lightning/tree/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0)|Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0|2.2 T2V| 2025.11.07 | ? available in FP32 only it seems, not sure if versions compatible with ComfyUI available |
+| [HF:lightx2v/Wan2.2-Lightning:Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0](https://huggingface.co/lightx2v/Wan2.2-Lightning/tree/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0)|Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0|2.2 T2V High/Low| 2025.11.07 | No Kijai conversion available<br>Reprotedly can make things too bright |
+| [HF:lightx2v/Wan2.2-Lightning:Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1.1](https://huggingface.co/lightx2v/Wan2.2-Lightning/tree/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1.1)|Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1.1|2.2 T2V High/Low| 2025.11.08 ? | No Kijai conversion available |
+| [HF:lightx2v/Wan2.2-Lightning:Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1](https://huggingface.co/lightx2v/Wan2.2-Lightning/tree/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1)|Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1|2.2 T2V High/Low| 2025.08 ? | No Kijai conversion available |  |
 | [HF:Kijai/WanVideo_comfy:LoRAs/Wan22-Lightning](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Wan22-Lightning) | Wan22_A14B_T2V_HIGH_Lightning_4steps_lora_250928_rank128_fp16 | 2.2 T2V High | - | - |
 | [HF:Kijai/WanVideo_comfy:LoRAs/Wan22-Lightning](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Wan22-Lightning) | Wan22_A14B_T2V_LOW_Lightning_4steps_lora_250928_rank64_fp16 | 2.2 T2V Low | - | - |
 | [HF:Kijai/WanVideo_comfy:LoRAs/rCM](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/rCM) | Wan_2_1_T2V_14B_rCM_lora_average_rank_148_bf16 | 2.1 T2V | - | by Nvidia, ppl stopped talking about it seemingly |
@@ -82,6 +84,7 @@ Users chatting:
 
 | Repo | Lora | Generation | Approx. Released | Comment |
 | --- | --- | --- | --- | --- |
+| [HF:Kijai/WanVideo_comfy:LoRAs/rCM](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/LoRAs/rCM/Wan22-I2V-A14B-HIGH-rCM6_0_lora_rank_64_bf16.safetensors) | Wan22-I2V-A14B-HIGH-rCM6_0_lora_rank_64_bf16 | 2.2 I2V High | 2025.12.09 | From NVidia |
 | [HF:Kijai/WanVideo_comfy:LoRAs/Wan22_Lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Wan22_Lightx2v) | Wan\_2\_2\_I2V\_A14B\_HIGH\_lightx2v\_4step\_lora\_v1030_rank_64_bf16 | 2.2 I2V High | 2025.10.30 | new and reportedly much better with prompt adherence <br>Artist: "to be honest I stopped using this lora as I'm getting color and light shifts with it" <br>remains the most recommended I2V high LoRa |
 | [HF:lightx2v/Wan2.2-Distill-Loras](https://huggingface.co/lightx2v/Wan2.2-Distill-Loras/tree/main) | wan2.2\_i2v\_A14b\_high\_noise\_lora\_rank64\_lightx2v\_4step\_1022 | 2.2 I2V High | 2025.10.22 | superceeded by 1030 |
 | [HF:lightx2v/Wan2.2-Distill-Loras](https://huggingface.co/lightx2v/Wan2.2-Distill-Loras/tree/main) | wan2.2\_i2v\_A14b\_low\_noise\_lora\_rank64\_lightx2v\_4step\_1022 | 2.2 I2V Low | 2025.10.22 | - |
