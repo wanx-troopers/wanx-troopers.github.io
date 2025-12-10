@@ -83,3 +83,8 @@ say WAN + Phantom - or Humo - work best - run generations, downscale and integra
 result back into the original video.
 
 Supports temporal blending across generated video fragments using VACE and context windows.
+
+## Notable Image Upscalers
+
+- "SeedVR is actually kind of insane"
+- [Clarity Upscale](https://github.com/roblaughter/comfyui-workflows)

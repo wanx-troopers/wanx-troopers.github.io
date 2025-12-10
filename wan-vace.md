@@ -58,7 +58,7 @@ Supplementary
 * `WanVideo Torch Compile Settings` (-> `compile_args` input of `WanVideo Model Loader`)
 * `WanVideo Set Block Swap` (chain after `WanVideo Model Loader`)
 * `WanVideo Lora Block Edit` (switching off block 0 might help remove 1st frame flash)
-* `WanVideo Text Encoder Cached` (avoid re-running text encoding on each execution, free up a little VRAM)
+* `WanVideo TextEncoder Cached` (avoid re-running text encoding on each execution, free up a little VRAM)
 * `WanVideo RoPE Function` (check tooltip on `rope_function` in `WanVideoSampler`; see also: [RoPE](../hidden-knowledge.md#rope))
 
 Least `WanVideo Sampler` node grows visually too tall groups of parameters have been placed into their own nodes:

@@ -70,3 +70,8 @@ One is discussed [here](https://www.reddit.com/r/StableDiffusion/comments/1parzx
 ## Older
 
 `CRT-Nodes` added `LoRA Loader (Z-Image)(CRT)`. It can load `zit-ivy.safetensors`
+
+## Notable LoRA-s
+
+- [detail-slider](https://civitai.com/models/2202638/detail-slider-for-z-image) note: strength can be -2 to +2, greater values mean more details
+- [detaildeamonz](https://civitai.com/models/2209262/detaildeamonz-sliderlora-for-zimageturbo-and-redz15) note: strength can be -2 to +2, greater values mean less details

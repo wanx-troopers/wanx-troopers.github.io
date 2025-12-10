@@ -1,5 +1,7 @@
 # News
 
+2025.12.06 [Kandinsky-5](k5.md) Pro video AI model (5sec I2V, 5sec T2V, 10sec T2V) released 2025.11.14 and now supported in ComfyUI native have received official distillations
+
 2025.12.09 NVidia released Wan 2.2 I2V [rCM](loras/part-01.md#22-i2v) speed LoRA
 
 2025.12.09 [One-to-All-Animation](wan-animates.md#one-to-all-animation) similar to WanAnimate support added to Kijai's Wrapper, fp16 and fp8 weights uploaded to HF
@@ -7,8 +9,6 @@
 2025.12.09 [Wan-Move](wan-move.md) released and received initial support in the Wrapper
 
 2025.12.07 Context Windows [PR](what-plugs-where/context-windows.md#20251207) merged to main branch in ComfyUI improving Context Windows support on native
-
-2025.12.06 [Kandinsky-5](k5.md) Pro video AI model (5sec I2V, 5sec T2V, 10sec T2V) released 2025.11.14 is now supported in ComfyUI native thanks to Kijai's contribution
 
 2025.12.06 A [number](extra-tools/other-image-models.md) of image generation models have been released in December 2025 which failed to gain a lot of attention: 
 LongCat (now all of image/image edit/video), Ovis 7B
