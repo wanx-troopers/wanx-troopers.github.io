@@ -1,5 +1,9 @@
 # Hunyuan
 
+## 2025.12.10
+
+PR [11212](PR [https://github.com/comfyanonymous/ComfyUI/pull/11212) merged to ComfyUI native fixing burn-out issue with Hunyuan 1.5 distilled and possibly SR (upscaler) models.
+
 ## 2025.12.05
 
 Distilled version of 480 model released by Tencent and repackaged for Comfy:

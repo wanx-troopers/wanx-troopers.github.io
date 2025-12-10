@@ -19,3 +19,5 @@ The model already has some support in [kijai/ComfyUI-WanVideoWrapper](https://gi
 - `WanVideo Add WanMove Tracks`, `WanVideo Draw WanMove Tracks`
 - model weights, 16Gb: [HF:Kijai/WanVideo_comfy_fp8_scaled:WanMove](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main/WanMove)
 - [example workflow](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_WanMove_I2V_example_01.json)
+
+> T2V LoRA worked

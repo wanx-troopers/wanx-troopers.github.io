@@ -39,3 +39,7 @@ Text editing similar to Nano Banana (dataset [visualizer](https://snazzy-selkie-
 
 [PuLID](https://huggingface.co/guozinan/PuLID) ?
 
+## Notable LoRA-s
+
+- [HF:dx8152/Qwen-Edit-2509-Light-Migration](https://huggingface.co/dx8152/Qwen-Edit-2509-Light-Migration) relight / light-migration for QIE 2509; [examples](https://x.com/dx8152/status/1997124533116141818?s=46)
+
