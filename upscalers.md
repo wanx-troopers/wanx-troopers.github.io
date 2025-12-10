@@ -34,8 +34,6 @@ Mads:
 
 Can use with Cinescale lora and possibly with [RoPE Scaling](hidden-knowledge.md#rope)
 
-### FlashVSR v1.1
-
 > The new Flash VSR 1.1 upscaler is significantly better than v1;
 > `Image Median Blur` size=4;
 > `FlashVSR_Ultra_Fast` model=FlashVSR-v1.1 mode=tiny scale=2;
@@ -46,7 +44,10 @@ Can use with Cinescale lora and possibly with [RoPE Scaling](hidden-knowledge.md
 
 > new vsr model works in kj wr but its bad
 
-FlashVSR "ultra fast": [link](https://github.com/lihaoyun6/ComfyUI-FlashVSR_Ultra_Fast)
+Implementations:
+
+- [GH:filliptm/ComfyUI_Fill-Nodes](https://github.com/filliptm/ComfyUI_Fill-Nodes)
+- [lihaoyun6/ComfyUI-FlashVSR_Ultra_Fast](https://github.com/lihaoyun6/ComfyUI-FlashVSR_Ultra_Fast)
 
 ### Wiring FlashVSR
 

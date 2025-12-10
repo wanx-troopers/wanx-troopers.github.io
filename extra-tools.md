@@ -52,7 +52,7 @@ as well as other nodes for examining videos, taking last N frames, creating late
 - `Video Info` from [Kosinkadink/ComfyUI-VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite) + `Preview Any` to debug dimension errors in ComfyUI etc
 
 ## Ckinpdx
-                                                                                                                                                                         a
+
 [Ckinpdx](https://github.com/ckinpdx) a passionate AI artist has shared [GH:ckinpdx/ComfyUI-WanKeyframeBuilder](https://github.com/ckinpdx/ComfyUI-WanKeyframeBuilder) repository.
 
 ### Ckinpdx Wan Keyframe Builder (Continuation)
@@ -73,6 +73,10 @@ Sample [wf](screenshots/ck-magic-workflow.png).
 Use this node to split audio between generation runs which produce various parts of the video with HuMo.
 Use `Trim Audio Duration` as shown to remove duplicate part of audio before re-assembling the video.
 
+### Ckinpdx WanSoundTrajectory
+
+Build paths to feed into [Wan-Move](wan-move.md) based on music beats:
+[GH:ckinpdx/ComfyUI-WanSoundTrajectory](https://github.com/ckinpdx/ComfyUI-WanSoundTrajectory).
 
 ## Misc
 

@@ -7,6 +7,9 @@ Any sampler with "SDE" in the name is adding its own noise on each step. SDE = s
 
 `WanVideo TextEncoder Cached` from Wrapper is the smart and fast text encoder for repeated runs caching encoded prompt on disk.
 
+> upscale first (seedvr) then rife or vice versa?
+> upscale first. Rife is fast, or at least Fill's [implementation](vfi.md#rife) of it
+
 ## 2025.12.07
 
 `quantization` which can be set to values like `fp8_e5m2_scaled` in `WanVideo Model Loader`
