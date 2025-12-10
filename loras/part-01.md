@@ -84,7 +84,7 @@ Users chatting:
 
 | Repo | Lora | Generation | Approx. Released | Comment |
 | --- | --- | --- | --- | --- |
-| [HF:Kijai/WanVideo_comfy:LoRAs/rCM](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/LoRAs/rCM/Wan22-I2V-A14B-HIGH-rCM6_0_lora_rank_64_bf16.safetensors) | Wan22-I2V-A14B-HIGH-rCM6_0_lora_rank_64_bf16 | 2.2 I2V High | 2025.12.09 | From NVidia |
+| [HF:Kijai/WanVideo_comfy:LoRAs/rCM](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/LoRAs/rCM/Wan22-I2V-A14B-HIGH-rCM6_0_lora_rank_64_bf16.safetensors) | Wan22-I2V-A14B-HIGH-rCM6_0_lora_rank_64_bf16 | 2.2 I2V High/Low | 2025.12.09 | From NVidia |
 | [HF:Kijai/WanVideo_comfy:LoRAs/Wan22_Lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Wan22_Lightx2v) | Wan\_2\_2\_I2V\_A14B\_HIGH\_lightx2v\_4step\_lora\_v1030_rank_64_bf16 | 2.2 I2V High | 2025.10.30 | new and reportedly much better with prompt adherence <br>Artist: "to be honest I stopped using this lora as I'm getting color and light shifts with it" <br>remains the most recommended I2V high LoRa |
 | [HF:lightx2v/Wan2.2-Distill-Loras](https://huggingface.co/lightx2v/Wan2.2-Distill-Loras/tree/main) | wan2.2\_i2v\_A14b\_high\_noise\_lora\_rank64\_lightx2v\_4step\_1022 | 2.2 I2V High | 2025.10.22 | superceeded by 1030 |
 | [HF:lightx2v/Wan2.2-Distill-Loras](https://huggingface.co/lightx2v/Wan2.2-Distill-Loras/tree/main) | wan2.2\_i2v\_A14b\_low\_noise\_lora\_rank64\_lightx2v\_4step\_1022 | 2.2 I2V Low | 2025.10.22 | - |
