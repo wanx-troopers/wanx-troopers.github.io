@@ -2,6 +2,10 @@
 
 The page needs a brush-up. Bugs referenced have been fixed or worked around. Still might be useful info.
 
+## 2025.12.10
+
+> B200 and onward is so good is because they have a giant L2 cache so cache issues are lowered
+
 ## 2025.12.06
 
 > would you recommend migrating to 2.9.1 ? yes

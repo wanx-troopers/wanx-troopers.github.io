@@ -1,5 +1,10 @@
 # Hidden Knowledge
 
+## 2025.12.10
+
+Any sampler with "SDE" in the name is adding its own noise on each step. SDE = stochastic differential equation.
+> Pretty much in comfy sde means "add noise every step". There are other ways to solve an SDE but not in comfy.
+
 ## 2025.12.07
 
 `quantization` which can be set to values like `fp8_e5m2_scaled` in `WanVideo Model Loader`
