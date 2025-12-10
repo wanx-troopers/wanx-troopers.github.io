@@ -1,5 +1,9 @@
 # Wan-Move
 
+Kijai's PR [11247](https://github.com/comfyanonymous/ComfyUI/pull/11247) to add Wan Move support to ComfyUI native.
+
+## Summary
+
 [HF:Ruihang/Wan-Move-14B-480P](https://huggingface.co/Ruihang/Wan-Move-14B-480P) features all-new and shiny Wan-Move model.
 The model provides abilities reminiscent of ATI and VACE. In essence the motion is taken from driving video and applied to a starting image.
 Driving motion can be supplied as a simple moving dot.
