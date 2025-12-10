@@ -14,6 +14,8 @@ Wan 2.1 version of this LoRa combines SVI-shot and SVI-film functionality:
   - 4 extra mask channels: mask only initial 1 frame - which is very surprising 
 
 Wan 2.2 version 2 of SVI lora is the new incarnation of SVI-shot: it supports 1 motion frame only.
+Motion frame = overlap with previous clip.
+At the same time [Drozbay](hidden-knowledge.md#drozbay) reported success with 3 motion frames and artifacts above that with SVI 2.0.
 
 [Explanation](https://github.com/kijai/ComfyUI-WanVideoWrapper/issues/1718#issuecomment-3620023495) from the makers of SVI 2.0.
 
