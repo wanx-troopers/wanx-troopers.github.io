@@ -7,6 +7,13 @@
 ## Nodes For Working With Sigmas In Kijai's Wrapper
 
 `WanVideo Sigma To Step` if you supply a floating point value like 0.9 you can plug this into `end_step` input of `WanVideo Scheduler` and it will be treated as sigma, not step.
+Explanation about `WanVideo Scheduler`:
+
+> you only need to connect the scheduler output,
+> rest aren't even used but are there so you can
+> connect them to the sampler to indicate those
+> all are controlled by the scheduler node
+
 
 ```
 WanVideo Sigma To Step

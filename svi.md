@@ -17,6 +17,9 @@ Wan 2.2 version 2 of SVI lora is the new incarnation of SVI-shot: it supports 1 
 Motion frame = overlap with previous clip.
 At the same time [Drozbay](hidden-knowledge.md#drozbay) reported success with 3 motion frames and artifacts above that with SVI 2.0.
 
+> testing out this svi/2.2 stuff having a hard time getting the camera to move, track the person, etc;
+> quick 2 cents on svi.. meh.. for static shots it might work well
+
 [Explanation](https://github.com/kijai/ComfyUI-WanVideoWrapper/issues/1718#issuecomment-3620023495) from the makers of SVI 2.0.
 
 ComfyUI testing ongoing.

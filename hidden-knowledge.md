@@ -5,6 +5,8 @@
 `quantization` which can be set to values like `fp8_e5m2_scaled` in `WanVideo Model Loader`
 is there to downcasts the weights to a lower precision when possible.
 
+> resolution doesn't affect RAM usage, only the model size and loras do
+
 ## 2025.12.03
 
 [Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) contains `Wan Video Prompt Extender` node; it uses [Qwen2.5](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Qwen) 3B or 7B from KJ HF.
