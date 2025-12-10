@@ -1,4 +1,4 @@
-# Z-Image-Turbo
+﻿# Z-Image-Turbo
 
 ## 2025.12.06
 
@@ -66,6 +66,31 @@ If using an LLM the project recommends using "Qwen3-0.5B through Qwen3-235B" bec
 
 Then there are other projects which do make use of LLM-s to help generate the prompt.
 One is discussed [here](https://www.reddit.com/r/StableDiffusion/comments/1parzxf).
+
+## Qwen-3B Layers
+
+Qwen-3B has been described as passing the text through the following layers
+
+```
+Input tokens
+      ↓
+  [Embedding layer]
+      ↓
+  Layer 1  (-36)  ← earliest, closest to raw input
+  Layer 2  (-35)
+  ...
+  Layer 18 (-19)  ← middle
+  ...
+  Layer 35 (-2)   ← Z-Image default
+  Layer 36 (-1)   ← LAST, just before vocab projection
+      ↓
+  [LM Head → logits → token prediction]
+```
+
+By default z-image-turbo is getting Qwen-3B output from the line marked with -1.
+However it is technically possible to modify ComfyUI code such that the image is produced based on Qwen3 output from any of the earlier layers.
+Some of them result in gibberish but many will result in images, different from the one we get by default.
+We probably should expect it to be implemented - some time soon?..
 
 ## Older
 

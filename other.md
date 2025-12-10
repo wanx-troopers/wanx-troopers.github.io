@@ -1,5 +1,8 @@
 # Other Things to Check Out
 
+* [GH:chengzhag/UCPE](https://github.com/chengzhag/UCPE) Unified Camera Positional Encoding for Controlled Video Generation
+* [GH:knightyxp/VideoCoF](https://github.com/knightyxp/VideoCoF) Unified Video Editing with Temporal Reasoner
+
 * [GH:westNeighbor/ComfyUI-ultimate-openpose-editor:issues-31](https://github.com/westNeighbor/ComfyUI-ultimate-openpose-editor/issues/31) issue about open poser node being broken to the point of ComfyUI crashing
 * [GH:maybleMyers/H1111/tree/svi] non-ComfyUI way to generate videos using Wan models with SVI 2.0 LoRA-s
 
