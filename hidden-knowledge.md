@@ -1,11 +1,11 @@
-# Hidden Knowledge
+ï»¿# Hidden Knowledge
 
 ## 2025.12.11
 
 > positive and negative [prompt] are two different model passes;
 > NAG is additional attention in the positive pass;
 > NAG is a lot less powerful than a true negative prompt because
-> it doesn’t take into account the MLP blocks in the same way,
+> it doesn't take into account the MLP blocks in the same way,
 > so it should probably be a more simple negative [prompt?]
 
 ![NAG](screenshots/kj-nag.webp)
