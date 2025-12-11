@@ -1,5 +1,10 @@
 # Other Things to Check Out
 
+* [1038lab/ComfyUI-QwenVL](https://github.com/1038lab/ComfyUI-QwenVL) node to use qwen vl 3 for generating image and video prompts; [tutorial](https://www.youtube.com/watch?v=3j9c_-mRKfg)
+* [GH:dagthomas/comfyui_dagthomas?tab=readme-ov-file#-qwenvl-nodes-local-vision](https://github.com/dagthomas/comfyui_dagthomas?tab=readme-ov-file#-qwenvl-nodes-local-vision) node for running QwenVL locally
+
+* [SpatialTracerV2](https://spatialtracker.github.io/)
+
 * [GH:chengzhag/UCPE](https://github.com/chengzhag/UCPE) Unified Camera Positional Encoding for Controlled Video Generation
 * [GH:knightyxp/VideoCoF](https://github.com/knightyxp/VideoCoF) Unified Video Editing with Temporal Reasoner
 
@@ -18,7 +23,6 @@
 * [Steady Dancer](https://mcg-nju.github.io/steadydancer-web/) now with basic ComfyUI support
 * [Infinity Rope](https://infinity-rope.github.io/) based on Wan 1.3B so not paticularly powerful but holds promise for future
 
-* [1038lab/ComfyUI-QwenVL](https://github.com/1038lab/ComfyUI-QwenVL) node to use qwen vl 3 for generating image and video prompts; [tutorial](https://www.youtube.com/watch?v=3j9c_-mRKfg)
 * [1038lab/ComfyUI-WildPromptor](https://github.com/1038lab/ComfyUI-WildPromptor)
 
 * [GH:PozzettiAndrea/ComfyUI-MotionCapture](https://github.com/PozzettiAndrea/ComfyUI-MotionCapture) [reddit intro](https://www.reddit.com/r/StableDiffusion/comments/1p4pkbk/release_comfyuimotioncapture_full_3d_human_motion/) full human body 3d motion capture

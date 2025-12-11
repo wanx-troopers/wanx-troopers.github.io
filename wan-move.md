@@ -5,6 +5,8 @@ Kijai's PR [11247](https://github.com/comfyanonymous/ComfyUI/pull/11247) to add 
 
 ![kj-wan-move-native](screenshots/kj-wan-move-native.webp)
 
+![kj-wan-move.webp](screenshots/kj-wan-move.webp)
+
 ## Summary
 
 [HF:Ruihang/Wan-Move-14B-480P](https://huggingface.co/Ruihang/Wan-Move-14B-480P) features all-new and shiny Wan-Move model.
