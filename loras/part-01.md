@@ -25,6 +25,10 @@ Links to download both of the LoRA-s mentioned above are bellow on this page - i
 > lcm-beta?
 > in the wrapper there's the `flowmatch_distill`
 
+> at least one step with cfg makes such a difference
+
+"with cfg" means with cfg greater than 1, cfg of 1 disables it; generation step with cfg greater than 1 takes 2x time compared to a step with 1 ("without cfg"), therefore often just the very 1st step is done with cfg > 1
+
 ## 2025.11.23
 
 FL13 three sampler setup for Wan 2.2 I2V

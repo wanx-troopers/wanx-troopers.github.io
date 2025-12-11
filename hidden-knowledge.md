@@ -6,7 +6,12 @@
 > NAG is additional attention in the positive pass;
 > NAG is a lot less powerful than a true negative prompt because
 > it doesn't take into account the MLP blocks in the same way,
-> so it should probably be a more simple negative [prompt?]
+> so it should probably be a more simple negative [prompt]
+
+> In general when it comes to NAG, the NAG negative prompt should be much simpler and only have things you don't want to see, it shouldn't be the generic negative prompt word salad
+
+> NAG is not used when cfg is used;
+> For the steps that use cfg, the empty prompt would be used
 
 ![NAG](screenshots/kj-nag.webp)
 

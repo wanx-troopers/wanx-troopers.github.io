@@ -145,8 +145,6 @@ ffv1 format for storing videos - claims to be lossless and allows to store in rg
 
 > nvtop best tool to monitor VRAM for Linux
 
-> In general when it comes to NAG though, the NAG negative prompt should be much simpler and only have things you don't want to see, it shouldn't be the generic negative prompt word salad
-
 > Q: is there any 'control' tech that hooks into wan i2v?   
 > A: ATI is one; well its a whole model, but i2v based   
 > A: unianimate can also be hooked to any I2V  
