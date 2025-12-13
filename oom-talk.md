@@ -21,3 +21,11 @@ Another artist:
 > apparently torch 2.9.1 cu130 was the solution
 
 No memory leak on CUDA 12.8 either
+
+A non-Kijai method of swapping model weights between VRAM and RAM  
+![distorch_node](screenshots/ds-distorch_node.webp)
+
+ComfyUI should be organising a similar swap internally; `--reserve-vram 1` or `--reserve-vram 0.5`
+is one way to help CopmfyUI manage VRAM optimally. What this does is it tells ComfyUI not to
+use the last 1 or 0.5Gb of VRAM leaving it for operating system and for Comfy's own emergencies
+when despite its best efforts it ends up trying to allocate more VRAM than is available.

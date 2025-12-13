@@ -1,5 +1,9 @@
 # News
 
+2025.12.13 [preview](screenshots/kj-wrapper-v2-preview.webp) of Kijai's V2 nodes for wrapper; main idea is to make the list of inputs on the sampler shorter
+
+2025.12.13 Work started in integrating [SCAIL](wan-animates.md#scail), a WanAnimate analogue capable of generating two characters according to pose skeletons; pose detection not ready yet
+
 2025.12.06 [Kandinsky-5](k5.md) Pro video AI model (5sec I2V, 5sec T2V, 10sec T2V) released 2025.11.14 and now supported in ComfyUI native have received official distillations
 
 2025.12.09 NVidia released Wan 2.2 I2V [rCM](loras/part-01.md#22-i2v) speed LoRA

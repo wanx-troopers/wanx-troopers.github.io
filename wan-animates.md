@@ -5,7 +5,6 @@ Wan Animate and MoCha serve similar goals.
 ## SCAIL
 
 SCAIL is a new model similar to WanAnimate but able of handling two characters at once.
-The weights of the "preview" version were published by authors and then removed from HuggingFace.
 Kijai is working on itegrating the mode in [SCAIL](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/SCAIL)
 branch of `ComfyUI-WanVideoWrapper` repository. The work is not yet complete
 
@@ -21,6 +20,8 @@ Model [weights](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main
 > because the model has separate patch embed for pose, it doesn't have to match in resolution, but in the code currently either full or half size only are supported 
 
 > for SCAIL the lightx2v 2.1 I2V
+
+> it's I2V model basically, but input channels are 20
 
 ## One To All Animation
 

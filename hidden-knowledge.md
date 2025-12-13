@@ -1,15 +1,5 @@
 ﻿# Hidden Knowledge
 
-## 2025.12.13
-
-Kijai is preparting a series of V2 nodes for the Wrapper.
-Here's a peek preview of `WanVideo Scheduler V2`
-
-![scheduler-v2](screenshots/kj-scheduler-v2.webp)
-
-Note that the on top `WanVideo Scheduler V2` sigma schedule coming through `sigmas` input is overriding values set on `WavVideo Scheduler V2` itself.
-Apparently this is a standard behaviour in ComfyUI that `sigmas` input via a noodle override those that the node itself would have produced
-
 ## 2025.12.12
 
 > Clowshark samplers carry additional information such as conditioning and model along with the LATENT.
@@ -49,6 +39,14 @@ Any sampler with "SDE" in the name is adding its own noise on each step. SDE = s
 
 `quantization` which can be set to values like `fp8_e5m2_scaled` in `WanVideo Model Loader`
 is there to downcasts the weights to a lower precision when possible.
+
+`quantization` of `fp8_e5m2` without `scaled` is "the worst way to use the model".
+
+`quantization` generally is "just a fallback", it is slower to load;
+if VRAM is tight the advice is to "either use scaled fp8 or GGUF
+or "disable quantization and use max block swap".
+
+Mixing `fp8_e5m2_scaled` VACE with `fp8_e5m2` Wan 2.2 T2V can cause mysterious errors.
 
 > resolution doesn't affect RAM usage, only the model size and loras do
 

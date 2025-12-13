@@ -1,5 +1,7 @@
 # Other Things to Check Out
 
+* [GH:Moooonet/ComfyUI-Align](https://github.com/Moooonet/ComfyUI-Align) tools to help ComfyUI align and color nodes
+
 * [1038lab/ComfyUI-QwenVL](https://github.com/1038lab/ComfyUI-QwenVL) node to use qwen vl 3 for generating image and video prompts; [tutorial](https://www.youtube.com/watch?v=3j9c_-mRKfg)
 * [GH:dagthomas/comfyui_dagthomas?tab=readme-ov-file#-qwenvl-nodes-local-vision](https://github.com/dagthomas/comfyui_dagthomas?tab=readme-ov-file#-qwenvl-nodes-local-vision) node for running QwenVL locally
 

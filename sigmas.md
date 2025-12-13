@@ -1,6 +1,6 @@
 # Sigmas
 
-## 2025.12.13
+## 2025.12.13 Part A
 
 Kijai is preparing V2 series of nodes for ComfyUI. Here's a peek preview of `WanVideo Scheduler v2`:
 
@@ -32,6 +32,14 @@ Some of the nodes `WanVideo Scheduler v2` being one of them and ClownShark nodes
 set both together, as actually does Automatic111 UI.
 
 This even leads to a terminological mixup between these two terms with "scheduler" and "sampler" sometimes used almost interchangeably to refer to the same thing.
+
+## 2025.12.13 Part B
+
+Scheduler "beta" works very differently in Wrapper and in Native
+
+> in diffusers [and in wrapper?] beta sigmas are applied after shift, while in comfy it's other way around
+
+![scheduler-beta](screenshots/kj-scheduler-beta.webp)
 
 ## Intro
 
