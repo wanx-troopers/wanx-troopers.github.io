@@ -1,6 +1,6 @@
 # Wan T2V Advanced
 
-Note: [Wan VACE](wan-vace.md) page contains initial information on constructing Wan VACE workflows, both native and wrapper.
+Note: [Wan Wiring](wan-wiring.md) page contains initial information on constructing Wan VACE workflows, both native and wrapper.
 This page contains additional/advanced examples.
 
 [drozbay](hidden-knowledge.md#drozbay) has shared the following advanced VACE workflows relying on his

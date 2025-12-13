@@ -1,14 +1,13 @@
-# Wan VACE
+# Wan Wiring 
 
-This page collects initial knowledge on constructing Wan VACE workflows.
-Very similar workflows apply both to VACE 2.1 and Wan 2.2 Fun Vace.
+This page collects initial knowledge on constructing Wan workflows: mostly VACE but also I2V.
+
+## VACE
 
 VACE is an additional AI model that works in tandem with Wan T2V.
 VACE 2.1 consists of a single `.safetensors` file.
 VACE 2.2 - fully named Fun Vace 2.2 - consists of two `.safetensors` files - high and low -
 which are used together with high and low Wan 2.2 T2V `.safetensor` files respectively.
-
-## Facts
 
 > To do vace inpainting before you need masks set but also the mask reflected on the input at 127 gray
 
@@ -18,6 +17,8 @@ VACE accepts more than one control video. To do this chain multiple VACE embeds 
 To give WAN more creative freedom while still using VACE set `vace_end_percent` to less than `1`.
 This will allow final steps to do sampling without VACE control after VACE has established overall shape of the video.
 Presently exposed on wrapper node but not on native node.
+
+Workflows for VACE 2.1 and Wan 2.2 Fun Vace are very similar.
 
 ## Native
 
@@ -125,5 +126,7 @@ Here is a slightly non-traditional way to build masks. Please note that actual v
 
 ## See Also
 
-[Wan T2V Advanced](wan-t2v-advanced.md)
-
+- [Wan Masking](wan-masking.md)
+- [Context Windows](what-plugs-where/context-windows.md)
+- [Wan I2V Advanced](wan-i2v-advanced.md)
+- [Wan T2V Advanced](wan-t2v-advanced.md)
