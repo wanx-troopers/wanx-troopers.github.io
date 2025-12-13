@@ -2,6 +2,17 @@
 
 Wan Animate and MoCha serve similar goals.
 
+## SCAIL
+
+SCAIL is a new model similar to WanAnimate but able of handling two characters at once.
+The weights of the "preview" version were published by authors and then removed from HuggingFace.
+Kijai is working on itegrating the mode in [SCAIL](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/SCAIL)
+branch of `ComfyUI-WanVideoWrapper` repository. The work is not yet complete
+
+> the pose predictor uses 3D and stuff, probably will have to be separate repo,
+> though it's just pyrender and that's not too bad;
+> it uses "warm" on right side and "cool" on left side, which seems important
+
 ## One To All Animation
 
 ### 2025.12.09
