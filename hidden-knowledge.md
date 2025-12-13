@@ -1,9 +1,22 @@
 ﻿# Hidden Knowledge
 
+## 2025.12.13
+
+Kijai is preparting a series of V2 nodes for the Wrapper.
+Here's a peek preview of `WanVideo Scheduler V2`
+
+![scheduler-v2](screenshots/kj-scheduler-v2.webp)
+
+Note that the on top `WanVideo Scheduler V2` sigma schedule coming through `sigmas` input is overriding values set on `WavVideo Scheduler V2` itself.
+Apparently this is a standard behaviour in ComfyUI that `sigmas` input via a noodle override those that the node itself would have produced
+
 ## 2025.12.12
 
 > Clowshark samplers carry additional information such as conditioning and model along with the LATENT.
 > It only changes when you manually change it.
+
+Great tool to help understand nodes and workflows:  
+![preview-as-text.webp](screenshots/kj-preview-as-text.webp)
 
 ## 2025.12.11
 

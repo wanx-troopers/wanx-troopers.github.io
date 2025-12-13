@@ -7,6 +7,12 @@ PR [11208](https://github.com/comfyanonymous/ComfyUI/pull/11208) by Drozbay to a
 Full sample workflow from Drozbay with explanations: [link](https://github.com/drozbay/ComfyUI-WanVaceAdvanced?tab=readme-ov-file#context-windows-workflow).
 The workflow demonstrates advanced use of Context Windows with VACE, driving pose video and a Phantom reference.
 
+He just updated [RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF) to handle latent masking correctly with context windows. 
+
+> substep samplers definitely don't work with context windows, that would need more work
+
+Note: `skip_final_model_call` option needs to be set.
+
 [HuMo](../humo.md) is also supported via ContextWindows including HuMo references.
 It is hoped [MAGREF](../phantom-magref.md#magref) references might be working too (not tested).
 

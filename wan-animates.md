@@ -13,6 +13,10 @@ branch of `ComfyUI-WanVideoWrapper` repository. The work is not yet complete
 > though it's just pyrender and that's not too bad;
 > it uses "warm" on right side and "cool" on left side, which seems important
 
+Model [weights](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main/SCAIL).
+
+> [pose] doesn't need to be retargeted as badly as other models
+
 ## One To All Animation
 
 ### 2025.12.09
