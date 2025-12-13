@@ -17,6 +17,11 @@ Model [weights](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main
 
 > [pose] doesn't need to be retargeted as badly as other models
 
+> by default the pose is downsampled to half the size, as it's heavy otherwise, and the default res is 895x512;
+> because the model has separate patch embed for pose, it doesn't have to match in resolution, but in the code currently either full or half size only are supported 
+
+> for SCAIL the lightx2v 2.1 I2V
+
 ## One To All Animation
 
 ### 2025.12.09

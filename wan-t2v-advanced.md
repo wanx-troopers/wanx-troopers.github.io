@@ -46,6 +46,12 @@ WIP wf from him: [droz-dancing-man](screenshots/droz-dancing-man.png)
 > My ref image was just the old man with a white background for both Vace and Phantom.
 > The outpainting was handled by Vace entirely and the prompt
 
+## VACE With Qwen Image Edit
+
+[TrentHunter82](https://github.com/TrentHunter82) has shared a workflow that combines Qwen Image Edit with 
+`Wan Vace Keyframe Builder` from his [TrentHunter82/TrentNodes](https://github.com/TrentHunter82/TrentNodes/tree/main)
+node pack: [Keyframe Party-v1](workflows/fs-Keyframe Party-v1.json)
+
 ## See Also
 
 - [Wan Masking](wan-masking.md)

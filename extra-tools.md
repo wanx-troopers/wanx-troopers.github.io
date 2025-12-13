@@ -26,7 +26,8 @@ See also the next section on `Trent Nodes`
 ## Trent Nodes
 
 [TrentHunter82/TrentNodes](https://github.com/TrentHunter82/TrentNodes/tree/main) contains `Cross Dissolve with Overlap` node
-as well as other nodes for examining videos, taking last N frames, creating latent masks and VACE keyframing.
+as well as `WanVace Keyframe Builder` and other nodes for examining videos, taking last N frames, creating latent masks and VACE keyframing.
+See also: [Qwen Edit - VACE](wan-t2v-advanced.md#vace-with-qwen-image-edit).
 
 ## Hunyuan Video Foley
 
