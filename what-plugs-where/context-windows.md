@@ -1,5 +1,32 @@
 # Context Windows
 
+## 2025.12.12
+
+PR [11208](https://github.com/comfyanonymous/ComfyUI/pull/11208) by Drozbay to add hooks to ComfyUI native to run ContextWindows properly.
+[contextwin_vace_251209b](https://github.com/drozbay/ComfyUI/tree/contextwin_vace_251209b) branch in Drozbay's repo with the changes.
+Full sample workflow from Drozbay with explanations: [link](https://github.com/drozbay/ComfyUI-WanVaceAdvanced?tab=readme-ov-file#context-windows-workflow).
+The workflow demonstrates advanced use of Context Windows with VACE, driving pose video and a Phantom reference.
+
+[HuMo](../humo.md) is also supported via ContextWindows including HuMo references.
+It is hoped [MAGREF](../phantom-magref.md#magref) references might be working too (not tested).
+
+It has generally been observed that while
+
+- S2V
+- [HunyuanVideo1.5](../hunyuan.md)
+- potentially [Kandinsky-5](../k5.md)
+- VACE with strong driving guidance
+
+work well with ContextWindows in general case it is challenging to avoid background shifting between windows.
+
+> it just generally works good if the camera doesn't move and where background is either not important or controlled by something
+> the "trick" of using single frame for Uni3C for example makes it far more stable
+
+> With Vace you can just mask the background of an existing video for inpainting for example, which prevents it from changing
+
+Note: [Wan Animate](../wan-animates.md#wan-animate) and [Infinite Talk](../infinite-talk.md) have their own mechanisms to keep extending videos.
+They are not implemented via Context Windows.
+
 ## 2025.12.08
 
 There is reasonably hope that [drozbay](https://github.com/drozbay)'s changes in some time
@@ -73,10 +100,7 @@ https://github.com/drozbay/ComfyUI/tree/contextwin_vace_251208a
 
 ## Earlier
 
-Enables batched video generation. Remain somewhat experimental. Known to work with the following models: 
-* [Wan Animate](../wan-animates.md#wan-animate) ??
-* [MAGREF](../phantom-magref.md#magref) ??
-* ...
+Enables batched video generation. Remain somewhat experimental.
 
 Status of using `WanVideo Context Options` on regular Wan 2.2 workflows:
 > Q: Any improvement to context windows for Wan 2.2 i2v and t2v?  

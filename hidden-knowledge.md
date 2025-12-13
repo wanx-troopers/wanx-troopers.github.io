@@ -1,5 +1,10 @@
 ﻿# Hidden Knowledge
 
+## 2025.12.12
+
+> Clowshark samplers carry additional information such as conditioning and model along with the LATENT.
+> It only changes when you manually change it.
+
 ## 2025.12.11
 
 > positive and negative [prompt] are two different model passes;
