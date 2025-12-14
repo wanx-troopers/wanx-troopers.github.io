@@ -23,7 +23,10 @@ Very different from usual
 
 ## Uni3C
 
-Camera control for Wan 2.1 (hmm which one?..)
+Camera control for Wan 2.1 (hmm which one?..).
+Works with [SCAIL](wan-animates.md#scail):
+
+![uni3c](screenshots/uni3c.webp)
 
 ## Q/A
 

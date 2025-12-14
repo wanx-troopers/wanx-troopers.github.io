@@ -1,5 +1,15 @@
 ﻿# Hidden Knowledge
 
+## 2025.12.14
+
+`fp8_fast` mode in `WanVideo Model Loader` is good.
+
+> the wrapper doesn't handle [VRAM offloading] so well as native does;
+> native calculates the amount that needs offloading;
+> wrapper just offloads everything
+
+`LoraExtractKJ` from `KJNodes` will not work on fp8.
+
 ## 2025.12.12
 
 > Clowshark samplers carry additional information such as conditioning and model along with the LATENT.
@@ -246,6 +256,7 @@ Kijai's nodes can convert between data types such as `bf16` at `safetensors` loa
 | [kijai/ComfyUI-WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess) | Nodes for Kijai's WanAnimate workflow |
 | [kijai/ComfyUI-MMAudio](https://github.com/kijai/ComfyUI-MMAudio) | Foley? |
 | [kijai/ComfyUI-GIMM-VFI](https://github.com/kijai/ComfyUI-GIMM-VFI) | frame interpolator |
+| [kijai/ComfyUI-SCAIL-Pose](https://github.com/kijai/ComfyUI-SCAIL-Pose) | pose detector for [SCAIL](wan-animates.md#scail) model |
 
 Resolutions to try with WAN: 1536x864, 1280x768, 1200x960, 1/2 of that, 832x480, 1024x576, 1440x816  
 Resolutions to try with Ovi v1.1: 1280x704, 704x1280

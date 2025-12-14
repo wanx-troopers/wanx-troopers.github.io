@@ -11,6 +11,18 @@ Wan-Move support has been added to native ComfyUI. New nodes:
 
 ![kj-wan-move-sample](screenshots/kj-wan-move-sample.webp)
 
+To add a stationary point:
+
+![add-new-single-point](screenshots/wan-move/add-new-single-point.webp)
+
+Splitting splines between generations to facilitate continuations: `GetTracksRange` node from `KJNodes`:
+
+![get-tracks-range](screenshots/wan-move/get-tracks-range.webp)
+
+Idea: use [SVI-film](svi.md#svi-film) with it? The one with 5 frames overlap, Not SVI 2.0.
+
+Works with [Context Windows](what-plugs-where/context-windows.md).
+
 ## Summary
 
 [HF:Ruihang/Wan-Move-14B-480P](https://huggingface.co/Ruihang/Wan-Move-14B-480P) features all-new and shiny Wan-Move model.
@@ -29,3 +41,4 @@ The model already has some support in [kijai/ComfyUI-WanVideoWrapper](https://gi
 
 > T2V LoRA worked
 
+> WanMove is technically identical to Wan 2.1 I2V

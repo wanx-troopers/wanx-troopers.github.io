@@ -27,6 +27,8 @@ Note: `ZImageUSD` there is an `Ultimate SD Upscaler` workflow with Z-Image-Turbo
 > ust 2 methods of getting to a 2MP image - 1) Via 1k + 2x Latent Upscale and 2) via native 1920 gen in the first place;
 > 1920 might be stretching abilities of the model
 
+> lower ETA to get more noise/texture,  and higher denoise will increase realism [in an upscaling wf]
+
 Possible alternative VAE trained on 4k images and possibly delivering a bit more detail: [UltraFlux VAE](https://huggingface.co/Owen777/UltraFlux-v1/tree/main/vae); though reactions are not fantastic.
 
 ## 2025.12.10
@@ -129,6 +131,11 @@ We probably should expect it to be implemented - some time soon?..
 
 - [detail-slider](https://civitai.com/models/2202638/detail-slider-for-z-image) note: strength can be -2 to +2, greater values mean more details
 - [detaildeamonz](https://civitai.com/models/2209262/detaildeamonz-sliderlora-for-zimageturbo-and-redz15) note: strength can be -2 to +2, greater values mean less details
+
+Iceb LoRAs
+
+- https://civitai.com/models/2185167/midjourney-luneva-cinematic-lora-and-workflow
+- https://civitai.com/models/2215818/luneva-cyber-hd-enhancer
 
 ## See Alos
 

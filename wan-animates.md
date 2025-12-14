@@ -4,6 +4,25 @@ Wan Animate and MoCha serve similar goals.
 
 ## SCAIL
 
+### SCAIL 2025.12.14
+
+> it's I2V model basically, but input channels are 20
+
+When using `uni3c` with SCAIL we may need 4 more frames in `Uni3C` guidance because "scail ref takes one latent".
+
+> 4 more frames at the very beginning right? yes;
+> 4 more empty frames? 4 more anything
+
+After latest updates SCAIL is working with [Uni3C](control.md#uni3c).
+
+Single-person pose detection working. Add [kijai/ComfyUI-SCAIL-Pose](https://github.com/kijai/ComfyUI-SCAIL-Pose) code repository, [workflow](workflows/scail/single-person-pose-detection.webp), [workflow again](workflows/scail/SCAIL_test_wf_02.json).
+
+> the pose input need to be half the resolution of the main input;
+> the whole thing is in same input sequence, [ref, noise, poses]
+> that's why it's downscaled too, to halve that impact
+
+### SCAIL Summary
+
 SCAIL is a new model similar to WanAnimate but able of handling two characters at once.
 Kijai is working on itegrating the mode in [SCAIL](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/SCAIL)
 branch of `ComfyUI-WanVideoWrapper` repository. The work is not yet complete
@@ -20,8 +39,6 @@ Model [weights](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main
 > because the model has separate patch embed for pose, it doesn't have to match in resolution, but in the code currently either full or half size only are supported 
 
 > for SCAIL the lightx2v 2.1 I2V
-
-> it's I2V model basically, but input channels are 20
 
 Official SCAIL code is relying on [Neural Localizer Fields](https://github.com/isarandi/nlf) model to derive human pose from existing videos.
 That is the part that is not yet implemented in Comfy. `.pt` file for the model available from [GH:isarandi/nlf/releases](https://github.com/isarandi/nlf/releases).

@@ -1,6 +1,6 @@
 # News
 
-2025.12.14 [Wan-Move](wan-move.md) released and officially added to native ComfyUI
+2025.12.14 [Wan-Move](wan-move.md) released and officially added to native ComfyUI; confirmed to work with [Uni3C](control.md#uni3c) camera control; works with [Context Windows](what-plugs-where/context-windows.md)
 
 2025.12.13 Hugely popular [Z-Image-Turbo](extra-tools/z-image.md) 6B image generation model which has had a working ControlNet implementations in ComfyUI since 2025.12.03
 has now received a `Union 2.0` ControlNet upgrade adding inpainting ability
