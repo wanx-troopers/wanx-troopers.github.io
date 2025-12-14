@@ -26,7 +26,7 @@ Model [weights](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main
 Official SCAIL code is relying on [Neural Localizer Fields](https://github.com/isarandi/nlf) model to derive human pose from existing videos.
 That is the part that is not yet implemented in Comfy. `.pt` file for the model available from [GH:isarandi/nlf/releases](https://github.com/isarandi/nlf/releases).
 
-> NLF model license ... means you can't use it ... in commercial capacity
+> NLF model license ... means you can't use it ... in commercial capacity ... research only license
 
 ## One To All Animation
 

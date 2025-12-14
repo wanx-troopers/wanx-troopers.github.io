@@ -9,6 +9,8 @@ ControlNet Union support for Z-Image-Turbo is present in ComfyUI.
 Despite "ControlNet" name technically this is closer to VACE than to ControlNet-s of the past.
 The new `Controlnet-Union` supports Pose, Canny, Hed, and Depth guidance.
 
+One more alternative CLIP for z-image-turbo: [BennyDaBall/qwen3-4b-Z-Image-Engineer](https://huggingface.co/BennyDaBall/qwen3-4b-Z-Image-Engineer)
+
 [VRGameDevGirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl) has shared
 a powerful upscaling workflow using Z-Image-Turbo with Union Controlnet (`AnyImageZImageUpscaleWithCN.json`)
 along with other workflows in [GH:vrgamegirl19/comfyui-vrgamedevgirl:Workflows/Z-ImageUpscale](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl/tree/main/Workflows/Z-ImageUpscale).
