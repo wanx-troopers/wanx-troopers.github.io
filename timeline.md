@@ -1,5 +1,8 @@
 # News
 
+2025.12.13 Hugely popular [Z-Image-Turbo](extra-tools/z-image.md) 6B image generation model which has had a working ControlNet implementations in ComfyUI since 2025.12.03
+has now received a `Union 2.0` ControlNet upgrade adding inpainting ability
+
 2025.12.13 [preview](screenshots/kj-wrapper-v2-preview.webp) of Kijai's V2 nodes for wrapper; main idea is to make the list of inputs on the sampler shorter
 
 2025.12.13 Work started in integrating [SCAIL](wan-animates.md#scail), a WanAnimate analogue capable of generating two characters according to pose skeletons; pose detection not ready yet
@@ -25,8 +28,6 @@ LongCat (now all of image/image edit/video), Ovis 7B
 
 2025.12.04 `sageattn_ultravico` option added to [Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) supporting one of the newer [RifleX](https://github.com/thu-ml/DiT-Extrapolation)
 methods to generate videos with a greater number of frames without looping; a not so bad result has been demostrated with [Kandinsky-5](k5.md) but results with Wan did not look particularly good.
-
-2025.12.03 [Z-Image-Turbo](extra-tools.md#z-image-turbo) 6B image generation model introduced ealier to a great success within community has received a working ControlNet implementations in ComfyUI
 
 2025.12.03 Flux.2 Dev released under non-commerical license earlier on 2025.11.25 to enthusiasm of some and unhappiness of others (high VRAM usage, long generations)
 has received a ControlNet [model](https://huggingface.co/alibaba-pai/FLUX.2-dev-Fun-Controlnet-Union); status of integration into ComfyUI unknown

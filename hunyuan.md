@@ -1,5 +1,9 @@
 # Hunyuan
 
+## 2025.12.13
+
+Possible video upscale with Hunyuan 1.5: [hunyuan-15-upscale-1](screenshots/hunyuan-15-upscale-1.webp), [hunyuan-15-upscale-2](screenshots/hunyuan-15-upscale-2.webp).
+
 ## 2025.12.10
 
 PR [11212](PR [https://github.com/comfyanonymous/ComfyUI/pull/11212) merged to ComfyUI native fixing burn-out issue with Hunyuan 1.5 distilled and possibly SR (upscaler) models.

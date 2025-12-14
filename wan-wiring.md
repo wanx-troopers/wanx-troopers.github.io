@@ -20,6 +20,11 @@ Presently exposed on wrapper node but not on native node.
 
 Workflows for VACE 2.1 and Wan 2.2 Fun Vace are very similar.
 
+> using VACE with not-quite black background for Pose input seems to be a lot better than just straight black background which can cause issues
+> [black squares on video] ... I have been having success with #202020 lately
+
+VACE takes only one reference image, so if more is wanted all need to be joined together into a single image.
+
 ## Native
 
 ### VACE [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)

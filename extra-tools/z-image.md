@@ -1,5 +1,37 @@
 ﻿# Z-Image-Turbo
 
+## 2025.12.13
+
+[Z-Image-Turbo-Fun-Controlnet-Union-2.0](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.0) released adding inpaint ability.
+
+ControlNet Union support for Z-Image-Turbo is present in ComfyUI.
+
+Despite "ControlNet" name technically this is closer to VACE than to ControlNet-s of the past.
+The new `Controlnet-Union` supports Pose, Canny, Hed, and Depth guidance.
+
+[VRGameDevGirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl) has shared
+a powerful upscaling workflow using Z-Image-Turbo with Union Controlnet (`AnyImageZImageUpscaleWithCN.json`)
+along with other workflows in [GH:vrgamegirl19/comfyui-vrgamedevgirl:Workflows/Z-ImageUpscale](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl/tree/main/Workflows/Z-ImageUpscale).
+Note: `ZImageUSD` there is an `Ultimate SD Upscaler` workflow with Z-Image-Turbo model plugged in.
+
+> in my testing Z Image doesn't need a lot of upscaling, just gen at 1440 and looks quite good
+
+> the reason behind doing it this way instead of doing just the normal latent upscale to 2K is because anything
+> over 1024 looses details from the org image; doing it with USD does not because the tile size is at 1024
+> a few days ago we found this out, anything over 1024 looses alot of detail
+
+> the Hugging Face demos feature choosing between 1024, 1280 and 1536 so those are probably the best resolutions to shoot for
+
+> ust 2 methods of getting to a 2MP image - 1) Via 1k + 2x Latent Upscale and 2) via native 1920 gen in the first place;
+> 1920 might be stretching abilities of the model
+
+Possible alternative VAE trained on 4k images and possibly delivering a bit more detail: [UltraFlux VAE](https://huggingface.co/Owen777/UltraFlux-v1/tree/main/vae); though reactions are not fantastic.
+
+## 2025.12.10
+
+[GH:RamonGuthrie/ComfyUI-RBG-SmartSeedVariance](https://github.com/RamonGuthrie/ComfyUI-RBG-SmartSeedVariance) ComfyUI node injecting varience into Z-Image-Turbo generations
+by applying noise to text.
+
 ## 2025.12.06
 
 >  found the biggest benefit to running z-image came from having qwen 8b instruct write the prompts;
@@ -38,19 +70,14 @@ Mysterious "shift" formula from Scruffy:
 
 Decrease in image quality and composition has been reported above 2048 resolution.
 
-## 2025.12.03
-
-[Z-Image-Turbo-Fun-Controlnet-Union](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union)
-support for Z-Image-Turbo has been added to ComfyUI.
-Technically the new facility is closer to VACE than to ControlNet-s of the past in its architecture.
-The new `Controlnet-Union` supports Pose, Canny, Hed, and Depth guidance.
-
-Limitation: only one LoRa can be successfully applied. Applying a combination leads to bad results, probably because Z-Image-Turbo is highly distilled.
+Getting images to as high resolution as possible is a popular endeavor withing the community. `Latent Upascale` node is being used normally after the sampler.
 
 ## 2025.11.26
 
 6B `Z-Image-Turbo` is a distilled image generation model released under Apache license. Community is raving :) Model re-uses Flux VAE but appears not be based on Flux.
 [Model page](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo) promises non-distilled and edit versions to be released. "beats flux 2 .. at a fraction of the size ... less plastic than qwen image".
+
+Limitation: only one LoRa can be successfully applied. Applying a combination leads to bad results, probably because Z-Image-Turbo is highly distilled.
 
 The stock ComfyUI workflow for z-image is quite traditional: `Clip Encoder` users `qwen_3_4b` to encode user prompt and feed it to `KSampler`.
 The surprise is that `Z-Image-Turbo` had been trained on conversation sequences which have then been encoded by `qwen_3_4b`.
@@ -100,3 +127,52 @@ We probably should expect it to be implemented - some time soon?..
 
 - [detail-slider](https://civitai.com/models/2202638/detail-slider-for-z-image) note: strength can be -2 to +2, greater values mean more details
 - [detaildeamonz](https://civitai.com/models/2209262/detaildeamonz-sliderlora-for-zimageturbo-and-redz15) note: strength can be -2 to +2, greater values mean less details
+
+## See Alos
+
+- [LLM Nodes](llm-nodes.md)
+
+## Hypothetical List of Resolutions To Go For
+
+Composed by [Madevilbeats](https://www.instagram.com/madevilbeats/):
+
+```
+--1024--
+1024x1024 ( 1:1 )
+1152x896 ( 9:7 )
+896x1152 ( 7:9 )
+1152x864 ( 4:3 )
+864x1152 ( 3:4 )
+1248x832 ( 3:2 )
+832x1248 ( 2:3 )
+1280x720 ( 16:9 )
+720x1280 ( 9:16 )
+1344x576 ( 21:9 )
+576x1344 ( 9:21 )
+
+-- 1280 --
+1280x1280 ( 1:1 )
+1440x1120 ( 9:7 )
+1120x1440 ( 7:9 )
+1472x1104 ( 4:3 )
+1104x1472 ( 3:4 )
+1536x1024 ( 3:2 )
+1024x1536 ( 2:3 )
+1600x896 ( 16:9 )
+896x1600 ( 9:16 )
+1680x720 ( 21:9 )
+720x1680 ( 9:21 )
+
+--1536--
+1536 × 1536 (1:1)
+1728 × 1344 (9:7)
+1344 × 1728 (7:9)
+1728 × 1296 (4:3)
+1296 × 1728 (3:4)
+1728 × 1248 (3:2)
+1248 × 1872 (2:3)
+2048 × 1152 (16:9)
+1152 × 2048 (9:16)
+2016 × 864 (21:9)
+864 × 2016 (9:21)
+```

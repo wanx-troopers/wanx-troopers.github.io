@@ -1,5 +1,10 @@
 # Other Things to Check Out
 
+* [OmniPSD](https://showlab.github.io/OmniPSD/) separate poster into layers
+* [GH:refkxh/bico](https://github.com/refkxh/bico) model for combining visual concepts from different images/videos; some links to Wan
+* [GH:inclusionAI/TwinFlow](https://github.com/inclusionAI/TwinFlow), [HF:Suzu008/TwinFlow_Repackaged](https://huggingface.co/Suzu008/TwinFlow_Repackaged/tree/main) a new framework for 1 step generation for qwen image
+* [GH:wildminder/ComfyUI-DyPE](https://github.com/wildminder/ComfyUI-DyPE) a node to push image generation into even higher resolutions - like 4K
+
 * [GH:Moooonet/ComfyUI-Align](https://github.com/Moooonet/ComfyUI-Align) tools to help ComfyUI align and color nodes
 
 * [1038lab/ComfyUI-QwenVL](https://github.com/1038lab/ComfyUI-QwenVL) node to use qwen vl 3 for generating image and video prompts; [tutorial](https://www.youtube.com/watch?v=3j9c_-mRKfg)
@@ -16,11 +21,7 @@
 * [GH:huchenlei/ComfyUI-layerdiffuse](https://github.com/huchenlei/ComfyUI-layerdiffuse) semi-transparent images with Comfy?
 * [Wan 2.1 T2V Transparent Background](https://github.com/WeChatCV/Wan-Alpha)
 
-* [GH:scottmudge/ComfyUI-NAG](https://github.com/scottmudge/ComfyUI-NAG) ComfyUI NAG that has reportedly been made to work with a lot of models as of Dec 2025
 * [GH:Jonseed/ComfyUI-Detail-Daemon](https://github.com/Jonseed/ComfyUI-Detail-Daemon) tool to adjust sigmas while image generation to improve details
-
-* [GH:mattjohnpowell/comfyui-lmstudio-image-to-text-node](https://github.com/mattjohnpowell/comfyui-lmstudio-image-to-text-node) node pack to generate advanced prompts using LLM-s
-* [GH:fblissjr/ComfyUI-QwenImageWanBridge](https://github.com/fblissjr/ComfyUI-QwenImageWanBridge) LLM tool to run z-image and other image generation models
 
 * [Steady Dancer](https://mcg-nju.github.io/steadydancer-web/) now with basic ComfyUI support
 * [Infinity Rope](https://infinity-rope.github.io/) based on Wan 1.3B so not paticularly powerful but holds promise for future

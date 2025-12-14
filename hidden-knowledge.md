@@ -8,6 +8,10 @@
 Great tool to help understand nodes and workflows:  
 ![preview-as-text.webp](screenshots/kj-preview-as-text.webp)
 
+The following error may mean the model is returning NaN values; solution can be to try a less quantized model
+
+> blck gens; RuntimeWarning: invalid value encountered in cast `return tensor_to_int(tensor, 8).astype(np.uint8)`
+
 ## 2025.12.11
 
 > positive and negative [prompt] are two different model passes;

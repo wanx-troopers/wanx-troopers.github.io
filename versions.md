@@ -89,3 +89,5 @@ For Windows it's `triton-windows 3.5.0.post21` or later.
 
 https://github.com/woct0rdho/triton-windows - read instructions on the page, not simply `pip install sageattention -U`
 https://github.com/woct0rdho/SageAttention
+
+Youtube tutorial on installing SageAttention 2.2 on Windows - unconfirmed, advice from community: [9APXcBMpbgU](https://www.youtube.com/watch?v=9APXcBMpbgU).
