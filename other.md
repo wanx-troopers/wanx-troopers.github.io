@@ -1,13 +1,25 @@
 # Other Things to Check Out
 
+## Strongly Discouraged
+
+Highly questionable code practices discovered in `ComfyRMBG`.
+The code is patching core functions in `pytorch`, disabling security on loading `.safetensors` and interfering with operation of other nodes inside ComfyUI installation in other ways.
+The nodes are causing outright breakage in [SCAIL](wan-animate.md#scail) code in wrapper.
+Until further notice out of abandance of caution using any code from `1038lab` is strongly discouraged.
+[Issue raised](https://github.com/1038lab/ComfyUI-RMBG/issues/151). 
+
+* [1038lab/ComfyUI-RMBG](https://github.com/1038lab/ComfyUI-RMBG) remove background
+* [1038lab/ComfyUI-QwenVL](https://github.com/1038lab/ComfyUI-QwenVL) node to use qwen vl 3 for generating image and video prompts; [tutorial](https://www.youtube.com/watch?v=3j9c_-mRKfg)
+* [1038lab/ComfyUI-WildPromptor](https://github.com/1038lab/ComfyUI-WildPromptor)
+
+## Big List
+
 * [OmniPSD](https://showlab.github.io/OmniPSD/) separate poster into layers
 * [GH:refkxh/bico](https://github.com/refkxh/bico) model for combining visual concepts from different images/videos; some links to Wan
 * [GH:inclusionAI/TwinFlow](https://github.com/inclusionAI/TwinFlow), [HF:Suzu008/TwinFlow_Repackaged](https://huggingface.co/Suzu008/TwinFlow_Repackaged/tree/main) a new framework for 1 step generation for qwen image
 * [GH:wildminder/ComfyUI-DyPE](https://github.com/wildminder/ComfyUI-DyPE) a node to push image generation into even higher resolutions - like 4K
-
 * [GH:Moooonet/ComfyUI-Align](https://github.com/Moooonet/ComfyUI-Align) tools to help ComfyUI align and color nodes
 
-* [1038lab/ComfyUI-QwenVL](https://github.com/1038lab/ComfyUI-QwenVL) node to use qwen vl 3 for generating image and video prompts; [tutorial](https://www.youtube.com/watch?v=3j9c_-mRKfg)
 * [GH:dagthomas/comfyui_dagthomas?tab=readme-ov-file#-qwenvl-nodes-local-vision](https://github.com/dagthomas/comfyui_dagthomas?tab=readme-ov-file#-qwenvl-nodes-local-vision) node for running QwenVL locally
 
 * [SpatialTracerV2](https://spatialtracker.github.io/)
@@ -26,7 +38,6 @@
 * [Steady Dancer](https://mcg-nju.github.io/steadydancer-web/) now with basic ComfyUI support
 * [Infinity Rope](https://infinity-rope.github.io/) based on Wan 1.3B so not paticularly powerful but holds promise for future
 
-* [1038lab/ComfyUI-WildPromptor](https://github.com/1038lab/ComfyUI-WildPromptor)
 
 * [GH:PozzettiAndrea/ComfyUI-MotionCapture](https://github.com/PozzettiAndrea/ComfyUI-MotionCapture) [reddit intro](https://www.reddit.com/r/StableDiffusion/comments/1p4pkbk/release_comfyuimotioncapture_full_3d_human_motion/) full human body 3d motion capture
 * [GH:PozzettiAndrea/ComfyUI-UniRig](https://github.com/PozzettiAndrea/ComfyUI-UniRig) ComfyUI tools for rigging a skeleton

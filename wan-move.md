@@ -1,11 +1,15 @@
 # Wan-Move
 
-Kijai's PR [11247](https://github.com/comfyanonymous/ComfyUI/pull/11247) to add Wan Move support to ComfyUI native.
-`WanMoveTracksFromCoords` and `WanMoveTracksToVideo` nodes are being added.
+Wan-Move support has been added to native ComfyUI. New nodes:
+
+- `WanMoveTracksFromCoords`
+- `WanMoveTracksToVideo`
 
 ![kj-wan-move-native](screenshots/kj-wan-move-native.webp)
 
 ![kj-wan-move.webp](screenshots/kj-wan-move.webp)
+
+![kj-wan-move-sample](screenshots/kj-wan-move-sample.webp)
 
 ## Summary
 

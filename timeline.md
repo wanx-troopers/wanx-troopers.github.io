@@ -1,5 +1,7 @@
 # News
 
+2025.12.14 [Wan-Move](wan-move.md) released and officially added to native ComfyUI
+
 2025.12.13 Hugely popular [Z-Image-Turbo](extra-tools/z-image.md) 6B image generation model which has had a working ControlNet implementations in ComfyUI since 2025.12.03
 has now received a `Union 2.0` ControlNet upgrade adding inpainting ability
 
@@ -12,8 +14,6 @@ has now received a `Union 2.0` ControlNet upgrade adding inpainting ability
 2025.12.09 NVidia released Wan 2.2 I2V [rCM](loras/part-01.md#22-i2v) speed LoRA
 
 2025.12.09 [One-to-All-Animation](wan-animates.md#one-to-all-animation) similar to WanAnimate support added to Kijai's Wrapper, fp16 and fp8 weights uploaded to HF
-
-2025.12.09 [Wan-Move](wan-move.md) released and received initial support in the Wrapper
 
 2025.12.07 Context Windows [PR](what-plugs-where/context-windows.md#20251207) merged to main branch in ComfyUI improving Context Windows support on native
 
