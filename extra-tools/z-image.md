@@ -1,5 +1,9 @@
 ﻿# Z-Image-Turbo
 
+## 2025.12.15
+
+`Latent Hybrid Upscale` from `was_hybrid_latent_upscale`. "Using laplacian edge detection to create a mask for edges where the hard jankies will show up, and replacing it with a donar latent with smooth edges (normal Image Resize upscale and encoded)."
+
 ## 2025.12.13
 
 [Z-Image-Turbo-Fun-Controlnet-Union-2.0](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.0) released adding inpaint ability.

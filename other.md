@@ -1,12 +1,12 @@
 # Other Things to Check Out
 
-## Strongly Discouraged
+## Use With Caution
 
-Highly questionable code practices discovered in `ComfyRMBG`.
-The code is patching core functions in `pytorch`, disabling security on loading `.safetensors` and interfering with operation of other nodes inside ComfyUI installation in other ways.
-The nodes are causing outright breakage in [SCAIL](wan-animate.md#scail) code in wrapper.
-Until further notice out of abandance of caution using any code from `1038lab` is strongly discouraged.
-[Issue raised](https://github.com/1038lab/ComfyUI-RMBG/issues/151). 
+A fix has been performed in `ComfyRMBG` repository once this issue was raised: [151](https://github.com/1038lab/ComfyUI-RMBG/issues/151).
+Please `git pull` the code.
+
+The code was patching core functions in `pytorch`, disabling security on loading `.safetensors` and interfering with operation of other nodes inside ComfyUI installation in other ways.
+Caution remains in place for all `1038lab` owned repositories.
 
 * [1038lab/ComfyUI-RMBG](https://github.com/1038lab/ComfyUI-RMBG) remove background
 * [1038lab/ComfyUI-QwenVL](https://github.com/1038lab/ComfyUI-QwenVL) node to use qwen vl 3 for generating image and video prompts; [tutorial](https://www.youtube.com/watch?v=3j9c_-mRKfg)

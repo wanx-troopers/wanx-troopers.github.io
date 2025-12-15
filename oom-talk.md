@@ -29,3 +29,10 @@ ComfyUI should be organising a similar swap internally; `--reserve-vram 1` or `-
 is one way to help CopmfyUI manage VRAM optimally. What this does is it tells ComfyUI not to
 use the last 1 or 0.5Gb of VRAM leaving it for operating system and for Comfy's own emergencies
 when despite its best efforts it ends up trying to allocate more VRAM than is available.
+
+Plotting memory usage graphs for ComfyUI:
+
+![memory-graphs](screenshots/kj-memory-graphs.webp)
+
+> does require launching comfy with --disable-cuda-malloc;
+> on Windows can only record the python stacks

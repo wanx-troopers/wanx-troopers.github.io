@@ -12,6 +12,8 @@ Official git [repo](https://github.com/zai-org/SCAIL) - pls. put starts to make 
 > - no face or hands NLF input + dw_pose = no retargeting
 > - hands/face optionalNLF input + dw_pose + ref_dw_pose = retarget, hands/face optional
 
+`NLF Predict` node now has `per_batch` setting which runs pose estimation in batches reducing overall resource requirements.
+
 ### SCAIL 2025.12.14
 
 > it's I2V model basically, but input channels are 20
