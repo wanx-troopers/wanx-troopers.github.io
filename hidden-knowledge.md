@@ -1,5 +1,13 @@
 ﻿# Hidden Knowledge
 
+## 2025.12.15 Piflow
+
+[link](https://huggingface.co/Lakonik/pi-Qwen-Image) - 4-step Qwen image distill
+
+> Piflow is the novel Adobe backed distillation method that doesn't really "sample" in a classical sense - maintains seed variation - and is super quick (2-4steps).
+> They released models/nodes for QWen and Flux.dex (also Flux2 a few days ago but no Comfyui support yet).
+> They ... haven't yet shown that the Pi-Flow method can work with video models. 
+
 ## 2025.12.14
 
 `fp8_fast` mode in `WanVideo Model Loader` is good.

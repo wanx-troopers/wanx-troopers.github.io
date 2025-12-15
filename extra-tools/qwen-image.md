@@ -38,7 +38,7 @@ Text editing similar to Nano Banana (dataset [visualizer](https://snazzy-selkie-
 
 ## Qwen Piflow
 
-[link](https://huggingface.co/Lakonik/pi-Qwen-Image) - 4-step Qwen image distill
+[PiFlow](../hidden-knowledge.md#20251215-piflow)
 
 ## Face Consistency With Qwen?
 
