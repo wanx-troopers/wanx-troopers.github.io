@@ -20,6 +20,8 @@ Phantom and MAGREF are relatively old finetunes based on Wan 2.1, so called "ref
 
 It has been shown that Phantom generation is a somewhat influenced by [Lynx](lynx.md).
 
+> 2.2 Vace for the HN part and then 2.1 Vace + Phantom [recipe for running Vace + Phantom Dec 2025]
+
 # MAGREF
 
 > with MAGREF you can sort of adjust the strength by padding your image with white;

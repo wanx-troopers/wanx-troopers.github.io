@@ -8,8 +8,8 @@ Official git [repo](https://github.com/zai-org/SCAIL) - pls. put starts to make 
 
 ### SCAIL 2025.12.15
 
-> - NLF input only = no retargetn
-> - no face or handsNLF input + dw_pose = no retarget
+> - NLF input only = no retargeting
+> - no face or hands NLF input + dw_pose = no retargeting
 > - hands/face optionalNLF input + dw_pose + ref_dw_pose = retarget, hands/face optional
 
 ### SCAIL 2025.12.14
