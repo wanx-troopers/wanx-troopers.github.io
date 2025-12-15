@@ -5,6 +5,8 @@
 [GH:gajjar4/ComfyUI-Qwen-Image-i2L](https://github.com/gajjar4/ComfyUI-Qwen-Image-i2L) so called "I2L", "image to LoRA", a super-lightweight approach to extracting
 a Qwen (Image Edit?) LoRA from an image; resulting LoRA is pretty weak
 
+Qwen Edit Multiple angles LoRA good to create one image with views of the same character from different sides
+
 ## Qwen Image Edit
 
 Supposedly has affinity to Wan models since both come from Alibaba.

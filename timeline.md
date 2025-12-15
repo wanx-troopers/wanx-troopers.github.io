@@ -1,13 +1,13 @@
 # News
 
+2025.12.13 Progress on integrating [SCAIL](wan-animates.md#scail) into ComfyUI; single character pose detection working, two character pose detection in progress [a WanAnimate analogue capable of generating two characters according to pose skeletons]
+
 2025.12.14 [Wan-Move](wan-move.md) released and officially added to native ComfyUI; confirmed to work with [Uni3C](control.md#uni3c) camera control; works with [Context Windows](what-plugs-where/context-windows.md)
 
 2025.12.13 Hugely popular [Z-Image-Turbo](extra-tools/z-image.md) 6B image generation model which has had a working ControlNet implementations in ComfyUI since 2025.12.03
 has now received a `Union 2.0` ControlNet upgrade adding inpainting ability
 
 2025.12.13 [preview](screenshots/kj-wrapper-v2-preview.webp) of Kijai's V2 nodes for wrapper; main idea is to make the list of inputs on the sampler shorter
-
-2025.12.13 Work started in integrating [SCAIL](wan-animates.md#scail), a WanAnimate analogue capable of generating two characters according to pose skeletons; pose detection not ready yet
 
 2025.12.06 [Kandinsky-5](k5.md) Pro video AI model (5sec I2V, 5sec T2V, 10sec T2V) released 2025.11.14 and now supported in ComfyUI native have received official distillations
 

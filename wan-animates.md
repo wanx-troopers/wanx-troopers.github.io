@@ -17,9 +17,18 @@ After latest updates SCAIL is working with [Uni3C](control.md#uni3c).
 
 Single-person pose detection working. Add [kijai/ComfyUI-SCAIL-Pose](https://github.com/kijai/ComfyUI-SCAIL-Pose) code repository, [workflow](workflows/scail/single-person-pose-detection.webp), [workflow again](workflows/scail/SCAIL_test_wf_02.json).
 
+Work ongoing on multi-character pose detection.
+
 > the pose input need to be half the resolution of the main input;
 > the whole thing is in same input sequence, [ref, noise, poses]
 > that's why it's downscaled too, to halve that impact
+
+Working resolutions: 895x512, 576x1024(?), 1280x704, 512x896x81
+
+> resolutions needs to be divisable by 32
+
+> diffusers and native comfyui do padding [when resolution does not match]
+> wrapper just errors
 
 ### SCAIL Summary
 

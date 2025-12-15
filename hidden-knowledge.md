@@ -10,6 +10,12 @@
 
 `LoraExtractKJ` from `KJNodes` will not work on fp8.
 
+The differnce between `offload_device` vs `main_device` in `WanVideo Model Loader` 
+can only be observed when either the models are small
+or the GPUs are huge and can keep the model on VRAM at all times.
+
+> SPDA is a lot slower than ageattn; GGUF Q5 is somewhat slower than fp8 in general
+
 ## 2025.12.12
 
 > Clowshark samplers carry additional information such as conditioning and model along with the LATENT.
@@ -93,7 +99,7 @@ To similarly save RAM in native use `WanVideo LatentsReScale` node and plug wrap
 > usage to below the attention (which cant really be split without affecting results or slowing it down);
 > `torch.compile` also optimises it similarly, that's why it uses less VRAM when it works.
 
-> pytorch now has the fused RMS norm built in, that was one of the biggest benefits of compile;
+> pytorch now has the fused `RMS norm` built in, that was one of the biggest benefits of compile;
 > you could just not use compile, use the pytorch RMS norm and the  chunked rope
 
 ## 2025.11.30 rms_norm_function - Time Saver When Torch Compile Off
