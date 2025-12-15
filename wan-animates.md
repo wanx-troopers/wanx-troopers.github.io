@@ -6,6 +6,12 @@ Wan Animate and MoCha serve similar goals.
 
 Official git [repo](https://github.com/zai-org/SCAIL) - pls. put starts to make it easier for the team to obtain more resources for future training!
 
+### SCAIL 2025.12.15
+
+> - NLF input only = no retargetn
+> - no face or handsNLF input + dw_pose = no retarget
+> - hands/face optionalNLF input + dw_pose + ref_dw_pose = retarget, hands/face optional
+
 ### SCAIL 2025.12.14
 
 > it's I2V model basically, but input channels are 20
