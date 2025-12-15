@@ -1,6 +1,7 @@
 # News
 
-2025.12.13 Progress on integrating [SCAIL](wan-animates.md#scail) into ComfyUI; single character pose detection working, two character pose detection in progress [a WanAnimate analogue capable of generating two characters according to pose skeletons]
+2025.12.13 Progress on integrating [SCAIL](wan-animates.md#scail) into ComfyUI; single character pose detection working, two character pose detection in progress [a WanAnimate analogue capable of generating two characters according to pose skeletons];
+SCAIL project is encouraging happy users to put starts on the official github [repo](https://github.com/zai-org/SCAIL)
 
 2025.12.14 [Wan-Move](wan-move.md) released and officially added to native ComfyUI; confirmed to work with [Uni3C](control.md#uni3c) camera control; works with [Context Windows](what-plugs-where/context-windows.md)
 

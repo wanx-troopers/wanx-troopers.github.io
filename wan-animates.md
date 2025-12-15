@@ -4,6 +4,8 @@ Wan Animate and MoCha serve similar goals.
 
 ## SCAIL
 
+Official git [repo](https://github.com/zai-org/SCAIL) - pls. put starts to make it easier for the team to obtain more resources for future training!
+
 ### SCAIL 2025.12.14
 
 > it's I2V model basically, but input channels are 20
