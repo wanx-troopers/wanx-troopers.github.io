@@ -1,4 +1,4 @@
-# Wan Animate And MoCha
+﻿# Wan Animate And MoCha
 
 Wan Animate and MoCha serve similar goals.
 
@@ -13,6 +13,16 @@ Official git [repo](https://github.com/zai-org/SCAIL) - pls. put starts to make 
 > - hands/face optionalNLF input + dw_pose + ref_dw_pose = retarget, hands/face optional
 
 `NLF Predict` node now has `per_batch` setting which runs pose estimation in batches reducing overall resource requirements.
+
+> 1080 looks way better [than 720, this was a vertical video so this is the longer vertical dimension]
+
+> disconnect the ref_dw_pose when doing multiple people ...
+> vitpose even [does not] return multiple people now?
+
+> Q: how would the other skeletons be colored in cases past 2?
+> A: we just have 2 colors, but we do like 1-2-1-2-1-... manner from left to right
+
+[Pose Retargeter](extra-tools.md#pose-retargeter)
 
 ### SCAIL 2025.12.14
 
@@ -43,8 +53,7 @@ Working resolutions: 896x512, 576x1024(?), 1280x704 and same resolutions with W/
 ### SCAIL Summary
 
 SCAIL is a new model similar to WanAnimate but able of handling two characters at once.
-Kijai is working on itegrating the mode in [SCAIL](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/SCAIL)
-branch of `ComfyUI-WanVideoWrapper` repository. The work is not yet complete
+It has been intgrated into the [Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper).
 
 > the pose predictor uses 3D and stuff, probably will have to be separate repo,
 > though it's just pyrender and that's not too bad;

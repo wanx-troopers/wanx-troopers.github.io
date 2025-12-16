@@ -86,11 +86,7 @@ The reason this works is because there is some additional magic in the code rela
 * if `WanVideo Scheduler` receives a float instead of an integer as `end_step` it just passes it through and outputs same floating point number
 * `WanVideo Sampler` then interprets it same way as if `WanVideo Step To Sigma` was plugged into it directly
 
-### Additional Useful Nodes
-
-* `String To Float List` - facility to specify sigmas directly
-* `Create CFG Schedule Float List` - not sigma but often set in the same part of workflow.
-* `Preview Any` - easy to way to check output from the two above mentioned nodes
+Bonus: `WanVideo Sigma To Step` with V2 nodes: [sigma-to-step-with-v2](screenshots/what-plugs-where/sigma-to-step-with-v2.webp).
 
 ### Wiring two `WanVideo Scheduler`-s into two `WanVideo Scheduler`-s for Wan 2.2
 
@@ -133,7 +129,10 @@ Advice on switching from hight noise to low noise model with WAN 2.2
 | I2V | 0.9 |
 | T2V | 0.875 |
 
-## Alternative Tools
+## Other Useful Nodes
 
-`Get Sigma` from [BlenderNeko/ComfyUI_Noise](https://github.com/BlenderNeko/ComfyUI_Noise)
-`BetaSamplingScheduler` more control over Beta sigma schedule
+* `String To Float List` -> `Float To Sigmas` facility to specify sigmas directly, can start with a string like `1.0, 0.9375, 0.833333, 0.625, 0.000`
+* `Create CFG Schedule Float List` - not sigma but often set in the same part of workflow.
+* `Preview Any` - easy to way to check output from the two above mentioned nodes
+* `Get Sigma` from [BlenderNeko/ComfyUI_Noise](https://github.com/BlenderNeko/ComfyUI_Noise)
+* `BetaSamplingScheduler` more control over Beta sigma schedule

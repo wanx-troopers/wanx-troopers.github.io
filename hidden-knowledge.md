@@ -1,5 +1,15 @@
 ﻿# Hidden Knowledge
 
+## 2025.12.16
+
+Discussion: as a mitigation of issues with [SCAIL](wan-animates.md#scail) the possibility is being considered of adding an extra pose guidance frame at the front and then cutting it
+since 1st frame often comes out in a low quality. Apparently a similar trick is used by VACE
+
+> what I mean is that the frame where you want the pose to start is clean,
+> so you can just cut the start off now? just like how VACE does it
+
+`WanVideo Empty Embeds` is for T2V models
+
 ## 2025.12.15 Piflow
 
 [link](https://huggingface.co/Lakonik/pi-Qwen-Image) - 4-step Qwen image distill

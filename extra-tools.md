@@ -19,6 +19,9 @@ The node apparently homogenizes contrast and color balance inside the video.
 
 ![kj-normalize-video-latent](screenshots/kj-normalize-video-latent.webp)
 
+## Pose Retargeter
+
+[GH:AIWarper/ComfyUI-WarperNodes](https://github.com/AIWarper/ComfyUI-WarperNodes)
 
 ## Video Blending From Fragments
 

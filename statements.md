@@ -1,5 +1,13 @@
 ﻿# Statements
 
+## 2025.12.16
+
+> IME so far, VACE is 10x more useful than wanimate for real VFX work;
+> I often use 2.2 low as a refiner for 2.1 vace though
+> 1-2 steps just to clean it up
+
+> the fun model is just ... seems like data curation is the bottleneck for vace training
+
 ## 2025.12.07
 
 [MAGI](https://github.com/SandAI-org/MAGI-1)
