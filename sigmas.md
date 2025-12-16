@@ -47,14 +47,29 @@ Scheduler "beta" works very differently in Wrapper and in Native
 
 ## Nodes For Working With Sigmas In Kijai's Wrapper
 
-`WanVideo Sigma To Step` if you supply a floating point value like 0.9 you can plug this into `end_step` input of `WanVideo Scheduler` and it will be treated as sigma, not step.
-Explanation about `WanVideo Scheduler`:
+### WanVideo Sigma To Step
 
-> you only need to connect the scheduler output,
-> rest aren't even used but are there so you can
-> connect them to the sampler to indicate those
-> all are controlled by the scheduler node
+![sigma-to-step](screenshots/what-plugs-where/sigma-to-step.webp)
 
+`WanVideo Sigma To Step` is a slightly confusing node.
+It allows you to set a floating point value on the node itself such as `0.9` or `0.875`.
+The value then becomes availabe on node's output.
+However that output is intentionally "mislabelled" as being an integer.
+This allows you to plug it into `end_step` on `WanVideo Sampler`.
+`WanVideo Sampler` is coded to detect this kind of "mislabelling"
+and behave in a special manner in response: it then
+converts the floating value it received into an appropriate `end_step` number.
+
+This kind of automated `end_step` computation is mostly useful when the number of steps is large,
+e.g. when sampling without `lightx` LoRA-s. If you are using `lightx` or similar LoRA-s
+you typically know in advance that you're going to perform 2 + 2 or 3 + 3 or possibly 4 + 4 steps.
+You still want to make sure that the switchover from high to low noise sampler happens
+at the correct sigma but your main control to achieve that then is your shift.
+
+### WanVideo Sigma To Step + WanVideo Scheduler
+
+If you additionally want to plot your sigma schedule on a chart and have the computed `end_step` marked there
+you can assembly the following sequence of nodes (note that you need to convert `end_step` control to a "noodle" input on `WanVideo Scheduler`):
 
 ```
 WanVideo Sigma To Step
@@ -66,15 +81,27 @@ WanVideo Scheduler
 Preview Any
 ```
 
-* `WanVideo Scheduler` outputs `end_step` as float number matching its input.  
-  This is likely because you can still wire that float number in `WanVideo Sampler` start or end step and it will work correctly - so long as scheduler is in sync between `Wan Video Scheduler` and `WanVideo Sampler` - conjecture.
+The reason this works is because there is some additional magic in the code related to intentional "mislabelling" of floating sigma value as an integer:
+
+* if `WanVideo Scheduler` receives a float instead of an integer as `end_step` it just passes it through and outputs same floating point number
+* `WanVideo Sampler` then interprets it same way as if `WanVideo Step To Sigma` was plugged into it directly
+
+### Additional Useful Nodes
 
 * `String To Float List` - facility to specify sigmas directly
 * `Create CFG Schedule Float List` - not sigma but often set in the same part of workflow.
 * `Preview Any` - easy to way to check output from the two above mentioned nodes
 
-Wiring two `WanVideo Scheduler`-s into two `WanVideo Scheduler`-s for Wan 2.2:
+### Wiring two `WanVideo Scheduler`-s into two `WanVideo Scheduler`-s for Wan 2.2
+
 ![schedulers](screenshots/schedulers.webp)
+
+Explanation about `WanVideo Scheduler`:
+
+> you only need to connect the scheduler output,
+> rest aren't even used but are there so you can
+> connect them to the sampler to indicate those
+> all are controlled by the scheduler node
 
 ## Native Nodes For Working With Sigmas
 

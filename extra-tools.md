@@ -81,10 +81,10 @@ Sample [wf](screenshots/ck-magic-workflow.png).
 Use this node to split audio between generation runs which produce various parts of the video with HuMo.
 Use `Trim Audio Duration` as shown to remove duplicate part of audio before re-assembling the video.
 
-### Ckinpdx WanSoundTrajectory
+### Other Repositories by Ckinpdx
 
-Build paths to feed into [Wan-Move](wan-move.md) based on music beats:
-[GH:ckinpdx/ComfyUI-WanSoundTrajectory](https://github.com/ckinpdx/ComfyUI-WanSoundTrajectory).
+- [GH:ckinpdx/ComfyUI-WanSoundTrajectory](https://github.com/ckinpdx/ComfyUI-WanSoundTrajectory) build paths to feed into [Wan-Move](wan-move.md) based on music beats
+- [GH:/ckinpdx/ComfyUI-SCAIL-AudioReactive](https://github.com/ckinpdx/ComfyUI-SCAIL-AudioReactive) generate audio-reactive SCAIL pose sequences for character animation without requiring input video tracking
 
 ## Misc
 

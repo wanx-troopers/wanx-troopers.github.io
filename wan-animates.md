@@ -33,7 +33,7 @@ Work ongoing on multi-character pose detection.
 > the whole thing is in same input sequence, [ref, noise, poses]
 > that's why it's downscaled too, to halve that impact
 
-Working resolutions: 895x512, 576x1024(?), 1280x704, 512x896x81
+Working resolutions: 896x512, 576x1024(?), 1280x704 and same resolutions with W/H swapped.
 
 > resolutions needs to be divisable by 32
 
