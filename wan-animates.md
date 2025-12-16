@@ -14,6 +14,10 @@ Official git [repo](https://github.com/zai-org/SCAIL) - pls. put starts to make 
 
 `NLF Predict` node now has `per_batch` setting which runs pose estimation in batches reducing overall resource requirements.
 
+Community has found out that when the character is partially present in the frame the best solution is "crop-uncrop" for the mask.
+What this means is that 1st a full 
+
+
 ### SCAIL 2025.12.14
 
 > it's I2V model basically, but input channels are 20

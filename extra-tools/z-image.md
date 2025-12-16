@@ -127,6 +127,8 @@ However it is technically possible to modify ComfyUI code such that the image is
 Some of them result in gibberish but many will result in images, different from the one we get by default.
 We probably should expect it to be implemented - some time soon?..
 
+Node to select last layer by Scruffy: [CLIPSetLastLayer.py](../bobs/CLIPSetLastLayer.py)
+
 ## Older
 
 `CRT-Nodes` added `LoRA Loader (Z-Image)(CRT)`. It can load `zit-ivy.safetensors`

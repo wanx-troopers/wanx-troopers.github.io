@@ -101,3 +101,9 @@ Build paths to feed into [Wan-Move](wan-move.md) based on music beats:
 ## Frame Interpolation
 
 Moved [here](vfi.md).
+
+## Pose Detection
+
+`vitpose` can do animals as well as humans.
+
+`dwpose`

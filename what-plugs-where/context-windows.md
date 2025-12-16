@@ -1,17 +1,27 @@
 # Context Windows
 
-## 2025.12.12
+## 2025.12.16
 
-PR [11208](https://github.com/comfyanonymous/ComfyUI/pull/11208) by Drozbay to add hooks to ComfyUI native to run ContextWindows properly.
-[contextwin_vace_251209b](https://github.com/drozbay/ComfyUI/tree/contextwin_vace_251209b) branch in Drozbay's repo with the changes.
+Native ComfyUI native has been updated to include a [change](https://github.com/comfyanonymous/ComfyUI/pull/11208)
+from by [Drozbay](hidden-knowledge.md#drozbay) to add new Context Windows-related hooks to ComfyUI native.
+This unlocks our ability to run the most advanced VACE workflows built and tested by him.
+The following two additional code repositories need to be added under `custom_nodes` and `git pull`-ed to their latest state:
+
+- [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments) aka `WanEx`
+- [RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF) aks `ClownShark` samplers
+
 Full sample workflow from Drozbay with explanations: [link](https://github.com/drozbay/ComfyUI-WanVaceAdvanced?tab=readme-ov-file#context-windows-workflow).
 The workflow demonstrates advanced use of Context Windows with VACE, driving pose video and a Phantom reference.
 
-He just updated [RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF) to handle latent masking correctly with context windows. 
+Note: as part of developering these workflows Drozbay has recently contributed a change
+[RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF)
+to handle latent masking correctly with context windows. 
 
 > substep samplers definitely don't work with context windows, that would need more work
 
 Note: `skip_final_model_call` option needs to be set.
+
+## 2025.12.16 Details
 
 [HuMo](../humo.md) is also supported via ContextWindows including HuMo references.
 It is hoped [MAGREF](../phantom-magref.md#magref) references might be working too (not tested).
@@ -32,14 +42,6 @@ work well with ContextWindows in general case it is challenging to avoid backgro
 
 Note: [Wan Animate](../wan-animates.md#wan-animate) and [Infinite Talk](../infinite-talk.md) have their own mechanisms to keep extending videos.
 They are not implemented via Context Windows.
-
-## 2025.12.08
-
-There is reasonably hope that [drozbay](https://github.com/drozbay)'s changes in some time
-will get added to ComfyUI native.
-
-As of the present moment his latest and greatest code is [contextwin_vace_251208a](https://github.com/drozbay/ComfyUI/tree/contextwin_vace_251208a)
-branch on his Github.
 
 ## 2025.12.07
 
