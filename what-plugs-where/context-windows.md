@@ -8,7 +8,7 @@ This unlocks our ability to run the most advanced VACE workflows built and teste
 The following two additional code repositories need to be added under `custom_nodes` and `git pull`-ed to their latest state:
 
 - [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments) aka `WanEx`
-- [RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF) aks `ClownShark` samplers
+- [RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF) aka `ClownShark` samplers
 
 Full sample workflow from Drozbay with explanations: [link](https://github.com/drozbay/ComfyUI-WanVaceAdvanced?tab=readme-ov-file#context-windows-workflow).
 The workflow demonstrates advanced use of Context Windows with VACE, driving pose video and a Phantom reference.

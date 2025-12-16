@@ -14,10 +14,6 @@ Official git [repo](https://github.com/zai-org/SCAIL) - pls. put starts to make 
 
 `NLF Predict` node now has `per_batch` setting which runs pose estimation in batches reducing overall resource requirements.
 
-Community has found out that when the character is partially present in the frame the best solution is "crop-uncrop" for the mask.
-What this means is that 1st a full 
-
-
 ### SCAIL 2025.12.14
 
 > it's I2V model basically, but input channels are 20
@@ -242,3 +238,11 @@ Support has been integrated into ComfyUI native, likely to the wrapper as well.
 > UniAnimate delivers similar results if not better
 
 > used it with lightx2v and it works
+
+## Crop Uncrop
+
+The following workflows shared by UFF relate to face cropping out the face repacing it and stitching it back in
+
+- [Sam3_Sec4_segmentation_selection](workflows/crop-uncrop/Sam3_Sec4_segmentation_selection.json)
+- [Wan2.2-Native_crop-uncrop](workflows/crop-uncrop/Wan2.2-Native_crop-uncrop.json)
+- [Wan2.2-Native_face_crop_stitch](workflows/crop-uncrop/Wan2.2-Native_face_crop_stitch.json)
