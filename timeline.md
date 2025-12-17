@@ -99,7 +99,7 @@ some of the distillations which were previously only available as loars are now 
 [link1](https://github.com/woct0rdho/triton-windows/pull/140), [link2](https://github.com/woct0rdho/triton-windows/commit/ffb47c28144b89935208b42c50cdf1f09eb42aba);
 this is part of `triton-windows 3.5.0.post21` release
 
-2025.10.16 Kijai added nodes for [FlashVSR upscaler](upscalers.md#flashvsr)
+2025.10.16 Kijai added nodes for [FlashVSR upscaler](upscalers-detailers-video.md#flashvsr)
 
 2025.10.15 Ovi has been proven to work with [Controlnets](ovi.md#controlnets)
 

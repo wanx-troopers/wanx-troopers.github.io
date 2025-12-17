@@ -82,7 +82,7 @@ functionality similar to `WanEx Image Embeds Preview` from [WanEx](https://githu
 
 ## Drozbay's Study
 
-[drozbay](hidden-knowledge.md#drozbay) has shared the following workflow
+[Drozbay](hidden-knowledge.md#drozbay) has shared the following workflow
 
 ![drozbay_testembeds_wani2vmasks.png](screenshots/drozbay_testembeds_wani2vmasks.png)
 [drozbay_testembeds_wani2vmasks](screenshots/drozbay_testembeds_wani2vmasks.png)

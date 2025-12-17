@@ -138,10 +138,15 @@ Node to select last layer by Scruffy: [CLIPSetLastLayer.py](../bobs/CLIPSetLastL
 - [detail-slider](https://civitai.com/models/2202638/detail-slider-for-z-image) note: strength can be -2 to +2, greater values mean more details
 - [detaildeamonz](https://civitai.com/models/2209262/detaildeamonz-sliderlora-for-zimageturbo-and-redz15) note: strength can be -2 to +2, greater values mean less details
 
-Iceb LoRAs
+Luneva LoRAs
 
 - https://civitai.com/models/2185167/midjourney-luneva-cinematic-lora-and-workflow
 - https://civitai.com/models/2215818/luneva-cyber-hd-enhancer
+- https://civitai.com/models/2226355?modelVersionId=2506390 model and LoRAs
+
+Ultra-Realist Style from WAS
+
+- https://civitai.com/models/2192377?modelVersionId=2484891
 
 ## See Alos
 

@@ -1,8 +1,4 @@
-# Upascalers
-
-## Simplest: Upasclae Image By
-
-Use stock ComfyUI node `Upscale Image By` with `upscale_method`=`lanczoc`
+# Video Upscalers and Detailers
 
 ## FL13
 
