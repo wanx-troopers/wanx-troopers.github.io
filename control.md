@@ -28,6 +28,11 @@ Works with [SCAIL](wan-animates.md#scail):
 
 ![uni3c](screenshots/uni3c.webp)
 
+Optional memory offloading added
+
+> you can also run it in fp8 with the quantization option, it doesn't really suffer much from that;
+> can work with T2V too
+
 ## Q/A
 
 > Q: Is there anything that does the same thing as Uni3C but for WAN 2.2?

@@ -1,5 +1,40 @@
 ﻿# Statements
 
+## 2025.12.17
+
+On colormatch node:
+
+> mkl is usually okay and fast, hm-mvgd-hm is technically the best but slow;
+> note that it's not video color match, just matches each window to the init image,
+> so depending on your init image it's not always good idea and better to just do in post
+
+About producing videos with more than 8bits of color:
+
+> Some depth predictors like Marigold returns lots of images and then stack them so you get more, that's why I have the EXR export node;
+> And there was some HDR lighting model, that creates multiple different light levels then those are stacked, there's HDR save node there as well.
+> But it's not something useful for video models
+
+https://github.com/sumitchatterjee13/Luminance-Stack-Processor
+
+> we've been testing that chord model for 3D materials, and I found that the coco tools saver node works with 16bits dealing with the banding
+
+"a fairly robust set of EXR load/save nodes": https://github.com/spacepxl/ComfyUI-HQ-Image-Save; "fp16 is usually better than bf16 though, as long as you don't get NaNs"
+
+> best option for HDR without training is to lower the exposure and inpaint the highlights with differential diffusion
+> and you can do that multiple times to get more range
+> but also like, you can just train on a reversible lut and extract a decent amount of range that way
+
+The point of `VAELoader KJ` from [KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
+and `WanVideo VAE Loader` from Wrapper
+is to be able to run `fp32` Wan VAE in `bf16`, `fp16` or `fp32` modes
+
+![VAELoaderKJ](screenshots/VAELoaderKJ.png) ![WanVideoVAELoader](screenshots/WanVideoVAELoader.webp)
+
+> bf16 gives roughly 8 bit precision in half the image range (0.5 - 1.0);
+> fp16 has significantly more precision
+
+...which can be helpful when using [GH:spacepxl/ComfyUI-HQ-Image-Save](https://github.com/spacepxl/ComfyUI-HQ-Image-Save) to save/load images in EXR format
+
 ## 2025.12.16
 
 > IME so far, VACE is 10x more useful than wanimate for real VFX work;

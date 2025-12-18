@@ -7,6 +7,10 @@
 * [LoRa-s Part II](part-02.md)
 * [Both Ways](both-ways.md)
 
+## 2025.12.17
+
+Purely experimental: add fastwan at 0.7 strength?...
+
 ## 2025.12.11
 
 It is a common question which speed LoRA-s to use with Wan 2.2.
@@ -90,6 +94,7 @@ Users chatting:
 
 | Repo | Lora | Generation | Approx. Released | Comment |
 | --- | --- | --- | --- | --- |
+| [HF:lightx2v/Wan2.2-Distill-Loras](https://huggingface.co/lightx2v/Wan2.2-Distill-Loras/tree/main)|wan2.2_t2v_A14b_high_noise_lora_rank64_lightx2v_4step_1217<br>wan2.2_t2v_A14b_low_noise_lora_rank64_lightx2v_4step_1217|2.2 T2V High/Low|2025.12.17|bf16<br>"not much better"|
 | [HF:lightx2v/Wan2.2-Lightning:Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0](https://huggingface.co/lightx2v/Wan2.2-Lightning/tree/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0)|Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0|2.2 T2V High/Low| 2025.11.07 | No Kijai conversion available<br>Reprotedly can make things too bright |
 | [HF:lightx2v/Wan2.2-Lightning:Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1.1](https://huggingface.co/lightx2v/Wan2.2-Lightning/tree/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1.1)|Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1.1|2.2 T2V High/Low| 2025.08 ? | No Kijai conversion available |
 | [HF:lightx2v/Wan2.2-Lightning:Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1](https://huggingface.co/lightx2v/Wan2.2-Lightning/tree/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1)|Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1|2.2 T2V High/Low| 2025.08 ? | No Kijai conversion available |  |

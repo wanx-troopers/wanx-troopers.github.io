@@ -6,6 +6,25 @@ Wan Animate and MoCha serve similar goals.
 
 Official git [repo](https://github.com/zai-org/SCAIL) - pls. put starts to make it easier for the team to obtain more resources for future training!
 
+### SCAIL 2015.12.17
+
+SCAIL generations are known to come up super dark if pose video hasn't been converted to exactly 1/2 of resolution of the video being generated
+
+Multi-people [workflow](workflows/scail/slmonker-scail-multipeople.png) by Slmonker.
+
+Using Uni3C *may* help avoid background issues in Context Windows generations with SCAIL. Can be sufficient to use only for initial 1-2 steps of sampling.
+
+Hybrid workflow from Juan Gea: human_video -> SCAIL -> WanAnimate; helps if character proportions very different from original video; the idea is
+SCAIL workflow can be better at retargetting motion from human to character and WanAnimate is better than SCAIL at keeping a consistent background;
+"can add Uni3C to the mix, to be sure that the camera is stable and the character won't slide, for that you use the original human video".
+
+SCAIL relies heavily on prompting. Good idea to separate prompts with | on wrapper when using [Context Windows](what-plugs-where/context-windows.md) to apply different prompts to different windows.
+
+As of now SCAIL is not supported on native.
+
+> Q: are we at a place where we can two subjects?
+> A: you can but you have to switch to using the dwpose node instead of vitpose if you want faces, as vitpose does only one person at a time
+
 ### SCAIL 2025.12.15
 
 > - NLF input only = no retargeting

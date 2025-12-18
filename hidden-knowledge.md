@@ -1,5 +1,13 @@
 ﻿# Hidden Knowledge
 
+## 2025.12.17
+
+I2V Encode in Wrapper has `fl2v` toggle which needs to be enabled for example to make a loop video
+
+> it only affects how the last frame is encoded if provided;
+> Fun and first to last frame - model work with the last frame just being last video frame, 2.2 as well
+> But normal I2V requires last frame to be encoded on it's own
+
 ## 2025.12.16
 
 Discussion: as a mitigation of issues with [SCAIL](wan-animates.md#scail) the possibility is being considered of adding an extra pose guidance frame at the front and then cutting it
@@ -83,6 +91,8 @@ is there to downcasts the weights to a lower precision when possible.
 `quantization` generally is "just a fallback", it is slower to load;
 if VRAM is tight the advice is to "either use scaled fp8 or GGUF
 or "disable quantization and use max block swap".
+
+`quanatization` not possible with scaled `.safetensor`-s, "just keep it disabled"
 
 Mixing `fp8_e5m2_scaled` VACE with `fp8_e5m2` Wan 2.2 T2V can cause mysterious errors.
 

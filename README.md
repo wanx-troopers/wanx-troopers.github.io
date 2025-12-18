@@ -58,7 +58,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [Extra Tools](extra-tools.md)
 * [Image Upscalers and Detailers](upscalers-detailers-image.md)
 * [Recommended Software Versions](versions.md)
-* [OOM Talk](oom-talk.md)
+* [OOM and Speed Talk](oom-speed-talk.md)
 * [Tricks](tricks.md)
 * [Statements](statements.md)
 * [Other Image Models](extra-tools/other-image-models.md)

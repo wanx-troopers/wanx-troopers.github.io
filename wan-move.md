@@ -3,7 +3,12 @@
 Wan-Move support has been added to native ComfyUI. New nodes:
 
 - `WanMoveTracksFromCoords`
-- `WanMoveTracksToVideo`
+- `WanMoveTracksToVideo` (note: mask is "for optional mask if you want parts of the track to not affect the output")
+
+> If you want the points to start at any given frame, give the points a mask yes;
+> it's binary only;
+> point is either visible or not;
+> if no mask is provided when creating points, it's all ones
 
 ![kj-wan-move-native](screenshots/kj-wan-move-native.webp)
 

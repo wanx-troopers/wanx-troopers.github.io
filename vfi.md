@@ -11,6 +11,10 @@ Once you have generated the number of frames you want you are free to package th
 
 VFI = video frame interpolation.
 
+Opinionated quote:
+
+> the proper way to do it is using vace to generate the frames in between with diffusion, but gimm seems much better than rife
+
 ## RIFE
 
 RIFE VFI still good to double frame rate.

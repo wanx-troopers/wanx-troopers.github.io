@@ -1,13 +1,19 @@
-# Discussions Around Out Of Memory
+# Out Of Memory And Speed Discussions
 
-2025.12.10
+## 2025.12.17
+
+> with out cache ... 92 sec; with ... 70 sec
+
+![magcache](screenshots/magcache.webp)
+
+## 2025.12.10
 
 ![dc-unload-models-execution-cache](screenshots/dc-unload-models-execution-cache.webp)  
 helps free up RAM
 
 SAM3 nodes under suspicion for consuming RAM
 
-2025.12.06
+## 2025.12.06
 
 > fun fact, using native load video is actually worse, because it reruns the get video components node each time, which also leaks memory
 > vhs at least doesn't have that problem

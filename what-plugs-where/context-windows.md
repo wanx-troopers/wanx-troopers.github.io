@@ -1,5 +1,9 @@
 # Context Windows
 
+## 2025.12.17
+
+Text prompt per context window in Wrapper: separate prompts with |.
+
 ## 2025.12.16
 
 Native ComfyUI native has been updated to include a [change](https://github.com/comfyanonymous/ComfyUI/pull/11208)
