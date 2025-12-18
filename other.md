@@ -14,6 +14,8 @@ Caution remains in place for all `1038lab` owned repositories.
 
 ## Big List
 
+* [GH:alibaba-damo-academy/Lumos-Custom](https://github.com/alibaba-damo-academy/Lumos-Custom) relighting article
+* [GH:MeiGen-AI/LongCat-Video-Avatar](https://github.com/MeiGen-AI/LongCat-Video-Avatar) from same team as InfiniteTalk, no degradation?
 * [OmniPSD](https://showlab.github.io/OmniPSD/) separate poster into layers
 * [GH:refkxh/bico](https://github.com/refkxh/bico) model for combining visual concepts from different images/videos; some links to Wan
 * [GH:inclusionAI/TwinFlow](https://github.com/inclusionAI/TwinFlow), [HF:Suzu008/TwinFlow_Repackaged](https://huggingface.co/Suzu008/TwinFlow_Repackaged/tree/main) a new framework for 1 step generation for qwen image

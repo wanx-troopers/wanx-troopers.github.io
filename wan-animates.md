@@ -25,6 +25,13 @@ As of now SCAIL is not supported on native.
 > Q: are we at a place where we can two subjects?
 > A: you can but you have to switch to using the dwpose node instead of vitpose if you want faces, as vitpose does only one person at a time
 
+Good starting picture, possibly built from 1st frame of a human video using depth controlnet for Z-Image can help.
+
+> The background generally only shifts if the camera moves away from the original background
+
+> Q: for SCAIL embeds, is the end percent of 0.5 in the example workflow for speed or because control on all steps looks bad?
+> A: speed and that it has no big effect after that
+
 ### SCAIL 2025.12.15
 
 > - NLF input only = no retargeting

@@ -16,6 +16,8 @@ is to be able to run `fp32` Wan VAE in `bf16`, `fp16` or `fp32` modes
 
 > if you use a fp8 scaled diffusion model, it's still actually using fp16 or bf16 to do all the calculations, only the stored weights are in fp8. They get upcast and scaled on the fly
 
+> I had to start comfy with `--preview-method auto` to get previews to start working again [in KSampler] [there's also --preview-method taesd]
+
 ## 2025.12.16
 
 Discussion: as a mitigation of issues with [SCAIL](wan-animates.md#scail) the possibility is being considered of adding an extra pose guidance frame at the front and then cutting it

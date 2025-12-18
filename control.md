@@ -11,6 +11,10 @@ Controls pose only
 
 > note you have to load the unianimate lora on the model loader, not the set node because it patches the model too
 
+> Unianimate was always too strong for 2.1
+
+...which is why it was not possible to set strength above 1 in the node, however with 2.2 it seems not strong enough and it makes sense to try higher values
+
 See also: [SVI-dance](svi.md#svi-dance)
 
 ### FantasyPortrait
