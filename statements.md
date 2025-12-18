@@ -24,16 +24,8 @@ https://github.com/sumitchatterjee13/Luminance-Stack-Processor
 > and you can do that multiple times to get more range
 > but also like, you can just train on a reversible lut and extract a decent amount of range that way
 
-The point of `VAELoader KJ` from [KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
-and `WanVideo VAE Loader` from Wrapper
-is to be able to run `fp32` Wan VAE in `bf16`, `fp16` or `fp32` modes
-
-![VAELoaderKJ](screenshots/VAELoaderKJ.png) ![WanVideoVAELoader](screenshots/WanVideoVAELoader.webp)
-
 > bf16 gives roughly 8 bit precision in half the image range (0.5 - 1.0);
 > fp16 has significantly more precision
-
-...which can be helpful when using [GH:spacepxl/ComfyUI-HQ-Image-Save](https://github.com/spacepxl/ComfyUI-HQ-Image-Save) to save/load images in EXR format
 
 ## 2025.12.16
 

@@ -8,6 +8,14 @@ I2V Encode in Wrapper has `fl2v` toggle which needs to be enabled for example to
 > Fun and first to last frame - model work with the last frame just being last video frame, 2.2 as well
 > But normal I2V requires last frame to be encoded on it's own
 
+The point of `VAELoader KJ` from [KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
+and `WanVideo VAE Loader` from Wrapper
+is to be able to run `fp32` Wan VAE in `bf16`, `fp16` or `fp32` modes
+
+![VAELoaderKJ](screenshots/VAELoaderKJ.png) ![WanVideoVAELoader](screenshots/WanVideoVAELoader.webp)
+
+> if you use a fp8 scaled diffusion model, it's still actually using fp16 or bf16 to do all the calculations, only the stored weights are in fp8. They get upcast and scaled on the fly
+
 ## 2025.12.16
 
 Discussion: as a mitigation of issues with [SCAIL](wan-animates.md#scail) the possibility is being considered of adding an extra pose guidance frame at the front and then cutting it
