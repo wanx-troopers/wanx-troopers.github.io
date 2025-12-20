@@ -18,6 +18,8 @@ is to be able to run `fp32` Wan VAE in `bf16`, `fp16` or `fp32` modes
 
 > I had to start comfy with `--preview-method auto` to get previews to start working again [in KSampler] [there's also --preview-method taesd]
 
+Using parenthesis in the prompt like `(16:9)` can break generation with Wan.
+
 ## 2025.12.16
 
 Discussion: as a mitigation of issues with [SCAIL](wan-animates.md#scail) the possibility is being considered of adding an extra pose guidance frame at the front and then cutting it

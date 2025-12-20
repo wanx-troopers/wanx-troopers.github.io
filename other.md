@@ -14,6 +14,8 @@ Caution remains in place for all `1038lab` owned repositories.
 
 ## Big List
 
+* [GH:sumitchatterjee13/nuke-nodes-comfyui](https://github.com/sumitchatterjee13/nuke-nodes-comfyui) Nuke style nodes for ComfyUI
+
 * [GH:alibaba-damo-academy/Lumos-Custom](https://github.com/alibaba-damo-academy/Lumos-Custom) relighting article
 * [GH:MeiGen-AI/LongCat-Video-Avatar](https://github.com/MeiGen-AI/LongCat-Video-Avatar) from same team as InfiniteTalk, no degradation?
 * [OmniPSD](https://showlab.github.io/OmniPSD/) separate poster into layers

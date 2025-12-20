@@ -122,6 +122,8 @@ Drozbay's [WanVaceAdvanced](https://github.com/drozbay/ComfyUI-WanVaceAdvanced) 
 * `Points Editor` from [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) used in workflows utilizing Sam2 for segmentation.
 * `Rope Function Node` from [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) - mysterious but holds promise.
 * `Get Image From Batch Indexed` from [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) to get several last frames from previous generation for VACE / I2V extensions
+* `Image Concatenate Multi` from [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes); 1st image might be mandatory here
+  ![image-concatenate-multi](screenshots/kj-image-concatenate-multi.webp)
 
 ## Masks
 

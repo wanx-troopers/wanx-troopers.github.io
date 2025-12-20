@@ -16,7 +16,21 @@ Latent noise masks designate those frames and parts of frames that are updated f
 Latent noise masks therefore need to be in agreement with data supplied in noisy latents into the generation process.
 
 In ComfyUI latent masks are "supplied" to samplers along with noisy latents on the same "noodle".
-`Set Latent Noise Mask` node can be used to add latent masks to noisy latents.
+
+Latent masks can be set in one of the two ways
+
+- `Set Latent Noise Mask` native ComfyUI node
+- `WanVideo Encode` node in wrapper
+
+Both nodes should have the same effect - set what is designated in code as `noise_mask`.
+
+> You just give the masks in pixel space, they get compressed the same, but yeah latent masking is limited to one mask per 4 frames
+
+Latent masks are specified in pixel spaced but then the code in both `WanVideo Sampler` and in `KSampler` merges masks inside
+each 4-frame latent into one mask using trilinear interpolation to do it.
+This can not work very well in case of a very fast motion.
+[WanEx](https://github.com/drozbay/WanExperiments) contains an alternative `WanEx MaskToLatentSpace` node doing a merge of masks more suitable for this case.
+However it can only use be used with alternativer samplers which do accept latent masks in latent space: [droz-latent-masks](screenshots/droz-latent-masks.png).
 
 ![dr-set_latent_noise_mask.png](screenshots/dr-set_latent_noise_mask.png)
 
@@ -62,6 +76,3 @@ In native `differential diffusion` is enabled in one of two ways
 Note: latent masks are separate from VACE masks. Latent masks can and should be blurry. VACE masks possibly need to be binary black/white. Both can be used at the same time in VACE workflows.
 
 In Wrapper if a single frame of latent mask is supplied it is automatically duplicated to match `num_frames` in the video.
-
-One way to create latent masks using [WanEx](https://github.com/drozbay/WanExperiments):
-[droz-latent-masks](screenshots/droz-latent-masks.png)

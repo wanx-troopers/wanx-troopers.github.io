@@ -1,5 +1,11 @@
 ﻿# Statements
 
+## 2025.12.19
+
+Re [FlashPortrait](https://huggingface.co/FrancisRing/FlashPortrait)
+
+> 53 input channels which seems new... Fun control 2.2 is 52 which is closest to this
+
 ## 2025.12.17
 
 On colormatch node:

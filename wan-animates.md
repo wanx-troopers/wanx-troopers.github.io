@@ -32,6 +32,14 @@ Good starting picture, possibly built from 1st frame of a human video using dept
 > Q: for SCAIL embeds, is the end percent of 0.5 in the example workflow for speed or because control on all steps looks bad?
 > A: speed and that it has no big effect after that
 
+Using vitpose
+
+![kj-vitpose](screenshots/kj-vitpose.webp)
+
+> dwpose is just worse than vitpose-H (the huge one), but vitpose also only does one person while dwpose can do more
+
+![op-to-dw](screenshots/wan-animates/op-to-dw.webp)
+
 ### SCAIL 2025.12.15
 
 > - NLF input only = no retargeting
