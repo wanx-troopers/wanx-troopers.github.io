@@ -1,5 +1,20 @@
 # Context Windows
 
+## 2025.12.20
+
+> how to ... inject different images reference for each context window? 
+> encode bunch of image with `Wan Video Encode Latent Batch`
+
+![WanVideo-Encode-Latent-Batch](../screenshots/kj-WanVideo-Encode-Latent-Batch.webp)
+
+> if you have less images than windows, it keeps using the last one for the rest
+
+The output of this node is to be plugged into `reference_latent` input on `WanVideo Context Options` node.
+The code has been written to handle reference per context window for many different cases: MAGREF, HuMo, VACE, Phantom & Bindweave.
+The feature remains experimental - test with caution.
+As an extra node it seems that in this scenario we're limited to supplying just one reference image to each window of generation
+even the model would normally admit more than one.
+
 ## 2025.12.17
 
 Text prompt per context window in Wrapper: separate prompts with |.
@@ -24,6 +39,8 @@ to handle latent masking correctly with context windows.
 > substep samplers definitely don't work with context windows, that would need more work
 
 Note: `skip_final_model_call` option needs to be set.
+
+Note: Drozbay has implemented an intereting `WanEx Context Window Calculator` node: [screenshot](../screenshots/droz-context-windows-calculator.webp).
 
 ## 2025.12.16 Details
 

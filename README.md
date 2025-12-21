@@ -22,17 +22,20 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 
 ## Models
 
-* [HuMo](humo.md)
 * [SCAIL/Wan Animate/MoCha/Steady Dancer/One-To-All](wan-animates.md)
-* [Infinite Talk](infinite-talk.md)
-* [Phantom and MAGREF](phantom-magref.md)
-* [HoloCine](holocine.md)
-* [LongCat](longcat.md)
-* [BindWeave](bindweave.md)
-* [Kandinsky-5](k5.md)
-* [Hunyuan](hunyuan.md)
-* [Ovi](ovi.md)
 * [Wan-Move](wan-move.md)
+* Talkies
+  * [Infinite Talk](infinite-talk.md)
+  * [HuMo](humo.md)
+  * [LongCat Avatar](talkies/longcat-avatar.md)
+  * [Ovi](ovi.md)
+* Not Wan
+  * [Kandinsky-5](k5.md)
+  * [Hunyuan](hunyuan.md)
+  * [HoloCine](holocine.md)
+  * [LongCat](longcat.md)
+  * [BindWeave](bindweave.md)
+* [Phantom and MAGREF](phantom-magref.md)
 
 ## Models+
 

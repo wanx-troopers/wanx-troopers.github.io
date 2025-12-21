@@ -6,6 +6,14 @@ Re [FlashPortrait](https://huggingface.co/FrancisRing/FlashPortrait)
 
 > 53 input channels which seems new... Fun control 2.2 is 52 which is closest to this
 
+> the FlashPortrait seems to just run with my existing FantasyPortrait code
+
+`https://huggingface.co/FrancisRing/FlashPortrait/blob/main/fast_lora_rank64.safetensors` same as
+`https://huggingface.co/lightx2v/Wan2.1-Distill-Loras/blob/main/wan2.1_i2v_lora_rank64_lightx2v_4step.safetensors`
+
+> [FlashPortrait] doesn't seem useful as it is, probably made for the long gen method only as for single short gens it's worse than FantasyPortrait;
+> So would need to add the method first
+
 ## 2025.12.17
 
 On colormatch node:

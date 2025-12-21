@@ -1,5 +1,8 @@
 # News
 
+2025.12.20 Integration of [LongCat Avatar](talkies/longcat-avatar.md) into ComfyUI has started; this is a promising successor/alternative to InfiniteTalk/HuMo promising very long video generation without burning;
+reportedly from the same team that created MultiTalk/InfiniteTalk
+
 2025.12.16 Advanced Context Windows worflows by [Drozbay](hidden-knowledge.md#drozbay) are now supported by ComfyUI native, [details](what-plugs-where/context-windows.md#20251216).
 
 2025.12.13 Progress on integrating [SCAIL](wan-animates.md#scail) into ComfyUI; single character pose detection working, two character pose detection in progress [a WanAnimate analogue capable of generating two characters according to pose skeletons];

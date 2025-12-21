@@ -1,5 +1,10 @@
 # HuMO
 
+## 2025.12.20
+
+> Have you managed to fix the dreaded noisy first frame/flash on humo?
+> Nope, not when using a start image
+
 ## 2025.12.07
 
 Kijai added a change to Wrapper which allows HuMo embeds to be used together with `WanVideo ImageToVideo Encode` embeds.

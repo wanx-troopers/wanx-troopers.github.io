@@ -2,11 +2,14 @@
 
 ## 2025.12.17
 
-I2V Encode in Wrapper has `fl2v` toggle which needs to be enabled for example to make a loop video
+I2V Encode in Wrapper has `fun_or_fl2v_model` toggle which needs to be enabled for example to make a loop video
 
 > it only affects how the last frame is encoded if provided;
 > Fun and first to last frame - model work with the last frame just being last video frame, 2.2 as well
 > But normal I2V requires last frame to be encoded on it's own
+
+> off = encode last image on its own, just like first image
+> on = just insert last image as last pixel image and encode all 
 
 The point of `VAELoader KJ` from [KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
 and `WanVideo VAE Loader` from Wrapper
@@ -303,6 +306,7 @@ Kijai's nodes can convert between data types such as `bf16` at `safetensors` loa
 | [kijai/ComfyUI-MMAudio](https://github.com/kijai/ComfyUI-MMAudio) | Foley? |
 | [kijai/ComfyUI-GIMM-VFI](https://github.com/kijai/ComfyUI-GIMM-VFI) | frame interpolator |
 | [kijai/ComfyUI-SCAIL-Pose](https://github.com/kijai/ComfyUI-SCAIL-Pose) | pose detector for [SCAIL](wan-animates.md#scail) model |
+| [kijai/ComfyUI-MoGe](https://github.com/kijai/ComfyUI-MoGe) | adaptation of MoGe [tool](https://github.com/microsoft/MoGe) by Microsoft |
 
 Resolutions to try with WAN: 1536x864, 1280x768, 1200x960, 1/2 of that, 832x480, 1024x576, 1440x816  
 Resolutions to try with Ovi v1.1: 1280x704, 704x1280

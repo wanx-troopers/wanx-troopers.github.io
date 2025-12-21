@@ -40,6 +40,8 @@ Using vitpose
 
 ![op-to-dw](screenshots/wan-animates/op-to-dw.webp)
 
+Note: vitpose `.onnx` and `.bin` files go into `ComfyUI/models/detection` folder, "same with Yolo actually".
+
 ### SCAIL 2025.12.15
 
 > - NLF input only = no retargeting

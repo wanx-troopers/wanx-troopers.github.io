@@ -14,7 +14,9 @@ Caution remains in place for all `1038lab` owned repositories.
 
 ## Big List
 
+* [gumroad.com:ciojz] blender bones compatible with OpenPose
 * [GH:sumitchatterjee13/nuke-nodes-comfyui](https://github.com/sumitchatterjee13/nuke-nodes-comfyui) Nuke style nodes for ComfyUI
+* Comfy Native has got `Adjust Contrast` node
 
 * [GH:alibaba-damo-academy/Lumos-Custom](https://github.com/alibaba-damo-academy/Lumos-Custom) relighting article
 * [GH:MeiGen-AI/LongCat-Video-Avatar](https://github.com/MeiGen-AI/LongCat-Video-Avatar) from same team as InfiniteTalk, no degradation?
@@ -41,7 +43,6 @@ Caution remains in place for all `1038lab` owned repositories.
 
 * [Steady Dancer](https://mcg-nju.github.io/steadydancer-web/) now with basic ComfyUI support
 * [Infinity Rope](https://infinity-rope.github.io/) based on Wan 1.3B so not paticularly powerful but holds promise for future
-
 
 * [GH:PozzettiAndrea/ComfyUI-MotionCapture](https://github.com/PozzettiAndrea/ComfyUI-MotionCapture) [reddit intro](https://www.reddit.com/r/StableDiffusion/comments/1p4pkbk/release_comfyuimotioncapture_full_3d_human_motion/) full human body 3d motion capture
 * [GH:PozzettiAndrea/ComfyUI-UniRig](https://github.com/PozzettiAndrea/ComfyUI-UniRig) ComfyUI tools for rigging a skeleton
