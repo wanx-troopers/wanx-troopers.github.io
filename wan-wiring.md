@@ -131,6 +131,12 @@ Here is a slightly non-traditional way to build masks. Please note that actual v
 
 ![build-masks-manually](screenshots/build-masks-manually.webp)
 
+## FMML
+
+VACE "First middle middle last" as done by [VRGameDevGirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl)
+
+![vr-fmml](screenshots/vr-fmml.png)
+
 ## See Also
 
 - [Wan Masking](wan-masking.md)

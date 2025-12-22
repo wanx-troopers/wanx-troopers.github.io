@@ -172,7 +172,9 @@ Note: LoRa extracted from "dyno" model looses important qualities of "dyno"; e.g
 Wan 2.1 and 2.2 LoRA-s:
 
 * [HF:Ashmotv/water_morping_wan](https://huggingface.co/Ashmotv/water_morping_wan)
-* [HF:Ashmotv/exploded_effect_wan](https://huggingface.co/Ashmotv/exploded_effect_wan) exploded effect WAN
+* [HF:Ashmotv/exploded_effect_wan](https://huggingface.co/Ashmotv/exploded_effect_wan) exploded effect WAN; there should be a slow motion explode somewhere nearby
+* [HF:benjamin-paine/steamboat-willie-14b](https://huggingface.co/benjamin-paine/steamboat-willie-14b) steamboat willy / steampunk willy
+* [civitai:2052865](https://civitai.com/models/2052865/flippinrad-motion-morph?modelVersionId=2323211) Flipping Sigma's AnimateDiff
 * Wan 2.2 Smartphone LoRa
 * [Cseti/wan2.2-14B-Kinestasis_concept-lora-v1](https://huggingface.co/Cseti/wan2.2-14B-Kinestasis_concept-lora-v1)
 * [Cseti/LTXV-13B-LoRA-Wallace_and_Gromit-v1](https://huggingface.co/Cseti/LTXV-13B-LoRA-Wallace_and_Gromit-v1) aka Walgro

@@ -17,9 +17,11 @@ Controls pose only
 
 See also: [SVI-dance](svi.md#svi-dance)
 
-### FantasyPortrait
+### FantasyPortrait / FlashPortrait
 
 For face animation only. Wan 2.1 era. Supported in wrapper. Kijai's sample [wf](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_2_1_I2V_FantasyPortrait_example_01.json).
+
+Dec 2025 a FlashPortrait has been released which appears to be a further development of FantasyPortrait
 
 ### MTV crafter
 

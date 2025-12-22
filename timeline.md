@@ -1,5 +1,7 @@
 # News
 
+2025.12.21 [LongVie](https://vchitect.github.io/LongVie2-project/) is being experimented with
+
 2025.12.20 Integration of [LongCat Avatar](talkies/longcat-avatar.md) into ComfyUI has started; this is a promising successor/alternative to InfiniteTalk/HuMo promising very long video generation without burning;
 reportedly from the same team that created MultiTalk/InfiniteTalk
 

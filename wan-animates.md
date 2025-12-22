@@ -42,6 +42,8 @@ Using vitpose
 
 Note: vitpose `.onnx` and `.bin` files go into `ComfyUI/models/detection` folder, "same with Yolo actually".
 
+> SCAIL-Pose does both NLF and dwpose to add hands/face
+
 ### SCAIL 2025.12.15
 
 > - NLF input only = no retargeting

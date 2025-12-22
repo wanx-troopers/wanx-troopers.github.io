@@ -20,4 +20,17 @@ Reportedly around 10 steps is necessary
 > For short clips at least seems fine to use less, maybe the extension quality will suffer on long runs.
 > But this reference method always has the initial frame to use, so it still should not burn.
 
+> The audio_cfg makes it twice as slow, you can try without it but usually the lipsync suffers a lot
+
+> 1 minute without degradation, using the old distill lora (at 0.8 str), audio_cfg 3.0, text cfg 1.0, 12 steps with the longcat distil schedule
+
+> you can do v2v already;
+> this helps to slice the correct part of the input video for each window
+
+![slicing.webp](../screenshots/longcat-avatar/slicing.webp)
+
+> at the moment there is only the bf16 model for longcat_avatar;
+> for the normal longact video there is a fp8 version;
+> You can run a bf16 at fp8 though
+
 
