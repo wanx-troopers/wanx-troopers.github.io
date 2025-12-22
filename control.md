@@ -64,3 +64,5 @@ This was a technique developed middle of 2025 (?) to provide identity preservati
 - weights adapted by Kijai: [HF:Kijai/WanVideo_comfy:LoRAs/Stand-In](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Stand-In).
 
 Dec 2025 a version trained for Wan 2.2 was released, "doesn't seem to need any code changes".
+
+> it needed at least part of the body ... white background
