@@ -1,5 +1,10 @@
 ﻿# Hidden Knowledge
 
+## 2025.12.22
+
+> TeaCache (and MagCache) is tuned per model so it wouldn't work properly [for Logcat Avatar], EasyCache is model agnostic and should work;
+> it's generally better to set high step count and then adjust the threshold so it drops ~30-50% of the steps [with EasyCache]
+
 ## 2025.12.17
 
 I2V Encode in Wrapper has `fun_or_fl2v_model` toggle which needs to be enabled for example to make a loop video

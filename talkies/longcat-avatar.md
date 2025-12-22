@@ -11,6 +11,10 @@ branch in Kijai's [Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) re
 
 ![WanVideoLongCatAvatarExtendEmbeds](../screenshots/longcat-avatar/WanVideoLongCatAvatarExtendEmbeds.webp)
 
+> `prev_latents` is where it continues from, the overlap amount of frames are taken from it,
+> `ref_latent` is used to insert that latent in the sequence at the `ref_frame_index` position (latent space),
+> which is how it keeps the reference consistency in longer extensions
+
 Model and LoRA-s: [HF:Kijai/LongCat-Video_comfy](https://huggingface.co/Kijai/LongCat-Video_comfy/tree/main).
 
 Reportedly around 10 steps is necessary

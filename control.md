@@ -55,3 +55,12 @@ Comfy contains a template.
 Idea: use black-white video with strong gradations as a mask to guide generation.
 
 Possible combination: Fun Control 2.2 HN and regular Wan 2.2 LN
+
+## Standin
+
+This was a technique developed middle of 2025 (?) to provide identity preservation in Wan workflows (??? to be confirmed)
+
+- original weights: [HF:BowenXue/Stand-In](https://huggingface.co/BowenXue/Stand-In)
+- weights adapted by Kijai: [HF:Kijai/WanVideo_comfy:LoRAs/Stand-In](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Stand-In).
+
+Dec 2025 a version trained for Wan 2.2 was released, "doesn't seem to need any code changes".
