@@ -16,3 +16,8 @@ There are two Github repositories to get nodes from
   SEGS/VACE video [detailer](upscalers-detailers-video.md#drozbays-impact-pack-segs-detailer-for-wan-video-and-vace)
 
 ## USDU
+
+
+## Chatter
+
+> In my tests, z image doesn't work well for second pass. Instead, I'm using wan 2.2; you can also use flux

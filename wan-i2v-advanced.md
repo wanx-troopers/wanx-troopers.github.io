@@ -81,11 +81,10 @@ The process requires that a mask is supplied.
 
 ### TimeToMove Ideas
 
-[GH:kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) also contains `Cut And Drag On Path` node.
-
-[GH:wallen0322/ComfyUI-AE-Animation](https://github.com/wallen0322/ComfyUI-AE-Animation) contains `AE Animation` node which is another good way to prepare control videos for TTM.
-
-[GH:Verolelb/ComfyUI-AE-Animation-English-Mod](https://github.com/Verolelb/ComfyUI-AE-Animation-English-Mod) a fork of the above fully translated into English. Additional flip and scale features.
+- [GH:kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) also contains `Cut And Drag On Path` node.
+- [GH:wallen0322/ComfyUI-AE-Animation](https://github.com/wallen0322/ComfyUI-AE-Animation) contains `AE Animation` node which is another good way to prepare control videos for TTM.
+- [GH:Verolelb/ComfyUI-AE-Animation-English-Mod](https://github.com/Verolelb/ComfyUI-AE-Animation-English-Mod) a fork of the above fully translated into English. Additional flip and scale features.
+- `Cut And Drag On Path` node from [KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
 
 Half-cooked 3d can be supplied. One way to produce:
 > blender, put the image on a subdivided plane and use the depth map to displace the geometry, then animating the camera

@@ -66,3 +66,6 @@ This was a technique developed middle of 2025 (?) to provide identity preservati
 Dec 2025 a version trained for Wan 2.2 was released, "doesn't seem to need any code changes".
 
 > it needed at least part of the body ... white background
+
+> how i can run stand-in lora ? 
+> need to load it in the model loader lora input as it's different kind of a lora
