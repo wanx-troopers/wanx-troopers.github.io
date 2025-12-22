@@ -188,12 +188,25 @@ There are two ways to produce longer videos in a batched manner: with and withou
 
 |Option|`WanVideo Animate Embeds`|`WanVideo Context Options`|
 |:---|:---|:---|
-|A|set `frame_window_size` to you batch size, say 77<br>set `num_frames` to the length of the video you want to generate|do not connect to `WanVideo Sampler`|
+|A|set `frame_window_size` to you batch size, say 77<br>set `num_frames` to the length of the video you want to generate|not used, looping is done "internally" by WanAnimate code|
 |B|set both `frame_window_size` and `num_frames` to the length of the video you want to generate|set `context_frames` to your batch size, say 77 or 81<br>4 is possibly correct value for `stride` effectively setting it to 'disabled'|
+
+Pro-s and cons:
+
+- A, looping done "internally": "won't shift so much or nothing at all, but from 3 extensions it will begin to degrade considerably, getting a final video with way less quality than the starting part"
+- B, looping done via [Context Windows](what-plugs-where/context-windows.md): "won't degrade over time, but has the same problem as always, shift of scene/background and even character"
 
 > The looping is done automatically in the wrapper even without context options when using the WanAnimate node;
 > context options is alternative long gen method, it's biggest benefit is that it doesn't deteriorate longer it goes,
 > and downside is speed and window continuation especially on backgrounds
+
+Note: an hybrid workflow has been demonstrated to work obtaining the best of both words:
+
+- video generated via WanAnimte unsing "internal looping", it does burn but keeps background and character clearly visible
+- generated video is used to produce a depth map
+- final video is produced using VACE with [Context Windows](what-plugs-where/context-windows.md)
+
+The hybrid did achieve no visible burning while driving both the character and background nicely.
 
 With Kijai's nodes face video can be simply disconnected. In native nodes one may need to connect a black image/video.
 Yes, the mask has to be blocky. Sometimes increasing blocks size can make things better.

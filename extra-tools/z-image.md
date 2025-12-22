@@ -196,3 +196,7 @@ Composed by [Madevilbeats](https://www.instagram.com/madevilbeats/):
 2016 × 864 (21:9)
 864 × 2016 (9:21)
 ```
+
+## Workflows
+
+- [ZImage_CN_MOIRE](../workflows/z-image/dm-ZImage_CN_MOIRE.json) by [Dream Making](https://ko-fi.com/dreammaking)
