@@ -37,4 +37,7 @@ Reportedly around 10 steps is necessary
 > for the normal longact video there is a fp8 version;
 > You can run a bf16 at fp8 though
 
+> are you using the chinese-wav2vec?
+> the chinese model is the only one that works ... because it's trained with this one
 
+`wav2vec-chenese-base_fp16.safetensors` `bf16`
