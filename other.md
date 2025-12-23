@@ -16,6 +16,7 @@ Caution remains in place for all `1038lab` owned repositories.
 
 * [GH:martijnat/comfyui-previewlatent](https://github.com/martijnat/comfyui-previewlatent) quick latent preview w/o VAE
 * [worldcanvas](https://worldcanvas.github.io/) a new model in footsteps of ATI and to some degree VACE
+* [InfCam](https://github.com/emjay73/InfCam?tab=readme-ov-file) wan 2.1 based video-to-video moving camera according to a set trajectory
 
 * [gumroad.com:ciojz] blender bones compatible with OpenPose
 * [GH:sumitchatterjee13/nuke-nodes-comfyui](https://github.com/sumitchatterjee13/nuke-nodes-comfyui) Nuke style nodes for ComfyUI

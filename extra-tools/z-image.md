@@ -143,6 +143,7 @@ Luneva LoRAs
 - https://civitai.com/models/2185167/midjourney-luneva-cinematic-lora-and-workflow
 - https://civitai.com/models/2215818/luneva-cyber-hd-enhancer
 - https://civitai.com/models/2226355?modelVersionId=2506390 model and LoRAs
+- https://civitai.com/models/1090420?modelVersionId=2520925 "new z-image checkpoint"
 
 Ultra-Realist Style from WAS
 

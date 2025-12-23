@@ -46,3 +46,8 @@ Reportedly around 10 steps is necessary
 > do not use sageattn 1.0.6, need sage 2.2.0 or sdpa
 
 Youtube [tutorial](https://www.youtube.com/watch?v=eZTdaLbzqL4)
+
+> I can't get quantized LongCat Avatar to work on my RTX 3090;
+> Same here: the scaled model only works if you set quantization
+> to fp8_e4m3_scaled. The full model works without issues,
+> either unquantized or with fp8_e4m3.
