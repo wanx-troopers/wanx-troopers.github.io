@@ -1,5 +1,9 @@
 # News
 
+2025.12.23 HuMo/Phantom team have released their 133Gb training [dataset](https://modelscope.cn/datasets/leoniuschen/HuMoSet); such a nice Christmap present, well help a lot of projects
+
+2025.12.23 NVidia has released a technology called NVFP4 for RTX50xx users; NVFP4 compatible adaptations of Wan 2.1 I2V 480 14B and Wan 2.1 T2V 1.3B have been made [available](https://huggingface.co/lightx2v/Wan-NVFP4); fast generations are expected
+
 2025.12.22 [Standin](control.md#standin) Wan 2.2 weights have been released; reportedly work without any code changes compared to 2.1 weights
 
 2025.12.21 [LongVie](https://vchitect.github.io/LongVie2-project/) is being experimented with; "the control part is interesting, the continuation doesn't seem that great though; the control might be something we can use with other workflows too as it's a controlnet"

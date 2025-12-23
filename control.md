@@ -69,3 +69,9 @@ Dec 2025 a version trained for Wan 2.2 was released, "doesn't seem to need any c
 
 > how i can run stand-in lora ? 
 > need to load it in the model loader lora input as it's different kind of a lora
+
+> adding PUSA lora to Stand-In seems to improve consistency;
+> ... testing Stand-In for WAN 2.1 ... the PUSA LoRA made for 2.2 actually seems to work better on WAN 2.1 than the PUSA 2.1 version;
+
+> 2.2 LN wan is just 2.1+++, so you can use 2.2 LN loras pretty reliably in wan 2.1 based models.
+> ... using ... loras from 2.2 in scail for example
