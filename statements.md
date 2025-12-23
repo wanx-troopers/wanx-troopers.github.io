@@ -41,6 +41,8 @@ https://github.com/sumitchatterjee13/Luminance-Stack-Processor
 > bf16 gives roughly 8 bit precision in half the image range (0.5 - 1.0);
 > fp16 has significantly more precision
 
+Fake HDR for images on youtube: [link](https://www.youtube.com/shorts/5_vOWes7mHo)
+
 ## 2025.12.16
 
 > IME so far, VACE is 10x more useful than wanimate for real VFX work;

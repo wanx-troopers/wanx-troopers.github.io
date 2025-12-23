@@ -91,3 +91,16 @@ https://github.com/woct0rdho/triton-windows - read instructions on the page, not
 https://github.com/woct0rdho/SageAttention
 
 Youtube tutorial on installing SageAttention 2.2 on Windows - unconfirmed, advice from community: [9APXcBMpbgU](https://www.youtube.com/watch?v=9APXcBMpbgU).
+
+## Different Attentions
+
+> How does Sage Attention compare against Flash Attention and Sdpa Attention?
+> sage >>>>>>>>>>>>>>> flash > sdpa, slight exaggeration
+
+> they all degrade quality?
+> only Sage
+
+> "degrade quality" in this context means everything you do to differ from the reference code, like reducing steps etc.
+> the quality loss from sage is so small in most cases that you can more than offset it from the speed gain
+
+> Flash Attention is something you have to install if you want to use the actual flash attention, the sdpa flash is different thing

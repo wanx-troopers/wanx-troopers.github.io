@@ -113,6 +113,14 @@ SolidMask  ---> RepeatMask --------------------------> |                 |
 
 `Video Continuation Generator` from [banodoco/Steerable-Motion](https://github.com/banodoco/Steerable-Motion) can be used instead of `WanVideo Start To End Frame` to prepare input for `WanVideo VACE Encode`.
 
+## Sample Simple WF From Drozbay
+
+![droz-simiple-vace-inpaint](workflows/droz-simiple-vace-inpaint.png)
+
+[droz-simiple-vace-inpaint](workflows/droz-simiple-vace-inpaint.png)
+
+> set the `frame_load_cap` to maximum of 97 for a single generation. You can lower the `force_rate` input to 16 to give you more video duration
+
 ## Drozbay's WanVaceAdvanced
 
 Drozbay's [WanVaceAdvanced](https://github.com/drozbay/ComfyUI-WanVaceAdvanced) nodes for advanced Wan + VACE generation) nodes, sample [workflow](../screenshots/drozbay_vacedancer_v1.png)

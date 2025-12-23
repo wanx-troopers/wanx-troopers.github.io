@@ -42,3 +42,7 @@ Reportedly around 10 steps is necessary
 > the chinese model is the only one that works ... because it's trained with this one
 
 `wav2vec-chenese-base_fp16.safetensors` `bf16`
+
+> do not use sageattn 1.0.6, need sage 2.2.0 or sdpa
+
+Youtube [tutorial](https://www.youtube.com/watch?v=eZTdaLbzqL4)
