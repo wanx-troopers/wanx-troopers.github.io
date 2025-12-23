@@ -1,5 +1,23 @@
 # Qwen
 
+## 2025.12.23
+
+Highly anticipated Qwen Image Edit 2511 is out
+
+- official release is split .safetensors so probably not directly useable
+- [HF:unsloth/Qwen-Image-Edit-2511-GGUF](https://huggingface.co/unsloth/Qwen-Image-Edit-2511-GGUF/tree/main) first repo to offer BF16, FP16, Q3-Q8 "city96 unet loader ofc"
+- [GH:city96/ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF) loader to load GGUF files
+- [HF:Comfy-Org/Qwen-Image-Edit_ComfyUI:split_files/diffusion_models](https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/tree/main/split_files/diffusion_models) Comfy-Org adaptation, BF16
+- lightx2v LoRA-s: [HF:lightx2v/Qwen-Image-Edit-2511-Lightning](https://huggingface.co/lightx2v/Qwen-Image-Edit-2511-Lightning/tree/main)
+
+Official workflow embedded in this image:
+
+![qie2511](../workflows/qie2511.png)
+
+[qie2511](../workflows/qie2511.png)
+
+> They seemed to have added a lot more color. The greens are popping and the color does not seem so washed out.
+
 ## 2025.12.13
 
 [GH:gajjar4/ComfyUI-Qwen-Image-i2L](https://github.com/gajjar4/ComfyUI-Qwen-Image-i2L) so called "I2L", "image to LoRA", a super-lightweight approach to extracting
