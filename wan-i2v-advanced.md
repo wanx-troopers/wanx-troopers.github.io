@@ -37,7 +37,7 @@ Workflow building [hint](screenshots/ffgo.webp) Prompt: `ad23r2 the camera view 
 
 Works well for anime characters.
 
-Apparently works with [holocine](holocine.md)
+Apparently works with [holocine](storymem-holocine.md#holocine)
 
 An artist:
 > tested FFGO ... more trouble to set up correctly ... than i would like to spend time

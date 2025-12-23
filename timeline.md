@@ -2,9 +2,7 @@
 
 2025.12.23 Long-awaited Qwen Image Edit 2511 [released](extra-tools/qwen-image.md#20251223)
 
-2025.12.23 HuMo/Phantom team have released their 133Gb training [dataset](https://modelscope.cn/datasets/leoniuschen/HuMoSet); such a nice Christmap present, well help a lot of projects
-
-2025.12.23 NVidia has released a technology called NVFP4 for RTX50xx users; NVFP4 compatible adaptations of Wan 2.1 I2V 480 14B and Wan 2.1 T2V 1.3B have been made [available](https://huggingface.co/lightx2v/WanNVFP4); fast generations are expected
+2025.12.23 [StoryMem](storymem-holocine.md#storymem) has been spotted in the wild: this is a set of two LoRAs reminiscent of both Holocine with consistency across scene cuts and SVI-film with 5-frame continuations
 
 2025.12.22 [Standin](control.md#standin) Wan 2.2 weights have been released; reportedly work without any code changes compared to 2.1 weights
 
@@ -78,7 +76,7 @@ please see [HuMo](humo.md) section
 
 2025.10.25 [LongCat](longcat.md) models released; early experimentation in ComfyUI; promise of long and fast generations, 6 sec fragements stitched with 11 frame overlap; when continuation is used 11 frames is the only context possible, reference images are not taken
 
-2025.10.24 [HoloCine](holocine.md) model released; early experimentation in ComfyUI;
+2025.10.24 [HoloCine](storymem-holocine.md#holocine) model released; early experimentation in ComfyUI;
 15sec multi-scene videos generated with characters consistent within those generations
 
 2025.10.22 [SVI](svi.md) LoRa-s released; Wan I2V models now can extend videos using 5 frame overlap with SVI-film; other LoRa-s provide a new way to supply a reference image to I2V generations

@@ -17,6 +17,9 @@ Caution remains in place for all `1038lab` owned repositories.
 * [GH:martijnat/comfyui-previewlatent](https://github.com/martijnat/comfyui-previewlatent) quick latent preview w/o VAE
 * [worldcanvas](https://worldcanvas.github.io/) a new model in footsteps of ATI and to some degree VACE
 * [InfCam](https://github.com/emjay73/InfCam?tab=readme-ov-file) wan 2.1 based video-to-video moving camera according to a set trajectory
+* 2025.12.23 HuMo/Phantom team have released their 133Gb training [dataset](https://modelscope.cn/datasets/leoniuschen/HuMoSet); such a nice Christmap present, well help a lot of projects
+* 2025.12.23 NVidia has released a technology called NVFP4 for RTX50xx users; NVFP4 compatible adaptations of Wan 2.1 I2V 480 14B and Wan 2.1 T2V 1.3B have been made [available](https://huggingface.co/lightx2v/WanNVFP4); fast generations are expected
+
 
 * [gumroad.com:ciojz] blender bones compatible with OpenPose
 * [GH:sumitchatterjee13/nuke-nodes-comfyui](https://github.com/sumitchatterjee13/nuke-nodes-comfyui) Nuke style nodes for ComfyUI

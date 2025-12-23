@@ -1,12 +1,25 @@
 # HoloCine
 
+## StoryMem
+
+[StoryMem](https://kevin-thu.github.io/StoryMem/) released.
+This is a LoRA very similar to Holocine in intent.
+
+> cross_attn, self_attn and ffn layers only... don't see any new layers, so could just work?
+> I2V too
+
+From their website:
+
+> - mi2v: Enable MI2V (memory + first-frame image conditioning) to connect adjacent shots when scene_cut is False.
+> - mm2v: Enable MM2V (memory + first 5 motion frames conditioning) to connect adjacent shots when scene_cut is False.
+
 ## 2025.12.07
 
 Outstanding [PR](https://github.com/kijai/ComfyUI-WanVideoWrapper/pull/1615) to Kijai's WanVideo Wrapper to improve HoloCine support.
 
 > It was trained for 249 frames though (Wan fine tune) and specifically for [Scene] [Camera] and timestamping prompts
 
-## Summary
+## Holocine
 
 [Holo Cine](https://holo-cine.github.io/) models have been uploaded to Huggingface, Kijai's provided fp8 [conversion](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main/T2V/HoloCine).
 [Paper](https://github.com/yihao-meng/HoloCine).
