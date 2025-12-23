@@ -8,8 +8,7 @@
 
 2025.12.21 [LongVie](https://vchitect.github.io/LongVie2-project/) is being experimented with; "the control part is interesting, the continuation doesn't seem that great though; the control might be something we can use with other workflows too as it's a controlnet"
 
-2025.12.20 Integration of [LongCat Avatar](talkies/longcat-avatar.md) into ComfyUI has started; this is a promising successor/alternative to InfiniteTalk/HuMo promising very long video generation without burning;
-reportedly from the same team that created MultiTalk/InfiniteTalk
+2025.12.20 Integration of [LongCat Avatar](talkies/longcat-avatar.md) into ComfyUI has started; this is a promising successor/alternative to InfiniteTalk/HuMo promising very long video generation without burning
 
 2025.12.16 Advanced Context Windows worflows by [Drozbay](hidden-knowledge.md#drozbay) are now supported by ComfyUI native, [details](what-plugs-where/context-windows.md#20251216).
 
@@ -24,8 +23,6 @@ has now received a `Union 2.0` ControlNet upgrade adding inpainting ability
 2025.12.13 [preview](screenshots/kj-wrapper-v2-preview.webp) of Kijai's V2 nodes for wrapper; main idea is to make the list of inputs on the sampler shorter
 
 2025.12.06 [Kandinsky-5](k5.md) Pro video AI model (5sec I2V, 5sec T2V, 10sec T2V) released 2025.11.14 and now supported in ComfyUI native have received official distillations
-
-2025.12.09 NVidia released Wan 2.2 I2V [rCM](loras/part-01.md#22-i2v) speed LoRA
 
 2025.12.09 [One-to-All-Animation](wan-animates.md#one-to-all-animation) similar to WanAnimate support added to Kijai's Wrapper, fp16 and fp8 weights uploaded to HF
 

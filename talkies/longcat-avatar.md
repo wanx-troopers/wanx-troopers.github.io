@@ -4,7 +4,8 @@ Following in the trail after Infinite Talk, Humo and Wan S2V we now have `LongCa
 `LongCat Avatar` seems to be based on [LongCat](../longcat.md),
 and able to use same LoRA-s, at least to an extent.
 
-The purpose of `LongCat Avatar` appears remarkably similar to 
+The purpose of `LongCat Avatar` appears remarkably similar to [HuMo](../humo.md) and [Infinite Talk](../infinite-talk.md).
+Actually it appears that the same team which created MultiTalk/InfiniteTalk is behind this model.
 
 As of 2025.12.20 the code supporting `LongCat Avatar` in `ComfyUI` is [longcat_avatar](https://github.com/kijai/ComfyUI-WanVideoWrapper/tree/longcat_avatar)
 branch in Kijai's [Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) repository on Github. One of the relevant nodes:
