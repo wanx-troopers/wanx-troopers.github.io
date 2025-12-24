@@ -26,7 +26,7 @@ Seems to improve realism of different angle LoRA [HF:lividtm/Qwen-Edit-Loras:ext
 
 ![edit-model-reference-method](../screenshots/qwen/edit-model-reference-method.webp)
 
-[Igni](https://x.com/ingi_erlingsson)'s suggestion for node/sampler
+[Ingi](https://x.com/ingi_erlingsson)'s suggestion for node/sampler
 
 ![TextEncodeQwenImageEditPlusAdvance-Irzjason](../screenshots/qwen/igni-TextEncodeQwenImageEditPlusAdvance-Irzjason.png)
 
@@ -36,6 +36,8 @@ Another artist:
 
 > 1st k sampler with ddim beta57 and the second  dpmppsde beta cfg 1;
 > paradoxically ... bypassing the lightning lora and 12 steps for each ksampler 
+
+LoRA "apply diff between img1 and img2 to img3": [link](https://x.com/ModelScope2022/status/2003820336866058444)
 
 ## 2025.12.13
 
