@@ -1,5 +1,9 @@
 # Qwen
 
+## 2025.12.24
+
+Simple template workflow added to ComfyUI
+
 ## 2025.12.23
 
 Highly anticipated Qwen Image Edit 2511 is out
