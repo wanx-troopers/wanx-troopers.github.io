@@ -1,5 +1,9 @@
 ﻿# Z-Image-Turbo
 
+## See Also
+
+[Upscalers](../upscalers-detailers-image.md#for-zit)
+
 ## 2025.12.15
 
 `Latent Hybrid Upscale` from `was_hybrid_latent_upscale`. "Using laplacian edge detection to create a mask for edges where the hard jankies will show up, and replacing it with a donar latent with smooth edges (normal Image Resize upscale and encoded)."

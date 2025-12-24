@@ -24,5 +24,5 @@ There are two Github repositories to get nodes from
 
 ## For ZIT
 
-- [GH:wildminder/ComfyUI-DyPE](https://github.com/wildminder/ComfyUI-DyPE)
+- [GH:wildminder/ComfyUI-DyPE](https://github.com/wildminder/ComfyUI-DyPE) "ok I give up on DyPE 4096, but going to keep using dype 2048, it's just barely manageable"
 - [GH:spacepxl/ComfyUI-VAE-Utils](https://github.com/spacepxl/ComfyUI-VAE-Utils)
