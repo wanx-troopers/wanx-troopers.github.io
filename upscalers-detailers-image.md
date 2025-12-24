@@ -21,3 +21,8 @@ There are two Github repositories to get nodes from
 ## Chatter
 
 > In my tests, z image doesn't work well for second pass. Instead, I'm using wan 2.2; you can also use flux
+
+## For ZIT
+
+- [GH:wildminder/ComfyUI-DyPE](https://github.com/wildminder/ComfyUI-DyPE)
+- [GH:spacepxl/ComfyUI-VAE-Utils](https://github.com/spacepxl/ComfyUI-VAE-Utils)

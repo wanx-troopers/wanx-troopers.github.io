@@ -8,6 +8,7 @@ Highly anticipated Qwen Image Edit 2511 is out
 - [HF:unsloth/Qwen-Image-Edit-2511-GGUF](https://huggingface.co/unsloth/Qwen-Image-Edit-2511-GGUF/tree/main) first repo to offer BF16, FP16, Q3-Q8 "city96 unet loader ofc"
 - [GH:city96/ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF) loader to load GGUF files
 - [HF:Comfy-Org/Qwen-Image-Edit_ComfyUI:split_files/diffusion_models](https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/tree/main/split_files/diffusion_models) Comfy-Org adaptation, BF16
+- [HF:xms991/Qwen-Image-Edit-2511-fp8-e4m3fn](https://huggingface.co/xms991/Qwen-Image-Edit-2511-fp8-e4m3fn/tree/main) fp8_e4m3fn adaptation, works in Comfy
 - lightx2v LoRA-s: [HF:lightx2v/Qwen-Image-Edit-2511-Lightning](https://huggingface.co/lightx2v/Qwen-Image-Edit-2511-Lightning/tree/main)
 
 Official workflow embedded in this image:
@@ -17,6 +18,12 @@ Official workflow embedded in this image:
 [qie2511](../workflows/qie2511.png)
 
 > They seemed to have added a lot more color. The greens are popping and the color does not seem so washed out.
+
+> dx8152 camera angles LoRA works as before
+
+Seems to improve realism of different angle LoRA [HF:lividtm/Qwen-Edit-Loras:external](https://huggingface.co/lividtm/Qwen-Edit-Loras/tree/main/external) by [GH:filliptm](https://github.com/filliptm)
+
+![edit-model-reference-method](../screenshots/qwen/edit-model-reference-method.webp)
 
 ## 2025.12.13
 
@@ -67,4 +74,4 @@ Text editing similar to Nano Banana (dataset [visualizer](https://snazzy-selkie-
 ## Notable LoRA-s
 
 - [HF:dx8152/Qwen-Edit-2509-Light-Migration](https://huggingface.co/dx8152/Qwen-Edit-2509-Light-Migration) relight / light-migration for QIE 2509; [examples](https://x.com/dx8152/status/1997124533116141818?s=46)
-
+- [HF:lividtm/Qwen-Edit-Loras:external](https://huggingface.co/lividtm/Qwen-Edit-Loras/tree/main/external) Qwen_MultiAngle_image_edit and WF by [GH:filliptm](https://github.com/filliptm)

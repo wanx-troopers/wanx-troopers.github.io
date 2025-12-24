@@ -55,6 +55,8 @@ Additionally Kijai has added `Latent Inpaint TTM` node to [GH:kijai/ComfyUI-KJNo
 The workflows are not very easy to use and require a fair bit of trial and error. [Official tool](https://github.com/time-to-move/TTM/tree/main/GUIs) is used to generate driving video.
 Mockups use character pictures with a white outline around them.
 
+Ignores Uni3C.
+
 ### TimeToMove Workflow Setup Details
 
 Low noise step is somehow more problematic.

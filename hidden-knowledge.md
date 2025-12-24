@@ -5,6 +5,10 @@
 > TeaCache (and MagCache) is tuned per model so it wouldn't work properly [for Logcat Avatar], EasyCache is model agnostic and should work;
 > it's generally better to set high step count and then adjust the threshold so it drops ~30-50% of the steps [with EasyCache]
 
+Scruffy:
+
+> Loras will ALWAYS overlap, depending on what they affect.  Not a Zimage problem.   Think of them as transparent plastic overlays... you can stack up a bunch, and some will play nice, and others will overlap and not make sense/work well together.
+
 ## 2025.12.17
 
 I2V Encode in Wrapper has `fun_or_fl2v_model` toggle which needs to be enabled for example to make a loop video
