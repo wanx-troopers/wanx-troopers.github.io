@@ -201,4 +201,12 @@ Composed by [Madevilbeats](https://www.instagram.com/madevilbeats/):
 
 ## Workflows
 
-- [ZImage_CN_MOIRE](../workflows/z-image/dm-ZImage_CN_MOIRE.json) by [Dream Making](https://ko-fi.com/dreammaking)
+- [ZImage_CN_MOIRE](../workflows/z-image/dm-ZImage_CN_MOIRE.json) by [Dream Making](https://ko-fi.com/dreammaking) requires nodes to be released into [GH:scruffynerf/scromfyUI_Nodes](https://github.com/scruffynerf/scromfyUI_Nodes) in 2026
+
+## Fun Infographics
+
+2025.12.24
+
+![flavors-1](../screenshots/z-image/flavors-1.webp)
+
+![flavors-2](../screenshots/z-image/flavors-2.webp)
