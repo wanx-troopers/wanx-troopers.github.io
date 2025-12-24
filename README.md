@@ -50,7 +50,9 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [LoRa-s Part I](loras/part-01.md)
 * [LoRa-s Part II](loras/part-02.md)
 * [Both Ways](loras/both-ways.md)
-* [SVI](svi.md)
+* Continuity
+  * [SVI](svi.md)
+  * [StoryMem](storymem-holocine.md#storymem)
 
 ## Misc
 

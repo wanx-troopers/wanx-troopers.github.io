@@ -9,6 +9,7 @@ Highly anticipated Qwen Image Edit 2511 is out
 - [GH:city96/ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF) loader to load GGUF files
 - [HF:Comfy-Org/Qwen-Image-Edit_ComfyUI:split_files/diffusion_models](https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/tree/main/split_files/diffusion_models) Comfy-Org adaptation, BF16
 - [HF:xms991/Qwen-Image-Edit-2511-fp8-e4m3fn](https://huggingface.co/xms991/Qwen-Image-Edit-2511-fp8-e4m3fn/tree/main) fp8_e4m3fn adaptation, works in Comfy
+- [HF:silveroxides/Qwen-Image-fp8-scaled-quants/tree/main](https://huggingface.co/silveroxides/Qwen-Image-fp8-scaled-quants/tree/main) fp8 mixed adaptation; intended to be merged to Comfy-Org repo
 - lightx2v LoRA-s: [HF:lightx2v/Qwen-Image-Edit-2511-Lightning](https://huggingface.co/lightx2v/Qwen-Image-Edit-2511-Lightning/tree/main)
 
 Official workflow embedded in this image:
@@ -24,6 +25,17 @@ Official workflow embedded in this image:
 Seems to improve realism of different angle LoRA [HF:lividtm/Qwen-Edit-Loras:external](https://huggingface.co/lividtm/Qwen-Edit-Loras/tree/main/external) by [GH:filliptm](https://github.com/filliptm)
 
 ![edit-model-reference-method](../screenshots/qwen/edit-model-reference-method.webp)
+
+[Igni](https://x.com/ingi_erlingsson)'s suggestion for node/sampler
+
+![TextEncodeQwenImageEditPlusAdvance-Irzjason](../screenshots/qwen/igni-TextEncodeQwenImageEditPlusAdvance-Irzjason.png)
+
+`QwenEncodeQwenImageEdit` is a simpler alternative from stock Comfy. reddit-published [workflow](https://www.reddit.com/r/StableDiffusion/comments/1pu5opp/this_is_the_new_comfyui_workflow_of_qwen_image).
+
+Another artist:
+
+> 1st k sampler with ddim beta57 and the second  dpmppsde beta cfg 1;
+> paradoxically ... bypassing the lightning lora and 12 steps for each ksampler 
 
 ## 2025.12.13
 
