@@ -9,6 +9,8 @@ Scruffy:
 
 > Loras will ALWAYS overlap, depending on what they affect.  Not a Zimage problem.   Think of them as transparent plastic overlays... you can stack up a bunch, and some will play nice, and others will overlap and not make sense/work well together.
 
+Comfy native usefully has `ImageScaleToTotalPixels`
+
 ## 2025.12.17
 
 I2V Encode in Wrapper has `fun_or_fl2v_model` toggle which needs to be enabled for example to make a loop video

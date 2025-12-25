@@ -4,6 +4,8 @@
 
 Simple template workflow added to ComfyUI
 
+> cfg 6 is great on 2511 so far
+
 ## 2025.12.23
 
 Highly anticipated Qwen Image Edit 2511 is out

@@ -8,6 +8,12 @@
 
 `Latent Hybrid Upscale` from `was_hybrid_latent_upscale`. "Using laplacian edge detection to create a mask for edges where the hard jankies will show up, and replacing it with a donar latent with smooth edges (normal Image Resize upscale and encoded)."
 
+"9 steps are considered the optimum" ... "I use 8"
+
+"res_2s/bong_tangent ... don't care about speed"
+
+LeMiCa - a cache to skip steps, quality seems to be hit, [PR](https://github.com/UnicomAI/LeMiCa/pull/11) to add ZIT support to LeMiCa 
+
 ## 2025.12.13
 
 [Z-Image-Turbo-Fun-Controlnet-Union-2.0](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.0) released adding inpaint ability.
@@ -145,14 +151,13 @@ Node to select last layer by Scruffy: [CLIPSetLastLayer.py](../bobs/CLIPSetLastL
 
 Luneva LoRAs
 
-- https://civitai.com/models/2185167/midjourney-luneva-cinematic-lora-and-workflow
-- https://civitai.com/models/2215818/luneva-cyber-hd-enhancer
-- https://civitai.com/models/2226355?modelVersionId=2506390 model and LoRAs
-- https://civitai.com/models/1090420?modelVersionId=2520925 "new z-image checkpoint" "beyond reality"?
+- [https://civitai.com/models/2185167/midjourney-luneva-cinematic-lora-and-workflow](https://civitai.com/models/2185167/midjourney-luneva-cinematic-lora-and-workflow)
+- [https://civitai.com/models/2215818/luneva-cyber-hd-enhancer](https://civitai.com/models/2215818/luneva-cyber-hd-enhancer)
+- [https://civitai.com/models/2226355?modelVersionId=2506390](https://civitai.com/models/2226355?modelVersionId=2506390) model and LoRAs
 
 Ultra-Realist Style from WAS
 
-- https://civitai.com/models/2192377?modelVersionId=2484891
+- [https://civitai.com/models/2192377?modelVersionId=2484891](https://civitai.com/models/2192377?modelVersionId=2484891)
 
 ## See Alos
 

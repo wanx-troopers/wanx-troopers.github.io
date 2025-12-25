@@ -6,6 +6,10 @@ This page is a work in progress
 
 Use stock ComfyUI node `Upscale Image By` with `upscale_method`=`lanczoc`
 
+## USDU
+
+Ultimate SD Upascaler, a popular choice.
+
 ## Detailer (SEGS)
 
 There are two Github repositories to get nodes from
@@ -15,9 +19,6 @@ There are two Github repositories to get nodes from
   which is also used in his created by not very widely known
   SEGS/VACE video [detailer](upscalers-detailers-video.md#drozbays-impact-pack-segs-detailer-for-wan-video-and-vace)
 
-## USDU
-
-
 ## Chatter
 
 > In my tests, z image doesn't work well for second pass. Instead, I'm using wan 2.2; you can also use flux
@@ -26,3 +27,4 @@ There are two Github repositories to get nodes from
 
 - [GH:wildminder/ComfyUI-DyPE](https://github.com/wildminder/ComfyUI-DyPE) "ok I give up on DyPE 4096, but going to keep using dype 2048, it's just barely manageable"
 - [GH:spacepxl/ComfyUI-VAE-Utils](https://github.com/spacepxl/ComfyUI-VAE-Utils)
+- [blend-masked-noise](workflows/kibito-blend-masked-noise.webp) wf which allows exclusing skip from noise blend to prevent "zombie skin" while adding details

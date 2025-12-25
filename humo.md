@@ -1,5 +1,10 @@
 # HuMO
 
+## 2025.12.24
+
+Simple ClownShark WF: [droz_HuMoImageToVideo_Simple_v1](workflows/droz_HuMoImageToVideo_Simple_v1.png)
+from [Drozbay](https://github.com/drozbay).
+
 ## 2025.12.20
 
 > Have you managed to fix the dreaded noisy first frame/flash on humo?
@@ -12,7 +17,7 @@ HuMo references are appended to the end of `WanVideo ImageToVideo Encode` embeds
 
 ## Drozbay Continuation
 
-2025.11.15 [drozbay](https://github.com/drozbay) has shared `droz_wanexperiments_svishot_with_humo_v1.1` worflow
+2025.11.15 [Drozbay](https://github.com/drozbay) has shared `droz_wanexperiments_svishot_with_humo_v1.1` worflow
 ![droz_wanexperiments_svishot_with_humo_v1.1](workflows/droz_wanexperiments_svishot_with_humo_v1.1.png)
 [droz_wanexperiments_svishot_with_humo_v1.1](workflows/droz_wanexperiments_svishot_with_humo_v1.1.png)
 
