@@ -151,9 +151,13 @@ Node to select last layer by Scruffy: [CLIPSetLastLayer.py](../bobs/CLIPSetLastL
 
 Luneva LoRAs
 
-- [https://civitai.com/models/2185167/midjourney-luneva-cinematic-lora-and-workflow](https://civitai.com/models/2185167/midjourney-luneva-cinematic-lora-and-workflow)
-- [https://civitai.com/models/2215818/luneva-cyber-hd-enhancer](https://civitai.com/models/2215818/luneva-cyber-hd-enhancer)
-- [https://civitai.com/models/2226355?modelVersionId=2506390](https://civitai.com/models/2226355?modelVersionId=2506390) model and LoRAs
+- [https://civitai.com/models/2185167/midjourney-luneva-cinematic-lora-and-workflow](https://civitai.com/models/2185167/midjourney-luneva-cinematic-lora-and-workflow) Cynamatic, a bit MJ-like
+- [https://civitai.com/models/2215818/luneva-cyber-hd-enhancer](https://civitai.com/models/2215818/luneva-cyber-hd-enhancer) Cyber + HD Enhancer
+- [https://civitai.com/models/2226355?modelVersionId=2506390](https://civitai.com/models/2226355?modelVersionId=2506390) "Infinite Detail" workflow and LoRAs, a bit gloomy
+
+Litch
+
+- [https://civitai.com/models/2235896?modelVersionId=2517015](- [https://civitai.com/models/2235896?modelVersionId=2517015) Smarktphone Snapshot Reality [STYLE] - wf included in sample img
 
 Ultra-Realist Style from WAS
 
@@ -162,6 +166,7 @@ Ultra-Realist Style from WAS
 ## See Alos
 
 - [LLM Nodes](llm-nodes.md)
+- [GH:by-ae/ae-in-workflow](https://github.com/by-ae/ae-in-workflow) interactive pose editor (for images) - no hands though
 
 ## Hypothetical List of Resolutions To Go For
 

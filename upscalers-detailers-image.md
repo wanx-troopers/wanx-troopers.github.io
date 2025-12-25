@@ -10,6 +10,8 @@ Use stock ComfyUI node `Upscale Image By` with `upscale_method`=`lanczoc`
 
 Ultimate SD Upascaler, a popular choice.
 
+[GH:ssitu/ComfyUI_UltimateSDUpscale](https://github.com/ssitu/ComfyUI_UltimateSDUpscale)
+
 ## Detailer (SEGS)
 
 There are two Github repositories to get nodes from
