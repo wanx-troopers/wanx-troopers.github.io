@@ -6,12 +6,6 @@ This page is a work in progress
 
 Use stock ComfyUI node `Upscale Image By` with `upscale_method`=`lanczoc`
 
-## USDU
-
-Ultimate SD Upascaler, a popular choice.
-
-[GH:ssitu/ComfyUI_UltimateSDUpscale](https://github.com/ssitu/ComfyUI_UltimateSDUpscale)
-
 ## Detailer (SEGS)
 
 There are two Github repositories to get nodes from
@@ -20,6 +14,17 @@ There are two Github repositories to get nodes from
 - [GH:drozbay/ComfyUI-Impact-Pack](https://github.com/drozbay/ComfyUI-Impact-Pack) a copy by [Drozbay](hidden-knowledge.md#drozbay)
   which is also used in his created by not very widely known
   SEGS/VACE video [detailer](upscalers-detailers-video.md#drozbays-impact-pack-segs-detailer-for-wan-video-and-vace)
+
+## USDU
+
+Ultimate SD Upascaler, a popular choice.
+Interestingly includes a node `Ultimate SD Upscale (No Upscale)` which is used to fix artifacts.
+
+[GH:ssitu/ComfyUI_UltimateSDUpscale](https://github.com/ssitu/ComfyUI_UltimateSDUpscale)
+
+## SeedVR2
+
+[GH:numz/ComfyUI-SeedVR2_VideoUpscaler](https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler) useful for both images and videos
 
 ## Chatter
 
