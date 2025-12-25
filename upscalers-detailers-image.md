@@ -32,6 +32,15 @@ Interestingly includes a node `Ultimate SD Upscale (No Upscale)` which is used t
 
 ## For ZIT
 
-- [GH:wildminder/ComfyUI-DyPE](https://github.com/wildminder/ComfyUI-DyPE) "ok I give up on DyPE 4096, but going to keep using dype 2048, it's just barely manageable"
+- [GH:wildminder/ComfyUI-DyPE](https://github.com/wildminder/ComfyUI-DyPE) "ok I give up on DyPE 4096, but going to keep using dype 2048, it's just barely manageable" - overall negative sentiment like "I still can't fix the stupid dype long body problem"
 - [GH:spacepxl/ComfyUI-VAE-Utils](https://github.com/spacepxl/ComfyUI-VAE-Utils)
 - [blend-masked-noise](workflows/kibito-blend-masked-noise.webp) wf which allows exclusing skip from noise blend to prevent "zombie skin" while adding details
+- [combined ZIT upscaling](../workflows/z-image/l23-combined-upscale.json) "When the image is blurry, I use qwen edit to recover details: input > qwen edit >  seedvr > zit";
+  "Upscale the image to a higher resolution, reduce compression artifacts, noise, and blur while preserving original details and colors. Do not change content, pose, face, body, age, gender, clothing, background, or camera angle";
+  "do you do any sort of tiling? zIT can't really do more than 2.5MP without tiling? yes USDU";
+  "seedvr2 first then usdu? I do the reverse lol, cause seedvr2 adds microdetails";
+  "I do it this way because seedvr sometimes generate too much noise. and a second pass to reduce this noise"
+
+## Hmm
+
+What is Supir x3? TTP?

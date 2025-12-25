@@ -166,10 +166,11 @@ Node to select last layer by Scruffy: [CLIPSetLastLayer.py](../bobs/CLIPSetLastL
 
 `CRT-Nodes` added `LoRA Loader (Z-Image)(CRT)`. It can load `zit-ivy.safetensors`
 
-## Notable LoRA-s
+## Notable LoRA-s And WF-s
 
 - [detail-slider](https://civitai.com/models/2202638/detail-slider-for-z-image) note: strength can be -2 to +2, greater values mean more details
 - [detaildeamonz](https://civitai.com/models/2209262/detaildeamonz-sliderlora-for-zimageturbo-and-redz15) note: strength can be -2 to +2, greater values mean less details
+- [cinematic-shot](https://civitai.com/models/432586/cinematic-shot)
 - "Mostly Civitai, but add in HF, especially MalcolmRey's LoRAs"
 
 Luneva LoRAs
@@ -190,6 +191,7 @@ Ultra-Realist Style from WAS
 
 - [LLM Nodes](llm-nodes.md)
 - [GH:by-ae/ae-in-workflow](https://github.com/by-ae/ae-in-workflow) interactive pose editor (for images) - no hands though
+- [GH:LAOGOU-666/ComfyUI-LG_SamplingUtils](https://github.com/LAOGOU-666/ComfyUI-LG_SamplingUtils) - untested, some sort of utilites to inject extra latent noise etc
 
 ## Hypothetical List of Resolutions To Go For
 
