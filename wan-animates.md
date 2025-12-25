@@ -18,7 +18,7 @@ Hybrid workflow from Juan Gea: human_video -> SCAIL -> WanAnimate; helps if char
 SCAIL workflow can be better at retargetting motion from human to character and WanAnimate is better than SCAIL at keeping a consistent background;
 "can add Uni3C to the mix, to be sure that the camera is stable and the character won't slide, for that you use the original human video".
 
-SCAIL relies heavily on prompting. Good idea to separate prompts with | on wrapper when using [Context Windows](what-plugs-where/context-windows.md) to apply different prompts to different windows.
+SCAIL relies heavily on prompting. Good idea to separate prompts with \| on wrapper when using [Context Windows](what-plugs-where/context-windows.md) to apply different prompts to different windows.
 
 As of now SCAIL is not supported on native.
 
