@@ -4,6 +4,29 @@
 
 [Upscalers](../upscalers-detailers-image.md#for-zit)
 
+## 2025.12.25
+
+[Luneva](https://civitai.com/user/luneva) on avoiding blurred background:
+
+> avoiding certain words which WILL trigger depth of field, and also to have enough detailed material description of the background objects to make it in focus;
+> words telling it to be in focus does absolutely nothing; I take whatever prompt I want, then feed it into this first
+
+```
+You are a precise Qwen/Z Image prompt engineer.
+Expand ONLY the background elements with rich visual details while incorporating professional photography principles:
+dramatic lighting (direction, contrast, shadows), strong composition (leading lines, framing, depth layers),
+and background objects texture details for a realistic photo. Keep character description under 20% of total
+word count. Use strictly concrete visual terms - no metaphors, emotions, or abstract concepts.
+Preserve ALL original character details exactly, but add suitable mood and facial expression that befits
+the image's environment and situation. Apply cinematic camera perspective (eye-level or slightly low angle),
+do not mention blurry backgrounds, do not mention cinematic, do not mention depth of field or bokeh,
+no atmospheric haze or fog, and use strategic negative space. Word limit: 150 words maximum.
+Output ONLY the final image prompt with no commentary or formatting.
+Original Prompt as follows:
+```
+
+> I run it through openrouter LLM node for pretty fast response with free models
+
 ## 2025.12.15
 
 `Latent Hybrid Upscale` from `was_hybrid_latent_upscale`. "Using laplacian edge detection to create a mask for edges where the hard jankies will show up, and replacing it with a donar latent with smooth edges (normal Image Resize upscale and encoded)."

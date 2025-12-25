@@ -6,6 +6,8 @@ Simple template workflow added to ComfyUI
 
 > cfg 6 is great on 2511 so far
 
+`EmptyQwenImageLayeredLatentImage` turns QIE into T2I - start from no input image. Alternative advice: "you can just take QI (not QIE) ComfyUI template and just load QIE2511 model"
+
 ## 2025.12.23
 
 Highly anticipated Qwen Image Edit 2511 is out
@@ -28,7 +30,10 @@ Official workflow embedded in this image:
 
 > dx8152 camera angles LoRA works as before
 
-Seems to improve realism of different angle LoRA [HF:lividtm/Qwen-Edit-Loras:external](https://huggingface.co/lividtm/Qwen-Edit-Loras/tree/main/external) by [GH:filliptm](https://github.com/filliptm)
+Seems to improve realism of different angle LoRA [HF:lividtm/Qwen-Edit-Loras:external](https://huggingface.co/lividtm/Qwen-Edit-Loras/tree/main/external) by [GH:filliptm](https://github.com/filliptm).
+Note the author apparently has also got a character sheet LoRA - somewhere :)
+
+Helpful node:
 
 ![edit-model-reference-method](../screenshots/qwen/edit-model-reference-method.webp)
 
