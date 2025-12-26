@@ -1,10 +1,35 @@
 # Qwen
 
+## Qwen 2511 LoRAs
+
+| HF Space | LoRA |
+| :--- | :--- |
+| [HF:lilylilith/AnyPose](https://huggingface.co/lilylilith/AnyPose) | Person in image 1 do the exactly same pose as image 2 |
+
+## 2025.12.26
+
+Face/Head Swap by Alisson Pereira: [civitai.com/models/2027766](https://civitai.com/models/2027766),
+[patreon.com/posts/bfs-lora-qwen-140789769](https://www.patreon.com/posts/bfs-lora-qwen-140789769),
+[youtube.com/watch?v=3CoK4pDl-TE](https://www.youtube.com/watch?v=3CoK4pDl-TE).
+
+> If you get too much contrast / plastic skin using LightX2V Lightning, try steps = N/2 (e.g., 8 -> 4).
+> Without Lightning -> lower steps (20 -> 16) and CFG ~ 1.2–1.5.
+> If poses differ a lot -> increase LoRA strength (1.2–1.3).
+
+> Samplers: er_sde+beta57, kl_optimal, ddim_uniform, res_2s+beta57;
+> Precision: best = fp16 | recommended = fp8/q8
+
+[Corza](https://www.instagram.com/_c0rza/) responded with face detailer [qwen2509_seedvr2](../workflows/qwen/corza-qwen2509_seedvr2.json)
+
 ## 2025.12.25
 
 Phr00t's mix of 2509 and 2511: [HF:Phr00t/Qwen-Image-Edit-Rapid-AIO:v17](https://huggingface.co/Phr00t/Qwen-Image-Edit-Rapid-AIO/tree/main/v17)
 
-> euler_a/beta seems to work best
+> euler_a/beta seems to work best;
+> 4 steps minimum, generally 6 steps is worth it;
+> grid artifacts varied across versions but havent been noticing them in v17
+
+[chat.qwen.ai](https://chat.qwen.ai/) for testing.
 
 ## 2025.12.24
 
@@ -14,7 +39,10 @@ Simple template workflow added to ComfyUI
 
 `EmptyQwenImageLayeredLatentImage` turns QIE into T2I - start from no input image. Alternative advice: "you can just take QI (not QIE) ComfyUI template and just load QIE2511 model"
 
-[GH:ethanfel/ComfyUI-Mamad8-QwenEdit-fix](https://github.com/ethanfel/ComfyUI-Mamad8-QwenEdit-fix) was suggested as an alternative text encoder, `TextEncodeQwenImageEditPlusMamad8`
+Alternative text encoders:
+
+- [GH:ethanfel/ComfyUI-Mamad8-QwenEdit-fix](https://github.com/ethanfel/ComfyUI-Mamad8-QwenEdit-fix) was suggested as an alternative text encoder, `TextEncodeQwenImageEditPlusMamad8`
+- [HF:Phr00t/Qwen-Image-Edit-Rapid-AIO:fixed-textencode-node](https://huggingface.co/Phr00t/Qwen-Image-Edit-Rapid-AIO/tree/main/fixed-textencode-node)
 
 > there's no issue when regenerating the whole image;
 > it's editing in place, the elements that doesn't change from the original image are degraded [contrast, saturation etc]
