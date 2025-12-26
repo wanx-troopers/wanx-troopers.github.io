@@ -1,5 +1,23 @@
 # StoryMem
 
+## 2025.12.26
+
+> T2V is just normal T2V; `WanVideoAddStoryMemLatents` is used for the extensions
+
+> And yeah that's basically the only new thing for it: 3 more reference images;
+> Or max 3, that's also hard coded max in their code;
+> Their code stores more of course, but the model itself never uses more than 3 at once
+
+> They can be used like references sort of; the position is basically random
+
+==
+
+> the first conditioning frame is the strongest, then the others are referenced later in the generation;
+> and the end frame also stronger than mid frames......i think
+
+
+## 2025.12.25
+
 [StoryMem](https://kevin-thu.github.io/StoryMem/) released.
 This is a LoRA very similar to Holocine in intent.
 

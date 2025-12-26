@@ -171,6 +171,7 @@ Note: LoRa extracted from "dyno" model looses important qualities of "dyno"; e.g
 
 Wan 2.1 and 2.2 LoRA-s:
 
+* [CA:2052865/flippinrad-motion-morph](https://civitai.com/models/2052865/flippinrad-motion-morph) flippinrad-motion-morph on CivitAI
 * [HF:Ashmotv/water_morping_wan](https://huggingface.co/Ashmotv/water_morping_wan)
 * [HF:Ashmotv/exploded_effect_wan](https://huggingface.co/Ashmotv/exploded_effect_wan) exploded effect WAN; there should be a slow motion explode somewhere nearby
 * [HF:benjamin-paine/steamboat-willie-14b](https://huggingface.co/benjamin-paine/steamboat-willie-14b) steamboat willy / steampunk willy

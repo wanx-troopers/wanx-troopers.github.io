@@ -107,4 +107,4 @@ Separately it is worth noting that masks don't have to be binary black or white 
 
 ## See Also
 
-- HuMo last-image to first-image [extensions](humo.md#drozbay-continuation)
+- HuMo last-image to first-image [extensions](humo.md#drozbay-continuations)

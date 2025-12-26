@@ -31,7 +31,7 @@ LongCat (now all of image/image edit/video), Ovis 7B
 
 2025.11.05 [Hunyuan 1.5](hunyuan.md) 5-10sec/24fps videos released 2025.11.21 received distilled 480 model version (no 720 version yet)
 
-2025.12.05 [Z-Image-Turbo](extra-tools.md#z-image-turbo) tested with "Gabliterated" version of Qwen3-4B (which is the model's CLIP) and an alternative VAE
+2025.12.05 [Z-Image-Turbo](tools-list.md#z-image-turbo) tested with "Gabliterated" version of Qwen3-4B (which is the model's CLIP) and an alternative VAE
 
 2025.12.05 Version 2.0 of [SVI-shot](svi.md#20251204) combining SVI-shot (reference) and SVI-flim (5 frames overlap) released for Wan 2.1; also Wan 2.2 Version 2.0 only supporting SVI-shot functionality
 
@@ -66,8 +66,7 @@ please see [HuMo](humo.md) section
 
 2025.11.11 Ovi 1.1 capable of 10sec video+sound generation weights have been upoloaded to HuggingFace
 
-2025.11.10 UniLumos relight model integration into wrapper is being tested; [sample workflow](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_1_3B_UniLumos_relight_example_01.json);
-[Change-Background-Wan-UniLumos](workflows/Change-Background-Wan-UniLumos.json)
+2025.11.10 [UniLumos](tools-list.md#unilumos) relight model added to Wrapper
 
 2025.11.10 --disable-pinned-memory option recommended when launching latest version of Comfy UI
 

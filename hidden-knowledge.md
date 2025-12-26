@@ -206,7 +206,7 @@ His nodes discussed on this website reside mainly in the following code reposito
 List of Drozbay's contributions discussed on this website:
 
 - [Drozbay's Study](conditioning.md#drozbays-study): nodes in `WanEx` to compose/examine [Bindweave](bindweave.md) and advanced I2V embeds
-- [HuMo - Drozbay](humo.md#drozbay-continuation): HuMo continuation workflow
+- [HuMo - Drozbay](humo.md#drozbay-continuations): HuMo continuation workflow
 - [SVI-shot](svi.md#svi-shot): `WanEx` contains `WanEx I2VCustomEmbeds` which works well with SVI-shot
 - [Drozbay's Impact Pack SEGS Detailer For Wan Video And VACE](upscalers-detailers-video.md#drozbays-impact-pack-segs-detailer-for-wan-video-and-vace)
 - [Painter I2V Modular Replacment](wan-i2v-advanced.md#painteri2v) `WanEx` contains `WanEx_PainterMotionAmplitude` node which replicates action of `Painter I2V` node in a modular manner

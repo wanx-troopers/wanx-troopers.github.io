@@ -5,7 +5,7 @@ This page collects insights into non-obvious workflows.
 
 ## HuMo I2V and SVI-shot
 
-Since HuMo is an I2V member of Wan family of models, the [work](humo.md#drozbay-continuation) done by Drozbay to enable [SVI-shot](svi.md#svi-shot)-powered HuMo extensions clearly is a new Wan I2V trick.
+Since HuMo is an I2V member of Wan family of models, the [work](humo.md#drozbay-continuations) done by Drozbay to enable [SVI-shot](svi.md#svi-shot)-powered HuMo extensions clearly is a new Wan I2V trick.
 
 The node and workflow discussed in the referenced page faciliate using [SVI-shot](svi.md#svi-shot) LoRa to provide an additional reference to I2V generations.
 This counters visual degradation that commonly happens in extension workflows.
@@ -170,5 +170,5 @@ Here is a slightly non-traditional way to build masks. Please note that actual v
 ## See Also
 
 - [Wan Masking](wan-masking.md)
-- [Video Blending From Fragments](extra-tools.md#video-blending-from-fragments)
+- [Video Blending From Fragments](tools-list.md#video-blending-from-fragments)
 - [Context Windows](what-plugs-where/context-windows.md)

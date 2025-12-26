@@ -37,13 +37,6 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
   * [BindWeave](bindweave.md)
 * [Phantom and MAGREF](phantom-magref.md)
 
-## Models+
-
-* [Lynx](lynx.md)
-* [Z-Image-Turbo](extra-tools/z-image.md)
-* [Qwen Image Edit](extra-tools/qwen-image.md)
-* [Flux 2](extra-tools/flux.md)
-
 ## Loras
 
 * [Loras Alchemy](loras/alchemy.md)
@@ -54,19 +47,28 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
   * [SVI](svi.md)
   * [StoryMem](storymem-holocine.md#storymem)
 
+## Tools
+
+* Image Tools
+  * [Z-Image-Turbo](extra-tools/z-image.md)
+  * [Qwen Image Edit](extra-tools/qwen-image.md)
+  * [Flux 2](extra-tools/flux.md)
+* Other Tools
+  * [Image Upscalers and Detailers](upscalers-detailers-image.md)
+  * [Video Upscalers and Detailers](upscalers-detailers-video.md)
+  * [Segmentation](extra-tools/segmentation.md)
+  * [Frame Interpolation](vfi.md)
+  * [LLM Nodes](extra-tools/llm-nodes.md)
+  * [Tools List](tools-list.md)
+
 ## Misc
 
-* [Segmentation](extra-tools/segmentation.md)
-* [Video Upscalers and Detailers](upscalers-detailers-video.md)
-* [Frame Interpolation](vfi.md)
-* [LLM Nodes](extra-tools/llm-nodes.md)
-* [Extra Tools](extra-tools.md)
-* [Image Upscalers and Detailers](upscalers-detailers-image.md)
 * [Recommended Software Versions](versions.md)
 * [OOM and Speed Talk](oom-speed-talk.md)
 * [Tricks](tricks.md)
 * [Statements](statements.md)
 * [Other Image Models](extra-tools/other-image-models.md)
+* [Lynx](lynx.md)
 * [Other](other.md)
 
 Content here is licensed under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode.en).

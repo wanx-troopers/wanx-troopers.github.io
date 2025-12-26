@@ -1,5 +1,9 @@
 ﻿# SVI
 
+## 2025.12.26
+
+[SVI 2.0 Pro](https://github.com/vita-epfl/Stable-Video-Infinity/blob/svi_wan22/docs/svi/svi_2.0_pro.md) released; not entirely clear how to use it yet
+
 ## 2025.12.04
 
 Version 2 of SVI lora for WAN 2.1 and 2.2 released:

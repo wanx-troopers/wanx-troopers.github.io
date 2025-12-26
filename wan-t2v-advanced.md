@@ -55,6 +55,6 @@ node pack: [Keyframe Party-v1](workflows/fs-Keyframe Party-v1.json)
 ## See Also
 
 - [Wan Masking](wan-masking.md)
-- [Video Blending From Fragments](extra-tools.md#video-blending-from-fragments)
+- [Video Blending From Fragments](tools-list.md#video-blending-from-fragments)
 - [Context Windows](what-plugs-where/context-windows.md)
-- [Trent Nodes](extra-tools.md#trent-nodes) for a node assisting with VACE keyframing
+- [Trent Nodes](tools-list.md#trent-nodes) for a node assisting with VACE keyframing

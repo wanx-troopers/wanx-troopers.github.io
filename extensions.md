@@ -17,6 +17,8 @@ Rest of frames need to be supplied as (127, 127, 127) grey frames.
 
 VACE naturally works with T2V models.
 
+One possible workflow: [civitai.com/models/2024299](https://civitai.com/models/2024299).
+
 ## I2V Extensions
 
 As a more recent discovery it appears that a number of frames from previous generation can be supplied as starting frames
@@ -34,7 +36,7 @@ See also: [Drozbay's Study](conditioning.md#drozbays-study) for additional detai
 
 ## HuMo Last Image to First Image Extensions
 
-[Drozbay's WF](humo.md#drozbay-continuation)
+[Drozbay's WF](humo.md#drozbay-continuations)
 
 ## Degradation
 

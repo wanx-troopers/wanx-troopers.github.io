@@ -15,11 +15,50 @@ from [Drozbay](https://github.com/drozbay).
 Kijai added a change to Wrapper which allows HuMo embeds to be used together with `WanVideo ImageToVideo Encode` embeds.
 HuMo references are appended to the end of `WanVideo ImageToVideo Encode` embeds.
 
-## Drozbay Continuation
+## Drozbay Continuations
 
-2025.12.25 New experimental WF from Drozbay giving Humo morphs [droz_VaceHumo_ContextWinRefTransition_v1](workflows/droz_VaceHumo_ContextWinRefTransition_v1.png).
+### Drozbay Continuations 2025.12.25
 
-2025.11.15 [Drozbay](https://github.com/drozbay) has shared `droz_wanexperiments_svishot_with_humo_v1.1` worflow
+New experimental WF from Drozbay giving Humo morphs:
+![droz_VaceHumo_ContextWinRefTransition_v1](workflows/droz_VaceHumo_ContextWinRefTransition_v1.png)
+[droz_VaceHumo_ContextWinRefTransition_v1](workflows/droz_VaceHumo_ContextWinRefTransition_v1.png)
+
+Apparently using [CA:2052865/flippinrad-motion-morph](https://civitai.com/models/2052865/flippinrad-motion-morph) at a strength of `0.3` over
+[here](workflows/details/droz_VaceHumo_ContextWinRefTransition_v1_detail1.webp):
+
+> You can definitely try without the lora, it's at pretty low strength but it does help with the morphing, so experiment with the strengths.
+> If you set it too high you get a lot of abstract objects and cute faces floating in the center of the video.
+
+Clarifications on `WanVaceReplace` from [wanvaceadvanced](https://github.com/drozbay/ComfyUI-WanVaceAdvanced) used in the WF like [this](workflows/details/droz_VaceHumo_ContextWinRefTransition_v1_detail2.png):
+
+> I designed that node so it only changes the vace elements for that conditioning input for the elements that are connected.
+> So it is ignoring the vace_strength values and replacing the "reference" vace input for that conditioning and using the reference_strength for that
+
+> The `context_index` in `WanVaceReplace` node is not the context window, it's the Vace context.
+> If you stack multiple Vace inputs together you will have multiple vace context.
+
+> the values to play with are:
+> - target_frames_per_window
+> - target_overlap_frames
+> - vace_ref_strength for each of the VaceReplace nodes
+> - ref_strength for the HuMo nodes
+> - number of steps and steps_to_run for the Vace sampler
+> - MotionMorph lora strength
+
+> Also you can try to remove the values in `explicit_cond_mapping`, which will revert back to using the ratio-based splitting of conditions for the windows.
+If you do that you can also use standard_uniform for the context schedule, which may result in more blending as well
+
+![droz_VaceHumo_ContextWinRefTransition_v1_detail3](workflows/details/droz_VaceHumo_ContextWinRefTransition_v1_detail3.webp)
+
+### Drozbay Continuations 2025.11.29
+
+Drozbay has shared an additional HuMo continuation workflow:
+![drozbay_HuMo_contextWindows](workflows/drozbay_HuMo_contextWindows.webp)
+[drozbay_HuMo_contextWindows](workflows/drozbay_HuMo_contextWindows.webp)
+
+### Drozbay Continuations 2025.11.15
+
+[Drozbay](https://github.com/drozbay) has shared `droz_wanexperiments_svishot_with_humo_v1.1` worflow:
 ![droz_wanexperiments_svishot_with_humo_v1.1](workflows/droz_wanexperiments_svishot_with_humo_v1.1.png)
 [droz_wanexperiments_svishot_with_humo_v1.1](workflows/droz_wanexperiments_svishot_with_humo_v1.1.png)
 
@@ -37,11 +76,9 @@ implemented in this workflow through the use of `WanEx I2VCustomEmbeds` node whi
 [drozbay](hidden-knowledge.md#drozbay) has shared via the following new code repository:
 [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments)
 
-2025.11.29 Drozbay has shared an additional HuMo continuation workflow
-![drozbay_HuMo_contextWindows](workflows/drozbay_HuMo_contextWindows.webp)
-[drozbay_HuMo_contextWindows](workflows/drozbay_HuMo_contextWindows.webp)
+### Drozbay Continuations See Also
 
-See also: [Drozbay's Study](conditioning.md#drozbays-study) on composing and examining embeds.
+[Drozbay's Study](conditioning.md#drozbays-study) on composing and examining embeds.
 
 ## VRGameDevGirl
 

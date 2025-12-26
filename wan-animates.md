@@ -60,7 +60,7 @@ Note: vitpose `.onnx` and `.bin` files go into `ComfyUI/models/detection` folder
 > Q: how would the other skeletons be colored in cases past 2?
 > A: we just have 2 colors, but we do like 1-2-1-2-1-... manner from left to right
 
-[Pose Retargeter](extra-tools.md#pose-retargeter)
+[Pose Retargeter](tools-list.md#pose-retargeter)
 
 ### SCAIL 2025.12.14
 
