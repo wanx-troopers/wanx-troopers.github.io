@@ -1,5 +1,9 @@
 # HuMO
 
+## 2025.12.26
+
+Highly experimental HuMoveLora in action - difference between HuMo and WanMove: [HF:drozbay/HuMoveLora](https://huggingface.co/drozbay/HuMoveLora/tree/main).
+
 ## 2025.12.24
 
 Simple ClownShark WF: [droz_HuMoImageToVideo_Simple_v1](workflows/droz_HuMoImageToVideo_Simple_v1.png)
