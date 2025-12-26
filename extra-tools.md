@@ -122,7 +122,7 @@ Disasseble equence into separate images
 - [GH:stavsap/comfyui-ollama](https://github.com/stavsap/comfyui-ollama) ComfyUI nodes to connect to local-running KoboldCpp executing Qwen3-VL on the CPU in order to tranlate images to descriptions.
 - [Urabewe/OllamaVision](https://github.com/Urabewe/OllamaVision) a SwarmUI extension to generate prompts.
 - [GH:chflame163/ComfyUI_LayerStyle](https://github.com/chflame163/ComfyUI_LayerStyle) can add film grain to images.
-- CRZ Crop/Draw Mask
+- [GH:CoreyCorza/ComfyUI-CRZnodes](https://github.com/CoreyCorza/ComfyUI-CRZnodes) CRZ Crop/Draw Mask
 
 ## Frame Interpolation
 

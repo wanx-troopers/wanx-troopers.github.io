@@ -1,6 +1,4 @@
-# HoloCine
-
-## StoryMem
+# StoryMem
 
 [StoryMem](https://kevin-thu.github.io/StoryMem/) released.
 This is a LoRA very similar to Holocine in intent.
@@ -13,13 +11,35 @@ From their website:
 > - mi2v: Enable MI2V (memory + first-frame image conditioning) to connect adjacent shots when scene_cut is False.
 > - mm2v: Enable MM2V (memory + first 5 motion frames conditioning) to connect adjacent shots when scene_cut is False.
 
+> It was trained for 249 frames though (Wan fine tune) and specifically for [Scene] [Camera] and timestamping prompts
+
+Original author:
+> M2V serves as the basic setting, while MI2V and MM2V are only used to enable natural shot continuation without scene cuts.
+
+Wrapper has now got `WanVideoAddStoryMemLatents` node.
+Interesting discussion in issue [1822](https://github.com/kijai/ComfyUI-WanVideoWrapper/issues/1822) about an example wf.
+
+> It actually takes up to 8 frames from the previous video, based on some automated quality checking (this will need new node).
+> Using start image or motion frames doesn't need new code, the normal I2V node handles that the same.
+> Only new thing needed is passing the memory latents as they are encoded separately from everything else,
+> for that I have added a node.
+
+> Whole workflow is more complicated and would benefit from helper node that does it all for sure.
+> Even after the lora alpha compensation the strength should be bit higher than 1.0, at least when using lightx2v and such.
+
+As of 2025.12.25 this is still a work in progress. [GH:aimfordeb/ComfyUI-FunPack](https://github.com/aimfordeb/ComfyUI-FunPack)
+repository presumably contains some kind of a new node and an example worklflow using it.
+It doesn't look like this workflow is useable yet.
+
+Note the stories in [stroy](https://github.com/Kevin-thu/StoryMem/tree/main/story) folder on the original author's Github repository.
+
+# Holocine
+
 ## 2025.12.07
 
 Outstanding [PR](https://github.com/kijai/ComfyUI-WanVideoWrapper/pull/1615) to Kijai's WanVideo Wrapper to improve HoloCine support.
 
-> It was trained for 249 frames though (Wan fine tune) and specifically for [Scene] [Camera] and timestamping prompts
-
-## Holocine
+## Older
 
 [Holo Cine](https://holo-cine.github.io/) models have been uploaded to Huggingface, Kijai's provided fp8 [conversion](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main/T2V/HoloCine).
 [Paper](https://github.com/yihao-meng/HoloCine).

@@ -1,5 +1,11 @@
 # Qwen
 
+## 2025.12.25
+
+Phr00t's mix of 2509 and 2511: [HF:Phr00t/Qwen-Image-Edit-Rapid-AIO:v17](https://huggingface.co/Phr00t/Qwen-Image-Edit-Rapid-AIO/tree/main/v17)
+
+> euler_a/beta seems to work best
+
 ## 2025.12.24
 
 Simple template workflow added to ComfyUI
@@ -7,6 +13,15 @@ Simple template workflow added to ComfyUI
 > cfg 6 is great on 2511 so far
 
 `EmptyQwenImageLayeredLatentImage` turns QIE into T2I - start from no input image. Alternative advice: "you can just take QI (not QIE) ComfyUI template and just load QIE2511 model"
+
+[GH:ethanfel/ComfyUI-Mamad8-QwenEdit-fix](https://github.com/ethanfel/ComfyUI-Mamad8-QwenEdit-fix) was suggested as an alternative text encoder, `TextEncodeQwenImageEditPlusMamad8`
+
+> there's no issue when regenerating the whole image;
+> it's editing in place, the elements that doesn't change from the original image are degraded [contrast, saturation etc]
+
+Suggestion for better LLM serving as a CLIP: from [HF:silveroxides/Qwen2.5-VL-7B-MixedPrecision-ComfyUI](https://huggingface.co/silveroxides/Qwen2.5-VL-7B-MixedPrecision-ComfyUI/tree/main)
+
+![abliterated-mixed-fp8](../screenshots/qwen/abliterated-mixed-fp8.webp)
 
 ## 2025.12.23
 
@@ -28,7 +43,7 @@ Official workflow embedded in this image:
 
 > They seemed to have added a lot more color. The greens are popping and the color does not seem so washed out.
 
-> dx8152 camera angles LoRA works as before
+> [HF:dx8152/Qwen-Edit-2509-Multiple-angles](https://huggingface.co/dx8152/Qwen-Edit-2509-Multiple-angles/tree/main) camera angles LoRA works as before
 
 Seems to improve realism of different angle LoRA [HF:lividtm/Qwen-Edit-Loras:external](https://huggingface.co/lividtm/Qwen-Edit-Loras/tree/main/external) by [GH:filliptm](https://github.com/filliptm).
 Note the author apparently has also got a character sheet LoRA - somewhere :)
@@ -71,7 +86,7 @@ Supposedly has affinity to Wan models since both come from Alibaba.
 
 Interesting: an [attempt](https://www.reddit.com/r/QwenImageGen/comments/1p3c0r6/controlnet_openpose_qwen_image_edit_2509/) to rig a ControlNet on top of QIE 2509.
 
-## Notable Loras For Qwen Image Edit
+## Notable Loras And Wf-s For Qwen Image Edit
 
 Generates 1st frame for next scene in same location with same character.
 Sample workflow on HF next to LoRA.
@@ -85,6 +100,10 @@ Text editing similar to Nano Banana (dataset [visualizer](https://snazzy-selkie-
 | HF Space | LoRA |
 | --- | --- |
 | [eigen-ai-labs/eigen-banana-qwen-image-edit](https://huggingface.co/eigen-ai-labs/eigen-banana-qwen-image-edit/tree/main) | eigen-banana-qwen-image-edit-2509-fp16-lora.safetensors |
+
+https://civitai.com/articles/20190/headface-swap-workflow-qwen-image-edit-2509In 
+
+https://www.patreon.com/posts/head-swap-qwen-140536096
 
 ## Qwen Piflow
 

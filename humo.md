@@ -17,6 +17,8 @@ HuMo references are appended to the end of `WanVideo ImageToVideo Encode` embeds
 
 ## Drozbay Continuation
 
+2025.12.25 New experimental WF from Drozbay giving Humo morphs [droz_VaceHumo_ContextWinRefTransition_v1](workflows/droz_VaceHumo_ContextWinRefTransition_v1.png).
+
 2025.11.15 [Drozbay](https://github.com/drozbay) has shared `droz_wanexperiments_svishot_with_humo_v1.1` worflow
 ![droz_wanexperiments_svishot_with_humo_v1.1](workflows/droz_wanexperiments_svishot_with_humo_v1.1.png)
 [droz_wanexperiments_svishot_with_humo_v1.1](workflows/droz_wanexperiments_svishot_with_humo_v1.1.png)
