@@ -1,5 +1,18 @@
 # Out Of Memory And Speed Discussions
 
+## 2025.12.26
+
+> After any update that modifies the model code and when using torch.compile it's common to run into issues with VRAM,
+> this can be caused by using older pytorch/triton version without latest compile fixes, and/or from old triton caches, mostly in Windows.
+> This manifests in the issue that first run of new input size may have drastically increased memory use, which
+> can clear from simply running it again, and once cached, not manifest again. Again I've only seen this happen in Windows.
+> To clear your Triton cache you can delete the contents of following (default) folders:
+
+```
+C:\Users\<username>\.triton
+C:\Users\<username>\AppData\Local\Temp\torchinductor_<username>
+```
+
 ## 2025.12.17
 
 > with out cache ... 92 sec; with ... 70 sec

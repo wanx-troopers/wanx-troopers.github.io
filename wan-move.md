@@ -47,3 +47,13 @@ The model already has some support in [kijai/ComfyUI-WanVideoWrapper](https://gi
 > T2V LoRA worked
 
 > WanMove is technically identical to Wan 2.1 I2V
+
+## As a LoRA
+
+Gleb reported being able to make Wan Move work as LoRA:
+
+![wan-move](screenshots/wan-move/gleb-wan-move.png)
+
+[wanmove-lora-test.json](workflows/wan-move/wanmove-lora-test.json)
+
+He reported not being able to make it work with Wan 2.1 but working with 2.2
