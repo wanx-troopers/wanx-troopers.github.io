@@ -1,5 +1,25 @@
 ﻿# Hidden Knowledge
 
+## 2025.12.27
+
+> Tensors in comfyui are usually aranged in BCHW format. (Batch Channel Height Width);
+> I2V models will have a value of 36 for the channel tensor.
+> Anything else will throw an error. T2V will be 16 for the channel tensor.
+> You should not mess with the tensors unless you really know what you are doing in which case you can pad them etc.
+> Trying to mix and match i2v and t2v models will cause tensor mismatch errors
+
+> Sure, but you can force it sometimes and it may still work, for example uni3c is for I2V but works on T2V if you just slice the extra channels off.
+> Other way around usually not, for example even if you force apply vace to I2V model, it just ruins the output
+
+> can you do 4 steps WITH cfg? With low cfg yes, under 2 usually
+
+> You can also just do first step with cfg; works better with at least 6 steps
+
+Lemuet:
+
+> Nunchaku is 4bit quantization, so smaller model files and faster generation speeds. Quality hit ...
+> ... it used to be really impressive how much faster it was compared to something like fp8
+
 ## 2025.12.22
 
 > TeaCache (and MagCache) is tuned per model so it wouldn't work properly [for Logcat Avatar], EasyCache is model agnostic and should work;
@@ -128,7 +148,8 @@ Mixing `fp8_e5m2_scaled` VACE with `fp8_e5m2` Wan 2.2 T2V can cause mysterious e
 
 [Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) contains `Wan Video Prompt Extender` node; it uses [Qwen2.5](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Qwen) 3B or 7B from KJ HF.
 
-`LoadLatent` node from ComfyUI native can be connected to `samples` input of `WanVideo Sampler` - latents can be saved to disc and loaded from disk.
+`SaveLatent` and `LoadLatent` nodes from ComfyUI native can be used to save/load latents to/from file.
+Connect output from `LoadLatent` to `samples` input of `WanVideo Sampler` if needed.
 
 Running high with CFG 3.5/3.5/3.5 improves prompt adherence compared to 3.5/1/1.
 

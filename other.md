@@ -21,7 +21,6 @@ Caution remains in place for all `1038lab` owned repositories.
 ## Big List
 
 * [GH:NewBieAI-Lab/NewBie-image-Exp0.1](https://github.com/NewBieAI-Lab/NewBie-image-Exp0.1) NewBie image generator, seems good for anime; Lumina family, with Gemma3 +  Jina clip models and Flux VAE
-
 * [GH:martijnat/comfyui-previewlatent](https://github.com/martijnat/comfyui-previewlatent) quick latent preview w/o VAE
 * [worldcanvas](https://worldcanvas.github.io/) a new model in footsteps of ATI and to some degree VACE
 * [InfCam](https://github.com/emjay73/InfCam?tab=readme-ov-file) wan 2.1 based video-to-video moving camera according to a set trajectory

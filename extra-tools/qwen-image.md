@@ -6,6 +6,15 @@
 | :--- | :--- |
 | [HF:lilylilith/AnyPose](https://huggingface.co/lilylilith/AnyPose) | Person in image 1 do the exactly same pose as image 2 |
 
+## 2025.12.27 QIE Q4 + ZIT Low VRAM
+
+[niji-qui-zit](../workflows/z-image/niji-qui-zit.json) by [MadevilBeats](https://www.instagram.com/madevilbeats/) aka "NiJi Dragon"; the shared a workflow
+1st edits with a highly quantized version of QIE, like Q4 and then Z-Image-Turbo is used to clean up the artifacts
+> Q4 of QIE is a bit blotchy looking, kinda blurry, plasticy, etc. but it can still edit at roughly the same
+> level as Q8 so I'm cleaning it up with ZIT. Mainly I just wanted to see if they could fit together on one
+> GPU and how fast it would be in one workflow: yes and it's less than 30 seconds typically [RTX5090];
+> ZIT upscaleAny
+
 ## 2025.12.26
 
 Face/Head Swap by Alisson Pereira: [civitai.com/models/2027766](https://civitai.com/models/2027766),

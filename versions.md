@@ -2,6 +2,15 @@
 
 The page needs a brush-up. Bugs referenced have been fixed or worked around. Still might be useful info.
 
+## 2025.12.27
+
+> Sage 3 really doesn’t seem all that great.
+> for now, Sage 2.1/2.2 are still the mainstream options.
+
+> Sage3 quality loss on 2.1 was way too high to be useful;
+> fp8 fast works far better with 2.2 and is even usable,
+> while it never was for 2.1
+
 ## 2025.12.10
 
 > B200 and onward is so good is because they have a giant L2 cache so cache issues are lowered
