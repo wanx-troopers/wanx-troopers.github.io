@@ -1,4 +1,4 @@
-# Qwen
+ï»¿# Qwen
 
 ## Qwen 2511 LoRAs
 
@@ -13,8 +13,8 @@ Face/Head Swap by Alisson Pereira: [civitai.com/models/2027766](https://civitai.
 [youtube.com/watch?v=3CoK4pDl-TE](https://www.youtube.com/watch?v=3CoK4pDl-TE).
 
 > If you get too much contrast / plastic skin using LightX2V Lightning, try steps = N/2 (e.g., 8 -> 4).
-> Without Lightning -> lower steps (20 -> 16) and CFG ~ 1.2–1.5.
-> If poses differ a lot -> increase LoRA strength (1.2–1.3).
+> Without Lightning -> lower steps (20 -> 16) and CFG ~ 1.2 - 1.5.
+> If poses differ a lot -> increase LoRA strength (1.2 - 1.3).
 
 > Samplers: er_sde+beta57, kl_optimal, ddim_uniform, res_2s+beta57;
 > Precision: best = fp16 | recommended = fp8/q8
