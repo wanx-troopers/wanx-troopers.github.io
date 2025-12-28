@@ -1,5 +1,9 @@
 # News
 
+2025.12.27 [SVI 2.0 Pro](svi.md#svi-20-pro) support is implemented in the Wrapper
+
+2025.12.27 [GH:caiyuanhao1998/Open-OmniVCus](https://github.com/caiyuanhao1998/Open-OmniVCus) VACE-like facility is being tested
+
 2025.12.23 Long-awaited Qwen Image Edit 2511 [released](extra-tools/qwen-image.md#20251223)
 
 2025.12.23 [StoryMem](storymem-holocine.md#storymem) has been spotted in the wild: this is a set of two LoRAs reminiscent of both Holocine with consistency across scene cuts and SVI-film with 5-frame continuations

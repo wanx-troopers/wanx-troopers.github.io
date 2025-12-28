@@ -151,6 +151,8 @@ Mixing `fp8_e5m2_scaled` VACE with `fp8_e5m2` Wan 2.2 T2V can cause mysterious e
 `SaveLatent` and `LoadLatent` nodes from ComfyUI native can be used to save/load latents to/from file.
 Connect output from `LoadLatent` to `samples` input of `WanVideo Sampler` if needed.
 
+>  it's just clumsy to use because ... it saves to output folder but load only looks from input folder
+
 Running high with CFG 3.5/3.5/3.5 improves prompt adherence compared to 3.5/1/1.
 
 Comfy native contains `Empty Audio` node.

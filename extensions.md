@@ -17,7 +17,7 @@ Rest of frames need to be supplied as (127, 127, 127) grey frames.
 
 VACE naturally works with T2V models.
 
-One possible workflow: [civitai.com/models/2024299](https://civitai.com/models/2024299).
+One possible workflow from Verole: [civitai.com/models/2024299](https://civitai.com/models/2024299).
 
 ## I2V Extensions
 

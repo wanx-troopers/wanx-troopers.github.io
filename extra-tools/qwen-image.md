@@ -34,6 +34,8 @@ Face/Head Swap by Alisson Pereira: [civitai.com/models/2027766](https://civitai.
 
 Phr00t's mix of 2509 and 2511: [HF:Phr00t/Qwen-Image-Edit-Rapid-AIO:v17](https://huggingface.co/Phr00t/Qwen-Image-Edit-Rapid-AIO/tree/main/v17)
 
+> its a small mix handful of "realism" loras and "insubject" on the 2509 side of things, but just accelerators for 2511 side
+
 > euler_a/beta seems to work best;
 > 4 steps minimum, generally 6 steps is worth it;
 > grid artifacts varied across versions but havent been noticing them in v17

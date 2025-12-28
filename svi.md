@@ -1,8 +1,16 @@
-﻿# SVI
+﻿# SVI 2.0 Pro
 
-## 2025.12.26
+## 2025.12.27
 
-[SVI 2.0 Pro](https://github.com/vita-epfl/Stable-Video-Infinity/blob/svi_wan22/docs/svi/svi_2.0_pro.md) released; not entirely clear how to use it yet
+SVI 2.0 Pro released
+
+- Download weights from [HF:vita-video-gen/svi-model:version-2.0](https://huggingface.co/vita-video-gen/svi-model/tree/main/version-2.0)
+- Main new node: `WanVideo SVIPro Embeds` in Wrapper  
+  ![WanVideo-SVIPro-Embeds](screenshots/WanVideo-SVIPro-Embeds.png)
+- Wiring [example](screenshots/WanVideo-SVIPro-Embeds-wiring.png) for the new node
+- Article/details: [GH:vita-epfl/Stable-Video-Infinity:svi_wan22/docs/svi/svi_2.0_pro.md](https://github.com/vita-epfl/Stable-Video-Infinity/blob/svi_wan22/docs/svi/svi_2.0_pro.md)
+
+# SVI 2.0
 
 ## 2025.12.04
 
@@ -37,7 +45,7 @@ The workflow is combining SVI 2.0 with hard-cut LoRA and in the demo case did no
 Simpler work-in-progress WF with SVI 2.0 for Wan 2.2 High Noise LoRA at 0.5 strength: [h_svi2_wan22_HasRnD.json](workflows/h_svi2_wan22_HasRnD.json).
 > WF uses 5 start frames but the correct way apparently is to use 1 start frame... so feel free to experiment
 
-## Summary
+# SVI 1.0
 
 SVI is a set of LoRas for Wan 2.1 480p I2V model
 * original .safetensor-s in fp32 [HF:vita-video-gen/svi-model](https://huggingface.co/vita-video-gen/svi-model/tree/main/version-1.0),

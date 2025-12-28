@@ -3,9 +3,13 @@
 * [GH:PozzettiAndrea/ComfyUI-Sharp](https://github.com/PozzettiAndrea/ComfyUI-Sharp) quick Gaussian splot from image by Apple
 * [kijai/ComfyUI-MoGe](https://github.com/kijai/ComfyUI-MoGe), [GH:microsoft/MoGe](https://github.com/microsoft/MoGe)
 
+# Resolution Master
+
+[GH:Azornes/Comfyui-Resolution-Master](https://github.com/Azornes/Comfyui-Resolution-Master)
+
 # NAG
 
-* [GH:scottmudge/ComfyUI-NAG](https://github.com/scottmudge/ComfyUI-NAG) ComfyUI NAG that has reportedly been made to work with a lot of models as of Dec 2025
+* [GH:scottmudge/ComfyUI-NAG](https://github.com/scottmudge/ComfyUI-NAG) ComfyUI NAG that supports Z-Image-Turbo as well as well as other new models as of Dec 2025
 * [GH:scottmudge/ComfyUI-NAG:lumina2_support](https://github.com/scottmudge/ComfyUI-NAG/tree/lumina2_support) fork of the above adding Z-Image-Turbo support, outstanding [PR](https://github.com/ChenDarYen/ComfyUI-NAG/pull/64)
 
 Hmm.. what is `NAGGuider` from `NAG`?..
