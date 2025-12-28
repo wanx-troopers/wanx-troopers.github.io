@@ -3,6 +3,18 @@
 * [GH:PozzettiAndrea/ComfyUI-Sharp](https://github.com/PozzettiAndrea/ComfyUI-Sharp) quick Gaussian splot from image by Apple
 * [kijai/ComfyUI-MoGe](https://github.com/kijai/ComfyUI-MoGe), [GH:microsoft/MoGe](https://github.com/microsoft/MoGe)
 
+# Loops
+
+[GH:yolain/ComfyUI-Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use)
+
+Drozbay:
+
+> Loops are possible with the current execution flow but are still somewhat fragile and they don't allow for starting/stopping partial executions.
+> You can't stop half way through a set of loops, change something for the next iteration, and continue. Indexing with lists is also
+> not super reliable right now. Overall it's often times easier and more stable to just lean into the practically infinite canvas and just make gigantic workflows.
+> They are large but to me they are simpler to understand than having everything hidden in loops or layers of subgraphs.
+
+
 # Resolution Master
 
 [GH:Azornes/Comfyui-Resolution-Master](https://github.com/Azornes/Comfyui-Resolution-Master)

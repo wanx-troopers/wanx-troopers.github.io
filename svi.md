@@ -41,6 +41,9 @@ SVI 2.0 Pro released
 One idea is to use `latent_strength` bellow `1` on `WanVace Encode` node while preparing the "anchor sample" to reduce its impact on the generated video
 and avoid locking the camera too strongly, etc.
 
+> much better motion without lightx2v lora on High noise model;
+> 10 steps cfg 3.5 for high-noise and 4 for low-noise(with lightx2v)
+
 # SVI 2.0
 
 ## 2025.12.04

@@ -20,7 +20,8 @@ It actually implementes one of the newer methods formerly known as [RifleX](http
 
 Not so bad results have been demostrated with [Kandinsky-5](k5.md).
 
-The following set of options was suggested for Wan 2.2 I2V, though it is not yet clear where to set them:
+Alternative implemenation of `UltraVico` has been tested with Wan 2.2 I2V achieving a good result, but it's not available for use at the moment.
+For record the following parameters (not exposed by the current Comfy implementation) have been reported to work well:
 
 > 0.95 alpha, 0.3 beta, 4 gamma
 
