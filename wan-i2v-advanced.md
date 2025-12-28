@@ -8,13 +8,12 @@
     "prompt": "A cinematic, seamless VFX video featuring a woman standing amidst dense, dark green foliage and vibrant pink bougainvillea flowers. She has shoulder-length brown hair with bangs and wears a beige turtleneck sweater with diagonal brown stripes and blue jeans, her hand gently touching a flower. A magical transition effect initiates a fluid metamorphosis. The woman's posture smoothly lowers from standing to sitting without breaking continuity, her raised hand gliding down to rest on her lap. Simultaneously, the texture of her beige wool sweater ripples and darkens, morphing into a smooth, navy blue short-sleeved top with white buttons. Her jeans liquefy and reshape into a flowy, patterned blue and white skirt. Her hair shimmers, lightening from brunette to blonde and pulling back as sunglasses materialize atop her head. The surrounding environment participates in the transition; the chaotic wall of dark leaves recedes and smooths out into a bright, manicured green lawn, while the pink bougainvillea blooms shift hue to become delicate purple flowers in the foreground. A rustic stone and wood bench rapidly grows out of the ground beneath her to catch her settling form, completing the transformation from a lush garden thicket to a sunny park setting in one continuous, dreamlike motion."
   }
   ```
-- [CA:2052865/flippinrad-motion-morph](https://civitai.com/models/2052865/flippinrad-motion-morph)
-  LoRA suggested by [Drozbay](hidden-knowledge.md#drozbay), suggested strength 0.3
-  > low strength ... does help with the morphing, so experiment with the strengths.
-  > If you set it too high you get a lot of abstract objects and cute faces floating in the center of the video
 
 - [CA:2052865/flippinrad-motion-morph](https://civitai.com/models/2052865/flippinrad-motion-morph?modelVersionId=2323211) LoRA
-  created by [FlippingSigmas](https://x.com/FlippingSigmas), aka `Flipping Sigmas' AnimateDiff`
+  created by [FlippingSigmas](https://x.com/FlippingSigmas), aka `Flipping Sigmas' AnimateDiff`  
+  [Drozbay](hidden-knowledge.md#drozbay) suggested starting with strength 0.3
+  > low strength ... does help with the morphing, so experiment with the strengths.
+  > If you set it too high you get a lot of abstract objects and cute faces floating in the center of the video
 
 Morphing has been successfully achieved on I2V and can probably work with VACE / T2V.
 
