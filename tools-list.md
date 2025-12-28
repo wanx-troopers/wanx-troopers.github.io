@@ -5,6 +5,8 @@
 
 # Loops
 
+> so if anyone want to use the loop for nodes, do not disable comfyui cache like i do, wasted 30mn figuring those nodes need the cache
+
 [GH:yolain/ComfyUI-Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use)
 
 Drozbay:

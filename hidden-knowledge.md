@@ -11,6 +11,8 @@
 The expected effect is that the latent provides a weaker constraint to how the resulting video looks
 when the corresponding image is part of [conditioning](conditioning.md).
 
+`Load Checkpoint` node loads AIO (all in one) `.safetensor` files: model, clip, vae from one loader.
+
 ## 2025.12.27
 
 > Tensors in comfyui are usually aranged in BCHW format. (Batch Channel Height Width);

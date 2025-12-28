@@ -6,6 +6,16 @@
 | :--- | :--- |
 | [HF:lilylilith/AnyPose](https://huggingface.co/lilylilith/AnyPose) | Person in image 1 do the exactly same pose as image 2 |
 
+## 2025.12.28
+
+> openpose with Qwen-Image-Edit-2509 ... but also the anypose lora
+
+> Yeah the anypose lora is good and the most accurate, but with real people it changes their face and also body shape, which is the only problem.
+
+> I trained using ai-toolkit [a QIE-2511 LoRA] and didn't like the results, and I tested a lot of things.
+> Yesterday I was training with diffusion pipe, but there's still some incorrect code regarding resolution matching, so I paused and will try to change the code later.
+> Now I'm training using musubi-tuner and it seems to be training very well, and even on my 5090 without much difficulty. 
+
 ## 2025.12.27 QIE Q4 + ZIT Low VRAM
 
 [niji-qui-zit](../workflows/z-image/niji-qui-zit.json) by [MadevilBeats](https://www.instagram.com/madevilbeats/) aka "NiJi Dragon"; the shared a workflow
@@ -154,7 +164,8 @@ https://www.patreon.com/posts/head-swap-qwen-140536096
 
 [PuLID](https://huggingface.co/guozinan/PuLID) ?
 
-## Notable LoRA-s
+## LoRA-s
 
 - [HF:dx8152/Qwen-Edit-2509-Light-Migration](https://huggingface.co/dx8152/Qwen-Edit-2509-Light-Migration) relight / light-migration for QIE 2509; [examples](https://x.com/dx8152/status/1997124533116141818?s=46)
 - [HF:lividtm/Qwen-Edit-Loras:external](https://huggingface.co/lividtm/Qwen-Edit-Loras/tree/main/external) Qwen_MultiAngle_image_edit and WF by [GH:filliptm](https://github.com/filliptm)
+- [CA:2260473?2544605](https://civitai.com/models/2260473?modelVersionId=2544605) blend images
