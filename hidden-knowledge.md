@@ -1,5 +1,16 @@
 ﻿# Hidden Knowledge
 
+## 2025.12.28
+
+> most blackwell should probably be clock limited or undervolted as a baseline [advise on using RTX5090 etc]
+
+> - Linux: use nvidia-smi but it won't let you go below 400watts
+> - Windows: use msi-afterburner
+
+`WanVideo Encode` has `latent_strength` parameter which scales the latent values.
+The expected effect is that the latent provides a weaker constraint to how the resulting video looks
+when the corresponding image is part of [conditioning](conditioning.md).
+
 ## 2025.12.27
 
 > Tensors in comfyui are usually aranged in BCHW format. (Batch Channel Height Width);

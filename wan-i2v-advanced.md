@@ -147,6 +147,8 @@ trick in regular workflows, e.g. it makes `Painter I2V` approach modular.
 The node generates positive/negative conditioning that can be connected to sampler nodes using I2V family
 of Wan image generation models.
 
+It seems `noise_aug_strength` setting in `WanVideo Encode` might be there to achieve the same effect.
+
 ### Painter I2V Summary
 
 `princepainter/PainterI2V` node attracted attention and sparked research. It exists into two versions

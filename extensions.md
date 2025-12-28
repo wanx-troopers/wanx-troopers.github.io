@@ -9,6 +9,21 @@ We can take an existing video and generate an extension to it.
 The simplest form of doing this is to run I2V generation supplying last frame from previous generation as `start_frame`.
 This works but does not preserve continuity of motion - characters start moving at a different speed, in a different direction, etc.
 
+## UltraVico
+
+`UltraVico` is not an extension method in itself.
+Instead this is a method of "convincing" Wan models to generate videos longer that 81 frames without looping.
+
+Implemented on 2025.12.04 `sageattn_ultravico` is an `attention_mode` which can be chosen on `WanVideoModelLoader` in [Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper).
+
+It actually implementes one of the newer methods formerly known as [RifleX](https://github.com/thu-ml/DiT-Extrapolation).
+
+Not so bad results have been demostrated with [Kandinsky-5](k5.md).
+
+The following set of options was suggested for Wan 2.2 I2V, though it is not yet clear where to set them:
+
+> 0.95 alpha, 0.3 beta, 4 gamma
+
 ## VACE Extensions
 
 A method which has been practiced for a while is to supply several last frame from previous generation, say 16 as initial frames

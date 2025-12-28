@@ -115,7 +115,7 @@ Users chatting:
 | [HF:lightx2v/Wan2.2-Distill-Loras](https://huggingface.co/lightx2v/Wan2.2-Distill-Loras/tree/main) | wan2.2\_i2v\_A14b\_high\_noise\_lora\_rank64\_lightx2v\_4step\_1022 | 2.2 I2V High | 2025.10.22 | superceeded by 1030 |
 | [HF:lightx2v/Wan2.2-Distill-Loras](https://huggingface.co/lightx2v/Wan2.2-Distill-Loras/tree/main) | wan2.2\_i2v\_A14b\_low\_noise\_lora\_rank64\_lightx2v\_4step\_1022 | 2.2 I2V Low | 2025.10.22 | - |
 | [HF:Kijai/WanVideo_comfy:LoRAs/Wan22_Lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Wan22_Lightx2v) | Wan\_2\_2\_I2V\_A14B\_HIGH\_lightx2v\_MoE\_distill\_lora\_rank\_64\_bf16 | 2.2 I2V High | - |  superceeded by 1022 and 1030<br> ghosting with simple scheduler but not linear quadratic?<br>can do good motion and camera motion |
-| [HF:Kijai/WanVideo_comfy:Lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Lightx2v) | **recommended**<br>lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16<br>lightx2v_I2V_14B_480p_cfg_step_distill_rank256_bf16 | 2.1 I2V | - | Recommended on 2.2 I2V Low |
+| [HF:Kijai/WanVideo_comfy:Lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Lightx2v) | **recommended**<br>lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16<br>lightx2v_I2V_14B_480p_cfg_step_distill_rank256_bf16 | 2.1 I2V | - | Recommended on 2.2 I2V Low<br>with a strength of 1.0-1.5<br>could even be used on high with strength 3 |
 | [HF:Kijai/WanVideo_comfy:Lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Lightx2v) | lightx2v_14B_T2V_cfg_step_distill_lora_adaptive_rank_quantile_0.15_bf16 | 2.1 T2V | - | Some artists find this good on 2.2 T2V Low,<br>FL13 also recommends on 2.2 I2V Low |
 
 Demoted due to developers' comments

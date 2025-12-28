@@ -2,6 +2,17 @@
 
 This page collects initial knowledge on constructing Wan workflows: mostly VACE but also I2V.
 
+## TorchCompile
+
+To enable TorchCompile on native use `TorchCompileModelWanVideoV2` from [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes):
+
+![TorchCompileModelWanVideoV2](screenshots/TorchCompileModelWanVideoV2.png)
+
+> Q: the KJ patch sage attention node also has an allow torch compile toggle now?
+> A: not the same thing though, that just allows sageattn to be compiled, it doesn't do any compilation itself
+
+> Compile is somewhat tough in native with low mem load and Loras at least
+
 ## VACE
 
 VACE is an additional AI model that works in tandem with Wan T2V.

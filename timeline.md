@@ -2,7 +2,7 @@
 
 2025.12.27 [SVI 2.0 Pro](svi.md#svi-20-pro) support is implemented in the Wrapper
 
-2025.12.27 [GH:caiyuanhao1998/Open-OmniVCus](https://github.com/caiyuanhao1998/Open-OmniVCus) VACE-like facility is being tested
+2025.12.27 [GH:caiyuanhao1998/Open-OmniVCus](https://github.com/caiyuanhao1998/Open-OmniVCus) VACE-like facility is being tested, T2V, not impressive
 
 2025.12.23 Long-awaited Qwen Image Edit 2511 [released](extra-tools/qwen-image.md#20251223)
 
@@ -39,8 +39,7 @@ LongCat (now all of image/image edit/video), Ovis 7B
 
 2025.12.05 Version 2.0 of [SVI-shot](svi.md#20251204) combining SVI-shot (reference) and SVI-flim (5 frames overlap) released for Wan 2.1; also Wan 2.2 Version 2.0 only supporting SVI-shot functionality
 
-2025.12.04 `sageattn_ultravico` option added to [Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) supporting one of the newer [RifleX](https://github.com/thu-ml/DiT-Extrapolation)
-methods to generate videos with a greater number of frames without looping; a not so bad result has been demostrated with [Kandinsky-5](k5.md) but results with Wan did not look particularly good.
+2025.12.04 [sageattn_ultravico](extensions.md#ultravico) `attention_mode` added to [Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
 
 2025.12.03 Flux.2 Dev released under non-commerical license earlier on 2025.11.25 to enthusiasm of some and unhappiness of others (high VRAM usage, long generations)
 has received a ControlNet [model](https://huggingface.co/alibaba-pai/FLUX.2-dev-Fun-Controlnet-Union); status of integration into ComfyUI unknown

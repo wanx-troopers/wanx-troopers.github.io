@@ -4,18 +4,49 @@
 
 SVI 2.0 Pro released
 
-- Download weights from [HF:vita-video-gen/svi-model:version-2.0](https://huggingface.co/vita-video-gen/svi-model/tree/main/version-2.0)
-- Main new node: `WanVideo SVIPro Embeds` in Wrapper  
+- High/low LoRA-s for Wan 2.2 I2V
+- Kijai adapted the weights and placed them into [HF:Kijai/WanVideo_comfy:LoRAs/Stable-Video-Infinity/v2.0](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Stable-Video-Infinity/v2.0)
+  alongside 2.0 non-PRO
+- Original weights in [HF:vita-video-gen/svi-model:version-2.0](https://huggingface.co/vita-video-gen/svi-model/tree/main/version-2.0)
+- Main new nodes: `WanVideo SVIPro Embeds` in Wrapper, `WanImageToVideoSVIPro` for native    
   ![WanVideo-SVIPro-Embeds](screenshots/WanVideo-SVIPro-Embeds.png)
+  ![WanImageToVideoSVIPro](screenshots/WanImageToVideoSVIPro-kjnodes.png)
 - Wiring [example](screenshots/WanVideo-SVIPro-Embeds-wiring.png) for the new node
+- Proof of concept NATIVE wf for SVI 2.0 Pro: [wan22_SVI_Pro_native_example_KJ](workflows/svi/kj-wan22_SVI_Pro_native_example_KJ.json)
+- Wrapper WF from DawnII: [Wan2_2_LongFLF_SVI2_Pro_DawnII](workflows/svi/dawn-Wan2_2_LongFLF_SVI2_Pro_DawnII.json)
+- Native WF from Verole super long: [video_wan2_2_14B_i2v_SVIPRO_bano](workflows/svi/verole-video_wan2_2_14B_i2v_SVIPRO_bano.json)
 - Article/details: [GH:vita-epfl/Stable-Video-Infinity:svi_wan22/docs/svi/svi_2.0_pro.md](https://github.com/vita-epfl/Stable-Video-Infinity/blob/svi_wan22/docs/svi/svi_2.0_pro.md)
+
+> SVI Pro does have hard time following simple prompts at least
+
+> testing svi pro is also an instance where I would get some flashing between gens with sageattention but switching back to sdpa fixed it
+
+> the overlap is the 4 frames from last latent + 1, so 5
+
+> it uses the previous gen latent instead of frames, so no decoding/encoding between gens
+> which means the last 4 frames essentially
+
+> seems svi hard fixes the camera
+
+> can move the camera but lightx2v always make it worse
+
+> with 1030 lightx got [very all gray], works better with the 1022
+
+> for 1030 I set strength to 0.6 and it was fine
+
+> for me working great 1030
+
+`motion_latents` probably should be 1
+
+One idea is to use `latent_strength` bellow `1` on `WanVace Encode` node while preparing the "anchor sample" to reduce its impact on the generated video
+and avoid locking the camera too strongly, etc.
 
 # SVI 2.0
 
 ## 2025.12.04
 
 Version 2 of SVI lora for WAN 2.1 and 2.2 released:
-- Kijai's [repackaging](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Stable-Video-Infinity/v2.0)
+- Kijai's repackaging: [HF:Kijai/WanVideo_comfy:LoRAs/Stable-Video-Infinity/v2.0](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/Stable-Video-Infinity/v2.0)
 - [original](https://huggingface.co/vita-video-gen/svi-model/tree/main/version-2.0) (not usable in ComfyUI)
 
 Wan 2.1 version of this LoRa combines SVI-shot and SVI-film functionality:

@@ -75,3 +75,19 @@ Dec 2025 a version trained for Wan 2.2 was released, "doesn't seem to need any c
 
 > 2.2 LN wan is just 2.1+++, so you can use 2.2 LN loras pretty reliably in wan 2.1 based models.
 > ... using ... loras from 2.2 in scail for example
+
+> tried couple of images with stand-in, they use the 512x512 as reference
+
+> outpout dim. if I change it to anything other that 832x480 it instantly loses likeness. where as 832x480 is basically a perfect clone
+
+> did you try adjusting the rope shift? (freq_offset);
+> basically the 512p image is placed outside the generation with the rope positions,
+> so the relation of that to the base resolution might matter
+
+> if I understood it correctly, it's shifted like this spatially
+
+![standin-ref](screenshots/standin-ref.webp)
+
+> yeah, and the freq offset pushes it further away
+
+> okay, that seems to have helped, just changing to offset 2 for 1088x640 and it works better
