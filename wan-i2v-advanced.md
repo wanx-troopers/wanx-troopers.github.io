@@ -1,4 +1,4 @@
-# Wan I2V Advanced
+﻿# Wan I2V Advanced
 
 ## Morphing
 
