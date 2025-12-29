@@ -3,6 +3,8 @@
 Note: [Wan Wiring](wan-wiring.md) page contains initial information on constructing Wan VACE workflows, both native and wrapper.
 This page contains additional/advanced examples.
 
+> [Ditto](loras/part-02.md#ditto) is a stylized fine tune of VACE
+
 [drozbay](hidden-knowledge.md#drozbay) has shared the following advanced VACE workflows relying on his
 [ComfyUI-WanVaceAdvanced](https://github.com/drozbay/ComfyUI-WanVaceAdvanced) node pack, with ClownShark and VACE:
 

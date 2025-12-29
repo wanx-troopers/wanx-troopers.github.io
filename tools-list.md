@@ -143,6 +143,7 @@ UniLumos is an AI model for relighting a video. Workflows:
 - [Urabewe/OllamaVision](https://github.com/Urabewe/OllamaVision) a SwarmUI extension to generate prompts.
 - [GH:chflame163/ComfyUI_LayerStyle](https://github.com/chflame163/ComfyUI_LayerStyle) can add film grain to images.
 - [GH:CoreyCorza/ComfyUI-CRZnodes](https://github.com/CoreyCorza/ComfyUI-CRZnodes) CRZ Crop/Draw Mask
+- [GH:elgalardi/comfyui-clip-prompt-splitter](https://github.com/elgalardi/comfyui-clip-prompt-splitter) quickly coded node for splitting the prompt by line into multiple conditioning noodles - useful for multistage wf-s
 
 # Frame Interpolation
 

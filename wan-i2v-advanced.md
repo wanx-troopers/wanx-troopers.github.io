@@ -144,7 +144,7 @@ implementing the experimental latent noise manipulation technique pioneered by `
 `WanEx_PainterMotionAmplitude` which allows to do `Painter I2V`-style
 trick in regular workflows, e.g. it makes `Painter I2V` approach modular.
 The node generates positive/negative conditioning that can be connected to sampler nodes using I2V family
-of Wan image generation models.
+of Wan video generation models. It appears like this should work with native `KSampler` and possibly with `ClowShark` one, not with Wrapper.
 
 It seems `noise_aug_strength` setting in `WanVideo Encode` might be there to achieve the same effect.
 

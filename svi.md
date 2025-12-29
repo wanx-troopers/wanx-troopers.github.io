@@ -12,7 +12,8 @@ SVI 2.0 Pro released
   ![WanVideo-SVIPro-Embeds](screenshots/WanVideo-SVIPro-Embeds.png)
   ![WanImageToVideoSVIPro](screenshots/WanImageToVideoSVIPro-kjnodes.png)
 - Wiring [example](screenshots/WanVideo-SVIPro-Embeds-wiring.png) for the new node
-- Proof of concept NATIVE wf for SVI 2.0 Pro: [wan22_SVI_Pro_native_example_KJ](workflows/svi/kj-wan22_SVI_Pro_native_example_KJ.json)
+- NATIVE wf for SVI 2.0 Pro: [wan22_SVI_Pro_native_example_KJ](workflows/svi/kj-wan22_SVI_Pro_native_example_KJ.json)
+- Looped version of the above NATIVE wf from `QualityControl`: [SVI-Pro-KJ-Example-looped](workflows/svi/qc-SVI-Pro-KJ-Example-looped.json)
 - Wrapper WF from DawnII: [Wan2_2_LongFLF_SVI2_Pro_DawnII](workflows/svi/dawn-Wan2_2_LongFLF_SVI2_Pro_DawnII.json)
 - Native WF from Verole super long: [video_wan2_2_14B_i2v_SVIPRO_bano](workflows/svi/verole-video_wan2_2_14B_i2v_SVIPRO_bano.json)
 - Article/details: [GH:vita-epfl/Stable-Video-Infinity:svi_wan22/docs/svi/svi_2.0_pro.md](https://github.com/vita-epfl/Stable-Video-Infinity/blob/svi_wan22/docs/svi/svi_2.0_pro.md)
@@ -30,7 +31,7 @@ SVI 2.0 Pro released
 
 > can move the camera but lightx2v always make it worse
 
-> with 1030 lightx got [very all gray], works better with the 1022
+> with 1030 lightx got [video all gray], works better with the 1022
 
 > for 1030 I set strength to 0.6 and it was fine
 
@@ -43,6 +44,12 @@ and avoid locking the camera too strongly, etc.
 
 > much better motion without lightx2v lora on High noise model;
 > 10 steps cfg 3.5 for high-noise and 4 for low-noise(with lightx2v)
+
+DawnII has discovered that character sheets work to an extent as the "anchor" frame for SVI 2.0 Pro.
+Increasing latent strength say via `WanVideo Encode` is recommended.
+
+If you do not connect `prev_samples` and supply a new `anchor_image` to the generation
+SVI 2.0 Pro becomes one more way to supply a reference image to the generation.
 
 # SVI 2.0
 

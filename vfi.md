@@ -19,13 +19,13 @@ Opinionated quote:
 
 RIFE VFI still good to double frame rate.
 
-A popular node pack implementing RIFE: [GH:Fannovel16/ComfyUI-Frame-Interpolation](https://github.com/Fannovel16/ComfyUI-Frame-Interpolation).
-
-Occasionally this alternative nodepack requiring `tensorrt` installation is mentioned: [GH:yuvraj108c/ComfyUI-Rife-Tensorrt](https://github.com/yuvraj108c/ComfyUI-Rife-Tensorrt).
+- [GH:Fannovel16/ComfyUI-Frame-Interpolation](https://github.com/Fannovel16/ComfyUI-Frame-Interpolation).
+- [GH:filliptm/ComfyUI_Fill-Nodes](https://github.com/filliptm/ComfyUI_Fill-Nodes), `FL RIFE Frame Interpolation` node
+- occasionally ppl recommend [GH:yuvraj108c/ComfyUI-Rife-Tensorrt](https://github.com/yuvraj108c/ComfyUI-Rife-Tensorrt) which requires `tensorrt` to be installed
 
 ## FILM
 
-Popular implementation: `FL RIFE Frame Interpolation` from [GH:filliptm/ComfyUI_Fill-Nodes](https://github.com/filliptm/ComfyUI_Fill-Nodes).
+- [GH:filliptm/ComfyUI_Fill-Nodes](https://github.com/filliptm/ComfyUI_Fill-Nodes), `FL FILM Frame Interpolation` node
 
 > Film - it's an alternative to RIFE?
 > yeah exactly, its by google

@@ -11,6 +11,8 @@ This works but does not preserve continuity of motion - characters start moving 
 
 ## UltraVico
 
+Note: 2024.12.29 `sageattn_ultravico` implementation has been fixed to worth with resolutions other than 832x480
+
 `UltraVico` is not an extension method in itself.
 Instead this is a method of "convincing" Wan models to generate videos longer that 81 frames without looping.
 
@@ -24,6 +26,8 @@ Alternative implemenation of `UltraVico` has been tested with Wan 2.2 I2V achiev
 For record the following parameters (not exposed by the current Comfy implementation) have been reported to work well:
 
 > 0.95 alpha, 0.3 beta, 4 gamma
+
+> 0.95 alpha for ultravico doesn't really allow the subject to leave the frame :/
 
 ## VACE Extensions
 

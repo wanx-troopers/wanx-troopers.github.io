@@ -2,6 +2,12 @@
 
 The page needs a brush-up. Bugs referenced have been fixed or worked around. Still might be useful info.
 
+## 2025.12.29
+
+> Which is a good Numpy version? I updated your wrapper and it installed 2.2.6 which broke multiple other nodes;
+> Not sure about that, some older stuff just won't work on any numpy 2 version;
+> seedvr2 seems to be impacted by this, guess i'll have to manually downgrade
+
 ## 2025.12.27
 
 > Sage 3 really doesn't seem all that great.

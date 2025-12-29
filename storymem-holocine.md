@@ -2,7 +2,9 @@
 
 ## 2025.12.26
 
-> T2V is just normal T2V; `WanVideoAddStoryMemLatents` is used for the extensions
+I2V LoRA
+
+> `WanVideoAddStoryMemLatents` is used for the extensions
 
 > And yeah that's basically the only new thing for it: 3 more reference images;
 > Or max 3, that's also hard coded max in their code;

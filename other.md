@@ -5,6 +5,7 @@
 * [GH:DAVIAN-Robotics/EgoX](https://github.com/DAVIAN-Robotics/EgoX), [keh0t0.github.io/EgoX](https://keh0t0.github.io/EgoX/) convert any video to 1st person view; Wan 2.1 I2V 480p LoRA: [HF:DAVIAN-Robotics/EgoX](https://huggingface.co/DAVIAN-Robotics/EgoX/tree/main)
 * [GH:caiyuanhao1998/Open-OmniVCus](https://github.com/caiyuanhao1998/Open-OmniVCus) build a video from ingredients; [HF:CaiYuanhao/OmniVCus](https://huggingface.co/CaiYuanhao/OmniVCus/tree/main)
   "it's VACE module ... needs some new code probably ... loads without issues and technically works ... just.. doesn't do anything"
+* [GH:myyzzzoooo/InsertAnywhere](https://github.com/myyzzzoooo/InsertAnywhere) model for adding objects into the video
 
 ## Use With Caution
 

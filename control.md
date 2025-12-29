@@ -33,6 +33,15 @@ Camera control for Wan 2.1 (hmm which one?..).
 Works with [SCAIL](wan-animates.md#scail):
 
 ![uni3c](screenshots/uni3c.webp)
+[uni3c](screenshots/uni3c.webp)
+
+Works with V2 wrapper nodes: plug `WanVideo Uni3C Embeds` output into `uni3c_embeds` input on `WanVideoSampler v2 Extra Args`
+
+![uni3c-v2](screenshots/uni3c-v2.png)
+[uni3c-v2](screenshots/uni3c-v2.png)
+
+> [give it just the single] start frame encoded if you want the camera to not move at all;
+> [it can] handle any kind of input, if it's single frame it expands it, and if it's too little or too many frames, it interpolates
 
 Optional memory offloading added
 
