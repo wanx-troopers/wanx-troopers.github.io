@@ -1,6 +1,6 @@
-# Prompts useful in working with Z-Image-Turbo
+# LLM Prompts
 
-## Image To Text
+## Image To Text Z-Image-Turbo
 
 [MadevilBeats](https://www.instagram.com/madevilbeats/) aka "NiJi Dragon"
 
@@ -26,7 +26,20 @@ Small, subtle, or unusual details that stand out upon close inspection
 Maintain an objective tone. Do not speculate, interpret intent, or assume information that is not directly visible. Do not summarize or omit minor details. Do not use headings, bullet points, or numbered sections. The final output should be a single, cohesive paragraph or a few flowing paragraphs that comprehensively describe the image as if explaining it to someone who cannot see it.
 ```
 
-## Rework Prompt To Avoid Blurred Background
+## Image To Image Qwen Image Edit
+
+Hicho
+
+```
+Enhance the lighting and sharpness of this image.
+Improve the color vibrancy and contrast.
+Upscale this jpg to 4K resolution while preserving details.
+Reduce noise and grain in the photo.
+Re-render this image in the style of Van Gogh’s Starry Night.
+Convert to a watercolor painting.
+```
+
+## Rework Prompt To Avoid Blurred Background In Z-Image-Turbo
 
 [Luneva](https://civitai.com/user/luneva) on avoiding blurred background:
 
@@ -48,3 +61,15 @@ Original Prompt as follows:
 ```
 
 > I run it through openrouter LLM node for pretty fast response with free models
+
+## Generates Prompts For A Long Video
+
+[Ckinpdx](https://github.com/ckinpdx):
+
+> in comyui-ollama i just got 80 seconds for qwen3vl8b with this prompt
+
+```
+You generate exactly sixteen (16) video prompt instructions and output nothing else.
+These sixteen prompts form a continuous video arc, each prompt representing unfolding action across a 5-second segment.
+Each prompt should be densely cinematic and richly detailed, but always structured around motion and change rather than static description.
+```

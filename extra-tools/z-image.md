@@ -4,7 +4,7 @@
 
 - [Upscalers](../upscalers-detailers-image.md#for-zit)
 - [LLM Nodes](llm-nodes.md)
-- [Prompts](z-image-prompts.md)
+- [LLM Prompts](llm-prompts.md)
 
 ## 2025.12.27
 
@@ -251,6 +251,7 @@ Composed by [Madevilbeats](https://www.instagram.com/madevilbeats/):
 - [DawnII_KritaZImageInpaint](../workflows/z-image/DawnII_KritaZImageInpaint.json) dy Dawn - Z-Image custom comfyui inpainting workflow
   requires `Fooocus_KSamaplerEfficient` from `comfyui-art-venture` node pack; "although you can use any sampler ... I like the sharpness adjustment on it";
   "for anyone familiar with Krita here is a custom comfyui workflow for inpainting"
+- [ZIT_Luneva_Infinite_Detail_Workflow](../workflows/z-image/Litch_ZIT_Luneva_Infinite_Detail_Workflow.json) Luneva's WF modified by Litch; "so you basically ran it through seedvr after?" "yeah; But I prefer to run seedvr after the first pass"
 
 ## Fun Infographics
 

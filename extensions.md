@@ -11,7 +11,24 @@ This works but does not preserve continuity of motion - characters start moving 
 
 ## UltraVico
 
-Note: 2024.12.29 `sageattn_ultravico` implementation has been fixed to worth with resolutions other than 832x480
+### UltraVico 2024.12.29
+
+`sageattn_ultravico` implementation has been fixed to worth with resolutions other than 832x480
+
+> you can now also set it for specific steps with this;
+> first step most important of course
+
+![ultravico-config](screenshots/ultravico-config.webp)
+
+> intended for t2v; harder to use with I2V;
+> it decays the part of the sequence that has the image conditioning, so you lose that...
+> unless you use higher alpha and don't allow as much decay, but then it can't really
+> get away from the start image, creating same initial issue of long I2V: it just loops;
+> it doesn't loop as badly, but still does ... the old man never jumps to the water until alpha is 0.91 or so
+
+Only tested on high noise.
+
+### UltraVico Earlier
 
 `UltraVico` is not an extension method in itself.
 Instead this is a method of "convincing" Wan models to generate videos longer that 81 frames without looping.

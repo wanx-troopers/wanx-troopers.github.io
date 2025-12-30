@@ -1,5 +1,26 @@
 ﻿# SVI 2.0 Pro
 
+## 2025.12.29
+
+> prompt following really suffers with SVI; using cfg or different Lora strengths may help;
+> I think you can also reduce the strength of the anchor latent [in `WanVideo Encode` or possibly `LatentMultiply` node from Comfy native]
+
+![LatentMultiply](screenshots/LatentMultiply.webp)
+
+> the anchor image and the motion continuity fighting the prompt, pretty much the biggest limitation [probably]
+
+> [StoryMem](storymem-holocine.md#storymem) might be more interesting for that;
+> It doesn't have the prompt issue at least, continuity isn't as good tho
+
+Artist:
+
+> overplap =  10 motion_latent_count = 2 ?
+
+[Drozbay](hidden-knowledge.md#drozbay)
+
+> Yeah, just checked... the continuation image embedding is:
+> [anchor_latent, motion_latents, zero_padding]
+
 ## 2025.12.27
 
 SVI 2.0 Pro released

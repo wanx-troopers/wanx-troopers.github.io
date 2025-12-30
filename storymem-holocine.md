@@ -1,5 +1,20 @@
 # StoryMem
 
+## 2025.12.29
+
+> Basic idea is pretty simple
+> - MI2V LoRA is for continuing from last frame
+> - MMI2V is same but from 5 last frames
+> And both can use the memory images ...
+> [for example] memory images could have the car from different angles
+
+Apparently original code for StoryMem was picking memory images automatically, based on some sort of a "score".
+
+> There was some custom node for it ... in the GitHub issue thread (?)
+
+It is possible a new custom node will be added to Wrapper later.
+Further it is entirely possible - and perhaps preferrable - to supply the memory images manually instead.
+
 ## 2025.12.26
 
 I2V LoRA
@@ -11,8 +26,6 @@ I2V LoRA
 > Their code stores more of course, but the model itself never uses more than 3 at once
 
 > They can be used like references sort of; the position is basically random
-
-==
 
 > the first conditioning frame is the strongest, then the others are referenced later in the generation;
 > and the end frame also stronger than mid frames......i think
@@ -56,6 +69,8 @@ Note the stories in [stroy](https://github.com/Kevin-thu/StoryMem/tree/main/stor
 # Holocine
 
 ## 2025.12.07
+
+> only T2V
 
 Outstanding [PR](https://github.com/kijai/ComfyUI-WanVideoWrapper/pull/1615) to Kijai's WanVideo Wrapper to improve HoloCine support.
 

@@ -3,6 +3,22 @@
 * [GH:PozzettiAndrea/ComfyUI-Sharp](https://github.com/PozzettiAndrea/ComfyUI-Sharp) quick Gaussian splot from image by Apple
 * [kijai/ComfyUI-MoGe](https://github.com/kijai/ComfyUI-MoGe), [GH:microsoft/MoGe](https://github.com/microsoft/MoGe)
 
+# Wan Alpha
+
+Kijai has adapted Wan Alpha "DoRA": [HF:Kijai/WanVideo_comfy:LoRAs/WanAlpha](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs/WanAlpha)
+
+Decoder needeed for WanAlpha: `decoder.bin` in the following locations (files have different hashes but same size..)
+- [HF:htdong/Wan-Alpha](https://huggingface.co/htdong/Wan-Alpha/tree/main) version 1.0
+- [HF:htdong/Wan-Alpha-v2.0](https://huggingface.co/htdong/Wan-Alpha-v2.0/tree/main)
+
+> I did not know they originally had 1 file but split it for comfy to 2;
+> ah it's just the fgr (foreground?) and pha (alpha?) split into two files
+
+Test workflow:
+
+![wan-alpha](workflows/kj-wan-alpha.png)
+[wan-alpha](workflows/kj-wan-alpha.png)
+
 # Loops
 
 > so if anyone want to use the loop for nodes, do not disable comfyui cache like i do, wasted 30mn figuring those nodes need the cache

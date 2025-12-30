@@ -127,6 +127,9 @@ Demoted due to developers' comments
 | --- | --- | --- | --- | --- |
 | [HF:Kijai/WanVideo_comfy:LoRAs/rCM](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/LoRAs/rCM/Wan22-I2V-A14B-HIGH-rCM6_0_lora_rank_64_bf16.safetensors) | Wan22-I2V-A14B-HIGH-rCM6_0_lora_rank_64_bf16 | 2.2 I2V High/Low | 2025.12.09 | From NVidia |
 
+Note: errors about `img_emb` keys in the console are expected if using lghtx2v 2.1 LoRA-s.
+
+> Can be ignored, just happens because 2.2 doesn't have those layers.
 
 ## 2.1
 

@@ -1,5 +1,11 @@
 ﻿# Hidden Knowledge
 
+## 2025.12.29
+
+Re Wan 2.1 lightx2v LoRAs: "720p T2V isn't different model actually; their releases have been highly confusing"
+
+EulerFlowMatch scheduler for ZIT
+
 ## 2025.12.28
 
 > most blackwell should probably be clock limited or undervolted as a baseline [advise on using RTX5090 etc]
