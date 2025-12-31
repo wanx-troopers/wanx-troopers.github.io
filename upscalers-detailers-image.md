@@ -1,4 +1,4 @@
-# Image Upscalers and Detailers
+﻿# Image Upscalers and Detailers
 
 This page is a work in progress
 
@@ -26,9 +26,15 @@ Interestingly includes a node `Ultimate SD Upscale (No Upscale)` which is used t
 
 [GH:numz/ComfyUI-SeedVR2_VideoUpscaler](https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler) useful for both images and videos
 
+## ERSGAN
+
+> for upscaling, those models are like the ultimate adversarial models, they literally only have adversarial training
+
 ## Chatter
 
 > In my tests, z image doesn't work well for second pass. Instead, I'm using wan 2.2; you can also use flux
+
+> [general talk about training] you can do consistency model training for most of the steps then do adversarial at the end, IDK why that isn't more popular its what the Flux devs recommended
 
 ## For ZIT
 

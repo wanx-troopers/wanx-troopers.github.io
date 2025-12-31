@@ -1,8 +1,8 @@
-# Wan Motion Tricks
+﻿# Wan Motion Tricks
 
 ## Scale Rope
 
-`Scale Rope` in Wrapper provides access to several parameters of "ROPE function".
+`Scale Rope` ComfyUI native node provides access to several parameters of "ROPE function".
 Tweaking these will change "the motion" in the generated video. 
 
 ![scale-rope.webp](screenshots/kj-scale-rope.webp)
@@ -83,13 +83,13 @@ Here are some quotes about it: "It's pre-scaling the input latents"; "it tries t
 Apparently the node subtracts the initial image from initial noise on all frames.
 While this does change the end result of generation the change can be both positive and negative.
 
-## Painter FLF2V
+### Painter FLF2V
 
 Same GitHub account, now an FLF node: [link](https://github.com/princepainter/Comfyui-PainterFLF2V)
 
-## PainterLongVideo
+### PainterLongVideo
 
-[princepainter/ComfyUI-PainterLongVideo](https://github.com/princepainter/ComfyUI-PainterLongVideo) from that same authrow is being played with.
+[GH:princepainter/ComfyUI-PainterLongVideo](https://github.com/princepainter/ComfyUI-PainterLongVideo) from that same authrow is being played with.
 Expert conclusion however is that the node is either simply an automation I2V extension via last frame
 or possibly also [Painter I2V](#painter-i2v) on top of it.
 
@@ -97,3 +97,7 @@ or possibly also [Painter I2V](#painter-i2v) on top of it.
 > only one part that attempts to use multiple frames from the previous video, and it feeds that into
 > a conditioning parameter called "reference_motion", which is ... only ever used by the Wan S2V model;
 > other than that it appears to be just standard last frame to first frame continuation with the PainterI2V motion amplitude added in
+
+### PainterI2Vadvanced
+
+[GH:princepainter/ComfyUI-PainterI2Vadvanced](https://github.com/princepainter/ComfyUI-PainterI2Vadvanced) is making bold claims about color correction, but this node prepares inputs for sampling so it cannot possibly be fixing outputs

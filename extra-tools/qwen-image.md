@@ -27,7 +27,7 @@
 
 ## 2025.12.26
 
-Face/Head Swap by Alisson Pereira: [civitai.com/models/2027766](https://civitai.com/models/2027766),
+Face/Head Swap by [Alisson Pereira](https://civitai.com/user/NRDX): [civitai.com/models/2027766](https://civitai.com/models/2027766),
 [patreon.com/posts/bfs-lora-qwen-140789769](https://www.patreon.com/posts/bfs-lora-qwen-140789769),
 [youtube.com/watch?v=3CoK4pDl-TE](https://www.youtube.com/watch?v=3CoK4pDl-TE).
 
