@@ -55,6 +55,9 @@ These parameters are not exposed by the main implementation in Wrapper. Just doc
 
 ### 2025.12.04
 
+Update: the information on `augment_empty_frames` being an exact replica of `Painter I2V` is under review.
+It is possible bellow information is not correct.
+
 `augment_empty_frames` parameter added to `WanVideo ImageToVideo Encode` node in [Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
 implementing the experimental latent noise manipulation technique pioneered by `Painter I2V` node.
 Where applicable this is the preferred replacement for `Painter I2V`
