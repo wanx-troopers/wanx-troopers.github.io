@@ -21,6 +21,20 @@ HuMo references are appended to the end of `WanVideo ImageToVideo Encode` embeds
 
 ## Drozbay Continuations
 
+### Drozbay HuMo SVI 2.0 Pro Extensions
+
+New WF from Drozbay utilizing both [SVI 2.0 Pro](svi.md#svi-20-pro), high noise Wan 2.2 I2V and low-noise HuMo has been shared embedded into the following image
+
+![droz_WanHuMo_SVI2Pro_v3](workflows/droz_WanHuMo_SVI2Pro_v3.png)
+[droz_WanHuMo_SVI2Pro_v3](workflows/droz_WanHuMo_SVI2Pro_v3.png)
+
+SageAttention is known to degrade the accuracy of lipsync.
+
+> It's not terrible with sageattention, with older versions it was much worse.
+> The audio can't really "drift", but the segments after the first one are probably
+> more likely to have spurious mouth movements. Changing the step counts on the HN
+> sampler can help so it doesn't bias the mouth movements too much
+
 ### Drozbay Continuations 2025.12.25
 
 New experimental WF from Drozbay giving Humo morphs:

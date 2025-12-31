@@ -1,5 +1,10 @@
 ﻿# StoryMem
 
+This is a LoRA very similar to Holocine in intent.
+
+`tttADs` AI artist who achived remarkably good results with StoryMem, has kindly shared the workflow:
+[tttADs-storymem_wf.json](workflows/tttADs-storymem_wf.json)
+
 ## 2025.12.29
 
 > Basic idea is pretty simple
@@ -34,7 +39,6 @@ I2V LoRA
 ## 2025.12.25
 
 [StoryMem](https://kevin-thu.github.io/StoryMem/) released.
-This is a LoRA very similar to Holocine in intent.
 
 > cross_attn, self_attn and ffn layers only... don't see any new layers, so could just work?
 > I2V too

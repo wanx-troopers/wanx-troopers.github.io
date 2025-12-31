@@ -1,5 +1,9 @@
 ﻿# SVI 2.0 Pro
 
+## 2025.12.30
+
+[Color Mathcing](extensions.md#color-matching) has been successfully applied to mask whatever little inconsistency was left behind by two extensions using `SVI 2.0 Pro`.
+
 ## 2025.12.29
 
 > prompt following really suffers with SVI; using cfg or different Lora strengths may help;

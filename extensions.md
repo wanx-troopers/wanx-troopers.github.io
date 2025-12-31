@@ -9,43 +9,6 @@ We can take an existing video and generate an extension to it.
 The simplest form of doing this is to run I2V generation supplying last frame from previous generation as `start_frame`.
 This works but does not preserve continuity of motion - characters start moving at a different speed, in a different direction, etc.
 
-## UltraVico
-
-### UltraVico 2024.12.29
-
-`sageattn_ultravico` implementation has been fixed to worth with resolutions other than 832x480
-
-> you can now also set it for specific steps with this;
-> first step most important of course
-
-![ultravico-config](screenshots/ultravico-config.webp)
-
-> intended for t2v; harder to use with I2V;
-> it decays the part of the sequence that has the image conditioning, so you lose that...
-> unless you use higher alpha and don't allow as much decay, but then it can't really
-> get away from the start image, creating same initial issue of long I2V: it just loops;
-> it doesn't loop as badly, but still does ... the old man never jumps to the water until alpha is 0.91 or so
-
-Only tested on high noise.
-
-### UltraVico Earlier
-
-`UltraVico` is not an extension method in itself.
-Instead this is a method of "convincing" Wan models to generate videos longer that 81 frames without looping.
-
-Implemented on 2025.12.04 `sageattn_ultravico` is an `attention_mode` which can be chosen on `WanVideoModelLoader` in [Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper).
-
-It actually implementes one of the newer methods formerly known as [RifleX](https://github.com/thu-ml/DiT-Extrapolation).
-
-Not so bad results have been demostrated with [Kandinsky-5](k5.md).
-
-Alternative implemenation of `UltraVico` has been tested with Wan 2.2 I2V achieving a good result, but it's not available for use at the moment.
-For record the following parameters (not exposed by the current Comfy implementation) have been reported to work well:
-
-> 0.95 alpha, 0.3 beta, 4 gamma
-
-> 0.95 alpha for ultravico doesn't really allow the subject to leave the frame :/
-
 ## VACE Extensions
 
 A method which has been practiced for a while is to supply several last frame from previous generation, say 16 as initial frames
@@ -97,9 +60,31 @@ It takes up 4x as much bytes and subsequent frames use it as a point of referenc
 If we simply chop off the last 4 latents from the previous generation (and this is 16 frames)
 they will not constitute a correctly encoded sequence of frames in WAN latent encoding.
 
+[SVI 2.0 Pro](svi.md#svi-20-pro) is a promising step in combating degradation in I2V generations.
+While it does not cure it completely there definitely appears to be less of it.
+
+[StoryMem](storymem-holocine.md#storymem) is another similar attempt.
+
 ## Clip Vision
 
 There is an easy way to determine if a model is using clip vision embeds.
 Look at the model on Hugging face and see if it contains a layer called `img_emb.proj`.
 For models which do accept clip embeds this may be a viable way to counter both kinds of degradation.
 Wan 2.2 models unfortunately don't seem to be clip vision aware at all, expect Wan Animate which is 2.2 only in name.
+
+# Color Matching
+
+One interesting approach which can in theory be used in combination with any extension method is color matching.
+It has been tested in particular in combination with [SVI 2.0 Pro](svi.md#svi-20-pro) and was able to successfully hide the fact that contrast/lightness had still a little driften after two extensions.
+
+As `bnp2704` explained
+
+> In its simplest form, a video is just a collection of many images
+
+...so the innocent looking `Color Match` node from [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
+which colormatches image to image is actually sapplicable to videos:
+
+![color-match](screenshots/nodes/color-match.webp)
+
+Just choose one reference image and `Color Match` every frame of the generated video to it.
+

@@ -6,6 +6,19 @@
 - [LLM Nodes](llm-nodes.md)
 - [LLM Prompts](llm-prompts.md)
 
+## 2025.12.30
+
+A new distilled version of Z-Image called TwinFlow was released, capable of producing results in as few as 2-4 steps instead of the standard 8.
+[HF:azazeal2/TwinFlow-Z-Image-Turbo-repacked](https://huggingface.co/azazeal2/TwinFlow-Z-Image-Turbo-repacked/tree/main)
+
+[Scruffy](https://github.com/scruffynerf)
+
+> res4lyf bongtangent is the scheduler to use
+
+Lemuet:
+
+> IMO it's not really worth it other than as an experiment, supposedly can do very low step (2-4) but quality to me just looks like doing low steps with stock z-image but with a baked-in high cfg look, so it looks softer and higher contrast but result is fuzzy for high frequency details. Other than getting that cfg look at low steps (which stock z-image can't do), I don't see an advantage to using that model over stock one.
+
 ## 2025.12.27
 
 Lemuet:

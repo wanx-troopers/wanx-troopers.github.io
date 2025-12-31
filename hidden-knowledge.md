@@ -1,5 +1,13 @@
 ﻿# Hidden Knowledge
 
+## 2025.12.30
+
+`cpu_cache` is potentiall an important parameter on `VAE` with influence on results?...
+
+`SkipLayerGuidance` node for advanced uses
+
+![SkipLayerGuidanceDiT](screenshots/nodes/SkipLayerGuidanceDiT.webp)
+
 ## 2025.12.29
 
 Re Wan 2.1 lightx2v LoRAs: "720p T2V isn't different model actually; their releases have been highly confusing"
@@ -251,7 +259,7 @@ List of Drozbay's contributions discussed on this website:
 - [HuMo - Drozbay](humo.md#drozbay-continuations): HuMo continuation workflow
 - [SVI-shot](svi.md#svi-shot): `WanEx` contains `WanEx I2VCustomEmbeds` which works well with SVI-shot
 - [Drozbay's Impact Pack SEGS Detailer For Wan Video And VACE](upscalers-detailers-video.md#drozbays-impact-pack-segs-detailer-for-wan-video-and-vace)
-- [Painter I2V Modular Replacment](wan-i2v-advanced.md#painteri2v) `WanEx` contains `WanEx_PainterMotionAmplitude` node which replicates action of `Painter I2V` node in a modular manner
+- [Painter I2V Modular Replacement](wan-motion.md#painteri2v) `WanEx` contains `WanEx_PainterMotionAmplitude` node which replicates action of `Painter I2V` node in a modular manner
 - [Wan I2V T2V / VACE Tricks](wan-t2v-advanced.md) hoists avdvanced workflows created by Drozbay
 - [Wan 2.1 to Wan 2.2 LOW LoRA](loras/part-01.md#Special Use)
 

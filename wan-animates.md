@@ -2,6 +2,22 @@
 
 Wan Animate and MoCha serve similar goals.
 
+## Universal Pose Scaling
+
+A common issue with this series of models is that the proportions of the character
+in the video where the pose is being extracted from differ from the proportions
+of the character being animated.
+
+Kijai has added a universal node that can be used with a number of models on this page.
+Because the node was developed in the context of [One-To-All](wan-animates.md#one-to-all)
+it has been named `Pose Detection OneToAll Animation`.
+
+> it doesn't seem to do that mad limb stretching at least
+
+![kj-one-to-all-pose-alignment](screenshots/kj-one-to-all-pose-alignment.webp)
+[kj-one-to-all-pose-alignment](screenshots/kj-one-to-all-pose-alignment.webp)
+
+
 ## SCAIL
 
 Official git [repo](https://github.com/zai-org/SCAIL) - pls. put starts to make it easier for the team to obtain more resources for future training!
@@ -111,7 +127,7 @@ That is the part that is not yet implemented in Comfy. `.pt` file for the model 
 
 > NLF model license ... means you can't use it ... in commercial capacity ... research only license
 
-## One To All Animation
+## One To All
 
 ### 2025.12.09
 

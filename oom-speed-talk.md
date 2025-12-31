@@ -13,6 +13,10 @@ C:\Users\<username>\.triton
 C:\Users\<username>\AppData\Local\Temp\torchinductor_<username>
 ```
 
+Can try `VAE Decode Loop KJ` node if running OOM while decoding
+
+![VAE-Decode-Loop-KJ](screenshots/nodes/VAE-Decode-Loop-KJ.png)
+
 ## 2025.12.17
 
 > with out cache ... 92 sec; with ... 70 sec

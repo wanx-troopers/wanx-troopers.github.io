@@ -1,19 +1,22 @@
 # News
 
-2025.12.29 [sageattn_ultravico](extensions.md#ultravico) `attention_mode` in [Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) attempting to allow longer video generation without looping
+
+2025.12.27 [SVI 2.0 Pro](svi.md#svi-20-pro) has proven to be able to crate nice I2V extensions; [Color Matching](extensions.md#color-matching) is a useful addition;
+also note Drozbay's HuMo/SVI 2.0 Pro extensions [workflow](humo.md#drozbay-humo-svi-20-pro-extensions)
+
+2025.12.30 tttADs has shared a workflow for [StoryMem](storymem-holocine.md#storymem), a set of LoRAs which similar to [SVI 2.0 Pro](svi.md#svi-20-pro)
+aim to solve character/color/contrast consistency and continuity issues between a video and its extensions.
+
+2025.12.29 [sageattn_ultravico](wan-motion.md#ultravico) `attention_mode` in [Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) attempting to allow longer video generation without looping
 has received a major bug fix + a new node to set start/end step to apply
 
 2025.12.29 [Wan Alpha](tools-list.md#wan-alpha): Kijai adapted some of the model weights to ComfyUI and provided a sample workflow
 
 2025.12.28 Flux.2 Dev was released under non-commerical license 2025.11.25; [Controlnet-union](https://huggingface.co/alibaba-pai/FLUX.2-dev-Fun-Controlnet-Union) added 2025.12.03; Flux.2 Dev Turbo released 2025.12.28
 
-2025.12.27 [SVI 2.0 Pro](svi.md#svi-20-pro) support is implemented in the Wrapper
-
 2025.12.27 [GH:caiyuanhao1998/Open-OmniVCus](https://github.com/caiyuanhao1998/Open-OmniVCus) VACE-like facility is being tested, T2V, not impressive
 
 2025.12.23 Long-awaited Qwen Image Edit 2511 [released](extra-tools/qwen-image.md#20251223)
-
-2025.12.23 [StoryMem](storymem-holocine.md#storymem) has been spotted in the wild: this is a set of two LoRAs reminiscent of both Holocine with consistency across scene cuts and SVI-film with 5-frame continuations
 
 2025.12.22 [Standin](control.md#standin) Wan 2.2 weights have been released; reportedly work without any code changes compared to 2.1 weights
 
@@ -35,7 +38,7 @@ has now received a `Union 2.0` ControlNet upgrade adding inpainting ability
 
 2025.12.06 [Kandinsky-5](k5.md) Pro video AI model (5sec I2V, 5sec T2V, 10sec T2V) released 2025.11.14 and now supported in ComfyUI native have received official distillations
 
-2025.12.09 [One-to-All-Animation](wan-animates.md#one-to-all-animation) similar to WanAnimate support added to Kijai's Wrapper, fp16 and fp8 weights uploaded to HF
+2025.12.09 [One-to-All](wan-animates.md#one-to-all) similar to WanAnimate support added to Kijai's Wrapper, fp16 and fp8 weights uploaded to HF
 
 2025.12.06 A [number](extra-tools/other-image-models.md) of image generation models have been released in December 2025 which failed to gain a lot of attention: 
 LongCat (now all of image/image edit/video), Ovis 7B
@@ -59,7 +62,7 @@ LongCat (now all of image/image edit/video), Ovis 7B
 
 2025.11.16 Kijai implemented [TimeToMove](wan-i2v-advanced.md#timetomove) mockup in wrapper
 
-2025.11.16 Community is exploring [Painter I2V](wan-i2v-advanced.md#painter-i2v) and [PainterLongVideo](wan-i2v-advanced.md#painterlongvideo) nodes for more dynamic and longer generations with Wan 2.2 I2V
+2025.11.16 Community is exploring [Painter I2V](wan-motion.md#painter-i2v) and [PainterLongVideo](wan-motion.md#painterlongvideo) nodes for more dynamic and longer generations with Wan 2.2 I2V
 
 2025.11.15 [drozbay](hidden-knowledge.md#drozbay) has created [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments) repository dubbed `WanEx`; it contains his nodes
 for I2V and continuations with [HuMo](humo.md), using [SVI-shot](svi.md#svi-shot) and for building a native [BindWeave](bindweave.md) WF
