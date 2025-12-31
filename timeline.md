@@ -1,5 +1,6 @@
 # News
 
+2025.12.31 Qwen Image 2512 [released][released](extra-tools/qwen-image.md#20251231) soon after Long-awaited Qwen Image Edit 2511 [released](extra-tools/qwen-image.md#20251223) 20251223
 
 2025.12.27 [SVI 2.0 Pro](svi.md#svi-20-pro) has proven to be able to crate nice I2V extensions; [Color Matching](extensions.md#color-matching) is a useful addition;
 also note Drozbay's HuMo/SVI 2.0 Pro extensions [workflow](humo.md#drozbay-humo-svi-20-pro-extensions)
@@ -15,8 +16,6 @@ has received a major bug fix + a new node to set start/end step to apply
 2025.12.28 Flux.2 Dev was released under non-commerical license 2025.11.25; [Controlnet-union](https://huggingface.co/alibaba-pai/FLUX.2-dev-Fun-Controlnet-Union) added 2025.12.03; Flux.2 Dev Turbo released 2025.12.28
 
 2025.12.27 [GH:caiyuanhao1998/Open-OmniVCus](https://github.com/caiyuanhao1998/Open-OmniVCus) VACE-like facility is being tested, T2V, not impressive
-
-2025.12.23 Long-awaited Qwen Image Edit 2511 [released](extra-tools/qwen-image.md#20251223)
 
 2025.12.22 [Standin](control.md#standin) Wan 2.2 weights have been released; reportedly work without any code changes compared to 2.1 weights
 

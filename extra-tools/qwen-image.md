@@ -6,6 +6,10 @@
 | :--- | :--- |
 | [HF:lilylilith/AnyPose](https://huggingface.co/lilylilith/AnyPose) | Person in image 1 do the exactly same pose as image 2 |
 
+## 2025.12.31
+
+Qwen Image Edit 2512 released
+
 ## 2025.12.28
 
 > openpose with Qwen-Image-Edit-2509 ... but also the anypose lora
