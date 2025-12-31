@@ -7,13 +7,18 @@
   "it's VACE module ... needs some new code probably ... loads without issues and technically works ... just.. doesn't do anything"
 * [GH:myyzzzoooo/InsertAnywhere](https://github.com/myyzzzoooo/InsertAnywhere) model for adding objects into the video
 
-## Use With Caution
+## Caution Against 1038lab
 
-A fix has been performed in `ComfyRMBG` repository once this issue was raised: [151](https://github.com/1038lab/ComfyUI-RMBG/issues/151).
-Please `git pull` the code.
+A fix has done in `ComfyRMBG` repository for issue raised: [151](https://github.com/1038lab/ComfyUI-RMBG/issues/151) has failed to resolve the issue.
 
-The code was patching core functions in `pytorch`, disabling security on loading `.safetensors` and interfering with operation of other nodes inside ComfyUI installation in other ways.
-Caution remains in place for all `1038lab` owned repositories.
+> Loading model checkpoints with weights_only=False in PyTorch/ComfyUI can be dangerous.
+> It disables a key safety feature that prevents the execution of potentially malicious
+> code embedded within model files (especially .pt or .bin files using pickle).
+> This creates a Remote Code Execution (RCE) vulnerability, affecting all nodes in your workflow
+> if a compromised model is loaded. .safetensors files are generally considered safe.
+
+The code is patching core functions in `pytorch`, disabling security on loading `.safetensors` and interfering with operation of other nodes inside ComfyUI installation in other ways.
+Caution is raised for all `1038lab` repositories.
 
 * [1038lab/ComfyUI-RMBG](https://github.com/1038lab/ComfyUI-RMBG) remove background
 * [1038lab/ComfyUI-QwenVL](https://github.com/1038lab/ComfyUI-QwenVL) node to use qwen vl 3 for generating image and video prompts; [tutorial](https://www.youtube.com/watch?v=3j9c_-mRKfg)
