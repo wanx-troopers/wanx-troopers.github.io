@@ -2,26 +2,41 @@
 
 ## Scale Rope
 
-`Scale Rope` ComfyUI native node provides access to several parameters of "ROPE function".
-Tweaking these will change "the motion" in the generated video. 
+`Scale Rope` is a ComfyUI native node which provides access to set several parameters of "RoPE function".
+It is a full exact equivalent of `WanMotionScale` community node treding on reddit end of 2025
 
-![scale-rope.webp](screenshots/kj-scale-rope.webp)
+![scale-rope.webp](screenshots/nodes/kj-scale-rope.webp)
 
-This is a preferred alternative to `WanMotionScale` community mode trending recently (Dec 2025).
-Scale parameters are useful to experiment with.
+`WanVideo RoPE Function` is a Wrapper equivalent - though please note that values are set a bit differently
 
-> [shift parameters] not that useful ... just messe up the relation of frames to rope positional ids
+![WanVideo-RoPE-Function](screenshots/nodes/WanVideo-RoPE-Function.webp)
+
+Scale values are the parameters more useful to experiment with:
+
+> it's basically like telling the model these 81 frames are actually 40 frames and so on,
+> in the wrapper it's done bit differently and the logic is inverse to the comfy core way
+> of doing it (which the "WanMotionScale" node is identical to)
+
+Shift parameters are
+
+> not that useful ... just mess up the relation of frames to rope positional ids
 
 > for spatial dimensions it's the only way to break the repetition when going past certain point, which is the main reason the node exists;
 > riflex also did something similar for temporal btw
 
 See the next section [UltraVico](#ultravico) for an alternative.
+A word of warning for both sections:
+
+> scaling the rope will definitely lead to unwanted behaviour and often ruined motion as well;
+> most notable thing that played with temporal rope scaling is riflex...
+> and it never worked great with Wan
 
 ## UltraVico
 
 `UltraVico` is the modern implementation of [RifleX](https://github.com/thu-ml/DiT-Extrapolation)
 method for generating longer videos which was discussed on Reddit around summer of 2025.
 It is a way to "convince" Wan 14B models to generate videos longer that 81 frames without looping.
+Pls. heed the warning at the end of the previous section ^.
 
 `sageattn_ultravico` is an `attention_mode` which can be chosen on `WanVideoModelLoader` in [Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper).
 It does seem that activating it may require having a working installation of SageAttention, probably one of 2.x ones.
@@ -55,22 +70,18 @@ These parameters are not exposed by the main implementation in Wrapper. Just doc
 
 ### 2025.12.04
 
-Update: the information on `augment_empty_frames` being an exact replica of `Painter I2V` is under review.
-It is possible bellow information is not correct.
-
 `augment_empty_frames` parameter added to `WanVideo ImageToVideo Encode` node in [Wrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
-implementing the experimental latent noise manipulation technique pioneered by `Painter I2V` node.
-Where applicable this is the preferred replacement for `Painter I2V`
+provides a full and equivalent replacement for `Painter I2V` implemented natively inside the Wrapper:
 
 ![WanVideo-ImageToVideo-Encode](screenshots/nodes/WanVideo-ImageToVideo-Encode.webp)
 
-[GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments) now contains
-`WanEx_PainterMotionAmplitude` which allows to do `Painter I2V`-style
+A replacement for native and ClowShark worflows also exists in
+[GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments) repository.
+`WanEx_PainterMotionAmplitude` allows to do `Painter I2V`-style
 trick in regular workflows, e.g. it makes `Painter I2V` approach modular.
-The node generates positive/negative conditioning that can be connected to sampler nodes using I2V family
-of Wan video generation models. It appears like this should work with native `KSampler` and possibly with `ClowShark` one, not with Wrapper.
 
-It seems `noise_aug_strength` setting in `WanVideo Encode` might be there to achieve the same effect.
+The node generates positive/negative conditioning that can be connected to sampler nodes using I2V family
+of Wan video generation models. It should work with both native `KSampler` and the `ClowShark` one, but not with the Wrapper.
 
 ### Painter I2V Summary
 

@@ -8,6 +8,8 @@
 
 ![SkipLayerGuidanceDiT](screenshots/nodes/SkipLayerGuidanceDiT.webp)
 
+`WanVideo Encode` node has got `noise_aug_strength` setting which scales the latent values.
+
 ## 2025.12.29
 
 Re Wan 2.1 lightx2v LoRAs: "720p T2V isn't different model actually; their releases have been highly confusing"

@@ -4,6 +4,8 @@
 
 [Color Mathcing](extensions.md#color-matching) has been successfully applied to mask whatever little inconsistency was left behind by two extensions using `SVI 2.0 Pro`.
 
+`empty_frames_pad_image` parameter has been added to `WanVideo ImageToVideo Encode` specifically to help build workflows with SVI LoRA-s.
+
 ## 2025.12.29
 
 > prompt following really suffers with SVI; using cfg or different Lora strengths may help;
