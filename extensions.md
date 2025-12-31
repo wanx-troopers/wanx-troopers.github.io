@@ -1,4 +1,4 @@
-# Extensions
+﻿# Extensions
 
 Wan 2.1 and 2.2 models are typically limited to around 5 seconds of generation.
 Some models have inherent capability to go beyond that but they need an external driving signal: [WanAnimate](wan-animates.md#wan-animate), [InfiniteTalk](infinite-talk.md).

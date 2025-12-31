@@ -1,4 +1,4 @@
-# LLM Prompts
+ï»¿# LLM Prompts
 
 ## Image To Text Z-Image-Turbo
 
@@ -35,7 +35,7 @@ Enhance the lighting and sharpness of this image.
 Improve the color vibrancy and contrast.
 Upscale this jpg to 4K resolution while preserving details.
 Reduce noise and grain in the photo.
-Re-render this image in the style of Van Gogh’s Starry Night.
+Re-render this image in the style of Van Gogh's Starry Night.
 Convert to a watercolor painting.
 ```
 
