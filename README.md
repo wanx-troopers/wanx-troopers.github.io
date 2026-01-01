@@ -65,6 +65,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 
 ## Misc
 
+* [Must Have Nodes](must-haves.md)
 * [Recommended Software Versions](versions.md)
 * [OOM and Speed Talk](oom-speed-talk.md)
 * [Tricks](tricks.md)

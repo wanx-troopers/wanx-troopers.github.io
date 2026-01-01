@@ -15,7 +15,8 @@ Note: 2512 is not an "edit" just "qwen image" but due to some sort of confusion 
 
 Qwen Image Edit 2512 released. bf16: [HF:Comfy-Org/Qwen-Image_ComfyUI:split_files/diffusion_models](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/tree/main/split_files/diffusion_models).
 
-2512 [WF](../workflows/qwen/lucifer-qwen2512.json) from Lucifer.
+- 2512 [WF](../workflows/qwen/lucifer-qwen2512.json) from Lucifer.
+- 2512 [WF](../workflows/qwen/asd-2512.json) from [ASD](https://github.com/gajjar4)
 
 ## 2025.12.28
 

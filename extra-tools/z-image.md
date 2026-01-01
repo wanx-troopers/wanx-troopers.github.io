@@ -6,6 +6,10 @@
 - [LLM Nodes](llm-nodes.md)
 - [LLM Prompts](llm-prompts.md)
 
+## 2025.12.31
+
+For slightly higher contrast and a bit more color midpoint_2s
+
 ## 2025.12.30
 
 A new distilled version of Z-Image called TwinFlow was released, capable of producing results in as few as 2-4 steps instead of the standard 8.
