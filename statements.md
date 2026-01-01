@@ -1,12 +1,24 @@
 ﻿# Statements
 
+## 2025.12.31
+
+Re generating videos longer than 81 frames
+
+> the freelong stuff also massively increases your generation time ...
+> wouldn't it be same/similar to do 33 frame context windows?
+> ... actual discovery ... is that Wan is more consistent with low frame count?
+
+> the freelong stuff is actually about applying frequency filters to the embeddings,
+> and windowing is just another way of doing that ...
+> you're basically sampling a bunch of windows with filters applied to the rope embedding [probably]
+
+
 ## 2025.12.30
 
 > Don't discount the original 2.1 Vace model though. I have found that for some tasks, especially for reference
 > image usage and for prompt following for inpainting the original 2.1 Vace model/module can be better.
 > Even when used with the 2.2 Wan models.
 > The Fun Vace 2.2 modules seem much better at following controls like depth and pose, but struggle with inpainting.
-
 
 ## 2025.12.19
 

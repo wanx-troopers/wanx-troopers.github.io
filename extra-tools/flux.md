@@ -3,6 +3,7 @@
 - [HF:silveroxides/FLUX.2-dev-fp8_scaled/tree/main](https://huggingface.co/silveroxides/FLUX.2-dev-fp8_scaled/tree/main) model weights.
   Now includes weights for "turbo" flavor - the distilled version.
 - [HF:fal/FLUX.2-dev-Turbo/tree/main/comfy](https://huggingface.co/fal/FLUX.2-dev-Turbo/tree/main/comfy) flux.2 dev turbo as a LoRA
+- [HF:Comfy-Org/flux2-dev:loras](https://huggingface.co/Comfy-Org/flux2-dev/tree/main/split_files/loras) flux.2 dev turbo LoRA repackaging that will surely work in Comfy
 
 Both base and distilled are distributed under a non-commerical license.
 

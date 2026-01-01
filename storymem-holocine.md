@@ -2,6 +2,14 @@
 
 This is a LoRA very similar to Holocine in intent.
 
+## 2025.12.31
+
+> not sure their [original authors?] storymem workflow is set up correctly
+> it's using the initial image as the ref image throughout, and passing the last 5 frames to the next sampler;
+> loses ID hard, but at least it's kind of the same bunny even after she leaves the shot
+
+> the official code processes each video before moving on to the next one and puts the best frames in a memory bank for continuity
+
 `tttADs` AI artist who achived remarkably good results with StoryMem, has kindly shared the workflow:
 [tttADs-storymem_wf.json](workflows/tttADs-storymem_wf.json)
 

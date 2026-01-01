@@ -60,7 +60,8 @@ Can also do images, has been used on z-image-turbo produced images.
 
 Experimental.
 
-[GH:spacepxl/ComfyUI-VAE-Utils](https://github.com/spacepxl/ComfyUI-VAE-Utils)
+- [GH:spacepxl/ComfyUI-VAE-Utils](https://github.com/spacepxl/ComfyUI-VAE-Utils)
+- [HF:spacepxl/Wan2.1-VAE-upscale2x/tree/main](https://huggingface.co/spacepxl/Wan2.1-VAE-upscale2x/tree/main)
 
 > 2x spatial upscale only, works on images and video
 

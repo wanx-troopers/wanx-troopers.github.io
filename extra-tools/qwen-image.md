@@ -1,14 +1,21 @@
 ﻿# Qwen
 
-## Qwen 2511 LoRAs
+## Qwen LoRAs
 
 | HF Space | LoRA |
 | :--- | :--- |
-| [HF:lilylilith/AnyPose](https://huggingface.co/lilylilith/AnyPose) | Person in image 1 do the exactly same pose as image 2 |
+| [HF:lilylilith/AnyPose](https://huggingface.co/lilylilith/AnyPose) | 2511 AnyPose - Person in image 1 do the exactly same pose as image 2 |
+| [HF:lightx2v/Qwen-Image-2512-Lightning](https://huggingface.co/lightx2v/Qwen-Image-2512-Lightning/tree/main) ? | Qwen-Image-Lightning v1.1 Lora |
+| - | Qwen-Image-Edit-2512 4-Steps Lora |
+| - | Wuli Turbo 4 Steps Lora |
+
+Note: 2512 is not an "edit" just "qwen image" but due to some sort of confusion we're seeing the incorrect "Edit-2512" designation sometimes.
 
 ## 2025.12.31
 
-Qwen Image Edit 2512 released
+Qwen Image Edit 2512 released. bf16: [HF:Comfy-Org/Qwen-Image_ComfyUI:split_files/diffusion_models](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/tree/main/split_files/diffusion_models).
+
+2512 [WF](../workflows/qwen/lucifer-qwen2512.json) from Lucifer.
 
 ## 2025.12.28
 

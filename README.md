@@ -52,7 +52,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 
 * Image Tools
   * [Z-Image-Turbo](extra-tools/z-image.md)
-  * [Qwen Image Edit](extra-tools/qwen-image.md)
+  * [Qwen Image/Qwen Image Edit](extra-tools/qwen-image.md)
   * [Flux 2](extra-tools/flux.md)
 * Other Tools
   * [Image Upscalers and Detailers](upscalers-detailers-image.md)

@@ -1,5 +1,13 @@
 ﻿# Hidden Knowledge
 
+## 2025.12.31
+
+Models with control like VACE can go over 81 frame limit
+
+> Basically with control you just lose video quality,
+> while motion quality is fine due to the control
+> When you go past what model is trained with
+
 ## 2025.12.30
 
 `cpu_cache` is potentiall an important parameter on `VAE` with influence on results?...
