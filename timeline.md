@@ -1,5 +1,7 @@
 # News
 
+2026.01.05 [LongVie](longvie.md) is being experimented with; "the control part is interesting, the continuation doesn't seem that great though; the control might be something we can use with other workflows too as it's a controlnet"
+
 2025.12.31 Qwen Image 2512 [released][released](extra-tools/qwen-image.md#20251231) soon after Long-awaited Qwen Image Edit 2511 [released](extra-tools/qwen-image.md#20251223) 20251223
 
 2025.12.27 [SVI 2.0 Pro](svi.md#svi-20-pro) has proven to be able to crate nice I2V extensions; [Color Matching](extensions.md#color-matching) is a useful addition;
@@ -18,8 +20,6 @@ has received a major bug fix + a new node to set start/end step to apply
 2025.12.27 [GH:caiyuanhao1998/Open-OmniVCus](https://github.com/caiyuanhao1998/Open-OmniVCus) VACE-like facility is being tested, T2V, not impressive
 
 2025.12.22 [Standin](control.md#standin) Wan 2.2 weights have been released; reportedly work without any code changes compared to 2.1 weights
-
-2025.12.21 [LongVie](https://vchitect.github.io/LongVie2-project/) is being experimented with; "the control part is interesting, the continuation doesn't seem that great though; the control might be something we can use with other workflows too as it's a controlnet"
 
 2025.12.20 Integration of [LongCat Avatar](talkies/longcat-avatar.md) into ComfyUI has started; this is a promising successor/alternative to InfiniteTalk/HuMo promising very long video generation without burning
 

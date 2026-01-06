@@ -1,5 +1,17 @@
 ﻿# Statements
 
+## 2025.01.03
+
+Mallardgazellegoosewildcat2:
+
+> What you could try as well is a form of dropout where
+> You alternate some steps with one model and some stops with the other model
+> With enough steps and a noisy SDE sampler that can work well
+
+> open models are very substantially weaker than gemini [on video description]
+> with finetuning on local video llm you can in fact beat gemini -
+> on a narrow task on a narrow subset of video types
+
 ## 2025.12.31
 
 Re generating videos longer than 81 frames

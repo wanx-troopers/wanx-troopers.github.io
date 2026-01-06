@@ -1,10 +1,21 @@
 ﻿# SVI 2.0 Pro
 
+## 2025.01.04
+
+See also: [Drozbay Humo SVI 2.0 Pro Extension Workflow](humo.md#drozbay-humo-svi-20-pro-extensions).
+
 ## 2025.12.30
 
 [Color Mathcing](extensions.md#color-matching) has been successfully applied to mask whatever little inconsistency was left behind by two extensions using `SVI 2.0 Pro`.
 
 `empty_frames_pad_image` parameter has been added to `WanVideo ImageToVideo Encode` specifically to help build workflows with SVI LoRA-s.
+
+Drozbay:
+
+> SVI by nature is going to be biased towards less motion because of the anchor. That's kinda the whole point, it is always sort of
+> trying to get back to the anchor frame, that's how it keeps consistency. To break away from it you have to prompt pretty aggressively.
+> SVI 2 Pro has been the most capable of breaking away from the anchor image so far but lazy prompting will still keep it stuck.
+
 
 ## 2025.12.29
 
@@ -43,6 +54,8 @@ SVI 2.0 Pro released
 - Looped version of the above NATIVE wf from `QualityControl`: [SVI-Pro-KJ-Example-looped](workflows/svi/qc-SVI-Pro-KJ-Example-looped.json)
 - Wrapper WF from DawnII: [Wan2_2_LongFLF_SVI2_Pro_DawnII](workflows/svi/dawn-Wan2_2_LongFLF_SVI2_Pro_DawnII.json)
 - Native WF from Verole super long: [video_wan2_2_14B_i2v_SVIPRO_bano](workflows/svi/verole-video_wan2_2_14B_i2v_SVIPRO_bano.json)
+- Extension WF from SLmonker: [SVIpro-extension](workflows/svi/SL-SVIpro-extension.json)
+- SVI + Uni3C WF from [DreamMaking](https://ko-fi.com/dreammaking): [SVI-Uni3c](workflows/svi/DM-SVI-Uni3c.json)
 - Article/details: [GH:vita-epfl/Stable-Video-Infinity:svi_wan22/docs/svi/svi_2.0_pro.md](https://github.com/vita-epfl/Stable-Video-Infinity/blob/svi_wan22/docs/svi/svi_2.0_pro.md)
 
 > SVI Pro does have hard time following simple prompts at least
@@ -79,6 +92,12 @@ If you do not connect `prev_samples` and supply a new `anchor_image` to the gene
 SVI 2.0 Pro becomes one more way to supply a reference image to the generation.
 
 # SVI 2.0
+
+## 2026.01.02
+
+> ... pad image input ... I2V node in the wrapper ...
+> for SVI 2.0 non-Pro you'd use that for the reference
+> and then just last 5 frames as start image for extension
 
 ## 2025.12.04
 

@@ -25,8 +25,10 @@ HuMo references are appended to the end of `WanVideo ImageToVideo Encode` embeds
 
 New WF from Drozbay utilizing both [SVI 2.0 Pro](svi.md#svi-20-pro), high noise Wan 2.2 I2V and low-noise HuMo has been shared embedded into the following image
 
-![droz_WanHuMo_SVI2Pro_v3](workflows/droz_WanHuMo_SVI2Pro_v3.png)
-[droz_WanHuMo_SVI2Pro_v3](workflows/droz_WanHuMo_SVI2Pro_v3.png)
+![droz_WanHuMo_SVI2Pro_v6](workflows/droz_WanHuMo_SVI2Pro_v6.png)
+[droz_WanHuMo_SVI2Pro_v6](workflows/droz_WanHuMo_SVI2Pro_v6.png)
+
+Earlier verision: [droz_WanHuMo_SVI2Pro_v3](workflows/droz_WanHuMo_SVI2Pro_v3.png)
 
 SageAttention is known to degrade the accuracy of lipsync.
 

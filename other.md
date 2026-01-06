@@ -26,6 +26,10 @@ Caution is raised for all `1038lab` repositories.
 
 ## Big List
 
+* Hunyuan Motion 1.0 - a model generating motion in FBX format via AI; FBX can further be roundtripped into moving skeletons, albeit with some difficulty; for now the best reference is [Benji's video](https://www.youtube.com/watch?v=3lKK0PXe99w)
+* MiniCPM-V (Advanced) to create description of an image
+* ComfyScript
+
 * [GH:NewBieAI-Lab/NewBie-image-Exp0.1](https://github.com/NewBieAI-Lab/NewBie-image-Exp0.1) NewBie image generator, seems good for anime; Lumina family, with Gemma3 +  Jina clip models and Flux VAE
 * [GH:martijnat/comfyui-previewlatent](https://github.com/martijnat/comfyui-previewlatent) quick latent preview w/o VAE
 * [worldcanvas](https://worldcanvas.github.io/) a new model in footsteps of ATI and to some degree VACE

@@ -1,5 +1,14 @@
 ﻿# Hidden Knowledge
 
+## 2025.01.03
+
+> did full support for mixed quants get finished in comfyui?
+> yeah but needs either a dict included in the model that defines precision of each layer, or the new quant keys comfy added;
+> The comfy mixed format includes info for each layer with settings such as what precision the activation uses and whether it can use fp8 matmuls etc
+
+Apparently the newer models Kijai converted to mixed precision have metadata making the suitable for both wrapper and native.
+However the older models converstions might be limited to wrapper only.
+
 ## 2025.12.31
 
 Models with control like VACE can go over 81 frame limit
