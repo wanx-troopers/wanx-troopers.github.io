@@ -1,6 +1,6 @@
 # News
 
-2026.01.06 [LTX-2](https://huggingface.co/Lightricks/LTX-2/tree/main) model weights have been dropped
+2026.01.06 [LTX-2](ltx.md) model weights have been dropped
 
 2026.01.05 [LongVie](longvie.md) is being experimented with; "the control part is interesting, the continuation doesn't seem that great though; the control might be something we can use with other workflows too as it's a controlnet"
 

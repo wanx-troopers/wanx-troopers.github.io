@@ -77,7 +77,7 @@ Caution is raised for all `1038lab` repositories.
 * Depth-Anything 3 model can generate point clouds out of images
 * koboldcpp an external app that can run gguf of qwen3-vl q8 and its mmoj part (llama more prone to hog vram)
 * allegedly Holocine/PUSA(merge) + FunVACE (module) & Krea (module) via Extra jacks is possible?..
-* [ComfyUI-Wan22FMLF](https://github.com/wallen0322/ComfyUI-Wan22FMLF) node to implement Wan 2.2 FMLF - first, middle, last frame
+* [GH:github.com/ComfyUI-Wan22FMLF](https://github.com/wallen0322/ComfyUI-Wan22FMLF) node to implement Wan 2.2 FMLF - first, middle, last frame
 * [SVI](https://github.com/vita-epfl/Stable-Video-Infinity) continuation method for I2V; I2V gens chained, with 5 start frames
 
 * [LanPaint](https://github.com/scraed/LanPaint)

@@ -24,6 +24,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 
 ## Models
 
+* [LTX](ltx.md)
 * [SCAIL/Wan Animate/MoCha/Steady Dancer/One-To-All](wan-animates.md)
 * [Wan-Move](wan-move.md)
 * Talkies
