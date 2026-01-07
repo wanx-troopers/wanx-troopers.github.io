@@ -13,6 +13,10 @@ To enable TorchCompile on native use `TorchCompileModelWanVideoV2` from [kijai/C
 
 > Compile is somewhat tough in native with low mem load and Loras at least
 
+Older way to achieve the same
+
+![WanVideo-Torch-Compile-Settings](screenshots/WanVideo-Torch-Compile-Settings.png)
+
 ## VACE
 
 VACE is an additional AI model that works in tandem with Wan T2V.

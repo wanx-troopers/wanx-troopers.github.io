@@ -173,6 +173,15 @@ Makes of the model are using 576x1024 resolution in the examples.
 
 ## Wan Animate
 
+### 2025.01.06
+
+It has been reported that counterintuitively setting `tiles` to `2` in `WanVideo ClipVision Encode` improves WanAnimate's ability to generate character looking like reference
+
+![WanVideoClipVisionEncodeTilesHighlighted](screenshots/WanVideoClipVisionEncodeTilesHighlighted.webp)
+
+> It breaks the image into tiles so clip vision sees more detail;
+> Clip vision images are capped at 256x256, so if you set it to 2 tiles it sees 512x512 (2 tiles = 2x2 tiles essentially)
+
 ### 2025.12.08
 
 `Pose Detection OneToAll Animation` node can be used with WanAnimate too if face points are disabled  
