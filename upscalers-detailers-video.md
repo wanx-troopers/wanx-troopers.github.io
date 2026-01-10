@@ -82,6 +82,10 @@ result back into the original video.
 
 Supports temporal blending across generated video fragments using VACE and context windows.
 
+## Other
+
+`Mickmumpitz`'s upscaler noted: [https://www.youtube.com/watch?v=NpNagmQI4yg](https://www.youtube.com/watch?v=NpNagmQI4yg)
+
 ## Notable Image Upscalers
 
 - "SeedVR is actually kind of insane"

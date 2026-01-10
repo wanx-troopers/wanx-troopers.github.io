@@ -48,6 +48,8 @@ From LTX developers:
 
 > euler simple or ddpm 2 karras are safe combos
 
+> Using the full model with the distill lora at 0.6 makes skin far more natural than just using the distill model. Shame it's so RAM heavy.
+
 ## Tools For LTX-2
 
 - [HF:Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-Left](https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-Left)
