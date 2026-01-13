@@ -2,6 +2,10 @@
 
 This is a LoRA very similar to Holocine in intent.
 
+## Alternative Nodes
+
+Take note of [GH:anveshane/Comfyui_StoryMem](https://github.com/anveshane/Comfyui_StoryMem) nodes built specifically for working with StoryMem.
+
 ## 2025.12.31
 
 > not sure their [original authors?] storymem workflow is set up correctly

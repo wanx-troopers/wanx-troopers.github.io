@@ -1,6 +1,18 @@
 ﻿# Hidden Knowledge
 
-## 2025.01.03
+## 2026.01.10
+
+Drozbay's preferred values to put into `ClownOptions Extra Options` for ClownShar sampler workflows
+
+```
+default_dtype=float32
+multistep_initial_sampler=euler
+multistep_fallback_sampler=ddim
+multistep_extra_initial_steps=0
+skip_final_model_call
+```
+
+## 2026.01.03
 
 > did full support for mixed quants get finished in comfyui?
 > yeah but needs either a dict included in the model that defines precision of each layer, or the new quant keys comfy added;

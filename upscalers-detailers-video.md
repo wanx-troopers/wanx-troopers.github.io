@@ -82,6 +82,18 @@ result back into the original video.
 
 Supports temporal blending across generated video fragments using VACE and context windows.
 
+## Other Face Manipulation Info
+
+- Chrisd's breadcrumbs on composing the face back with impact pack: [face-paste](workflows/chrisd-face-paste.png)
+
+## Ingi's Face Composite
+
+[Ingi](https://x.com/ingi_erlingsson) shared a node to help paste back a face after detailing
+
+![Systms_FaceComposite](code/Systms_FaceComposite.webp)
+
+A little unsually here's the code for the node: [Systms_FaceComposite.py](code/Systms_FaceComposite.py)
+
 ## Other
 
 `Mickmumpitz`'s upscaler noted: [https://www.youtube.com/watch?v=NpNagmQI4yg](https://www.youtube.com/watch?v=NpNagmQI4yg)

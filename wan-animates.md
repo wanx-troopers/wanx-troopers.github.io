@@ -22,7 +22,7 @@ it has been named `Pose Detection OneToAll Animation`.
 
 Official git [repo](https://github.com/zai-org/SCAIL) - pls. put starts to make it easier for the team to obtain more resources for future training!
 
-### SCAIL 2015.12.17
+### SCAIL 2025.12.17
 
 SCAIL generations are known to come up super dark if pose video hasn't been converted to exactly 1/2 of resolution of the video being generated
 

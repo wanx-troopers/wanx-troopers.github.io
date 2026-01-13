@@ -115,3 +115,11 @@ or possibly also [Painter I2V](#painter-i2v) on top of it.
 ### PainterI2Vadvanced
 
 [GH:princepainter/ComfyUI-PainterI2Vadvanced](https://github.com/princepainter/ComfyUI-PainterI2Vadvanced) is making bold claims about color correction, but this node prepares inputs for sampling so it cannot possibly be fixing outputs
+
+### Drozbay's Augmentation For Longer Videos
+
+Inspired by Painter I2V approach to boosting motion [Drozbay](hidden-knowledge.md#drozbay) has created one extra tool to generate longer videos with Wan 2.2 I2V without looping
+
+![droz_Wan22_DiffAugment_LongerVideos_v1](workflows\droz_Wan22_DiffAugment_LongerVideos_v1.png)
+
+[droz_Wan22_DiffAugment_LongerVideos_v1](workflows\droz_Wan22_DiffAugment_LongerVideos_v1.png)

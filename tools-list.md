@@ -139,6 +139,12 @@ Disasseble equence into separate images
 
 ![get-image-or-mark-range-from-batch](screenshots\ad-get-image-or-mark-range-from-batch.webp)
 
+# Execution Timer
+
+from [GH:PGCRT/CRT-Nodes](https://github.com/PGCRT/CRT-Nodes):
+
+![timer](screenshots/nodes/timer.webp)
+
 # Unilumos
 
 UniLumos is an AI model for relighting a video. Workflows:
@@ -146,13 +152,15 @@ UniLumos is an AI model for relighting a video. Workflows:
 - [Kijai's example](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_1_3B_UniLumos_relight_example_01.json)
 - [Change-Background-Wan-UniLumos](workflows/Change-Background-Wan-UniLumos.json)
 
-
 # Misc
 
 - IndexTTS2: "I had Chatterbox, IndexTTS, another IndexTTS node, Chatterboxt5, VibeVoice ... IndexTTS seems a lot better"
 - VibeVoice TTS
+- [GH:filliptm/ComfyUI_Fill-ChatterBox](https://github.com/filliptm/ComfyUI_Fill-ChatterBox) Nodes for ResembleAI's Chatterbox models: voice cloning, multilingual synthesis, voice conversion.
 - [GH:diodiogod/TTS-Audio-Suite](https://github.com/diodiogod/TTS-Audio-Suite): [tts-text](screenshots/tts-text.png), [prepare wf](workflows/gl_tts_voice_prepare.json), [wf](workflows/gl_tts_voice_prepare.json)  
   "done a lot of ... vibevoice ... problems ... tts 2 now ... much happier"
+- [GH:BlenderNeko/ComfyUI_Noise](https://github.com/BlenderNeko/ComfyUI_Noise) tools for working with noise including "unsampling"
+- [GH:MoonHugo/ComfyUI-FFmpeg](https://github.com/MoonHugo/ComfyUI-FFmpeg/blob/main/README_EN.md) nodes for concatenating, converting between png and mp4, splitting/adding audio, vert/horiz stiching of videos
 - `SuperPrompt` node from [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes).
 - `Merge Images` node from VideoHelperSuite (so called VHS)
 - [GH:stavsap/comfyui-ollama](https://github.com/stavsap/comfyui-ollama) ComfyUI nodes to connect to local-running KoboldCpp executing Qwen3-VL on the CPU in order to tranlate images to descriptions.

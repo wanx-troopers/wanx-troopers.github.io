@@ -2,6 +2,10 @@
 
 The page needs a brush-up. Bugs referenced have been fixed or worked around. Still might be useful info.
 
+## 2026.01.10
+
+As of now Torch 2.11.0 remains too new. Workarounds in Comfy/Wrapper code are not aware of it yet. oom on decode has been reported with 3x memory consumption.
+
 ## 2025.12.29
 
 > Which is a good Numpy version? I updated your wrapper and it installed 2.2.6 which broke multiple other nodes;

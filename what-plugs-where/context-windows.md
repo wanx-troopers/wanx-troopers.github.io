@@ -38,7 +38,7 @@ to handle latent masking correctly with context windows.
 
 > substep samplers definitely don't work with context windows, that would need more work
 
-Note: `skip_final_model_call` option needs to be set.
+Note: `skip_final_model_call` option needs to be set in `ClownOptions Extra Options`.
 
 Note: Drozbay has implemented an intereting `WanEx Context Window Calculator` node: [screenshot](../screenshots/droz-context-windows-calculator.webp).
 

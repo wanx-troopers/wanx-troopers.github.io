@@ -185,7 +185,7 @@ Node to select last layer by Scruffy: [CLIPSetLastLayer.py](../bobs/CLIPSetLastL
 
 ## Older
 
-`CRT-Nodes` added `LoRA Loader (Z-Image)(CRT)`. It can load `zit-ivy.safetensors`
+[GH:PGCRT/CRT-Nodes](https://github.com/PGCRT/CRT-Nodes) added `LoRA Loader (Z-Image)(CRT)`. It can load `zit-ivy.safetensors`
 
 AIO for ZIT: [HF:SeeSee21/Z-Image-Turbo-AIO](https://huggingface.co/SeeSee21/Z-Image-Turbo-AIO)
 

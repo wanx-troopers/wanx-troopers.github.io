@@ -26,7 +26,9 @@ Caution is raised for all `1038lab` repositories.
 
 ## Big List
 
+* [GH:maybleMyers/H1111:branch|story](https://github.com/maybleMyers/H1111/tree/story) alternative web UI for AI video generation
 * [GH:bytedance/DreamID-V](https://github.com/bytedance/DreamID-V) face swapper from Bytedance running on Wan 2.1 1.3B
+* [jamichss.github.io/stream-diffvsr-project-page](https://jamichss.github.io/stream-diffvsr-project-page/) research AI model for video Upscaling/stabilizing
 
 * Hunyuan Motion 1.0 - a model generating motion in FBX format via AI; FBX can further be roundtripped into moving skeletons, albeit with some difficulty; for now the best reference is [Benji's video](https://www.youtube.com/watch?v=3lKK0PXe99w)
 * MiniCPM-V (Advanced) to create description of an image

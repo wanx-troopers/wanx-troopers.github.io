@@ -134,5 +134,5 @@ Advice on switching from hight noise to low noise model with WAN 2.2
 * `String To Float List` -> `Float To Sigmas` facility to specify sigmas directly, can start with a string like `1.0, 0.9375, 0.833333, 0.625, 0.000`
 * `Create CFG Schedule Float List` - not sigma but often set in the same part of workflow.
 * `Preview Any` - easy to way to check output from the two above mentioned nodes
-* `Get Sigma` from [BlenderNeko/ComfyUI_Noise](https://github.com/BlenderNeko/ComfyUI_Noise)
+* `Get Sigma` from [GH:BlenderNeko/ComfyUI_Noise](https://github.com/BlenderNeko/ComfyUI_Noise)
 * `BetaSamplingScheduler` more control over Beta sigma schedule
