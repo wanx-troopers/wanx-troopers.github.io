@@ -17,6 +17,8 @@ Several ComfyUI implementations:
 
 Sentiment: "crazy", "Sec4B still doing better"
 
+- David Show's workflow for Sam3 masking: [ds-sam3d-Mask-Generator-multi](../workflows/ds-sam3d-Mask-Generator-multi.json)
+
 ## Depth Anything
 
 > Anyone know why depthanything V3 looks like unadulterated garbage compared to V2?

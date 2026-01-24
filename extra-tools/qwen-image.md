@@ -8,8 +8,18 @@
 | [HF:lightx2v/Qwen-Image-2512-Lightning](https://huggingface.co/lightx2v/Qwen-Image-2512-Lightning/tree/main) ? | Qwen-Image-Lightning v1.1 Lora |
 | - | Qwen-Image-Edit-2512 4-Steps Lora |
 | - | Wuli Turbo 4 Steps Lora |
+| [HF:prithivMLmods/Qwen-Image-Edit-2511-Unblur-Upscale](https://huggingface.co/prithivMLmods/Qwen-Image-Edit-2511-Unblur-Upscale) | Qwen-Image-Edit-2511-Unblur-Upscale |
+| [HF:vafipas663/Qwen-Edit-2509-Upscale-LoRA](https://huggingface.co/vafipas663/Qwen-Edit-2509-Upscale-LoRA) | Qwen-Edit-2509-Upscale-LoRA |
 
 Note: 2512 is not an "edit" just "qwen image" but due to some sort of confusion we're seeing the incorrect "Edit-2512" designation sometimes.
+
+## 2026.01.13
+
+Re QIE 2511:
+
+> if you want quality, skip the lora and go straight with full QE, res_2s + Beta57 (you may need the custom node RES4LYF to have these scheduler and sampler,
+> use cfg 3.5, 30 steps, and you will probably be happy, all this with Qwen Image Edit 2511 obviously
+
 
 ## 2025.12.31
 

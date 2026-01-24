@@ -58,3 +58,4 @@ From LTX developers:
 
 - [HF:Lightricks/LTX-Video-ICLoRA-depth-13b-0.9.7](https://huggingface.co/Lightricks/LTX-Video-ICLoRA-depth-13b-0.9.7)
 - [HF:Lightricks/LTX-Video-ICLoRA-detailer-13b-0.9.8](https://huggingface.co/Lightricks/LTX-Video-ICLoRA-detailer-13b-0.9.8)
+- Simple WAN refiner workflow which can be used after LTX main run and upscaler: [Experiment_upscaler_wrapper.json](workflows/ltx/Experiment_upscaler_wrapper.json)
