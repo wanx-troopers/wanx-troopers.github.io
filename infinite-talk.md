@@ -2,6 +2,10 @@
 
 This section is incomplete.
 
+## 2025.01.22
+
+InfiniteTalk support has been added to ComfyUI native. Sample wf: [infinitetalk_multi_test_native](workflows/kj_infinitetalk_multi_test_native.json)
+
 ## Models
 
 Infinite Talk workflows utilize regular Wan I2V safetensors file with regular speed lora of your choice.
