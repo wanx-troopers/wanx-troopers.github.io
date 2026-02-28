@@ -1,5 +1,15 @@
 ﻿# SVI 2.0 Pro
 
+## 2025.02.28
+
+[GH:Well-Made/ComfyUI-Wan-SVI2Pro-FLF](https://github.com/Well-Made/ComfyUI-Wan-SVI2Pro-FLF) claims to be
+a custom node enabling first-last frame with SVI 2.0 Pro which is normally I2V.
+
+> place the latent last and add mask
+
+Shouldn't work but kind of works.. if subject is in about same spatial position.. with specific strengths
+[svi-flf](screenshots/svi-flf.png).
+
 ## 2025.01.04
 
 See also: [Drozbay Humo SVI 2.0 Pro Extension Workflow](humo.md#drozbay-humo-svi-20-pro-extensions).

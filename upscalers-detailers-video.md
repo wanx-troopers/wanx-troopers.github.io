@@ -1,5 +1,14 @@
 # Video Upscalers and Detailers
 
+## LTX V2V Detailer
+
+Detailier from LTX can possibly be used on videos not produced by LTX
+
+## SeedVR2
+
+Can also do images, has been used on z-image-turbo produced images.
+...
+
 ## FL13
 
 - [FL13-WAN_Ultimate_I2V_Upscaler.20251123](workflows/FL13-WAN_Ultimate_I2V_Upscaler.20251123.json)
@@ -50,11 +59,6 @@ Implementations:
 VSR safetensors loaded by `WanVideo Extra Model Select` plugged into `extra_model` input of `WanVideo Model Loader` loading Wan 2.1 T2V `safetensors`.
 
 Very specific wording to be used in `WanVideo TextEncode`.
-
-## SeedVR2
-
-Can also do images, has been used on z-image-turbo produced images.
-...
 
 ## SpacePxl Experimental Latent Upascaler
 
