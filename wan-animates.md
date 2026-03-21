@@ -173,6 +173,10 @@ Makes of the model are using 576x1024 resolution in the examples.
 
 ## Wan Animate
 
+### 2026.03.21
+
+WanAnimate has been implemented on native, workflow: [droz_WanAnimate_ContextWindows_Native_v1.1](workflows/droz_WanAnimate_ContextWindows_Native_v1.1.json) by [hidden-knowledge.md#drozbay](Drozbay).
+
 ### 2025.01.06
 
 It has been reported that counterintuitively setting `tiles` to `2` in `WanVideo ClipVision Encode` improves WanAnimate's ability to generate character looking like reference
