@@ -154,6 +154,8 @@ UniLumos is an AI model for relighting a video. Workflows:
 
 # Misc
 
+- [GH:silveroxides/ComfyUI_SamplingUtils](https://github.com/silveroxides/ComfyUI_SamplingUtils) useful nodes including "BonusPromptPresets" which help convert images from anime to realism using Flux.2 [Klein]
+- [GH:siraxe/ComfyUI-SA-Nodes-QQ](https://github.com/siraxe/ComfyUI-SA-Nodes-QQ) additional nodes for using part of source video, ehanced spline editor etc "Do not under any circumstances install ... it straight up hijacks your ability to load workflows"
 - IndexTTS2: "I had Chatterbox, IndexTTS, another IndexTTS node, Chatterboxt5, VibeVoice ... IndexTTS seems a lot better"
 - VibeVoice TTS
 - [GH:filliptm/ComfyUI_Fill-ChatterBox](https://github.com/filliptm/ComfyUI_Fill-ChatterBox) Nodes for ResembleAI's Chatterbox models: voice cloning, multilingual synthesis, voice conversion.

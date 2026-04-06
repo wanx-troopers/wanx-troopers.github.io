@@ -1,8 +1,14 @@
 # News
 
+2026.04 [LTX 2.3](ltx23.md) released
+
+2026.03 This website is in a low-updates mode
+
+2026.01 FLUX.2 [klein] released - 4B and 9B, distilled and base - new quick image generation and editing model
+
 2026.01.22 InfiniteTalk support added to ComfyUI native: wf [here](infinite-talk.md#20260122)
 
-2026.01.06 [LTX-2](ltx.md) model weights have been dropped
+2026.01.06 [LTX-2](ltx20.md) model weights have been dropped
 
 2026.01.05 [LongVie](longvie.md) is being experimented with; "the control part is interesting, the continuation doesn't seem that great though; the control might be something we can use with other workflows too as it's a controlnet"
 

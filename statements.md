@@ -1,5 +1,14 @@
 ﻿# Statements
 
+## 2026
+
+Pexels is a popular, free stock photography and videography website.
+Another set of videos for camera motion: [HF:datasets:syCen/CameraBench](https://huggingface.co/datasets/syCen/CameraBench).
+
+"I just use virtualdub for trims" "shutter encoder is good too and does a little more"
+
+"I remember using davinci for deflicker in the past, and nothing back then beat it" "I think it was the fluoro light option that I used to use"
+
 ## 2025.01.03
 
 Mallardgazellegoosewildcat2:

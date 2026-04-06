@@ -7,6 +7,15 @@
 
 Both base and distilled are distributed under a non-commerical license.
 
+## Flux.2 [klein]
+
+This is the faster model. Available in 4B and 9B, both distilled and base.
+
+> klein distilled is for converging in 8 steps. You might have augment the instruct with additional syntences to keep hair etc accurate.
+
+## Flux.2 [dev]
+
+This is the slow model.
 
 Flux 2 is using Mistral as CLIP similar to [z-image-turbo](z-image.md).
 This is an 18Gb download named `mistral_3_small_flux2_fp8`.
@@ -20,11 +29,11 @@ This is an 18Gb download named `mistral_3_small_flux2_fp8`.
 > at least HunyuanImg3 is just LLM speed
 
 
-## Notable Flux 2 LoRa-s
+### Notable Flux 2 LoRa-s
 
 - Boring Reality
 
 
-## Misc
+### Misc
 
 - [Prompting Guide](https://docs.bfl.ai/guides/prompting_guide_flux2)
