@@ -392,13 +392,14 @@ Kijai's nodes can convert between data types such as `bf16` at `safetensors` loa
 
 | Kijai's Repo | Purpose |
 | :-- | :-- |
-| [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)| Alternative to Native KSampler, "wrapper" nodes |
-| [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)| Supplementary, can be used with Native KSampler |
-| [kijai/ComfyUI-WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess) | Nodes for Kijai's WanAnimate workflow |
-| [kijai/ComfyUI-MMAudio](https://github.com/kijai/ComfyUI-MMAudio) | Foley? |
-| [kijai/ComfyUI-GIMM-VFI](https://github.com/kijai/ComfyUI-GIMM-VFI) | frame interpolator |
-| [kijai/ComfyUI-SCAIL-Pose](https://github.com/kijai/ComfyUI-SCAIL-Pose) | pose detector for [SCAIL](wan-animates.md#scail) model |
-| [kijai/ComfyUI-MoGe](https://github.com/kijai/ComfyUI-MoGe) | adaptation of MoGe [tool](https://github.com/microsoft/MoGe) by Microsoft |
+| [GH:kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)| Alternative to Native KSampler, "wrapper" nodes |
+| [GH:kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)| Supplementary, can be used with Native KSampler |
+| [GH:kijai/ComfyUI-VideoColorGrading](https://github.com/kijai/ComfyUI-VideoColorGrading) | ColorGrading |
+| [GH:kijai/ComfyUI-WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess) | Nodes for Kijai's WanAnimate workflow |
+| [GH:kijai/ComfyUI-MMAudio](https://github.com/kijai/ComfyUI-MMAudio) | Foley? |
+| [GH:kijai/ComfyUI-GIMM-VFI](https://github.com/kijai/ComfyUI-GIMM-VFI) | frame interpolator |
+| [GH:kijai/ComfyUI-SCAIL-Pose](https://github.com/kijai/ComfyUI-SCAIL-Pose) | pose detector for [SCAIL](wan-animates.md#scail) model |
+| [GH:kijai/ComfyUI-MoGe](https://github.com/kijai/ComfyUI-MoGe) | adaptation of MoGe [tool](https://github.com/microsoft/MoGe) by Microsoft |
 
 Resolutions to try with WAN: 1536x864, 1280x768, 1200x960, 1/2 of that, 832x480, 1024x576, 1440x816  
 Resolutions to try with Ovi v1.1: 1280x704, 704x1280

@@ -84,7 +84,9 @@ As `bnp2704` explained
 ...so the innocent looking `Color Match` node from [kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
 which colormatches image to image is actually sapplicable to videos:
 
-![color-match](screenshots/nodes/color-match.webp)
+![color-match](screenshots/nodes/kj-color-matching.webp)
 
 Just choose one reference image and `Color Match` every frame of the generated video to it.
+
+Note other color matching nodes: [link](tools-list.md#color-matching)
 
