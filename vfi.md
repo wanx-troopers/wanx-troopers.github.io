@@ -37,3 +37,7 @@ RIFE VFI still good to double frame rate.
 ## GIMM
 
 Kijai's Github contains [ComfyUI-GIMM-VFI](https://github.com/kijai/ComfyUI-GIMM-VFI).
+
+## FrameFusion
+
+A tiny 10M parameters model probably running on CPU: [GH:BurguerJohn/FrameFusion-Model](https://github.com/BurguerJohn/FrameFusion-Model/tree/main); [announcement](https://www.reddit.com/r/StableDiffusion/comments/1sezpz7/open_sourcing_my_10m_model_for_video/)

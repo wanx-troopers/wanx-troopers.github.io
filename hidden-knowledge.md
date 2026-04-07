@@ -284,7 +284,7 @@ His nodes discussed on this website reside mainly in the following code reposito
 | [GH:drozbay/ComfyUI-WanVaceAdvanced](https://github.com/drozbay/ComfyUI-WanVaceAdvanced) | Nodes for advanced Wan + VACE generation |
 | [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments) aka `WanEx` | Nodes for preparing and examining embeds in new ways |
 
-List of Drozbay's contributions discussed on this website:
+### List of Drozbay's contributions discussed on this website:
 
 - [Drozbay's Study](conditioning.md#drozbays-study): nodes in `WanEx` to compose/examine [Bindweave](bindweave.md) and advanced I2V embeds
 - [HuMo - Drozbay](humo.md#drozbay-continuations): HuMo continuation workflow
@@ -293,6 +293,14 @@ List of Drozbay's contributions discussed on this website:
 - [Painter I2V Modular Replacement](wan-motion.md#painteri2v) `WanEx` contains `WanEx_PainterMotionAmplitude` node which replicates action of `Painter I2V` node in a modular manner
 - [Wan I2V T2V / VACE Tricks](wan-t2v-advanced.md) hoists avdvanced workflows created by Drozbay
 - [Wan 2.1 to Wan 2.2 LOW LoRA](loras/part-01.md#Special Use)
+
+### Mega List of Drozbay's Works
+
+- [GH:drozbay/ComfyUI-WanVaceAdvanced](https://github.com/drozbay/ComfyUI-WanVaceAdvanced)
+- [GH:drozbay/RES4LYF](https://github.com/drozbay/RES4LYF) - though it can be these have been (mostly?) integrated into main RES4LYF repo
+- [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments)
+- [GH:drozbay/janky_memory_patcher](https://github.com/drozbay/janky_memory_patcher)
+- [GH:drozbay/VaceWanAdvancedTests](https://github.com/drozbay/VaceWanAdvancedTests) Very very (very) experimental stuff
 
 ## 2025.11.29
 
