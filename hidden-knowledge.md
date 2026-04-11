@@ -1,5 +1,9 @@
 ﻿# Hidden Knowledge
 
+## 2026.04
+
+`Get Latent Size & ..` from `KJNodes` to get size of video in latent frames.
+
 ## 2026.01.10
 
 Drozbay's preferred values to put into `ClownOptions Extra Options` for ClownShar sampler workflows

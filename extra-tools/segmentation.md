@@ -2,6 +2,8 @@
 
 ## Sam3
 
+Kijai: "I'm just about to finish native SAM 3.1 support"
+
 Community is experimenting with SAM3 model from Facebook. The model provides several capabilities
 
 - segmentation

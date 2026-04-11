@@ -2,6 +2,22 @@
 
 LTX 2.3 uses Gemma 3 12B as multi-modal text encoder. Gemma is by Google.
 
+## From The Makers
+
+[HF:Lightricks](https://huggingface.co/Lightricks) provide
+
+- ltx-2.3-22b-dev, separate distilled model, alternatively a distillation LoRa
+- ltx-2.3-spatial-upscaler-x2-1.1, ltx-2.3-spatial-upscaler-x1.5-1.0, ltx-2.3-temporal-upscaler-x2-1.0
+- LTX-2.3-22b-IC-LoRA-Union-Control
+
+They also provide under LTX-2 umbrella
+
+- Lightricks/LTX-2-19b-IC-LoRA-Detailer "still usable with 2.3 , thought it was only available for 2"
+
+## Samplers
+
+Hmm.. `LTXVLoopingSampler`... what is it?..
+
 ## IC LoRa-s
 
 IC LoRa generally stands for "in-context LoRa" a _type_ of LoRa. In colloquial speak "IC LoRa" generally refers to one of the IC LoRa-s released alongside LTX 2.3:
@@ -66,7 +82,17 @@ N0NSens on flickering in three pass workflows:
 
 "native SUPIR implementation PR" from Kijai includes a new color matching node
 
+N0NSense
+> In my experience, the higher the initial resolution, the better the result. Therefore, 2 passes produce a better result than 3 (especially noticeable on small patterned textures). 
+
+David Show
+> but the higher the first pass resolution
+
+[audio] "generate ... once ... all subsequent upscale passes ... reuse the originally generated audio rather than reprocessing it"
+
 ## Hints
+
+> As long as the video is relatively static, it's amazing. As soon as there's fast motion ... [things get mushy]
 
 > The newer ic Loras like the union one are trained with half res. 
 > Latent downscale factor?
@@ -89,6 +115,10 @@ Also tested with: `Draft animation + hard cuts. depth, IC str 0.4, clwn sampler,
 Can be used to lock camera static: [N0NSens-static-cam-ltx23](screenshots/ltx/N0NSens-static-cam-ltx23.webp).
 "ic union lora. depth" "it's based on LTX-2.3_ICLoRA_Union_Control workflow from ltx"
 It is sufficient to place cubes where characters need to be and they can be rotated to make characters look the right way etc. This also covers scene cuts.
+"depth at str 0.2"; "i2v, using starting image"
+
+> ... a ... (left) does this ... a ... (right) does that. the camera abruptly changes angle: the ... is on the left in the background ... the is on the left in foreground ...
+
 
 Change FPS from 24 to 25 to fix de-sync of audio
 
@@ -99,7 +129,7 @@ I am low VRAM so cant do 14B in under 30 mins, but 1.3B is surprisingly good and
 241 frames in minutes fixing up some of that LTX detail issue like eyes quite well ... anyone with a decent card should be WAN 14B detailing
 low denoise for polish and you'll have perfect results from LTX. Juan Gea: Yes, Wan 2.2 14B is the perfect "last pass" for LTX, or the HUMO version.
 
-Reported as working:
+Reported as working (empty lines are extra empty lines in prompt):
 > [fen] character description  
 >  
 > [scene] scene description  
@@ -108,18 +138,38 @@ Reported as working:
 >  
 > [0-1s] [fen] does ... says ".."
 
+> are these 2 still needed? Yeah they still help
+![ltx-kj-additions-1.webp](screenshots/nodes/ltx-kj-additions-1.webp)
+
+Kijai's tensor loop node "is just a utility" "it works but somewhat awkward with the audio length calculations"
+
+[GH:fblissjr/ComfyUI-AudioLoopHelper](https://github.com/fblissjr/ComfyUI-AudioLoopHelper)
+"super rough around the edges but if anyone wants. its meant to handle all those timing calcs that i didnt wanna bother with"
+
+> Q: when using a sampler for videos, what sampler would you suggest to use for clear and fluid animation?  
+> A [GH:vrgamegirl19](https://github.com/vrgamegirl19): i found that these two seem to give good results. i would try them both euler_ancestral, euler_ancestral_cfg_pp
+
 ## Training
 
 On character LoRa training: "just 30 images with 10 repeats and 10 epochs, so quick and dirty - AkaneTendo25 fork of musubi-tuner-ltx-2 - success"
 
 10 videos from 2-8 seconds each ... if overfitted reduce strength of LoRa
 
+Training IC LoRa requires twice the VRAM and twice the time compared to traditional LoRa-s. 5090 should generally be capable of.
+
+[Oumoumad](https://gear-productions.com):
+> I never needed to go beyond 5000 steps, in fact most of the time even in 1500 steps you already see your desired effect
+
 ## LoRa-s And WFs
 
+- [GH:vrgamegirl19/comfyui-vrgamedevgirl:Workflows](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl/tree/main/Workflows) workflows from one of the masters :) Somewhare out there there are "Claymation", "Puppet",
+  [Golden Age Comic](https://civitai.com/models/2532516/ltx-23-golden-age-comic) LoRa-s by her as well
+- Sir_Axe's [HF:siraxe/TTM_IC-lora_ltx2.3](https://huggingface.co/siraxe/TTM_IC-lora_ltx2.3) cartoony time to move for LTX 2.3
 - Alisson Pereira's first experimental version of MR2V (Masked Reference-to-Video): [HF:Alissonerdx/LTX-LoRAs](https://huggingface.co/Alissonerdx/LTX-LoRAs)
   "It’s a reference-based inpainting LoRA ... I trained several variants, and this rank 32 one was the one I liked the most"; use `ltx23_inpaint_masked_r2v_rank32_v1_3000steps.safetensors`;
   "If you want speed, take the first frame from the generated control video, drop it into ChatGPT, and say: 'Describe this video with the object in the green area placed where the magenta mask is.' Then you add more details to it."
-  "This IC  LoRa was trained for objects in general, not people."
+  "This IC  LoRa was trained for objects in general, not people." Benji's [video](https://www.youtube.com/watch?v=E_XRBRykDwE) on it;
+  "The saddest part is that he seems to have changed the size of the green part on the side of the video and didn't follow the prompt recommendations I left for masked r2v"
 - [Cseti](https://www.youtube.com/@ChetiArt)'s LoRa to replicate camera motion from one video to another [HF:Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1);
   README and workflow: [HFdatasets:Cseti/ComfyUI-Workflows:ltx/2.3/ic-lora-cameraman](https://huggingface.co/datasets/Cseti/ComfyUI-Workflows/blob/main/ltx/2.3/ic-lora-cameraman/README.md);
   "This one took around 20-24 hours to train with 77 video pairs. And I also made two more runs one with 128 and another with around 40 pairs. But this one looks the best so far" "I used videos from pexels"
@@ -134,4 +184,8 @@ On character LoRa training: "just 30 images with 10 repeats and 10 epochs, so qu
   "injecting reference images at specified frames in the timeline to increase likeness retention (frontal portrait, profile portrait, re-inject the first frame, etc), without clobbering the scene"
 - "LoRa motion transfer" - but might be not that necessary
 - BFS LoRa "which does head swapping" [HF:Alissonerdx/BFS-Best-Face-Swap-Video](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap-Video)
-
+- ID Lora: [GH:pineambassador/ComfyUI-ID-Lora-Pine](https://github.com/pineambassador/ComfyUI-ID-Lora-Pine) trained around 1 subject and very alpha
+- ID Lora: [GH:ID-LoRA/ID-LoRA](https://github.com/ID-LoRA/ID-LoRA/tree/main) [HF:AviadDahan/LTX-2.3-ID-LoRA-CelebVHQ-3K](https://huggingface.co/AviadDahan/LTX-2.3-ID-LoRA-CelebVHQ-3K)
+- [Oumoumad](https://gear-productions.com)'s outpaint LoRa: [HF:oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint) - fills black bars/pillars with content
+- LTX smoothmix: [CA:2524245](https://civitai.com/models/2524245/smoothmix-animations-ltx?modelVersionId=2837052) "ltx trained on smoothmix images from smoothmix sd1.5 model"
+- example of what can be achived with grounded images - desaturation and lowered contrast [CA:2530917](https://civitai.com/models/2530917?modelVersionId=2844417) "AmateurHour"

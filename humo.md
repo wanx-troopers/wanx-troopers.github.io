@@ -1,8 +1,12 @@
 # HuMO
 
+## 2026.04
+
+[droz_LTX-2_SharkSampling_v7.1.png](workflows/ltx/droz_LTX-2_SharkSampling_v7.1.png) Drozbay's WF using Human as a face detailer after LTX generation with Clownshark sampler.
+
 ## 2025.12.26
 
-Highly experimental HuMoveLora in action - difference between HuMo and WanMove: [HF:drozbay/HuMoveLora](https://huggingface.co/drozbay/HuMoveLora/tree/main).
+Highly experimental HuMoveLora in action - difference between HuMo and WanMove: [HF:drozbay/HuMoveLora](https://huggingface.co/drozbay/HuMoveLora/tree/main), [HF:drozbay/WanMove_Extracted](https://huggingface.co/drozbay/WanMove_Extracted/tree/main).
 
 ## 2025.12.24
 
