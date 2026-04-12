@@ -30,11 +30,34 @@ Different ways to do FLF: LTXVAddGuide, LTXVImgToVideoInplaceKJ.
 
 [YT:What Dreams Cost/Guide to Prompting and Keyframing I2V](https://www.youtube.com/watch?v=ZY4hsvTzbas)
 
+### ImgToVideoInplace
+
+Alternative to using guides. Kijai's version also allows to specify which frame to apply to: ![LTXVImgToVideoInplaceKJ](screenshots/ltx/LTXVImgToVideoInplaceKJ.webp)
+
 ### Guides
 
 > guides are latent+mask but they exist at the end of the sequence, and are applied to the position through RoPE;
 > so basically they are stored at the end, keyframe info is stored (through the conditioning in comfy) so it knows what frame it should affect;
 > that's why using full guide video is so heavy, and that's why the newer guide method halves the guide resolution
+
+`LTXVCropGuides` removes the guides from latents after generation: ![cropGuides.webp](screenshots/ltx/cropGuides.webp)
+
+Specifying the index as -1 allows the reference to show an object before it enters the frame and then to heavily prompt for it.
+-1 means before the 1st latent. 0 had been reported to work too. This is about `LTXV Add Latent Guide`
+in `LTX Video` node pack, not about `LTXVAddGuide`.
+
+[YT:4TE-QbtkiGQ](https://www.youtube.com/watch?v=4TE-QbtkiGQ) for some advice on using guides to inject frames.
+
+[YT:nekodificador](https://youtube.com/nekodificador) reported plugging the same guide image twice via both of the following nodes increases motion
+[twoGuidesMoreMotion](screenshots/ltx/twoGuidesMoreMotion.webp)
+
+## Inpainting
+
+- inpaiting can be done with reference using Alisson's LoRa (see bellow).
+- alternatively [YT:nekodificador](https://youtube.com/nekodificador) reported success has placing a large rectange over person's mouth in video and using "just straight inpainting with native nodes and distiled lora"
+  additional details: [pcvideomask:PC Video Mask Smooth](screenshots/nodes/pcvideomask-pc-video-mask-smooth.webp) from [GH:pavelchezcin/pcvideomask](https://github.com/pavelchezcin/pcvideomask)
+  + sampler=linear/euler + scheduler=exponential were reported to help with detailing part of the video - mouth in this case;
+  audio then guided lip motion
 
 ## Three Pass Workflows
 
@@ -152,6 +175,9 @@ Kijai's tensor loop node "is just a utility" "it works but somewhat awkward with
 Hicho:
 > i didnt know that flf nodes accept video frames; is this how we do extension?
 
+Two NAGs exist which can be used with LTX 2.3, "very different", "whole different method of applying"
+![twoNags.webp](screenshots/ltx/twoNags.webp)
+
 ## Training
 
 On character LoRa training: "just 30 images with 10 repeats and 10 epochs, so quick and dirty - AkaneTendo25 fork of musubi-tuner-ltx-2 - success"
@@ -174,8 +200,6 @@ Training IC LoRa requires twice the VRAM and twice the time compared to traditio
   "This IC  LoRa was trained for objects in general, not people." Benji's [video](https://www.youtube.com/watch?v=E_XRBRykDwE) on it;
   "The saddest part is that he seems to have changed the size of the green part on the side of the video and didn't follow the prompt recommendations I left for masked r2v";
   [ap-ltx23_masked_ref_inpaint_v1.json](workflows/ltx/ap-ltx23_masked_ref_inpaint_v1.json);
-  [pcvideomask:PC Video Mask Smooth](screenshots/nodes/pcvideomask-pc-video-mask-smooth.webp) from [GH:pavelchezcin/pcvideomask](https://github.com/pavelchezcin/pcvideomask)
-  + sampler=linear/euler + scheduler=exponential were reported to help with detailing part of the video - mouth in this case
 - [Cseti](https://www.youtube.com/@ChetiArt)'s LoRa to replicate camera motion from one video to another [HF:Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1);
   README and workflow: [HFdatasets:Cseti/ComfyUI-Workflows:ltx/2.3/ic-lora-cameraman](https://huggingface.co/datasets/Cseti/ComfyUI-Workflows/blob/main/ltx/2.3/ic-lora-cameraman/README.md);
   "This one took around 20-24 hours to train with 77 video pairs. And I also made two more runs one with 128 and another with around 40 pairs. But this one looks the best so far" "I used videos from pexels"
@@ -184,8 +208,11 @@ Training IC LoRa requires twice the VRAM and twice the time compared to traditio
   "takes couple of seed tries and description of what changes, but it's also not perfect but better than just inserting start/end frames imo"
 - [HF:RuneXX/LTX-2.3-Workflows:Video-2-Video/LTX-2.3_-_V2V_ReTake_recreate_any_section_of_any_video](https://huggingface.co/RuneXX/LTX-2.3-Workflows/blob/main/Video-2-Video/LTX-2.3_-_V2V_ReTake_recreate_any_section_of_any_video.json)
 - Crinklypaper's [LTX-23-change-voice](workflows/ltx/crinklypaper-LTX-23-change-voice.json)
-- "VBVR refers to a technique that enables video models such as Wan to operate in a more logical and structured way.
-  Originally, it existed only for the Wan version, but someone is currently training an LTX 2.3 LoRA version on Civitai".
+- [HF:LiconStudio/Ltx2.3-VBVR-lora-I2V](https://huggingface.co/LiconStudio/Ltx2.3-VBVR-lora-I2V) better VBVR LoRa for LTX 2.3; 100Mb smaller than the one on Civitai;
+  the version on Civitai received rather cold reception; [YT:nekodificador](https://youtube.com/nekodificador): "I'm liking it for now tbh. All his cartoonish experiments im doing are way more coherent with the lora";
+  seems to also make lip articulation stronger;
+  "VBVR refers to a technique that enables video models such as Wan to operate in a more logical and structured way.
+  Originally, it existed only for the Wan version".
 - [GH:pineambassador/ComfyUI-ID-Lora-Pine](https://github.com/pineambassador/ComfyUI-ID-Lora-Pine)
   "injecting reference images at specified frames in the timeline to increase likeness retention (frontal portrait, profile portrait, re-inject the first frame, etc), without clobbering the scene"
 - "LoRa motion transfer" - but might be not that necessary
@@ -195,3 +222,4 @@ Training IC LoRa requires twice the VRAM and twice the time compared to traditio
 - [Oumoumad](https://gear-productions.com)'s outpaint LoRa: [HF:oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint) - fills black bars/pillars with content
 - LTX smoothmix: [CA:2524245](https://civitai.com/models/2524245/smoothmix-animations-ltx?modelVersionId=2837052) "ltx trained on smoothmix images from smoothmix sd1.5 model"
 - example of what can be achived with grounded images - desaturation and lowered contrast [CA:2530917](https://civitai.com/models/2530917?modelVersionId=2844417) "AmateurHour"
+- RuneXX has collected a number of workflows on HuggingFace, here's one: [HF:RuneXX/LTX-2.3-Workflows:Long-Video-Experimental](https://huggingface.co/RuneXX/LTX-2.3-Workflows/tree/main/Long-Video-Experimental)

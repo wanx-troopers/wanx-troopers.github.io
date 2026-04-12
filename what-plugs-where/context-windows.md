@@ -1,5 +1,9 @@
 # Context Windows
 
+## 2026.04
+
+[ComfyUI#13325](https://github.com/Comfy-Org/ComfyUI/pull/13325) PR to add context windows support for LTX 2.x
+
 ## 2025.12.20
 
 > how to ... inject different images reference for each context window? 
