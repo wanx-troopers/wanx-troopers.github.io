@@ -34,6 +34,9 @@ Different ways to do FLF: LTXVAddGuide, LTXVImgToVideoInplaceKJ.
 
 Alternative to using guides. Kijai's version also allows to specify which frame to apply to: ![LTXVImgToVideoInplaceKJ](screenshots/ltx/LTXVImgToVideoInplaceKJ.webp)
 
+[Drozbay](hidden-knowledge.md#drozbay):
+> The inplace nodes are very simple: they don't add any guide latents or anything they just replace the target latent frame with the encoded image and mask it so it doesn't change
+
 ### Guides
 
 > guides are latent+mask but they exist at the end of the sequence, and are applied to the position through RoPE;
