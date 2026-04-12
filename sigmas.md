@@ -1,5 +1,9 @@
 # Sigmas
 
+## 2026.04
+
+![NKD-Sigmas-Curve](screenshots/nodes/NKD-Sigmas-Curve.webp)
+
 ## 2025.12.13 Part A
 
 Kijai is preparing V2 series of nodes for ComfyUI. Here's a peek preview of `WanVideo Scheduler v2`:
