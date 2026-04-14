@@ -1,5 +1,9 @@
 ﻿# LLM Prompts
 
+## 2026.04
+
+[GH:florestefano1975/comfyui-portrait-master](https://github.com/florestefano1975/comfyui-portrait-master) a set of nodes to generate detailed prompts to generate characters
+
 ## Image To Text Z-Image-Turbo
 
 [MadevilBeats](https://www.instagram.com/madevilbeats/) aka "NiJi Dragon"

@@ -10,6 +10,10 @@
 
 2026.01 FLUX.2 [klein] released - 4B and 9B, distilled and base - new quick image generation and editing model
 
+2026 Z-Image Base aka ZIB released
+
+2026 ACE-Step model for generating music released
+
 2026.01.22 InfiniteTalk support added to ComfyUI native: wf [here](infinite-talk.md#20260122)
 
 2026.01.06 [LTX-2](ltx20.md) model weights have been dropped
