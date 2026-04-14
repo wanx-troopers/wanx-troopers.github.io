@@ -1,6 +1,26 @@
 ﻿# LTX 2.3
 
 LTX 2.3 uses Gemma 3 12B as multi-modal text encoder. Gemma is by Google.
+It might be advisable to set width and height as multiples of 128.
+
+## 2026.04.14
+
+- LTX 2.3 distilled v1.1 released by LightBricks - model and LoRa - LoRa trained separately from model - LoRa allows to adjust strength - more flexible
+- Motion Track & Union Control IC LoRas update
+
+`LTXV Chunk FeedForward (for low VRAM)` - "don't touch the chunk size, it's mostly testing param and in practice 2 is enough"
+"it chunks the feedforward layer (ffn) calculation, doing it in 2 chunks already puts it below other VRAM peaks
+and default non-chunked is a huge spike that can be multiple GB of higher peak VRAM at larger inputs".
+
+`res_multistep` might be better for sound generation than `euler` with distilled.
+
+grimm1111: "The v1.1 distill is a noticeable improvement.  The details and coherence are improved.
+I typically run the distill model with the distill lora at neg 0.2 or so. 15 steps, CFG 1; Also I only ever do single pass, that's just me.  And no temporal upscale or anything like that.
+my favorite aesthetic is "movie shot in the 1990's" so I don't really go for the super HD stuff.  I like the softer analog camera look over the super-digitized look"
+
+> distill 1.0. I feel the colours are a lot more natural. maybe just a saturation node will be enough.
+
+mamad8: "Using split sigmas with the distill Lora (strength 0.5) to set cfg 2 for the first 2 steps and cfg 1 for the remaining 6 steps helps A LOT, especially audio but also overall coherence and motion"
 
 ## From The Makers
 
@@ -13,6 +33,11 @@ LTX 2.3 uses Gemma 3 12B as multi-modal text encoder. Gemma is by Google.
 They also provide under LTX-2 umbrella
 
 - Lightricks/LTX-2-19b-IC-LoRA-Detailer "still usable with 2.3 , thought it was only available for 2"
+
+## Nodes Of Interest
+
+- `LTXVLatentUpsampler`
+- `LTXVImgToVideoInplace` - seems to swap the initial frame? prob. useful in I2V workflows where a high-quality version of initial frame is available
 
 ## Samplers
 
@@ -45,14 +70,14 @@ Alternative to using guides. Kijai's version also allows to specify which frame 
 
 `LTXVCropGuides` removes the guides from latents after generation: ![cropGuides.webp](screenshots/ltx/cropGuides.webp)
 
-Specifying the index as -1 allows the reference to show an object before it enters the frame and then to heavily prompt for it.
--1 means before the 1st latent. 0 had been reported to work too. This is about `LTXV Add Latent Guide`
-in `LTX Video` node pack, not about `LTXVAddGuide`.
+Tooltip on `LTXV Add Latent Guide` from `LTX Video` node pack suggests that one may be treating index of -1 to mean "before the 1st latent" e.g. before subject enters frame.
 
 [YT:4TE-QbtkiGQ](https://www.youtube.com/watch?v=4TE-QbtkiGQ) for some advice on using guides to inject frames.
 
 [YT:nekodificador](https://youtube.com/nekodificador) reported plugging the same guide image twice via both of the following nodes increases motion
-[twoGuidesMoreMotion](screenshots/ltx/twoGuidesMoreMotion.webp)
+[twoGuidesMoreMotion](screenshots/ltx/twoGuidesMoreMotion.webp); [twoGuidesMoreMotion2](screenshots/ltx/twoGuidesMoreMotion2.webp) - "just renamed, they are regular AddGuide";
+[Drozbay](hidden-knowledge.md#drozbay) on the difference between these two similar nodes:
+"Nothing should be special about the IC Lora guide version except that it allows you to control the latent downscale factor. and it also doesn't have the crf option".
 
 ## Inpainting
 
@@ -62,7 +87,10 @@ in `LTX Video` node pack, not about `LTXVAddGuide`.
   + sampler=linear/euler + scheduler=exponential were reported to help with detailing part of the video - mouth in this case;
   audio then guided lip motion
 
-## Three Pass Workflows
+## Multi-Pass Workflows
+
+Ppl often use workflows which start with a sampler generating at a low resolution and then (sometimes a chain of) 1.5x or 2x upscalers, more often 2x.
+This is said to improve motion but blur small objects with texture.
 
 Zombiematrix:
 > use the either of the default templates and change the starting pass to go to .25 of the starting resolution (instead of .5)  
@@ -79,7 +107,8 @@ Jonathan (WhatDreamsCost):
 > and final is polisher low denoise to fix eyes and whatnot, often with a WAN model denoise 0.2 using USDU;
 > any higher [denoise] the tiling or weird speckldeing creeps in but you could do a full detailer method
 > but the USDU is faster and works on low VRAM. I am using 1.3b for this atm. still testing it, but its half the time of the 14B for me.
-> ... just tested Wan 2.1 self forcing DMD 1.3b and its good enough for most fixups at 0.2 denoise
+> ... just tested Wan 2.1 self forcing DMD 1.3b and its good enough for most fixups at 0.2 denoise ...
+> 241 frames at 24fps
 
 > Q: 40 steps on base dev at 0.25 res, 3 with distill at x2 upscale, and 3 again with x2 upscale? Is this all linear quadratic schedule?  
 > A by Garbus: That's it, and er_sde across all three. Distill LoRA on 2 and 3 set to about 0.6 usually is best.
@@ -95,6 +124,9 @@ Jonathan (WhatDreamsCost):
 > A by Mark: no, I use USDU then you dont need all that. it handles it. its in the wf
 > [links](https://markdkberry.com/workflows/research-2026/#video-pipeline-workflows)
 > for my video pipeline. have a look.
+
+> I am not sure if HuMO will work with USDU properly.
+> I currently use either Phantom 1.3b or WAN 2.2 VACE 1.3b only because lowVRAM else I would use 14B and I use it in two stages, once to detail the 480x201 intiial video then again with USDU for the final polish at 1080p after its been through LTX upscalers.
 
 - [LTX-23-T2V-3PASS](workflows/ltx/garbus-LTX-23-T2V-3PASS.json) WF from Garbus: "This is the
   default LTX T2V wf with some things added and subgraphs unpacked. It's not pretty, but it works, or should give you an idea what modifications to make to a wf you prefer"
@@ -115,6 +147,12 @@ David Show
 > but the higher the first pass resolution
 
 [audio] "generate ... once ... all subsequent upscale passes ... reuse the originally generated audio rather than reprocessing it"
+
+> first pass with a modality scale of 2.5
+
+It was reported an overly high sqare resolution (1920x1920) after upscaler can cause color shift issues. Wider or smaller resolution like 1536x1536 reportedly can help.
+
+[official-video_ltx2_3_i2v.json](workflows/ltx/official-video_ltx2_3_i2v.json) demonstrates often used up/downscaling tricks in multi-pass pipelines.
 
 ## Hints
 
@@ -181,6 +219,8 @@ Hicho:
 Two NAGs exist which can be used with LTX 2.3, "very different", "whole different method of applying"
 ![twoNags.webp](screenshots/ltx/twoNags.webp)
 
+Can try `APG Guider` instead of `CFG Guider` to reduce color shift issues, [article](https://arxiv.org/pdf/2410.02416).
+
 ## Training
 
 On character LoRa training: "just 30 images with 10 repeats and 10 epochs, so quick and dirty - AkaneTendo25 fork of musubi-tuner-ltx-2 - success"
@@ -192,11 +232,34 @@ Training IC LoRa requires twice the VRAM and twice the time compared to traditio
 [Oumoumad](https://gear-productions.com):
 > I never needed to go beyond 5000 steps, in fact most of the time even in 1500 steps you already see your desired effect
 
+mamad8:
+> If you have trained a character Lora but you’re often using it with another (or multiple) loras you might have seen that the character is less accurate
+> (it depends on how much the loras you use have been trained on specific faces) : select your best 4-6 close ups of your character and train a new Lora
+> rank 4 on top of the models you use (and your previous trained Lora) for 500-1000 steps, the result will be absolutely night and day.
+> Currently I don’t think any trainer allows training loras on top of others (it’s not finetuning, simply merging the provided loras to the base
+> model before training a completely new one. This way the loras already trained do not lose anything they have learned and they overfit a lot less).
+> I’ll release the training code to train on top of loras soon (fork of aitoolkit)
+
+## Sound
+
+The role of a "solid mask" is not clear to the writer of this page but apparently it may be used before feeding Audio latent into sampler: [solidMask.webp](screenshots/ltx/solidMask.webp)
+
+## Manual Sigmas
+
+David Show: `1.0, 0.995, 0.99, 0.9875, 0.975, 0.65, 0.28, 0.07, 0.0`, "it's a three stage workflow, but those new sigmas are just being used on the first pass."
+
+## V2V
+
+V2V can be done either via IC Union LoRa-s or via latent denoise. Umerged Context Windows PR to make V2V simpler: [GH:Comfy-Org/ComfyUI/pull/13325](https://github.com/Comfy-Org/ComfyUI/pull/13325).
+
 ## LoRa-s And WFs
 
+- Alisson Pereira's `animate2real`: [HF:Alissonerdx/LTX-LoRAs:ltx23_anime2real_rank64_v1_4500](https://huggingface.co/Alissonerdx/LTX-LoRAs/blob/main/ltx23_anime2real_rank64_v1_4500.safetensors);
+  also [CA:2527511/anime2half-real](https://civitai.com/models/2527511/anime2half-real)
 - [GH:vrgamegirl19/comfyui-vrgamedevgirl:Workflows](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl/tree/main/Workflows) workflows from one of the masters :) Somewhare out there there are "Claymation", "Puppet",
-  [Golden Age Comic](https://civitai.com/models/2532516/ltx-23-golden-age-comic), [Enhancer](https://civitai.com/models/2535622?modelVersionId=2849716) LoRa-s by her as well
-- Sir_Axe's [HF:siraxe/TTM_IC-lora_ltx2.3](https://huggingface.co/siraxe/TTM_IC-lora_ltx2.3) cartoony time to move for LTX 2.3
+  [Golden Age Comic](https://civitai.com/models/2532516/ltx-23-golden-age-comic), [Enhancer](https://civitai.com/models/2535622?modelVersionId=2849716) LoRa-s by her as well;
+  [CA:2540961?2855640](https://civitai.com/models/2540961?modelVersionId=2855640) dark fantasy?
+- Sir_Axe's [HF:siraxe/TTM_IC-lora_ltx2.3](https://huggingface.co/siraxe/TTM_IC-lora_ltx2.3) cartoony time to move for LTX 2.3;
 - Alisson Pereira's first experimental version of MR2V (Masked Reference-to-Video): [HF:Alissonerdx/LTX-LoRAs](https://huggingface.co/Alissonerdx/LTX-LoRAs)
   "It’s a reference-based inpainting LoRA ... I trained several variants, and this rank 32 one was the one I liked the most"; use `ltx23_inpaint_masked_r2v_rank32_v1_3000steps.safetensors`;
   "If you want speed, take the first frame from the generated control video, drop it into ChatGPT, and say: 'Describe this video with the object in the green area placed where the magenta mask is.' Then you add more details to it."
@@ -215,7 +278,8 @@ Training IC LoRa requires twice the VRAM and twice the time compared to traditio
   the version on Civitai received rather cold reception; [YT:nekodificador](https://youtube.com/nekodificador): "I'm liking it for now tbh. All his cartoonish experiments im doing are way more coherent with the lora";
   seems to also make lip articulation stronger;
   "VBVR refers to a technique that enables video models such as Wan to operate in a more logical and structured way.
-  Originally, it existed only for the Wan version".
+  Originally, it existed only for the Wan version";
+  "official vbvr for wan is trained by the guys who worked it out; but they did provided all the training data"
 - [GH:pineambassador/ComfyUI-ID-Lora-Pine](https://github.com/pineambassador/ComfyUI-ID-Lora-Pine)
   "injecting reference images at specified frames in the timeline to increase likeness retention (frontal portrait, profile portrait, re-inject the first frame, etc), without clobbering the scene"
 - "LoRa motion transfer" - but might be not that necessary
@@ -226,3 +290,6 @@ Training IC LoRa requires twice the VRAM and twice the time compared to traditio
 - LTX smoothmix: [CA:2524245](https://civitai.com/models/2524245/smoothmix-animations-ltx?modelVersionId=2837052) "ltx trained on smoothmix images from smoothmix sd1.5 model"
 - example of what can be achived with grounded images - desaturation and lowered contrast [CA:2530917](https://civitai.com/models/2530917?modelVersionId=2844417) "AmateurHour"
 - RuneXX has collected a number of workflows on HuggingFace, here's one: [HF:RuneXX/LTX-2.3-Workflows:Long-Video-Experimental](https://huggingface.co/RuneXX/LTX-2.3-Workflows/tree/main/Long-Video-Experimental)
+- Quality_Control's [CA:2530917/amateur-hour-ltx-23](https://civitai.com/models/2530917/amateur-hour-ltx-23): "it works even for i2v, it makes the image more organic and less baked"
+
+- huh a Wan LoRa used in conjunction with LTX wf-s?.. [HF:Evados/DiffSynth-Studio-Lora-Wan2.1-ComfyUI](https://huggingface.co/Evados/DiffSynth-Studio-Lora-Wan2.1-ComfyUI/blob/main/dg_wan2_1_v1_3b_lora_extra_noise_detail_motion.safetensors)

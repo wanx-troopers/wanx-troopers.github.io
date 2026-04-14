@@ -2,6 +2,8 @@
 
 ## 2026.04
 
+[HF:Comfy-Org/HuMo_ComfyUI:diffusion_models](https://huggingface.co/Comfy-Org/HuMo_ComfyUI/tree/main/split_files/diffusion_models) HuMo 1.7B
+
 [droz_LTX-2_SharkSampling_v7.1.png](workflows/ltx/droz_LTX-2_SharkSampling_v7.1.png) Drozbay's WF using Human as a face detailer after LTX generation with Clownshark sampler.
 
 ## 2025.12.26

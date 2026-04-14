@@ -4,6 +4,8 @@
 
 `Get Latent Size & ..` from `KJNodes` to get size of video in latent frames.
 
+`mxfp8_block32` is good for Blackwell users
+
 ## 2026.01.10
 
 Drozbay's preferred values to put into `ClownOptions Extra Options` for ClownShar sampler workflows

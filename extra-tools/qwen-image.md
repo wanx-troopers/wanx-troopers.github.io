@@ -2,6 +2,9 @@
 
 ## Qwen LoRAs
 
+[Mark DK Berry](https://markdkberry.com):
+> the fusion lora for QWEN is amazing for blending characters back in I can just dump a white passport photo head shot with white background roughly on a head and the fusion lora fixes angle, lighting, blending. amazing
+
 | HF Space | LoRA |
 | :--- | :--- |
 | [HF:lilylilith/AnyPose](https://huggingface.co/lilylilith/AnyPose) | 2511 AnyPose - Person in image 1 do the exactly same pose as image 2 |

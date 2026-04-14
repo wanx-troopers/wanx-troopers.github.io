@@ -1,5 +1,9 @@
 # News
 
+2026.04.13 v1.1 distillation of [LTX 2.3](ltx23.md) released
+
+2026.04.13 [HuMo](humo.md) 1.7B released
+
 2026.04 [LTX 2.3](ltx23.md) released
 
 2026.03 This website is in a low-updates mode

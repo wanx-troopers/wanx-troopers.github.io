@@ -6,6 +6,10 @@
 - [LLM Nodes](llm-nodes.md)
 - [LLM Prompts](llm-prompts.md)
 
+## 2026.04
+
+> z image for realism is amazing with low 0.2 denoise and fast
+
 ## 2025.12.31
 
 For slightly higher contrast and a bit more color midpoint_2s
@@ -180,7 +184,6 @@ By default z-image-turbo is getting Qwen-3B output from the line marked with -2.
 However it is technically possible to modify ComfyUI code such that the image is produced based on Qwen3 output from any of the earlier layers.
 Some of them result in gibberish but many will result in images, different from the one we get by default.
 We probably should expect it to be implemented - some time soon?..
-
 Node to select last layer by Scruffy: [CLIPSetLastLayer.py](../bobs/CLIPSetLastLayer.py)
 
 ## Older
