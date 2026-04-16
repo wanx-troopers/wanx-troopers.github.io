@@ -3,6 +3,10 @@
 A number of image generation models are being released.
 This website doesn't go deep into details but aims to at least list them.
 
+## FireRed-Image-Edit
+
+20B parameters, Apache 2.0
+
 ## Magic Wan
 
 > And it has the natural look which I personally prefer than the over "RLd" [extremely artificial] look that Z-Image has.

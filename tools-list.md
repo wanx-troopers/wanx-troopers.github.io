@@ -101,6 +101,7 @@ See also: [Qwen Edit - VACE](wan-t2v-advanced.md#vace-with-qwen-image-edit).
 
 - [kijai/ComfyUI-MMAudio](https://github.com/kijai/ComfyUI-MMAudio)
 - ACE Foley Generator
+- ACE Step
 
 > Inside of Comfy you could Use Stable Audio or ACE... but tbh both are not that good
 
@@ -162,6 +163,7 @@ UniLumos is an AI model for relighting a video. Workflows:
 
 # Misc
 
+- Qwen-TTS
 - [GH:silveroxides/ComfyUI_SamplingUtils](https://github.com/silveroxides/ComfyUI_SamplingUtils) useful nodes including "BonusPromptPresets" which help convert images from anime to realism using Flux.2 [Klein]
 - [GH:siraxe/ComfyUI-SA-Nodes-QQ](https://github.com/siraxe/ComfyUI-SA-Nodes-QQ) additional nodes for using part of source video, ehanced spline editor etc "Do not under any circumstances install ... it straight up hijacks your ability to load workflows"
 - IndexTTS2: "I had Chatterbox, IndexTTS, another IndexTTS node, Chatterboxt5, VibeVoice ... IndexTTS seems a lot better"

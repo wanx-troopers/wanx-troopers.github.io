@@ -2,7 +2,14 @@
 
 ## 2026.04
 
+Native comfy?  
+![native-ltxvscheduler](screenshots/nodes/native-ltxvscheduler.webp)
+
+Nekodificator:  
 ![NKD-Sigmas-Curve](screenshots/nodes/NKD-Sigmas-Curve.webp)
+
+[Ckinpdx](https://github.com/ckinpdx):  
+![ltx-detail-sigmas](screenshots/nodes/ckinpdx-ltx-detail-sigmas.webp)
 
 ## 2025.12.13 Part A
 

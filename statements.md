@@ -1,5 +1,17 @@
 ﻿# Statements
 
+## 2026.04
+
+ZombieMatrix:
+> Imagine a hill and its dark, you can't see the top.
+> You start on one side and your goal is to get to the other side.
+> Some models attack this issue by just tunneling straight across with fast paced machinery - you lose all richness of the journey, but you got to the end -
+> this is a distilled model like ZIT, very little variation but a coherent output.
+> Some models start up the hill, find something like a cave and decide to start digging through that
+> and it takes them all over the place but finally reach the end - you get richness in the journey,
+> but you might make it there limping along and it took ... forever because you had had to dig your way through -
+> this is pretty much all undistilled models
+
 ## 2026
 
 Pexels is a popular, free stock photography and videography website.

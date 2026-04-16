@@ -22,6 +22,8 @@ my favorite aesthetic is "movie shot in the 1990's" so I don't really go for the
 
 mamad8: "Using split sigmas with the distill Lora (strength 0.5) to set cfg 2 for the first 2 steps and cfg 1 for the remaining 6 steps helps A LOT, especially audio but also overall coherence and motion"
 
+> distill 1.1 as lora str 0.6 and just works
+
 ## From The Makers
 
 [HF:Lightricks](https://huggingface.co/Lightricks) provide
@@ -39,9 +41,22 @@ They also provide under LTX-2 umbrella
 - `LTXVLatentUpsampler`
 - `LTXVImgToVideoInplace` - seems to swap the initial frame? prob. useful in I2V workflows where a high-quality version of initial frame is available
 
-## Samplers
+## Sampler Nodes
 
 Hmm.. `LTXVLoopingSampler`... what is it?..
+
+## Samplers
+
+[Ckinpdx](https://github.com/ckinpdx):
+> res2s is good for quality but also handles higher fps better ... i started out with eulers, then lcm, then settled on res2s;
+> the manual sigmas describe 3 steps, which works for euler in the second stage but is too many for res2s.
+> for the second stage to use res2s without overbaking i use basi scheduler beta 0.34 denoise 2 steps.
+> i run dev with distill and drop the distill down to 0.5 from the standard 0.6 in the second pass
+![ckinpdx-ltx-dimension-calculator](screenshots/nodes/ckinpdx-ltx-dimension-calculator.webp)
+
+
+Hevi:
+> lcm for first stage much faster than anything else imo
 
 ## IC LoRa-s
 
@@ -128,6 +143,17 @@ Jonathan (WhatDreamsCost):
 > I am not sure if HuMO will work with USDU properly.
 > I currently use either Phantom 1.3b or WAN 2.2 VACE 1.3b only because lowVRAM else I would use 14B and I use it in two stages, once to detail the 480x201 intiial video then again with USDU for the final polish at 1080p after its been through LTX upscalers.
 
+> previously was two x2 upscalers in series but today added in a 2nd sampler to the first upscaler and its way better.
+> I still have some tweaks to make though but also introduced the VBVR lora and the 1.1 distill came out so it might also be that helping improve thing...
+> the guts of it is in my video pipeline `MBEDIT-v2v_LTX23_Upscaler_DevQ5KM-Audio-In_1080p_vrs7.json`
+> [https://markdkberry.com/workflows/research-2026/#video-pipeline-workflows](https://markdkberry.com/workflows/research-2026/#video-pipeline-workflows)
+
+> I was using phnatom 1.3b to detail my i2v first stage 480 x 201 that I did that size to get structure quick as I could changing prompt til I got there.
+> it was fast relatively. but the phantom did a nice fixup. then into the upscaler wf with ref image. but it had its faults.
+> today introducing x2 samplers to that upscaler stage instead of x1 sampler with x2 upscalers has meant I dont need the phantom stage, but I might keep it in anyway.
+
+
+
 - [LTX-23-T2V-3PASS](workflows/ltx/garbus-LTX-23-T2V-3PASS.json) WF from Garbus: "This is the
   default LTX T2V wf with some things added and subgraphs unpacked. It's not pretty, but it works, or should give you an idea what modifications to make to a wf you prefer"
 - [ai_hakase's wf](https://x.com/ai_hakase_/status/2040417832769585194?s=20)
@@ -155,6 +181,8 @@ It was reported an overly high sqare resolution (1920x1920) after upscaler can c
 [official-video_ltx2_3_i2v.json](workflows/ltx/official-video_ltx2_3_i2v.json) demonstrates often used up/downscaling tricks in multi-pass pipelines.
 
 [Wan-Various_Refine-Upscale](workflows/ltx/Wan-Various_Refine-Upscale.json) could potentially be used to enhance LTX videos with various WAN models.
+
+> why ... 4 step sigmas like `1, 0.85, 0.7250, 0.4219, 0.0` on the last upscaler sampler when 6 steps is clearly superior in results?
 
 ## Hints
 
@@ -223,6 +251,11 @@ Two NAGs exist which can be used with LTX 2.3, "very different", "whole differen
 
 Can try `APG Guider` instead of `CFG Guider` to reduce color shift issues, [article](https://arxiv.org/pdf/2410.02416).
 
+Do not put quotes around dialogue to avoid subtitles, also Kijai's NAG.
+
+> [On AMD rdna2] ltxvideo works on fp16 even though it is not listed in comfy config file, and it is faster for me than fp32;
+> nvfp4 also works for me but with that the quality is not that great
+
 ## Training
 
 On character LoRa training: "just 30 images with 10 repeats and 10 epochs, so quick and dirty - AkaneTendo25 fork of musubi-tuner-ltx-2 - success"
@@ -242,17 +275,28 @@ mamad8:
 > model before training a completely new one. This way the loras already trained do not lose anything they have learned and they overfit a lot less).
 > I’ll release the training code to train on top of loras soon (fork of aitoolkit)
 
+[GH:richservo/rs-nodes](https://github.com/richservo/rs-nodes) LoRa training inside ComfyUI "adding ffn chunking fixed the OOM" "I'm ... training on 576x576x97 ... it's much more efficient ... no idea why"
+
 ## Sound
 
 The role of a "solid mask" is not clear to the writer of this page but apparently it may be used before feeding Audio latent into sampler: [solidMask.webp](screenshots/ltx/solidMask.webp)
+
+Some ambience noise on input audio may make ltx generatevlipsync better.
 
 ## Manual Sigmas
 
 David Show: `1.0, 0.995, 0.99, 0.9875, 0.975, 0.65, 0.28, 0.07, 0.0`, "it's a three stage workflow, but those new sigmas are just being used on the first pass."
 
+Reddit [post](https://www.reddit.com/r/StableDiffusion/comments/1sk8vhq/ltx23_distilled_updated_sigmas_for_better_results/).
+
 ## V2V
 
 V2V can be done either via IC Union LoRa-s or via latent denoise. Umerged Context Windows PR to make V2V simpler: [GH:Comfy-Org/ComfyUI/pull/13325](https://github.com/Comfy-Org/ComfyUI/pull/13325).
+
+## Basics
+
+- [Mark DK Berry](https://markdkberry.com) on basic VRAM optimizations and NAG to remove subtitles: [nag-other-basic-setup](workflows/ltx/mdkb-nag-other-basic-setup.webp)
+- Hicho's [ltx-2.3-simple-v2v](workflows/ltx/hicho-ltx-2.3-simple-v2v.json) prob. the simplest WF involving a depth map
 
 ## LoRa-s And WFs
 
@@ -298,8 +342,8 @@ V2V can be done either via IC Union LoRa-s or via latent denoise. Umerged Contex
 - [Oumoumad](https://gear-productions.com)'s outpaint LoRa: [HF:oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint) - fills black bars/pillars with content
 - LTX smoothmix: [CA:2524245](https://civitai.com/models/2524245/smoothmix-animations-ltx?modelVersionId=2837052) "ltx trained on smoothmix images from smoothmix sd1.5 model"
 - example of what can be achived with grounded images - desaturation and lowered contrast [CA:2530917](https://civitai.com/models/2530917?modelVersionId=2844417) "AmateurHour"
-- Hicho's [ltx-2.3-simple-v2v](workflows/ltx/hicho-ltx-2.3-simple-v2v.json) prob. the simplest WF involving a depth map
 - RuneXX has collected a number of workflows on HuggingFace, here's one: [HF:RuneXX/LTX-2.3-Workflows:Long-Video-Experimental](https://huggingface.co/RuneXX/LTX-2.3-Workflows/tree/main/Long-Video-Experimental)
 - Quality_Control's [CA:2530917/amateur-hour-ltx-23](https://civitai.com/models/2530917/amateur-hour-ltx-23): "it works even for i2v, it makes the image more organic and less baked"
+- [HF:o-8-o/LTX-2.3-skin-hair](https://huggingface.co/o-8-o/LTX-2.3-skin-hair/tree/main)
 
 - huh a Wan LoRa used in conjunction with LTX wf-s?.. [HF:Evados/DiffSynth-Studio-Lora-Wan2.1-ComfyUI](https://huggingface.co/Evados/DiffSynth-Studio-Lora-Wan2.1-ComfyUI/blob/main/dg_wan2_1_v1_3b_lora_extra_noise_detail_motion.safetensors)

@@ -1,5 +1,7 @@
 # News
 
+2026.04.16 Civitai splitting into Civitai.com (PG-13) and Civitai.red (NSFW allowed); existing content automatically moves to the latter
+
 2026.04.13 v1.1 distillation of [LTX 2.3](ltx23.md) released
 
 2026.04.13 [HuMo](humo.md) 1.7B released
@@ -7,6 +9,8 @@
 2026.04 [LTX 2.3](ltx23.md) released
 
 2026.03 This website is in a low-updates mode
+
+2026.03 FireRed Apache 2.0 20B Image Edit Model Released v1.1
 
 2026.01 FLUX.2 [klein] released - 4B and 9B, distilled and base - new quick image generation and editing model
 
