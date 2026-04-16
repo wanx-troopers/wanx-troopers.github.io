@@ -1,7 +1,12 @@
 ﻿# LTX 2.3
 
 LTX 2.3 uses Gemma 3 12B as multi-modal text encoder. Gemma is by Google.
-It might be advisable to set width and height as multiples of 128.
+It might be advisable to set width and height as multiples of 128 (or 32?).
+
+## 2026.04.16
+
+Richard Servello:
+> LTX union ic-lora was trained on a distilled sigma schedule. So you have to use their exact gradient for it to work
 
 ## 2026.04.14
 
@@ -35,6 +40,12 @@ mamad8: "Using split sigmas with the distill Lora (strength 0.5) to set cfg 2 fo
 They also provide under LTX-2 umbrella
 
 - Lightricks/LTX-2-19b-IC-LoRA-Detailer "still usable with 2.3 , thought it was only available for 2"
+
+
+## Alternative Weights Packagings
+
+- [GH:Hippotes/LTX-2.3-various-formats](https://huggingface.co/Hippotes/LTX-2.3-various-formats/tree/main) including nvfp4;
+  "I strongly recommended the 'mixed' ones, it's barely slower and doesn't hit the quality as hard as the whole transformers conversion"
 
 ## Nodes Of Interest
 
