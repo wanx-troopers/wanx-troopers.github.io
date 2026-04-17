@@ -8,6 +8,13 @@ It might be advisable to set width and height as multiples of 128 (or 32?).
 Richard Servello:
 > LTX union ic-lora was trained on a distilled sigma schedule. So you have to use their exact gradient for it to work
 
+Zueuk on LTX audio latents:
+> latent cut; y axis; which is unobvious;
+> LTX Add Latents can combine them, but only if none -or- both of them have mask, otherwise it fails
+
+[Ckinpdx](https://github.com/ckinpdx) on `LTX Audio Latent Trim` node:
+> I added a strip mask to the audio latent trim to address that
+
 ## 2026.04.14
 
 - LTX 2.3 distilled v1.1 released by LightBricks - model and LoRa - LoRa trained separately from model - LoRa allows to adjust strength - more flexible
@@ -80,6 +87,11 @@ Additional Python code to use them: [GH:Lightricks/ComfyUI-LTXVideo](https://git
 Different ways to do FLF: LTXVAddGuide, LTXVImgToVideoInplaceKJ.
 
 [YT:What Dreams Cost/Guide to Prompting and Keyframing I2V](https://www.youtube.com/watch?v=ZY4hsvTzbas)
+
+Zueuk:
+> as i understand, with guides you "never" get exactly the same frames even if you set the strength to 1,
+> so for extending i'd probably keep masked "inplace" data
+> but when we put frames anywhere except frame #0, guides are probably a better choice
 
 ### ImgToVideoInplace
 
@@ -220,7 +232,11 @@ Also tested with: `Draft animation + hard cuts. depth, IC str 0.4, clwn sampler,
 Can be used to lock camera static: [N0NSens-static-cam-ltx23](screenshots/ltx/N0NSens-static-cam-ltx23.webp).
 "ic union lora. depth" "it's based on LTX-2.3_ICLoRA_Union_Control workflow from ltx"
 It is sufficient to place cubes where characters need to be and they can be rotated to make characters look the right way etc. This also covers scene cuts.
-"depth at str 0.2"; "i2v, using starting image"
+"depth at str 0.2"; "i2v, using starting image"; Q: why not render depth? A: don't want to spend time for rendering from c4d; ... visible wireframe helps to detect some depth by depthAnything
+
+Recommended ic guide strength: 0.1 - 0.4 for depth, 0.2-0.6 for canny, 0.5-1.0 for pose; lower strength allows ltx be more imaginative
+
+[Making of "Gloomy Bukur"](https://vimeo.com/1183873769?share=copy&fl=sv&fe=ci) Vasily Bodnar, N0NSense
 
 > ... a ... (left) does this ... a ... (right) does that. the camera abruptly changes angle: the ... is on the left in the background ... the is on the left in foreground ...
 
@@ -323,6 +339,7 @@ V2V can be done either via IC Union LoRa-s or via latent denoise. Umerged Contex
 - [GH:vrgamegirl19/comfyui-vrgamedevgirl:Workflows](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl/tree/main/Workflows) workflows from one of the masters :) Somewhare out there there are "Claymation", "Puppet",
   [Golden Age Comic](https://civitai.com/models/2532516/ltx-23-golden-age-comic), [Enhancer](https://civitai.com/models/2535622?modelVersionId=2849716) LoRa-s by her as well;
   [CA:2540961?2855640](https://civitai.com/models/2540961?modelVersionId=2855640) dark fantasy?
+  [CA:2535622](https://civitai.red/models/2535622) home of VRGamedevgirl on CA? place to get her enhancer LoRa-s including Fantasy_Realism and Crisp enhancement T2V
 - Sir_Axe's [HF:siraxe/TTM_IC-lora_ltx2.3](https://huggingface.co/siraxe/TTM_IC-lora_ltx2.3) cartoony time to move for LTX 2.3;
 - Alisson Pereira's first experimental version of MR2V (Masked Reference-to-Video): [HF:Alissonerdx/LTX-LoRAs](https://huggingface.co/Alissonerdx/LTX-LoRAs)
   "It’s a reference-based inpainting LoRA ... I trained several variants, and this rank 32 one was the one I liked the most"; use `ltx23_inpaint_masked_r2v_rank32_v1_3000steps.safetensors`;
@@ -338,23 +355,28 @@ V2V can be done either via IC Union LoRa-s or via latent denoise. Umerged Contex
   "takes couple of seed tries and description of what changes, but it's also not perfect but better than just inserting start/end frames imo"
 - [HF:RuneXX/LTX-2.3-Workflows:Video-2-Video/LTX-2.3_-_V2V_ReTake_recreate_any_section_of_any_video](https://huggingface.co/RuneXX/LTX-2.3-Workflows/blob/main/Video-2-Video/LTX-2.3_-_V2V_ReTake_recreate_any_section_of_any_video.json)
 - Crinklypaper's [LTX-23-change-voice](workflows/ltx/crinklypaper-LTX-23-change-voice.json)
-- [HF:LiconStudio/Ltx2.3-VBVR-lora-I2V](https://huggingface.co/LiconStudio/Ltx2.3-VBVR-lora-I2V) better VBVR LoRa for LTX 2.3; 100Mb smaller than the one on Civitai;
+- VBVR HF: [HF:LiconStudio/Ltx2.3-VBVR-lora-I2V](https://huggingface.co/LiconStudio/Ltx2.3-VBVR-lora-I2V) better VBVR LoRa for LTX 2.3; 100Mb smaller than the one on Civitai;
   the version on Civitai received rather cold reception; [YT:nekodificador](https://youtube.com/nekodificador): "I'm liking it for now tbh. All his cartoonish experiments im doing are way more coherent with the lora";
   seems to also make lip articulation stronger;
   "VBVR refers to a technique that enables video models such as Wan to operate in a more logical and structured way.
   Originally, it existed only for the Wan version";
   "official vbvr for wan is trained by the guys who worked it out; but they did provided all the training data"
-- [GH:pineambassador/ComfyUI-ID-Lora-Pine](https://github.com/pineambassador/ComfyUI-ID-Lora-Pine)
-  "injecting reference images at specified frames in the timeline to increase likeness retention (frontal portrait, profile portrait, re-inject the first frame, etc), without clobbering the scene"
-- "LoRa motion transfer" - but might be not that necessary
-- BFS LoRa "which does head swapping" [HF:Alissonerdx/BFS-Best-Face-Swap-Video](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap-Video)
+- VBVR Civitai: [Mark DK Berry](https://markdkberry.com): "I was having big problems with LTX morphing everything and that was largely fixed with V3 civitai ... VBVR version";
+  maybe [this](https://civitai.com/models/2497207/ltx-23-i2v-t2v-video-reasoning-lora-vbvr) ?
+- VBVR Official? [HF:Video-Reason/VBVR-LTX2.3-diffsynth](https://huggingface.co/Video-Reason/VBVR-LTX2.3-diffsynth)
+- ID Lora: [GH:pineambassador/ComfyUI-ID-Lora-Pine](https://github.com/pineambassador/ComfyUI-ID-Lora-Pine)
+  "injecting reference images at specified frames in the timeline to increase likeness retention (frontal portrait, profile portrait, re-inject the first frame, etc), without clobbering the scene";
+  "I noticed when using id lora then u got to prompt how you want voice tone be , calm , angry etc"
 - ID Lora: [GH:pineambassador/ComfyUI-ID-Lora-Pine](https://github.com/pineambassador/ComfyUI-ID-Lora-Pine) trained around 1 subject and very alpha
 - ID Lora: [GH:ID-LoRA/ID-LoRA](https://github.com/ID-LoRA/ID-LoRA/tree/main) [HF:AviadDahan/LTX-2.3-ID-LoRA-CelebVHQ-3K](https://huggingface.co/AviadDahan/LTX-2.3-ID-LoRA-CelebVHQ-3K)
+- "LoRa motion transfer" - but might be not that necessary
+- BFS LoRa "which does head swapping" [HF:Alissonerdx/BFS-Best-Face-Swap-Video](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap-Video)
 - [Oumoumad](https://gear-productions.com)'s outpaint LoRa: [HF:oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint) - fills black bars/pillars with content
 - LTX smoothmix: [CA:2524245](https://civitai.com/models/2524245/smoothmix-animations-ltx?modelVersionId=2837052) "ltx trained on smoothmix images from smoothmix sd1.5 model"
 - example of what can be achived with grounded images - desaturation and lowered contrast [CA:2530917](https://civitai.com/models/2530917?modelVersionId=2844417) "AmateurHour"
 - RuneXX has collected a number of workflows on HuggingFace, here's one: [HF:RuneXX/LTX-2.3-Workflows:Long-Video-Experimental](https://huggingface.co/RuneXX/LTX-2.3-Workflows/tree/main/Long-Video-Experimental)
 - Quality_Control's [CA:2530917/amateur-hour-ltx-23](https://civitai.com/models/2530917/amateur-hour-ltx-23): "it works even for i2v, it makes the image more organic and less baked"
 - [HF:o-8-o/LTX-2.3-skin-hair](https://huggingface.co/o-8-o/LTX-2.3-skin-hair/tree/main)
+- Zueuk is experimenting on latent loops workflow not yet shared; "i'm basically only doing I2V; and not using 'inplace' nodes at all"
 
 - huh a Wan LoRa used in conjunction with LTX wf-s?.. [HF:Evados/DiffSynth-Studio-Lora-Wan2.1-ComfyUI](https://huggingface.co/Evados/DiffSynth-Studio-Lora-Wan2.1-ComfyUI/blob/main/dg_wan2_1_v1_3b_lora_extra_noise_detail_motion.safetensors)
