@@ -43,6 +43,7 @@ mamad8: "Using split sigmas with the distill Lora (strength 0.5) to set cfg 2 fo
 - ltx-2.3-22b-dev, separate distilled model, alternatively a distillation LoRa
 - ltx-2.3-spatial-upscaler-x2-1.1, ltx-2.3-spatial-upscaler-x1.5-1.0, ltx-2.3-temporal-upscaler-x2-1.0
 - LTX-2.3-22b-IC-LoRA-Union-Control
+- LTX-2.3-22b-IC-LoRA-Motion-Track-Control
 
 They also provide under LTX-2 umbrella
 
