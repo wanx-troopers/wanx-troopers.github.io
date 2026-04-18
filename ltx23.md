@@ -3,6 +3,15 @@
 LTX 2.3 uses Gemma 3 12B as multi-modal text encoder. Gemma is by Google.
 It might be advisable to set width and height as multiples of 128 (or 32?).
 
+## 2026.04.18
+
+Huddadudd answering on how a good detailed 1536x832 3sec 25fps clip with a nice face in the distance:
+> i've been cobbling and updating my clownshark wf for a while now, its a hodgepodge of outdated and new stuff that i just tinker with;
+> currently its 4steps gauss legendre then euler 8 steps, 2nd pass is eulerancestralcfgpp
+> just a basic sampler;
+> run the dev model, .3 distill lora first stage .5 second stage;
+> thats also without any of the uprez or refinement passes
+
 ## 2026.04.16
 
 Richard Servello:
