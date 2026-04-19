@@ -1,7 +1,7 @@
 ﻿# LTX 2.3
 
 LTX 2.3 uses Gemma 3 12B as multi-modal text encoder. Gemma is by Google.
-It might be advisable to set width and height as multiples of 128 (or 32?).
+It might be advisable to set width and height as multiples of 32 (128 was suggested to fix some sort of issues).
 
 ## 2026.04.18
 
