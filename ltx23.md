@@ -1,4 +1,4 @@
-﻿ï»¿# LTX 2.3
+﻿# LTX 2.3
 
 LTX 2.3 uses Gemma 3 12B as multi-modal text encoder. Gemma is by Google.
 It might be advisable to set width and height as multiples of 128 (or 32?).
@@ -20,6 +20,17 @@ Ablejone's aka [Drozbay](hidden-knowledge.md#drozbay)'s LTX 2.3 ClowShark workfl
 > a does this..  
 > |  
 > then does that
+
+Alternatively the following style of prompting has been tried
+> [abc] A young  ...  
+>   
+> [scene] ...  
+>  
+> [sound] soft...  
+>  
+> [0-1s] [abc] raises ...  
+> |  
+> [1-6s] ... 
 
 The idea is that attention is masked so different prompts apply to different parts of the video.
 [GH:vrgamegirl19](https://github.com/vrgamegirl19)'s wf: [vr-i2v_PromptRelay](workflows/ltx/vr-i2v_PromptRelay.json)
@@ -142,6 +153,23 @@ Tooltip on `LTXV Add Latent Guide` from `LTX Video` node pack suggests that one 
 [Drozbay](hidden-knowledge.md#drozbay) on the difference between these two similar nodes:
 "Nothing should be special about the IC Lora guide version except that it allows you to control the latent downscale factor. and it also doesn't have the crf option".
 
+## Controlling The Camera
+
+N0NSense controls camera using a schematic video or a box/room everything happens in converted to a depth map + ic union control LoRa. His a2v videos created this way look great.
+
+[Cseti](https://www.youtube.com/@ChetiArt)'s LoRa to replicate camera motion from one video to another [HF:Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1);
+README and workflow: [HFdatasets:Cseti/ComfyUI-Workflows:ltx/2.3/ic-lora-cameraman](https://huggingface.co/datasets/Cseti/ComfyUI-Workflows/blob/main/ltx/2.3/ic-lora-cameraman/README.md);
+"This one took around 20-24 hours to train with 77 video pairs. And I also made two more runs one with 128 and another with around 40 pairs. But this one looks the best so far" "I used videos from pexels"
+
+## I2V
+
+Hevi:
+> lowering guidance stregth to 0.3-0.4 for the ref image helps with the watercolor artifacts
+
+## Motion
+
+To fix motion arfiacts ppl often generate at 50fps. Sometimes 35.
+
 ## Inpainting
 
 - inpaiting can be done with reference using Alisson's LoRa (see bellow).
@@ -199,6 +227,8 @@ Jonathan (WhatDreamsCost):
 > I was using phnatom 1.3b to detail my i2v first stage 480 x 201 that I did that size to get structure quick as I could changing prompt til I got there.
 > it was fast relatively. but the phantom did a nice fixup. then into the upscaler wf with ref image. but it had its faults.
 > today introducing x2 samplers to that upscaler stage instead of x1 sampler with x2 upscalers has meant I dont need the phantom stage, but I might keep it in anyway.
+
+Mark's video: [YT:Video Workflow Pipeline (April 2026)](https://www.youtube.com/watch?v=7Lqt3pgGefA)
 
 - [LTX-23-T2V-3PASS](workflows/ltx/garbus-LTX-23-T2V-3PASS.json) WF from Garbus: "This is the
   default LTX T2V wf with some things added and subgraphs unpacked. It's not pretty, but it works, or should give you an idea what modifications to make to a wf you prefer"
@@ -352,6 +382,10 @@ The role of a "solid mask" is not clear to the writer of this page but apparentl
 
 Some ambience noise on input audio may make ltx generatevlipsync better.
 
+[Mark DK Berry](https://markdkberry.com):
+> I use vibevoice multi speakers and then shove 10 second (about 3 lines of dialogue max) in to LTX ...
+> LTX 2.3 ... "add subtle ambient noise" trick
+
 ## Manual Sigmas
 
 David Show: `1.0, 0.995, 0.99, 0.9875, 0.975, 0.65, 0.28, 0.07, 0.0`, "it's a three stage workflow, but those new sigmas are just being used on the first pass."
@@ -385,11 +419,15 @@ V2V can be done either via IC Union LoRa-s or via latent denoise. Unmerged Conte
 
 ## LoRa-s And WFs
 
-- David Show shared  AnimeMix-@nim3mix-Final-LTX on [HF:davesnow1/Loras](https://huggingface.co/davesnow1/Loras/tree/main); note: his convention is that trigger word `@nim3mix` is part of model file name
-- Crinklypaper presented [crinklypaper-LTX-EXWF-NEW-Taz.json](workflows/ltx/crinklypaper-LTX-EXWF-NEW-Taz.json) as "new workflow with Kijai's efficiency nodes" and praised its operation with distill LoRa v1.1:
-  "This such great news, not having to run everything in 50fps, though I do see it still helps on fast motion to  run on 50 fps";
-  one of his LoRa-s: [CA:2415727/seikon-no-qwaser-ecchi-anime-style-lora-ltxv2?2716034](https://civitai.com/models/2415727/seikon-no-qwaser-ecchi-anime-style-lora-ltxv2?modelVersionId=2716034)
-  there should be other good LoRas next to it including a 3d LoRa and Gurren Laggan one
+- David Show
+  - David Show shared  AnimeMix-@nim3mix-Final-LTX on [HF:davesnow1/Loras](https://huggingface.co/davesnow1/Loras/tree/main); note: his convention is that trigger word `@nim3mix` is part of model file name
+  - Dave Snow1's animemix for LTX 2.3: [HF:davesnow1/Loras:Loras/tree](https://huggingface.co/davesnow1/Loras/tree/main) "I often crank it to 1.5"
+- Crinklypaper
+  - Crinklypaper presented [crinklypaper-LTX-EXWF-NEW-Taz.json](workflows/ltx/crinklypaper-LTX-EXWF-NEW-Taz.json) as "new workflow with Kijai's efficiency nodes" and praised its operation with distill LoRa v1.1:
+    "This such great news, not having to run everything in 50fps, though I do see it still helps on fast motion to  run on 50 fps";
+    one of his LoRa-s: [CA:2415727/seikon-no-qwaser-ecchi-anime-style-lora-ltxv2?2716034](https://civitai.com/models/2415727/seikon-no-qwaser-ecchi-anime-style-lora-ltxv2?modelVersionId=2716034)
+    there should be other good LoRas next to it including a 3d LoRa and Gurren Laggan one
+  - Crinklypaper's [LTX-23-change-voice](workflows/ltx/crinklypaper-LTX-23-change-voice.json)
 - [Ckinpdx](https://github.com/ckinpdx) is sharing a collection of workflows absorbing latest and greatest from various sources: [GH:ckinpdx/ckinpdx_comfyui_workflows](https://github.com/ckinpdx/ckinpdx_comfyui_workflows)
   including a latent looping workflow;
   [ckinpdx-LTX23_TorI2V_Humo_API](workflows/ltx/ckinpdx-LTX23_TorI2V_Humo_API.json) using HuMo 1.7B as the last cleanup step is probably up there as well, or soon will be
@@ -398,29 +436,29 @@ V2V can be done either via IC Union LoRa-s or via latent denoise. Unmerged Conte
   [CA:2540961?2855640](https://civitai.com/models/2540961?modelVersionId=2855640) dark fantasy?
   [CA:2535622](https://civitai.red/models/2535622) home of VRGamedevgirl on CA? place to get her 
   [crisp enhancer](https://civitai.red/models/2535622/ltx-23-enhancers) LoRa and other LoRa-s including Fantasy_Realism
-- Sir_Axe's [HF:siraxe/TTM_IC-lora_ltx2.3](https://huggingface.co/siraxe/TTM_IC-lora_ltx2.3) cartoony time to move for LTX 2.3;
-- [Cseti](https://www.youtube.com/@ChetiArt)'s LoRa to replicate camera motion from one video to another [HF:Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1);
-  README and workflow: [HFdatasets:Cseti/ComfyUI-Workflows:ltx/2.3/ic-lora-cameraman](https://huggingface.co/datasets/Cseti/ComfyUI-Workflows/blob/main/ltx/2.3/ic-lora-cameraman/README.md);
-  "This one took around 20-24 hours to train with 77 video pairs. And I also made two more runs one with 128 and another with around 40 pairs. But this one looks the best so far" "I used videos from pexels"
-- Dave Snow1's animemix for LTX 2.3: [HF:davesnow1/Loras:Loras/tree](https://huggingface.co/davesnow1/Loras/tree/main) "I often crank it to 1.5"
-- Sir_Axe's [HF:siraxe/MergeGreen_IC-lora_ltx2.3](https://huggingface.co/siraxe/MergeGreen_IC-lora_ltx2.3) merge one video with another; apparently some green frame is involved - as a separator?..;
-  "takes couple of seed tries and description of what changes, but it's also not perfect but better than just inserting start/end frames imo"
+- Sir_Axe
+  - Sir_Axe's [HF:siraxe/TTM_IC-lora_ltx2.3](https://huggingface.co/siraxe/TTM_IC-lora_ltx2.3) cartoony time to move for LTX 2.3;
+  - Sir_Axe's [HF:siraxe/MergeGreen_IC-lora_ltx2.3](https://huggingface.co/siraxe/MergeGreen_IC-lora_ltx2.3) merge one video with another; apparently some green frame is involved - as a separator?..;
+    "takes couple of seed tries and description of what changes, but it's also not perfect but better than just inserting start/end frames imo"
 - [HF:RuneXX/LTX-2.3-Workflows:Video-2-Video/LTX-2.3\_-\_V2V\_ReTake\_recreate\_any\_section\_of\_any\_video](https://huggingface.co/RuneXX/LTX-2.3-Workflows/blob/main/Video-2-Video/LTX-2.3_-_V2V_ReTake_recreate_any_section_of_any_video.json)
-- Crinklypaper's [LTX-23-change-voice](workflows/ltx/crinklypaper-LTX-23-change-voice.json)
-- VBVR HF: [HF:LiconStudio/Ltx2.3-VBVR-lora-I2V](https://huggingface.co/LiconStudio/Ltx2.3-VBVR-lora-I2V) better VBVR LoRa for LTX 2.3; 100Mb smaller than the one on Civitai;
-  the version on Civitai received rather cold reception; [YT:nekodificador](https://youtube.com/nekodificador): "I'm liking it for now tbh. All his cartoonish experiments im doing are way more coherent with the lora";
-  seems to also make lip articulation stronger;
-  "VBVR refers to a technique that enables video models such as Wan to operate in a more logical and structured way.
-  Originally, it existed only for the Wan version";
-  "official vbvr for wan is trained by the guys who worked it out; but they did provided all the training data"
-- VBVR Civitai: [Mark DK Berry](https://markdkberry.com): "I was having big problems with LTX morphing everything and that was largely fixed with V3 civitai ... VBVR version";
-  maybe [this](https://civitai.com/models/2497207/ltx-23-i2v-t2v-video-reasoning-lora-vbvr) ?
-- VBVR Official? [HF:Video-Reason/VBVR-LTX2.3-diffsynth](https://huggingface.co/Video-Reason/VBVR-LTX2.3-diffsynth)
-- ID Lora: [GH:pineambassador/ComfyUI-ID-Lora-Pine](https://github.com/pineambassador/ComfyUI-ID-Lora-Pine)
-  "injecting reference images at specified frames in the timeline to increase likeness retention (frontal portrait, profile portrait, re-inject the first frame, etc), without clobbering the scene";
-  "I noticed when using id lora then u got to prompt how you want voice tone be , calm , angry etc"
-- ID Lora: [GH:pineambassador/ComfyUI-ID-Lora-Pine](https://github.com/pineambassador/ComfyUI-ID-Lora-Pine) trained around 1 subject and very alpha
-- ID Lora: [GH:ID-LoRA/ID-LoRA](https://github.com/ID-LoRA/ID-LoRA/tree/main) [HF:AviadDahan/LTX-2.3-ID-LoRA-CelebVHQ-3K](https://huggingface.co/AviadDahan/LTX-2.3-ID-LoRA-CelebVHQ-3K)
+- VBVR
+  - VBVR HF: [HF:LiconStudio/Ltx2.3-VBVR-lora-I2V](https://huggingface.co/LiconStudio/Ltx2.3-VBVR-lora-I2V) better VBVR LoRa for LTX 2.3; 100Mb smaller than the one on Civitai;
+    the version on Civitai received rather cold reception; [YT:nekodificador](https://youtube.com/nekodificador): "I'm liking it for now tbh. All his cartoonish experiments im doing are way more coherent with the lora";
+    seems to also make lip articulation stronger;
+    "VBVR refers to a technique that enables video models such as Wan to operate in a more logical and structured way.
+    Originally, it existed only for the Wan version";
+    "official vbvr for wan is trained by the guys who worked it out; but they did provided all the training data"
+  - VBVR Civitai: [Mark DK Berry](https://markdkberry.com): "I was having big problems with LTX morphing everything and that was largely fixed with V3 civitai ... VBVR version";
+    maybe [this](https://civitai.com/models/2497207/ltx-23-i2v-t2v-video-reasoning-lora-vbvr) ?
+  - VBVR Official [HF:Video-Reason/VBVR-LTX2.3-diffsynth](https://huggingface.co/Video-Reason/VBVR-LTX2.3-diffsynth);
+    Sir_Axe converted it to be loadable into ComfyUI: [HF:siraxe/VBVR-LTX2.3-diffsynth_comfyui](https://huggingface.co/siraxe/VBVR-LTX2.3-diffsynth_comfyui/tree/main)
+  - JohnDopamine re VBVR: "For Wan it actually added motion/creativity at -.5 to -1"
+- ID LoRa
+  - ID Lora: [GH:pineambassador/ComfyUI-ID-Lora-Pine](https://github.com/pineambassador/ComfyUI-ID-Lora-Pine)
+    "injecting reference images at specified frames in the timeline to increase likeness retention (frontal portrait, profile portrait, re-inject the first frame, etc), without clobbering the scene";
+    "I noticed when using id lora then u got to prompt how you want voice tone be , calm , angry etc"
+  - ID Lora: [GH:pineambassador/ComfyUI-ID-Lora-Pine](https://github.com/pineambassador/ComfyUI-ID-Lora-Pine) trained around 1 subject and very alpha
+  - ID Lora: [GH:ID-LoRA/ID-LoRA](https://github.com/ID-LoRA/ID-LoRA/tree/main) [HF:AviadDahan/LTX-2.3-ID-LoRA-CelebVHQ-3K](https://huggingface.co/AviadDahan/LTX-2.3-ID-LoRA-CelebVHQ-3K)
 - "LoRa motion transfer" - but might be not that necessary
 - [Oumoumad](https://gear-productions.com)'s outpaint LoRa: [HF:oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint) - fills black bars/pillars with content
 - LTX smoothmix: [CA:2524245](https://civitai.com/models/2524245/smoothmix-animations-ltx?modelVersionId=2837052) "ltx trained on smoothmix images from smoothmix sd1.5 model"
