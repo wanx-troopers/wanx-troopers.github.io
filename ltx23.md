@@ -424,6 +424,9 @@ Because one of the checkpoints is called "talkvid" ID-LoRa is also referred to a
 > |  
 > [1-6s] ... 
 
+Gleb Tretyak:
+> not 10/10 follow. timings should be sufficiently calculated by user, otherwise it's ignored by the model I believe; and prompt relay makes it worse
+
 ## LoRa-s, Alisson
 
 - EditAnything IC LoRA: [CA:2553102/editanything?2869279](https://civitai.red/models/2553102/editanything?modelVersionId=2869279),
