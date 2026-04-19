@@ -21,16 +21,7 @@ Ablejone's aka [Drozbay](hidden-knowledge.md#drozbay)'s LTX 2.3 ClowShark workfl
 > |  
 > then does that
 
-Alternatively the following style of prompting has been tried
-> [abc] A young  ...  
->   
-> [scene] ...  
->  
-> [sound] soft...  
->  
-> [0-1s] [abc] raises ...  
-> |  
-> [1-6s] ... 
+Alternatively the time speach is uttered can be controlled via [ID-LoRa](ltx23.md#id-lora) which supports `[4-8s] ...` style of prompting.
 
 The idea is that attention is masked so different prompts apply to different parts of the video.
 [GH:vrgamegirl19](https://github.com/vrgamegirl19)'s wf: [vr-i2v_PromptRelay](workflows/ltx/vr-i2v_PromptRelay.json)
@@ -401,6 +392,38 @@ V2V can be done either via IC Union LoRa-s or via latent denoise. Unmerged Conte
 - [Mark DK Berry](https://markdkberry.com) on basic VRAM optimizations and NAG to remove subtitles: [nag-other-basic-setup](workflows/ltx/mdkb-nag-other-basic-setup.webp)
 - Hicho's [ltx-2.3-simple-v2v](workflows/ltx/hicho-ltx-2.3-simple-v2v.json) prob. the simplest WF involving a depth map
 
+## ID LoRa
+
+ID-LoRa apparently provides both visual and audio character likeness. Additionally it seems to support timed prompting otherwise not available on vanilla LTX 2.3.
+Because one of the checkpoints is called "talkvid" ID-LoRa is also referred to as "talkvid".
+
+- Starting point especially for documentation is [GH:ID-LoRA/ID-LoRA/](https://github.com/ID-LoRA/ID-LoRA/)
+  "One ID-LoRA per run. The two available checkpoints (`id-lora-celebvhq` and `id-lora-talkvid`) are alternatives trained on different datasets, not meant to be combined.  
+  Stage 1: ID-LoRA + identity guidance + reference audio  
+  Stage 2: Distilled LoRA only, no ID-LoRA. Audio from stage 1 is frozen - only video gets spatially upsampled/refined."  
+  "Update — March 24, 2026: Native ComfyUI ID-LoRA support for LTX2 is now in upstream ComfyUI, merged
+  in PR [#13111](https://github.com/Comfy-Org/ComfyUI/pull/13111). It adds the `LTXVReferenceAudio` node for reference-audio speaker identity transfer;
+  original ID-LoRA weights work as-is with no conversion. Thank you to Kijai for implementing and contributing this integration."
+- Earlier attempt to create ComfyUI nodes: [GH:pineambassador/ComfyUI-ID-Lora-Pine](https://github.com/pineambassador/ComfyUI-ID-Lora-Pine)
+  "The original authors have it as roadmap to create a comfyui implementation. In the meantime, this was my attempt"
+  "injecting reference images at specified frames in the timeline to increase likeness retention (frontal portrait, profile portrait, re-inject the first frame, etc), without clobbering the scene";
+  "I noticed when using id lora then u got to prompt how you want voice tone be , calm , angry etc"
+  "trained around 1 subject and very alpha
+- [HF:AviadDahan/LTX-2.3-ID-LoRA-CelebVHQ-3K](https://huggingface.co/AviadDahan/LTX-2.3-ID-LoRA-CelebVHQ-3K)
+  [HF:AviadDahan/LTX-2.3-ID-LoRA-TalkVid-3K](https://huggingface.co/AviadDahan/LTX-2.3-ID-LoRA-TalkVid-3K)
+
+`TalkVid` flavor supports the following style of prompting
+
+> [abc] A young  ...  
+>   
+> [scene] ...  
+>  
+> [sound] soft...  
+>  
+> [0-1s] [abc] raises ...  
+> |  
+> [1-6s] ... 
+
 ## LoRa-s, Alisson
 
 - EditAnything IC LoRA: [CA:2553102/editanything?2869279](https://civitai.red/models/2553102/editanything?modelVersionId=2869279),
@@ -453,12 +476,6 @@ V2V can be done either via IC Union LoRa-s or via latent denoise. Unmerged Conte
   - VBVR Official [HF:Video-Reason/VBVR-LTX2.3-diffsynth](https://huggingface.co/Video-Reason/VBVR-LTX2.3-diffsynth);
     Sir_Axe converted it to be loadable into ComfyUI: [HF:siraxe/VBVR-LTX2.3-diffsynth_comfyui](https://huggingface.co/siraxe/VBVR-LTX2.3-diffsynth_comfyui/tree/main)
   - JohnDopamine re VBVR: "For Wan it actually added motion/creativity at -.5 to -1"
-- ID LoRa
-  - ID Lora: [GH:pineambassador/ComfyUI-ID-Lora-Pine](https://github.com/pineambassador/ComfyUI-ID-Lora-Pine)
-    "injecting reference images at specified frames in the timeline to increase likeness retention (frontal portrait, profile portrait, re-inject the first frame, etc), without clobbering the scene";
-    "I noticed when using id lora then u got to prompt how you want voice tone be , calm , angry etc"
-  - ID Lora: [GH:pineambassador/ComfyUI-ID-Lora-Pine](https://github.com/pineambassador/ComfyUI-ID-Lora-Pine) trained around 1 subject and very alpha
-  - ID Lora: [GH:ID-LoRA/ID-LoRA](https://github.com/ID-LoRA/ID-LoRA/tree/main) [HF:AviadDahan/LTX-2.3-ID-LoRA-CelebVHQ-3K](https://huggingface.co/AviadDahan/LTX-2.3-ID-LoRA-CelebVHQ-3K)
 - "LoRa motion transfer" - but might be not that necessary
 - [Oumoumad](https://gear-productions.com)'s outpaint LoRa: [HF:oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint) - fills black bars/pillars with content
 - LTX smoothmix: [CA:2524245](https://civitai.com/models/2524245/smoothmix-animations-ltx?modelVersionId=2837052) "ltx trained on smoothmix images from smoothmix sd1.5 model"
