@@ -1,4 +1,4 @@
-﻿# LTX 2.3
+﻿ï»¿# LTX 2.3
 
 LTX 2.3 uses Gemma 3 12B as multi-modal text encoder. Gemma is by Google.
 It might be advisable to set width and height as multiples of 128 (or 32?).
@@ -78,7 +78,10 @@ They also provide under LTX-2 umbrella
 ## Nodes Of Interest
 
 - `LTXVLatentUpsampler`
+
 - `LTXVImgToVideoInplace` - seems to swap the initial frame? prob. useful in I2V workflows where a high-quality version of initial frame is available
+- `LTXVImgToVideoConditioning`
+- `LTXVAddGuide`
 
 ## Sampler Nodes
 
@@ -322,8 +325,6 @@ Training IC LoRa requires twice the VRAM and twice the time compared to traditio
 > I never needed to go beyond 5000 steps, in fact most of the time even in 1500 steps you already see your desired effect
 
 mamad8:
-Hi everyone ! I don�t know if these are already known facts or not but here are my two insights from using and training lots of models on ltx2.3 and other models lately (I�ve been experimenting a lot) : 
-
 > Using split sigmas with the distill Lora (strength 0.5) to set cfg 2 for the first 2 steps and cfg 1 for the remaining 6
 > steps helps A LOT, especially audio but also overall coherence and motion
 
@@ -331,7 +332,7 @@ mamad8:
 > If you have trained a character Lora but you're often using it with another (or multiple) loras you might have seen that the character is less accurate
 > (it depends on how much the loras you use have been trained on specific faces) : select your best 4-6 close ups of your character and train a new Lora
 > rank 4 on top of the models you use (and your previous trained Lora) for 500-1000 steps, the result will be absolutely night and day.
-> Currently I don’t think any trainer allows training loras on top of others (it’s not finetuning, simply merging the provided loras to the base
+> Currently I don't think any trainer allows training loras on top of others (it's not finetuning, simply merging the provided loras to the base
 > model before training a completely new one. This way the loras already trained do not lose anything they have learned and they overfit a lot less).
 > I'll release the training code to train on top of loras soon (fork of aitoolkit)
 
@@ -374,7 +375,7 @@ V2V can be done either via IC Union LoRa-s or via latent denoise. Unmerged Conte
 - Alisson Pereira's `animate2real`: [HF:Alissonerdx/LTX-LoRAs:ltx23_anime2real_rank64_v1_4500](https://huggingface.co/Alissonerdx/LTX-LoRAs/blob/main/ltx23_anime2real_rank64_v1_4500.safetensors);
   also [CA:2527511/anime2half-real](https://civitai.com/models/2527511/anime2half-real)
 - Alisson Pereira's first experimental version of MR2V (Masked Reference-to-Video): [HF:Alissonerdx/LTX-LoRAs](https://huggingface.co/Alissonerdx/LTX-LoRAs)
-  "It’s a reference-based inpainting LoRA ... I trained several variants, and this rank 32 one was the one I liked the most"; use `ltx23_inpaint_masked_r2v_rank32_v1_3000steps.safetensors`;
+  "It's a reference-based inpainting LoRA ... I trained several variants, and this rank 32 one was the one I liked the most"; use `ltx23_inpaint_masked_r2v_rank32_v1_3000steps.safetensors`;
   "If you want speed, take the first frame from the generated control video, drop it into ChatGPT, and say: 'Describe this video with the object in the green area placed where the magenta mask is.' Then you add more details to it."
   "This IC  LoRa was trained for objects in general, not people." Benji's [video](https://www.youtube.com/watch?v=E_XRBRykDwE) on it;
   "The saddest part is that he seems to have changed the size of the green part on the side of the video and didn't follow the prompt recommendations I left for masked r2v";
