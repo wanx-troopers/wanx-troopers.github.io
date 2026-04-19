@@ -161,6 +161,10 @@ Hevi:
 
 To fix motion arfiacts ppl often generate at 50fps. Sometimes 35.
 
+It seems addition of VBVR LoRa might be helping make motion less smudged.
+
+See also: [Guides](ltx23.md#guides) section for [YT:nekodificador](https://youtube.com/nekodificador)'s trick to increase amount of motion.
+
 ## Inpainting
 
 - inpaiting can be done with reference using Alisson's LoRa (see bellow).
