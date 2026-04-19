@@ -2,6 +2,8 @@
 
 ## Promising For Comfy
 
+* [kimodo](https://research.nvidia.com/labs/sil/projects/kimodo/)  kinematic motion diffusion model trained on large-scale optical mocap data "Kimodo's text encoder uses Meta Llama 3 8B, which is a gated model on HuggingFace"
+* cascadeur seems to be some other way to automate moving rigs in blender??? not clear if free or paid only.. what is Akeytsu which is free?
 * [GH:fblissjr/fb-claude-skills](https://github.com/fblissjr/fb-claude-skills) A collection of Claude Code plugins, skills, and MCP Apps. Installable as a plugin marketplace in Claude Code, Cowork, and Claude Desktop.
 * [firstframego.github.io](https://firstframego.github.io/) article suggesting a way to pack all references into 1st frame
 * [GH:DAVIAN-Robotics/EgoX](https://github.com/DAVIAN-Robotics/EgoX), [keh0t0.github.io/EgoX](https://keh0t0.github.io/EgoX/) convert any video to 1st person view; Wan 2.1 I2V 480p LoRA: [HF:DAVIAN-Robotics/EgoX](https://huggingface.co/DAVIAN-Robotics/EgoX/tree/main)

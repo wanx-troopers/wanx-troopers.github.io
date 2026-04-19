@@ -11,7 +11,18 @@ Huddadudd answering on how a good detailed 1536x832 3sec 25fps clip with a nice 
 > just a basic sampler;
 > run the dev model, .3 distill lora first stage .5 second stage;
 > thats also without any of the uprez or refinement passes;
-> zimage is the image, just standard sampling, clownshark is stage 1, which is the bulk of the sampling
+> zimage is the image, just standard sampling, clownshark is stage 1, which is the bulk of the sampling;
+> i mostly just modify versions of able's workflows
+
+Ablejone's aka [Drozbay](hidden-knowledge.md#drozbay)'s LTX 2.3 ClowShark workflow: [droz_LTX-2_SharkSampling_v7.1](workflows/ltx/droz_LTX-2_SharkSampling_v7.1.png)
+
+[GH:kijai/ComfyUI-PromptRelay](https://github.com/kijai/ComfyUI-PromptRelay) to implement "Prompt relay" technique using prompts like:
+> a does this..  
+> |  
+> then does that
+
+The idea is that attention is masked so different prompts apply to different parts of the video.
+[GH:vrgamegirl19](https://github.com/vrgamegirl19)'s wf: [vr-i2v_PromptRelay](workflows/ltx/vr-i2v_PromptRelay.json)
 
 ## 2026.04.16
 
@@ -58,7 +69,6 @@ mamad8: "Using split sigmas with the distill Lora (strength 0.5) to set cfg 2 fo
 They also provide under LTX-2 umbrella
 
 - Lightricks/LTX-2-19b-IC-LoRA-Detailer "still usable with 2.3 , thought it was only available for 2"
-
 
 ## Alternative Weights Packagings
 
@@ -187,8 +197,6 @@ Jonathan (WhatDreamsCost):
 > it was fast relatively. but the phantom did a nice fixup. then into the upscaler wf with ref image. but it had its faults.
 > today introducing x2 samplers to that upscaler stage instead of x1 sampler with x2 upscalers has meant I dont need the phantom stage, but I might keep it in anyway.
 
-
-
 - [LTX-23-T2V-3PASS](workflows/ltx/garbus-LTX-23-T2V-3PASS.json) WF from Garbus: "This is the
   default LTX T2V wf with some things added and subgraphs unpacked. It's not pretty, but it works, or should give you an idea what modifications to make to a wf you prefer"
 - [ai_hakase's wf](https://x.com/ai_hakase_/status/2040417832769585194?s=20)
@@ -218,6 +226,13 @@ It was reported an overly high sqare resolution (1920x1920) after upscaler can c
 [Wan-Various_Refine-Upscale](workflows/ltx/Wan-Various_Refine-Upscale.json) could potentially be used to enhance LTX videos with various WAN models.
 
 > why ... 4 step sigmas like `1, 0.85, 0.7250, 0.4219, 0.0` on the last upscaler sampler when 6 steps is clearly superior in results?
+
+Richard Servello
+> Ltx is meant to be 2 stage but a lot of people insist on one pass and complain about artifacts
+
+[Mark DK Berry](https://markdkberry.com):
+> One thing I love about LTX that WAN is [bad] at, is I can shove the same video through it over again and no problems.
+> WAN will blister the contrast to hell if you try that, VACE too.
 
 ## Hints
 
@@ -307,14 +322,28 @@ Training IC LoRa requires twice the VRAM and twice the time compared to traditio
 > I never needed to go beyond 5000 steps, in fact most of the time even in 1500 steps you already see your desired effect
 
 mamad8:
-> If you have trained a character Lora but you’re often using it with another (or multiple) loras you might have seen that the character is less accurate
+Hi everyone ! I don�t know if these are already known facts or not but here are my two insights from using and training lots of models on ltx2.3 and other models lately (I�ve been experimenting a lot) : 
+
+> Using split sigmas with the distill Lora (strength 0.5) to set cfg 2 for the first 2 steps and cfg 1 for the remaining 6
+> steps helps A LOT, especially audio but also overall coherence and motion
+
+mamad8:
+> If you have trained a character Lora but you're often using it with another (or multiple) loras you might have seen that the character is less accurate
 > (it depends on how much the loras you use have been trained on specific faces) : select your best 4-6 close ups of your character and train a new Lora
 > rank 4 on top of the models you use (and your previous trained Lora) for 500-1000 steps, the result will be absolutely night and day.
 > Currently I don’t think any trainer allows training loras on top of others (it’s not finetuning, simply merging the provided loras to the base
 > model before training a completely new one. This way the loras already trained do not lose anything they have learned and they overfit a lot less).
-> I’ll release the training code to train on top of loras soon (fork of aitoolkit)
+> I'll release the training code to train on top of loras soon (fork of aitoolkit)
 
 [GH:richservo/rs-nodes](https://github.com/richservo/rs-nodes) LoRa training inside ComfyUI "adding ffn chunking fixed the OOM" "I'm ... training on 576x576x97 ... it's much more efficient ... no idea why"
+
+[GH:vrgamegirl19](https://github.com/vrgamegirl19):
+> so when training with images you end up loosing motion the higher the steps ...
+> I took my 1000 step lora which keeps motion but does still add the style a bit and
+> used that on the first pass then put my 5000 step lora on the 2nd pass ...
+> add the that VBVR to the fist pass only 
+
+first video has the 5000 step lora on both first and 2nd and the 2nd video has the 1000 step on first and 5000 step on 2nd pass.
 
 ## Sound
 
@@ -360,7 +389,8 @@ V2V can be done either via IC Union LoRa-s or via latent denoise. Unmerged Conte
   "This such great news, not having to run everything in 50fps, though I do see it still helps on fast motion to  run on 50 fps";
   one of his LoRa-s: [CA:2415727/seikon-no-qwaser-ecchi-anime-style-lora-ltxv2?2716034](https://civitai.com/models/2415727/seikon-no-qwaser-ecchi-anime-style-lora-ltxv2?modelVersionId=2716034)
   there should be other good LoRas next to it including a 3d LoRa and Gurren Laggan one
-- [Ckinpdx](https://github.com/ckinpdx) is sharing a collection of workflows absorbing latest and greatest from various sources: [GH:ckinpdx/ckinpdx_comfyui_workflows](https://github.com/ckinpdx/ckinpdx_comfyui_workflows);
+- [Ckinpdx](https://github.com/ckinpdx) is sharing a collection of workflows absorbing latest and greatest from various sources: [GH:ckinpdx/ckinpdx_comfyui_workflows](https://github.com/ckinpdx/ckinpdx_comfyui_workflows)
+  including a latent looping workflow;
   [ckinpdx-LTX23_TorI2V_Humo_API](workflows/ltx/ckinpdx-LTX23_TorI2V_Humo_API.json) using HuMo 1.7B as the last cleanup step is probably up there as well, or soon will be
 - [GH:vrgamegirl19/comfyui-vrgamedevgirl:Workflows](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl/tree/main/Workflows) workflows from one of the masters :) Somewhare out there there are "Claymation", "Puppet",
   [Golden Age Comic](https://civitai.com/models/2532516/ltx-23-golden-age-comic), [Enhancer](https://civitai.com/models/2535622?modelVersionId=2849716) LoRa-s by her as well;
