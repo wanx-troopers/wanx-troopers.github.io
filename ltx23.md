@@ -3,18 +3,13 @@
 LTX 2.3 uses Gemma 3 12B as multi-modal text encoder. Gemma is by Google.
 It might be advisable to set width and height as multiples of 32 (128 was suggested to fix some sort of issues).
 
-## 2026.04.18
+See also:
+- [Dialing In LTX 2.3 Workflow](ltx23-dialing-in.md)
+- [LTX 2.3 Statements](ltx23-statements.md)
 
-Huddadudd answering on how a good detailed 1536x832 3sec 25fps clip with a nice face in the distance:
-> i've been cobbling and updating my clownshark wf for a while now, its a hodgepodge of outdated and new stuff that i just tinker with;
-> currently its 4steps gauss legendre then euler 8 steps, 2nd pass is eulerancestralcfgpp
-> just a basic sampler;
-> run the dev model, .3 distill lora first stage .5 second stage;
-> thats also without any of the uprez or refinement passes;
-> zimage is the image, just standard sampling, clownshark is stage 1, which is the bulk of the sampling;
-> i mostly just modify versions of able's workflows
+## Prompt Relay
 
-Ablejone's aka [Drozbay](hidden-knowledge.md#drozbay)'s LTX 2.3 ClowShark workflow: [droz_LTX-2_SharkSampling_v7.1](workflows/ltx/droz_LTX-2_SharkSampling_v7.1.png)
+Prompt relay is a new technique which sub-prompts to specific parts of the video only though attention masking.
 
 [GH:kijai/ComfyUI-PromptRelay](https://github.com/kijai/ComfyUI-PromptRelay) to implement "Prompt relay" technique using prompts like:
 > a does this..  
@@ -23,41 +18,7 @@ Ablejone's aka [Drozbay](hidden-knowledge.md#drozbay)'s LTX 2.3 ClowShark workfl
 
 Alternatively the time speach is uttered can be controlled via [ID-LoRa](ltx23.md#id-lora) which supports `[4-8s] ...` style of prompting.
 
-The idea is that attention is masked so different prompts apply to different parts of the video.
 [GH:vrgamegirl19](https://github.com/vrgamegirl19)'s wf: [vr-i2v_PromptRelay](workflows/ltx/vr-i2v_PromptRelay.json)
-
-## 2026.04.16
-
-Richard Servello:
-> LTX union ic-lora was trained on a distilled sigma schedule. So you have to use their exact gradient for it to work
-
-Zueuk on LTX audio latents:
-> latent cut; y axis; which is unobvious;
-> LTX Add Latents can combine them, but only if none -or- both of them have mask, otherwise it fails
-
-[Ckinpdx](https://github.com/ckinpdx) on `LTX Audio Latent Trim` node:
-> I added a strip mask to the audio latent trim to address that
-
-## 2026.04.14
-
-- LTX 2.3 distilled v1.1 released by LightBricks - model and LoRa - LoRa trained separately from model - LoRa allows to adjust strength - more flexible
-- Motion Track & Union Control IC LoRas update
-
-`LTXV Chunk FeedForward (for low VRAM)` - "don't touch the chunk size, it's mostly testing param and in practice 2 is enough"
-"it chunks the feedforward layer (ffn) calculation, doing it in 2 chunks already puts it below other VRAM peaks
-and default non-chunked is a huge spike that can be multiple GB of higher peak VRAM at larger inputs".
-
-`res_multistep` might be better for sound generation than `euler` with distilled.
-
-grimm1111: "The v1.1 distill is a noticeable improvement.  The details and coherence are improved.
-I typically run the distill model with the distill lora at neg 0.2 or so. 15 steps, CFG 1; Also I only ever do single pass, that's just me.  And no temporal upscale or anything like that.
-my favorite aesthetic is "movie shot in the 1990's" so I don't really go for the super HD stuff.  I like the softer analog camera look over the super-digitized look"
-
-> distill 1.0. I feel the colours are a lot more natural. maybe just a saturation node will be enough.
-
-mamad8: "Using split sigmas with the distill Lora (strength 0.5) to set cfg 2 for the first 2 steps and cfg 1 for the remaining 6 steps helps A LOT, especially audio but also overall coherence and motion"
-
-> distill 1.1 as lora str 0.6 and just works
 
 ## From The Makers
 
@@ -84,23 +45,9 @@ They also provide under LTX-2 umbrella
 - `LTXVImgToVideoInplace` - seems to swap the initial frame? prob. useful in I2V workflows where a high-quality version of initial frame is available
 - `LTXVImgToVideoConditioning`
 - `LTXVAddGuide`
+- `LTXV Audio Video Mask`
 
-## Sampler Nodes
-
-Hmm.. `LTXVLoopingSampler`... what is it?..
-
-## Samplers
-
-[Ckinpdx](https://github.com/ckinpdx):
-> res2s is good for quality but also handles higher fps better ... i started out with eulers, then lcm, then settled on res2s;
-> the manual sigmas describe 3 steps, which works for euler in the second stage but is too many for res2s.
-> for the second stage to use res2s without overbaking i use basi scheduler beta 0.34 denoise 2 steps.
-> i run dev with distill and drop the distill down to 0.5 from the standard 0.6 in the second pass
-![ckinpdx-ltx-dimension-calculator](screenshots/nodes/ckinpdx-ltx-dimension-calculator.webp)
-
-
-Hevi:
-> lcm for first stage much faster than anything else imo
+- `LTXVLoopingSampler`... hmm what is it?..
 
 ## IC LoRa-s
 
@@ -172,6 +119,12 @@ See also: [Guides](ltx23.md#guides) section for [YT:nekodificador](https://youtu
   additional details: [pcvideomask:PC Video Mask Smooth](screenshots/nodes/pcvideomask-pc-video-mask-smooth.webp) from [GH:pavelchezcin/pcvideomask](https://github.com/pavelchezcin/pcvideomask)
   + sampler=linear/euler + scheduler=exponential were reported to help with detailing part of the video - mouth in this case;
   audio then guided lip motion
+
+## Extensions
+
+It has been reported that LTX 2.3 extends videos quite well forward but a method of extending backwards without a LoRa hasn't been worked out yet.
+[YT:LTX2.3 | How to Extend](https://www.youtube.com/watch?v=kY3MoyLUWXw) presents the latent extension method using `LTXV Audio Video Mask` from `KJNodes`.
+[GH:ckinpdx/ckinpdx_comfyui_workflows](https://github.com/ckinpdx/ckinpdx_comfyui_workflows) contains a latent looping workflow which again apparently uses the same technique.
 
 ## Multi-Pass Workflows
 
@@ -395,6 +348,7 @@ V2V can be done either via IC Union LoRa-s or via latent denoise. Unmerged Conte
 
 - [Mark DK Berry](https://markdkberry.com) on basic VRAM optimizations and NAG to remove subtitles: [nag-other-basic-setup](workflows/ltx/mdkb-nag-other-basic-setup.webp)
 - Hicho's [ltx-2.3-simple-v2v](workflows/ltx/hicho-ltx-2.3-simple-v2v.json) prob. the simplest WF involving a depth map
+- Ablejone's aka [Drozbay](hidden-knowledge.md#drozbay)'s LTX 2.3 ClowShark workflow: [droz_LTX-2_SharkSampling_v7.1](workflows/ltx/droz_LTX-2_SharkSampling_v7.1.png)
 
 ## ID LoRa
 
@@ -492,5 +446,6 @@ Gleb Tretyak:
 - [HF:o-8-o/LTX-2.3-skin-hair](https://huggingface.co/o-8-o/LTX-2.3-skin-hair/tree/main)
 - Zueuk is experimenting on latent loops workflow not yet shared; "i'm basically only doing I2V; and not using 'inplace' nodes at all"
 - WackyWindsurfer's [LTX-2.3 Synthwave style LoRa to civitai (red)](https://civitai.red/models/2551439/ltx-23-synthwave)
+- [HF:lovis93/crt-animation-terminal-ltx-2.3-lora](https://huggingface.co/lovis93/crt-animation-terminal-ltx-2.3-lora)
 
 - huh a Wan LoRa used in conjunction with LTX wf-s?.. [HF:Evados/DiffSynth-Studio-Lora-Wan2.1-ComfyUI](https://huggingface.co/Evados/DiffSynth-Studio-Lora-Wan2.1-ComfyUI/blob/main/dg_wan2_1_v1_3b_lora_extra_noise_detail_motion.safetensors)

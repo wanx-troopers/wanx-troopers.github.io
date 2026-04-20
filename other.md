@@ -2,6 +2,7 @@
 
 ## Promising For Comfy
 
+* [GH:justdubit/just-dub-it](https://github.com/justdubit/just-dub-it)
 * [kimodo](https://research.nvidia.com/labs/sil/projects/kimodo/)  kinematic motion diffusion model trained on large-scale optical mocap data "Kimodo's text encoder uses Meta Llama 3 8B, which is a gated model on HuggingFace"
 * cascadeur seems to be some other way to automate moving rigs in blender??? not clear if free or paid only.. what is Akeytsu which is free?
 * [GH:fblissjr/fb-claude-skills](https://github.com/fblissjr/fb-claude-skills) A collection of Claude Code plugins, skills, and MCP Apps. Installable as a plugin marketplace in Claude Code, Cowork, and Claude Desktop.
