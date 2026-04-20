@@ -8,6 +8,8 @@
 
 2026.04 [LTX 2.3](ltx23.md) released
 
+2026.04 Ernie, a new 8B image generation model released
+
 2026.03 This website is in a low-updates mode
 
 2026.03 FireRed Apache 2.0 20B Image Edit Model Released v1.1

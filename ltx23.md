@@ -370,7 +370,7 @@ Because one of the checkpoints is called "talkvid" ID-LoRa is also referred to a
 - [HF:AviadDahan/LTX-2.3-ID-LoRA-CelebVHQ-3K](https://huggingface.co/AviadDahan/LTX-2.3-ID-LoRA-CelebVHQ-3K)
   [HF:AviadDahan/LTX-2.3-ID-LoRA-TalkVid-3K](https://huggingface.co/AviadDahan/LTX-2.3-ID-LoRA-TalkVid-3K)
 
-`TalkVid` flavor supports the following style of prompting
+`TalkVid` flavor possibly supports the following style of prompting
 
 > [abc] A young  ...  
 >   
