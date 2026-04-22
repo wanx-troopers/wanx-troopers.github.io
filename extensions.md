@@ -74,6 +74,11 @@ Wan 2.2 models unfortunately don't seem to be clip vision aware at all, expect W
 
 # Color Matching
 
+Kijai announced native ColorTransfer node:
+"the native color match node is now merged along with the native SUPIR support, it's better than my old ColorMatch, fully on GPU and with more source match modes, so possibly relevant for LTX too";
+not for latents, purely for pixels
+![kj-native-colortransfer](screenshots/nodes/kj-native-colortransfer.webp)
+
 One interesting approach which can in theory be used in combination with any extension method is color matching.
 It has been tested in particular in combination with [SVI 2.0 Pro](svi.md#svi-20-pro) and was able to successfully hide the fact that contrast/lightness had still a little driften after two extensions.
 

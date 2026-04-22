@@ -13,6 +13,9 @@ Huddadudd answering on how a good detailed 1536x832 3sec 25fps clip with a nice 
 > zimage is the image, just standard sampling, clownshark is stage 1, which is the bulk of the sampling;
 > i mostly just modify versions of able's workflows
 
+[Ckinpdx](https://github.com/ckinpdx):
+> pretty standard as far as generation parameters, one stage, dev w/ 0.6 distill, euler, linear quadratic 8 steps
+
 ## Samplers
 
 > res_2s is good with teeth

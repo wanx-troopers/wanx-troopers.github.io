@@ -2,6 +2,13 @@
 
 Main article: [LTX 2.3](ltx23.md)
 
+## 2026.04.21
+
+PhoenixRisen:
+> motions seems to be accurate in the early steps but by the time u get to step 8 a lot of that motion is greatly removed.
+> Like somebody walking seems more fluid in the early steps, walking seems much dulled down by step 8. I am using distilled saftenors 1.1.
+> I noticed increasing the cfg to 2.0 helps.
+
 ## 2026.04.16
 
 Zueuk on LTX audio latents:

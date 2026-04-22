@@ -20,6 +20,13 @@ Alternatively the time speach is uttered can be controlled via [ID-LoRa](ltx23.m
 
 [GH:vrgamegirl19](https://github.com/vrgamegirl19)'s wf: [vr-i2v_PromptRelay](workflows/ltx/vr-i2v_PromptRelay.json)
 
+> [NAG] just doesn't work with prompt relay because both patch cross attention
+
+> prompt relay has to use sdpa for crossattn because sage doesn't support the masking
+
+SirAxe's experimental nodes to apply LoRa-s to different parts of the video selectively, extending functionality of prompt relay:
+[GH:kijai/ComfyUI-PromptRelay/pull/1](https://github.com/kijai/ComfyUI-PromptRelay/pull/1)
+
 ## From The Makers
 
 [HF:Lightricks](https://huggingface.co/Lightricks) provide
@@ -37,6 +44,7 @@ They also provide under LTX-2 umbrella
 
 - [GH:Hippotes/LTX-2.3-various-formats](https://huggingface.co/Hippotes/LTX-2.3-various-formats/tree/main) including nvfp4;
   "I strongly recommended the 'mixed' ones, it's barely slower and doesn't hit the quality as hard as the whole transformers conversion"
+- `LTX23_audio_vae_bf16.safetensors`
 
 ## Nodes Of Interest
 
@@ -48,6 +56,8 @@ They also provide under LTX-2 umbrella
 - `LTXV Audio Video Mask`
 
 - `LTXVLoopingSampler`... hmm what is it?..
+
+- native `VAE Encode Audio`, `VAE Decode Audio`, `Load VAE`, `Load Audio` [kj-native-vae-encode-audio](screenshots/nodes/ltx/kj-native-vae-encode-audio.webp)
 
 ## IC LoRa-s
 
@@ -175,6 +185,9 @@ Jonathan (WhatDreamsCost):
 > I was using phnatom 1.3b to detail my i2v first stage 480 x 201 that I did that size to get structure quick as I could changing prompt til I got there.
 > it was fast relatively. but the phantom did a nice fixup. then into the upscaler wf with ref image. but it had its faults.
 > today introducing x2 samplers to that upscaler stage instead of x1 sampler with x2 upscalers has meant I dont need the phantom stage, but I might keep it in anyway.
+
+> when using WAN models with a sampler as a detailer anything over 0.78 I think completely changes the shot to the prompt. polishing was always down around 0.1 and stronger
+> fixes up around 0.2 to 0.4.  (USDU it goes more to 0.5 or even higher in some cases ...)
 
 Mark's video: [YT:Video Workflow Pipeline (April 2026)](https://www.youtube.com/watch?v=7Lqt3pgGefA)
 
@@ -348,7 +361,8 @@ V2V can be done either via IC Union LoRa-s or via latent denoise. Unmerged Conte
 
 - [Mark DK Berry](https://markdkberry.com) on basic VRAM optimizations and NAG to remove subtitles: [nag-other-basic-setup](workflows/ltx/mdkb-nag-other-basic-setup.webp)
 - Hicho's [ltx-2.3-simple-v2v](workflows/ltx/hicho-ltx-2.3-simple-v2v.json) prob. the simplest WF involving a depth map
-- Ablejone's aka [Drozbay](hidden-knowledge.md#drozbay)'s LTX 2.3 ClowShark workflow: [droz_LTX-2_SharkSampling_v7.1](workflows/ltx/droz_LTX-2_SharkSampling_v7.1.png)
+- Ablejone's aka [Drozbay](hidden-knowledge.md#drozbay)'s LTX 2.3 ClowShark workflow: [droz_LTX-2_SharkSampling_v7.1](workflows/ltx/droz_LTX-2_SharkSampling_v7.1.png)\
+- [Ckinpdx](https://github.com/ckinpdx)'s [LoopingSamper WF](workflows/ltx/ckinpdx-looping-sampler.png)
 
 ## ID LoRa
 
@@ -403,6 +417,7 @@ Gleb Tretyak:
 
 ## LoRa-s And WFs
 
+- Defu-Shaun working on ltx23_obscura_remova LoRa, apparently not shared as of now
 - David Show
   - David Show shared  AnimeMix-@nim3mix-Final-LTX on [HF:davesnow1/Loras](https://huggingface.co/davesnow1/Loras/tree/main); note: his convention is that trigger word `@nim3mix` is part of model file name
   - Dave Snow1's animemix for LTX 2.3: [HF:davesnow1/Loras:Loras/tree](https://huggingface.co/davesnow1/Loras/tree/main) "I often crank it to 1.5"
@@ -414,16 +429,19 @@ Gleb Tretyak:
   - Crinklypaper's [LTX-23-change-voice](workflows/ltx/crinklypaper-LTX-23-change-voice.json)
 - [Ckinpdx](https://github.com/ckinpdx) is sharing a collection of workflows absorbing latest and greatest from various sources: [GH:ckinpdx/ckinpdx_comfyui_workflows](https://github.com/ckinpdx/ckinpdx_comfyui_workflows)
   including a latent looping workflow;
-  [ckinpdx-LTX23_TorI2V_Humo_API](workflows/ltx/ckinpdx-LTX23_TorI2V_Humo_API.json) using HuMo 1.7B as the last cleanup step is probably up there as well, or soon will be
+  [ckinpdx-LTX23_TorI2V_Humo_API](workflows/ltx/ckinpdx-LTX23_TorI2V_Humo_API.json) using HuMo 1.7B as the last cleanup step is probably up there as well, or soon will be;
+  some of them using [GH:ckinpdx/ComfyUI-LTXAVTools](https://github.com/ckinpdx/ComfyUI-LTXAVTools) nodes
 - [GH:vrgamegirl19/comfyui-vrgamedevgirl:Workflows](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl/tree/main/Workflows) workflows from one of the masters :) Somewhare out there there are "Claymation", "Puppet",
   [Golden Age Comic](https://civitai.com/models/2532516/ltx-23-golden-age-comic), [Enhancer](https://civitai.com/models/2535622?modelVersionId=2849716) LoRa-s by her as well;
   [CA:2540961?2855640](https://civitai.com/models/2540961?modelVersionId=2855640) dark fantasy?
   [CA:2535622](https://civitai.red/models/2535622) home of VRGamedevgirl on CA? place to get her 
-  [crisp enhancer](https://civitai.red/models/2535622/ltx-23-enhancers) LoRa and other LoRa-s including Fantasy_Realism
+  [crisp enhancer](https://civitai.red/models/2535622/ltx-23-enhancers) LoRa and other LoRa-s including Fantasy_Realism;
+  possibly post-apocalyptic LoRa
 - Sir_Axe
   - Sir_Axe's [HF:siraxe/TTM_IC-lora_ltx2.3](https://huggingface.co/siraxe/TTM_IC-lora_ltx2.3) cartoony time to move for LTX 2.3;
   - Sir_Axe's [HF:siraxe/MergeGreen_IC-lora_ltx2.3](https://huggingface.co/siraxe/MergeGreen_IC-lora_ltx2.3) merge one video with another; apparently some green frame is involved - as a separator?..;
     "takes couple of seed tries and description of what changes, but it's also not perfect but better than just inserting start/end frames imo"
+- Refocus LoRa: [HF:oumoumad/LTX-2.3-22b-IC-LoRA-ReFocus](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-ReFocus) - undoes shallow depth of field; only works as detailer if source video has been blurred first
 - [HF:RuneXX/LTX-2.3-Workflows:Video-2-Video/LTX-2.3\_-\_V2V\_ReTake\_recreate\_any\_section\_of\_any\_video](https://huggingface.co/RuneXX/LTX-2.3-Workflows/blob/main/Video-2-Video/LTX-2.3_-_V2V_ReTake_recreate_any_section_of_any_video.json)
 - VBVR
   - VBVR HF: [HF:LiconStudio/Ltx2.3-VBVR-lora-I2V](https://huggingface.co/LiconStudio/Ltx2.3-VBVR-lora-I2V) better VBVR LoRa for LTX 2.3; 100Mb smaller than the one on Civitai;
@@ -447,5 +465,8 @@ Gleb Tretyak:
 - Zueuk is experimenting on latent loops workflow not yet shared; "i'm basically only doing I2V; and not using 'inplace' nodes at all"
 - WackyWindsurfer's [LTX-2.3 Synthwave style LoRa to civitai (red)](https://civitai.red/models/2551439/ltx-23-synthwave)
 - [HF:lovis93/crt-animation-terminal-ltx-2.3-lora](https://huggingface.co/lovis93/crt-animation-terminal-ltx-2.3-lora)
+- [Fredblis](https://fredbliss.com/)'s automations: "audio + image input + initial prompt + prompt schedule timestamps", looping workflow, automated prompt generation and timing
+  [GH:fblissjr/ComfyUI-AudioLoopHelper](https://github.com/fblissjr/ComfyUI-AudioLoopHelper)
+
 
 - huh a Wan LoRa used in conjunction with LTX wf-s?.. [HF:Evados/DiffSynth-Studio-Lora-Wan2.1-ComfyUI](https://huggingface.co/Evados/DiffSynth-Studio-Lora-Wan2.1-ComfyUI/blob/main/dg_wan2_1_v1_3b_lora_extra_noise_detail_motion.safetensors)

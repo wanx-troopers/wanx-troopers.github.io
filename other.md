@@ -2,6 +2,7 @@
 
 ## Promising For Comfy
 
+* [GH:Anil-matcha/Open-Generative-AI](https://github.com/Anil-matcha/Open-Generative-AI) Looking for a free, uncensored Higgsfield AI, Freepik, Krea, Openart AI alternative? Seems like a frontend to api-s?
 * [GH:justdubit/just-dub-it](https://github.com/justdubit/just-dub-it)
 * [kimodo](https://research.nvidia.com/labs/sil/projects/kimodo/)  kinematic motion diffusion model trained on large-scale optical mocap data "Kimodo's text encoder uses Meta Llama 3 8B, which is a gated model on HuggingFace"
 * cascadeur seems to be some other way to automate moving rigs in blender??? not clear if free or paid only.. what is Akeytsu which is free?

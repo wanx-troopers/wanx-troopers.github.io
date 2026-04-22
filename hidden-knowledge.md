@@ -1,5 +1,9 @@
 ﻿# Hidden Knowledge
 
+## 2026.04
+
+[blogs.nvidia.com/blog/ai-tokens-explained](https://blogs.nvidia.com/blog/ai-tokens-explained/)
+
 ## 2026.04.16
 
 > Q: thats to be expected though right? gguf q8 should be better than fp8? A: yes, just 30-40% slower on hardware that supports fp8 matmuls
