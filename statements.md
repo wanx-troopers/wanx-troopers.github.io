@@ -2,6 +2,12 @@
 
 ## 2026.04
 
+Ada:
+> If people want a actual optimizer that competes with adam but has about the memory consumption of adafactor without adafactor's loss in accuracy try CAME
+> https://www.zangwei.dev/blog/proj-came
+> https://github.com/Nerogar/OneTrainer/pull/798
+> https://github.com/xzuyn/CAME/commits/triton-fused-tempbranch2
+
 ZombieMatrix:
 > Imagine a hill and its dark, you can't see the top.
 > You start on one side and your goal is to get to the other side.

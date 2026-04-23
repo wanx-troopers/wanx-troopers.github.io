@@ -6,6 +6,7 @@ It might be advisable to set width and height as multiples of 32 (128 was sugges
 See also:
 - [Dialing In LTX 2.3 Workflow](ltx23-dialing-in.md)
 - [LTX 2.3 Statements](ltx23-statements.md)
+- [LTX-2 in ComfyUI Chattable KB](https://notebooklm.google.com/notebook/4f07f98c-75b6-4278-bde1-906f9899b60c?pli=1)
 
 ## Prompt Relay
 
@@ -55,9 +56,18 @@ They also provide under LTX-2 umbrella
 - `LTXVAddGuide`
 - `LTXV Audio Video Mask`
 
-- `LTXVLoopingSampler`... hmm what is it?..
+- `LTXVLoopingSampler`... and `LTXVAVLoopingSampler` from [GH:ckinpdx/ComfyUI-LTXAVTools](https://github.com/ckinpdx/ComfyUI-LTXAVTools)
+  "optional conditioning images allows you to input batches images as keyframes whose index you specify.
+  Optional guiding latents allows ic lora use.
+  Optional positive conditioning allows use of the multi prompt provider, allowing indexed text conditioning";
+  "All modalities, t2v, i2v, i+a2v, v2v"; tested up to 90 seconds;
+  "for v2v lora application, outpainting for example, the limit is how many video frames you can load from your source ... 2 minutes"
+  work is ongoing on enhacing native context window nodes too, to which this is similar
 
 - native `VAE Encode Audio`, `VAE Decode Audio`, `Load VAE`, `Load Audio` [kj-native-vae-encode-audio](screenshots/nodes/ltx/kj-native-vae-encode-audio.webp)
+
+- `LTXV Add Latent Guide` from `LTXVideo` set is the only way to associate a guide with position -1; all other similar nodes treat -1 as "after last frame";
+  "it's the same thing as add guide, just takes latent instead of image, only difference besides that is how the positioning is done"
 
 ## IC LoRa-s
 
@@ -230,6 +240,8 @@ Richard Servello
 
 ## Hints
 
+Latent tokens in a video: (Width / 32) × (Height / 32) × ((Frames - 1) / 8 + 1); might be best not to exceed 20-35k without looping/context windows.
+
 > As long as the video is relatively static, it's amazing. As soon as there's fast motion ... [things get mushy]
 
 > The newer ic Loras like the union one are trained with half res. 
@@ -337,6 +349,20 @@ mamad8:
 
 first video has the 5000 step lora on both first and 2nd and the 2nd video has the 1000 step on first and 5000 step on 2nd pass.
 
+burgstall 2026.04.22
+> AFAIK the LTX official trainer still is the only method for IC-LoRA training. At least thats what everybody I know uses 
+
+crinklypaper
+> I think musubi fork can do ic-lora training, I havent tried it yet though
+> [GH:AkaneTendo25/musubi-tuner:ltx-2/docs/ltx_2.md#ic-lora--video-to-video-training](https://github.com/AkaneTendo25/musubi-tuner/blob/ltx-2/docs/ltx_2.md#ic-lora--video-to-video-training)
+
+Ada:
+> Yea. Most importantly that has CREPA. Which is super important for video training and nothing else has it yet [crepavideo.github.io](https://crepavideo.github.io/)
+> Never train video without it. Actually simple tuner also has it and does a better "similarity" threshold to shut it off which works better. I ported that over in my own fork
+
+> I use a similarity threshold of 0.9 the same way simple tuner does
+> and shut it off after that
+
 ## Sound
 
 The role of a "solid mask" is not clear to the writer of this page but apparently it may be used before feeding Audio latent into sampler: [solidMask.webp](screenshots/ltx/solidMask.webp)
@@ -404,6 +430,7 @@ Gleb Tretyak:
 - EditAnything IC LoRA: [CA:2553102/editanything?2869279](https://civitai.red/models/2553102/editanything?modelVersionId=2869279),
   [HF:Alissonerdx/LTX-LoRAs:ltx23_edit_anything_global_rank128_v1_6000steps_prodigy](https://huggingface.co/Alissonerdx/LTX-LoRAs/blob/main/ltx23_edit_anything_global_rank128_v1_6000steps_prodigy.safetensors); instructions in README next to it;
   [HF:Alissonerdx/LTX-LoRAs:ltx23_edit_anything_v1.json](https://huggingface.co/Alissonerdx/LTX-LoRAs/blob/main/workflows/ltx23_edit_anything_v1.json)
+  prompt for one change at a time
 - Alisson Pereira's `animate2real`: [HF:Alissonerdx/LTX-LoRAs:ltx23_anime2real_rank64_v1_4500](https://huggingface.co/Alissonerdx/LTX-LoRAs/blob/main/ltx23_anime2real_rank64_v1_4500.safetensors);
   also [CA:2527511/anime2half-real](https://civitai.com/models/2527511/anime2half-real)
 - Alisson Pereira's first experimental version of MR2V (Masked Reference-to-Video): [HF:Alissonerdx/LTX-LoRAs](https://huggingface.co/Alissonerdx/LTX-LoRAs)
@@ -435,8 +462,7 @@ Gleb Tretyak:
   [Golden Age Comic](https://civitai.com/models/2532516/ltx-23-golden-age-comic), [Enhancer](https://civitai.com/models/2535622?modelVersionId=2849716) LoRa-s by her as well;
   [CA:2540961?2855640](https://civitai.com/models/2540961?modelVersionId=2855640) dark fantasy?
   [CA:2535622](https://civitai.red/models/2535622) home of VRGamedevgirl on CA? place to get her 
-  [crisp enhancer](https://civitai.red/models/2535622/ltx-23-enhancers) LoRa and other LoRa-s including Fantasy_Realism;
-  possibly post-apocalyptic LoRa
+  [crisp enhancer](https://civitai.red/models/2535622/ltx-23-enhancers) LoRa and other LoRa-s including Fantasy_Realism, retro anime, post-apocalyptic
 - Sir_Axe
   - Sir_Axe's [HF:siraxe/TTM_IC-lora_ltx2.3](https://huggingface.co/siraxe/TTM_IC-lora_ltx2.3) cartoony time to move for LTX 2.3;
   - Sir_Axe's [HF:siraxe/MergeGreen_IC-lora_ltx2.3](https://huggingface.co/siraxe/MergeGreen_IC-lora_ltx2.3) merge one video with another; apparently some green frame is involved - as a separator?..;

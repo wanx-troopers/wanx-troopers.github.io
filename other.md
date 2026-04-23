@@ -2,6 +2,7 @@
 
 ## Promising For Comfy
 
+* [HF:datasets|theFoxofSky/RealisDance-Val](https://huggingface.co/datasets/theFoxofSky/RealisDance-Val) rainbow ppl paired with real videos; "it's generated with SMPL tracking and then applying rainbow shader"
 * [GH:Anil-matcha/Open-Generative-AI](https://github.com/Anil-matcha/Open-Generative-AI) Looking for a free, uncensored Higgsfield AI, Freepik, Krea, Openart AI alternative? Seems like a frontend to api-s?
 * [GH:justdubit/just-dub-it](https://github.com/justdubit/just-dub-it)
 * [kimodo](https://research.nvidia.com/labs/sil/projects/kimodo/)  kinematic motion diffusion model trained on large-scale optical mocap data "Kimodo's text encoder uses Meta Llama 3 8B, which is a gated model on HuggingFace"
