@@ -3,6 +3,12 @@
 ## 2026.04
 
 Ada:
+> DoKr-OFT might be the future. The concept separation / accuracy of Dora with the performance for size of LoKr
+> with the speed of OFT. That + SPRINT + CAMEmuon (CAME + muon for for CAME's memory efficiency with adam accuracy +
+> muon's speed where it applies. Also silly name.) = crazy fast training and higher quality,
+> far less concept bleed and lower size than loras. Also lower memory needed. 
+
+Ada:
 > If people want a actual optimizer that competes with adam but has about the memory consumption of adafactor without adafactor's loss in accuracy try CAME
 > https://www.zangwei.dev/blog/proj-came
 > https://github.com/Nerogar/OneTrainer/pull/798

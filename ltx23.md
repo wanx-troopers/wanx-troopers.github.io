@@ -8,6 +8,50 @@ See also:
 - [LTX 2.3 Statements](ltx23-statements.md)
 - [LTX-2 in ComfyUI Chattable KB](https://notebooklm.google.com/notebook/4f07f98c-75b6-4278-bde1-906f9899b60c?pli=1)
 
+## HDR LoRa
+
+Lightbricks have released [HF:Lightricks/LTX-2.3-22b-IC-LoRA-HDR](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-HDR).
+This IC LoRa takes a normal REC709 video as guide and produces a matching video encoded using Arri LogC3 tonal curve adding details in shadows and highlihts as needed.
+The nature of diffusion models is that out put is always in floating point. The catch is that normally extracting more than 8bits of useful data from
+it is not possible because that is the models were trained on. Not in this case. It is possible to extract more bits of data from a video generated with this LoRa.
+
+`KJNodes` now have `HDR Preview KJ` node with an exposure slider.
+
+Supported output formats for this kind of video are LogC3 EXR, LogC3 ProRes 4444 and linear Linear EXR.
+
+`LTXVHDR Decode Postprocess` node is provided for saving such videos in LTXV custom nodes. `export OPENCV_IO_ENABLE_OPENEXR=1` environment variable may need to be set outside of Comfy.
+Kijai: "I think my Marigold nodepack hijacks and sets the env var before other imports, or at least used to, I remember dealing with that issue".
+
+> Q: If I just save the model output directly, which should be in LogC3,
+> then import to Resolve, set the input to be ARRI C3 (or whatever it was called),
+> it seems to work fine, is there a reason to convert it to linear before export?
+> Didn't really see any visible differences doing it via EXR vs ProRes4444 myself either
+
+[Nathan Shipley](http://www.nathanshipley.com/):
+> A: Prores 4444 is 12 bits per channel, the linear EXR should be 16 bit float;
+> you'll probably only notice the differences between 12 vs 16 bit in more extreme grading, or in potential banding that might show up
+
+[Richard Servello](https://www.eastoflavfx.com/):
+> the raw output is logC tho so even at 10-bit it will have a similar range;
+> it seems to also fix noisy edges and clean up some blurry footage could be interesting.
+> the curve is wrong for their linear conversion
+
+[Nathan Shipley](http://www.nathanshipley.com/):
+> LTX HDR IC-LoRA turned up to 1.5
+> Distill Lora at 0.6
+> euler, 8 steps, linear_quadratic
+> CFG 1.5
+> can definitely help to turn the lora strength up above 1 for shots like this..
+
+[Nathan Shipley](http://www.nathanshipley.com/)'s wf: [ns-LTX-2.3_ICLoRA_HDR_Distilled_Simple_NS_01](workflows/ltx/ns-LTX-2.3_ICLoRA_HDR_Distilled_Simple_NS_01.json);
+"I included the LTX EXR write node in there, though Prores 4444 is probably fine most of the time!".
+
+[Ernest Mariné](https://www.linkedin.com/in/ernest-marine/) radiance node pack is an alternative.
+
+[Richard Servello](https://www.eastoflavfx.com/) has added his nodes `RS LogC3 HDR Decode` (hdr_linear, raw, sdr_preview) and `RS EXR Sequence Save` to 
+[GH:richservo/rs-nodes](https://github.com/richservo/rs-nodes). "it uses proper baked ocio luts"
+"now the hdr_linear will output proper color and the sdr preview is aces rec709 converted".
+
 ## Prompt Relay
 
 Prompt relay is a new technique which sub-prompts to specific parts of the video only though attention masking.
@@ -231,7 +275,7 @@ It was reported an overly high sqare resolution (1920x1920) after upscaler can c
 
 > why ... 4 step sigmas like `1, 0.85, 0.7250, 0.4219, 0.0` on the last upscaler sampler when 6 steps is clearly superior in results?
 
-Richard Servello
+[Richard Servello](https://www.eastoflavfx.com/)
 > Ltx is meant to be 2 stage but a lot of people insist on one pass and complain about artifacts
 
 [Mark DK Berry](https://markdkberry.com):
@@ -315,6 +359,8 @@ Do not put quotes around dialogue to avoid subtitles, also Kijai's NAG.
 
 > [On AMD rdna2] ltxvideo works on fp16 even though it is not listed in comfy config file, and it is faster for me than fp32;
 > nvfp4 also works for me but with that the quality is not that great
+
+VAE Decode Tile needs `temporal_size` way above 8 to avoid flickering.
 
 ## Training
 
@@ -425,6 +471,10 @@ Because one of the checkpoints is called "talkvid" ID-LoRa is also referred to a
 Gleb Tretyak:
 > not 10/10 follow. timings should be sufficiently calculated by user, otherwise it's ignored by the model I believe; and prompt relay makes it worse
 
+Draken:
+> id lora is just for audio really;
+> it helps in the sense that the lora itself might do better at perversing the ID in i2v mode though
+
 ## LoRa-s, Alisson
 
 - EditAnything IC LoRA: [CA:2553102/editanything?2869279](https://civitai.red/models/2553102/editanything?modelVersionId=2869279),
@@ -444,6 +494,7 @@ Gleb Tretyak:
 
 ## LoRa-s And WFs
 
+- LTX 2.3 Fight LoRa [CA:2489766/ltx-23-fight](https://civitai.com/models/2489766/ltx-23-fight)
 - Defu-Shaun working on ltx23_obscura_remova LoRa, apparently not shared as of now
 - David Show
   - David Show shared  AnimeMix-@nim3mix-Final-LTX on [HF:davesnow1/Loras](https://huggingface.co/davesnow1/Loras/tree/main); note: his convention is that trigger word `@nim3mix` is part of model file name

@@ -2,6 +2,11 @@
 
 Main article: [LTX 2.3](ltx23.md)
 
+## 2026.04.23
+
+> Q: are you guys getting like a dot/grain pattern?
+> A: that's not from the HDR lora, that's what happens if you don't use upscaler [Richard Servello]
+
 ## 2026.04.21
 
 PhoenixRisen:

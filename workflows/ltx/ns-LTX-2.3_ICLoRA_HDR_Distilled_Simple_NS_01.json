@@ -1,0 +1,1582 @@
+{
+  "id": "e8c5e289-577a-4396-be21-c8d660bf50d2",
+  "revision": 0,
+  "last_node_id": 67,
+  "last_link_id": 102,
+  "nodes": [
+    {
+      "id": 9,
+      "type": "KSamplerSelect",
+      "pos": [
+        1281.4673226853097,
+        243.98784336462325
+      ],
+      "size": [
+        240,
+        60
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "slot_index": 0,
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerSelect",
+        "cnr_id": "comfy-core",
+        "ver": "0.16.3",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "euler"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        1604.8943741469054,
+        80.9154251457226
+      ],
+      "size": [
+        281.2701171875,
+        200
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 19
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 12
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 17
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 18
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": null
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "slot_index": 1,
+          "links": [
+            59
+          ]
+        }
+      ],
+      "title": "Sample (denoised_output = sharper)",
+      "properties": {
+        "Node name for S&R": "SamplerCustomAdvanced",
+        "cnr_id": "comfy-core",
+        "ver": "0.16.3",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 4,
+      "type": "EmptyLTXVLatentVideo",
+      "pos": [
+        546.4882946612772,
+        493.0426075312822
+      ],
+      "size": [
+        280,
+        130
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 65
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 66
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": 95
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            7
+          ]
+        }
+      ],
+      "title": "Empty Latent (match video dims)",
+      "properties": {
+        "Node name for S&R": "EmptyLTXVLatentVideo",
+        "cnr_id": "comfy-core",
+        "ver": "0.16.3",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1280,
+        736,
+        81,
+        1
+      ]
+    },
+    {
+      "id": 7,
+      "type": "LTXAddVideoICLoRAGuide",
+      "pos": [
+        904.3938858289754,
+        232.77720843187996
+      ],
+      "size": [
+        320,
+        340
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 88
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 9
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 6
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 64
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            10,
+            42
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "slot_index": 1,
+          "links": [
+            11,
+            43
+          ]
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "slot_index": 2,
+          "links": [
+            15
+          ]
+        }
+      ],
+      "title": "IC-LoRA Guide (SDR -> HDR)",
+      "properties": {
+        "Node name for S&R": "LTXAddVideoICLoRAGuide",
+        "cnr_id": "ComfyUI-LTXVideo",
+        "ver": "531512f7286963dc7aff1fd8bf5556e95eae03af",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        0,
+        1,
+        1,
+        "disabled",
+        false,
+        256,
+        64
+      ]
+    },
+    {
+      "id": 11,
+      "type": "RandomNoise",
+      "pos": [
+        1281.4673226853097,
+        545.0263517306607
+      ],
+      "size": [
+        240,
+        82
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "NOISE",
+          "type": "NOISE",
+          "slot_index": 0,
+          "links": [
+            19
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RandomNoise",
+        "cnr_id": "comfy-core",
+        "ver": "0.16.3",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1137,
+        "fixed"
+      ]
+    },
+    {
+      "id": 20,
+      "type": "LTXAVTextEncoderLoader",
+      "pos": [
+        70,
+        610
+      ],
+      "size": [
+        377.5358567015661,
+        133.4035137384601
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            31,
+            87
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LTXAVTextEncoderLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "gemma_3_12B_it.safetensors",
+        "LTX2/ltx-2.3-22b-distilled.safetensors",
+        "default"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        508.56280095484726,
+        302.33264969529864
+      ],
+      "size": [
+        320,
+        100
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 31
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            9
+          ]
+        }
+      ],
+      "title": "Negative Prompt",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.16.3",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "worst quality, overexposed, inconsistent motion, blurry, jittery, pure white, distorted, clipped highlights, banding"
+      ]
+    },
+    {
+      "id": 62,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        70,
+        290
+      ],
+      "size": [
+        379.52732929790426,
+        91.5960541632789
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 100
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            101
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "cnr_id": "comfy-core",
+        "ver": "0.16.3",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": [
+        "LTX2/ltx-2.3-22b-distilled-lora-384-1.1.safetensors",
+        0.6
+      ]
+    },
+    {
+      "id": 10,
+      "type": "BasicScheduler",
+      "pos": [
+        1278.5406626680372,
+        364.6486907162937
+      ],
+      "size": [
+        240,
+        120
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 34
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "slot_index": 0,
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicScheduler",
+        "cnr_id": "comfy-core",
+        "ver": "0.16.3",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "linear_quadratic",
+        8,
+        1
+      ]
+    },
+    {
+      "id": 27,
+      "type": "LTXVCropGuides",
+      "pos": [
+        1916.6569713874242,
+        190.34456483794096
+      ],
+      "size": [
+        152.7134765625,
+        66
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 42
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 43
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "link": 59
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            58
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LTXVCropGuides",
+        "cnr_id": "comfy-core",
+        "ver": "0.16.3",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 13,
+      "type": "VAEDecode",
+      "pos": [
+        2090.5095192121616,
+        295.7820248814801
+      ],
+      "size": [
+        240,
+        60
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 58
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            94,
+            97,
+            102
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode",
+        "cnr_id": "comfy-core",
+        "ver": "0.16.3",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 47,
+      "type": "CLIPTextEncode",
+      "pos": [
+        517.866380378456,
+        103.28279125418737
+      ],
+      "size": [
+        320,
+        120
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 87
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            88
+          ]
+        }
+      ],
+      "title": "Positive Prompt",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.16.3",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "HDR footage"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        70,
+        450
+      ],
+      "size": [
+        379.52732929790426,
+        91.5960541632789
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 101
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            33,
+            34
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "cnr_id": "comfy-core",
+        "ver": "0.16.3",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": [
+        "LTX2/HDR/ltx-2.3-22b-ic-lora-hdr-0.9.safetensors",
+        1
+      ]
+    },
+    {
+      "id": 8,
+      "type": "CFGGuider",
+      "pos": [
+        1277.1055827940747,
+        76.99742057790348
+      ],
+      "size": [
+        240,
+        120
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 33
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 10
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "slot_index": 0,
+          "links": [
+            12
+          ]
+        }
+      ],
+      "title": "CFG Guider (3.5)",
+      "properties": {
+        "Node name for S&R": "CFGGuider",
+        "cnr_id": "comfy-core",
+        "ver": "0.16.3",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1.5
+      ]
+    },
+    {
+      "id": 63,
+      "type": "LTXVHDRDecodePostprocess",
+      "pos": [
+        2437.9674942608776,
+        72.78519508652718
+      ],
+      "size": [
+        351.612890625,
+        174
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 102
+        }
+      ],
+      "outputs": [
+        {
+          "name": "tonemapped",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "hdr_linear",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LTXVHDRDecodePostprocess"
+      },
+      "widgets_values": [
+        0,
+        true,
+        "output/hdr_exr",
+        "frame",
+        true
+      ]
+    },
+    {
+      "id": 58,
+      "type": "VHS_LoadVideoPath",
+      "pos": [
+        -845.1635851806955,
+        299.82061166053234
+      ],
+      "size": [
+        242.2137908935547,
+        425.1203777553799
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            92,
+            93
+          ]
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": [
+            95
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideoPath"
+      },
+      "widgets_values": {
+        "video": "/home/nathan/Dropbox/AI/_Video/Pexels/Ocean_1093662-hd_1920_1080_30fps.mp4",
+        "force_rate": 0,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 121,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "format": "AnimateDiff",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "/home/nathan/Dropbox/AI/_Video/Pexels/Ocean_1093662-hd_1920_1080_30fps.mp4",
+            "type": "path",
+            "format": "video/mp4",
+            "force_rate": 0,
+            "custom_width": 0,
+            "custom_height": 0,
+            "frame_load_cap": 121,
+            "skip_first_frames": 0,
+            "select_every_nth": 1
+          }
+        }
+      }
+    },
+    {
+      "id": 1,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        30,
+        80
+      ],
+      "size": [
+        414.40915498449715,
+        133.55035835324284
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            100
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 1,
+          "links": []
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 2,
+          "links": [
+            6,
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple",
+        "cnr_id": "comfy-core",
+        "ver": "0.16.3",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "LTX2/ltx-2.3-22b-distilled.safetensors"
+      ]
+    },
+    {
+      "id": 59,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        2848.4985565292477,
+        301.7239859636581
+      ],
+      "size": [
+        396.9341064930268,
+        262
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 94
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 96
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 30,
+        "loop_count": 0,
+        "filename_prefix": "LTXV_HDR-to-SDR_LoRA",
+        "format": "video/ProRes",
+        "profile": "4444xq",
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "LTXV_HDR-to-SDR_LoRA_Official_gregWF_Prompt_00001.mov",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/ProRes",
+            "frame_rate": 30,
+            "workflow": "LTXV_HDR-to-SDR_LoRA_Official_gregWF_Prompt_00001.png",
+            "fullpath": "/home/nathan/AI/code/12_ComfyUI/ComfyUI_17_2026-03-11_AppMode/output/LTXV_HDR-to-SDR_LoRA_Official_gregWF_Prompt_00001.mov"
+          }
+        }
+      }
+    },
+    {
+      "id": 64,
+      "type": "Note",
+      "pos": [
+        2437.5410425496043,
+        -67.90293244769443
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Set OPENCV_IO_ENABLE_OPENEXR=1 in your shell before launching ComfyUI, otherwise save_exr will fail"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 67,
+      "type": "Note",
+      "pos": [
+        2446.925485800525,
+        -180.1534986744915
+      ],
+      "size": [
+        140,
+        60
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Write EXR "
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 60,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        2323.7483721708318,
+        597.0569728700792
+      ],
+      "size": [
+        433.41375175055873,
+        152.2549421373127
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            96,
+            98
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "LTXV_SDR-to-HDR"
+      ]
+    },
+    {
+      "id": 61,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        2851.898310640069,
+        670.3185170466417
+      ],
+      "size": [
+        396.9341064930268,
+        1033.3347390782305
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 97
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 98
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 30,
+        "loop_count": 0,
+        "filename_prefix": "LTXV_HDR-to-SDR_LoRA",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 10,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "LTXV_HDR-to-SDR_LoRA_Distill08_s42_4444_00001.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 30,
+            "workflow": "LTXV_HDR-to-SDR_LoRA_Distill08_s42_4444_00001.png",
+            "fullpath": "/home/nathan/AI/code/12_ComfyUI/ComfyUI_17_2026-03-11_AppMode/output/LTXV_HDR-to-SDR_LoRA_Distill08_s42_4444_00001.mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 66,
+      "type": "Note",
+      "pos": [
+        2857.01338588047,
+        192.30280606853572
+      ],
+      "size": [
+        140,
+        60
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Write Big Prores "
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 35,
+      "type": "ImageResizeKJv2",
+      "pos": [
+        -393.34044936832305,
+        52.94880259513215
+      ],
+      "size": [
+        270,
+        336
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 92
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            64
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            65
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            66
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageResizeKJv2",
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1f15f37f8ec58166ea21d59aae8800c1654d6cbe",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": [
+        1280,
+        704,
+        "nearest-exact",
+        "crop",
+        "0, 0, 0",
+        "center",
+        4,
+        "cpu"
+      ]
+    }
+  ],
+  "links": [
+    [
+      6,
+      1,
+      2,
+      7,
+      2,
+      "VAE"
+    ],
+    [
+      7,
+      4,
+      0,
+      7,
+      3,
+      "LATENT"
+    ],
+    [
+      9,
+      6,
+      0,
+      7,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      10,
+      7,
+      0,
+      8,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      11,
+      7,
+      1,
+      8,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      12,
+      8,
+      0,
+      12,
+      1,
+      "GUIDER"
+    ],
+    [
+      15,
+      7,
+      2,
+      12,
+      4,
+      "LATENT"
+    ],
+    [
+      16,
+      1,
+      2,
+      13,
+      1,
+      "VAE"
+    ],
+    [
+      17,
+      9,
+      0,
+      12,
+      2,
+      "SAMPLER"
+    ],
+    [
+      18,
+      10,
+      0,
+      12,
+      3,
+      "SIGMAS"
+    ],
+    [
+      19,
+      11,
+      0,
+      12,
+      0,
+      "NOISE"
+    ],
+    [
+      31,
+      20,
+      0,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      33,
+      21,
+      0,
+      8,
+      0,
+      "MODEL"
+    ],
+    [
+      34,
+      21,
+      0,
+      10,
+      0,
+      "MODEL"
+    ],
+    [
+      42,
+      7,
+      0,
+      27,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      43,
+      7,
+      1,
+      27,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      58,
+      27,
+      2,
+      13,
+      0,
+      "LATENT"
+    ],
+    [
+      59,
+      12,
+      1,
+      27,
+      2,
+      "LATENT"
+    ],
+    [
+      64,
+      35,
+      0,
+      7,
+      4,
+      "IMAGE"
+    ],
+    [
+      65,
+      35,
+      1,
+      4,
+      0,
+      "INT"
+    ],
+    [
+      66,
+      35,
+      2,
+      4,
+      1,
+      "INT"
+    ],
+    [
+      87,
+      20,
+      0,
+      47,
+      0,
+      "CLIP"
+    ],
+    [
+      88,
+      47,
+      0,
+      7,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      92,
+      58,
+      0,
+      35,
+      0,
+      "IMAGE"
+    ],
+    [
+      93,
+      58,
+      0,
+      45,
+      1,
+      "IMAGE"
+    ],
+    [
+      94,
+      13,
+      0,
+      59,
+      0,
+      "IMAGE"
+    ],
+    [
+      95,
+      58,
+      1,
+      4,
+      2,
+      "INT"
+    ],
+    [
+      96,
+      60,
+      0,
+      59,
+      4,
+      "STRING"
+    ],
+    [
+      97,
+      13,
+      0,
+      61,
+      0,
+      "IMAGE"
+    ],
+    [
+      98,
+      60,
+      0,
+      61,
+      4,
+      "STRING"
+    ],
+    [
+      100,
+      1,
+      0,
+      62,
+      0,
+      "MODEL"
+    ],
+    [
+      101,
+      62,
+      0,
+      21,
+      0,
+      "MODEL"
+    ],
+    [
+      102,
+      13,
+      0,
+      63,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "HDR IC-LoRA Workflow — SDR Video -> LogC3 HDR",
+      "bounding": [
+        20,
+        -20,
+        2258.830658438911,
+        986.1989085728003
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8769226950000089,
+      "offset": [
+        1154.9597417884665,
+        286.66990071874983
+      ]
+    },
+    "workflowRendererVersion": "LG",
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "frontendVersion": "1.42.10",
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "node_versions": {
+      "comfy-core": "0.19.0",
+      "ComfyUI-LTXVideo": "937831df0e5e1f707340b7e037a52e9d1196e3f8",
+      "ComfyUI-VideoHelperSuite": "2984ec4c4b93292421888f38db74a5e8802a8ff8",
+      "ComfyUI-KJNodes": "17cddd4959f00182c66954be2a7a32a6481d81be"
+    }
+  },
+  "version": 0.4
+}
