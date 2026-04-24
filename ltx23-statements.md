@@ -7,6 +7,9 @@ Main article: [LTX 2.3](ltx23.md)
 > Q: are you guys getting like a dot/grain pattern?
 > A: that's not from the HDR lora, that's what happens if you don't use upscaler [Richard Servello]
 
+> Q: is the ltx spatial upscaler not supposed to be sharp?
+> A: if used correctly it's very sharp
+
 ## 2026.04.21
 
 PhoenixRisen:

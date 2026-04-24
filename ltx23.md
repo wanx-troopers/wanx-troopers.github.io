@@ -2,6 +2,8 @@
 
 LTX 2.3 uses Gemma 3 12B as multi-modal text encoder. Gemma is by Google.
 It might be advisable to set width and height as multiples of 32 (128 was suggested to fix some sort of issues).
+Frame count native to LTX 2.3 is `1 + 8 * N` since 1st frame is encoded separately and subsequent ones have
+one latent span 8 frames in time dimension.
 
 See also:
 - [Dialing In LTX 2.3 Workflow](ltx23-dialing-in.md)
@@ -43,16 +45,21 @@ Kijai: "I think my Marigold nodepack hijacks and sets the env var before other i
 > CFG 1.5
 > can definitely help to turn the lora strength up above 1 for shots like this..
 
+> the VAE as it works right now can't generate values outside of `0...1`.
+> this LoRA is working by generating values compressed into a LogC space - so, when it gets expanded out from LogC into a working HDR space, overbright values go above 1.
+> (in Nuke, I set my Prores I've rendered to be `AlexaV3LogC` ... hovering over the bright sun areas shows values around 18
+
 [Nathan Shipley](http://www.nathanshipley.com/)'s wf: [ns-LTX-2.3_ICLoRA_HDR_Distilled_Simple_NS_01](workflows/ltx/ns-LTX-2.3_ICLoRA_HDR_Distilled_Simple_NS_01.json);
 "I included the LTX EXR write node in there, though Prores 4444 is probably fine most of the time!".
-
-[Ernest Mariné](https://www.linkedin.com/in/ernest-marine/) radiance node pack is an alternative.
 
 [Richard Servello](https://www.eastoflavfx.com/) has added his nodes `RS LogC3 HDR Decode` (hdr_linear, raw, sdr_preview) and `RS EXR Sequence Save` to 
 [GH:richservo/rs-nodes](https://github.com/richservo/rs-nodes). "it uses proper baked ocio luts"
 "now the hdr_linear will output proper color and the sdr preview is aces rec709 converted".
 
 Alternative similar LoRa from T2/Greg: [gregt/lora_weights_step_07000](https://huggingface.co/gregt/lora_weights_step_07000.safetensors/tree/main)
+
+Potentially useful:
+- [GH:fxtdstudios/radiance](https://github.com/fxtdstudios/radiance) contains `Radiance VAE Decode`
 
 ## Prompt Relay
 
@@ -63,9 +70,9 @@ Prompt relay is a new technique which sub-prompts to specific parts of the video
 > |  
 > then does that
 
-Alternatively the time speach is uttered can be controlled via [ID-LoRa](ltx23.md#id-lora) which supports `[4-8s] ...` style of prompting.
-
-[GH:vrgamegirl19](https://github.com/vrgamegirl19)'s wf: [vr-i2v_PromptRelay](workflows/ltx/vr-i2v_PromptRelay.json)
+Alternatively people have been experimenting with `[4-8s] ...` style of prompting style of prompting and no prompt relay.
+`[4-8s] ...` seems to sometimes work and sometimes not. At one point it seemed like using
+[ID-LoRa](ltx23.md#id-lora) would make `[4-8s] ...` work better but that is far from certain.
 
 > [NAG] just doesn't work with prompt relay because both patch cross attention
 
@@ -191,6 +198,8 @@ See also: [Guides](ltx23.md#guides) section for [YT:nekodificador](https://youtu
 It has been reported that LTX 2.3 extends videos quite well forward but a method of extending backwards without a LoRa hasn't been worked out yet.
 [YT:LTX2.3 | How to Extend](https://www.youtube.com/watch?v=kY3MoyLUWXw) presents the latent extension method using `LTXV Audio Video Mask` from `KJNodes`.
 [GH:ckinpdx/ckinpdx_comfyui_workflows](https://github.com/ckinpdx/ckinpdx_comfyui_workflows) contains a latent looping workflow which again apparently uses the same technique.
+
+Note that Sir_Axe's [HF:siraxe/MergeGreen_IC-lora_ltx2.3](https://huggingface.co/siraxe/MergeGreen_IC-lora_ltx2.3) can be a useful alternative.
 
 ## Multi-Pass Workflows
 
@@ -438,6 +447,19 @@ V2V can be done either via IC Union LoRa-s or via latent denoise. Unmerged Conte
 - Ablejone's aka [Drozbay](hidden-knowledge.md#drozbay)'s LTX 2.3 ClowShark workflow: [droz_LTX-2_SharkSampling_v7.1](workflows/ltx/droz_LTX-2_SharkSampling_v7.1.png)\
 - [Ckinpdx](https://github.com/ckinpdx)'s [LoopingSamper WF](workflows/ltx/ckinpdx-looping-sampler.png)
 
+## Power Node Pakcs
+
+[Richard Servello](https://www.eastoflavfx.com/)'s [GH:richservo/rs-nodes](https://github.com/richservo/rs-nodes):
+- `RS LogC3 HDR Decode` (hdr_linear, raw, sdr_preview), `RS EXR Sequence Save`
+- `RS Sigma Schduler` computes sigmas based on total token count in the video - depends on width, height, number of frames
+- [workflow-in-a-node](workflows/ltx/RS-workflow-in-a-node.png) "It does everything.
+  FLF, audio driven, you can plug a video in and select what frames to use as guidance
+  it has masking which I haven't gotten to completely work, BUT it does work for rediffusion
+  can be completely customized by plugging in any node you want
+  does spatial and temporal upscale"
+
+[GH:sumitchatterjee13/nuke-nodes-comfyui](https://github.com/sumitchatterjee13/nuke-nodes-comfyui)
+
 ## ID LoRa
 
 ID-LoRa apparently provides both visual and audio character likeness. Additionally it seems to support timed prompting otherwise not available on vanilla LTX 2.3.
@@ -458,7 +480,7 @@ Because one of the checkpoints is called "talkvid" ID-LoRa is also referred to a
 - [HF:AviadDahan/LTX-2.3-ID-LoRA-CelebVHQ-3K](https://huggingface.co/AviadDahan/LTX-2.3-ID-LoRA-CelebVHQ-3K)
   [HF:AviadDahan/LTX-2.3-ID-LoRA-TalkVid-3K](https://huggingface.co/AviadDahan/LTX-2.3-ID-LoRA-TalkVid-3K)
 
-`TalkVid` flavor possibly supports the following style of prompting
+`TalkVid` flavor possibly supports the following style of prompting - though it remains uncertain
 
 > [abc] A young  ...  
 >   

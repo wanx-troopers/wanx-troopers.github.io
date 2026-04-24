@@ -2,6 +2,49 @@
 
 The page needs a brush-up. Bugs referenced have been fixed or worked around. Still might be useful info.
 
+## 2026.04.24
+
+[fredbliss](https://github.com/fblissjr):
+> been working on sage optimizations.. 
+> not sure how specific this is to my setup (sm89 / rtx 4090, ltx video w/ a frozen audio mask input), but sharing ...
+> was using the woct0rdho fork of sage (even tho on linux).. it has some updates over the thu-ml original.
+
+> found two things:
+
+> packaging omission, woct0rdho fork only:
+> sm80 build gate is 8.0, 8.6, 8.7 — no 8.9.
+> so on rtx 40xx / ada, building from source silently skips
+> `_qattn_sm80` and `sageattn_qk_int8_pv_fp16_cuda` (the fp16 fallback) is just missing.
+> one liner fix in `setup.py` and only matters if you build from source on an ada-only [RTX 40xx]
+> box and explicitly pick the fp16 kernel.
+> auto-dispatch picks fp8++ on sm89 anyway
+
+> cuda mask path silently drops masks - the original sage repo thu-ml lineage, every fork, inherent to all sageattention (2.x AND 3.x).
+> the cuda kernels only understand `{none, causal}` masks..
+> so if you pass an `attn_mask` tensor to `sageattn_qk_int8_pv_fp16_cuda` / `sageattn_qk_int8_pv_fp8_cuda` / `sageattn3_blackwell directly`,
+> it gets blackholed into kwargs and never applied.
+> math still runs, just against unmasked scores.
+> output is wrong in proportion to how much of kv you masked.
+> I measured rtol [Relative Tolerance] `0.26` to `0.94` on ltx cross-attn shapes, `NaN` outright at very short kv.
+> the triton kernel `sageattn_qk_int8_pv_fp16_triton` has proper mask plumbing and stays at rtol `~0.04`.
+
+> so what actually matters in practice, at least in what i've been working on / researching
+> normal video self-attn, no explicit mask - fine. sage still `~2.7x` faster than `torch flash` on ltx shapes (tested);
+> any workflow with an explicit `attn_mask` - text prompt padding, audio token masks, controlnets, long-text encoders..
+> from what i can tell, the cuda path silently returns bad outputs if a node talks to it directly.
+> i havent tested all of these but it would make sense the are impacted.
+
+> KJNodes addresses this issue at the node level. KJNodes ships two sage nodes and both solve what they're designed to do:
+> - `PathchSageAttentionKJ` (the general dropdown one): on `auto` it calls sage's top-level dispatcher, which internally routes
+>    masked calls to `triton`, so you get the safe path by default. you only expose the underlying sage bug if you
+>    manually override to `sageattn_qk_int8_pv_fp16_cuda` / `sageattn_qk_int8_pv_fp8_cuda` / `sageattn_qk_int8_pv_fp8_cuda++` / `sageattn3` / `sageattn3_per_block_mean`... 
+>    those bypass the dispatcher and talk to the broken cuda wrappers directly
+> - `LTX2MemoryEfficientSageAttentionPatch` (the ltx-specific one) only patches `self-attn` (`attn1`), which doesn't carry a mask in ltx.
+>    tuned for the fp8++ path on sm89 (the fast one). scope alone means the mask bug can't hit it
+
+> [GH:fblissjr/SageAttention-ada](https://github.com/fblissjr/SageAttention-ada) fork: one-liner fix [for setup.py on RTX 40xx] +
+> an ltx-shape regression test + a standalone repro [reproducer] for the mask bug
+
 ## 2026.01.10
 
 As of now Torch 2.11.0 remains too new. Workarounds in Comfy/Wrapper code are not aware of it yet. oom on decode has been reported with 3x memory consumption.
