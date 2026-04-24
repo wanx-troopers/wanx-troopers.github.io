@@ -52,6 +52,8 @@ Kijai: "I think my Marigold nodepack hijacks and sets the env var before other i
 [GH:richservo/rs-nodes](https://github.com/richservo/rs-nodes). "it uses proper baked ocio luts"
 "now the hdr_linear will output proper color and the sdr preview is aces rec709 converted".
 
+Alternative similar LoRa from T2/Greg: [gregt/lora_weights_step_07000](https://huggingface.co/gregt/lora_weights_step_07000.safetensors/tree/main)
+
 ## Prompt Relay
 
 Prompt relay is a new technique which sub-prompts to specific parts of the video only though attention masking.
