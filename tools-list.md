@@ -224,3 +224,7 @@ Kijai:
 > A: 512x1024, the model does 768x1024 only anyway
 
 > sam3d-body [rainbow shapes???] is on another level
+
+> the 1b is a lot better than the 0.4, which totally failed this test
+
+> 4k model is only 1b
