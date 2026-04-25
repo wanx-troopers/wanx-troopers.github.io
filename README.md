@@ -68,6 +68,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
   * [LLM Nodes](extra-tools/llm-nodes.md)
   * [LLM Prompts](extra-tools/llm-prompts.md)
   * [Tools List](tools-list.md)
+* [3D Splats](3d-splats.md)
 
 ## Misc
 
