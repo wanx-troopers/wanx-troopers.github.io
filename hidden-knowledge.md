@@ -2,6 +2,14 @@
 
 ## 2026.04
 
+`bbox` is a `bounding box`
+
+VAE already falls back to tiled if runs OOM but to save time ppl who know will OOM go tiled from the start
+
+[Richard Servello](https://www.eastoflavfx.com/) on LTX 2.3:
+> 16GB here. Still need tiled vae.
+> with proper noise and overlap you can make the lines disappear
+
 Adapt a "diffusers" style LoRa to ComfyUI, courtecy of Screeb
 
 ```

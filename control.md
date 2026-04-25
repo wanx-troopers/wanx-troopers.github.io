@@ -40,8 +40,10 @@ Works with V2 wrapper nodes: plug `WanVideo Uni3C Embeds` output into `uni3c_emb
 ![uni3c-v2](screenshots/uni3c-v2.png)
 [uni3c-v2](screenshots/uni3c-v2.png)
 
-> [give it just the single] start frame encoded if you want the camera to not move at all;
-> [it can] handle any kind of input, if it's single frame it expands it, and if it's too little or too many frames, it interpolates
+> [give it just the single] start frame encoded if you want the camera to not move at all; 
+> [it can] handle any kind of input, if it's single frame it expands it, and if it's too little or too many frames, it interpolates;
+> it can be enough to just use 0.1 end percent, try and see, with SCAIL it was even enough to use 0.1 strength too;
+> especially with distills the camera motion is determined in the first step already, so no point to run it more than that
 
 Optional memory offloading added
 

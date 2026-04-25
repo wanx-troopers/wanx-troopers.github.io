@@ -196,3 +196,31 @@ Moved [here](vfi.md).
 `vitpose` can do animals as well as humans.
 
 `dwpose`
+
+`sd-pose`
+
+workordie:
+> SD pose is great it's just slow in my experience
+
+> Q: sd-pose ... taking a long time  
+> [djbfilmz] A: your SD pose is probably not optimzied, also there is DW Pose (Tensor ver) which is really fast. I switch between .. I'm on a 5000s series card tho
+> ![yolo_for_multi_sdpose_detection](screenshots/nodes/yolo_for_multi_sdpose_detection.webp)  
+> ![sdpose](screenshots/nodes/sdpose.web)  
+> [GH:judian17/ComfyUI-SDPose-OOD](https://github.com/judian17/ComfyUI-SDPose-OOD)
+
+Kijai:  
+[!kj-sdpose](screenshots/nodes/kj-sdpose.webp)  
+> if you have a ton of VRAM you can use very high batch size to make it faster, but you can't do that with cropping since cropping has to be frame by frame
+
+## Sapiens2
+
+[GH:facebookresearch/sapiens2](https://github.com/facebookresearch/sapiens2)
+
+> the cropping/bbox is only really necessary if your subject is super small on the frame, or if you want to detect multiple people
+
+> sapiens2 0.4B twice as fast as SDPose ... they also have 0.8B and 5B models, and one 4k model
+
+> Q: How big is the vid, res wise?  
+> A: 512x1024, the model does 768x1024 only anyway
+
+> sam3d-body [rainbow shapes???] is on another level

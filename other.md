@@ -2,6 +2,8 @@
 
 ## Promising For Comfy
 
+* [GH:facebookresearch/sapiens2](https://github.com/facebookresearch/sapiens2) pose estimation, body-part segmentation, surface normals, and pointmaps for humans
+* [GH:xypeng9903/LDF-VFI](https://github.com/xypeng9903/LDF-VFI) a paper on video frame interpolation using an autoregressive model; new VAE decoder
 * [vision-banana.github.io](https://vision-banana.github.io/) a model from Google for segmentation, depth and normals
 * [HF:datasets|theFoxofSky/RealisDance-Val](https://huggingface.co/datasets/theFoxofSky/RealisDance-Val) rainbow ppl paired with real videos; "it's generated with SMPL tracking and then applying rainbow shader"
 * [GH:Anil-matcha/Open-Generative-AI](https://github.com/Anil-matcha/Open-Generative-AI) Looking for a free, uncensored Higgsfield AI, Freepik, Krea, Openart AI alternative? Seems like a frontend to api-s?

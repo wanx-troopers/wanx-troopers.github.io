@@ -2,6 +2,21 @@
 
 Main article: [LTX 2.3](ltx23.md)
 
+## 2026.04.24
+
+[Ckinpdx](https://github.com/ckinpdx) on [GH:ckinpdx/ComfyUI-LTXAVTools](https://github.com/ckinpdx/ComfyUI-LTXAVTools):
+> My looping sampler needs work to handle a second pass but the standard looping sampler can do it.
+> Drop down the ltvx looping sampler, I use simple guider, res2s sampler and basic scheduler with beta 2 steps `.37` denoise.
+> I also recently added a tiled latent upsampler as I was getting oom at that part of the process.
+> If you have a recent pull of my nodes it's searchable with "tiled upsampler".
+> You can give it the full AV latent, don't need to separate the latent going in.
+> You do need to separate the latent going into the ltxv looping sampler though,
+> only send video in and send the audio around it to final decode.
+> In my v2v any to real wf i just replaced that lora with the edit anything lora ... it did work.
+
+Advice from Torny on how to get sharp videos out of LTX 2.3:
+> forget T2V (it is frustrating) go with I2v use latest kijai distilled model, 2x ver 1.1 upscaler, any of the latest Runexx workflows
+
 ## 2026.04.18
 
 Huddadudd answering on how a good detailed 1536x832 3sec 25fps clip with a nice face in the distance:

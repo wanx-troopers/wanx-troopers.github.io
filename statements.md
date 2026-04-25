@@ -2,6 +2,9 @@
 
 ## 2026.04
 
+Huddadudd on convincing closed source models do more:
+> if you prompt it as a performance  and use acting terms it lets a lot more through
+
 Ada:
 > DoKr-OFT might be the future. The concept separation / accuracy of Dora with the performance for size of LoKr
 > with the speed of OFT. That + SPRINT + CAMEmuon (CAME + muon for for CAME's memory efficiency with adam accuracy +

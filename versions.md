@@ -2,6 +2,12 @@
 
 The page needs a brush-up. Bugs referenced have been fixed or worked around. Still might be useful info.
 
+## 2026.04.25
+
+djbfilmz re RTX 6000 Pro:
+> when updated my pytorch (???can't remember) and cuda (13.0) everything got slightly faster ...
+> also though... some old nodes that were outdated did break, so you have to be careful
+
 ## 2026.04.24
 
 [fredbliss](https://github.com/fblissjr):

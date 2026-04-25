@@ -1,5 +1,11 @@
 # Flux Image Generation Models
 
+## 2026.04
+
+[CA:2318844/klein-9b-body-weight-slider](https://civitai.com/models/2318844/klein-9b-body-weight-slider) concept slider from thin to fat
+
+## Older
+
 - [HF:silveroxides/FLUX.2-dev-fp8_scaled/tree/main](https://huggingface.co/silveroxides/FLUX.2-dev-fp8_scaled/tree/main) model weights.
   Now includes weights for "turbo" flavor - the distilled version.
 - [HF:fal/FLUX.2-dev-Turbo/tree/main/comfy](https://huggingface.co/fal/FLUX.2-dev-Turbo/tree/main/comfy) flux.2 dev turbo as a LoRA

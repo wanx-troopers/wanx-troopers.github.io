@@ -7,6 +7,7 @@
 
 | HF Space | LoRA |
 | :--- | :--- |
+| [GH:oumad/LumiPic](https://github.com/oumad/LumiPic/tree/main) | 2511 edit LoRa to go to LogC3 tone mapping curves (HDR) similar to how it's done with LTX 2.3 video |
 | [HF:lilylilith/AnyPose](https://huggingface.co/lilylilith/AnyPose) | 2511 AnyPose - Person in image 1 do the exactly same pose as image 2 |
 | [HF:lightx2v/Qwen-Image-2512-Lightning](https://huggingface.co/lightx2v/Qwen-Image-2512-Lightning/tree/main) ? | Qwen-Image-Lightning v1.1 Lora |
 | - | Qwen-Image-Edit-2512 4-Steps Lora |
