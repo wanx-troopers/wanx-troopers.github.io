@@ -85,6 +85,8 @@ Alternatively people have been experimenting with `[4-8s] ...` style of promptin
 > [epsilon] controls how much the mask supresses the other local prompts;
 > higher epsilon allows the prompts to bleed into each other more, depending on your prompts it may create better flow, with low eps the cuts are *hard*
 
+Wiring help: [prompt-relay](screenshots/nodes/ltx/prompt-relay.webp)
+
 SirAxe's experimental nodes to apply LoRa-s to different parts of the video selectively, extending functionality of prompt relay:
 [GH:kijai/ComfyUI-PromptRelay/pull/1](https://github.com/kijai/ComfyUI-PromptRelay/pull/1)
 
@@ -414,6 +416,15 @@ mamad8:
 > I'll release the training code to train on top of loras soon (fork of aitoolkit)
 
 [GH:richservo/rs-nodes](https://github.com/richservo/rs-nodes) LoRa training inside ComfyUI "adding ffn chunking fixed the OOM" "I'm ... training on 576x576x97 ... it's much more efficient ... no idea why"
+"uses ollama server"
+
+> it's only 2 nodes. Data Prepper and LTX train;
+> if you have less than 32GB VRAM you want to plug in to the model vae and clip;
+> vision is if you want to target non-human objects;
+> if you want to always include people in your output then select face detection;
+> if you have specific people you can plug on into the pin, or specify a folder of named images;
+> if you are doing audio, provide voice samples of 15-30 seconds for captioning;
+> you can even have it name locations if you add items to a folder and point it to it
 
 [GH:vrgamegirl19](https://github.com/vrgamegirl19):
 > so when training with images you end up loosing motion the higher the steps ...
@@ -479,9 +490,10 @@ Hicho:
 
 ## Node Pakcs
 
-[Richard Servello](https://www.eastoflavfx.com/)'s [GH:richservo/rs-nodes](https://github.com/richservo/rs-nodes):
-- `RS LogC3 HDR Decode` (hdr_linear, raw, sdr_preview), `RS EXR Sequence Save`
-- `RS Sigma Schduler` computes sigmas based on total token count in the video - depends on width, height, number of frames
+- [Richard Servello](https://www.eastoflavfx.com/)'s [GH:richservo/rs-nodes](https://github.com/richservo/rs-nodes):
+  - `RS LogC3 HDR Decode` (hdr_linear, raw, sdr_preview), `RS EXR Sequence Save`
+  - `RS Sigma Schduler` computes sigmas based on total token count in the video - depends on width, height, number of frames
+- [GH:sumitchatterjee13/nuke-nodes-comfyui](https://github.com/sumitchatterjee13/nuke-nodes-comfyui)
 - [workflow-in-a-node](workflows/ltx/RS-workflow-in-a-node.png) "It does everything.
   FLF, audio driven, you can plug a video in and select what frames to use as guidance
   it has masking which I haven't gotten to completely work, BUT it does work for rediffusion
@@ -489,8 +501,7 @@ Hicho:
   does spatial and temporal upscale"
 - [Fredblis](https://fredbliss.com/)'s automations: "audio + image input + initial prompt + prompt schedule timestamps", looping workflow, automated prompt generation and timing
   [GH:fblissjr/ComfyUI-AudioLoopHelper](https://github.com/fblissjr/ComfyUI-AudioLoopHelper)
-
-[GH:sumitchatterjee13/nuke-nodes-comfyui](https://github.com/sumitchatterjee13/nuke-nodes-comfyui)
+- [GH:dorpxam/ComfyUI-LTX2-Microscope](https://github.com/dorpxam/ComfyUI-LTX2-Microscope) tool to view what exactly LTX 2.3 is doing during sampling
 
 ## ID LoRa
 

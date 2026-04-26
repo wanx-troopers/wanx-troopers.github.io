@@ -232,3 +232,6 @@ Kijai:
 Experimental implementation for ComfyUI: [GH:kijai/ComfyUI-Sapiens2](https://github.com/kijai/ComfyUI-Sapiens2)
 
 ![sapiens2-nodes](screenshots/nodes/sapiens2-nodes.png)
+
+> Q: DWpose ... deprecated now, considering we have Sapiens2?
+> A: I'd keep it around. Sapiens looks really good tho

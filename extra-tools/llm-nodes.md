@@ -3,6 +3,7 @@
 Various nodes interacting with or running LLM models are used by AI artists to enhance prompts during image and video generation.
 This page collections information on some of them.
 
+* [GH:vrgamegirl19/comfyui-vrgamedevgirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl) now contains a Gemma 4 node, workflow in [GH:vrgamegirl19/comfyui-vrgamedevgirl:Workflows/betatesting](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl/tree/main/Workflows/betatesting)
 * [GH:WASasquatch/ComfyUI_LMStudio_EasyQuery](https://github.com/WASasquatch/ComfyUI_LMStudio_EasyQuery) MIT licensed, reasonably up to date as of March 2026
 * [GH:BennyDaBall930/ComfyUI-Z-Engineer](https://github.com/BennyDaBall930/ComfyUI-Z-Engineer) seems to be from the same source as the "Z-Enginner" flavor of Qwen3, popular with [ZIT](z-image.md) users
 * [GH:WASasquatch/WAS_Extras](https://github.com/WASasquatch/WAS_Extras) "I like the WAS LM Studio nodes, work great"
@@ -16,3 +17,11 @@ This page collections information on some of them.
 > running on `ComfyUI_Searge_LLM`
 
 Apparently unlike LMStudio, VLLM can do parallel queries.
+
+## Notes On LLM Models
+
+- `gemma-4-26b-a4b-it-heretic.q4_k_m.gguf`
+- `supergemma4-26b-uncensored-fast-v2-Q4_K_M.gguf`
+- `gemma-4-26B-A4B-it-UD-IQ2_M.gguf`
+- `gemma-4-...-mmproj..` to enable Gemma to "see" images
+
