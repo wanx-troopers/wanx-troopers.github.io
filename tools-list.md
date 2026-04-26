@@ -228,3 +228,7 @@ Kijai:
 > the 1b is a lot better than the 0.4, which totally failed this test
 
 > 4k model is only 1b
+
+Experimental implementation for ComfyUI: [GH:kijai/ComfyUI-Sapiens2](https://github.com/kijai/ComfyUI-Sapiens2)
+
+![sapiens2-nodes](screenshots/nodes/sapiens2-nodes.png)

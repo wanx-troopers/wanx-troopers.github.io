@@ -82,6 +82,9 @@ Alternatively people have been experimenting with `[4-8s] ...` style of promptin
 
 > prompt relay has to use sdpa for crossattn because sage doesn't support the masking
 
+> [epsilon] controls how much the mask supresses the other local prompts;
+> higher epsilon allows the prompts to bleed into each other more, depending on your prompts it may create better flow, with low eps the cuts are *hard*
+
 SirAxe's experimental nodes to apply LoRa-s to different parts of the video selectively, extending functionality of prompt relay:
 [GH:kijai/ComfyUI-PromptRelay/pull/1](https://github.com/kijai/ComfyUI-PromptRelay/pull/1)
 
@@ -167,6 +170,16 @@ Tooltip on `LTXV Add Latent Guide` from `LTX Video` node pack suggests that one 
 [twoGuidesMoreMotion](screenshots/ltx/twoGuidesMoreMotion.webp); [twoGuidesMoreMotion2](screenshots/ltx/twoGuidesMoreMotion2.webp) - "just renamed, they are regular AddGuide";
 [Drozbay](hidden-knowledge.md#drozbay) on the difference between these two similar nodes:
 "Nothing should be special about the IC Lora guide version except that it allows you to control the latent downscale factor. and it also doesn't have the crf option".
+
+If multiple guides are used multiple `LTXVCropGuides` nodes may be needed: [ltx23-multiple-guides](workflows/ltx/ltx23-multiple-guides.png)
+
+Hashu [not entirely confident]:
+> If you have guides for 'different' frames then you need only 1 crop guide.
+> So in your example if you change the frame idx and have one at frame 0,
+> the other at frame 5 and the other at -1 you only need 1 crop guide node.
+> But the moment you have an overlap in frame idx then you need 2 crop guide nodes.
+> So if you are using an ic lora + a first frame guide then u technically have 2 guides at the first frame so you need 2 crop guides.
+> [ltx23-multiple-guides-2](workflows/ltx/ltx23-multiple-guides-2.png)
 
 ## Controlling The Camera
 
@@ -589,3 +602,7 @@ Draken:
   including a latent looping workflow;
   [ckinpdx-LTX23_TorI2V_Humo_API](workflows/ltx/ckinpdx-LTX23_TorI2V_Humo_API.json) using HuMo 1.7B as the last cleanup step is probably up there as well, or soon will be;
   some of them using [GH:ckinpdx/ComfyUI-LTXAVTools](https://github.com/ckinpdx/ComfyUI-LTXAVTools) nodes
+
+## Joke LoRa-s
+
+- [HF:TheBurgstall/ltx-2.3-googlyeyes-lora](https://huggingface.co/TheBurgstall/ltx-2.3-googlyeyes-lora)

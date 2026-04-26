@@ -2,6 +2,7 @@
 
 ## Promising For Comfy
 
+* [GH:Hong-yu-Zhang/TS-Attn](https://github.com/Hong-yu-Zhang/TS-Attn) Temporal-wise Separable Attention for Multi-Event Video Generation
 * [GH:facebookresearch/sapiens2](https://github.com/facebookresearch/sapiens2) pose estimation, body-part segmentation, surface normals, and pointmaps for humans
 * [GH:xypeng9903/LDF-VFI](https://github.com/xypeng9903/LDF-VFI) a paper on video frame interpolation using an autoregressive model; new VAE decoder
 * [vision-banana.github.io](https://vision-banana.github.io/) a model from Google for segmentation, depth and normals

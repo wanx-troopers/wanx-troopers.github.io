@@ -1,5 +1,7 @@
 # News
 
+2026.04.26 Kijai released experimental implementation for [Sapiens2](tools-list.md#sapiens2) pose detection - faster than sd-pose
+
 2026.04.23 Lightbricks released [HDR LoRa](ltx23.md#hdr-lora) for LTX 2.3
 
 2026.04.16 Civitai splitting into Civitai.com (PG-13) and Civitai.red (NSFW allowed); existing content automatically moves to the latter

@@ -435,6 +435,7 @@ Kijai's nodes can convert between data types such as `bf16` at `safetensors` loa
 
 | Kijai's Repo | Purpose |
 | :-- | :-- |
+| [GH:kijai/ComfyUI-Sapiens2](https://github.com/kijai/ComfyUI-Sapiens2) | Sapiens2 implementation, experimental as of 2026.04.26 |
 | [GH:kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)| Alternative to Native KSampler, "wrapper" nodes |
 | [GH:kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)| Supplementary, can be used with Native KSampler |
 | [GH:kijai/ComfyUI-VideoColorGrading](https://github.com/kijai/ComfyUI-VideoColorGrading) | ColorGrading |
