@@ -2,6 +2,7 @@
 
 ## Promising For Comfy
 
+* [GH:Eyeline-Labs/Vista4D](https://github.com/Eyeline-Labs/Vista4D) Video Reshooting with 4D Point Clouds - from Netflix based on Wan 2.1
 * [GH:Hong-yu-Zhang/TS-Attn](https://github.com/Hong-yu-Zhang/TS-Attn) Temporal-wise Separable Attention for Multi-Event Video Generation
 * [GH:facebookresearch/sapiens2](https://github.com/facebookresearch/sapiens2) pose estimation, body-part segmentation, surface normals, and pointmaps for humans
 * [GH:xypeng9903/LDF-VFI](https://github.com/xypeng9903/LDF-VFI) a paper on video frame interpolation using an autoregressive model; new VAE decoder
@@ -10,7 +11,7 @@
 * [GH:Anil-matcha/Open-Generative-AI](https://github.com/Anil-matcha/Open-Generative-AI) Looking for a free, uncensored Higgsfield AI, Freepik, Krea, Openart AI alternative? Seems like a frontend to api-s?
 * [GH:justdubit/just-dub-it](https://github.com/justdubit/just-dub-it)
 * [kimodo](https://research.nvidia.com/labs/sil/projects/kimodo/)  kinematic motion diffusion model trained on large-scale optical mocap data "Kimodo's text encoder uses Meta Llama 3 8B, which is a gated model on HuggingFace"
-* cascadeur seems to be some other way to automate moving rigs in blender??? not clear if free or paid only.. what is Akeytsu which is free?
+* [Cascadeur](https://cascadeur.com/) is an AI assited tool for posing and creating animated motion; ... what is Akeytsu which is free? "NVIDIA GEM-X" [X post](https://x.com/anoxxymane/status/2044464237091881188?s=20)
 * [GH:fblissjr/fb-claude-skills](https://github.com/fblissjr/fb-claude-skills) A collection of Claude Code plugins, skills, and MCP Apps. Installable as a plugin marketplace in Claude Code, Cowork, and Claude Desktop.
 * [firstframego.github.io](https://firstframego.github.io/) article suggesting a way to pack all references into 1st frame
 * [GH:DAVIAN-Robotics/EgoX](https://github.com/DAVIAN-Robotics/EgoX), [keh0t0.github.io/EgoX](https://keh0t0.github.io/EgoX/) convert any video to 1st person view; Wan 2.1 I2V 480p LoRA: [HF:DAVIAN-Robotics/EgoX](https://huggingface.co/DAVIAN-Robotics/EgoX/tree/main)

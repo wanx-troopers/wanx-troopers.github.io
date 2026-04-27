@@ -3,6 +3,8 @@
 Various nodes interacting with or running LLM models are used by AI artists to enhance prompts during image and video generation.
 This page collections information on some of them.
 
+* [prompt-enhancement-qwenvl-advanced](screenshots/nodes/prompt-enhancement-qwenvl-advanced.webp) - example of how to enhance prompt for LTX using QwenVL, using LTX 2.3 system prompt;
+  same using [GH:richservo/rs-nodes](https://github.com/richservo/rs-nodes): [prompt-enhancement-qwenvl-advanced-rs-nodes](screenshots/nodes/prompt-enhancement-qwenvl-advanced-rs-nodes.webp)
 * [GH:vrgamegirl19/comfyui-vrgamedevgirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl) now contains a Gemma 4 node, workflow in [GH:vrgamegirl19/comfyui-vrgamedevgirl:Workflows/betatesting](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl/tree/main/Workflows/betatesting)
 * [GH:WASasquatch/ComfyUI_LMStudio_EasyQuery](https://github.com/WASasquatch/ComfyUI_LMStudio_EasyQuery) MIT licensed, reasonably up to date as of March 2026
 * [GH:BennyDaBall930/ComfyUI-Z-Engineer](https://github.com/BennyDaBall930/ComfyUI-Z-Engineer) seems to be from the same source as the "Z-Enginner" flavor of Qwen3, popular with [ZIT](z-image.md) users

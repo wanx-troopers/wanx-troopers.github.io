@@ -2,6 +2,25 @@
 
 Main article: [LTX 2.3](ltx23.md)
 
+## 2026.05.27
+
+> 1.1 distilled in mxfp8 which seems good
+
+> Q: in ltx [does] using varying models of gemma affects the output?
+> A: between the fp8 and bf16 versions, it's minimal difference
+
+Dev + the Distill LoRa 1.1 seems better than Distill 1.1.
+
+> Q: why would the dev + LoRa be slower?
+> A: because you can't apply lora in fp8 it has to do the upcast to apply, then downcast to fp8 to do the matmul;
+> a checkpoint with the lora applied at half strength would probably be useful;
+> ... when you use fp8 checkpoint + bf16 lora, the lora is higher quality
+
+David Snow:
+> if you use the distill lora on a second pass using a negative weight, it reduces the plastic skin greatly.
+> so when using it for upscale set strength to a negative?
+> Yeah. -0.4 is a good starting point.
+
 ## 2026.04.24
 
 [Ckinpdx](https://github.com/ckinpdx) on [GH:ckinpdx/ComfyUI-LTXAVTools](https://github.com/ckinpdx/ComfyUI-LTXAVTools):

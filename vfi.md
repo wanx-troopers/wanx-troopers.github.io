@@ -15,6 +15,12 @@ Opinionated quote:
 
 > the proper way to do it is using vace to generate the frames in between with diffusion, but gimm seems much better than rife
 
+## 2026.04.28
+
+brbbbq:
+> I just tested GIMM-VFI vs GMFSS and personally I'm sticking to GMFSS. Although they're like 97% equivalent,
+> on the really extreme frames GIMM-VFI tends to give cottage cheese, whereas GMFSS has a smoother characteristic
+
 ## RIFE
 
 RIFE VFI still good to double frame rate.

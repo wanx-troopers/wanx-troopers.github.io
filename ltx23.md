@@ -90,6 +90,14 @@ Wiring help: [prompt-relay](screenshots/nodes/ltx/prompt-relay.webp)
 SirAxe's experimental nodes to apply LoRa-s to different parts of the video selectively, extending functionality of prompt relay:
 [GH:kijai/ComfyUI-PromptRelay/pull/1](https://github.com/kijai/ComfyUI-PromptRelay/pull/1)
 
+## Context Windows With Ltx 2.3
+
+[Drozbay](hidden-knowledge.md#drozbay) on context windows implementation for LTX 2.3:
+> Getting dialogue to be split perfectly among context windows even using split conditionings is gonna be very hard to get right.
+> I have gotten it to work by creating a gen at low resolution with no context windows and then upscaling by 3x or 4x to get to the
+> final resolution, using a partially masked audio to get it to increase in quality without totally losing the content.
+> No context sliding specifically. I'm injecting the first frame into each window as a pseudo-reference. It doesn't always end up looking that good.
+
 ## From The Makers
 
 [HF:Lightricks](https://huggingface.co/Lightricks) provide
@@ -457,6 +465,11 @@ burgstall on training bodypositive LoRa:
 [Oumoumad](https://gear-productions.com/):
 > personally I'd take it in reverse, ie just find fat people videos, and turn them skinny with image model,
 > the gen the rest with control. And use the original fat ppl.videos as target. Always ensure target is as natural/original as possible
+
+burgstall:
+> I just started 512x384x25f pairs and its at over 31Gb
+
+> had to lower rank to 32 to fit
 
 ## Sound
 
