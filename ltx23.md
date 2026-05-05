@@ -6,6 +6,8 @@ Frame count native to LTX 2.3 is `1 + 8 * N` since 1st frame is encoded separate
 one latent span 8 frames in time dimension.
 
 See also:
+- [LTX 2.3 News](ltx23-news.md)
+- [LTX 2.3 Hints](ltx23-hints.md)
 - [Dialing In LTX 2.3 Workflow](ltx23-dialing-in.md)
 - [LTX 2.3 Statements](ltx23-statements.md)
 - [LTX-2 in ComfyUI Chattable KB](https://notebooklm.google.com/notebook/4f07f98c-75b6-4278-bde1-906f9899b60c?pli=1)
@@ -144,6 +146,23 @@ They also provide under LTX-2 umbrella
 IC LoRa generally stands for "in-context LoRa" a _type_ of LoRa. In colloquial speak "IC LoRa" generally refers to one of the IC LoRa-s released alongside LTX 2.3:
 [Union Control](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Union-Control), Motion Track or Depth/Canny/Pose.
 Additional Python code to use them: [GH:Lightricks/ComfyUI-LTXVideo](https://github.com/Lightricks/ComfyUI-LTXVideo/).
+
+One way to use IC LoRa along with a reference image: ![ic-lora-guide-plus-latent-guide](screenshots/ltx/ic-lora-guide-plus-latent-guide.webp)
+
+[Drozbay](hidden-knowledge.md#drozbay):
+> the guide latents are all just stacked together at the end of the noise latent and assigned rope indices to indicate where they belong.
+
+On why the above method works better than alternative of supplying the reference image as an image not directly as a latent:
+
+> I think there might be something else going on here, like the ordering of how they are placed if you use the different nodes,
+> or maybe some default settings getting applied for one and not the other
+
+> Q: Shouldn't providing the latent at index -1 be the same as providing an image guide at -1?  
+> A: there's no node to do that with image, only the latent guide node currently actually places it at negative index, the other nodes use python indexing and start from the end instead
+
+> what I've now been doing with LTX is putting ref latent as the extra cond AND as I2V first frame
+> it has minimal effect in the cond (guide), but enough to kick start it so the I2V cond takes over;  
+> Yeah, I've been doing similar, sometimes with lower strength on the inplace latent frame
 
 ## Keyframing
 
@@ -320,86 +339,6 @@ It was reported an overly high sqare resolution (1920x1920) after upscaler can c
 > One thing I love about LTX that WAN is [bad] at, is I can shove the same video through it over again and no problems.
 > WAN will blister the contrast to hell if you try that, VACE too.
 
-## Hints
-
-Latent tokens in a video: (Width / 32) × (Height / 32) × ((Frames - 1) / 8 + 1); might be best not to exceed 20-35k without looping/context windows.
-
-> As long as the video is relatively static, it's amazing. As soon as there's fast motion ... [things get mushy]
-
-> The newer ic Loras like the union one are trained with half res. 
-> Latent downscale factor?
-> Yes.
-
-Vertical format videos may still be more problematic than horizontal ones, even though it was claimed they were fixed in LTX 2.3.
-
-Lower image compression (16) helped with a crazy-looking person (no eyes) where higher compression (22) failed.
-
-N0NSense is generating cool videos using
-- cinema4d playblast render
-- AIO Aux Preprocessor
-- depth map
-- IC LoRa
-
-Above is also possible with LTXVImgToVideoInplaceKJ node to also use FLF.
-N0NSense: emptying a glass is a practically impossible task for the model in i2v mode. The only option is FLF.
-Also tested with: `Draft animation + hard cuts. depth, IC str 0.4, clwn sampler, t2v`.
-"Need more detailed prompt for camera movement but seems to work".
-Can be used to lock camera static: [N0NSens-static-cam-ltx23](screenshots/ltx/N0NSens-static-cam-ltx23.webp).
-"ic union lora. depth" "it's based on LTX-2.3_ICLoRA_Union_Control workflow from ltx"
-It is sufficient to place cubes where characters need to be and they can be rotated to make characters look the right way etc. This also covers scene cuts.
-"depth at str 0.2"; "i2v, using starting image"; Q: why not render depth? A: don't want to spend time for rendering from c4d; ... visible wireframe helps to detect some depth by depthAnything
-
-Recommended ic guide strength: 0.1 - 0.4 for depth, 0.2-0.6 for canny, 0.5-1.0 for pose; lower strength allows ltx be more imaginative
-
-[Making of "Gloomy Bukur"](https://vimeo.com/1183873769?share=copy&fl=sv&fe=ci) Vasily Bodnar, N0NSense
-
-> ... a ... (left) does this ... a ... (right) does that. the camera abruptly changes angle: the ... is on the left in the background ... the is on the left in foreground ...
-
-
-Change FPS from 24 to 25 to fix de-sync of audio
-
-[Mark's Workflows](https://markdkberry.com/workflows/research-2026/#video-pipeline-workflows) "LTX 2.3, 10 seconds, 24 fps, 241 frames. I dont go over that, no real need. and I end on 24fps coz I like it"
-
-[Mark DK Berry](https://markdkberry.com): I've been experimenting with Phantom 1.3B running through USDU to add the WAN back in to LTX results.
-I am low VRAM so cant do 14B in under 30 mins, but 1.3B is surprisingly good and very fast even on low VRAM and manages 1080p 24fps,
-241 frames in minutes fixing up some of that LTX detail issue like eyes quite well ... anyone with a decent card should be WAN 14B detailing
-low denoise for polish and you'll have perfect results from LTX. Juan Gea: Yes, Wan 2.2 14B is the perfect "last pass" for LTX, or the HUMO version.
-
-Reported as working (empty lines are extra empty lines in prompt):
-> [fen] character description  
->  
-> [scene] scene description  
->  
-> [sound] ambience description  
->  
-> [0-1s] [fen] does ... says ".."
-
-> are these 2 still needed? Yeah they still help
-![ltx-kj-additions-1.webp](screenshots/nodes/ltx-kj-additions-1.webp)
-
-Kijai's tensor loop node "is just a utility" "it works but somewhat awkward with the audio length calculations"
-
-[GH:fblissjr/ComfyUI-AudioLoopHelper](https://github.com/fblissjr/ComfyUI-AudioLoopHelper)
-"super rough around the edges but if anyone wants. its meant to handle all those timing calcs that i didnt wanna bother with"
-
-> Q: when using a sampler for videos, what sampler would you suggest to use for clear and fluid animation?  
-> A [GH:vrgamegirl19](https://github.com/vrgamegirl19): i found that these two seem to give good results. i would try them both euler_ancestral, euler_ancestral_cfg_pp
-
-Hicho:
-> i didnt know that flf nodes accept video frames; is this how we do extension?
-
-Two NAGs exist which can be used with LTX 2.3, "very different", "whole different method of applying"
-![twoNags.webp](screenshots/ltx/twoNags.webp)
-
-Can try `APG Guider` instead of `CFG Guider` to reduce color shift issues, [article](https://arxiv.org/pdf/2410.02416).
-
-Do not put quotes around dialogue to avoid subtitles, also Kijai's NAG.
-
-> [On AMD rdna2] ltxvideo works on fp16 even though it is not listed in comfy config file, and it is faster for me than fp32;
-> nvfp4 also works for me but with that the quality is not that great
-
-VAE Decode Tile needs `temporal_size` way above 8 to avoid flickering.
-
 ## Training
 
 On character LoRa training: "just 30 images with 10 repeats and 10 epochs, so quick and dirty - AkaneTendo25 fork of musubi-tuner-ltx-2 - success"
@@ -481,6 +420,12 @@ Some ambience noise on input audio may make ltx generatevlipsync better.
 > I use vibevoice multi speakers and then shove 10 second (about 3 lines of dialogue max) in to LTX ...
 > LTX 2.3 ... "add subtle ambient noise" trick
 
+It would be natural when using an IC LoRa to supply reference image via `LTX Add Latent Guide` with `index=-1` completely separate from the the guide video.
+However it looks like existing LoRa trainers don't yet support this.
+This forces training of IC LoRa-s that take reference creatively - as 1st frame of guide video, on the side of guide video etc.
+
+[GH:vrgamegirl19](https://github.com/vrgamegirl19)'s training node for quick training of LTX 2.3 single character LoRa-s: [YT:9Z_glyAHE1k](https://www.youtube.com/watch?v=9Z_glyAHE1k).
+
 ## Manual Sigmas
 
 David Show: `1.0, 0.995, 0.99, 0.9875, 0.975, 0.65, 0.28, 0.07, 0.0`, "it's a three stage workflow, but those new sigmas are just being used on the first pass."
@@ -501,7 +446,7 @@ Hicho:
 - Ablejone's aka [Drozbay](hidden-knowledge.md#drozbay)'s LTX 2.3 ClowShark workflow: [droz_LTX-2_SharkSampling_v7.1](workflows/ltx/droz_LTX-2_SharkSampling_v7.1.png)\
 - [Ckinpdx](https://github.com/ckinpdx)'s [LoopingSamper WF](workflows/ltx/ckinpdx-looping-sampler.png)
 
-## Node Pakcs
+## Node Packs
 
 - [Richard Servello](https://www.eastoflavfx.com/)'s [GH:richservo/rs-nodes](https://github.com/richservo/rs-nodes):
   - `RS LogC3 HDR Decode` (hdr_linear, raw, sdr_preview), `RS EXR Sequence Save`
@@ -515,6 +460,7 @@ Hicho:
 - [Fredblis](https://fredbliss.com/)'s automations: "audio + image input + initial prompt + prompt schedule timestamps", looping workflow, automated prompt generation and timing
   [GH:fblissjr/ComfyUI-AudioLoopHelper](https://github.com/fblissjr/ComfyUI-AudioLoopHelper)
 - [GH:dorpxam/ComfyUI-LTX2-Microscope](https://github.com/dorpxam/ComfyUI-LTX2-Microscope) tool to view what exactly LTX 2.3 is doing during sampling
+- [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI) poweful node for audio and video loading and trimming (generated with help from Gemini)
 
 ## ID LoRa
 
@@ -557,6 +503,7 @@ Draken:
 
 ## LoRa-s, Alisson
 
+- ref v2v (about to be) released: IC LoRa, initial frame contains reference image on white in green, subsequent frames source video
 - EditAnything IC LoRA: [CA:2553102/editanything?2869279](https://civitai.red/models/2553102/editanything?modelVersionId=2869279),
   [HF:Alissonerdx/LTX-LoRAs:ltx23_edit_anything_global_rank128_v1_6000steps_prodigy](https://huggingface.co/Alissonerdx/LTX-LoRAs/blob/main/ltx23_edit_anything_global_rank128_v1_6000steps_prodigy.safetensors); instructions in README next to it;
   [HF:Alissonerdx/LTX-LoRAs:ltx23_edit_anything_v1.json](https://huggingface.co/Alissonerdx/LTX-LoRAs/blob/main/workflows/ltx23_edit_anything_v1.json)

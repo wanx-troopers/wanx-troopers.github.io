@@ -26,6 +26,8 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 
 * LTX
   * [LTX 2.3](ltx23.md)
+    * [LTX 2.3 News](ltx23-news.md)
+    * [LTX 2.3 Hints](ltx23-hints.md)
     * [Dialing In LTX 2.3 Workflow](ltx23-dialing-in.md)
     * [LTX 2.3 Statements](ltx23-statements.md)
   * [LTX 2.0](ltx20.md)
