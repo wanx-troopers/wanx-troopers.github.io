@@ -19,6 +19,7 @@
 * [GH:caiyuanhao1998/Open-OmniVCus](https://github.com/caiyuanhao1998/Open-OmniVCus) build a video from ingredients; [HF:CaiYuanhao/OmniVCus](https://huggingface.co/CaiYuanhao/OmniVCus/tree/main)
   "it's VACE module ... needs some new code probably ... loads without issues and technically works ... just.. doesn't do anything"
 * [GH:myyzzzoooo/InsertAnywhere](https://github.com/myyzzzoooo/InsertAnywhere) model for adding objects into the video
+* [GH:houyuanchen111/UniVidX](https://github.com/houyuanchen111/UniVidX) Wan2.1-T2V-14B based experiment on AI video gens
 
 ## Caution Against 1038lab
 

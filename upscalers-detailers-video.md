@@ -1,5 +1,10 @@
 # Video Upscalers and Detailers
 
+## NVidiea Super Resolution
+
+[GH:Comfy-Org/Nvidia_RTX_Nodes_ComfyUI](https://github.com/Comfy-Org/Nvidia_RTX_Nodes_ComfyUI)
+"Contains the 'RTX Video Super Resolution' upscaling node to upscale images and videos. Only works on Nvidia RTX GPUs."
+
 ## LTX V2V Detailer
 
 Detailier from LTX can possibly be used on videos not produced by LTX

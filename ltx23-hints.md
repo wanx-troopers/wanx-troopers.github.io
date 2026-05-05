@@ -1,4 +1,4 @@
-# Hints On LTX 2.3
+ï»¿# Hints On LTX 2.3
 
 ## 2026.05.05
 
@@ -11,6 +11,8 @@ Jonathan [GH:WhatDreamsCost](https://github.com/WhatDreamsCost/) on fixing an is
 
 > Q: Which IC LoRa you think might help to fix issues like this? UnionControl? IC LoRa wf without a LoRa?  
 > A: both, try without control net first and if it doesn't match the motion good enough then try using like a depth map at a low strength
+
+> Try putting a clear vram node before both of your decode nodes, I had a similar issue of the audio decode taking sometimes minutes to complete even on short videos. Now it's almost instant.
 
 ## 2026.04.29
 
@@ -29,7 +31,7 @@ PineAmbassador:
 
 ## Before 2026.04.29
 
-Latent tokens in a video: (Width / 32) × (Height / 32) × ((Frames - 1) / 8 + 1); might be best not to exceed 20-35k without looping/context windows.
+Latent tokens in a video: (Width / 32) Ã— (Height / 32) Ã— ((Frames - 1) / 8 + 1); might be best not to exceed 20-35k without looping/context windows.
 
 > As long as the video is relatively static, it's amazing. As soon as there's fast motion ... [things get mushy]
 

@@ -1,4 +1,4 @@
-# Chronological News on LTS 2.3
+﻿# Chronological News on LTS 2.3
 
 ## 2026.04.29
 

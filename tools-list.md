@@ -102,7 +102,9 @@ See also: [Qwen Edit - VACE](wan-t2v-advanced.md#vace-with-qwen-image-edit).
 - Woosh - superios to LTX 2.3 but tries to generate sound as ppl move spead; N0NSens put together a masking wf to solve this: [N0NSens-Woosh-SFX.json](workflows/N0NSens-Woosh-SFX.json)
 - [kijai/ComfyUI-MMAudio](https://github.com/kijai/ComfyUI-MMAudio)
 - ACE Foley Generator
-- ACE Step
+- ACE Step/Acestep
+
+Acestep XL SFT can generate stunning music.
 
 > Inside of Comfy you could Use Stable Audio or ACE... but tbh both are not that good
 
