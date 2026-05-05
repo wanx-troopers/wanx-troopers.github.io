@@ -87,7 +87,13 @@ Alternatively people have been experimenting with `[4-8s] ...` style of promptin
 > [epsilon] controls how much the mask supresses the other local prompts;
 > higher epsilon allows the prompts to bleed into each other more, depending on your prompts it may create better flow, with low eps the cuts are *hard*
 
-Wiring help: [prompt-relay](screenshots/nodes/ltx/prompt-relay.webp)
+> prompt relay only needs latent to know your input size, it can just be empty latent too  
+> Q: ...does it need to be audio + video latent, or could it just be video?  
+> A: iirc it should just be video
+
+Wiring help: [prompt-relay](screenshots/nodes/ltx/prompt-relay.webp).
+
+The Shadow (NYC)'s prompt relay setup: [the-shadow-prompt-relay](screenshots/nodes/ltx/the-shadow-prompt-relay.webp).
 
 SirAxe's experimental nodes to apply LoRa-s to different parts of the video selectively, extending functionality of prompt relay:
 [GH:kijai/ComfyUI-PromptRelay/pull/1](https://github.com/kijai/ComfyUI-PromptRelay/pull/1)
@@ -573,6 +579,8 @@ Draken:
   including a latent looping workflow;
   [ckinpdx-LTX23_TorI2V_Humo_API](workflows/ltx/ckinpdx-LTX23_TorI2V_Humo_API.json) using HuMo 1.7B as the last cleanup step is probably up there as well, or soon will be;
   some of them using [GH:ckinpdx/ComfyUI-LTXAVTools](https://github.com/ckinpdx/ComfyUI-LTXAVTools) nodes
+
+- [Fredblis](https://fredbliss.com/)'s [audio-loop-music-video_latent](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent.json)
 
 ## Joke LoRa-s
 
