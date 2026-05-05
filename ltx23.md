@@ -170,6 +170,9 @@ On why the above method works better than alternative of supplying the reference
 > it has minimal effect in the cond (guide), but enough to kick start it so the I2V cond takes over;  
 > Yeah, I've been doing similar, sometimes with lower strength on the inplace latent frame
 
+[Alisson Pereira](https://huggingface.co/Alissonerdx)'s custom node which adds both reference image guides and guiding video for IC LoRa-s to altents, license unclear:
+[LTXVAddGuideWithRefs.py](bobs/LTXVAddGuideWithRefs.py)
+
 ## Keyframing
 
 Different ways to do FLF: LTXVAddGuide, LTXVImgToVideoInplaceKJ.
@@ -527,6 +530,8 @@ Draken:
 
 ## LoRa-s
 
+- Cseti's [HF:Cseti/LTX2.3-22B_ReStyle_IC-LoRA](https://huggingface.co/Cseti/LTX2.3-22B_ReStyle_IC-LoRA)
+- Defu-Shaun's [LTX 2.3 ICL: Obscura Remova](https://civitai.com/models/2590144?modelVersionId=2909707)
 - LTX 2.3 Fight LoRa [CA:2489766/ltx-23-fight](https://civitai.com/models/2489766/ltx-23-fight) - Torny advices to combine with VBVR V3 at 0.75 strength to further help with motion, also middle frames via guides
 - Defu-Shaun working on ltx23_obscura_remova LoRa, apparently not shared as of now
 - David Show
