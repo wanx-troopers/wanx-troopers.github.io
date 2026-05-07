@@ -66,13 +66,24 @@ Hevi:
 
 `res_multistep` might be better for sound generation than `euler` with distilled.
 
-[Drozbay](hidden-knowledge.md#drozbay):
-> NAG is definitely not going to be as much extra compute as CFG since it only operates on cross-attention;
-> CFG is literally just twice as slow, it runs two fully separate calls at the same step.
-> Also, I dunno if NAG even runs for the negative pass
-
 PhoenixRisen:
 > Seems euler_ancenstral_cfg_pp is the best for prompt adherence; [Mark]: runs like a dog on mine so I dont go near cfg_pp version
 
 [Mark](https://markdkberry.com):
-I switched to euler_ancestral recently was using lcm but find it best in the wf I use.
+> I switched to euler_ancestral recently was using lcm but find it best in the wf I use.
+
+## cfg_pp Samplers
+
+[Drozbay](hidden-knowledge.md#drozbay):
+> fyi: any of the cfg_pp samplers will always run both a positive and negative conditioning pass even on cfg 1.0.
+> So if you're comparing euler_ancestral at cfg 1.0 to euler_ancestral_cfg_pp at cfg 1.0, the latter will always be 2x slower
+
+[Mark](https://markdkberry.com):
+> its way more than x2 slower on my rig ...
+> ... it runs ... NAG as well so would that mean it is x4 slower?
+> (audio and video conditioning in NAG)
+
+[Drozbay](hidden-knowledge.md#drozbay):
+> NAG is definitely not going to be as much extra compute as CFG since it only operates on cross-attention;
+> CFG is literally just twice as slow, it runs two fully separate calls at the same step.
+> Also, I dunno if NAG even runs for the negative pass
