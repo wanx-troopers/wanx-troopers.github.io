@@ -2,6 +2,7 @@
 
 ## Promising For Comfy
 
+* [GH:Cynthiazxy123/SAMA-ComfyUI-official](https://github.com/Cynthiazxy123/SAMA-ComfyUI-official) interesting Wan 2.1-based tech for video editing - "replace dog with a cat"
 * HAMER (Hand Mesh Recovery) is a specialized AI model developed by researchers at UC Berkeley designed to reconstruct a full 3D mesh of a human hand from a single 2D image
 * [GH:Eyeline-Labs/Vista4D](https://github.com/Eyeline-Labs/Vista4D) Video Reshooting with 4D Point Clouds - from Netflix based on Wan 2.1
 * [GH:Hong-yu-Zhang/TS-Attn](https://github.com/Hong-yu-Zhang/TS-Attn) Temporal-wise Separable Attention for Multi-Event Video Generation

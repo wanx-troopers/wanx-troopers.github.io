@@ -218,6 +218,7 @@ Ultra-Realist Style from WAS
 - [LLM Nodes](llm-nodes.md)
 - [GH:by-ae/ae-in-workflow](https://github.com/by-ae/ae-in-workflow) interactive pose editor (for images) - no hands though
 - [GH:LAOGOU-666/ComfyUI-LG_SamplingUtils](https://github.com/LAOGOU-666/ComfyUI-LG_SamplingUtils) - untested, some sort of utilites to inject extra latent noise etc
+- [CA:2600698/realstagram](https://civitai.red/models/2600698/realstagram) workordie's Z-Image LoRa for mixing with character LoRa-s
 
 ## Hypothetical List of Resolutions To Go For
 
