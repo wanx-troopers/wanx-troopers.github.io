@@ -1,5 +1,7 @@
 # News
 
+2026.05.07 [HF:RunDiffusion/Juggernaut-Z-Image/tree/main](https://huggingface.co/RunDiffusion/Juggernaut-Z-Image/tree/main) released
+
 2026.04.26 Kijai released experimental implementation for [Sapiens2](tools-list.md#sapiens2) pose detection - faster than sd-pose
 
 2026.04.23 Lightbricks released [HDR LoRa](ltx23.md#hdr-lora) for LTX 2.3

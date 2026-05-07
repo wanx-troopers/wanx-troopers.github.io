@@ -6,6 +6,10 @@
 - [LLM Nodes](llm-nodes.md)
 - [LLM Prompts](llm-prompts.md)
 
+## 2026.05
+
+[HF:RunDiffusion/Juggernaut-Z-Image/tree/main](https://huggingface.co/RunDiffusion/Juggernaut-Z-Image/tree/main) released.
+
 ## 2026.04
 
 > z image for realism is amazing with low 0.2 denoise and fast
