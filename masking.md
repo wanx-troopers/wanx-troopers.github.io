@@ -1,4 +1,21 @@
-# Wan Masking
+# Masking
+
+## 2026 LTX 2.3
+
+In 2026 focus has shifted to LTX 2.3.
+Latent masks remained relevant.
+Latent masks are a feature of the sampler so they will stay relevant for future models as well we can guess.
+
+- `Set Latent Noise Mask` can still be used - though in some cases LTX 2.3 nodes will set masks on their own under the hood
+- `Solid Mask`, `Batch Masks` nodes can be used to build masks sequence
+- `Preview Mask` can be used to visualize the result
+
+Honorable mention to nodes which work on latents, not masks, but the two often are needed at the same time
+
+- `Preview As Test` shows some numbers
+- `Get Latent Range From ...`
+
+## Wan Masking
 
 Along with [Context Windows](what-plugs-where/context-windows.md) masking in Wan can be confusing.
 There are two types of masks that are relevant for generating video videos with AI models

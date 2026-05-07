@@ -141,7 +141,7 @@ Here is a slightly non-traditional way to build masks. Please note that actual v
 
 ## See Also
 
-- [Wan Masking](wan-masking.md)
+- [Masking](masking.md)
 - [Video Blending From Fragments](tools-list.md#video-blending-from-fragments)
 - [Context Windows](what-plugs-where/context-windows.md)
 - [GH:github.com/ComfyUI-Wan22FMLF](https://github.com/wallen0322/ComfyUI-Wan22FMLF) todo: investigate what the node does; likely can be achieved without it

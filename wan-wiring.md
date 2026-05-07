@@ -162,7 +162,7 @@ VACE "First middle middle last" as done by [VRGameDevGirl](https://github.com/vr
 
 ## See Also
 
-- [Wan Masking](wan-masking.md)
+- [Masking](masking.md)
 - [Context Windows](what-plugs-where/context-windows.md)
 - [Wan I2V Advanced](wan-i2v-advanced.md)
 - [Wan T2V Advanced](wan-t2v-advanced.md)

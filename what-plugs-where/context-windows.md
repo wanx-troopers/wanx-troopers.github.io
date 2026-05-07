@@ -120,7 +120,7 @@ Thus the advice is to keep the value set to 4 in wrapper.
 [Conditioning](../conditioning.md) presents its own challenge in relation to `Context Windows`.
 Do we apply the same conditioning to all positions of the context window?
 Do we partition conditioning into sections and use the matching section for each context window?
-Are we handling [masking](../wan-masking.md) correctly?
+Are we handling [masking](../masking.md) correctly?
 How do we use a different text prompt for each section?
 What happens with the initial image for I2V models?
 Identity or clothing of our characters drifts throughout our long window, how do we lock it?

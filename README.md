@@ -14,7 +14,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 * [Sigmas](sigmas.md)
 * [Control Techniques](control.md)
   * [LongVie](longvie.md)
-* [Wan Masking](wan-masking.md)
+* [Masking](masking.md)
 * [Wan Wiring](wan-wiring.md)
 * [Wan Motion](wan-motion.md)
 * [Wan I2V Advanced](wan-i2v-advanced.md)

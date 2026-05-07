@@ -35,7 +35,7 @@ Note: `WanVacePhantomDualV2` from `WanVaceAdvanced` is compatible with Phantom b
 
 ## Combining Latent, VACE Masks, Phantom, and Context Windows
 
-> If you use only Vace for inpainting without a [latent noise mask](wan-masking.md), it samples the entire video, so even the "unchanged" part of the image gets degraded
+> If you use only Vace for inpainting without a [latent noise mask](masking.md), it samples the entire video, so even the "unchanged" part of the image gets degraded
 
 [drozbay](hidden-knowledge.md#drozbay) has thoughtfully developed a WF for using VACE, latent masks, VACE, [Context Windows](what-plugs-where/context-windows.md) references together. His considerations were
 
@@ -56,7 +56,7 @@ node pack: [Keyframe Party-v1](workflows/fs-Keyframe Party-v1.json)
 
 ## See Also
 
-- [Wan Masking](wan-masking.md)
+- [Masking](masking.md)
 - [Video Blending From Fragments](tools-list.md#video-blending-from-fragments)
 - [Context Windows](what-plugs-where/context-windows.md)
 - [Trent Nodes](tools-list.md#trent-nodes) for a node assisting with VACE keyframing
