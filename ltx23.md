@@ -147,6 +147,10 @@ They also provide under LTX-2 umbrella
 - `LTXV Add Latent Guide` from `LTXVideo` set is the only way to associate a guide with position -1; all other similar nodes treat -1 as "after last frame";
   "it's the same thing as add guide, just takes latent instead of image, only difference besides that is how the positioning is done"
 
+- Kijai's `LTX2 NAG` [LTX-2_old_setup_for_nag_and_mem](screenshots/nodes/ltx/LTX-2_old_setup_for_nag_and_mem.webp) - by [Mark DK Berry](https://markdkberry.com);
+  inagy: "Pushes away the generation from those conditions basically. It's like negative prompt but without need to run with cfg higher than 1. Not exactly the same, but similar.
+  E.g. video: 'cartoon' to push it away from animation. Audio: 'music' to avoid background music, etc"
+
 ## IC LoRa-s
 
 IC LoRa generally stands for "in-context LoRa" a _type_ of LoRa. In colloquial speak "IC LoRa" generally refers to one of the IC LoRa-s released alongside LTX 2.3:
@@ -566,6 +570,7 @@ Draken:
   - VBVR Official [HF:Video-Reason/VBVR-LTX2.3-diffsynth](https://huggingface.co/Video-Reason/VBVR-LTX2.3-diffsynth);
     Sir_Axe converted it to be loadable into ComfyUI: [HF:siraxe/VBVR-LTX2.3-diffsynth_comfyui](https://huggingface.co/siraxe/VBVR-LTX2.3-diffsynth_comfyui/tree/main)
   - JohnDopamine re VBVR: "For Wan it actually added motion/creativity at -.5 to -1"
+  - [Mark DK Berry](https://markdkberry.com): "I keep switching between V3 [civitai] ... and Licon latest, can't decide which is better"
 - "LoRa motion transfer" - but might be not that necessary
 - [Oumoumad](https://gear-productions.com)'s outpaint LoRa: [HF:oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint) - fills black bars/pillars with content
 - LTX smoothmix: [CA:2524245](https://civitai.com/models/2524245/smoothmix-animations-ltx?modelVersionId=2837052) "ltx trained on smoothmix images from smoothmix sd1.5 model"

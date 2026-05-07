@@ -65,3 +65,14 @@ Hevi:
 > lcm for first stage much faster than anything else imo
 
 `res_multistep` might be better for sound generation than `euler` with distilled.
+
+[Drozbay](hidden-knowledge.md#drozbay):
+> NAG is definitely not going to be as much extra compute as CFG since it only operates on cross-attention;
+> CFG is literally just twice as slow, it runs two fully separate calls at the same step.
+> Also, I dunno if NAG even runs for the negative pass
+
+PhoenixRisen:
+> Seems euler_ancenstral_cfg_pp is the best for prompt adherence; [Mark]: runs like a dog on mine so I dont go near cfg_pp version
+
+[Mark](https://markdkberry.com):
+I switched to euler_ancestral recently was using lcm but find it best in the wf I use.
