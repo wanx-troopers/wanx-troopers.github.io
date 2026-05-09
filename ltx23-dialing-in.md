@@ -2,6 +2,14 @@
 
 Main article: [LTX 2.3](ltx23.md)
 
+## 2026.05.08
+
+Nekodificador on avoiding blurry mess instead of motion
+
+> changing sigmas helps a lot
+> try karras or exponential
+> at least on a second pass
+
 ## 2026.05.27
 
 > 1.1 distilled in mxfp8 which seems good

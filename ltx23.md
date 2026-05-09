@@ -12,6 +12,16 @@ See also:
 - [LTX 2.3 Statements](ltx23-statements.md)
 - [LTX-2 in ComfyUI Chattable KB](https://notebooklm.google.com/notebook/4f07f98c-75b6-4278-bde1-906f9899b60c?pli=1)
 
+## Gemma
+
+> refusal happens on the decoding, when encoding prompts the model has no choices to make, it's a single pass
+> so the abliteration only helps when generating text, which doesn't happen when you encode a prompt ...
+> and the potential downside of using abliterated model for prompt encoding is that the model wasn't trained with that, it may work, and change result, but overall technically it would be worse
+
+> Q: abliterated lora?  
+> A: the point of the lora was that you can load normal model and use it for prompt encoding, and apply the lora only for prompt enhancer
+> on prompt enhancer it's almost mandatory considering how easily Gemma refuses even relatively safe prompts
+
 ## HDR LoRa
 
 Lightbricks have released [HF:Lightricks/LTX-2.3-22b-IC-LoRA-HDR](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-HDR).
@@ -151,6 +161,12 @@ They also provide under LTX-2 umbrella
   inagy: "Pushes away the generation from those conditions basically. It's like negative prompt but without need to run with cfg higher than 1. Not exactly the same, but similar.
   E.g. video: 'cartoon' to push it away from animation. Audio: 'music' to avoid background music, etc"
 
+> Q: do i have to intall the LTXComfy repo or is LTX native supported?  
+> [Drozbay](hidden-knowledge.md#drozbay) A: Comfyui native nodes are still missing a few features so it's probably a good idea to have the LTXVideo nodes installed,
+> although KJNodes also has nodes that cover most of those gaps
+
+What is this?.. ![kjnodes-enhance](screenshots/nodes/kjnodes-enhance.png)
+
 ## IC LoRa-s
 
 IC LoRa generally stands for "in-context LoRa" a _type_ of LoRa. In colloquial speak "IC LoRa" generally refers to one of the IC LoRa-s released alongside LTX 2.3:
@@ -238,7 +254,11 @@ Hevi:
 
 ## Motion
 
-To fix motion arfiacts ppl often generate at 50fps. Sometimes 35.
+To fix motion arfiacts ppl often generate at 50fps. Sometimes 35
+
+N0NSens:
+> 50fps is the only solution to reduce garbage in motion, I found. Initial higher resolution/res_2s/more steps/diff models/distill loras str... nothing helps..
+[and then pick every other frame via VHS nodes and clean up with Wan]
 
 It seems addition of VBVR LoRa might be helping make motion less smudged.
 
@@ -522,6 +542,7 @@ Draken:
   [HF:Alissonerdx/LTX-LoRAs:ltx23_edit_anything_v1.json](https://huggingface.co/Alissonerdx/LTX-LoRAs/blob/main/workflows/ltx23_edit_anything_v1.json)
   prompt for one change at a time
 - Alisson Pereira's `animate2real`: [HF:Alissonerdx/LTX-LoRAs:ltx23_anime2real_rank64_v1_4500](https://huggingface.co/Alissonerdx/LTX-LoRAs/blob/main/ltx23_anime2real_rank64_v1_4500.safetensors);
+  is reportedly useable for fixing defects, e.g. running anime2real on non-anime inputs; doesn't fix motion issues however (wan polishing does fix them);
   also [CA:2527511/anime2half-real](https://civitai.com/models/2527511/anime2half-real)
 - Alisson Pereira's first experimental version of MR2V (Masked Reference-to-Video): [HF:Alissonerdx/LTX-LoRAs](https://huggingface.co/Alissonerdx/LTX-LoRAs)
   "It's a reference-based inpainting LoRA ... I trained several variants, and this rank 32 one was the one I liked the most"; use `ltx23_inpaint_masked_r2v_rank32_v1_3000steps.safetensors`;
@@ -556,7 +577,9 @@ Draken:
   - Sir_Axe's [HF:siraxe/TTM_IC-lora_ltx2.3](https://huggingface.co/siraxe/TTM_IC-lora_ltx2.3) cartoony time to move for LTX 2.3;
   - Sir_Axe's [HF:siraxe/MergeGreen_IC-lora_ltx2.3](https://huggingface.co/siraxe/MergeGreen_IC-lora_ltx2.3) merge one video with another; apparently some green frame is involved - as a separator?..;
     "takes couple of seed tries and description of what changes, but it's also not perfect but better than just inserting start/end frames imo"
-- Refocus LoRa: [HF:oumoumad/LTX-2.3-22b-IC-LoRA-ReFocus](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-ReFocus) - undoes shallow depth of field; only works as detailer if source video has been blurred first
+- Oumoumad
+  - Refocus LoRa: [HF:oumoumad/LTX-2.3-22b-IC-LoRA-ReFocus](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-ReFocus) - undoes shallow depth of field; only works as detailer if source video has been blurred first
+  - [HF:oumoumad/LTX-2.3-22b-IC-LoRA-Uncompress](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Uncompress)
 - [HF:RuneXX/LTX-2.3-Workflows:Video-2-Video/LTX-2.3\_-\_V2V\_ReTake\_recreate\_any\_section\_of\_any\_video](https://huggingface.co/RuneXX/LTX-2.3-Workflows/blob/main/Video-2-Video/LTX-2.3_-_V2V_ReTake_recreate_any_section_of_any_video.json)
 - VBVR
   - VBVR HF: [HF:LiconStudio/Ltx2.3-VBVR-lora-I2V](https://huggingface.co/LiconStudio/Ltx2.3-VBVR-lora-I2V) better VBVR LoRa for LTX 2.3; 100Mb smaller than the one on Civitai;
@@ -598,6 +621,9 @@ Draken:
 - [Fredblis](https://fredbliss.com/)'s [audio-loop-music-video_latent](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent.json)
 - N0NSense's "Boeing Cockpit" WF [LTX_2.3_IC_N0N](workflows/ltx/LTX_2.3_IC_N0N.json)
 
-## Joke LoRa-s
+## Joke And Experimental LoRa-s
 
 - [HF:TheBurgstall/ltx-2.3-googlyeyes-lora](https://huggingface.co/TheBurgstall/ltx-2.3-googlyeyes-lora)
+- [HF:Zlikwid/LTX_2.3_Upscale_IC_Lora/tree/main](https://huggingface.co/Zlikwid/LTX_2.3_Upscale_IC_Lora/tree/main) experiements in upscaling, 4000-ish possible starting point for tests/experiments;
+  trained on 1280x704 videos; "That workflow is the official hdr ic lora workflow with a few tweeks"
+
