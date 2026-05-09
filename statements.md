@@ -1,5 +1,9 @@
 ﻿# Statements
 
+## 2026.06
+
+> I cloned by voice with Fish audio ai because its way better than eleven labs, and use that for the voice over
+
 ## 2026.04
 
 Huddadudd on convincing closed source models do more:

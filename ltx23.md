@@ -555,6 +555,8 @@ Draken:
 
 ## LoRa-s
 
+- [HF:Zlikwid/LTX_2.3_Upscale_IC_Lora](https://huggingface.co/Zlikwid/LTX_2.3_Upscale_IC_Lora/tree/main)
+  trained on 1280x704 videos; "That workflow is the official hdr ic lora workflow with a few tweeks"
 - Cseti's [HF:Cseti/LTX2.3-22B_ReStyle_IC-LoRA](https://huggingface.co/Cseti/LTX2.3-22B_ReStyle_IC-LoRA)
 - Defu-Shaun's [LTX 2.3 ICL: Obscura Remova](https://civitai.com/models/2590144?modelVersionId=2909707)
 - LTX 2.3 Fight LoRa [CA:2489766/ltx-23-fight](https://civitai.com/models/2489766/ltx-23-fight) - Torny advices to combine with VBVR V3 at 0.75 strength to further help with motion, also middle frames via guides
@@ -616,7 +618,8 @@ Draken:
   including a latent looping workflow;
   [ckinpdx-LTX23_TorI2V_Humo_API](workflows/ltx/ckinpdx-LTX23_TorI2V_Humo_API.json) using HuMo 1.7B as the last cleanup step is probably up there as well, or soon will be;
   some of them using [GH:ckinpdx/ComfyUI-LTXAVTools](https://github.com/ckinpdx/ComfyUI-LTXAVTools) nodes
-- [GH:vrgamegirl19/comfyui-vrgamedevgirl:Workflows](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl/tree/main/Workflows) workflows from one of the masters
+- [GH:vrgamegirl19/comfyui-vrgamedevgirl:Workflows](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl/tree/main/Workflows) workflows from one of the masters;
+  [YT:LwG-zxY684M](https://www.youtube.com/watch?v=LwG-zxY684M) a walkthrough of the famous music video workflow
 
 - [Fredblis](https://fredbliss.com/)'s [audio-loop-music-video_latent](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent.json)
 - N0NSense's "Boeing Cockpit" WF [LTX_2.3_IC_N0N](workflows/ltx/LTX_2.3_IC_N0N.json)
@@ -624,6 +627,4 @@ Draken:
 ## Joke And Experimental LoRa-s
 
 - [HF:TheBurgstall/ltx-2.3-googlyeyes-lora](https://huggingface.co/TheBurgstall/ltx-2.3-googlyeyes-lora)
-- [HF:Zlikwid/LTX_2.3_Upscale_IC_Lora/tree/main](https://huggingface.co/Zlikwid/LTX_2.3_Upscale_IC_Lora/tree/main) experiements in upscaling, 4000-ish possible starting point for tests/experiments;
-  trained on 1280x704 videos; "That workflow is the official hdr ic lora workflow with a few tweeks"
 
