@@ -571,7 +571,7 @@ Draken:
     one of his LoRa-s: [CA:2415727/seikon-no-qwaser-ecchi-anime-style-lora-ltxv2?2716034](https://civitai.com/models/2415727/seikon-no-qwaser-ecchi-anime-style-lora-ltxv2?modelVersionId=2716034)
     there should be other good LoRas next to it including a 3d LoRa and Gurren Laggan one
   - Crinklypaper's [LTX-23-change-voice](workflows/ltx/crinklypaper-LTX-23-change-voice.json)
-- [GH:vrgamegirl19/comfyui-vrgamedevgirl](https://github.com/vrgamegirl19) created a number of LoRa-s including "Claymation", "Puppet",
+- [GH:vrgamegirl19/comfyui-vrgamedevgirl](https://github.com/vrgamegirl19) created a number of LoRa-s including "Claymation", "Puppet", "Felt",
   [Golden Age Comic](https://civitai.com/models/2532516/ltx-23-golden-age-comic), [Enhancer](https://civitai.com/models/2535622?modelVersionId=2849716) LoRa-s by her as well;
   [CA:2540961?2855640](https://civitai.com/models/2540961?modelVersionId=2855640) dark fantasy?
   [CA:2535622](https://civitai.red/models/2535622) home of VRGamedevgirl on CA? place to get her 
@@ -605,6 +605,14 @@ Draken:
 - [HF:o-8-o/LTX-2.3-skin-hair](https://huggingface.co/o-8-o/LTX-2.3-skin-hair/tree/main)
 - WackyWindsurfer's [LTX-2.3 Synthwave style LoRa to civitai (red)](https://civitai.red/models/2551439/ltx-23-synthwave)
 - [HF:lovis93/crt-animation-terminal-ltx-2.3-lora](https://huggingface.co/lovis93/crt-animation-terminal-ltx-2.3-lora)
+
+## Less Verified LoRa-s
+
+- [HF:joyfox/LTX2.3-ICEdit-Insight](https://huggingface.co/joyfox/LTX2.3-ICEdit-Insight) a family of LoRa-s for video restoration and cleanup - deblur, remove subtitles etc;
+  extra details: [GH:Valiant-Cat/LTX2-ICEdit-Insight](https://github.com/Valiant-Cat/LTX2-ICEdit-Insight); edit-insight which comes as a full model merge - might be a re-use of a pre-existing LoRa
+- Luxe Sensual
+- Sulphur
+
 
 ## Non LTX 2.3 LoRa-s Relevant to LTX 2.3
 

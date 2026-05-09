@@ -1,6 +1,9 @@
 ﻿# Hints On LTX 2.3
 
-## 2026.05.05
+## 2026.05
+
+Yi:
+> One thing I found is including "A movie scene shows" before a prompt greatly reduces the chance of body morphing
 
 Jonathan [GH:WhatDreamsCost](https://github.com/WhatDreamsCost/) on fixing an issue in a video with LTX 2.3:
 

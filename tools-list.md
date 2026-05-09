@@ -102,7 +102,6 @@ See also: [Qwen Edit - VACE](wan-t2v-advanced.md#vace-with-qwen-image-edit).
 - Woosh - superios to LTX 2.3 but tries to generate sound as ppl move spead; N0NSens put together a masking wf to solve this: [N0NSens-Woosh-SFX.json](workflows/N0NSens-Woosh-SFX.json)
 - [kijai/ComfyUI-MMAudio](https://github.com/kijai/ComfyUI-MMAudio)
 - ACE Foley Generator
-- ACE Step/Acestep
 
 Acestep XL SFT can generate stunning music.
 
@@ -164,12 +163,24 @@ UniLumos is an AI model for relighting a video. Workflows:
 - [Kijai's example](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_1_3B_UniLumos_relight_example_01.json)
 - [Change-Background-Wan-UniLumos](workflows/Change-Background-Wan-UniLumos.json)
 
-# Sound Tools
+# Voice Generators
 
+- Fish Audio
+- k2-fsa/OmniVoice
+- VibeVoice TTS [Mark](https://markdkberry.com) 2026.05.09: "vibevoice from enemyx-net is still my go to, its great for multi-speakers too"
 - Qwen-TTS
 - MOSS TTS
 - IndexTTS2: "I had Chatterbox, IndexTTS, another IndexTTS node, Chatterboxt5, VibeVoice ... IndexTTS seems a lot better"
-- VibeVoice TTS
+
+MysteryShack:
+> Only 2 right now can cover all the languages people need... vibevoice and omnivoice. Sadly fish doesn't support this.
+
+momo1321:
+> Yes sadly fish audio not supporting many language beside English,I use omnivoice it can exactly copy the emotion,I use it in combination with index tts for the emotion control
+
+# Music/Song Generator
+
+ACE Step/Acestep, alternative merges: [HF:Aryanne/acestep-v15-test-merges/tree/main/xl](https://huggingface.co/Aryanne/acestep-v15-test-merges/tree/main/xl)
 
 # Misc
 
