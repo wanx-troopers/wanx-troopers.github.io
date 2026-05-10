@@ -1,5 +1,11 @@
 # Wan-Move
 
+## 2026
+
+[GH:brbbbq/ComfyUI-WanMove-Path-Animator](https://github.com/brbbbq/ComfyUI-WanMove-Path-Animator) another node to create animated paths for Wan Move
+
+## 2025
+
 Wan-Move support has been added to native ComfyUI. New nodes:
 
 - `WanMoveTracksFromCoords`

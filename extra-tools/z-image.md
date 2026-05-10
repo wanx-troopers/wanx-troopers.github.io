@@ -9,6 +9,7 @@
 ## 2026.05
 
 [HF:RunDiffusion/Juggernaut-Z-Image/tree/main](https://huggingface.co/RunDiffusion/Juggernaut-Z-Image/tree/main) released.
+[Juggernaut Prompt Guide](https://www.rundiffusion.com/juggernaut-z-prompt-guide?utm_source=huggingface&utm_medium=model_card&utm_campaign=juggernaut_z_v1&utm_content=prompt_guide_badge).
 
 ## 2026.04
 
