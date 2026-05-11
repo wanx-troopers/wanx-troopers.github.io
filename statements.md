@@ -1,8 +1,10 @@
 ﻿# Statements
 
-## 2026.06
+## 2026.05
 
 > I cloned by voice with Fish audio ai because its way better than eleven labs, and use that for the voice over
+
+Krea K2, a paid image generation model, get generate interesting character sheets
 
 ## 2026.04
 

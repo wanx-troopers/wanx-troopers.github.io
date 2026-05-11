@@ -129,6 +129,9 @@ They also provide under LTX-2 umbrella
 
 - Lightricks/LTX-2-19b-IC-LoRA-Detailer "still usable with 2.3 , thought it was only available for 2"
 
+May 2026 saw addition of [HF:Lightricks/LTX-2.3-22b-IC-LoRA-LipDub](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-LipDub)
+gated LoRa for re-dubbing vidoes - the intent was to keep the original voice; based on [GH:justdubit/just-dub-it](https://github.com/justdubit/just-dub-it) undetlying research.
+
 ## Alternative Weights Packagings
 
 - [GH:Hippotes/LTX-2.3-various-formats](https://huggingface.co/Hippotes/LTX-2.3-various-formats/tree/main) including nvfp4;
@@ -585,7 +588,8 @@ Draken:
   - [HF:oumoumad/LTX-2.3-22b-IC-LoRA-Uncompress](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Uncompress)
 - [HF:RuneXX/LTX-2.3-Workflows:Video-2-Video/LTX-2.3\_-\_V2V\_ReTake\_recreate\_any\_section\_of\_any\_video](https://huggingface.co/RuneXX/LTX-2.3-Workflows/blob/main/Video-2-Video/LTX-2.3_-_V2V_ReTake_recreate_any_section_of_any_video.json)
 - VBVR
-  - VBVR HF: [HF:LiconStudio/Ltx2.3-VBVR-lora-I2V](https://huggingface.co/LiconStudio/Ltx2.3-VBVR-lora-I2V) better VBVR LoRa for LTX 2.3; 100Mb smaller than the one on Civitai;
+  - Zabo 2026.05.10: "the newest vbvr lora really does magic on prompt understanding"; "You need to use the comfyui one [VBVR-official-comfyui.safetensors] the other doesn't do anything for me either"
+    VBVR HF: [HF:LiconStudio/Ltx2.3-VBVR-lora-I2V](https://huggingface.co/LiconStudio/Ltx2.3-VBVR-lora-I2V) better VBVR LoRa for LTX 2.3; 100Mb smaller than the one on Civitai;
     the version on Civitai received rather cold reception; [YT:nekodificador](https://youtube.com/nekodificador): "I'm liking it for now tbh. All his cartoonish experiments im doing are way more coherent with the lora";
     seems to also make lip articulation stronger;
     "VBVR refers to a technique that enables video models such as Wan to operate in a more logical and structured way.
@@ -611,7 +615,7 @@ Draken:
 - [HF:joyfox/LTX2.3-ICEdit-Insight](https://huggingface.co/joyfox/LTX2.3-ICEdit-Insight) a family of LoRa-s for video restoration and cleanup - deblur, remove subtitles etc;
   extra details: [GH:Valiant-Cat/LTX2-ICEdit-Insight](https://github.com/Valiant-Cat/LTX2-ICEdit-Insight); edit-insight which comes as a full model merge - might be a re-use of a pre-existing LoRa
 - Luxe Sensual
-- Sulphur
+- Sulphur, 10euros
 
 
 ## Non LTX 2.3 LoRa-s Relevant to LTX 2.3

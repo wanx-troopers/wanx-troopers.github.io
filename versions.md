@@ -2,6 +2,10 @@
 
 The page needs a brush-up. Bugs referenced have been fixed or worked around. Still might be useful info.
 
+## 2026.06
+
+Dont use `--fast` ComfyUI startup param - locks up VRAM
+
 ## 2026.04.25
 
 djbfilmz re RTX 6000 Pro:

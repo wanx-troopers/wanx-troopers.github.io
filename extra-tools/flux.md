@@ -1,5 +1,12 @@
 # Flux Image Generation Models
 
+## 2026.05
+
+[GH:ethanfel/Comfyui-PainterKleinImageEdit](https://github.com/ethanfel/Comfyui-PainterKleinImageEdit)
+"node for FLUX.2 [klein] (4B / 9B) image editing and text-to-image generation"
+
+[GH:cosmicrealm/ComfyUI-Flux-FaceIR](https://github.com/cosmicrealm/ComfyUI-Flux-FaceIR) confusing tool for restoring faces on damaged photos.
+
 ## 2026.04
 
 [CA:2318844/klein-9b-body-weight-slider](https://civitai.com/models/2318844/klein-9b-body-weight-slider) concept slider from thin to fat

@@ -11,7 +11,6 @@
 * [vision-banana.github.io](https://vision-banana.github.io/) a model from Google for segmentation, depth and normals
 * [HF:datasets|theFoxofSky/RealisDance-Val](https://huggingface.co/datasets/theFoxofSky/RealisDance-Val) rainbow ppl paired with real videos; "it's generated with SMPL tracking and then applying rainbow shader"
 * [GH:Anil-matcha/Open-Generative-AI](https://github.com/Anil-matcha/Open-Generative-AI) Looking for a free, uncensored Higgsfield AI, Freepik, Krea, Openart AI alternative? Seems like a frontend to api-s?
-* [GH:justdubit/just-dub-it](https://github.com/justdubit/just-dub-it)
 * [kimodo](https://research.nvidia.com/labs/sil/projects/kimodo/)  kinematic motion diffusion model trained on large-scale optical mocap data "Kimodo's text encoder uses Meta Llama 3 8B, which is a gated model on HuggingFace" - may get implemented for Comfy;
   note: [GH:animatica-ai/motionmcp-kimodo](https://github.com/animatica-ai/motionmcp-kimodo) Blender add-on for Kimodo
 * [Cascadeur](https://cascadeur.com/) is an AI assited tool for posing and creating animated motion; ... what is Akeytsu which is free? "NVIDIA GEM-X" [X post](https://x.com/anoxxymane/status/2044464237091881188?s=20)

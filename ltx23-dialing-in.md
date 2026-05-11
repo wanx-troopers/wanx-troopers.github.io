@@ -2,7 +2,7 @@
 
 Main article: [LTX 2.3](ltx23.md)
 
-## 2026.05.08
+## 2026.05
 
 Nekodificador on avoiding blurry mess instead of motion
 
@@ -10,7 +10,9 @@ Nekodificador on avoiding blurry mess instead of motion
 > try karras or exponential
 > at least on a second pass
 
-## 2026.05.27
+
+
+## 2026.04.27
 
 > 1.1 distilled in mxfp8 which seems good
 

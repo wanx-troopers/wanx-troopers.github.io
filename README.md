@@ -62,6 +62,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
   * [Z-Image-Turbo](extra-tools/z-image.md)
   * [Qwen Image/Qwen Image Edit](extra-tools/qwen-image.md)
   * [Flux 2](extra-tools/flux.md)
+  * [HiDream O1](extra-tools/hidream.md)
 * Other Tools
   * [Image Upscalers and Detailers](upscalers-detailers-image.md)
   * [Video Upscalers and Detailers](upscalers-detailers-video.md)
