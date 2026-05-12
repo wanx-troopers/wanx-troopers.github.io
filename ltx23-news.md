@@ -1,5 +1,9 @@
 ﻿# Chronological News on LTS 2.3
 
+## 2026.05
+
+A bug confirmed in ComfyUI: ever since LTX 2.3 release when guides' strengths is set to any value other than 1 VRAM usage grows.
+
 ## 2026.05.08
 
 Native VAELoader can now load LTX 2.3 audio VAE

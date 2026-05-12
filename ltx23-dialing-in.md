@@ -10,7 +10,9 @@ Nekodificador on avoiding blurry mess instead of motion
 > try karras or exponential
 > at least on a second pass
 
+huddadudd, on the setup that allowed generation of nice turning humans:
 
+> exponential/etdrk2_2s clownshark 8 steps
 
 ## 2026.04.27
 
