@@ -2,6 +2,23 @@
 
 Main article: [LTX 2.3](ltx23.md)
 
+## 2026.05
+
+David Show: "I am using the lora loader advanced, with audio and audio to video set to 0, but that's about it." 
+
+## 2026.05 NFT
+
+[zghhui.github.io/OmniNFT](https://zghhui.github.io/OmniNFT/) [HF:zghhui/OmniNFT](https://huggingface.co/zghhui/OmniNFT)
+some sort of reinforcement learning on LTX 2.0? - nope that LoRa doesn't work directly in ComfyUI.. 
+
+David Show: "should still work just fine if it was trained for LTX-2"
+
+Copy of LoRa converted to ComfyUI style keys: [HF:VasiliyWeb/OmniNFT_ComfyUI](https://huggingface.co/VasiliyWeb/OmniNFT_ComfyUI)
+
+PhoenixRisen: "Yeah, I think it was made for t2v"
+
+DavidShow: "T2V with LTX has a very strong colour hue by default, and if nothing else, this lora improves that greatly."  
+
 ## 2026.04.23
 
 > Q: are you guys getting like a dot/grain pattern?

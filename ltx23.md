@@ -164,6 +164,8 @@ gated LoRa for re-dubbing vidoes - the intent was to keep the original voice; ba
   inagy: "Pushes away the generation from those conditions basically. It's like negative prompt but without need to run with cfg higher than 1. Not exactly the same, but similar.
   E.g. video: 'cartoon' to push it away from animation. Audio: 'music' to avoid background music, etc"
 
+- `LTXAudioVideoMask` from `KJNodes` gaddit: "lets you pad and extend a clip"
+
 > Q: do i have to intall the LTXComfy repo or is LTX native supported?  
 > [Drozbay](hidden-knowledge.md#drozbay) A: Comfyui native nodes are still missing a few features so it's probably a good idea to have the LTXVideo nodes installed,
 > although KJNodes also has nodes that cover most of those gaps
@@ -609,6 +611,10 @@ Draken:
 - [HF:o-8-o/LTX-2.3-skin-hair](https://huggingface.co/o-8-o/LTX-2.3-skin-hair/tree/main)
 - WackyWindsurfer's [LTX-2.3 Synthwave style LoRa to civitai (red)](https://civitai.red/models/2551439/ltx-23-synthwave)
 - [HF:lovis93/crt-animation-terminal-ltx-2.3-lora](https://huggingface.co/lovis93/crt-animation-terminal-ltx-2.3-lora)
+- [S4f3ty_Marc](https://www.youtube.com/channel/UCxVjHxKIDNSGniyqDsQ9hTg)'s LTX-2 Deforum Evolution LoRA [HF:s4f3tymarc/LTX-2_Deforum_Evolution_v1](https://huggingface.co/s4f3tymarc/LTX-2_Deforum_Evolution_v1)
+  [CA:2332398?2623644](https://civitai.com/models/2332398?modelVersionId=2623644); `[deforumorph]` trigger; "hypnotic, ever-changing animations reminiscent of classic Deforum journeys but infused with Flux-level detail and coherence";
+  new version is being worked on
+- [HF:Nebsh](https://huggingface.co/Nebsh) shares a collection of interesting LoRa-s including "cutout satire", "handheld run", ...
 
 ## Less Verified LoRa-s
 

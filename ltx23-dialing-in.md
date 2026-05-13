@@ -14,6 +14,8 @@ huddadudd, on the setup that allowed generation of nice turning humans:
 
 > exponential/etdrk2_2s clownshark 8 steps
 
+David Show renders widescreen 1920x768
+
 ## 2026.04.27
 
 > 1.1 distilled in mxfp8 which seems good
