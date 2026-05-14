@@ -6,18 +6,13 @@ Main article: [LTX 2.3](ltx23.md)
 
 David Show: "I am using the lora loader advanced, with audio and audio to video set to 0, but that's about it." 
 
-## 2026.05 NFT
-
-[zghhui.github.io/OmniNFT](https://zghhui.github.io/OmniNFT/) [HF:zghhui/OmniNFT](https://huggingface.co/zghhui/OmniNFT)
-some sort of reinforcement learning on LTX 2.0? - nope that LoRa doesn't work directly in ComfyUI.. 
-
-David Show: "should still work just fine if it was trained for LTX-2"
-
-Copy of LoRa converted to ComfyUI style keys: [HF:VasiliyWeb/OmniNFT_ComfyUI](https://huggingface.co/VasiliyWeb/OmniNFT_ComfyUI)
-
-PhoenixRisen: "Yeah, I think it was made for t2v"
-
-DavidShow: "T2V with LTX has a very strong colour hue by default, and if nothing else, this lora improves that greatly."  
+N0NSens's way to write a prompt with prompt relay for LTX 2.3:
+> A woman turns around, walks to the driver's side door of the blue pickup truck.
+> | she grabs the chrome handle, opens the door.
+> | she places her left foot on the footrest and steps inside.
+> | She sits behind the steering wheel and starts the loud engine.
+> | the truck drives forward (to the left) out of the frame.
+> Exhaust smoke comes out from the pipe behind the truck and dissipates in the rainy air.
 
 ## 2026.04.23
 

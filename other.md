@@ -2,7 +2,7 @@
 
 ## Promising For Comfy
 
-* [GH:resemble-ai/DramaBox](https://github.com/resemble-ai/DramaBox) a sort of IC LoRa for voice cloning based on LTX 2.3
+* [GH:zhuxing0/Relit-LiVE](https://github.com/zhuxing0/Relit-LiVE) Wan 2.1 T2V based video relighting
 * [GH:Cynthiazxy123/SAMA-ComfyUI-official](https://github.com/Cynthiazxy123/SAMA-ComfyUI-official) interesting Wan 2.1-based tech for video editing - "replace dog with a cat"
 * HAMER (Hand Mesh Recovery) is a specialized AI model developed by researchers at UC Berkeley designed to reconstruct a full 3D mesh of a human hand from a single 2D image
 * [GH:Eyeline-Labs/Vista4D](https://github.com/Eyeline-Labs/Vista4D) Video Reshooting with 4D Point Clouds - from Netflix based on Wan 2.1

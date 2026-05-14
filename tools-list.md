@@ -165,6 +165,10 @@ UniLumos is an AI model for relighting a video. Workflows:
 
 # Voice Generators
 
+- [GH:FranckyB/ComfyUI-DramaBox](https://github.com/FranckyB/ComfyUI-DramaBox) ResembleAI's expressive text-to-speech system built on the LTX-2.3 audio diffusion transformer;
+  Original publication: [GH:resemble-ai/DramaBox](https://github.com/resemble-ai/DramaBox);
+  Elvaxorn: "actually pretty good ... its great and super fast, I could say it's better than OmniVoice in some use cases";
+  is this voice cloning code related? [GH:ScenemaAI/scenema-audio](https://github.com/ScenemaAI/scenema-audio)
 - Fish Audio
 - k2-fsa/OmniVoice
 - VibeVoice TTS [Mark](https://markdkberry.com) 2026.05.09: "vibevoice from enemyx-net is still my go to, its great for multi-speakers too"

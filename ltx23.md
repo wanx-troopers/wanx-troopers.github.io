@@ -496,9 +496,10 @@ Hicho:
   can be completely customized by plugging in any node you want
   does spatial and temporal upscale"
 - [Fredblis](https://fredbliss.com/)'s automations: "audio + image input + initial prompt + prompt schedule timestamps", looping workflow, automated prompt generation and timing
-  [GH:fblissjr/ComfyUI-AudioLoopHelper](https://github.com/fblissjr/ComfyUI-AudioLoopHelper)
+  [GH:fblissjr/ComfyUI-AudioLoopHelper](https://github.com/fblissjr/ComfyUI-AudioLoopHelper); sample [WF](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent.json)
 - [GH:dorpxam/ComfyUI-LTX2-Microscope](https://github.com/dorpxam/ComfyUI-LTX2-Microscope) tool to view what exactly LTX 2.3 is doing during sampling
-- [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI) poweful node for audio and video loading and trimming (generated with help from Gemini)
+- [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI) poweful node for audio and video loading and trimming (generated with help from Gemini),
+  including the new `LTX Director` - I2V, T2V, FLFF, Prompt Relay, Custom Audio - [tutorial](https://www.youtube.com/watch?v=fZgtkRcu4_k)
 
 ## ID LoRa
 
@@ -588,6 +589,7 @@ Draken:
 - Oumoumad
   - Refocus LoRa: [HF:oumoumad/LTX-2.3-22b-IC-LoRA-ReFocus](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-ReFocus) - undoes shallow depth of field; only works as detailer if source video has been blurred first
   - [HF:oumoumad/LTX-2.3-22b-IC-LoRA-Uncompress](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Uncompress)
+  - [HF:oumoumad/LTX-2.3-22b-IC-LoRA-Ungrade](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Ungrade) removes color-grading
 - [HF:RuneXX/LTX-2.3-Workflows:Video-2-Video/LTX-2.3\_-\_V2V\_ReTake\_recreate\_any\_section\_of\_any\_video](https://huggingface.co/RuneXX/LTX-2.3-Workflows/blob/main/Video-2-Video/LTX-2.3_-_V2V_ReTake_recreate_any_section_of_any_video.json)
 - VBVR
   - Zabo 2026.05.10: "the newest vbvr lora really does magic on prompt understanding"; "You need to use the comfyui one [VBVR-official-comfyui.safetensors] the other doesn't do anything for me either"
@@ -615,6 +617,13 @@ Draken:
   [CA:2332398?2623644](https://civitai.com/models/2332398?modelVersionId=2623644); `[deforumorph]` trigger; "hypnotic, ever-changing animations reminiscent of classic Deforum journeys but infused with Flux-level detail and coherence";
   new version is being worked on
 - [HF:Nebsh](https://huggingface.co/Nebsh) shares a collection of interesting LoRa-s including "cutout satire", "handheld run", ...
+- OmniNFT converstion 1 [HF:VasiliyWeb/OmniNFT_ComfyUI](https://huggingface.co/VasiliyWeb/OmniNFT_ComfyUI);
+  conversion 2: [HF:silveroxides/LTX-2.3-Quants:loras/OmniNFT-comfyui](https://huggingface.co/silveroxides/LTX-2.3-Quants/blob/main/loras/OmniNFT-comfyui.safetensors);
+  originals: [GH:zghhui.github.io/OmniNFT](https://zghhui.github.io/OmniNFT/) [HF:zghhui/OmniNFT](https://huggingface.co/zghhui/OmniNFT);
+  built for LTX 2 t2v but seems to help with LTX 2.3 as well even in i2v case;
+  DavidShow: "T2V with LTX has a very strong colour hue by default, and if nothing else, this lora improves that greatly."
+- [HF:WarmBloodAban/Singularity_LTX-2.3_OmniCine_Preview0.1](https://huggingface.co/WarmBloodAban/Singularity_LTX-2.3_OmniCine_Preview0.1) the singularity LoRa
+- N0NSense's combo: OmniNFS + Singularity + VBVR
 
 ## Less Verified LoRa-s
 

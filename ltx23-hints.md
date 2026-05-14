@@ -2,6 +2,8 @@
 
 ## 2026.05
 
+[X:2054900232693973279](Nekodificador/https://x.com/Nekodificador/status/2054900232693973279) controlling LTX 2.3 animation with voice.
+
 Yi:
 > One thing I found is including "A movie scene shows" before a prompt greatly reduces the chance of body morphing
 

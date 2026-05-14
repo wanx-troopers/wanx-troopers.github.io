@@ -4,6 +4,10 @@
 
 Script to convert LoRa-s to comfy format by renaming keys, from Gleb Tretyak: [convert_to_comfy_lora.py](bobs/convert_to_comfy_lora.py).
 
+[GH:kijai/ComfyUI-MemoryVisualization](https://github.com/kijai/ComfyUI-MemoryVisualization) - VRAM monitor for ComfyUI, just use it :).
+
+> the newer quants have per layer setup where we set which layer is allowed to run with fp8 matmuls, and those work without any flags
+
 ## 2026.04
 
 `bbox` is a `bounding box`
@@ -376,6 +380,7 @@ A model can be distilled in on both at the same time.
 
 > step distillation just makes it work with less steps
 
+
 ## 2025.11.21
 
 Wan latent space is compressed by factor of 8 spatially, 4 temporarily
@@ -448,6 +453,7 @@ Kijai's nodes can convert between data types such as `bf16` at `safetensors` loa
 | [GH:kijai/ComfyUI-GIMM-VFI](https://github.com/kijai/ComfyUI-GIMM-VFI) | frame interpolator |
 | [GH:kijai/ComfyUI-SCAIL-Pose](https://github.com/kijai/ComfyUI-SCAIL-Pose) | pose detector for [SCAIL](wan-animates.md#scail) model |
 | [GH:kijai/ComfyUI-MoGe](https://github.com/kijai/ComfyUI-MoGe) | adaptation of MoGe [tool](https://github.com/microsoft/MoGe) by Microsoft |
+| [GH:kijai/ComfyUI-MemoryVisualization](https://github.com/kijai/ComfyUI-MemoryVisualization) | Painfully beautiful VRAM Monitor for ComfyUI |
 
 Resolutions to try with WAN: 1536x864, 1280x768, 1200x960, 1/2 of that, 832x480, 1024x576, 1440x816  
 Resolutions to try with Ovi v1.1: 1280x704, 704x1280
