@@ -1,0 +1,112 @@
+{
+  "last_updated": "2026-05-13",
+  "description": "FML2V workflow on 4090 (sm89, CUDA 13), full LTX 2.3 distilled stack, sage AudioLoopHelperSageAttention mode=auto, fork v0.5.5 active. 6 independent renders. Per-shape masked + unmasked elapsed_us aggregates.",
+  "workflow": "example_workflows/benchmark_workflows/fml2v_sage_masked_attn_benchmark.json",
+  "fork_version": "v0.5.5 (github.com/fblissjr/SageAttention-ada)",
+  "hardware": "RTX 4090, sm89, CUDA 13",
+  "resolution": "768x512x97",
+  "n_runs": 6,
+  "per_run_summary": [
+    {
+      "prompt_id": "b7820720-fbe5-4344-b450-af1a3150605a",
+      "total_entries": 6145,
+      "ran": 3073,
+      "skipped": 3072,
+      "masked": 672,
+      "fallbacks": 0,
+      "kernels": {
+        "fp8_cuda++": 672
+      },
+      "file_size_bytes": 1631535,
+      "mtime": 1778704291.7920954
+    },
+    {
+      "prompt_id": "a19ae531-1ba9-4dac-812d-3c7161f53f3e",
+      "total_entries": 6145,
+      "ran": 3073,
+      "skipped": 3072,
+      "masked": 672,
+      "fallbacks": 0,
+      "kernels": {
+        "fp8_cuda++": 672
+      },
+      "file_size_bytes": 1631417,
+      "mtime": 1778710307.475716
+    },
+    {
+      "prompt_id": "ddf66afa-fb49-48be-adbb-5d38b743d3b3",
+      "total_entries": 6145,
+      "ran": 3073,
+      "skipped": 3072,
+      "masked": 672,
+      "fallbacks": 0,
+      "kernels": {
+        "fp8_cuda++": 672
+      },
+      "file_size_bytes": 1628861,
+      "mtime": 1778711392.7648447
+    },
+    {
+      "prompt_id": "c9fda4ae-e8d9-4645-9548-564895067c2e",
+      "total_entries": 6145,
+      "ran": 3073,
+      "skipped": 3072,
+      "masked": 672,
+      "fallbacks": 0,
+      "kernels": {
+        "fp8_cuda++": 672
+      },
+      "file_size_bytes": 1631491,
+      "mtime": 1778711620.483711
+    },
+    {
+      "prompt_id": "a4fabf14-8b37-4bc9-b7a8-e4e8b064e2e7",
+      "total_entries": 1341,
+      "ran": 671,
+      "skipped": 670,
+      "masked": 134,
+      "fallbacks": 0,
+      "kernels": {
+        "fp8_cuda++": 134
+      },
+      "file_size_bytes": 355582,
+      "mtime": 1778711773.6436894,
+      "notes": "partial run (masked dispatches 134 < expected 672)"
+    },
+    {
+      "prompt_id": "6cd67747-5daa-4b2e-9d2c-99e0e312fda3",
+      "total_entries": 6145,
+      "ran": 3073,
+      "skipped": 3072,
+      "masked": 672,
+      "fallbacks": 0,
+      "kernels": {
+        "fp8_cuda++": 672
+      },
+      "file_size_bytes": 1631204,
+      "mtime": 1778711942.1342762
+    }
+  ],
+  "per_shape_aggregate": {
+    "(2, 10780, 4096)": {
+      "n_masked": 2054,
+      "n_unmasked": 0,
+      "masked_p50_us": 2198.29,
+      "masked_p95_us": 7985.64,
+      "unmasked_p50_us": null
+    },
+    "(1, 42240, 4096)": {
+      "n_masked": 1440,
+      "n_unmasked": 2880,
+      "masked_p50_us": 30203.59,
+      "masked_p95_us": 30475.19,
+      "unmasked_p50_us": 4629.45
+    }
+  },
+  "totals_across_runs": {
+    "masked_dispatches": 3494,
+    "unmasked_dispatches": 12542,
+    "fallback_events": 0
+  },
+  "notes": "Run 6 traces: 5 complete + 1 partial. The partial render (a4fabf14-...) contributes a fraction of expected dispatches but the aggregated per-shape stats remain robust (n=1440 + 2054 samples). Reproducibility was perfect across the 5 complete runs: 672 masked dispatches each, all fp8_cuda++, zero fallbacks."
+}

@@ -16,6 +16,13 @@ huddadudd, on the setup that allowed generation of nice turning humans:
 
 David Show renders widescreen 1920x768
 
+[Fredbliss](https://fredbliss.com/)'s fork of SageAttention aiming for better performance on 4090 and possibly other cards
+[GH:fblissjr/SageAttention-ada](https://github.com/fblissjr/SageAttention-ada). Works for sm89/sm90 + cuda 12.8 or higher.
+Repository also includes some nodes which are mostly not needed outside of performance measurements,
+`skip_under_seq_len` being "bypass int8 quant for small-Q calls (~377 token text-encoder shapes)".
+Associated wf: [fml2v_aggregate_2026-05-13](workflows/ltx/fredbliss-fml2v_aggregate_2026-05-13.json).
+
+
 ## 2026.04.27
 
 > 1.1 distilled in mxfp8 which seems good

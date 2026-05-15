@@ -173,6 +173,11 @@ Makes of the model are using 576x1024 resolution in the examples.
 
 ## Wan Animate
 
+## 2026.06
+
+[Wan_Animate_God_Mode_V3.json](workflows/wan/hmm-asd-Wan_Animate_God_Mode_V3.json) wf used by ASD for WanAnimate.
+asd additionally shared [loop](workflows/wan/asd-loop.json) asa top-up wf.
+
 ### 2026.03.21
 
 WanAnimate has been implemented on native, workflow: [droz_WanAnimate_ContextWindows_Native_v1.1](workflows/droz_WanAnimate_ContextWindows_Native_v1.1.json) by [hidden-knowledge.md#drozbay](Drozbay).
