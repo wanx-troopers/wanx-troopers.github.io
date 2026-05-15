@@ -623,7 +623,7 @@ Draken:
   built for LTX 2 t2v but seems to help with LTX 2.3 as well even in i2v case;
   DavidShow: "T2V with LTX has a very strong colour hue by default, and if nothing else, this lora improves that greatly."
 - [HF:WarmBloodAban/Singularity_LTX-2.3_OmniCine_Preview0.1](https://huggingface.co/WarmBloodAban/Singularity_LTX-2.3_OmniCine_Preview0.1) the singularity LoRa
-- N0NSense's combo: OmniNFS + Singularity + VBVR
+- N0NSense's combo: OmniNFS + Singularity + VBVR (`VBVR-official-comfyui.safetensors` from `LiconStudio` on HF) - links for all LoRa-s see above
 
 ## Less Verified LoRa-s
 
