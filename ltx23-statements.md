@@ -14,6 +14,9 @@ N0NSens's way to write a prompt with prompt relay for LTX 2.3:
 > | the truck drives forward (to the left) out of the frame.
 > Exhaust smoke comes out from the pipe behind the truck and dissipates in the rainy air.
 
+Gleb Tretyak: "Am doing something wrong or is it true that ltx REALLY struggles with 2d anime?"
+> A: it does struggle for sure
+
 ## 2026.04.23
 
 > Q: are you guys getting like a dot/grain pattern?

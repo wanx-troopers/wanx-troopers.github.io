@@ -5,6 +5,7 @@
 Script to convert LoRa-s to comfy format by renaming keys, from Gleb Tretyak: [convert_to_comfy_lora.py](bobs/convert_to_comfy_lora.py).
 
 [GH:kijai/ComfyUI-MemoryVisualization](https://github.com/kijai/ComfyUI-MemoryVisualization) - VRAM monitor for ComfyUI, just use it :).
+To move node around hold CTRL.
 
 > the newer quants have per layer setup where we set which layer is allowed to run with fp8 matmuls, and those work without any flags
 

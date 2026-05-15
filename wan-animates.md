@@ -177,6 +177,7 @@ Makes of the model are using 576x1024 resolution in the examples.
 
 [Wan_Animate_God_Mode_V3.json](workflows/wan/hmm-asd-Wan_Animate_God_Mode_V3.json) wf used by ASD for WanAnimate.
 asd additionally shared [loop](workflows/wan/asd-loop.json) asa top-up wf.
+Also [Dream Making](https://linktr.ee/dreamaking)'s [Wan-Animate-Native-Refiner](workflows/wan/Dream-Making-Wan-Animate-Native-Refiner.json) wf.
 
 ### 2026.03.21
 

@@ -147,14 +147,6 @@ gated LoRa for re-dubbing vidoes - the intent was to keep the original voice; ba
 - `LTXVAddGuide`
 - `LTXV Audio Video Mask`
 
-- `LTXVLoopingSampler`... and `LTXVAVLoopingSampler` from [GH:ckinpdx/ComfyUI-LTXAVTools](https://github.com/ckinpdx/ComfyUI-LTXAVTools)
-  "optional conditioning images allows you to input batches images as keyframes whose index you specify.
-  Optional guiding latents allows ic lora use.
-  Optional positive conditioning allows use of the multi prompt provider, allowing indexed text conditioning";
-  "All modalities, t2v, i2v, i+a2v, v2v"; tested up to 90 seconds;
-  "for v2v lora application, outpainting for example, the limit is how many video frames you can load from your source ... 2 minutes"
-  work is ongoing on enhacing native context window nodes too, to which this is similar
-
 - native `VAE Encode Audio`, `VAE Decode Audio`, `Load VAE`, `Load Audio` [kj-native-vae-encode-audio](screenshots/nodes/ltx/kj-native-vae-encode-audio.webp)
 
 - `LTXV Add Latent Guide` from `LTXVideo` set is the only way to associate a guide with position -1; all other similar nodes treat -1 as "after last frame";
@@ -364,7 +356,7 @@ David Show
 
 It was reported an overly high sqare resolution (1920x1920) after upscaler can cause color shift issues. Wider or smaller resolution like 1536x1536 reportedly can help.
 
-[official-video_ltx2_3_i2v.json](workflows/ltx/official-video_ltx2_3_i2v.json) demonstrates often used up/downscaling tricks in multi-pass pipelines.
+[official-video_ltx2_3_i2v](workflows/ltx/official-video_ltx2_3_i2v.json) demonstrates often used up/downscaling tricks in multi-pass pipelines.
 
 [Wan-Various_Refine-Upscale](workflows/ltx/Wan-Various_Refine-Upscale.json) could potentially be used to enhance LTX videos with various WAN models.
 
@@ -470,36 +462,16 @@ David Show: `1.0, 0.995, 0.99, 0.9875, 0.975, 0.65, 0.28, 0.07, 0.0`, "it's a th
 
 Reddit [post](https://www.reddit.com/r/StableDiffusion/comments/1sk8vhq/ltx23_distilled_updated_sigmas_for_better_results/).
 
+> Q: do the manual sigmas have to be the default in the LTX template?  
+> A: not really, it's just a linear quadratic schedule  
+> main thing is that with the distill you want it heavy at start, which linear quadratic is, so high shift
+
 ## V2V
 
 V2V can be done either via IC Union LoRa-s or via latent denoise. Unmerged Context Windows PR to make V2V simpler: [GH:Comfy-Org/ComfyUI/pull/13325](https://github.com/Comfy-Org/ComfyUI/pull/13325).
 
 Hicho:
 > t2v latent low denoise from another video
-
-## Basics
-
-- [Mark DK Berry](https://markdkberry.com) on basic VRAM optimizations and NAG to remove subtitles: [nag-other-basic-setup](workflows/ltx/mdkb-nag-other-basic-setup.webp)
-- Hicho's [ltx-2.3-simple-v2v](workflows/ltx/hicho-ltx-2.3-simple-v2v.json) prob. the simplest WF involving a depth map
-- Ablejone's aka [Drozbay](hidden-knowledge.md#drozbay)'s LTX 2.3 ClowShark workflow: [droz_LTX-2_SharkSampling_v7.1](workflows/ltx/droz_LTX-2_SharkSampling_v7.1.png)\
-- [Ckinpdx](https://github.com/ckinpdx)'s [LoopingSamper WF](workflows/ltx/ckinpdx-looping-sampler.png)
-
-## Node Packs
-
-- [Richard Servello](https://www.eastoflavfx.com/)'s [GH:richservo/rs-nodes](https://github.com/richservo/rs-nodes):
-  - `RS LogC3 HDR Decode` (hdr_linear, raw, sdr_preview), `RS EXR Sequence Save`
-  - `RS Sigma Schduler` computes sigmas based on total token count in the video - depends on width, height, number of frames
-- [GH:sumitchatterjee13/nuke-nodes-comfyui](https://github.com/sumitchatterjee13/nuke-nodes-comfyui)
-- [workflow-in-a-node](workflows/ltx/RS-workflow-in-a-node.png) "It does everything.
-  FLF, audio driven, you can plug a video in and select what frames to use as guidance
-  it has masking which I haven't gotten to completely work, BUT it does work for rediffusion
-  can be completely customized by plugging in any node you want
-  does spatial and temporal upscale"
-- [Fredblis](https://fredbliss.com/)'s automations: "audio + image input + initial prompt + prompt schedule timestamps", looping workflow, automated prompt generation and timing
-  [GH:fblissjr/ComfyUI-AudioLoopHelper](https://github.com/fblissjr/ComfyUI-AudioLoopHelper); sample [WF](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent.json)
-- [GH:dorpxam/ComfyUI-LTX2-Microscope](https://github.com/dorpxam/ComfyUI-LTX2-Microscope) tool to view what exactly LTX 2.3 is doing during sampling
-- [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI) poweful node for audio and video loading and trimming (generated with help from Gemini),
-  including the new `LTX Director` - I2V, T2V, FLFF, Prompt Relay, Custom Audio - [tutorial](https://www.youtube.com/watch?v=fZgtkRcu4_k)
 
 ## ID LoRa
 
@@ -540,12 +512,51 @@ Draken:
 > id lora is just for audio really;
 > it helps in the sense that the lora itself might do better at perversing the ID in i2v mode though
 
-## LoRa-s, Alisson
+## Basics
+
+- [Mark DK Berry](https://markdkberry.com) on basic VRAM optimizations and NAG to remove subtitles: [nag-other-basic-setup](workflows/ltx/mdkb-nag-other-basic-setup.webp)
+- Hicho's [ltx-2.3-simple-v2v](workflows/ltx/hicho-ltx-2.3-simple-v2v.json) prob. the simplest WF involving a depth map
+- Ablejone's aka [Drozbay](hidden-knowledge.md#drozbay)'s LTX 2.3 ClowShark workflow: [droz_LTX-2_SharkSampling_v7.1](workflows/ltx/droz_LTX-2_SharkSampling_v7.1.png)\
+- [Ckinpdx](https://github.com/ckinpdx)'s [LoopingSamper WF](workflows/ltx/ckinpdx-looping-sampler.png)
+
+## Node Packs
+
+- [GH:sumitchatterjee13/nuke-nodes-comfyui](https://github.com/sumitchatterjee13/nuke-nodes-comfyui)
+- [Richard Servello](https://www.eastoflavfx.com/)'s [GH:richservo/rs-nodes](https://github.com/richservo/rs-nodes):
+  - `RS LogC3 HDR Decode` (hdr_linear, raw, sdr_preview), `RS EXR Sequence Save`
+  - `RS Sigma Schduler` computes sigmas based on total token count in the video - depends on width, height, number of frames
+  - [workflow-in-a-node](workflows/ltx/RS-workflow-in-a-node.png) "It does everything.
+    FLF, audio driven, you can plug a video in and select what frames to use as guidance
+    it has masking which I haven't gotten to completely work, BUT it does work for rediffusion
+    can be completely customized by plugging in any node you want
+    does spatial and temporal upscale"
+- [Ckinpdx](https://github.com/ckinpdx)'s
+  `LTXVAVLoopingSampler` from [GH:ckinpdx/ComfyUI-LTXAVTools](https://github.com/ckinpdx/ComfyUI-LTXAVTools), a derivative of Lightricks' `LTXVLoopingSampler`;
+  "optional conditioning images allows you to input batches images as keyframes whose index you specify.
+  Optional guiding latents allows ic lora use.
+  Optional positive conditioning allows use of the multi prompt provider, allowing indexed text conditioning";
+  "All modalities, t2v, i2v, i+a2v, v2v"; tested up to 90 seconds;
+  "for v2v lora application, outpainting for example, the limit is how many video frames you can load from your source ... 2 minutes"
+  work is ongoing on enhacing native context window nodes too, to which this is similar
+- [Fredblis](https://fredbliss.com/) created his own audio looping node + lots of automation: "audio + image input + initial prompt + prompt schedule timestamps", looping workflow, automated prompt generation and timing;
+  [GH:fblissjr/ComfyUI-AudioLoopHelper:scripts](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/scripts)
+  "I don't have the patience to build workflows so i just write code to automate workflow building and workflow testing. this entire folder here is just workflow utils"
+  [GH:fblissjr/ComfyUI-AudioLoopHelper](https://github.com/fblissjr/ComfyUI-AudioLoopHelper); sample [WF](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent.json);
+  "testing / validating they do what they should be doing from a 'business rules' standpoint and a hard 'is this workflow wired correctly' standpoint:
+  [GH:fblissjr/ComfyUI-AudioLoopHelper:tests](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/tests)
+  the whole meta harness i built to do this: [GH:fblissjr/ComfyUI-AudioLoopHelper:.claude](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/.claude)
+- WhatDreamsCost's [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI) poweful node for audio and video loading and trimming (generated with help from Gemini),
+  including the new `LTX Director` - I2V, T2V, FLFF, Prompt Relay, Custom Audio - [tutorial](https://www.youtube.com/watch?v=fZgtkRcu4_k)
+- [GH:dorpxam/ComfyUI-LTX2-Microscope](https://github.com/dorpxam/ComfyUI-LTX2-Microscope) tool to view what exactly LTX 2.3 is doing during sampling
+
+## LoRa-s
+
+### LoRa-s, Alisson
 
 - ref v2v (about to be) released: IC LoRa, initial frame contains reference image on white in green, subsequent frames source video
 - EditAnything IC LoRA: [CA:2553102/editanything?2869279](https://civitai.red/models/2553102/editanything?modelVersionId=2869279),
   [HF:Alissonerdx/LTX-LoRAs:ltx23_edit_anything_global_rank128_v1_6000steps_prodigy](https://huggingface.co/Alissonerdx/LTX-LoRAs/blob/main/ltx23_edit_anything_global_rank128_v1_6000steps_prodigy.safetensors); instructions in README next to it;
-  [HF:Alissonerdx/LTX-LoRAs:ltx23_edit_anything_v1.json](https://huggingface.co/Alissonerdx/LTX-LoRAs/blob/main/workflows/ltx23_edit_anything_v1.json)
+  [HF:Alissonerdx/LTX-LoRAs:ltx23_edit_anything_v1](https://huggingface.co/Alissonerdx/LTX-LoRAs/blob/main/workflows/ltx23_edit_anything_v1.json)
   prompt for one change at a time
 - Alisson Pereira's `animate2real`: [HF:Alissonerdx/LTX-LoRAs:ltx23_anime2real_rank64_v1_4500](https://huggingface.co/Alissonerdx/LTX-LoRAs/blob/main/ltx23_anime2real_rank64_v1_4500.safetensors);
   is reportedly useable for fixing defects, e.g. running anime2real on non-anime inputs; doesn't fix motion issues however (wan polishing does fix them);
@@ -555,11 +566,11 @@ Draken:
   "If you want speed, take the first frame from the generated control video, drop it into ChatGPT, and say: 'Describe this video with the object in the green area placed where the magenta mask is.' Then you add more details to it."
   "This IC  LoRa was trained for objects in general, not people." Benji's [video](https://www.youtube.com/watch?v=E_XRBRykDwE) on it;
   "The saddest part is that he seems to have changed the size of the green part on the side of the video and didn't follow the prompt recommendations I left for masked r2v";
-  [ap-ltx23_masked_ref_inpaint_v1.json](workflows/ltx/ap-ltx23_masked_ref_inpaint_v1.json);
+  [ap-ltx23_masked_ref_inpaint_v1](workflows/ltx/ap-ltx23_masked_ref_inpaint_v1.json);
 - BFS LoRa "which does head swapping" [HF:Alissonerdx/BFS-Best-Face-Swap-Video](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap-Video)
 
 
-## LoRa-s
+### LoRa-s
 
 - [HF:Zlikwid/LTX_2.3_Upscale_IC_Lora](https://huggingface.co/Zlikwid/LTX_2.3_Upscale_IC_Lora/tree/main)
   trained on 1280x704 videos; "That workflow is the official hdr ic lora workflow with a few tweeks"
@@ -572,7 +583,7 @@ Draken:
   - David Show shared  AnimeMix-@nim3mix-Final-LTX on [HF:davesnow1/Loras](https://huggingface.co/davesnow1/Loras/tree/main); note: his convention is that trigger word `@nim3mix` is part of model file name
   - Dave Snow1's animemix for LTX 2.3: [HF:davesnow1/Loras:Loras/tree](https://huggingface.co/davesnow1/Loras/tree/main) "I often crank it to 1.5"
 - Crinklypaper
-  - Crinklypaper presented [crinklypaper-LTX-EXWF-NEW-Taz.json](workflows/ltx/crinklypaper-LTX-EXWF-NEW-Taz.json) as "new workflow with Kijai's efficiency nodes" and praised its operation with distill LoRa v1.1:
+  - Crinklypaper presented [crinklypaper-LTX-EXWF-NEW-Taz](workflows/ltx/crinklypaper-LTX-EXWF-NEW-Taz.json) as "new workflow with Kijai's efficiency nodes" and praised its operation with distill LoRa v1.1:
     "This such great news, not having to run everything in 50fps, though I do see it still helps on fast motion to  run on 50 fps";
     one of his LoRa-s: [CA:2415727/seikon-no-qwaser-ecchi-anime-style-lora-ltxv2?2716034](https://civitai.com/models/2415727/seikon-no-qwaser-ecchi-anime-style-lora-ltxv2?modelVersionId=2716034)
     there should be other good LoRas next to it including a 3d LoRa and Gurren Laggan one
@@ -625,7 +636,7 @@ Draken:
 - [HF:WarmBloodAban/Singularity_LTX-2.3_OmniCine_Preview0.1](https://huggingface.co/WarmBloodAban/Singularity_LTX-2.3_OmniCine_Preview0.1) the singularity LoRa
 - N0NSense's combo: OmniNFS + Singularity + VBVR (`VBVR-official-comfyui.safetensors` from `LiconStudio` on HF) - links for all LoRa-s see above
 
-## Less Verified LoRa-s
+### Less Verified LoRa-s
 
 - [HF:joyfox/LTX2.3-ICEdit-Insight](https://huggingface.co/joyfox/LTX2.3-ICEdit-Insight) a family of LoRa-s for video restoration and cleanup - deblur, remove subtitles etc;
   extra details: [GH:Valiant-Cat/LTX2-ICEdit-Insight](https://github.com/Valiant-Cat/LTX2-ICEdit-Insight); edit-insight which comes as a full model merge - might be a re-use of a pre-existing LoRa
@@ -633,7 +644,7 @@ Draken:
 - Sulphur, 10euros
 
 
-## Non LTX 2.3 LoRa-s Relevant to LTX 2.3
+### Non LTX 2.3 LoRa-s Relevant to LTX 2.3
 
 - [HF:MachineDelusions/LTX-2_Image2Video_Adapter_LoRa](https://huggingface.co/MachineDelusions/LTX-2_Image2Video_Adapter_LoRa) LoRa for LTX 2 which aimed to improve I2V generations and which has been shown to be useful with LTX 2.3
 - huh a Wan LoRa used in conjunction with LTX wf-s?.. [HF:Evados/DiffSynth-Studio-Lora-Wan2.1-ComfyUI](https://huggingface.co/Evados/DiffSynth-Studio-Lora-Wan2.1-ComfyUI/blob/main/dg_wan2_1_v1_3b_lora_extra_noise_detail_motion.safetensors)

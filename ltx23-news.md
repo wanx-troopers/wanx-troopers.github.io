@@ -4,6 +4,8 @@
 
 A bug confirmed in ComfyUI: ever since LTX 2.3 release when guides' strengths is set to any value other than 1 VRAM usage grows.
 
+Bug fixed including improvements to how Sageattention is used - bringing results closer to what happens with default SPDA.
+
 ## 2026.05.08
 
 Native VAELoader can now load LTX 2.3 audio VAE

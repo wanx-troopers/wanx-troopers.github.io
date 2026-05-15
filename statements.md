@@ -6,6 +6,9 @@
 
 Krea K2, a paid image generation model, get generate interesting character sheets
 
+> Q: If we talking similar stuff in Wan family, anything else than MOVA? and about MOVA, not on the list, right?  
+> A: you mean with audio? not really
+
 ## 2026.04
 
 Huddadudd on convincing closed source models do more:
