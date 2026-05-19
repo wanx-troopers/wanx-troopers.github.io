@@ -9,6 +9,8 @@ To move node around hold CTRL.
 
 > the newer quants have per layer setup where we set which layer is allowed to run with fp8 matmuls, and those work without any flags
 
+`crystools` to monitor GPU temp during runs.
+
 ## 2026.04
 
 `bbox` is a `bounding box`

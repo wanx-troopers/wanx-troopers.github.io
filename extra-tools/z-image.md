@@ -11,6 +11,8 @@
 [HF:RunDiffusion/Juggernaut-Z-Image/tree/main](https://huggingface.co/RunDiffusion/Juggernaut-Z-Image/tree/main) released.
 [Juggernaut Prompt Guide](https://www.rundiffusion.com/juggernaut-z-prompt-guide?utm_source=huggingface&utm_medium=model_card&utm_campaign=juggernaut_z_v1&utm_content=prompt_guide_badge).
 
+"luminescent strands" for lense distortion and flares
+
 ## 2026.04
 
 > z image for realism is amazing with low 0.2 denoise and fast

@@ -10,9 +10,25 @@ Nekodificador on avoiding blurry mess instead of motion
 > try karras or exponential
 > at least on a second pass
 
+Nekodificador
+
+> i've noticed that it benefits a lot from high sigmas in the first 5-6 steps; simple and bong_tangent works really well
+
 huddadudd, on the setup that allowed generation of nice turning humans:
 
 > exponential/etdrk2_2s clownshark 8 steps
+
+huddadudd, on his latest wf
+
+> its mainly just 2 stage dev/distill, 1st stage distill .3-.4ish, second stage .5-.6;
+> 1st stage i run 12steps 4/8, etdrk2_2s is good for motion fidelity i've found, qin zhang 2s can help with 2d stuff
+
+"4/8" means 4 steps with `ClowsharkKSampler` on `exponential/etdrk2_2s` and 4 steps with `ClowsharkChainSampler` with `linear/euler`:
+
+> Q: what does skipping the double layer 28 help out with?  
+> [huddadudd] A: abel jones had recommended it a while ago, not sure if worthwhile but doesnt seem to hurt
+
+[huddadudd-clownsampling](screenshots/huddadudd-clownsampling.webp), [huddadudd-sigmas](screenshots/huddadudd-sigmas.webp)
 
 David Show renders widescreen 1920x768
 
@@ -21,7 +37,6 @@ David Show renders widescreen 1920x768
 Repository also includes some nodes which are mostly not needed outside of performance measurements,
 `skip_under_seq_len` being "bypass int8 quant for small-Q calls (~377 token text-encoder shapes)".
 Associated wf: [fml2v_aggregate_2026-05-13](workflows/ltx/fredbliss-fml2v_aggregate_2026-05-13.json).
-
 
 ## 2026.04.27
 

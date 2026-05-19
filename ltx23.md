@@ -164,6 +164,9 @@ gated LoRa for re-dubbing vidoes - the intent was to keep the original voice; ba
 
 What is this?.. ![kjnodes-enhance](screenshots/nodes/kjnodes-enhance.png)
 
+- `Model Preview Override` from `KJ Nodes`
+- `Patch Sage Attention KJ` and `LTX2 Mem Eff Sage Attention Patch` from `comfyui-kjnodes` to enable Sage attention on LTX wf-s but not Qwen Edit wf-s.
+
 ## IC LoRa-s
 
 IC LoRa generally stands for "in-context LoRa" a _type_ of LoRa. In colloquial speak "IC LoRa" generally refers to one of the IC LoRa-s released alongside LTX 2.3:
@@ -546,8 +549,9 @@ Draken:
   [GH:fblissjr/ComfyUI-AudioLoopHelper:tests](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/tests)
   the whole meta harness i built to do this: [GH:fblissjr/ComfyUI-AudioLoopHelper:.claude](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/.claude)
 - WhatDreamsCost's [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI) poweful node for audio and video loading and trimming (generated with help from Gemini),
-  including the new `LTX Director` - I2V, T2V, FLFF, Prompt Relay, Custom Audio - [tutorial](https://www.youtube.com/watch?v=fZgtkRcu4_k)
+  including the new `LTX Director` - I2V, T2V, FLFF, Prompt Relay, Custom Audio - [tutorial 1](https://www.youtube.com/watch?v=fZgtkRcu4_k), [tutorial 2](https://www.youtube.com/watch?v=vM60pJJqqEI)
 - [GH:dorpxam/ComfyUI-LTX2-Microscope](https://github.com/dorpxam/ComfyUI-LTX2-Microscope) tool to view what exactly LTX 2.3 is doing during sampling
+- [GH:kijai/ComfyUI-NativeLooping_testing](https://github.com/kijai/ComfyUI-NativeLooping_testing) experimental nodes for latent looping including `TensorForLoopOpen`
 
 ## LoRa-s
 
@@ -628,13 +632,21 @@ Draken:
   [CA:2332398?2623644](https://civitai.com/models/2332398?modelVersionId=2623644); `[deforumorph]` trigger; "hypnotic, ever-changing animations reminiscent of classic Deforum journeys but infused with Flux-level detail and coherence";
   new version is being worked on
 - [HF:Nebsh](https://huggingface.co/Nebsh) shares a collection of interesting LoRa-s including "cutout satire", "handheld run", ...
-- OmniNFT converstion 1 [HF:VasiliyWeb/OmniNFT_ComfyUI](https://huggingface.co/VasiliyWeb/OmniNFT_ComfyUI);
+- OmniNFT for LTX 2.3 converted for Comfy: [HF:Kijai/LTX2.3_comfy:loras/LTX-2.3-OmniNFT-RL-Lora_bf16](https://huggingface.co/Kijai/LTX2.3_comfy/blob/main/loras/LTX-2.3-OmniNFT-RL-Lora_bf16.safetensors)
+- OmniNFT for LTX 2 (still works with 2.3) converstion 1 [HF:VasiliyWeb/OmniNFT_ComfyUI](https://huggingface.co/VasiliyWeb/OmniNFT_ComfyUI);
   conversion 2: [HF:silveroxides/LTX-2.3-Quants:loras/OmniNFT-comfyui](https://huggingface.co/silveroxides/LTX-2.3-Quants/blob/main/loras/OmniNFT-comfyui.safetensors);
   originals: [GH:zghhui.github.io/OmniNFT](https://zghhui.github.io/OmniNFT/) [HF:zghhui/OmniNFT](https://huggingface.co/zghhui/OmniNFT);
   built for LTX 2 t2v but seems to help with LTX 2.3 as well even in i2v case;
   DavidShow: "T2V with LTX has a very strong colour hue by default, and if nothing else, this lora improves that greatly."
 - [HF:WarmBloodAban/Singularity_LTX-2.3_OmniCine_Preview0.1](https://huggingface.co/WarmBloodAban/Singularity_LTX-2.3_OmniCine_Preview0.1) the singularity LoRa
 - N0NSense's combo: OmniNFS + Singularity + VBVR (`VBVR-official-comfyui.safetensors` from `LiconStudio` on HF) - links for all LoRa-s see above
+- [HF:yuvraj108c/LTX-2.3-22b-IC-LoRA-Any-Trajectory-Instruction](https://huggingface.co/yuvraj108c/LTX-2.3-22b-IC-LoRA-Any-Trajectory-Instruction) porting Any Trajectory Instruction (ATI) to LTX 2.3
+- [HF:Lightricks/LTX-2.3-22b-IC-LoRA-LipDub](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-LipDub) from Lightricks to re-dub videos;
+  [Drozbay](hidden-knowledge.md#drozbay) found it works much better combined with ID-Lora
+- animation LoRa-s
+  - [CA:2634377/cyberpunk-edgerunners-style-lora-ltx-23?2957805 ](https://civitai.red/models/2634377/cyberpunk-edgerunners-style-lora-ltx-23?modelVersionId=2957805) by crinklypaper
+    "I just put out an anime style lora for ltx, I trained it using my 90s style anime lora as a base. So it was 53K steps on the base-lora, then load from save state and 19.5k steps trained on top with a completely different style. its t2v"
+
 
 ### Less Verified LoRa-s
 

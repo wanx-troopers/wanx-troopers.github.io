@@ -6,6 +6,8 @@ A bug confirmed in ComfyUI: ever since LTX 2.3 release when guides' strengths is
 
 Bug fixed including improvements to how Sageattention is used - bringing results closer to what happens with default SPDA.
 
+Guide strength can now be set above 1: "it's not exactly linear, so 2.0 isn't twice as strong, but it definitely has an affect.. could be useful for first to last frame etc."
+
 ## 2026.05.08
 
 Native VAELoader can now load LTX 2.3 audio VAE

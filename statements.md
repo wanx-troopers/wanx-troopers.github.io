@@ -9,6 +9,11 @@ Krea K2, a paid image generation model, get generate interesting character sheet
 > Q: If we talking similar stuff in Wan family, anything else than MOVA? and about MOVA, not on the list, right?  
 > A: you mean with audio? not really
 
+How to train a character LoRa for Wan 2.1: [YT:oJdT5dzrNEY&t=384s](https://www.youtube.com/watch?v=oJdT5dzrNEY&t=384s)
+
+ingi // SYSTMS on using both Wan Animate and Wan VACE to replace a character in video:
+>  I did it in two separate generations. Wan Animate to put the character in the scene and then Vace to improve the likeness/upscale with a reference frame
+
 ## 2026.04
 
 Huddadudd on convincing closed source models do more:
