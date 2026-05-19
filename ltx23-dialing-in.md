@@ -25,10 +25,10 @@ huddadudd, on his latest wf
 
 "4/8" means 4 steps with `ClowsharkKSampler` on `exponential/etdrk2_2s` and 4 steps with `ClowsharkChainSampler` with `linear/euler`:
 
+[huddadudd-clownsampling](screenshots/huddadudd-clownsampling.webp), [huddadudd-sigmas](screenshots/huddadudd-sigmas.webp)
+
 > Q: what does skipping the double layer 28 help out with?  
 > [huddadudd] A: abel jones had recommended it a while ago, not sure if worthwhile but doesnt seem to hurt
-
-[huddadudd-clownsampling](screenshots/huddadudd-clownsampling.webp), [huddadudd-sigmas](screenshots/huddadudd-sigmas.webp)
 
 David Show renders widescreen 1920x768
 

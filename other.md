@@ -2,6 +2,7 @@
 
 ## Promising For Comfy
 
+* [GH:mvp-ai-lab/RAVEN](https://github.com/mvp-ai-lab/RAVEN) Real-time Autoregressive Video Extrapolation - ltx version probably coming
 * [GH:shootthesound/comfyui-mesh](https://github.com/shootthesound/comfyui-mesh) a working solution to offload some of the blocks of for Flux image gen and LTX video gen to a 2nd GPU on same or different computer.
 * [GH:nvidia/AnyFlow-Wan2.1-T2V-14B-Diffusers](https://huggingface.co/nvidia/AnyFlow-Wan2.1-T2V-14B-Diffusers) anyflow/meanflow; [YT:swKdn-qT47Q](https://www.youtube.com/watch?v=swKdn-qT47Q);
   "NVIDIA One-Way Noncommercial License"
