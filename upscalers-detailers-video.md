@@ -59,6 +59,12 @@ Implementations:
 - [GH:filliptm/ComfyUI_Fill-Nodes](https://github.com/filliptm/ComfyUI_Fill-Nodes)
 - [lihaoyun6/ComfyUI-FlashVSR_Ultra_Fast](https://github.com/lihaoyun6/ComfyUI-FlashVSR_Ultra_Fast)
 
+RuneX:
+> Used FlashVSR a lot previously.. from within WanVideoWrapper..  (its a bit of a "light" version of FlashVSR but works great...  and extremely fast)"
+[KJ's wf](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_1_3B_FlashVSR_upscale_example.json)
+> "flashVSR runs through sampler and adds details as well. A bit of a restore-and-upscale.  Does a decent job, not quite topas, but still
+> (at least with low res wan videos, havent tried it with LTX)"
+
 ### Wiring FlashVSR
 
 VSR safetensors loaded by `WanVideo Extra Model Select` plugged into `extra_model` input of `WanVideo Model Loader` loading Wan 2.1 T2V `safetensors`.

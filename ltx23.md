@@ -1,5 +1,6 @@
 ﻿# LTX 2.3
 
+
 LTX 2.3 uses Gemma 3 12B as multi-modal text encoder. Gemma is by Google.
 It might be advisable to set width and height as multiples of 32 (128 was suggested to fix some sort of issues).
 Frame count native to LTX 2.3 is `1 + 8 * N` since 1st frame is encoded separately and subsequent ones have
@@ -77,6 +78,8 @@ Potentially useful:
 Settings to view linear EXR created with this LoRa in AfterEffects with OCIO engine from [Oumoumad](https://gear-productions.com/):
 [ltx23-hdr-view-ae-ocio](screenshots/ltx/ltx23-hdr-view-ae-ocio.webp); his advice for DaVinci is to use sRGB linear setting.
 
+herpderpleton's model versions for 3090: [herpderpleton-model-versions](screenshots/ltx/herpderpleton-model-versions.webp)
+
 ## Prompt Relay
 
 Prompt relay is a new technique which sub-prompts to specific parts of the video only though attention masking.
@@ -151,6 +154,8 @@ gated LoRa for re-dubbing vidoes - the intent was to keep the original voice; ba
 
 - `LTXV Add Latent Guide` from `LTXVideo` set is the only way to associate a guide with position -1; all other similar nodes treat -1 as "after last frame";
   "it's the same thing as add guide, just takes latent instead of image, only difference besides that is how the positioning is done"
+  AshmoTV: "0 might get flashing as that's applying it on the very first frame. But I've tried -1 to -8 and all work without flashes"
+  N0NSens: "I founded it when I was testing Add Latent Guide node for additional ref img. -1 got me a few garbage frames at the beginning. -8 solve this issue"
 
 - Kijai's `LTX2 NAG` [LTX-2_old_setup_for_nag_and_mem](screenshots/nodes/ltx/LTX-2_old_setup_for_nag_and_mem.webp) - by [Mark DK Berry](https://markdkberry.com);
   inagy: "Pushes away the generation from those conditions basically. It's like negative prompt but without need to run with cfg higher than 1. Not exactly the same, but similar.
@@ -443,6 +448,9 @@ burgstall:
 
 > had to lower rank to 32 to fit
 
+[Ingi](https://x.com/ingi_erlingsson) on his experience training:
+[X:ingi_erlingsson?2057566331235627100](https://x.com/ingi_erlingsson/status/2057566331235627100)
+
 ## Sound
 
 The role of a "solid mask" is not clear to the writer of this page but apparently it may be used before feeding Audio latent into sampler: [solidMask.webp](screenshots/ltx/solidMask.webp)
@@ -561,10 +569,22 @@ Draken:
 - EditAnything IC LoRA: [CA:2553102/editanything?2869279](https://civitai.red/models/2553102/editanything?modelVersionId=2869279),
   [HF:Alissonerdx/LTX-LoRAs:ltx23_edit_anything_global_rank128_v1_6000steps_prodigy](https://huggingface.co/Alissonerdx/LTX-LoRAs/blob/main/ltx23_edit_anything_global_rank128_v1_6000steps_prodigy.safetensors); instructions in README next to it;
   [HF:Alissonerdx/LTX-LoRAs:ltx23_edit_anything_v1](https://huggingface.co/Alissonerdx/LTX-LoRAs/blob/main/workflows/ltx23_edit_anything_v1.json)
-  prompt for one change at a time
+  2026.05: [HF:Alissonerdx/EditAnything](https://huggingface.co/Alissonerdx/EditAnything/tree/main) "I think the one with the largest module would be the most interesting"
+  "prompt for one change at a time"; replying to [Ingi](https://x.com/ingi_erlingsson): "in your case you are using first frame conditioning_p, I am using a negative latent for this, I don't use the first frame";
+  [Ingi](https://x.com/ingi_erlingsson): "Yeah same here - I’m using a ref latent at -8" [about coming soon character replace LoRa]
+  "So you are using add latent guide node at -8.  Any specific reason for using -8?" "not sure why it's 8 specifically, it works at -4 too, but if you put it at 0 then you get the flashing frame at the start as it's competing with the video ref"
+- [HF:Alissonerdx/EditAnything:edit_anything_v1.1_r256](https://huggingface.co/Alissonerdx/EditAnything/blob/main/edit_anything_v1.1_r256.safetensors) "that's model for editing without using references"
+- "I think the module can bring some improvements, but it has to be used with the looping sampler, because those were extra modules trained to try to maintain the reference over time"
+  "You can try using it without the module, just the standard one. I only separated them to avoid errors when loading LoRa in ComfyUI due to mismatch blocks, etc.
+  But I tried to train with the module to improve the use of the reference; you can even use the module with your LoRa without needing to use mine since it's separate"
+  [alisson-loras-modules](screenshots/ltx/alisson-loras-modules.webp);
+  "You can enable and disable modules or adjust the strength of, for example, adaln scale"
+  [alisson-modules](screenshots/ltx/alisson-modules.png)
+  [alisson-modules-parameters-explained](screenshots/ltx/alisson-modules-parameters-explained.webp)
 - Alisson Pereira's `animate2real`: [HF:Alissonerdx/LTX-LoRAs:ltx23_anime2real_rank64_v1_4500](https://huggingface.co/Alissonerdx/LTX-LoRAs/blob/main/ltx23_anime2real_rank64_v1_4500.safetensors);
   is reportedly useable for fixing defects, e.g. running anime2real on non-anime inputs; doesn't fix motion issues however (wan polishing does fix them);
   also [CA:2527511/anime2half-real](https://civitai.com/models/2527511/anime2half-real)
+  RuneX's wf: [HF:RuneXX/LTX-2.3-Workflows:Video-2-Video/LTX-2.3_-_V2V_Video-Edit_remove_add_replace_restyle_EditAnything-Lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/blob/main/Video-2-Video/LTX-2.3_-_V2V_Video-Edit_remove_add_replace_restyle_EditAnything-Lora.json)
 - Alisson Pereira's first experimental version of MR2V (Masked Reference-to-Video): [HF:Alissonerdx/LTX-LoRAs](https://huggingface.co/Alissonerdx/LTX-LoRAs)
   "It's a reference-based inpainting LoRA ... I trained several variants, and this rank 32 one was the one I liked the most"; use `ltx23_inpaint_masked_r2v_rank32_v1_3000steps.safetensors`;
   "If you want speed, take the first frame from the generated control video, drop it into ChatGPT, and say: 'Describe this video with the object in the green area placed where the magenta mask is.' Then you add more details to it."
@@ -572,6 +592,7 @@ Draken:
   "The saddest part is that he seems to have changed the size of the green part on the side of the video and didn't follow the prompt recommendations I left for masked r2v";
   [ap-ltx23_masked_ref_inpaint_v1](workflows/ltx/ap-ltx23_masked_ref_inpaint_v1.json);
 - BFS LoRa "which does head swapping" [HF:Alissonerdx/BFS-Best-Face-Swap-Video](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap-Video)
+- "There's also a motion transfer LoRa that I trained, it works well for slow-motion videos but is bad for fast-motion videos"
 
 
 ### LoRa-s

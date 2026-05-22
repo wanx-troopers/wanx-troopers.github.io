@@ -38,6 +38,14 @@ Repository also includes some nodes which are mostly not needed outside of perfo
 `skip_under_seq_len` being "bypass int8 quant for small-Q calls (~377 token text-encoder shapes)".
 Associated wf: [fml2v_aggregate_2026-05-13](workflows/ltx/fredbliss-fml2v_aggregate_2026-05-13.json).
 
+N0NSense's idea on quicker refining with LTX [N0NSense-LTX-refiner](workflows/ltx/N0NSense-LTX-refiner.webp):
+
+> we feed the finished upscaled video, set it to 50 fps (film/rife),
+> run it through a regular sampler with four steps and manual sigma,
+> and then return it to 25 fps after the decoder (VHS node "Select Every Nth Image").
+> It feels better than a regular upscaler,
+> but worse than the original 50 fps. The benefit is that it's MUCH faster.
+
 ## 2026.04.27
 
 > 1.1 distilled in mxfp8 which seems good

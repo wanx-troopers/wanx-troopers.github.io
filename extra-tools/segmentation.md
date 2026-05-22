@@ -13,6 +13,7 @@ Sam3D praised as new in segmentation models.
 
 Several ComfyUI implementations:
 
+- "we have that in core too"
 - [GH:Ltamann/ComfyUI-TBG-SAM3](https://github.com/Ltamann/ComfyUI-TBG-SAM3)
 - [GH:PozzettiAndrea/ComfyUI-SAM3](https://github.com/PozzettiAndrea/ComfyUI-SAM3)
 - [GH:PozzettiAndrea/ComfyUI-SAM3DBody](https://github.com/PozzettiAndrea/ComfyUI-SAM3DBody) "They don't release VRAM quite as well as you'd expect. They work, but lack optimization"
@@ -20,6 +21,9 @@ Several ComfyUI implementations:
 Sentiment: "crazy", "Sec4B still doing better"
 
 - David Show's workflow for Sam3 masking: [ds-sam3d-Mask-Generator-multi](../workflows/ds-sam3d-Mask-Generator-multi.json)
+
+> SAM2 can arguably be better with points;
+> 3 (and 3.1) is all about the text prompting and video tracking
 
 ## Depth Anything
 

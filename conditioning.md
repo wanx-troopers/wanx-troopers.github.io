@@ -1,5 +1,12 @@
 # Conditioning
 
+## 2026.05
+
+[Drozbay](hidden-knowledge.md#drozbay) has shared the following workflow for both temporal and spatial inpainting with Wan video generation models using Clowshark sampling nodes
+[droz_clown_rewan_temporal_v1](workflows/wan/droz_clown_rewan_temporal_v1.json)
+
+## Main Section
+
 Sampling in AI video generation is the process of converting noise to a sequence of images.
 Visual data is stored in compressed form = latent space = as "latents".
 

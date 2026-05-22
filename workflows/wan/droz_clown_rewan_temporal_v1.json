@@ -1,0 +1,764 @@
+{
+  "id": "baedef4b-3891-4388-9d3f-6c989c2c8a3e",
+  "revision": 0,
+  "last_node_id": 16,
+  "last_link_id": 47,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "ClownModelLoader",
+      "pos": [
+        -250,
+        -100
+      ],
+      "size": [
+        420,
+        270
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            47
+          ]
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "links": [
+            21,
+            29,
+            30
+          ]
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "links": [
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ClownModelLoader"
+      },
+      "widgets_values": [
+        "Wan\\Wan2_1-T2V-14B_fp8_e4m3fn_scaled_KJ.safetensors",
+        "fp8_e4m3fn_fast",
+        "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+        ".none",
+        ".none",
+        ".none",
+        "wan",
+        "wan_2.1_vae.safetensors"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "ReWanPatcherAdvanced",
+      "pos": [
+        1070,
+        60
+      ],
+      "size": [
+        270,
+        260
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            22
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReWanPatcherAdvanced"
+      },
+      "widgets_values": [
+        "all",
+        "all",
+        true,
+        "false",
+        40
+      ]
+    },
+    {
+      "id": 15,
+      "type": "TemporalSplitAttnMask",
+      "pos": [
+        730,
+        640
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "temporal_mask",
+          "type": "MASK",
+          "links": [
+            46
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TemporalSplitAttnMask"
+      },
+      "widgets_values": [
+        45,
+        121,
+        73,
+        121
+      ]
+    },
+    {
+      "id": "rc",
+      "type": "ClownRegionalConditioning_AB",
+      "pos": [
+        1090,
+        400
+      ],
+      "size": [
+        250,
+        350
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning_A",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": 31
+        },
+        {
+          "name": "conditioning_B",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": 32
+        },
+        {
+          "name": "mask_A",
+          "shape": 7,
+          "type": "MASK",
+          "link": 45
+        },
+        {
+          "name": "mask_B",
+          "shape": 7,
+          "type": "MASK",
+          "link": 46
+        },
+        {
+          "name": "weights",
+          "shape": 7,
+          "type": "SIGMAS",
+          "link": null
+        },
+        {
+          "name": "region_bleeds",
+          "shape": 7,
+          "type": "SIGMAS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "links": [
+            23
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ClownRegionalConditioning_AB"
+      },
+      "widgets_values": [
+        1,
+        0,
+        0,
+        "constant",
+        0,
+        -1,
+        "boolean",
+        0,
+        false
+      ]
+    },
+    {
+      "id": 2,
+      "type": "EmptyHunyuanLatentVideo",
+      "pos": [
+        340,
+        490
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            19,
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyHunyuanLatentVideo"
+      },
+      "widgets_values": [
+        480,
+        480,
+        121,
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "type": "ModelSamplingAdvancedResolution",
+      "pos": [
+        740,
+        60
+      ],
+      "size": [
+        280,
+        130
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 47
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingAdvancedResolution"
+      },
+      "widgets_values": [
+        "exponential",
+        1.35,
+        0.85
+      ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        1700,
+        60
+      ],
+      "size": [
+        160,
+        50
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 26
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            28
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 13,
+      "type": "TemporalSplitAttnMask",
+      "pos": [
+        730,
+        440
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "temporal_mask",
+          "type": "MASK",
+          "links": [
+            45
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TemporalSplitAttnMask"
+      },
+      "widgets_values": [
+        1,
+        77,
+        1,
+        89
+      ]
+    },
+    {
+      "id": "5b",
+      "type": "CLIPTextEncode",
+      "pos": [
+        220,
+        90
+      ],
+      "size": [
+        400,
+        120
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 30
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            32
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (Prompt) B",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "red fire, an inferno of glowing flames, hot light"
+      ]
+    },
+    {
+      "id": "5a",
+      "type": "CLIPTextEncode",
+      "pos": [
+        220,
+        -80
+      ],
+      "size": [
+        400,
+        120
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            31
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (Prompt) A",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "blue ice, a frozen crystalline landscape, cold light"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        220,
+        260
+      ],
+      "size": [
+        400,
+        160
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 21
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            24
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (Prompt) Neg",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "ClownsharKSampler_Beta",
+      "pos": [
+        1390,
+        60
+      ],
+      "size": [
+        280,
+        700
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "shape": 7,
+          "type": "MODEL",
+          "link": 22
+        },
+        {
+          "name": "positive",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": 23
+        },
+        {
+          "name": "negative",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": 24
+        },
+        {
+          "name": "latent_image",
+          "shape": 7,
+          "type": "LATENT",
+          "link": 25
+        },
+        {
+          "name": "sigmas",
+          "shape": 7,
+          "type": "SIGMAS",
+          "link": null
+        },
+        {
+          "name": "guides",
+          "shape": 7,
+          "type": "GUIDES",
+          "link": null
+        },
+        {
+          "name": "options",
+          "shape": 7,
+          "type": "OPTIONS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            26
+          ]
+        },
+        {
+          "name": "denoised",
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "name": "options",
+          "type": "OPTIONS",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ClownsharKSampler_Beta"
+      },
+      "widgets_values": [
+        0.5,
+        "exponential/res_2s",
+        "beta57",
+        4,
+        -1,
+        1,
+        1,
+        1234,
+        "fixed",
+        "standard",
+        true
+      ]
+    },
+    {
+      "id": 9,
+      "type": "SaveAnimatedWEBP",
+      "pos": [
+        1880,
+        60
+      ],
+      "size": [
+        390,
+        650
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 28
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "20260520_rewanpatcher-temporal",
+        16,
+        false,
+        90,
+        "default"
+      ]
+    }
+  ],
+  "links": [
+    [
+      19,
+      2,
+      0,
+      3,
+      1,
+      "LATENT"
+    ],
+    [
+      20,
+      3,
+      0,
+      4,
+      0,
+      "MODEL"
+    ],
+    [
+      21,
+      1,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      22,
+      4,
+      0,
+      7,
+      0,
+      "MODEL"
+    ],
+    [
+      23,
+      "rc",
+      0,
+      7,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      24,
+      6,
+      0,
+      7,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      25,
+      2,
+      0,
+      7,
+      3,
+      "LATENT"
+    ],
+    [
+      26,
+      7,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      27,
+      1,
+      2,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      28,
+      8,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      29,
+      1,
+      1,
+      "5a",
+      0,
+      "CLIP"
+    ],
+    [
+      30,
+      1,
+      1,
+      "5b",
+      0,
+      "CLIP"
+    ],
+    [
+      31,
+      "5a",
+      0,
+      "rc",
+      0,
+      "CONDITIONING"
+    ],
+    [
+      32,
+      "5b",
+      0,
+      "rc",
+      1,
+      "CONDITIONING"
+    ],
+    [
+      45,
+      13,
+      0,
+      "rc",
+      2,
+      "MASK"
+    ],
+    [
+      46,
+      15,
+      0,
+      "rc",
+      3,
+      "MASK"
+    ],
+    [
+      47,
+      1,
+      0,
+      3,
+      0,
+      "MODEL"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6631341690062879,
+      "offset": [
+        413.3360884210483,
+        419.84071125566476
+      ]
+    },
+    "frontendVersion": "1.43.18",
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

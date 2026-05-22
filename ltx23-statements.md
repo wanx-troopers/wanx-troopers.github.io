@@ -17,6 +17,9 @@ N0NSens's way to write a prompt with prompt relay for LTX 2.3:
 Gleb Tretyak: "Am doing something wrong or is it true that ltx REALLY struggles with 2d anime?"
 > A: it does struggle for sure
 
+coctailprawn1212:
+> I'm using fp4 mixed ltx by hippotes (seem like nvfp4)
+
 ## 2026.04.23
 
 > Q: are you guys getting like a dot/grain pattern?

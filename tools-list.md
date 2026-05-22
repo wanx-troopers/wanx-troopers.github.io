@@ -210,6 +210,8 @@ Moved [here](vfi.md).
 
 # Pose Detection
 
+`mediapipe` supported in comfyui native?
+
 `vitpose` can do animals as well as humans.
 
 `dwpose`

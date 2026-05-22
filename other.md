@@ -2,6 +2,8 @@
 
 ## Promising For Comfy
 
+* [GH:benjiaiplayground/HY-OmniWeaving-FP8](https://huggingface.co/benjiaiplayground/HY-OmniWeaving-FP8) omniwaving "not even close to wan 2.2"
+* [GH:WASasquatch/RES4SHO](https://github.com/WASasquatch/RES4SHO) more mathematically advanced samplers
 * [GH:mvp-ai-lab/RAVEN](https://github.com/mvp-ai-lab/RAVEN) Real-time Autoregressive Video Extrapolation - ltx version probably coming
 * [GH:shootthesound/comfyui-mesh](https://github.com/shootthesound/comfyui-mesh) a working solution to offload some of the blocks of for Flux image gen and LTX video gen to a 2nd GPU on same or different computer.
 * [GH:nvidia/AnyFlow-Wan2.1-T2V-14B-Diffusers](https://huggingface.co/nvidia/AnyFlow-Wan2.1-T2V-14B-Diffusers) anyflow/meanflow; [YT:swKdn-qT47Q](https://www.youtube.com/watch?v=swKdn-qT47Q);
@@ -18,7 +20,9 @@
 * [HF:datasets|theFoxofSky/RealisDance-Val](https://huggingface.co/datasets/theFoxofSky/RealisDance-Val) rainbow ppl paired with real videos; "it's generated with SMPL tracking and then applying rainbow shader"
 * [GH:Anil-matcha/Open-Generative-AI](https://github.com/Anil-matcha/Open-Generative-AI) Looking for a free, uncensored Higgsfield AI, Freepik, Krea, Openart AI alternative? Seems like a frontend to api-s?
 * [kimodo](https://research.nvidia.com/labs/sil/projects/kimodo/)  kinematic motion diffusion model trained on large-scale optical mocap data "Kimodo's text encoder uses Meta Llama 3 8B, which is a gated model on HuggingFace" - may get implemented for Comfy;
-  note: [GH:animatica-ai/motionmcp-kimodo](https://github.com/animatica-ai/motionmcp-kimodo) Blender add-on for Kimodo
+  note: [GH:animatica-ai/motionmcp-kimodo](https://github.com/animatica-ai/motionmcp-kimodo) Blender add-on for Kimodo;
+  another blender add-on behind a patreon paywall [YT:IBQPb8YBKNU](https://www.youtube.com/watch?v=IBQPb8YBKNU);
+  free Maya plugin [YT:qAfpGwtnot4](https://www.youtube.com/watch?v=qAfpGwtnot4)
 * [Cascadeur](https://cascadeur.com/) is an AI assited tool for posing and creating animated motion; ... what is Akeytsu which is free? "NVIDIA GEM-X" [X post](https://x.com/anoxxymane/status/2044464237091881188?s=20)
 * [GH:fblissjr/fb-claude-skills](https://github.com/fblissjr/fb-claude-skills) A collection of Claude Code plugins, skills, and MCP Apps. Installable as a plugin marketplace in Claude Code, Cowork, and Claude Desktop.
 * [firstframego.github.io](https://firstframego.github.io/) article suggesting a way to pack all references into 1st frame

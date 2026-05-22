@@ -29,6 +29,8 @@ RIFE VFI still good to double frame rate.
 - [GH:filliptm/ComfyUI_Fill-Nodes](https://github.com/filliptm/ComfyUI_Fill-Nodes), `FL RIFE Frame Interpolation` node
 - occasionally ppl recommend [GH:yuvraj108c/ComfyUI-Rife-Tensorrt](https://github.com/yuvraj108c/ComfyUI-Rife-Tensorrt) which requires `tensorrt` to be installed
 
+2026.05: `rife_v4.26.safetensors`
+
 ## FILM
 
 - [GH:filliptm/ComfyUI_Fill-Nodes](https://github.com/filliptm/ComfyUI_Fill-Nodes), `FL FILM Frame Interpolation` node
