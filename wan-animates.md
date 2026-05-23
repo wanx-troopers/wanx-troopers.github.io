@@ -2,6 +2,11 @@
 
 Wan Animate and MoCha serve similar goals.
 
+## 2026.05
+
+djbfilmz:
+> I used Sapiens for posing with Animate and found it to be the best, followed by SDpose, then DWpose.
+
 ## Universal Pose Scaling
 
 A common issue with this series of models is that the proportions of the character

@@ -14,6 +14,8 @@ To move node around hold CTRL.
 > Q: can a 3090 use fp8?  
 > it can, you just don't get any speed up besides from the memory savings
 
+[gh:phazei/ComfyUI-Enhancement-Utils](https://github.com/phazei/ComfyUI-Enhancement-Utils) cpu/gpu/ram monitoring for pc in comfyui
+
 ## 2026.04
 
 `bbox` is a `bounding box`

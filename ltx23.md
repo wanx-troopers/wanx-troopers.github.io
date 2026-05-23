@@ -691,6 +691,7 @@ Draken:
   - Sir_Axe's [HF:siraxe/TTM_IC-lora_ltx2.3](https://huggingface.co/siraxe/TTM_IC-lora_ltx2.3) cartoony time to move for LTX 2.3;
 - RuneX recommended
   - [HF:100percentrobot/LTX-2.3-Audio-Reactive-LORA](https://huggingface.co/100percentrobot/LTX-2.3-Audio-Reactive-LORA)
+  - RealisDance - similar to wan animate? charcter replacment?..
 
 
 ### Less Verified LoRa-s
