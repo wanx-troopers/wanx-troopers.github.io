@@ -591,7 +591,9 @@ Draken:
   [Ingi](https://x.com/ingi_erlingsson): "Yeah same here - I’m using a ref latent at -8" [about coming soon character replace LoRa]
   "So you are using add latent guide node at -8.  Any specific reason for using -8?" "not sure why it's 8 specifically, it works at -4 too, but if you put it at 0 then you get the flashing frame at the start as it's competing with the video ref"
 - [HF:Alissonerdx/EditAnything:edit_anything_v1.1_r256](https://huggingface.co/Alissonerdx/EditAnything/blob/main/edit_anything_v1.1_r256.safetensors) "that's model for editing without using references"
-- "I think the module can bring some improvements, but it has to be used with the looping sampler, because those were extra modules trained to try to maintain the reference over time"
+- "I think the module can bring some improvements, but it has to be used with the looping sampler,
+  [a custom node I made called EditAnything Sampler Looping]
+  because those were extra modules trained to try to maintain the reference over time"
   "You can try using it without the module, just the standard one. I only separated them to avoid errors when loading LoRa in ComfyUI due to mismatch blocks, etc.
   But I tried to train with the module to improve the use of the reference; you can even use the module with your LoRa without needing to use mine since it's separate"
   [alisson-loras-modules](screenshots/ltx/alisson-loras-modules.webp);
