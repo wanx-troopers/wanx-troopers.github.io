@@ -20,6 +20,8 @@ Gleb Tretyak: "Am doing something wrong or is it true that ltx REALLY struggles 
 coctailprawn1212:
 > I'm using fp4 mixed ltx by hippotes (seem like nvfp4)
 
+Node to help select LTX resolution: [GH:WepeNerd/ComfyUI-WepeNerd](https://github.com/WepeNerd/ComfyUI-WepeNerd)
+
 ## 2026.04.23
 
 > Q: are you guys getting like a dot/grain pattern?

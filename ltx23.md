@@ -78,7 +78,8 @@ Potentially useful:
 Settings to view linear EXR created with this LoRa in AfterEffects with OCIO engine from [Oumoumad](https://gear-productions.com/):
 [ltx23-hdr-view-ae-ocio](screenshots/ltx/ltx23-hdr-view-ae-ocio.webp); his advice for DaVinci is to use sRGB linear setting.
 
-herpderpleton's model versions for 3090: [herpderpleton-model-versions](screenshots/ltx/herpderpleton-model-versions.webp)
+herpderpleton's model versions for 3090: [herpderpleton-model-versions](screenshots/ltx/herpderpleton-model-versions.webp) David Show:
+"btw, running dev with the distill lora will produce better results at the same step count. it will take a little longer, but it will be in the region of 30-40 seconds. You're also using the older distill model."
 
 ## Prompt Relay
 
@@ -110,6 +111,8 @@ The Shadow (NYC)'s prompt relay setup: [the-shadow-prompt-relay](screenshots/nod
 
 SirAxe's experimental nodes to apply LoRa-s to different parts of the video selectively, extending functionality of prompt relay:
 [GH:kijai/ComfyUI-PromptRelay/pull/1](https://github.com/kijai/ComfyUI-PromptRelay/pull/1)
+
+WhatDreamsCost's [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI) is a further development of PromptRelay idea.
 
 ## Context Windows With Ltx 2.3
 
@@ -210,6 +213,14 @@ Zueuk:
 > so for extending i'd probably keep masked "inplace" data
 > but when we put frames anywhere except frame #0, guides are probably a better choice
 
+Re RuneX's workflows
+> herpderpleton Q: What are "guider" and "..." workflows for the FFLF workflows?  
+> RuneX A: just go for guider. It lets the model do its magic
+> (instead of the "frame injection" inplace variants).
+> The guider is most natural and better. 
+> (one uses LTX Guide node, other LTX ImgInPlace.. same goal, just a little different output) 
+> If you mean the First (middle) Last frame workflows..
+
 ### ImgToVideoInplace
 
 Alternative to using guides. Kijai's version also allows to specify which frame to apply to: ![LTXVImgToVideoInplaceKJ](screenshots/ltx/LTXVImgToVideoInplaceKJ.webp)
@@ -284,6 +295,10 @@ It has been reported that LTX 2.3 extends videos quite well forward but a method
 [GH:ckinpdx/ckinpdx_comfyui_workflows](https://github.com/ckinpdx/ckinpdx_comfyui_workflows) contains a latent looping workflow which again apparently uses the same technique.
 
 Note that Sir_Axe's [HF:siraxe/MergeGreen_IC-lora_ltx2.3](https://huggingface.co/siraxe/MergeGreen_IC-lora_ltx2.3) can be a useful alternative.
+
+RuneX: [RuneXX/LTX-2.3-Workflows](https://huggingface.co/RuneXX/LTX-2.3-Workflows/tree/main/Video-2-Video/Extend-Any-Video)
+> Basically using LTX "Re-Take" feature... where you can add new frames to any scene...
+> using the KJNodes LTX masking node where you pad length on end of input video
 
 ## Multi-Pass Workflows
 
@@ -558,8 +573,10 @@ Draken:
   the whole meta harness i built to do this: [GH:fblissjr/ComfyUI-AudioLoopHelper:.claude](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/.claude)
 - WhatDreamsCost's [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI) poweful node for audio and video loading and trimming (generated with help from Gemini),
   including the new `LTX Director` - I2V, T2V, FLFF, Prompt Relay, Custom Audio - [tutorial 1](https://www.youtube.com/watch?v=fZgtkRcu4_k), [tutorial 2](https://www.youtube.com/watch?v=vM60pJJqqEI)
+  based on Prompt Relay; note [PR#60](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI/pull/60/changes)
 - [GH:dorpxam/ComfyUI-LTX2-Microscope](https://github.com/dorpxam/ComfyUI-LTX2-Microscope) tool to view what exactly LTX 2.3 is doing during sampling
 - [GH:kijai/ComfyUI-NativeLooping_testing](https://github.com/kijai/ComfyUI-NativeLooping_testing) experimental nodes for latent looping including `TensorForLoopOpen`
+- `LTXRetakeDesigner` is in the making
 
 ## LoRa-s
 
@@ -618,10 +635,10 @@ Draken:
   [CA:2540961?2855640](https://civitai.com/models/2540961?modelVersionId=2855640) dark fantasy?
   [CA:2535622](https://civitai.red/models/2535622) home of VRGamedevgirl on CA? place to get her 
   [crisp enhancer](https://civitai.red/models/2535622/ltx-23-enhancers) LoRa and other LoRa-s including Fantasy_Realism, retro anime, post-apocalyptic, painterly, wild west
-- Sir_Axe
-  - Sir_Axe's [HF:siraxe/TTM_IC-lora_ltx2.3](https://huggingface.co/siraxe/TTM_IC-lora_ltx2.3) cartoony time to move for LTX 2.3;
+- transition LoRa-s
   - Sir_Axe's [HF:siraxe/MergeGreen_IC-lora_ltx2.3](https://huggingface.co/siraxe/MergeGreen_IC-lora_ltx2.3) merge one video with another; apparently some green frame is involved - as a separator?..;
     "takes couple of seed tries and description of what changes, but it's also not perfect but better than just inserting start/end frames imo"
+  - [HF:joyfox/LTX-2.3-Transition-LORA](https://huggingface.co/joyfox/LTX-2.3-Transition-LORA) suggested by RuneX
 - Oumoumad
   - Refocus LoRa: [HF:oumoumad/LTX-2.3-22b-IC-LoRA-ReFocus](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-ReFocus) - undoes shallow depth of field; only works as detailer if source video has been blurred first
   - [HF:oumoumad/LTX-2.3-22b-IC-LoRA-Uncompress](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Uncompress)
@@ -667,6 +684,7 @@ Draken:
 - animation LoRa-s
   - [CA:2634377/cyberpunk-edgerunners-style-lora-ltx-23?2957805 ](https://civitai.red/models/2634377/cyberpunk-edgerunners-style-lora-ltx-23?modelVersionId=2957805) by crinklypaper
     "I just put out an anime style lora for ltx, I trained it using my 90s style anime lora as a base. So it was 53K steps on the base-lora, then load from save state and 19.5k steps trained on top with a completely different style. its t2v"
+  - Sir_Axe's [HF:siraxe/TTM_IC-lora_ltx2.3](https://huggingface.co/siraxe/TTM_IC-lora_ltx2.3) cartoony time to move for LTX 2.3;
 
 
 ### Less Verified LoRa-s

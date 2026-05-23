@@ -6,6 +6,8 @@ The page needs a brush-up. Bugs referenced have been fixed or worked around. Sti
 
 Dont use `--fast` ComfyUI startup param - locks up VRAM
 
+comfy-aimdo-0.4.4 available.
+
 ## 2026.04.25
 
 djbfilmz re RTX 6000 Pro:

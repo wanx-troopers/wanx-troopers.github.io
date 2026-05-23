@@ -4,6 +4,7 @@
 
 [Drozbay](hidden-knowledge.md#drozbay) has shared the following workflow for both temporal and spatial inpainting with Wan video generation models using Clowshark sampling nodes
 [droz_clown_rewan_temporal_v1](workflows/wan/droz_clown_rewan_temporal_v1.json)
+[droz-clown-separate-prompts](screenshots/nodes/droz-clown-separate-prompts.webp)
 
 ## Main Section
 
