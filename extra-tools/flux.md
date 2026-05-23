@@ -7,6 +7,8 @@
 
 [GH:cosmicrealm/ComfyUI-Flux-FaceIR](https://github.com/cosmicrealm/ComfyUI-Flux-FaceIR) confusing tool for restoring faces on damaged photos.
 
+David Shows frame by frame cleanup wf using Klein: [david-show-klein-frame-by-frame-cleanup](workflows/imagens/david-show-klein-frame-by-frame-cleanup.png).
+
 ## 2026.04
 
 [CA:2318844/klein-9b-body-weight-slider](https://civitai.com/models/2318844/klein-9b-body-weight-slider) concept slider from thin to fat

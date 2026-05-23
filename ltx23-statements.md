@@ -22,6 +22,12 @@ coctailprawn1212:
 
 Node to help select LTX resolution: [GH:WepeNerd/ComfyUI-WepeNerd](https://github.com/WepeNerd/ComfyUI-WepeNerd)
 
+[Fred Bliss](https://x.com/fblissjr) on LTX 2.3:
+> ... instead of prompting alone, you can use audio to drive the scene.
+> As an example - try just narrating a scene and using that as the audio
+> and an init image and you'll get fun results.
+> Gemini Omni/veo can do it much better, of course, but the same concept.
+
 ## 2026.04.23
 
 > Q: are you guys getting like a dot/grain pattern?

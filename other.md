@@ -10,7 +10,8 @@
   "NVIDIA One-Way Noncommercial License"
 * [GH:zhuxing0/Relit-LiVE](https://github.com/zhuxing0/Relit-LiVE) Wan 2.1 T2V based video relighting
 * [GH:nv-tlabs/UniRelight](https://github.com/nv-tlabs/UniRelight)
-* [GH:Cynthiazxy123/SAMA-ComfyUI-official](https://github.com/Cynthiazxy123/SAMA-ComfyUI-official) interesting Wan 2.1-based tech for video editing - "replace dog with a cat"
+* [GH:Cynthiazxy123/SAMA-ComfyUI-official](https://github.com/Cynthiazxy123/SAMA-ComfyUI-official) interesting Wan 2.1-based tech for video editing - "replace dog with a cat"; also [GH:Cynthiazxy123/SAMA](https://github.com/Cynthiazxy123/SAMA)
+  "it's wan based but really resource heavy and dont' think it's in native comfy atm (don't use their comfy implemmentation as it pins all sorts of dependencies for no reason)"
 * HAMER (Hand Mesh Recovery) is a specialized AI model developed by researchers at UC Berkeley designed to reconstruct a full 3D mesh of a human hand from a single 2D image
 * [GH:Eyeline-Labs/Vista4D](https://github.com/Eyeline-Labs/Vista4D) Video Reshooting with 4D Point Clouds - from Netflix based on Wan 2.1
 * [GH:Hong-yu-Zhang/TS-Attn](https://github.com/Hong-yu-Zhang/TS-Attn) Temporal-wise Separable Attention for Multi-Event Video Generation

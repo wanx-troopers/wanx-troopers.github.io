@@ -570,7 +570,10 @@ Draken:
   [GH:fblissjr/ComfyUI-AudioLoopHelper](https://github.com/fblissjr/ComfyUI-AudioLoopHelper); sample [WF](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent.json);
   "testing / validating they do what they should be doing from a 'business rules' standpoint and a hard 'is this workflow wired correctly' standpoint:
   [GH:fblissjr/ComfyUI-AudioLoopHelper:tests](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/tests)
-  the whole meta harness i built to do this: [GH:fblissjr/ComfyUI-AudioLoopHelper:.claude](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/.claude)
+  the whole meta harness i built to do this: [GH:fblissjr/ComfyUI-AudioLoopHelper:.claude](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/.claude);
+  [Fredblis](https://fredbliss.com/)'s [audio-loop-music-video_latent](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent.json);
+  [audio_driven_single_shot](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio_driven_single_shot.json) experimental wf to make heart beat to musing; same but looping
+  [GH:fblissjr/ComfyUI-AudioLoopHelper:example_workflows/audio_reactive_loop.json](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio_reactive_loop.json)
 - WhatDreamsCost's [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI) poweful node for audio and video loading and trimming (generated with help from Gemini),
   including the new `LTX Director` - I2V, T2V, FLFF, Prompt Relay, Custom Audio - [tutorial 1](https://www.youtube.com/watch?v=fZgtkRcu4_k), [tutorial 2](https://www.youtube.com/watch?v=vM60pJJqqEI)
   based on Prompt Relay; note [PR#60](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI/pull/60/changes)
@@ -612,7 +615,6 @@ Draken:
   [ap-ltx23_masked_ref_inpaint_v1](workflows/ltx/ap-ltx23_masked_ref_inpaint_v1.json);
 - BFS LoRa "which does head swapping" [HF:Alissonerdx/BFS-Best-Face-Swap-Video](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap-Video)
 - "There's also a motion transfer LoRa that I trained, it works well for slow-motion videos but is bad for fast-motion videos"
-
 
 ### LoRa-s
 
@@ -687,6 +689,8 @@ Draken:
   - [CA:2634377/cyberpunk-edgerunners-style-lora-ltx-23?2957805 ](https://civitai.red/models/2634377/cyberpunk-edgerunners-style-lora-ltx-23?modelVersionId=2957805) by crinklypaper
     "I just put out an anime style lora for ltx, I trained it using my 90s style anime lora as a base. So it was 53K steps on the base-lora, then load from save state and 19.5k steps trained on top with a completely different style. its t2v"
   - Sir_Axe's [HF:siraxe/TTM_IC-lora_ltx2.3](https://huggingface.co/siraxe/TTM_IC-lora_ltx2.3) cartoony time to move for LTX 2.3;
+- RuneX recommended
+  - [HF:100percentrobot/LTX-2.3-Audio-Reactive-LORA](https://huggingface.co/100percentrobot/LTX-2.3-Audio-Reactive-LORA)
 
 
 ### Less Verified LoRa-s
@@ -713,7 +717,6 @@ Draken:
 - [GH:vrgamegirl19/comfyui-vrgamedevgirl:Workflows](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl/tree/main/Workflows) workflows from one of the masters;
   [YT:LwG-zxY684M](https://www.youtube.com/watch?v=LwG-zxY684M) a walkthrough of the famous music video workflow
 
-- [Fredblis](https://fredbliss.com/)'s [audio-loop-music-video_latent](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent.json)
 - N0NSense's "Boeing Cockpit" WF [LTX_2.3_IC_N0N](workflows/ltx/LTX_2.3_IC_N0N.json)
 
 ## Joke And Experimental LoRa-s

@@ -57,6 +57,12 @@ djbfilmz re RTX 6000 Pro:
 > [GH:fblissjr/SageAttention-ada](https://github.com/fblissjr/SageAttention-ada) fork: one-liner fix [for setup.py on RTX 40xx] +
 > an ltx-shape regression test + a standalone repro [reproducer] for the mask bug
 
+[GH:blissjr/SageAttention-ada:spike/nanobind-dlpack-boundary](https://github.com/fblissjr/SageAttention-ada/tree/spike/nanobind-dlpack-boundary)
+> trying out nanobind and dlpack per the comfy PR kijai shared ... 
+> this is an rtx 4090/sm89/ada sage fork that ive expanded beyond sage now ...
+> gave up on triton and went cuda path but triton is needed for certain use cases...
+> so thinking of just targeting their nightly build
+
 ## 2026.01.10
 
 As of now Torch 2.11.0 remains too new. Workarounds in Comfy/Wrapper code are not aware of it yet. oom on decode has been reported with 3x memory consumption.
