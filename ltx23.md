@@ -466,6 +466,11 @@ burgstall:
 [Ingi](https://x.com/ingi_erlingsson) on his experience training:
 [X:ingi_erlingsson?2057566331235627100](https://x.com/ingi_erlingsson/status/2057566331235627100)
 
+[Fredblis](https://fredbliss.com/): 
+
+> ltx trainer code... its got audio set to None for v2v but it does have the code for t2v...
+> but i dont see why architecturally you cant make it work for image+audio input and video with audio output
+
 ## Sound
 
 The role of a "solid mask" is not clear to the writer of this page but apparently it may be used before feeding Audio latent into sampler: [solidMask.webp](screenshots/ltx/solidMask.webp)
@@ -564,16 +569,28 @@ Draken:
   "All modalities, t2v, i2v, i+a2v, v2v"; tested up to 90 seconds;
   "for v2v lora application, outpainting for example, the limit is how many video frames you can load from your source ... 2 minutes"
   work is ongoing on enhacing native context window nodes too, to which this is similar
-- [Fredblis](https://fredbliss.com/) created his own audio looping node + lots of automation: "audio + image input + initial prompt + prompt schedule timestamps", looping workflow, automated prompt generation and timing;
-  [GH:fblissjr/ComfyUI-AudioLoopHelper:scripts](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/scripts)
-  "I don't have the patience to build workflows so i just write code to automate workflow building and workflow testing. this entire folder here is just workflow utils"
-  [GH:fblissjr/ComfyUI-AudioLoopHelper](https://github.com/fblissjr/ComfyUI-AudioLoopHelper); sample [WF](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent.json);
-  "testing / validating they do what they should be doing from a 'business rules' standpoint and a hard 'is this workflow wired correctly' standpoint:
-  [GH:fblissjr/ComfyUI-AudioLoopHelper:tests](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/tests)
-  the whole meta harness i built to do this: [GH:fblissjr/ComfyUI-AudioLoopHelper:.claude](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/.claude);
-  [Fredblis](https://fredbliss.com/)'s [audio-loop-music-video_latent](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent.json);
-  [audio_driven_single_shot](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio_driven_single_shot.json) experimental wf to make heart beat to musing; same but looping
-  [GH:fblissjr/ComfyUI-AudioLoopHelper:example_workflows/audio_reactive_loop.json](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio_reactive_loop.json)
+- [Fredblis](https://fredbliss.com/)
+  - created his own audio looping node + lots of automation: "audio + image input + initial prompt + prompt schedule timestamps",
+    looping workflow, automated prompt generation and timing:
+    - [GH:fblissjr/ComfyUI-AudioLoopHelper](https://github.com/fblissjr/ComfyUI-AudioLoopHelper)
+    - sample [WF](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent.json);
+    - [audio_driven_single_shot](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio_driven_single_shot.json) experimental wf to make heart beat to musing; same but looping
+    - [GH:fblissjr/ComfyUI-AudioLoopHelper:example_workflows/audio_reactive_loop.json](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio_reactive_loop.json)
+    - experiments with freezing audio or video selectively and generating the other:
+      [GH:fblissjr/ComfyUI-AudioLoopHelper:.../audio-loop-music-video_latent_av_extension.json](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio-loop-music-video_latent_av_extension.json)
+  - created an extensive suite of Claude skills and other tooling to work both on code and workflows
+    - general skills and my philosophy for working with these tools:
+      [GH:fblissjr/fb-claude-skills:VISION.md](https://github.com/fblissjr/fb-claude-skills/blob/main/VISION.md)
+    - harness for building everything above for these nodes/workflows:
+      [GH:fblissjr/ComfyUI-AudioLoopHelper:.claude](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/.claude)
+      (including a crude inbox/email system i set up for audio loop claude and sageattn claude to communicate
+      with each other using fresh contexts)
+    - then most of this is for automating and eval'ing comfyui workflows because i hate creating and maintaining them:
+      [GH:fblissjr/ComfyUI-AudioLoopHelper:scripts](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/scripts)
+    - "testing / validating they do what they should be doing from a 'business rules' standpoint and a hard
+      'is this workflow wired correctly' standpoint:
+      [GH:fblissjr/ComfyUI-AudioLoopHelper:tests](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/tests)
+
 - WhatDreamsCost's [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI) poweful node for audio and video loading and trimming (generated with help from Gemini),
   including the new `LTX Director` - I2V, T2V, FLFF, Prompt Relay, Custom Audio - [tutorial 1](https://www.youtube.com/watch?v=fZgtkRcu4_k), [tutorial 2](https://www.youtube.com/watch?v=vM60pJJqqEI)
   based on Prompt Relay; note [PR#60](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI/pull/60/changes)
