@@ -8,6 +8,10 @@ Bug fixed including improvements to how Sageattention is used - bringing results
 
 Guide strength can now be set above 1: "it's not exactly linear, so 2.0 isn't twice as strong, but it definitely has an affect.. could be useful for first to last frame etc."
 
+[Drozbay](hidden-knowledge.md#drozbay):
+> The decoder working without tiled efficiently is mostly a consequence of rattus' dynamic VRAM implementation ...
+> It is amazing, it started off shaky, and I  kept going back to regular offloading. but it kept getting better and now it's hard to imagine going back
+
 ## 2026.05.08
 
 Native VAELoader can now load LTX 2.3 audio VAE

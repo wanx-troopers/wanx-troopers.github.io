@@ -6,7 +6,9 @@ It might be advisable to set width and height as multiples of 32 (128 was sugges
 Frame count native to LTX 2.3 is `1 + 8 * N` since 1st frame is encoded separately and subsequent ones have
 one latent span 8 frames in time dimension.
 
-RuneX: "LTX was trained on 1536 1280 and 1024 as far as I remember. So using one of those values might give better results"; huddadad: "1536x832 is usually solid ... I boost to 1920 if i think it will help"
+RuneX: "LTX was trained on 1536 1280 and 1024 as far as I remember. So using one of those values might give better results"; huddadad: "1536x832 is usually solid ... I boost to 1920 if i think it will help".
+
+832 x 480, 241 frames works as well, possibly better than 960 x 540.
 
 See also:
 - [LTX 2.3 News](ltx23-news.md)
@@ -24,6 +26,9 @@ See also:
 > Q: abliterated lora?  
 > A: the point of the lora was that you can load normal model and use it for prompt encoding, and apply the lora only for prompt enhancer
 > on prompt enhancer it's almost mandatory considering how easily Gemma refuses even relatively safe prompts
+
+[Mark DK Berry](https://markdkberry.com):
+> abliterated text encoders always changed everything for me losing character consistency and stuff, I used the lora for it in the end when I needed it
 
 ## HDR LoRa
 
@@ -150,6 +155,7 @@ gated LoRa for re-dubbing vidoes - the intent was to keep the original voice; ba
   Garbus: "nvfp4 was more 'stable' image-wise, but less detailed and prone to prompt-following errors.
   But switching to the fp4_mixed text encoder was definitely a performance improvement for me, so you might want to try that"
   [garbus-fp4-text-encoder](screenshots/nodes/garbus-fp4-text-encoder.webp)
+  ... [nvfp4 on 30xx cards] "You won't get the fp4 acceleration that 40 and 50 series cards give, but the models do run"
 
 ## Nodes Of Interest
 
@@ -573,7 +579,7 @@ Draken:
 
 - [Mark DK Berry](https://markdkberry.com) on basic VRAM optimizations and NAG to remove subtitles: [nag-other-basic-setup](workflows/ltx/mdkb-nag-other-basic-setup.webp)
 - Hicho's [ltx-2.3-simple-v2v](workflows/ltx/hicho-ltx-2.3-simple-v2v.json) prob. the simplest WF involving a depth map
-- Ablejone's aka [Drozbay](hidden-knowledge.md#drozbay)'s LTX 2.3 ClowShark workflow: [droz_LTX-2_SharkSampling_v7.1](workflows/ltx/droz_LTX-2_SharkSampling_v7.1.png)\
+- Ablejone's aka [Drozbay](hidden-knowledge.md#drozbay)'s LTX 2.3 ClowShark workflow: [droz_LTX-2_SharkSampling_v7.1](workflows/ltx/droz_LTX-2_SharkSampling_v7.1.png)
 - [Ckinpdx](https://github.com/ckinpdx)'s [LoopingSamper WF](workflows/ltx/ckinpdx-looping-sampler.png)
 
 ## Node Packs
@@ -705,6 +711,7 @@ Draken:
   - Sir_Axe's [HF:siraxe/MergeGreen_IC-lora_ltx2.3](https://huggingface.co/siraxe/MergeGreen_IC-lora_ltx2.3) merge one video with another; apparently some green frame is involved - as a separator?..;
     "takes couple of seed tries and description of what changes, but it's also not perfect but better than just inserting start/end frames imo"
   - [HF:joyfox/LTX-2.3-Transition-LORA](https://huggingface.co/joyfox/LTX-2.3-Transition-LORA) suggested by RuneX
+  - LTX-2.3-22b_RL_Lora_Merge?? used by avataraim
 - Oumoumad
   - Refocus LoRa: [HF:oumoumad/LTX-2.3-22b-IC-LoRA-ReFocus](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-ReFocus) - undoes shallow depth of field; only works as detailer if source video has been blurred first
   - [HF:oumoumad/LTX-2.3-22b-IC-LoRA-Uncompress](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Uncompress)
@@ -736,12 +743,14 @@ Draken:
   [CA:2332398?2623644](https://civitai.com/models/2332398?modelVersionId=2623644); `[deforumorph]` trigger; "hypnotic, ever-changing animations reminiscent of classic Deforum journeys but infused with Flux-level detail and coherence";
   new version is being worked on
 - [HF:Nebsh](https://huggingface.co/Nebsh) shares a collection of interesting LoRa-s including "cutout satire", "handheld run", ...
-- OmniNFT for LTX 2.3 converted for Comfy: [HF:Kijai/LTX2.3_comfy:loras/LTX-2.3-OmniNFT-RL-Lora_bf16](https://huggingface.co/Kijai/LTX2.3_comfy/blob/main/loras/LTX-2.3-OmniNFT-RL-Lora_bf16.safetensors)
-- OmniNFT for LTX 2 (still works with 2.3) converstion 1 [HF:VasiliyWeb/OmniNFT_ComfyUI](https://huggingface.co/VasiliyWeb/OmniNFT_ComfyUI);
-  conversion 2: [HF:silveroxides/LTX-2.3-Quants:loras/OmniNFT-comfyui](https://huggingface.co/silveroxides/LTX-2.3-Quants/blob/main/loras/OmniNFT-comfyui.safetensors);
-  originals: [GH:zghhui.github.io/OmniNFT](https://zghhui.github.io/OmniNFT/) [HF:zghhui/OmniNFT](https://huggingface.co/zghhui/OmniNFT);
-  built for LTX 2 t2v but seems to help with LTX 2.3 as well even in i2v case;
-  DavidShow: "T2V with LTX has a very strong colour hue by default, and if nothing else, this lora improves that greatly."
+- OmniNFT
+  - OmniNFT for LTX 2.3 [HF:Kijai/LTX2.3_comfy:loras/README.md](https://huggingface.co/Kijai/LTX2.3_comfy/blob/main/loras/README.md), use strength 2,
+    [HF:Kijai/LTX2.3_comfy:loras/LTX-2.3-OmniNFT-RL-Lora_bf16](https://huggingface.co/Kijai/LTX2.3_comfy/blob/main/loras/LTX-2.3-OmniNFT-RL-Lora_bf16.safetensors)
+  - OmniNFT for LTX 2.0 (still works with 2.3) converstion 1 [HF:VasiliyWeb/OmniNFT_ComfyUI](https://huggingface.co/VasiliyWeb/OmniNFT_ComfyUI);
+    conversion 2: [HF:silveroxides/LTX-2.3-Quants:loras/OmniNFT-comfyui](https://huggingface.co/silveroxides/LTX-2.3-Quants/blob/main/loras/OmniNFT-comfyui.safetensors);
+    originals: [GH:zghhui.github.io/OmniNFT](https://zghhui.github.io/OmniNFT/) [HF:zghhui/OmniNFT](https://huggingface.co/zghhui/OmniNFT);
+    built for LTX 2 t2v but seems to help with LTX 2.3 as well even in i2v case;
+    DavidShow: "T2V with LTX has a very strong colour hue by default, and if nothing else, this lora improves that greatly."
 - [HF:WarmBloodAban/Singularity_LTX-2.3_OmniCine_Preview0.1](https://huggingface.co/WarmBloodAban/Singularity_LTX-2.3_OmniCine_Preview0.1) the singularity LoRa
 - N0NSense's combo: OmniNFS + Singularity + VBVR (`VBVR-official-comfyui.safetensors` from `LiconStudio` on HF) - links for all LoRa-s see above
 - [HF:yuvraj108c/LTX-2.3-22b-IC-LoRA-Any-Trajectory-Instruction](https://huggingface.co/yuvraj108c/LTX-2.3-22b-IC-LoRA-Any-Trajectory-Instruction) porting Any Trajectory Instruction (ATI) to LTX 2.3
@@ -780,7 +789,8 @@ Draken:
   [ckinpdx-LTX23_TorI2V_Humo_API](workflows/ltx/ckinpdx-LTX23_TorI2V_Humo_API.json) using HuMo 1.7B as the last cleanup step is probably up there as well, or soon will be;
   some of them using [GH:ckinpdx/ComfyUI-LTXAVTools](https://github.com/ckinpdx/ComfyUI-LTXAVTools) nodes
 - [GH:vrgamegirl19/comfyui-vrgamedevgirl:Workflows](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl/tree/main/Workflows) workflows from one of the masters;
-  [YT:LwG-zxY684M](https://www.youtube.com/watch?v=LwG-zxY684M) a walkthrough of the famous music video workflow
+  - [YT:LwG-zxY684M](https://www.youtube.com/watch?v=LwG-zxY684M) a walkthrough of the famous music video workflow
+  - [GH:vrgamegirl19/comfyui-vrgamedevgirl:dev/music-video-builder-ui-test-v3](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl/tree/dev/music-video-builder-ui-test-v3)
 
 - N0NSense's "Boeing Cockpit" WF [LTX_2.3_IC_N0N](workflows/ltx/LTX_2.3_IC_N0N.json)
 

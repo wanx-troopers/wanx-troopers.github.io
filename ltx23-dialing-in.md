@@ -51,6 +51,9 @@ SantaHunter:
 > 1st pass: bf16 dev checkpoint + 0.3 strength distilled lora 20 steps 1.5 cfg on 1st pass, euler_a;
 > ... runexx wf that is usually 8 steps for 1st pass, 2nd pass remains unchanged
 
+[Mark DK Berry](https://markdkberry.com):
+> I spent two days testing all the ones and ended up on euler_ancstral with lcm as fall back but thats on ltx for v2v mostly
+
 ## 2026.04.27
 
 > 1.1 distilled in mxfp8 which seems good
@@ -121,6 +124,9 @@ PhoenixRisen:
 [Mark](https://markdkberry.com):
 > I switched to euler_ancestral recently was using lcm but find it best in the wf I use.
 
+huddadudd:
+> euler ancestral? that adds its own random noise because its a stochastic sampler [so keep seed fixed no longer keeps generations repeatable]
+
 ## cfg_pp Samplers
 
 [Drozbay](hidden-knowledge.md#drozbay):
@@ -157,7 +163,10 @@ PhoenixRisen:
 huddadudd:
 > give etdrk2_2s a spin in the exponential set;
 > I only use it for the first 4 steps of the initial chain sample ..
-> I do 12 steps first stage, 4/8 [huddadudd-clownsampling](screenshots/huddadudd-clownsampling.webp)
+> I do 12 steps first stage, 4/8 [huddadudd-clownsampling](screenshots/nodes/huddadudd-chain-sampling.webp)
 > have these extra options [huddadudd-chain-sampling-options](screenshots/nodes/huddadudd-chain-sampling-options.webp)
+> /and these sigmas: [huddadudd-chain-sampling-sigmas](screenshots/nodes/huddadudd-chain-sampling-sigmas.webp)
 > sampler one is using a sharkoptions guider and the 2nd chained sampler has a rebound cycle, but not sure how impactful the later is
 > ... 2 stage ... last stage is 4 steps just simple sampling
+
+When asked for WF huddadudd pointed to [Drozbay](hidden-knowledge.md#drozbay)'s LTX 2.3 ClowShark workflow: [droz_LTX-2_SharkSampling_v7.1](workflows/ltx/droz_LTX-2_SharkSampling_v7.1.png)

@@ -55,6 +55,14 @@ N0NSens:
 > left anything to do because the woman on the right has two dialogue moments, so woman on the left
 > is just mouth cloning the blue dress woman's prompt segment
 
+> ... it was the loras after all ... I disabled them ... got the correct results ...
+> VBVR, OmniFT and dual character loras disabled was beneficial ...
+> having them in was amplifying occurances of that mouth cloning issue.
+> ... wonder if its because they probably havent been trained on more than 3 people
+
+LDWorks David playing with `ROPEAligned`, `adain`: [LDWorksDavid-ROPEAlighed-adain](screenshots/nodes/LDWorksDavid-ROPEAlighed-adain.webp)
+"for now Im more involved into the structure rather than lighting, I know I can ref a image as lighting latent and pushing specific blocks (0,7,14) for global/exposure lighting, problem is when we are not talking about T2V"
+
 ## 2026.04.23
 
 > Q: are you guys getting like a dot/grain pattern?
