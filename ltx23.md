@@ -194,6 +194,9 @@ IC LoRa generally stands for "in-context LoRa" a _type_ of LoRa. In colloquial s
 [Union Control](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Union-Control), Motion Track or Depth/Canny/Pose.
 Additional Python code to use them: [GH:Lightricks/ComfyUI-LTXVideo](https://github.com/Lightricks/ComfyUI-LTXVideo/).
 
+[Alisson Pereira](https://huggingface.co/Alissonerdx):
+> You can use ic lora union with pose map, but it will only use the first/last frame to guide the content
+
 One way to use IC LoRa along with a reference image: ![ic-lora-guide-plus-latent-guide](screenshots/ltx/ic-lora-guide-plus-latent-guide.webp)
 
 [Drozbay](hidden-knowledge.md#drozbay):
@@ -575,6 +578,8 @@ Draken:
 > id lora is just for audio really;
 > it helps in the sense that the lora itself might do better at perversing the ID in i2v mode though
 
+[HF:Lightricks/LTX-2.3-22b-IC-LoRA-LipDub](Additionally [HF:https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-LipDub) is related IC LoRa.
+
 ## Basics
 
 - [Mark DK Berry](https://markdkberry.com) on basic VRAM optimizations and NAG to remove subtitles: [nag-other-basic-setup](workflows/ltx/mdkb-nag-other-basic-setup.webp)
@@ -782,7 +787,8 @@ Draken:
 
 ## Workflows and Workflow Collections
 
-- RuneXX has collected a number of workflows on HuggingFace, here's one: [HF:RuneXX/LTX-2.3-Workflows:Long-Video-Experimental](https://huggingface.co/RuneXX/LTX-2.3-Workflows/tree/main/Long-Video-Experimental)
+- RuneXX has collected a number of workflows on HuggingFace [HF:RuneXX/LTX-2.3-Workflows](https://huggingface.co/RuneXX/LTX-2.3-Workflows/tree/main)
+  - here's one: [HF:RuneXX/LTX-2.3-Workflows:Long-Video-Experimental](https://huggingface.co/RuneXX/LTX-2.3-Workflows/tree/main/Long-Video-Experimental)
 - [Mark DK Berry](https://markdkberry.com)'s [workflows](https://markdkberry.com/workflows/research-2026/#video-pipeline-workflows)
 - [Ckinpdx](https://github.com/ckinpdx) is sharing a collection of workflows absorbing latest and greatest from various sources: [GH:ckinpdx/ckinpdx_comfyui_workflows](https://github.com/ckinpdx/ckinpdx_comfyui_workflows)
   including a latent looping workflow;
@@ -797,4 +803,5 @@ Draken:
 ## Joke And Experimental LoRa-s
 
 - [HF:TheBurgstall/ltx-2.3-googlyeyes-lora](https://huggingface.co/TheBurgstall/ltx-2.3-googlyeyes-lora)
+- [HF:kabachuha/ltx23-pop](https://huggingface.co/kabachuha/ltx23-pop) anime-style pop LoRa
 

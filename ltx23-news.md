@@ -12,6 +12,10 @@ Guide strength can now be set above 1: "it's not exactly linear, so 2.0 isn't tw
 > The decoder working without tiled efficiently is mostly a consequence of rattus' dynamic VRAM implementation ...
 > It is amazing, it started off shaky, and I  kept going back to regular offloading. but it kept getting better and now it's hard to imagine going back
 
+LTX 2.3 Inference code fix coming: [PR#14097/issuecomment-4552771980](https://github.com/Comfy-Org/ComfyUI/pull/14097#issuecomment-4552771980)
+[Drozbay](hidden-knowledge.md#drozbay): "that only really matters when using a reference audio tokens like for ID-Lora or lipdub, and even there the effect isn't gigantic"
+
+
 ## 2026.05.08
 
 Native VAELoader can now load LTX 2.3 audio VAE
