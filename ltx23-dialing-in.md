@@ -46,6 +46,11 @@ N0NSense's idea on quicker refining with LTX [N0NSense-LTX-refiner](workflows/lt
 > It feels better than a regular upscaler,
 > but worse than the original 50 fps. The benefit is that it's MUCH faster.
 
+SantaHunter:
+> i'm getting interesting results (in a good way) with this, but as someone who is completely clueless when it comes to sigmas ...
+> 1st pass: bf16 dev checkpoint + 0.3 strength distilled lora 20 steps 1.5 cfg on 1st pass, euler_a;
+> ... runexx wf that is usually 8 steps for 1st pass, 2nd pass remains unchanged
+
 ## 2026.04.27
 
 > 1.1 distilled in mxfp8 which seems good
@@ -131,3 +136,28 @@ PhoenixRisen:
 > NAG is definitely not going to be as much extra compute as CFG since it only operates on cross-attention;
 > CFG is literally just twice as slow, it runs two fully separate calls at the same step.
 > Also, I dunno if NAG even runs for the negative pass
+
+## Clownshark Sampling
+
+[Drozbay](hidden-knowledge.md#drozbay):
+
+> If set up identically the clown samplers should be exactly the same speed as the native samplers.
+> But there are a few very non-obvious gotchas that can slow things down especially when you are only running several steps.
+
+> The extra options that I usually recommend actually just take out a bunch of additional steps that
+> Clownshark Batwing added in to try to improve the accuracy of the generations on top of everything else,
+> it's literally stuff like "use a heavy sampler for the first 2 steps" and "add one extra step at the very
+> end to denoise that tiny little extra bit". These things are negligible for image models where you are
+> doing 30 steps, but when running a video model with 8 steps they can make it very slow for very little benefit.
+
+> if you set the clownsampler up to run euler/ddim with nothing else added in and typical eta levels, it absolutely should just be the same as running native euler sampling
+
+> res_2s is going to be double the time because it literally runs two steps for every one step, res_3s runs 3 steps for every 1 step so it's triple the time.
+
+huddadudd:
+> give etdrk2_2s a spin in the exponential set;
+> I only use it for the first 4 steps of the initial chain sample ..
+> I do 12 steps first stage, 4/8 [huddadudd-clownsampling](screenshots/huddadudd-clownsampling.webp)
+> have these extra options [huddadudd-chain-sampling-options](screenshots/nodes/huddadudd-chain-sampling-options.webp)
+> sampler one is using a sharkoptions guider and the 2nd chained sampler has a rebound cycle, but not sure how impactful the later is
+> ... 2 stage ... last stage is 4 steps just simple sampling

@@ -28,6 +28,33 @@ Node to help select LTX resolution: [GH:WepeNerd/ComfyUI-WepeNerd](https://githu
 > and an init image and you'll get fun results.
 > Gemini Omni/veo can do it much better, of course, but the same concept.
 
+[GH:TenStrip/10S-Comfy-nodes](https://github.com/TenStrip/10S-Comfy-nodes) some vibe-coded nodes including tiled sampler.
+Claims to be solving face consistency problem, YT ad: [YT:Ikh5EZu8LNQ](https://www.youtube.com/watch?v=Ikh5EZu8LNQ)
+
+> [Mark DK Berry](https://markdkberry.com): how are you stopping everyone else from mouth moving?  
+> RuneX: often plenty to just be very specific in the prompt. Like "person number two (woman in white top), is talking and she says......"  
+> might work with mask ... Sam3 to mask the person ... LTXV Set Video Latent Noise Masks  
+> [Fredblis](https://fredbliss.com/): By freezing the audio mostly and using keyframes.
+
+N0NSens:
+> Static camera shows A black woman in a leopard print dress, a man in jeans, a woman in a blue dress,
+> and a woman in black pants and a leather vest (left) are chatting near an elevator in a hotel lobby.
+> All characters are standing in their seats and remain in frame.
+> The black woman in the leopard print dress says seriously, "Okay, let's count. I'm first,"
+> and looks at the man in jeans. | The man in jeans cheerfully says, "Okay, I'm second,"
+> and glances at the woman in the blue dress. | The woman in the blue dress says calmly,
+> "Well, then I'll be third," and thoughtfully examines her manicure. |
+> The woman in black pants and a leather vest (on the left) says disappointedly,
+> "Well, of course! And I'm naturally last..."
+> She frustratedly puts her hand to her forehead and shakes her head in disapproval.
+
+> ... well.. it was clownshark, maybe that's the case
+
+> [Mark DK Berry](https://markdkberry.com): okay so new discovery with my 4 person dialogue situation,
+> it isnt the prompt or the sampler causing the issue, it is the fact I am not giving the woman on the
+> left anything to do because the woman on the right has two dialogue moments, so woman on the left
+> is just mouth cloning the blue dress woman's prompt segment
+
 ## 2026.04.23
 
 > Q: are you guys getting like a dot/grain pattern?

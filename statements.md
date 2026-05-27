@@ -14,6 +14,9 @@ How to train a character LoRa for Wan 2.1: [YT:oJdT5dzrNEY&t=384s](https://www.y
 ingi // SYSTMS on using both Wan Animate and Wan VACE to replace a character in video:
 >  I did it in two separate generations. Wan Animate to put the character in the scene and then Vace to improve the likeness/upscale with a reference frame
 
+[Mark DK Berry](https://markdkberry.com) on making keyframes for videos:
+> Qwen for camera angles, Klein for people swaps, Krita and composting for improving the quality (with Klein pushing faces back in)
+
 ## 2026.04
 
 Huddadudd on convincing closed source models do more:

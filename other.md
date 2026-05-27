@@ -2,6 +2,12 @@
 
 ## Promising For Comfy
 
+* Ada: LTX team should also look into [QAPOLLO](https://zhuhanqing.github.io/APOLLO/). It lets you pretrain models with MUCH less vram with very high accuracy. I'm using it to full finetune LTX on a 24GB gpu; Sink_GSD is another
+  with [GH:AkaneTendo25/musubi-tuner/tree/ltx-2-dev](https://github.com/AkaneTendo25/musubi-tuner/tree/ltx-2-dev)
+  "A lora gets messy really fast basicly. You can do it its just not gonna be nearly as good
+  Also of course a finetune covers the entire model." "My settings: [ada-finetune-misubi-tuner](screenshots/ada-finetune-misubi-tuner.png)
+* [francis-rings.github.io/Baton](https://francis-rings.github.io/Baton/) Baton: Explicit Semantic Blueprints for Joint Video-Audio Generation; yi: "They make LTX 2.0 look almost like Seedance 2.0" with ~25% more compute; Paper from the Hunyuan team
+* [research.nvidia.com/labs/sil/projects/pid/](https://research.nvidia.com/labs/sil/projects/pid/) PiD: Fast and High-Resolution Latent Decoding with Pixel Diffusion
 * [GH:benjiaiplayground/HY-OmniWeaving-FP8](https://huggingface.co/benjiaiplayground/HY-OmniWeaving-FP8) omniwaving "not even close to wan 2.2"
 * [GH:WASasquatch/RES4SHO](https://github.com/WASasquatch/RES4SHO) more mathematically advanced samplers
 * [GH:mvp-ai-lab/RAVEN](https://github.com/mvp-ai-lab/RAVEN) Real-time Autoregressive Video Extrapolation - ltx version probably coming

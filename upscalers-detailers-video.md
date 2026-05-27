@@ -14,6 +14,8 @@ Detailier from LTX can possibly be used on videos not produced by LTX
 Can also do images, has been used on z-image-turbo produced images.
 ...
 
+Native ComfyUI support being added: [PR#14110](https://github.com/Comfy-Org/ComfyUI/pull/14110)
+
 ## FL13
 
 - [FL13-WAN_Ultimate_I2V_Upscaler.20251123](workflows/FL13-WAN_Ultimate_I2V_Upscaler.20251123.json)

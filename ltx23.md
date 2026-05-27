@@ -6,6 +6,8 @@ It might be advisable to set width and height as multiples of 32 (128 was sugges
 Frame count native to LTX 2.3 is `1 + 8 * N` since 1st frame is encoded separately and subsequent ones have
 one latent span 8 frames in time dimension.
 
+RuneX: "LTX was trained on 1536 1280 and 1024 as far as I remember. So using one of those values might give better results"; huddadad: "1536x832 is usually solid ... I boost to 1920 if i think it will help"
+
 See also:
 - [LTX 2.3 News](ltx23-news.md)
 - [LTX 2.3 Hints](ltx23-hints.md)
@@ -143,6 +145,11 @@ gated LoRa for re-dubbing vidoes - the intent was to keep the original voice; ba
 - [GH:Hippotes/LTX-2.3-various-formats](https://huggingface.co/Hippotes/LTX-2.3-various-formats/tree/main) including nvfp4;
   "I strongly recommended the 'mixed' ones, it's barely slower and doesn't hit the quality as hard as the whole transformers conversion"
 - `LTX23_audio_vae_bf16.safetensors`
+- Garbus: "I have used the int8 in the past, but it was a bit finicky and stopped loading after a certain update. I'm mostly on the transformer_only_fp8_scaled now, sometimes switching to nvfp4"  
+  [Mark DK Berry](https://markdkberry.com): "you getting decent results out of the nvfp4?"  
+  Garbus: "nvfp4 was more 'stable' image-wise, but less detailed and prone to prompt-following errors.
+  But switching to the fp4_mixed text encoder was definitely a performance improvement for me, so you might want to try that"
+  [garbus-fp4-text-encoder](screenshots/nodes/garbus-fp4-text-encoder.webp)
 
 ## Nodes Of Interest
 
@@ -221,6 +228,16 @@ Re RuneX's workflows
 > (one uses LTX Guide node, other LTX ImgInPlace.. same goal, just a little different output) 
 > If you mean the First (middle) Last frame workflows..
 
+[Mark DK Berry](https://markdkberry.com) finds that `LTXVImgToVideoInpalceKJ` nodes are good for 1st and last frames not middle frames when doing upscaling.
+"for middle frames where I would go to add guide nodes".
+"I use ref Iimage any size but correct aspect ratio as we discussed and put them straight into those nodes, no compression, no size changing. I believe his [KJ's] nodes do all that is needed"
+
+RuneX:
+> stopped using  ImageInPlace so much, and rather use the guider node ...
+> for first last frame it [ImageInPlace] can be ok.
+> But its a bit "brutal".. color shift, and what not (but 0.7 helps).
+> Guider nodes are much more forgiving
+
 ### ImgToVideoInplace
 
 Alternative to using guides. Kijai's version also allows to specify which frame to apply to: ![LTXVImgToVideoInplaceKJ](screenshots/ltx/LTXVImgToVideoInplaceKJ.webp)
@@ -287,6 +304,7 @@ See also: [Guides](ltx23.md#guides) section for [YT:nekodificador](https://youtu
   additional details: [pcvideomask:PC Video Mask Smooth](screenshots/nodes/pcvideomask-pc-video-mask-smooth.webp) from [GH:pavelchezcin/pcvideomask](https://github.com/pavelchezcin/pcvideomask)
   + sampler=linear/euler + scheduler=exponential were reported to help with detailing part of the video - mouth in this case;
   audio then guided lip motion
+- ucren shared how he is re-combining inpainted video with original video to avoid quality degradation via vae: [ucren-recombining](workflows/ucren-recombining.webp)
 
 ## Extensions
 
@@ -299,6 +317,11 @@ Note that Sir_Axe's [HF:siraxe/MergeGreen_IC-lora_ltx2.3](https://huggingface.co
 RuneX: [RuneXX/LTX-2.3-Workflows](https://huggingface.co/RuneXX/LTX-2.3-Workflows/tree/main/Video-2-Video/Extend-Any-Video)
 > Basically using LTX "Re-Take" feature... where you can add new frames to any scene...
 > using the KJNodes LTX masking node where you pad length on end of input video
+
+Garbus on the above wf:
+> In terms of LTX, you're going to get an audio glitch at the 20 second mark if you go over that,
+> and could be degrading much sooner depending on your resolution. You're better off extending in segments, which is essentially seamless.
+> The wf lets you load your existing video. It then uses 3-5 seconds of that as reference to transition into the extension video, and stitches them both together when it's done.
 
 ## Multi-Pass Workflows
 
@@ -471,6 +494,9 @@ burgstall:
 > ltx trainer code... its got audio set to None for v2v but it does have the code for t2v...
 > but i dont see why architecturally you cant make it work for image+audio input and video with audio output
 
+> David Show: How many pairs are there in the anime2real dataset?  
+> Alisson Pereira: minimum 200
+
 ## Sound
 
 The role of a "solid mask" is not clear to the writer of this page but apparently it may be used before feeding Audio latent into sampler: [solidMask.webp](screenshots/ltx/solidMask.webp)
@@ -578,6 +604,24 @@ Draken:
     - [GH:fblissjr/ComfyUI-AudioLoopHelper:example_workflows/audio_reactive_loop.json](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio_reactive_loop.json)
     - experiments with freezing audio or video selectively and generating the other:
       [GH:fblissjr/ComfyUI-AudioLoopHelper:.../audio-loop-music-video_latent_av_extension.json](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio-loop-music-video_latent_av_extension.json)
+    - experimenting with freezing (keeping) either audio or video
+      - [GH:fblissjr/ComfyUI-AudioLoopHelper:example_workflows/audio-loop-music-video_latent_av_inversion](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent_av_inversion.json)
+      - keyframe auto extract workflow here: [fblissjr/ComfyUI-AudioLoopHelper:example_workflows/experimental/audio-loop-music-video_latent_keyframe_autoextract](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio-loop-music-video_latent_keyframe_autoextract.json)
+      - [dialogue_replacement_guide.md](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/docs/guides/dialogue_replacement_guide.md)
+        heres the claude written docs written from all my context and code over the last few days working on this
+      - [dialogue_replacement_guide](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/docs/guides/dialogue_replacement_guide.md)
+      - old
+        - [GH:fblissjr/ComfyUI-AudioLoopHelper:experimental/audio-loop-music-video_latent_av_inversion](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio-loop-music-video_latent_av_inversion.json) /
+        - extension (frozen video, 2s audio): [GH:fblissjr/ComfyUI-AudioLoopHelper:example_workflows/experimental/audio-loop-music-video_latent_av_extension](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio-loop-music-video_latent_av_extension.json) (untested)
+        - keyframe (frozen audio, keyframe images): [GH:fblissjr/ComfyUI-AudioLoopHelper:example_workflows/audio-loop-music-video_latent_keyframe](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent_keyframe.json )
+        - docs / generic test cases:
+          - inversion (generate the audio from 2s of frozen audio + the full video w/o audio): [av_inversion_test_examples.md](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/working_docs/av_inversion_test_examples.md)
+          - keyframe: [keyframe_iter_anchor_design](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/working_docs/keyframe_iter_anchor_design.md)
+          - audioreactive: [audio_reactive_loop_design](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/working_docs/audio_reactive_loop_design.md)
+          - uses nodes in the repo + my sm89/rtx 4090 sage fork but that can be replaced with kjnodes sage attn or bypassed [GH:fblissjr/SageAttention-ada](https://github.com/fblissjr/SageAttention-ada)
+          - "step 1. 20 sec of the real video + 2s of frozen first two seconds of real video's audio... generate the audio with ltx and overlay on frozen video clip.
+            step 2: pass the audio generated from step 1 as frozen audio, using 3 keyframes as init + "two men talking" (just randomly picked 3 from the 20s video above here),
+            and generate the new video with audio from step 1."
   - created an extensive suite of Claude skills and other tooling to work both on code and workflows
     - general skills and my philosophy for working with these tools:
       [GH:fblissjr/fb-claude-skills:VISION.md](https://github.com/fblissjr/fb-claude-skills/blob/main/VISION.md)
@@ -624,6 +668,7 @@ Draken:
   is reportedly useable for fixing defects, e.g. running anime2real on non-anime inputs; doesn't fix motion issues however (wan polishing does fix them);
   also [CA:2527511/anime2half-real](https://civitai.com/models/2527511/anime2half-real)
   RuneX's wf: [HF:RuneXX/LTX-2.3-Workflows:Video-2-Video/LTX-2.3_-_V2V_Video-Edit_remove_add_replace_restyle_EditAnything-Lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/blob/main/Video-2-Video/LTX-2.3_-_V2V_Video-Edit_remove_add_replace_restyle_EditAnything-Lora.json)
+- Alisson Pereira's `real2anime` [HF:Alissonerdx/LTX-LoRAs:ltx23_real2anime_rank64_v1_5000](https://huggingface.co/Alissonerdx/LTX-LoRAs/blob/main/ltx23_real2anime_rank64_v1_5000.safetensors)
 - Alisson Pereira's first experimental version of MR2V (Masked Reference-to-Video): [HF:Alissonerdx/LTX-LoRAs](https://huggingface.co/Alissonerdx/LTX-LoRAs)
   "It's a reference-based inpainting LoRA ... I trained several variants, and this rank 32 one was the one I liked the most"; use `ltx23_inpaint_masked_r2v_rank32_v1_3000steps.safetensors`;
   "If you want speed, take the first frame from the generated control video, drop it into ChatGPT, and say: 'Describe this video with the object in the green area placed where the magenta mask is.' Then you add more details to it."
@@ -706,6 +751,8 @@ Draken:
   - [CA:2634377/cyberpunk-edgerunners-style-lora-ltx-23?2957805 ](https://civitai.red/models/2634377/cyberpunk-edgerunners-style-lora-ltx-23?modelVersionId=2957805) by crinklypaper
     "I just put out an anime style lora for ltx, I trained it using my 90s style anime lora as a base. So it was 53K steps on the base-lora, then load from save state and 19.5k steps trained on top with a completely different style. its t2v"
   - Sir_Axe's [HF:siraxe/TTM_IC-lora_ltx2.3](https://huggingface.co/siraxe/TTM_IC-lora_ltx2.3) cartoony time to move for LTX 2.3;
+  - Crinklypaper's [CA:2650155/environmental-anime-style-mix-makoto-shinkai-ltx-23?2975759](https://civitai.red/models/2650155/environmental-anime-style-mix-makoto-shinkai-ltx-23?modelVersionId=2975759)
+    "focuses on environmental shots" "just t2v"
 - RuneX recommended
   - [HF:100percentrobot/LTX-2.3-Audio-Reactive-LORA](https://huggingface.co/100percentrobot/LTX-2.3-Audio-Reactive-LORA)
   - RealisDance - similar to wan animate? charcter replacment?..

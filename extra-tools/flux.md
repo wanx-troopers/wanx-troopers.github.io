@@ -7,7 +7,18 @@
 
 [GH:cosmicrealm/ComfyUI-Flux-FaceIR](https://github.com/cosmicrealm/ComfyUI-Flux-FaceIR) confusing tool for restoring faces on damaged photos.
 
-David Shows frame by frame cleanup wf using Klein: [david-show-klein-frame-by-frame-cleanup](workflows/imagens/david-show-klein-frame-by-frame-cleanup.png).
+David Shows frame by frame cleanup wf using Klein: [david-show-klein-frame-by-frame-cleanup](../workflows/imagens/david-show-klein-frame-by-frame-cleanup.png),
+[david-show-klein-frame-by-frame-cleanup-2](../workflows/imagens/david-show-klein-frame-by-frame-cleanup-2.png).
+
+[GH:supermansundies/comfyui-klein-edit-composite](https://github.com/supermansundies/comfyui-klein-edit-composite)
+Klein edit composite node to mitigate color shift. Scf: "Sounds like you can do the same with masked inpainting in lanpaint"
+
+[Mark DK Berry](https://markdkberry.com) on Kein:
+> took me months to realise it doesnt need speed upo loras. Klein changed my life. but license is meh.
+
+> 4b - not good, 9b - good
+
+if Klein is used for editing not creating images it seems the licensing becomes more of a grey area ... 9b is non-commerical only
 
 ## 2026.04
 
