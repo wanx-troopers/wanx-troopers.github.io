@@ -20,6 +20,14 @@ Klein edit composite node to mitigate color shift. Scf: "Sounds like you can do 
 
 if Klein is used for editing not creating images it seems the licensing becomes more of a grey area ... 9b is non-commerical only
 
+Klein can be used for editing
+
+[HF:wikeeyang/Flux2-Klein-9B-True-V2](https://huggingface.co/wikeeyang/Flux2-Klein-9B-True-V2) a Klein finetune?
+
+[GH:Lakonik/ComfyUI-piFlow](https://github.com/Lakonik/ComfyUI-piFlow) nodes for running AsymFLUX.2, a direct to pixels (PiD) flavor of Flux.2 dev?
+
+Character trainer for flux: [R:using_depth_maps_and_weight_noising_to_get_better](https://www.reddit.com/r/StableDiffusion/comments/1tplsmr/using_depth_maps_and_weight_noising_to_get_better/)
+
 ## 2026.04
 
 [CA:2318844/klein-9b-body-weight-slider](https://civitai.com/models/2318844/klein-9b-body-weight-slider) concept slider from thin to fat

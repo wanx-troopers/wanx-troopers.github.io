@@ -3,6 +3,12 @@
 A number of image generation models are being released.
 This website doesn't go deep into details but aims to at least list them.
 
+## MS Lens
+
+[HF:microsoft/Lens](https://huggingface.co/microsoft/Lens)
+3.8B-parameter foundational text-to-image model designed for efficient training and fast high-resolution generation.
+... FLUX.2 semantic VAE 
+
 ## FireRed-Image-Edit
 
 20B parameters, Apache 2.0

@@ -16,6 +16,15 @@ To move node around hold CTRL.
 
 [gh:phazei/ComfyUI-Enhancement-Utils](https://github.com/phazei/ComfyUI-Enhancement-Utils) cpu/gpu/ram monitoring for pc in comfyui
 
+Dragon on working on an image:
+> Started in MJ, then popping it into comfy with an ollama qwen3.5 uncensroed model to describe that and then gen in juggernaut.
+> I cycled that loop by feeding the prompt qwen makes back into MJ a few times and then dropping best result back into comfy ... 3 or 4 iterations in
+
+> I chose Qwen3.5 over Gemma4, which is way faster, but the vision capability of both these models in ollama differs greatly.
+> Gemma4 will interanlly squeeze all images down to a fairly low detail and miss a lot of stuff in an image. Qwen scales with the input dimensions,
+> so it can actually take huge input images (it really slows down though) so I ultimately decided Qwen was the better choice ...
+> In theory you can set Gemma4 internal scale and get it to see more details but at the time of testing, a week or two ago, ollama didn't support this yet, and the comfy nodes have no way to pass the flag even if it did.
+
 ## 2026.04
 
 `bbox` is a `bounding box`

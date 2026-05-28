@@ -13,6 +13,28 @@
 
 "luminescent strands" for lense distortion and flares
 
+huddadudd:
+> res2s normal 10 step, its about as basic a zit wf as possible [huddadudd-simplest-ever-zit](workflows/z-image/huddadudd-simplest-ever-zit.webp)
+> i vary the steps but 15 is on the high end, usually 10-12
+
+shotgun messiah:
+> consider trying the Realtime LoRA block editor, if that's your style you could get lost in this rabbithole of blocks
+> I usually like to just do swaps, like LoRA A will do blocks 1-12, LoRA B will do blocks 13-24 etc
+> in other words I found the best results, when that respective LoRA controls the whole block, instead of like mixing them together
+> like you mix and match the actual blocks but for this strategy you kinda gotta "choose" which LoRA does which block, instead of mixing
+> like mixing works too I just find this a little more stable
+
+patientx:
+> I use base + turbo and turbo is good as a refiner and yes I think it can do higher res.
+
+StillLearning:
+> I wouldn't go near ZIT for base creation but it's an excellent refiner.
+
+[Tencent released Z-Image 6B with pixel space gen. No VAE & 1k Resolution](https://www.reddit.com/r/StableDiffusion/comments/1tkipk6/tencent_released_zimage_6b_with_pixel_space_gen)
+[HF:zhen-nan/L2P](https://huggingface.co/zhen-nan/L2P/tree/main), Apache licensed. [HF:tsolful/Z-Image-L2P-INT8](https://huggingface.co/tsolful/Z-Image-L2P-INT8/tree/main).
+Draft ComfyUI [PR#14055](https://github.com/Comfy-Org/ComfyUI/pull/14055), not merged as of 2026.05.28. WF from tsolful [tsolful-Z-Image-L2P](../workflows/z-image/tsolful-Z-Image-L2P.json).
+WF uploaded by "uncertain where I got wf" buggz: [buggz-ZturbotoPiDv2](../workflows/z-image/buggz-ZturbotoPiDv2.json)
+
 ## 2026.04
 
 > z image for realism is amazing with low 0.2 denoise and fast

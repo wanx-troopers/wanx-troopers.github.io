@@ -175,6 +175,10 @@ Note: LoRa extracted from "dyno" model looses important qualities of "dyno"; e.g
 
 ## Special Use
 
+Wan 2.2 LoRa-s 2026
+
+* [GH:epfl-vita/everanimate:ckpts/v1-lora32](https://huggingface.co/epfl-vita/everanimate/tree/main/ckpts/v1-lora32)
+
 Wan 2.1 and 2.2 LoRA-s:
 
 * [HF:Ashmotv/water_morping_wan](https://huggingface.co/Ashmotv/water_morping_wan)
