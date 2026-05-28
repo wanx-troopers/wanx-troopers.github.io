@@ -2,6 +2,8 @@
 
 ## Promising For Comfy
 
+* [X:haozhangml/2059820675599409278](https://x.com/haozhangml/status/2059820675599409278?s=46) We just made our dreamverse fully open sourced!
+* [GH:vita-epfl/EverAnimate](https://github.com/vita-epfl/EverAnimate) "it's SVI lora for WanAnimate basically" slmonker: "New toy from Svi team"
 * Ada: LTX team should also look into [QAPOLLO](https://zhuhanqing.github.io/APOLLO/). It lets you pretrain models with MUCH less vram with very high accuracy. I'm using it to full finetune LTX on a 24GB gpu; Sink_GSD is another
   with [GH:AkaneTendo25/musubi-tuner/tree/ltx-2-dev](https://github.com/AkaneTendo25/musubi-tuner/tree/ltx-2-dev)
   "A lora gets messy really fast basicly. You can do it its just not gonna be nearly as good

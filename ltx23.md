@@ -645,6 +645,7 @@ Draken:
     - "testing / validating they do what they should be doing from a 'business rules' standpoint and a hard
       'is this workflow wired correctly' standpoint:
       [GH:fblissjr/ComfyUI-AudioLoopHelper:tests](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/tests)
+    - [GH:fblissjr/fb-claude-skills:skills/path-privacy](https://github.com/fblissjr/fb-claude-skills/tree/main/skills/path-privacy) privacy scrubber for LLM written code
 
 - WhatDreamsCost's [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI) poweful node for audio and video loading and trimming (generated with help from Gemini),
   including the new `LTX Director` - I2V, T2V, FLFF, Prompt Relay, Custom Audio - [tutorial 1](https://www.youtube.com/watch?v=fZgtkRcu4_k), [tutorial 2](https://www.youtube.com/watch?v=vM60pJJqqEI)
