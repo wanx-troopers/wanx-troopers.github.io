@@ -1,4 +1,4 @@
-# PiD
+﻿# PiD
 
 Versions of image models started emerging that support direct generation to pixel space without a VAE.
 [hidream](hidream.md) seems to have been the 1st. PiD version of [ZIT](z-image.md) is known as L2P, 
