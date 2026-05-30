@@ -25,6 +25,11 @@ Dragon on working on an image:
 > so it can actually take huge input images (it really slows down though) so I ultimately decided Qwen was the better choice ...
 > In theory you can set Gemma4 internal scale and get it to see more details but at the time of testing, a week or two ago, ollama didn't support this yet, and the comfy nodes have no way to pass the flag even if it did.
 
+[vhs-meta-merge-batcher](screenshots/nodes/vhs-meta-merge-batcher.webp) [Drozbay](hidden-knowledge.md#drozbay):
+The meta batch manager is just to deal with large numbers of pixel frames. Like loading and saving really long videos without exploding your RAM.
+
+[comfyui_memory_cleanup](screenshots/nodes/comfyui_memory_cleanup.webp) nodes help cleanup VRAM when ComfyUI's native dynamic memory management does not cope.
+
 ## 2026.04
 
 `bbox` is a `bounding box`

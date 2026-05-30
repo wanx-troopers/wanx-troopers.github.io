@@ -60,6 +60,9 @@ N0NSens:
 > having them in was amplifying occurances of that mouth cloning issue.
 > ... wonder if its because they probably havent been trained on more than 3 people
 
+re upscaler re-introducing the issue:
+> lcm fixed it; the lower manual sigmas worked even with euler_ancestral
+
 LDWorks David playing with `ROPEAligned`, `adain`: [LDWorksDavid-ROPEAlighed-adain](screenshots/nodes/LDWorksDavid-ROPEAlighed-adain.webp)
 "for now Im more involved into the structure rather than lighting, I know I can ref a image as lighting latent and pushing specific blocks (0,7,14) for global/exposure lighting, problem is when we are not talking about T2V"
 

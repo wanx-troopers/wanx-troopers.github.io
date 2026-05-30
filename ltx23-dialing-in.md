@@ -54,6 +54,10 @@ SantaHunter:
 [Mark DK Berry](https://markdkberry.com):
 > I spent two days testing all the ones and ended up on euler_ancstral with lcm as fall back but thats on ltx for v2v mostly
 
+N0NSense experimenting with [upscaler-experimental-settings](workflows/ltx/N0NSense-ltx23-upscaler-experimental-settings.webp)
+> The sigmas are chosen so that the details don't change much after a lowres pass. But the most important thing is the sampler.
+> It looks almost identical to the default euler_cfg_pp, but it's twice as fast. need more different tests, so welcome.
+
 ## 2026.04.27
 
 > 1.1 distilled in mxfp8 which seems good

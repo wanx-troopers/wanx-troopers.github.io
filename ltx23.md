@@ -165,6 +165,7 @@ gated LoRa for re-dubbing vidoes - the intent was to keep the original voice; ba
 - `LTXVImgToVideoConditioning`
 - `LTXVAddGuide`
 - `LTXV Audio Video Mask`
+- `LTXAddVideoICLoRAGuide`
 
 - native `VAE Encode Audio`, `VAE Decode Audio`, `Load VAE`, `Load Audio` [kj-native-vae-encode-audio](screenshots/nodes/ltx/kj-native-vae-encode-audio.webp)
 
@@ -718,7 +719,7 @@ Draken:
     "takes couple of seed tries and description of what changes, but it's also not perfect but better than just inserting start/end frames imo"
   - [HF:joyfox/LTX-2.3-Transition-LORA](https://huggingface.co/joyfox/LTX-2.3-Transition-LORA) suggested by RuneX
   - LTX-2.3-22b_RL_Lora_Merge?? used by avataraim
-- Oumoumad
+- Oumoumad [HF:oumoumad/models](https://huggingface.co/oumoumad/models)
   - Refocus LoRa: [HF:oumoumad/LTX-2.3-22b-IC-LoRA-ReFocus](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-ReFocus) - undoes shallow depth of field; only works as detailer if source video has been blurred first
   - [HF:oumoumad/LTX-2.3-22b-IC-LoRA-Uncompress](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Uncompress)
   - [HF:oumoumad/LTX-2.3-22b-IC-LoRA-Ungrade](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Ungrade) removes color-grading
@@ -771,6 +772,9 @@ Draken:
 - RuneX recommended
   - [HF:100percentrobot/LTX-2.3-Audio-Reactive-LORA](https://huggingface.co/100percentrobot/LTX-2.3-Audio-Reactive-LORA)
   - RealisDance - similar to wan animate? charcter replacment?..
+  - "video restoration", aritfiact fixing?
+    - [HF:Zlikwid/LTX_2.3_Upscale_IC_Lora](https://huggingface.co/Zlikwid/LTX_2.3_Upscale_IC_Lora)
+    - [HF:joyfox/LTX2.3-ICEdit-Insight](https://huggingface.co/joyfox/LTX2.3-ICEdit-Insight) 
 
 
 ### Less Verified LoRa-s
@@ -779,7 +783,6 @@ Draken:
   extra details: [GH:Valiant-Cat/LTX2-ICEdit-Insight](https://github.com/Valiant-Cat/LTX2-ICEdit-Insight); edit-insight which comes as a full model merge - might be a re-use of a pre-existing LoRa
 - Luxe Sensual
 - Sulphur, 10euros
-
 
 ### Non LTX 2.3 LoRa-s Relevant to LTX 2.3
 
