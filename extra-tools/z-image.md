@@ -35,6 +35,13 @@ StillLearning:
 Draft ComfyUI [PR#14055](https://github.com/Comfy-Org/ComfyUI/pull/14055), not merged as of 2026.05.28. WF from tsolful [tsolful-Z-Image-L2P](../workflows/z-image/tsolful-Z-Image-L2P.json).
 WF uploaded by "uncertain where I got wf" buggz: [buggz-ZturbotoPiDv2](../workflows/z-image/buggz-ZturbotoPiDv2.json)
 
+> BNP4535353: [HF:capitan01R/ComfyUI-CapitanZiT-Scheduler](https://github.com/capitan01R/ComfyUI-CapitanZiT-Scheduler)  
+> huddadudd: zit i usually just use res2 normal 10-12 steps  
+> BNP4535353: I had an in-depth conversation with this author, who believes that some mainstream schedulers are not able to unleash the full potential of the model.   
+> BNP4535353: Zit requires very few steps, and each step is full of power.  
+> huddadudd: yeah zit best left simple i think
+
+
 ## 2026.04
 
 > z image for realism is amazing with low 0.2 denoise and fast

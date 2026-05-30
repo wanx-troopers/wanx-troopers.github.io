@@ -30,6 +30,14 @@ The meta batch manager is just to deal with large numbers of pixel frames. Like 
 
 [comfyui_memory_cleanup](screenshots/nodes/comfyui_memory_cleanup.webp) nodes help cleanup VRAM when ComfyUI's native dynamic memory management does not cope.
 
+BNP4535353:
+> I have a switch specifically for controlling high-frequency details, making image processing much easier than video processing.
+> Just eta noise
+
+> Q: What are you using normals for?
+> David Snow: advanced preprocessors that combine depth, desaturated (B&W) normals and lineart. If you combine depth and normal passes
+> [David-Show-normals-for-depth-map-detailing](workflows/David-Show-normals-for-depth-map-detailing.webp)
+
 ## 2026.04
 
 `bbox` is a `bounding box`
@@ -362,7 +370,7 @@ His nodes discussed on this website reside mainly in the following code reposito
 ### Mega List of Drozbay's Works
 
 - [GH:drozbay/ComfyUI-WanVaceAdvanced](https://github.com/drozbay/ComfyUI-WanVaceAdvanced)
-- [GH:drozbay/RES4LYF](https://github.com/drozbay/RES4LYF) - though it can be these have been (mostly?) integrated into main RES4LYF repo
+- [GH:drozbay/RES4LYF](https://github.com/drozbay/RES4LYF) - though it can be these have been (mostly?) integrated into main RES4LYF repo huddadudd:  i've been on that fork for almost a year probably [not sure if mask issues resolved in main repo]
 - [GH:drozbay/WanExperiments](https://github.com/drozbay/WanExperiments)
 - [GH:drozbay/janky_memory_patcher](https://github.com/drozbay/janky_memory_patcher)
 - [GH:drozbay/VaceWanAdvancedTests](https://github.com/drozbay/VaceWanAdvancedTests) Very very (very) experimental stuff

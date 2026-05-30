@@ -289,6 +289,7 @@ N0NSense controls camera using a schematic video or a box/room everything happen
 [Cseti](https://www.youtube.com/@ChetiArt)'s LoRa to replicate camera motion from one video to another [HF:Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1);
 README and workflow: [HFdatasets:Cseti/ComfyUI-Workflows:ltx/2.3/ic-lora-cameraman](https://huggingface.co/datasets/Cseti/ComfyUI-Workflows/blob/main/ltx/2.3/ic-lora-cameraman/README.md);
 "This one took around 20-24 hours to train with 77 video pairs. And I also made two more runs one with 128 and another with around 40 pairs. But this one looks the best so far" "I used videos from pexels"
+WF: [LTX-2.3-Cameraman](workflows/ltx/LTX-2.3-Cameraman.json)
 
 ## I2V
 
@@ -523,16 +524,6 @@ This forces training of IC LoRa-s that take reference creatively - as 1st frame 
 
 [GH:vrgamegirl19](https://github.com/vrgamegirl19)'s training node for quick training of LTX 2.3 single character LoRa-s: [YT:9Z_glyAHE1k](https://www.youtube.com/watch?v=9Z_glyAHE1k).
 
-## Manual Sigmas
-
-David Show: `1.0, 0.995, 0.99, 0.9875, 0.975, 0.65, 0.28, 0.07, 0.0`, "it's a three stage workflow, but those new sigmas are just being used on the first pass."
-
-Reddit [post](https://www.reddit.com/r/StableDiffusion/comments/1sk8vhq/ltx23_distilled_updated_sigmas_for_better_results/).
-
-> Q: do the manual sigmas have to be the default in the LTX template?  
-> A: not really, it's just a linear quadratic schedule  
-> main thing is that with the distill you want it heavy at start, which linear quadratic is, so high shift
-
 ## V2V
 
 V2V can be done either via IC Union LoRa-s or via latent denoise. Unmerged Context Windows PR to make V2V simpler: [GH:Comfy-Org/ComfyUI/pull/13325](https://github.com/Comfy-Org/ComfyUI/pull/13325).
@@ -691,7 +682,7 @@ Draken:
 - BFS LoRa "which does head swapping" [HF:Alissonerdx/BFS-Best-Face-Swap-Video](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap-Video)
 - "There's also a motion transfer LoRa that I trained, it works well for slow-motion videos but is bad for fast-motion videos"
 
-### LoRa-s
+### LoRa-s and WF-s
 
 - [HF:Zlikwid/LTX_2.3_Upscale_IC_Lora](https://huggingface.co/Zlikwid/LTX_2.3_Upscale_IC_Lora/tree/main)
   trained on 1280x704 videos; "That workflow is the official hdr ic lora workflow with a few tweeks"
@@ -706,9 +697,11 @@ Draken:
 - Crinklypaper
   - Crinklypaper presented [crinklypaper-LTX-EXWF-NEW-Taz](workflows/ltx/crinklypaper-LTX-EXWF-NEW-Taz.json) as "new workflow with Kijai's efficiency nodes" and praised its operation with distill LoRa v1.1:
     "This such great news, not having to run everything in 50fps, though I do see it still helps on fast motion to  run on 50 fps";
-    one of his LoRa-s: [CA:2415727/seikon-no-qwaser-ecchi-anime-style-lora-ltxv2?2716034](https://civitai.com/models/2415727/seikon-no-qwaser-ecchi-anime-style-lora-ltxv2?modelVersionId=2716034)
-    there should be other good LoRas next to it including a 3d LoRa and Gurren Laggan one
   - Crinklypaper's [LTX-23-change-voice](workflows/ltx/crinklypaper-LTX-23-change-voice.json)
+  - LoRa-s:
+    - [CA:2415727/seikon-no-qwaser-ecchi-anime-style-lora-ltxv2?2716034](https://civitai.com/models/2415727/seikon-no-qwaser-ecchi-anime-style-lora-ltxv2?modelVersionId=2716034)
+    - [CA:2334302/golden-boy-retro-90s-anime-style-lora-ltx23](https://civitai.red/models/2334302/golden-boy-retro-90s-anime-style-lora-ltx23?modelVersionId=2988682) Golden Boy ...
+    - there should be other good LoRas next to it including a 3d LoRa and Gurren Laggan one
 - [GH:vrgamegirl19/comfyui-vrgamedevgirl](https://github.com/vrgamegirl19) created a number of LoRa-s including "Claymation", "Puppet", "Felt",
   [Golden Age Comic](https://civitai.com/models/2532516/ltx-23-golden-age-comic), [Enhancer](https://civitai.com/models/2535622?modelVersionId=2849716) LoRa-s by her as well;
   [CA:2540961?2855640](https://civitai.com/models/2540961?modelVersionId=2855640) dark fantasy?
@@ -752,7 +745,8 @@ Draken:
 - [HF:Nebsh](https://huggingface.co/Nebsh) shares a collection of interesting LoRa-s including "cutout satire", "handheld run", ...
 - OmniNFT
   - OmniNFT for LTX 2.3 [HF:Kijai/LTX2.3_comfy:loras/README.md](https://huggingface.co/Kijai/LTX2.3_comfy/blob/main/loras/README.md), use strength 2,
-    [HF:Kijai/LTX2.3_comfy:loras/LTX-2.3-OmniNFT-RL-Lora_bf16](https://huggingface.co/Kijai/LTX2.3_comfy/blob/main/loras/LTX-2.3-OmniNFT-RL-Lora_bf16.safetensors)
+    [HF:Kijai/LTX2.3_comfy:loras/LTX-2.3-OmniNFT-RL-Lora_bf16](https://huggingface.co/Kijai/LTX2.3_comfy/blob/main/loras/LTX-2.3-OmniNFT-RL-Lora_bf16.safetensors);
+    BNP4535353: setting OmniRL Lora to 2 seems to have become standard practice, as it increases LTX's intelligence. (Upgrading from a middle school student to a high school student level)
   - OmniNFT for LTX 2.0 (still works with 2.3) converstion 1 [HF:VasiliyWeb/OmniNFT_ComfyUI](https://huggingface.co/VasiliyWeb/OmniNFT_ComfyUI);
     conversion 2: [HF:silveroxides/LTX-2.3-Quants:loras/OmniNFT-comfyui](https://huggingface.co/silveroxides/LTX-2.3-Quants/blob/main/loras/OmniNFT-comfyui.safetensors);
     originals: [GH:zghhui.github.io/OmniNFT](https://zghhui.github.io/OmniNFT/) [HF:zghhui/OmniNFT](https://huggingface.co/zghhui/OmniNFT);
@@ -779,6 +773,7 @@ Draken:
 
 ### Less Verified LoRa-s
 
+- [HF:vinokrish001/ltx2.3-sora-lora](https://huggingface.co/vinokrish001/ltx2.3-sora-lora/tree/main)
 - [HF:joyfox/LTX2.3-ICEdit-Insight](https://huggingface.co/joyfox/LTX2.3-ICEdit-Insight) a family of LoRa-s for video restoration and cleanup - deblur, remove subtitles etc;
   extra details: [GH:Valiant-Cat/LTX2-ICEdit-Insight](https://github.com/Valiant-Cat/LTX2-ICEdit-Insight); edit-insight which comes as a full model merge - might be a re-use of a pre-existing LoRa
 - Luxe Sensual

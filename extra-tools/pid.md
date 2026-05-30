@@ -7,3 +7,12 @@ AsymFLUX.2 is the flux flavor.
 Nvidia released its own [PixelDiT-1300M-1024px](https://huggingface.co/nvidia/PixelDiT-1300M-1024px)
 text to image model and also [PiD](https://huggingface.co/nvidia/PiD), pixel decoder, which has versions replacing
 flux2 and sd3 vae-s. Support for NVidia models has been [added](https://github.com/Comfy-Org/ComfyUI/pull/14103) to ComfyUI native.
+
+BNP4535353 on PiD:
+> it directly enlarges the original small image into a very large one and forcibly applies a lot of sharpening, which is uncontrollable
+
+David Snow:
+> yeah. now that I test it more, there are some serious issues. my current method of using SDXL controlnet union tile is much better.
+
+huddadudd:
+> my go to is still magnific

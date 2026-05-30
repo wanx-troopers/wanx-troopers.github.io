@@ -19,6 +19,9 @@ Jonathan [GH:WhatDreamsCost](https://github.com/WhatDreamsCost/) on fixing an is
 
 > Try putting a clear vram node before both of your decode nodes, I had a similar issue of the audio decode taking sometimes minutes to complete even on short videos. Now it's almost instant.
 
+huddadudd:
+> I've found that ltx plays well with some lensing and barrel distortion
+
 ## 2026.04.29
 
 > Q: how do I get LTX 2.3 not to generate music?  

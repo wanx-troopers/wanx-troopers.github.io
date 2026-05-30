@@ -54,7 +54,7 @@ SantaHunter:
 [Mark DK Berry](https://markdkberry.com):
 > I spent two days testing all the ones and ended up on euler_ancstral with lcm as fall back but thats on ltx for v2v mostly
 
-N0NSense experimenting with [upscaler-experimental-settings](workflows/ltx/N0NSense-ltx23-upscaler-experimental-settings.webp)
+N0NSense experimenting with [upscaler-experimental-settings](workflows/ltx/N0NSense-ltx23-upscaler-experimental-settings.webp) `dpmpp_2m`, ManualSigmas `0.73, 0.55, 0.29, 0.0`
 > The sigmas are chosen so that the details don't change much after a lowres pass. But the most important thing is the sampler.
 > It looks almost identical to the default euler_cfg_pp, but it's twice as fast. need more different tests, so welcome.
 
@@ -76,6 +76,11 @@ David Snow:
 > if you use the distill lora on a second pass using a negative weight, it reduces the plastic skin greatly.
 > so when using it for upscale set strength to a negative?
 > Yeah. -0.4 is a good starting point.
+
+huddadudd:
+> I prefer sampling to high frame rate and even resolution, i do most of mine at 1536x832  
+> in post i  clean up with a neat video pass
+
 
 ## 2026.04.24
 
@@ -105,6 +110,32 @@ Huddadudd answering on how a good detailed 1536x832 3sec 25fps clip with a nice 
 
 [Ckinpdx](https://github.com/ckinpdx):
 > pretty standard as far as generation parameters, one stage, dev w/ 0.6 distill, euler, linear quadratic 8 steps
+
+## Manual Sigmas
+
+David Show: `1.0, 0.995, 0.99, 0.9875, 0.975, 0.65, 0.28, 0.07, 0.0`, "it's a three stage workflow, but those new sigmas are just being used on the first pass."
+
+Reddit [post](https://www.reddit.com/r/StableDiffusion/comments/1sk8vhq/ltx23_distilled_updated_sigmas_for_better_results/).
+
+> Q: do the manual sigmas have to be the default in the LTX template?  
+> A: not really, it's just a linear quadratic schedule  
+> main thing is that with the distill you want it heavy at start, which linear quadratic is, so high shift
+
+BNP4535353 found that for a large scale complex image of a moving sailing ship
+> default 8+3 step WF is far from sufficient, and at least 12+6 is needed [BNP4535353-sailing-ship-sigmas](screenshots/nodes/ltx/BNP4535353-sailing-ship-sigmas.webp)
+> [BNP4535353-sailing-ship-sigmas-2nd](screenshots/nodes/ltx/BNP4535353-sailing-ship-sigmas-2nd.webp)
+> It really resembles the Sigma pattern of Flux2: a straight line followed by a sharp drop
+
+huddadudd: "the linear quadratic advanced node works pretty well also"
+
+> linear quadratic is literally the default (for distill) 
+
+BNP4535353
+> If the scene is a distant view or the objects are small in proportion, increasing the number of steps can directly help.
+> However, if it's a close-up, it will create a burning sensation similar to increasing the number of steps in a CFG scene.
+> Overall, the default scheduler is fine. I'm currently testing different samplers. It's difficult to find a universal set of rules for LTX.
+> For me right now, 1920 1080 resolution with two stages + 50fps is the basic approach that can initially ensure no strange results.
+> And setting OmniRL [OmniNFT] Lora to 2 seems to have become standard practice, as it increases LTX's intelligence.
 
 ## Samplers
 
