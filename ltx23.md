@@ -282,6 +282,14 @@ Hashu [not entirely confident]:
 > So if you are using an ic lora + a first frame guide then u technically have 2 guides at the first frame so you need 2 crop guides.
 > [ltx23-multiple-guides-2](workflows/ltx/ltx23-multiple-guides-2.png)
 
+## Character Replacement
+
+Different approaches were tried.
+
+> RuneX: you also using black mask and outpaint lora?  
+> Lucifer shared [bj-ltx23_inpaint_masked_Reference2Video](workflows/ltx/bj-ltx23_inpaint_masked_Reference2Video.json)  
+> Alisson: yes my lora ... using a black mask instead of a magenta one ...  LTXV Looping Sampler, This allows you to create longer videos. 
+
 ## Controlling The Camera
 
 N0NSense controls camera using a schematic video or a box/room everything happens in converted to a depth map + ic union control LoRa. His a2v videos created this way look great.
@@ -607,6 +615,7 @@ Draken:
     - [GH:fblissjr/ComfyUI-AudioLoopHelper:example_workflows/audio_reactive_loop.json](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio_reactive_loop.json)
     - experiments with freezing audio or video selectively and generating the other:
       [GH:fblissjr/ComfyUI-AudioLoopHelper:.../audio-loop-music-video_latent_av_extension.json](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio-loop-music-video_latent_av_extension.json)
+    - highly experimental audio only IC LoRa [HF:fbjr/LTX-2.3-22b-IC-LoRA-Helium](https://huggingface.co/fbjr/LTX-2.3-22b-IC-LoRA-Helium), wf: [fredbliss-pitch_gate_audio_single_pass](workflows/ltx/fredbliss-pitch_gate_audio_single_pass.json)
     - experimenting with freezing (keeping) either audio or video
       - [GH:fblissjr/ComfyUI-AudioLoopHelper:example_workflows/audio-loop-music-video_latent_av_inversion](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent_av_inversion.json)
       - keyframe auto extract workflow here: [fblissjr/ComfyUI-AudioLoopHelper:example_workflows/experimental/audio-loop-music-video_latent_keyframe_autoextract](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio-loop-music-video_latent_keyframe_autoextract.json)
@@ -684,6 +693,7 @@ Draken:
 
 ### LoRa-s and WF-s
 
+- [HF:SyFeee/ltx2.3-chinese-drama-iclora-depth](https://huggingface.co/SyFeee/ltx2.3-chinese-drama-iclora-depth/tree/main) conditions video generation on a ... depth video; allowed rather crazy camera flying
 - [HF:Zlikwid/LTX_2.3_Upscale_IC_Lora](https://huggingface.co/Zlikwid/LTX_2.3_Upscale_IC_Lora/tree/main)
   trained on 1280x704 videos; "That workflow is the official hdr ic lora workflow with a few tweeks"
   wf: [LTX-2.3_Upscale_IC-LoRA](workflows/ltx/Zlikwid-LTX-2.3_Upscale_IC-LoRA.json)
@@ -803,4 +813,5 @@ Draken:
 
 - [HF:TheBurgstall/ltx-2.3-googlyeyes-lora](https://huggingface.co/TheBurgstall/ltx-2.3-googlyeyes-lora)
 - [HF:kabachuha/ltx23-pop](https://huggingface.co/kabachuha/ltx23-pop) anime-style pop LoRa
+
 

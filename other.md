@@ -40,6 +40,7 @@
   "it's VACE module ... needs some new code probably ... loads without issues and technically works ... just.. doesn't do anything"
 * [GH:myyzzzoooo/InsertAnywhere](https://github.com/myyzzzoooo/InsertAnywhere) model for adding objects into the video
 * [GH:houyuanchen111/UniVidX](https://github.com/houyuanchen111/UniVidX) Wan2.1-T2V-14B based experiment on AI video gens
+* [GH:csguoh/ReFIR](https://github.com/csguoh/ReFIR/tree/main)
 
 ## Caution Against 1038lab
 

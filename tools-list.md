@@ -13,6 +13,9 @@
   David Show: "new normal estimator? How does it compare to Lotus?" hicho: "moge its native see templates" (e.g. support by ComfyUI native)
   "perspective geom" template workflow in ComfyUI; also: [hicho-moge_3d-perspective_to_mesh](workflows/hicho-moge_3d-perspective_to_mesh.json);
   David Show: "that's a very good normal map for the speed. think I've just found a Lotus replacement. Lotus is very good, but requires a lot of time and vram"
+* David Show: "Lotus normals ... it's now blazingly fast. 5 seconds for a 81 frame animation at @ 1024 px" [lotus-sampler](screenshots/nodes/lotus-sampler.webp)
+  "Lotus was actually broken for a long time ... native SDPose ... they're actually identical model structure wise"
+  apparently, a native node exists
 
 # Wan Alpha
 

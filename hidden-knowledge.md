@@ -38,6 +38,11 @@ BNP4535353:
 > David Snow: advanced preprocessors that combine depth, desaturated (B&W) normals and lineart. If you combine depth and normal passes
 > [David-Show-normals-for-depth-map-detailing](workflows/David-Show-normals-for-depth-map-detailing.webp)
 
+BobbingtonJJohnson on INT8 vs MXFP8, TLDR qaulity-wise: GGUF Q8 > INT8 ConvRot > MXFP8 > FP8 >= INT8 
+[R:int8_in_the_age_of_mxfp8_an_investigation_into](https://www.reddit.com/r/StableDiffusion/comments/1tazxqz/int8_in_the_age_of_mxfp8_an_investigation_into/)
+see also by same author: [HF:bertbobson/ComfyUI-INT8_ConvRot](https://huggingface.co/bertbobson/ComfyUI-INT8_ConvRot/tree/main)
+[GH:BobJohnson24/ComfyUI-INT8-Fast](https://github.com/BobJohnson24/ComfyUI-INT8-Fast)
+
 ## 2026.04
 
 `bbox` is a `bounding box`
