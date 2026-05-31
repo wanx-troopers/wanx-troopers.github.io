@@ -205,3 +205,15 @@ huddadudd:
 > ... 2 stage ... last stage is 4 steps just simple sampling
 
 When asked for WF huddadudd pointed to [Drozbay](hidden-knowledge.md#drozbay)'s LTX 2.3 ClowShark workflow: [droz_LTX-2_SharkSampling_v7.1](workflows/ltx/droz_LTX-2_SharkSampling_v7.1.png)
+
+## Huddadudd's Clean WF
+
+> The main variables i tweak in the setup is the sampler for the first steps (can be 2 or 4 steps based on 10-12 total) the inflection point on the quadratic noise, resolution on output, sometimes fhd is better sometimes 1536, then there is the second stage sampler which is less a factor but there is 3-4 options, but i'm sure thats standard for you as well. i avoid using any ltx loras outside of distill at .4/.6 str
+
+> chainsampling is the obvious powerful tool;
+> there are different samplers that work for short quick actions better;
+> there are ones that better for wide angle small size details;
+> it's all just incremental improvements that can stack
+
+>  1546x832/ 25fps pretty quick gens (under 1.5 -2mins) it locks in on lvl of detail  pretty well no loras or refining
+

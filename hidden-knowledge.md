@@ -43,6 +43,8 @@ BobbingtonJJohnson on INT8 vs MXFP8, TLDR qaulity-wise: GGUF Q8 > INT8 ConvRot >
 see also by same author: [HF:bertbobson/ComfyUI-INT8_ConvRot](https://huggingface.co/bertbobson/ComfyUI-INT8_ConvRot/tree/main)
 [GH:BobJohnson24/ComfyUI-INT8-Fast](https://github.com/BobJohnson24/ComfyUI-INT8-Fast)
 
+As of end of 2026.05 `Load Video (Path)` is much faster than other variants from VHS.
+
 ## 2026.04
 
 `bbox` is a `bounding box`

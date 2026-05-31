@@ -397,6 +397,17 @@ Jonathan (WhatDreamsCost):
 
 Mark's video: [YT:Video Workflow Pipeline (April 2026)](https://www.youtube.com/watch?v=7Lqt3pgGefA)
 
+BNP4535353:
+> I tried Humo Refiner WF today, and it saved 90% of my unusable LTX works.
+> 501fps, 1920 res, 25fps, it took 35 minutes, but the results were totally worth it.
+> You've fixed 99% of the artifacts, and I don't even need to bother adjusting LTX anymore.
+> /this was apparently about [Drozbay](hidden-knowledge.md#drozbay)'s LTX 2.3 ClowShark workflow: [droz_LTX-2_SharkSampling_v7.1](workflows/ltx/droz_LTX-2_SharkSampling_v7.1.png) which contains HuMO refiner stage/
+
+huddadudd:
+> wan humo also works best at a lower res I think
+> 1280 is what [Drozbay] suggested
+> wan isn't res hungry like ltx is as much
+
 - [LTX-23-T2V-3PASS](workflows/ltx/garbus-LTX-23-T2V-3PASS.json) WF from Garbus: "This is the
   default LTX T2V wf with some things added and subgraphs unpacked. It's not pretty, but it works, or should give you an idea what modifications to make to a wf you prefer"
 - [ai_hakase's wf](https://x.com/ai_hakase_/status/2040417832769585194?s=20)

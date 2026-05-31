@@ -22,6 +22,9 @@ Jonathan [GH:WhatDreamsCost](https://github.com/WhatDreamsCost/) on fixing an is
 huddadudd:
 > I've found that ltx plays well with some lensing and barrel distortion
 
+> ltx is banning adverbs form the llm prompter;
+> got much better prompts after removing the crutch
+
 ## 2026.04.29
 
 > Q: how do I get LTX 2.3 not to generate music?  
