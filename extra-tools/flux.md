@@ -28,6 +28,9 @@ Klein can be used for editing
 
 Character trainer for flux: [R:using_depth_maps_and_weight_noising_to_get_better](https://www.reddit.com/r/StableDiffusion/comments/1tplsmr/using_depth_maps_and_weight_noising_to_get_better/)
 
+Flux Identity Adjuster V2 - node [GH:Magirad/Flux_ID_Adjuster_V2](https://github.com/Magirad/Flux_ID_Adjuster_V2),
+[R:flux_identity_adjuster_v2](https://www.reddit.com/r/StableDiffusion/comments/1tsxd9r/flux_identity_adjuster_v2/)
+
 ## 2026.04
 
 [CA:2318844/klein-9b-body-weight-slider](https://civitai.com/models/2318844/klein-9b-body-weight-slider) concept slider from thin to fat

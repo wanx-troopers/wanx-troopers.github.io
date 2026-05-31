@@ -17,6 +17,8 @@
 
 Note: 2512 is not an "edit" just "qwen image" but due to some sort of confusion we're seeing the incorrect "Edit-2512" designation sometimes.
 
+[HF:Wuli-art/Qwen-Image-2512-Turbo-LoRA-2-Steps](https://huggingface.co/Wuli-art/Qwen-Image-2512-Turbo-LoRA-2-Steps)
+
 ## 2026.01.13
 
 Re QIE 2511:
