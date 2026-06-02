@@ -7,9 +7,13 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 
 * [Timeline](timeline.md)
 
-## Core
+## 2026
 
+* [Bernini](bernini.md)
 * [Wan NEWS](wan-news.md)
+
+## 2025
+
 * [Hidden Knowledge](hidden-knowledge.md)
 * [Conditioning](conditioning.md)
 * [Sigmas](sigmas.md)
