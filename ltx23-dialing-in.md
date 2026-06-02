@@ -217,3 +217,6 @@ When asked for WF huddadudd pointed to [Drozbay](hidden-knowledge.md#drozbay)'s 
 
 >  1546x832/ 25fps pretty quick gens (under 1.5 -2mins) it locks in on lvl of detail  pretty well no loras or refining
 
+## Sequence
+
+Mark's way is: 1st sampler - temporal 2x - 2nd sampler - spatial upscaler

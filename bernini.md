@@ -31,3 +31,18 @@ Recommended:
 
 slmonker:
 > multi-angle ref image is working
+
+Apparently Bernini has pure I2V capabilities as well, up to 161 frames
+
+> You are a helpful assistant specialized in image-to-video generation. Anime girl is dancing with a red panda, the camera zooms out displaying the dance floor. The panda jumps to the floor.
+
+![bernini-prompts](screenshots/bernini/bernini-prompts.webp)
+
+![bernini-conditioning](screenshots/bernini/bernini-conditioning.webp)
+
+> the reference can be larger than the gen even since it's added as tokens anyway
+
+> their code only used 5 so wasn't sure how many it can take, I think I capped it at 8 but technically there wouldn't be any cap
+
+LDWorks David:
+> seems like with one sheet ref also works [several images on white background as one image]
