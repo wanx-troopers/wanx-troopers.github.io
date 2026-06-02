@@ -157,6 +157,11 @@ gated LoRa for re-dubbing vidoes - the intent was to keep the original voice; ba
   [garbus-fp4-text-encoder](screenshots/nodes/garbus-fp4-text-encoder.webp)
   ... [nvfp4 on 30xx cards] "You won't get the fp4 acceleration that 40 and 50 series cards give, but the models do run"
 
+> Q: fp32 audio vae? My local is bf16  
+> [Fredblis](https://fredbliss.com/): A: I thought the weights were fp32 in ltx. They're not. Use what you have. 
+> I'm upcasting the audio vae to fp32 thougy. That's the important part. It wont break it if you don't upcast
+> but ... better fidelity ... Although I think comfy auto does this 
+
 ## Nodes Of Interest
 
 - `LTXVLatentUpsampler`
@@ -166,6 +171,7 @@ gated LoRa for re-dubbing vidoes - the intent was to keep the original voice; ba
 - `LTXVAddGuide`
 - `LTXV Audio Video Mask`
 - `LTXAddVideoICLoRAGuide`
+- `Add Video IC-LoRA Guide Advanced` from `LTXVideo` has got attention mask input
 
 - native `VAE Encode Audio`, `VAE Decode Audio`, `Load VAE`, `Load Audio` [kj-native-vae-encode-audio](screenshots/nodes/ltx/kj-native-vae-encode-audio.webp)
 
@@ -256,6 +262,10 @@ Alternative to using guides. Kijai's version also allows to specify which frame 
 > The inplace nodes are very simple: they don't add any guide latents or anything they just replace the target latent frame with the encoded image and mask it so it doesn't change
 
 ### Guides
+
+![ltx-two-ways-to-add-guides](screenshots/ltx/ltx-two-ways-to-add-guides.webp)
+> Q: so these 2 are the same?  
+> [Drozbay](hidden-knowledge.md#drozbay) A: Only one tiny difference: the LTXVAddGuide node uses crop=center by default
 
 > guides are latent+mask but they exist at the end of the sequence, and are applied to the position through RoPE;
 > so basically they are stored at the end, keyframe info is stored (through the conditioning in comfy) so it knows what frame it should affect;
@@ -402,6 +412,7 @@ BNP4535353:
 > 501fps, 1920 res, 25fps, it took 35 minutes, but the results were totally worth it.
 > You've fixed 99% of the artifacts, and I don't even need to bother adjusting LTX anymore.
 > /this was apparently about [Drozbay](hidden-knowledge.md#drozbay)'s LTX 2.3 ClowShark workflow: [droz_LTX-2_SharkSampling_v7.1](workflows/ltx/droz_LTX-2_SharkSampling_v7.1.png) which contains HuMO refiner stage/
+> /wan detailer wf separately: [droz_WanHuMoDetailer_v3.1](workflows/ltx/droz_WanHuMoDetailer_v3.1.png)
 
 huddadudd:
 > wan humo also works best at a lower res I think
@@ -520,7 +531,6 @@ burgstall:
 [X:ingi_erlingsson?2057566331235627100](https://x.com/ingi_erlingsson/status/2057566331235627100)
 
 [Fredblis](https://fredbliss.com/): 
-
 > ltx trainer code... its got audio set to None for v2v but it does have the code for t2v...
 > but i dont see why architecturally you cant make it work for image+audio input and video with audio output
 
@@ -626,7 +636,12 @@ Draken:
     - [GH:fblissjr/ComfyUI-AudioLoopHelper:example_workflows/audio_reactive_loop.json](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio_reactive_loop.json)
     - experiments with freezing audio or video selectively and generating the other:
       [GH:fblissjr/ComfyUI-AudioLoopHelper:.../audio-loop-music-video_latent_av_extension.json](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio-loop-music-video_latent_av_extension.json)
-    - highly experimental audio only IC LoRa [HF:fbjr/LTX-2.3-22b-IC-LoRA-Helium](https://huggingface.co/fbjr/LTX-2.3-22b-IC-LoRA-Helium), wf: [fredbliss-pitch_gate_audio_single_pass](workflows/ltx/fredbliss-pitch_gate_audio_single_pass.json)
+    - [HF:fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context](https://huggingface.co/fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context) Audio-Only IC LoRA;
+      nodes to use ic-lora audio only: [GH:fblissjr/ComfyUI-AudioLoopHelper](https://github.com/fblissjr/ComfyUI-AudioLoopHelper),
+      trainer fork: [GH:fblissjr/LTX-2:audio-guidance-iclora-vtv](https://github.com/fblissjr/LTX-2/tree/audio-guidance-iclora-vtv);
+      "goal was: transfer identity/vibes of audio to scene solely through audio";
+      e.g. sound sample is supplied + text prompt; the text prompt contains different text to say;
+      yet original sound sample impacts all of voice, delivery ("vibe") and the look of the character
     - experimenting with freezing (keeping) either audio or video
       - [GH:fblissjr/ComfyUI-AudioLoopHelper:example_workflows/audio-loop-music-video_latent_av_inversion](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent_av_inversion.json)
       - keyframe auto extract workflow here: [fblissjr/ComfyUI-AudioLoopHelper:example_workflows/experimental/audio-loop-music-video_latent_keyframe_autoextract](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio-loop-music-video_latent_keyframe_autoextract.json)
@@ -778,6 +793,7 @@ Draken:
 - [HF:yuvraj108c/LTX-2.3-22b-IC-LoRA-Any-Trajectory-Instruction](https://huggingface.co/yuvraj108c/LTX-2.3-22b-IC-LoRA-Any-Trajectory-Instruction) porting Any Trajectory Instruction (ATI) to LTX 2.3
 - [HF:Lightricks/LTX-2.3-22b-IC-LoRA-LipDub](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-LipDub) from Lightricks to re-dub videos;
   [Drozbay](hidden-knowledge.md#drozbay) found it works much better combined with ID-Lora
+- [LiconStudio/LTX2.3-Mutiple-Subject-Reference](https://huggingface.co/LiconStudio/LTX2.3-Mutiple-Subject-Reference) comes with a comfy node [liconstudio/ComfyUI-Licon-MSR](https://github.com/liconstudio/ComfyUI-Licon-MSR)
 - animation LoRa-s
   - [CA:2634377/cyberpunk-edgerunners-style-lora-ltx-23?2957805 ](https://civitai.red/models/2634377/cyberpunk-edgerunners-style-lora-ltx-23?modelVersionId=2957805) by crinklypaper
     "I just put out an anime style lora for ltx, I trained it using my 90s style anime lora as a base. So it was 53K steps on the base-lora, then load from save state and 19.5k steps trained on top with a completely different style. its t2v"

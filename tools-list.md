@@ -260,17 +260,3 @@ Experimental implementation for ComfyUI: [GH:kijai/ComfyUI-Sapiens2](https://git
 
 > Q: DWpose ... deprecated now, considering we have Sapiens2?
 > A: I'd keep it around. Sapiens looks really good tho
-
-## Sam3.1 And Sam3D
-
-Preview of future nodes to come utilizing Sam3.1 for segmentation and Sam3D for mesh reconstruction: [sam3d-wip](screenshots/nodes/sam3d-wip.webp); sam3d-object.
-
-> sam3d-object ... it will be able to do whole scene too and then sam3d-body plugs into the scene
-
-> Q: it does do fingers tho?  
-> A: sam3d does, but kimodo doesn't; sam3d can even do ASL [American Sign Language], it's really good;
-> ... did even add HAMER to refine the hands, but I'm not sure it's ... necessary anymore
-
-`Sam3 Native Model Loader` node has been spotted in the wild.
-
-Sam3 masking wf from djbfilmz: ![sam3-masking](workflows/sam3-masking.webp)

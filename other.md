@@ -2,6 +2,9 @@
 
 ## Promising For Comfy
 
+* [descriptinc.github.io/ATS](https://descriptinc.github.io/ATS/) 40-minute static generation from LTX
+* [HF:nvidia/Cosmos3-Super-Image2Video](https://huggingface.co/nvidia/Cosmos3-Super-Image2Video) yi: "The transformer is 32B with a 32B reasoner"
+  "They trained it on around 400M youtube videos as well"
 * [HF:ScenemaAI/scenema-audio](https://huggingface.co/ScenemaAI/scenema-audio) LTX 2.3 based TTS
 * [X:haozhangml/2059820675599409278](https://x.com/haozhangml/status/2059820675599409278?s=46) We just made our dreamverse fully open sourced!
 * [GH:vita-epfl/EverAnimate](https://github.com/vita-epfl/EverAnimate) "it's SVI lora for WanAnimate basically" slmonker: "New toy from Svi team"
