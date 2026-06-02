@@ -627,7 +627,7 @@ Draken:
   "All modalities, t2v, i2v, i+a2v, v2v"; tested up to 90 seconds;
   "for v2v lora application, outpainting for example, the limit is how many video frames you can load from your source ... 2 minutes"
   work is ongoing on enhacing native context window nodes too, to which this is similar
-- [Fredblis](https://fredbliss.com/)
+- [Fredbliss](https://fredbliss.com/)
   - created his own audio looping node + lots of automation: "audio + image input + initial prompt + prompt schedule timestamps",
     looping workflow, automated prompt generation and timing:
     - [HF:fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context](https://huggingface.co/fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context) Audio-Only IC LoRA;
