@@ -1,5 +1,7 @@
 # News
 
+2026.06 [Bernini](bernini.md) released - edit model based on Wan 2.2
+
 2026.05 Direct to pixel image generation has started: [pid](extra-tools/pid.md)
 
 2026.05.07 [HF:RunDiffusion/Juggernaut-Z-Image/tree/main](https://huggingface.co/RunDiffusion/Juggernaut-Z-Image/tree/main) released
