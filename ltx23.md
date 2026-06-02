@@ -634,53 +634,56 @@ Draken:
 - [GH:kijai/ComfyUI-NativeLooping_testing](https://github.com/kijai/ComfyUI-NativeLooping_testing) experimental nodes for latent looping including `TensorForLoopOpen`
 - `LTXRetakeDesigner` is in the making
 
-### Fredbliss Node Packs, LoRA-s and WF-s
+### Fredbliss' Node Packs, LoRA-s and WF-s
 
 [Fredbliss](https://fredbliss.com/)
-- created his own audio looping node + lots of automation: "audio + image input + initial prompt + prompt schedule timestamps",
-  looping workflow, automated prompt generation and timing:
-  - [HF:fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context](https://huggingface.co/fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context) Audio-Only IC LoRA;
-    nodes to use ic-lora audio only: [GH:fblissjr/ComfyUI-AudioLoopHelper](https://github.com/fblissjr/ComfyUI-AudioLoopHelper),
-    trainer fork: [GH:fblissjr/LTX-2:audio-guidance-iclora-vtv](https://github.com/fblissjr/LTX-2/tree/audio-guidance-iclora-vtv);
-    "goal was: transfer identity/vibes of audio to scene solely through audio";
-    e.g. sound sample is supplied + text prompt; the text prompt contains different text to say;
-    yet original sound sample impacts all of voice, delivery ("vibe") and the look of the character
-  - [GH:fblissjr/ComfyUI-AudioLoopHelper](https://github.com/fblissjr/ComfyUI-AudioLoopHelper);
-    sample [WF](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent.json);
-  - [audio_driven_single_shot](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio_driven_single_shot.json) experimental wf to make heart beat to musing; same but looping:
-    [GH:fblissjr/ComfyUI-AudioLoopHelper:example_workflows/audio_reactive_loop.json](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio_reactive_loop.json)
-  - experiments with freezing audio or video selectively and generating the other:
-    - [GH:fblissjr/ComfyUI-AudioLoopHelper:.../audio-loop-music-video_latent_av_extension.json](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio-loop-music-video_latent_av_extension.json)
-    - [GH:fblissjr/ComfyUI-AudioLoopHelper:example_workflows/audio-loop-music-video_latent_av_inversion](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent_av_inversion.json)
-    - keyframe auto extract workflow here: [fblissjr/ComfyUI-AudioLoopHelper:example_workflows/experimental/audio-loop-music-video_latent_keyframe_autoextract](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio-loop-music-video_latent_keyframe_autoextract.json)
-    - [dialogue_replacement_guide.md](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/docs/guides/dialogue_replacement_guide.md)
-      heres the claude written docs written from all my context and code over the last few days working on this
-    - [dialogue_replacement_guide](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/docs/guides/dialogue_replacement_guide.md)
-  - old
-    - [GH:fblissjr/ComfyUI-AudioLoopHelper:experimental/audio-loop-music-video_latent_av_inversion](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio-loop-music-video_latent_av_inversion.json) /
-    - extension (frozen video, 2s audio): [GH:fblissjr/ComfyUI-AudioLoopHelper:example_workflows/experimental/audio-loop-music-video_latent_av_extension](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio-loop-music-video_latent_av_extension.json) (untested)
-    - keyframe (frozen audio, keyframe images): [GH:fblissjr/ComfyUI-AudioLoopHelper:example_workflows/audio-loop-music-video_latent_keyframe](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent_keyframe.json )
-    - docs / generic test cases:
-      - inversion (generate the audio from 2s of frozen audio + the full video w/o audio): [av_inversion_test_examples.md](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/working_docs/av_inversion_test_examples.md)
-      - keyframe: [keyframe_iter_anchor_design](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/working_docs/keyframe_iter_anchor_design.md)
-      - audioreactive: [audio_reactive_loop_design](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/working_docs/audio_reactive_loop_design.md)
-      - uses nodes in the repo + my sm89/rtx 4090 sage fork but that can be replaced with kjnodes sage attn or bypassed [GH:fblissjr/SageAttention-ada](https://github.com/fblissjr/SageAttention-ada)
-      - "step 1. 20 sec of the real video + 2s of frozen first two seconds of real video's audio... generate the audio with ltx and overlay on frozen video clip.
-        step 2: pass the audio generated from step 1 as frozen audio, using 3 keyframes as init + "two men talking" (just randomly picked 3 from the 20s video above here),
-        and generate the new video with audio from step 1."
-- created an extensive suite of Claude skills and other tooling to work both on code and workflows
-  - general skills and my philosophy for working with these tools:
-    [GH:fblissjr/fb-claude-skills:VISION.md](https://github.com/fblissjr/fb-claude-skills/blob/main/VISION.md)
-  - harness for building everything above for these nodes/workflows:
-    [GH:fblissjr/ComfyUI-AudioLoopHelper:.claude](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/.claude)
-    (including a crude inbox/email system i set up for audio loop claude and sageattn claude to communicate
-    with each other using fresh contexts)
-  - then most of this is for automating and eval'ing comfyui workflows because i hate creating and maintaining them:
-    [GH:fblissjr/ComfyUI-AudioLoopHelper:scripts](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/scripts)
-  - "testing / validating they do what they should be doing from a 'business rules' standpoint and a hard
-    'is this workflow wired correctly' standpoint:
-    [GH:fblissjr/ComfyUI-AudioLoopHelper:tests](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/tests)
-  - [GH:fblissjr/fb-claude-skills:skills/path-privacy](https://github.com/fblissjr/fb-claude-skills/tree/main/skills/path-privacy) privacy scrubber for LLM written code
+created his own audio looping node + lots of automation: "audio + image input + initial prompt + prompt schedule timestamps",
+looping workflow, automated prompt generation and timing:
+
+- [HF:fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context](https://huggingface.co/fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context) Audio-Only IC LoRA;
+  nodes to use ic-lora audio only: [GH:fblissjr/ComfyUI-AudioLoopHelper](https://github.com/fblissjr/ComfyUI-AudioLoopHelper),
+  trainer fork: [GH:fblissjr/LTX-2:audio-guidance-iclora-vtv](https://github.com/fblissjr/LTX-2/tree/audio-guidance-iclora-vtv);
+  "goal was: transfer identity/vibes of audio to scene solely through audio";
+  e.g. sound sample is supplied + text prompt; the text prompt contains different text to say;
+  yet original sound sample impacts all of voice, delivery ("vibe") and the look of the character
+- [GH:fblissjr/ComfyUI-AudioLoopHelper](https://github.com/fblissjr/ComfyUI-AudioLoopHelper);
+  sample [WF](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent.json);
+- [audio_driven_single_shot](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio_driven_single_shot.json) experimental wf to make heart beat to musing; same but looping:
+  [GH:fblissjr/ComfyUI-AudioLoopHelper:example_workflows/audio_reactive_loop.json](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio_reactive_loop.json)
+- experiments with freezing audio or video selectively and generating the other:
+  - [GH:fblissjr/ComfyUI-AudioLoopHelper:.../audio-loop-music-video_latent_av_extension.json](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio-loop-music-video_latent_av_extension.json)
+  - [GH:fblissjr/ComfyUI-AudioLoopHelper:example_workflows/audio-loop-music-video_latent_av_inversion](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent_av_inversion.json)
+  - keyframe auto extract workflow here: [fblissjr/ComfyUI-AudioLoopHelper:example_workflows/experimental/audio-loop-music-video_latent_keyframe_autoextract](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio-loop-music-video_latent_keyframe_autoextract.json)
+  - [dialogue_replacement_guide.md](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/docs/guides/dialogue_replacement_guide.md)
+    heres the claude written docs written from all my context and code over the last few days working on this
+  - [dialogue_replacement_guide](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/docs/guides/dialogue_replacement_guide.md)
+- old
+  - [GH:fblissjr/ComfyUI-AudioLoopHelper:experimental/audio-loop-music-video_latent_av_inversion](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio-loop-music-video_latent_av_inversion.json) /
+  - extension (frozen video, 2s audio): [GH:fblissjr/ComfyUI-AudioLoopHelper:example_workflows/experimental/audio-loop-music-video_latent_av_extension](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/experimental/audio-loop-music-video_latent_av_extension.json) (untested)
+  - keyframe (frozen audio, keyframe images): [GH:fblissjr/ComfyUI-AudioLoopHelper:example_workflows/audio-loop-music-video_latent_keyframe](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/audio-loop-music-video_latent_keyframe.json )
+  - docs / generic test cases:
+    - inversion (generate the audio from 2s of frozen audio + the full video w/o audio): [av_inversion_test_examples.md](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/working_docs/av_inversion_test_examples.md)
+    - keyframe: [keyframe_iter_anchor_design](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/working_docs/keyframe_iter_anchor_design.md)
+    - audioreactive: [audio_reactive_loop_design](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/blob/main/example_workflows/working_docs/audio_reactive_loop_design.md)
+    - uses nodes in the repo + my sm89/rtx 4090 sage fork but that can be replaced with kjnodes sage attn or bypassed [GH:fblissjr/SageAttention-ada](https://github.com/fblissjr/SageAttention-ada)
+    - "step 1. 20 sec of the real video + 2s of frozen first two seconds of real video's audio... generate the audio with ltx and overlay on frozen video clip.
+      step 2: pass the audio generated from step 1 as frozen audio, using 3 keyframes as init + "two men talking" (just randomly picked 3 from the 20s video above here),
+      and generate the new video with audio from step 1."
+
+Created an extensive suite of Claude skills and other tooling to work both on code and workflows
+
+- general skills and my philosophy for working with these tools:
+  [GH:fblissjr/fb-claude-skills:VISION.md](https://github.com/fblissjr/fb-claude-skills/blob/main/VISION.md)
+- harness for building everything above for these nodes/workflows:
+  [GH:fblissjr/ComfyUI-AudioLoopHelper:.claude](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/.claude)
+  (including a crude inbox/email system i set up for audio loop claude and sageattn claude to communicate
+  with each other using fresh contexts)
+- then most of this is for automating and eval'ing comfyui workflows because i hate creating and maintaining them:
+  [GH:fblissjr/ComfyUI-AudioLoopHelper:scripts](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/scripts)
+- "testing / validating they do what they should be doing from a 'business rules' standpoint and a hard
+  'is this workflow wired correctly' standpoint:
+  [GH:fblissjr/ComfyUI-AudioLoopHelper:tests](https://github.com/fblissjr/ComfyUI-AudioLoopHelper/tree/main/tests)
+- [GH:fblissjr/fb-claude-skills:skills/path-privacy](https://github.com/fblissjr/fb-claude-skills/tree/main/skills/path-privacy) privacy scrubber for LLM written code
 
 ### Alisson Pereira, LoRA-s
 
