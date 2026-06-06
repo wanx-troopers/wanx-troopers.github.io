@@ -1,5 +1,11 @@
 ﻿# Chronological News on LTS 2.3
 
+## 2026.06
+
+Echo is work based on LTX 2.3
+
+- a seemingly random related github repo [GH:smthemex/ComfyUI_JoyAI_Echo](https://github.com/smthemex/ComfyUI_JoyAI_Echo)
+
 ## 2026.05
 
 A bug confirmed in ComfyUI: ever since LTX 2.3 release when guides' strengths is set to any value other than 1 VRAM usage grows.

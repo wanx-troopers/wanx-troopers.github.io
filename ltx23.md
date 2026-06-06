@@ -795,7 +795,9 @@ Created an extensive suite of Claude skills and other tooling to work both on co
 - [HF:yuvraj108c/LTX-2.3-22b-IC-LoRA-Any-Trajectory-Instruction](https://huggingface.co/yuvraj108c/LTX-2.3-22b-IC-LoRA-Any-Trajectory-Instruction) porting Any Trajectory Instruction (ATI) to LTX 2.3
 - [HF:Lightricks/LTX-2.3-22b-IC-LoRA-LipDub](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-LipDub) from Lightricks to re-dub videos;
   [Drozbay](hidden-knowledge.md#drozbay) found it works much better combined with ID-Lora
-- [LiconStudio/LTX2.3-Mutiple-Subject-Reference](https://huggingface.co/LiconStudio/LTX2.3-Mutiple-Subject-Reference) comes with a comfy node [liconstudio/ComfyUI-Licon-MSR](https://github.com/liconstudio/ComfyUI-Licon-MSR)
+- [HF:LiconStudio/LTX-2.3-Multiple-Subject-Reference](https://huggingface.co/LiconStudio/LTX-2.3-Multiple-Subject-Reference),
+  [HF:LiconStudio/LTX2.3-Mutiple-Subject-Reference](https://huggingface.co/LiconStudio/LTX2.3-Mutiple-Subject-Reference)
+  comes with a comfy node [liconstudio/ComfyUI-Licon-MSR](https://github.com/liconstudio/ComfyUI-Licon-MSR)
 - animation LoRa-s
   - [CA:2634377/cyberpunk-edgerunners-style-lora-ltx-23?2957805 ](https://civitai.red/models/2634377/cyberpunk-edgerunners-style-lora-ltx-23?modelVersionId=2957805) by crinklypaper
     "I just put out an anime style lora for ltx, I trained it using my 90s style anime lora as a base. So it was 53K steps on the base-lora, then load from save state and 19.5k steps trained on top with a completely different style. its t2v"

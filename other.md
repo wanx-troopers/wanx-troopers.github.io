@@ -2,6 +2,8 @@
 
 ## Promising For Comfy
 
+* [GH:VAST-AI-Research/TripoSplat](https://github.com/VAST-AI-Research/TripoSplat) open source
+* [martayang.github.io/ONE-SHOT](https://martayang.github.io/ONE-SHOT/)
 * [arxiv.org/pdf/2606.02441](https://arxiv.org/pdf/2606.02441) another article on passing references into video generation model, Alisson Pireira experimenting with implementation
 * [descriptinc.github.io/ATS](https://descriptinc.github.io/ATS/) 40-minute static generation from LTX
 * [HF:nvidia/Cosmos3-Super-Image2Video](https://huggingface.co/nvidia/Cosmos3-Super-Image2Video) yi: "The transformer is 32B with a 32B reasoner"
@@ -46,7 +48,6 @@
 * [GH:myyzzzoooo/InsertAnywhere](https://github.com/myyzzzoooo/InsertAnywhere) model for adding objects into the video
 * [GH:houyuanchen111/UniVidX](https://github.com/houyuanchen111/UniVidX) Wan2.1-T2V-14B based experiment on AI video gens
 * [GH:csguoh/ReFIR](https://github.com/csguoh/ReFIR/tree/main)
-* [martayang.github.io/ONE-SHOT](https://martayang.github.io/ONE-SHOT/)
 
 ## Caution Against 1038lab
 

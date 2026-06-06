@@ -8,6 +8,11 @@ Dont use `--fast` ComfyUI startup param - locks up VRAM
 
 comfy-aimdo-0.4.4 available.
 
+comfy-kitchen needed to be updated to 0.2.9 fixes slow LTX exeuction with LoRAs when running quantized models
+> rattus made a proper stochastic rounding kernel so the lora application is faster and cheaper  
+> fp8 considered quant?  
+> yes
+
 ## 2026.04.25
 
 djbfilmz re RTX 6000 Pro:

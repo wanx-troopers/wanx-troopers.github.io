@@ -1,6 +1,7 @@
 ﻿# Bernini
 
-ByteDance released open weights for Bernini edit model based on Wan 2.2
+ByteDance released open weights for Bernini edit model based on Wan 2.2.
+Has high and low noise weights exactly like Wan 2.2.
 
 Original sources [bernini-ai.github.io](https://bernini-ai.github.io/),
 [HF:ByteDance/Bernini](https://huggingface.co/ByteDance/Bernini/tree/main)
@@ -30,7 +31,9 @@ Recommended:
 ![kj-wan-mem-effective-sage](screenshots/nodes/kj-wan-mem-effective-sage.webp)
 
 slmonker:
-> multi-angle ref image is working
+> multi-angle ref image is working  
+> high noise+lightx2v(strength=1) +low noise +lightx2v(wan2.1 t2v version ),3steps+3steps,high noise part cfg=1.5  
+> 4+4, `Patch Sage Attention KJ` wf: [slmonker-bernini-studio](workflows/bernini/slmonker-bernini-studio.json)
 
 Apparently Bernini has pure I2V capabilities as well, up to 161 frames
 
@@ -46,3 +49,11 @@ Apparently Bernini has pure I2V capabilities as well, up to 161 frames
 
 LDWorks David:
 > seems like with one sheet ref also works [several images on white background as one image]
+
+Stef:
+> Wan2.2 loras seem to work with Bernini  
+> Bernini can't do FFLF  with prompting alone and 2 reference images in i2v mode  
+> I use Bernini mostly for v2v + reference images
+
+JohnDopamine: [GH:CCpt5/ComfyUI-BerniniStudio](https://github.com/CCpt5/ComfyUI-BerniniStudio)
+> AIO Bernini + Ollama + Prompt preset node

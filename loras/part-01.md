@@ -7,6 +7,12 @@
 * [LoRa-s Part II](part-02.md)
 * [Both Ways](both-ways.md)
 
+## 2026.06
+
+NVFP4 Sparse versions of Lightx2V LoRA-s: [HF:lightx2v/Wan2.2-NVFP4-Sparse](https://huggingface.co/lightx2v/Wan2.2-NVFP4-Sparse/tree/main)
+
+Zabo: "I think they fixed some of the slow motion issues with this. I'm still testing it, but a lot better so far"
+
 ## 2025.12.17
 
 Purely experimental: add fastwan at 0.7 strength?...

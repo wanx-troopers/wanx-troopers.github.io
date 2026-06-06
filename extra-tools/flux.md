@@ -1,5 +1,9 @@
 # Flux Image Generation Models
 
+## 2026.06
+
+[GH:42lux/ComfyUI-42lux-Hildegard-Refiner](https://github.com/42lux/ComfyUI-42lux-Hildegard-Refiner) tile-based FLUX.2 Klein refiner
+
 ## 2026.05
 
 [GH:ethanfel/Comfyui-PainterKleinImageEdit](https://github.com/ethanfel/Comfyui-PainterKleinImageEdit)
