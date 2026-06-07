@@ -52,8 +52,24 @@ LDWorks David:
 
 Stef:
 > Wan2.2 loras seem to work with Bernini  
-> Bernini can't do FFLF  with prompting alone and 2 reference images in i2v mode  
-> I use Bernini mostly for v2v + reference images
+> I use Bernini mostly for v2v + reference images  
+
+> Bernini and first frame/last frame ... I could manage to do a FFLF by prompting.
+> Describe the starting image and mention it is "image0", describe the action and
+> how the final image looks like and mention it is "image1". Exemple of prompt:
+> "A soldier looking at a woman in image0 walks backwards, keeping eyes locked with
+> the woman and looking angry, and sits on the tree hunk behind him in image1.
+> The woman keeps her face turned towards the soldier." And indeed, the first frame
+> of the clip is my image0 and the last frame of the clip is my image1
 
 JohnDopamine: [GH:CCpt5/ComfyUI-BerniniStudio](https://github.com/CCpt5/ComfyUI-BerniniStudio)
-> AIO Bernini + Ollama + Prompt preset node
+> AIO Bernini + Ollama + Prompt preset node  
+> "replace the X with the Y from image0, image1, and image2"
+                                             
+Qwen3.6 35b was tested in ollama
+
+slmonker: [GH:AIMixer/ComfyUI-Bernini](https://github.com/AIMixer/ComfyUI-Bernini/tree/main) - all in Chinese? based on kj's wanvideowarpper "but why? core is so much faster"
+
+> is bernini lora possible or nah cause it has a new layer or something ?  
+> it has no new layers
+

@@ -46,4 +46,6 @@ Preview of future nodes to come utilizing Sam3.1 for segmentation and Sam3D for 
 
 `Sam3 Native Model Loader` node has been spotted in the wild.
 
+`SAM3 Video Track Node`, `SAM3 Tracks to Mask`, `SAM3 Trackes Preview`, `SAM3 Detect`
+
 Sam3 masking wf from djbfilmz: ![sam3-masking](workflows/sam3-masking.webp)
