@@ -4,6 +4,21 @@ The page needs a brush-up. Bugs referenced have been fixed or worked around. Sti
 
 ## 2026.06
 
+- [developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
+- [GH:woct0rdho/triton-windows](https://github.com/woct0rdho/triton-windows) not [GH:triton-lang/triton-windows](https://github.com/triton-lang/triton-windows)?
+- [GH:woct0rdho/SageAttention](https://github.com/woct0rdho/SageAttention) not [GH:sdbds/SageAttention-for-windows](https://github.com/sdbds/SageAttention-for-windows)
+
+> for portable make sure to read this part [GH:triton-lang/triton-windows#2-python-environment](https://github.com/triton-lang/triton-windows#2-python-environment)
+> the portable is the only catch on this being easy install
+
+> woct0rdho is the reason we even have proper triton supports on windows, trust his stuff above all else imo  
+> woct0rdho's triton and sage work without cuda-toolkit or msvc  
+> maybe some exceptions like cpu compile still needs libraries, but that's rare case
+
+Torch/CUDA:
+> I'm on 2.12+cu132 and it works  
+> and you don't need cuda-toolkit with those, everything needed is bundled
+
 Dont use `--fast` ComfyUI startup param - locks up VRAM
 
 comfy-aimdo-0.4.4 available.

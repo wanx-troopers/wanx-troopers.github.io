@@ -30,6 +30,11 @@ mxfp8 Bernini:
 Recommended:
 ![kj-wan-mem-effective-sage](screenshots/nodes/kj-wan-mem-effective-sage.webp)
 
+
+JohnDopamine: [GH:CCpt5/ComfyUI-BerniniStudio](https://github.com/CCpt5/ComfyUI-BerniniStudio)
+> AIO Bernini + Ollama + Prompt preset node  
+> "replace the X with the Y from image0, image1, and image2"
+
 slmonker:
 > multi-angle ref image is working  
 > high noise+lightx2v(strength=1) +low noise +lightx2v(wan2.1 t2v version ),3steps+3steps,high noise part cfg=1.5  
@@ -61,10 +66,6 @@ Stef:
 > the woman and looking angry, and sits on the tree hunk behind him in image1.
 > The woman keeps her face turned towards the soldier." And indeed, the first frame
 > of the clip is my image0 and the last frame of the clip is my image1
-
-JohnDopamine: [GH:CCpt5/ComfyUI-BerniniStudio](https://github.com/CCpt5/ComfyUI-BerniniStudio)
-> AIO Bernini + Ollama + Prompt preset node  
-> "replace the X with the Y from image0, image1, and image2"
                                              
 Qwen3.6 35b was tested in ollama
 

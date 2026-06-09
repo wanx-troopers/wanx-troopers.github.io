@@ -1,5 +1,7 @@
 # News
 
+2026.06 [SCAIL-2](wan-animates.md#scail-2) released
+
 2026.06 [Bernini](bernini.md) released - edit model based on Wan 2.2
 
 2026.05 Direct to pixel image generation has started: [pid](extra-tools/pid.md)

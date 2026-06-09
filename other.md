@@ -2,6 +2,7 @@
 
 ## Promising For Comfy
 
+* [davidcharatan.com/millivid](https://davidcharatan.com/millivid/) Hierarchical Latents for Long-Range Consistency in Video Generation
 * [GH:VAST-AI-Research/TripoSplat](https://github.com/VAST-AI-Research/TripoSplat) open source
 * [martayang.github.io/ONE-SHOT](https://martayang.github.io/ONE-SHOT/)
 * [arxiv.org/pdf/2606.02441](https://arxiv.org/pdf/2606.02441) another article on passing references into video generation model, Alisson Pireira experimenting with implementation
@@ -84,7 +85,7 @@ Caution is raised for all `1038lab` repositories.
 * 2025.12.23 NVidia has released a technology called NVFP4 for RTX50xx users; NVFP4 compatible adaptations of Wan 2.1 I2V 480 14B and Wan 2.1 T2V 1.3B have been made [available](https://huggingface.co/lightx2v/WanNVFP4); fast generations are expected
 
 
-* [gumroad.com:ciojz] blender bones compatible with OpenPose
+* [gumroad.com:ciojz](https://toyxyz.gumroad.com/l/ciojz) blender bones compatible with OpenPose
 * [GH:sumitchatterjee13/nuke-nodes-comfyui](https://github.com/sumitchatterjee13/nuke-nodes-comfyui) Nuke style nodes for ComfyUI
 * Comfy Native has got `Adjust Contrast` node
 

@@ -2,6 +2,36 @@
 
 Wan Animate and MoCha serve similar goals.
 
+See also: [Bernini](bernini.md) which can perform character replacements too among other video transformations.
+
+## SCAIL 2
+
+June 2026 SCAL 2 has been released and support merged into ComfyUI native.
+
+[HF:Comfy-Org/SCAIL-2:diffusion_models](https://huggingface.co/Comfy-Org/SCAIL-2/tree/main/diffusion_models)
+
+> it's very versatile, works with all kinds of pose rigs or none at all  
+> extension like WanAnimate, so don't have to use the super slow context windowing
+
+> the sam3d-body code is quite extensive so it's taken a while, but it's also almost in the core....
+> fully dependency free implementation; but you don't need it to use this model, just sam3 that we already have
+
+> will also work with multiple people in the shoot? yes
+
+WF: [kj-Wan21_SCAIL2_Testing](workflows/scail/kj-Wan21_SCAIL2_Testing.json)
+
+slmonker about reference image:
+> for the replacement task of scail2, better to use black bg image
+
+> will it not OOM?  
+> If it's a simple video you can increase the detection interval ...
+> The detection on every frame slows it down but it's needed when there's any occlusion etc.
+> Or if object appears later
+
+`WanSCAILToVideo` node
+
+>  it uses colored masks to distinguish the different people
+
 ## 2026.05
 
 EverAnimate released. Seems to be a LoRA aimed at improving consistency when using WanAnimate.
