@@ -812,7 +812,9 @@ Created an extensive suite of Claude skills and other tooling to work both on co
   - "video restoration", aritfiact fixing?
     - [HF:Zlikwid/LTX_2.3_Upscale_IC_Lora](https://huggingface.co/Zlikwid/LTX_2.3_Upscale_IC_Lora)
     - [HF:joyfox/LTX2.3-ICEdit-Insight](https://huggingface.co/joyfox/LTX2.3-ICEdit-Insight) 
-
+- TheBurgstall
+  - [HF:TheBurgstall/VR-360-Outpaint-LTX2.3-IC-LoRA](https://huggingface.co/TheBurgstall/VR-360-Outpaint-LTX2.3-IC-LoRA) outpaint LoRA for 360° equirectangular projection for immersive/VR viewing;
+    note: [GH:ProGamerGov/html-360-viewer](https://github.com/ProGamerGov/html-360-viewer) could be used to view
 
 ### Less Verified LoRa-s
 

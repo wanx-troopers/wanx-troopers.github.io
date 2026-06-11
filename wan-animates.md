@@ -13,6 +13,13 @@ Now extracted as LoRA:
 > it can improve things like hands and faces in the results;
 > experiment with different strenghts as it may not apply exactly as intended at 1.0 in comfy
 
+[GH:kijai/ComfyUI-NativeLooping_testing](https://github.com/kijai/ComfyUI-NativeLooping_testing) contains looping nodes
+which may later be merged to comfyui main. These nodes enable looping workflows for SCAIL-2
+constructed like this
+![kj-scail2-looping](workflows/scail/kj-scail2-looping.png)
+
+Actual WF: [Wan21_SCAIL2_looping_test_KJ_01](workflows/scail/Wan21_SCAIL2_looping_test_KJ_01.json)
+
 ### SCAIL-2 Main
 
 June 2026 SCAL 2 has been released and support merged into ComfyUI native.
@@ -45,14 +52,7 @@ slmonker about reference image:
 
 >  it uses colored masks to distinguish the different people
 
-## 2026.05
-
-EverAnimate released. Seems to be a LoRA aimed at improving consistency when using WanAnimate.
-
-djbfilmz:
-> I used Sapiens for posing with Animate and found it to be the best, followed by SDpose, then DWpose.
-
-## Universal Pose Scaling
+## 2025 Universal Pose Scaling
 
 A common issue with this series of models is that the proportions of the character
 in the video where the pose is being extracted from differ from the proportions
@@ -67,8 +67,14 @@ it has been named `Pose Detection OneToAll Animation`.
 ![kj-one-to-all-pose-alignment](screenshots/kj-one-to-all-pose-alignment.webp)
 [kj-one-to-all-pose-alignment](screenshots/kj-one-to-all-pose-alignment.webp)
 
+## SCAIL-1
 
-## SCAIL
+### 2026.05
+
+EverAnimate released. Seems to be a LoRA aimed at improving consistency when using WanAnimate.
+
+djbfilmz:
+> I used Sapiens for posing with Animate and found it to be the best, followed by SDpose, then DWpose.
 
 Official git [repo](https://github.com/zai-org/SCAIL) - pls. put starts to make it easier for the team to obtain more resources for future training!
 

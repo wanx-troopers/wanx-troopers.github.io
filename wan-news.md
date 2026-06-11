@@ -1,5 +1,9 @@
 # Wan News
 
+## 2026.06
+
+John Dopamine offered his [WanLooperDesigner](directors.md#wanlooperdesigner) director-style node for SVI2.2 Pro extensions for Wan capable of limited use of Bernini.
+
 ## 2026.05
 
 [HF:lightx2v/Wan2.2-NVFP4-Sparse](https://huggingface.co/lightx2v/Wan2.2-NVFP4-Sparse)

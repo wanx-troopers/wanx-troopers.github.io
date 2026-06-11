@@ -71,6 +71,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
   * [Flux 2](extra-tools/flux.md)
   * [HiDream O1](extra-tools/hidream.md)
 * Other Tools
+  * [Director Nodes](directors.md)
   * [Image Upscalers and Detailers](upscalers-detailers-image.md)
   * [Video Upscalers and Detailers](upscalers-detailers-video.md)
   * [Segmentation](extra-tools/segmentation.md)

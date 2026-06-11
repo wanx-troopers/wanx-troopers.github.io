@@ -2,6 +2,7 @@
 
 ## Promising For Comfy
 
+* [GH:https://tin2tin.github.io/Pallaidium](https://tin2tin.github.io/Pallaidium/) [YT:jmSZlEV_ZLw](https://www.youtube.com/watch?v=jmSZlEV_ZLw) AI film-making/prototyping studio based on Blender
 * [davidcharatan.com/millivid](https://davidcharatan.com/millivid/) Hierarchical Latents for Long-Range Consistency in Video Generation
 * [GH:VAST-AI-Research/TripoSplat](https://github.com/VAST-AI-Research/TripoSplat) open source
 * [martayang.github.io/ONE-SHOT](https://martayang.github.io/ONE-SHOT/)
