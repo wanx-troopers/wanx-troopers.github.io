@@ -607,6 +607,7 @@ Draken:
 - Hicho's [ltx-2.3-simple-v2v](workflows/ltx/hicho-ltx-2.3-simple-v2v.json) prob. the simplest WF involving a depth map
 - Ablejone's aka [Drozbay](hidden-knowledge.md#drozbay)'s LTX 2.3 ClowShark workflow: [droz_LTX-2_SharkSampling_v7.1](workflows/ltx/droz_LTX-2_SharkSampling_v7.1.png)
 - [Ckinpdx](https://github.com/ckinpdx)'s [LoopingSamper WF](workflows/ltx/ckinpdx-looping-sampler.png)
+- N0NSens's [supplying-both-video-and-audio-latent-guides](screenshots/ltx/supplying-both-video-and-audio-latent-guides.webp)
 
 ## Node Packs, LoRA-s and WF-s
 
@@ -798,6 +799,7 @@ Created an extensive suite of Claude skills and other tooling to work both on co
 - [HF:LiconStudio/LTX-2.3-Multiple-Subject-Reference](https://huggingface.co/LiconStudio/LTX-2.3-Multiple-Subject-Reference),
   [HF:LiconStudio/LTX2.3-Mutiple-Subject-Reference](https://huggingface.co/LiconStudio/LTX2.3-Mutiple-Subject-Reference)
   comes with a comfy node [liconstudio/ComfyUI-Licon-MSR](https://github.com/liconstudio/ComfyUI-Licon-MSR)
+  "The reference image resolution must exactly match the target video resolution"
 - animation LoRa-s
   - [CA:2634377/cyberpunk-edgerunners-style-lora-ltx-23?2957805 ](https://civitai.red/models/2634377/cyberpunk-edgerunners-style-lora-ltx-23?modelVersionId=2957805) by crinklypaper
     "I just put out an anime style lora for ltx, I trained it using my 90s style anime lora as a base. So it was 53K steps on the base-lora, then load from save state and 19.5k steps trained on top with a completely different style. its t2v"

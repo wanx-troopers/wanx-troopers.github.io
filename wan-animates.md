@@ -4,11 +4,22 @@ Wan Animate and MoCha serve similar goals.
 
 See also: [Bernini](bernini.md) which can perform character replacements too among other video transformations.
 
-## SCAIL 2
+## SCAIL-2
+
+### 2026.06.11
+
+Now extracted as LoRA:
+[HF:Comfy-Org/SCAIL-2:wan2.1_SCAIL_2_DPO_lora_bf16](https://huggingface.co/Comfy-Org/SCAIL-2/blob/main/loras/wan2.1_SCAIL_2_DPO_lora_bf16.safetensors)
+> it can improve things like hands and faces in the results;
+> experiment with different strenghts as it may not apply exactly as intended at 1.0 in comfy
+
+### SCAIL-2 Main
 
 June 2026 SCAL 2 has been released and support merged into ComfyUI native.
 
 [HF:Comfy-Org/SCAIL-2:diffusion_models](https://huggingface.co/Comfy-Org/SCAIL-2/tree/main/diffusion_models)
+
+Important note on masks and colors: [GH:zai-org/SCAIL-2#mask-semantics ](https://github.com/zai-org/SCAIL-2#mask-semantics)
 
 > it's very versatile, works with all kinds of pose rigs or none at all  
 > extension like WanAnimate, so don't have to use the super slow context windowing

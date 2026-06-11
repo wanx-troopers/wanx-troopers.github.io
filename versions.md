@@ -17,6 +17,11 @@ Wan Chunk, WanVideo Mem are the other speed-up nodes.
 
 > GPU? 5090 Then use mxfp8
 
+> 3090?  
+> int8 (rowwise or conv rot) would be the best one to use, dunno if there's one yet though;
+> mxfp8 is slower than the simple fp8 scaled but has better quality on that card;
+> fp16 with fp16 fast accumulation might just be fine too if rest of your system can handle the offloading
+
 ## 2026.06.09
 
 - [developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
