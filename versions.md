@@ -2,7 +2,22 @@
 
 The page needs a brush-up. Bugs referenced have been fixed or worked around. Still might be useful info.
 
-## 2026.06
+## 2026.06.10
+
+`Patch Triton VAE` from `KJNodes` - less VRAM and faster decode on 4090.
+
+Wan Chunk, WanVideo Mem are the other speed-up nodes.
+
+> sageattention never actually utilized it's quantization to reduce VRAM, they just focused on speed
+> so what I've done is fill that gap
+
+> also without the ffn chunking it wouldn't matter on sage, because ffn would be the peak
+
+> note that you still need to enable sage normally even with this nodez
+
+> GPU? 5090 Then use mxfp8
+
+## 2026.06.09
 
 - [developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
 - [GH:woct0rdho/triton-windows](https://github.com/woct0rdho/triton-windows) not [GH:triton-lang/triton-windows](https://github.com/triton-lang/triton-windows)?

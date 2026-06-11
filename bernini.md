@@ -6,10 +6,12 @@ Has high and low noise weights exactly like Wan 2.2.
 Original sources [bernini-ai.github.io](https://bernini-ai.github.io/),
 [HF:ByteDance/Bernini](https://huggingface.co/ByteDance/Bernini/tree/main)
 
-[HF:Kijai/WanVideo_comfy_fp8_scaled/tree/main/Bernini](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main/Bernini);
-early wf: [bernini_testing_01](workflows/wan/kj-bernini_testing_01.json);
-draft PR for native support: [PR#14216](https://github.com/Comfy-Org/ComfyUI/pull/14216)
-as of 2026.06.01 not merged yet. Use `Bernini Conditioning` node.
+- [HF:Kijai/WanVideo_comfy_fp8_scaled/tree/main/Bernini](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main/Bernini);
+- early wf: [bernini_testing_01](workflows/wan/kj-bernini_testing_01.json)
+- wf: [lucifer-Bernini_testing_video_edit_with reference](workflows/bernini/lucifer-Bernini_testing_video_edit_with reference.json)
+
+Change merged to main in ComfyUI.
+Use `Bernini Conditioning` node.
 
 > when you edit a video, the WHOLE video is added to the sequence the model processes
 > that doubles the compute needed
@@ -46,6 +48,22 @@ Apparently Bernini has pure I2V capabilities as well, up to 161 frames
 
 ![bernini-prompts](screenshots/bernini/bernini-prompts.webp)
 
+| task_type | system prompt (prepended to T5 text) |
+|---|---|
+| `default` | You are a helpful assistant. |
+| `t2i` | You are a helpful assistant specialized in text-to-image generation. |
+| `t2v` | You are a helpful assistant specialized in text-to-video generation. |
+| `i2i` | You are a helpful assistant specialized in image editing. |
+| `r2i` | You are a helpful assistant specialized in subject-to-image generation. |
+| `i2v` | You are a helpful assistant specialized in image-to-video generation. |
+| `v2v` | You are a helpful assistant specialized in video editing. |
+| `r2v` | You are a helpful assistant specialized in subject-to-video generation. |
+| `vi2v` | You are a helpful assistant specialized in video editing on content propagation. |
+| `rv2v` | You are a helpful assistant specialized in video editing with reference. |
+| `ads2v` | You are a helpful assistant specialized in ads insertion. |
+| `vrc2v` | You are a helpful assistant for editing. You may need to adjust the subject's action or position. |
+| `mv2v` | You are a helpful assistant for editing. You might need to adjust the video's style, lighting, colors, textures, and the subject's pose or action. |
+
 ![bernini-conditioning](screenshots/bernini/bernini-conditioning.webp)
 
 > the reference can be larger than the gen even since it's added as tokens anyway
@@ -74,3 +92,13 @@ slmonker: [GH:AIMixer/ComfyUI-Bernini](https://github.com/AIMixer/ComfyUI-Bernin
 > is bernini lora possible or nah cause it has a new layer or something ?  
 > it has no new layers
 
+## 190Gb Model
+
+Funnily enough it seems fully over 190Gb FP32 Bernini weights have been made public on [HF:ByteDance/Bernini-Diffusers:bernini](https://huggingface.co/ByteDance/Bernini-Diffusers/tree/main/bernini).
+"it's 7B qwen VL 2.5 + Wan 2.2 in fp32"
+
+> hmm the planner is looking better;
+> it is not prompt enchancer, there's projector that projects it's output to the T5 size
+> so potentially it replaces/modifies T5 embeds
+
+> the qwenVL seems finetuned a bit... not sure how important that is, could maybe just make a lora

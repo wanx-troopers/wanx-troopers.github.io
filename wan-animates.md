@@ -18,7 +18,9 @@ June 2026 SCAL 2 has been released and support merged into ComfyUI native.
 
 > will also work with multiple people in the shoot? yes
 
-WF: [kj-Wan21_SCAIL2_Testing](workflows/scail/kj-Wan21_SCAIL2_Testing.json)
+- WF part of this merged [PR#14373](https://github.com/Comfy-Org/ComfyUI/pull/14373)
+- WF: [kj-Wan21_SCAIL2_Testing](workflows/scail/kj-Wan21_SCAIL2_Testing.json)
+- Unmerged [PR#14394](https://github.com/Comfy-Org/ComfyUI/pull/14394) including WF - improves context windows support for SCAIL-2
 
 slmonker about reference image:
 > for the replacement task of scail2, better to use black bg image

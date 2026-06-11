@@ -49,3 +49,6 @@ Preview of future nodes to come utilizing Sam3.1 for segmentation and Sam3D for 
 `SAM3 Video Track Node`, `SAM3 Tracks to Mask`, `SAM3 Trackes Preview`, `SAM3 Detect`
 
 Sam3 masking wf from djbfilmz: ![sam3-masking](workflows/sam3-masking.webp)
+
+> cant we use sam 3 insted of sam 3.1?  
+> why? they perform about the same, 3.1 better with multiple people
