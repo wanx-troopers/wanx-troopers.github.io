@@ -828,6 +828,9 @@ Created an extensive suite of Claude skills and other tooling to work both on co
 
 - [HF:MachineDelusions/LTX-2_Image2Video_Adapter_LoRa](https://huggingface.co/MachineDelusions/LTX-2_Image2Video_Adapter_LoRa) LoRa for LTX 2 which aimed to improve I2V generations and which has been shown to be useful with LTX 2.3
 - huh a Wan LoRa used in conjunction with LTX wf-s?.. [HF:Evados/DiffSynth-Studio-Lora-Wan2.1-ComfyUI](https://huggingface.co/Evados/DiffSynth-Studio-Lora-Wan2.1-ComfyUI/blob/main/dg_wan2_1_v1_3b_lora_extra_noise_detail_motion.safetensors)
+- [HF:Lightricks/LTX-2-19b-LoRA-Camera-Control-Static](https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Static) LTX 2 LoRA for locking camera;
+  RuneX suggested to augment with prompt: :Steady camera.  Cinematic shot,  clouds drifting slowly at low altitude above the houses, wind in the air that the vegatation follows.
+  The camera holds perfectly still, steady camera at same angle throughout"
 
 ## Workflows and Workflow Collections
 

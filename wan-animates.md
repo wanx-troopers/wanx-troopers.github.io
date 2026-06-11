@@ -52,6 +52,8 @@ slmonker about reference image:
 
 >  it uses colored masks to distinguish the different people
 
+Draken: "scail2 is such a good example of, 'just skip the whole trying to make a skeleton from the input, just use the input'"
+
 ## 2025 Universal Pose Scaling
 
 A common issue with this series of models is that the proportions of the character
