@@ -11,6 +11,8 @@ This page contains additional/advanced examples.
 - [Dancer](screenshots/drozbay_vacedancer_v1.png) - `DWPose Estimator` and `Depth Anything V2` as 2 separate VACE control videos
 - [Falling Into The Water](workflows/droz_vace_reference_and_canny_v1.png) - `Canny Edge` limited by depth masking: "keep the outlines, ... don't ... details inside the objects"
 
+Seems used in this video on swapping a car: [YT:QNmofff1q-0](https://www.youtube.com/watch?v=QNmofff1q-0)
+
 Note: `WanVacePhantomDualV2` from `WanVaceAdvanced` is compatible with Phantom but not linked to it otherwise.
 `vace_reference` and `phantom_images` on this node are fundamentally different: "they go to different model layers and they are treated differently".
 

@@ -5,6 +5,14 @@
 > Q: is there an easy way to merge loras with ltxv23 distilled model?  
 > prab100 A: There is merge_lora_with_model in musbubi tuner ltx fork. Donno if it works with distilled. 
 
+> Wan runs on fp16 [not bf16]  
+> fp16 is faster (with the fast accum) and better than bf16 when it works  
+> bf16 is safer and many models require using it
+
+> 5090 can run on fp8 or mxfp8 which is lot faster
+
+> GGUF is kinda pointless format for diffusion models
+
 ## 2026.05
 
 Script to convert LoRa-s to comfy format by renaming keys, from Gleb Tretyak: [convert_to_comfy_lora.py](bobs/convert_to_comfy_lora.py).

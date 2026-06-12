@@ -6,9 +6,11 @@ Has high and low noise weights exactly like Wan 2.2.
 Original sources [bernini-ai.github.io](https://bernini-ai.github.io/),
 [HF:ByteDance/Bernini](https://huggingface.co/ByteDance/Bernini/tree/main)
 
-- [HF:Kijai/WanVideo_comfy_fp8_scaled/tree/main/Bernini](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main/Bernini);
+- mxfp8: [HF:Kijai/WanVideo_comfy_fp8_scaled/tree/main/Bernini](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main/Bernini)
+- [HF:Comfy-Org/Bernini-R:diffusion_models](https://huggingface.co/Comfy-Org/Bernini-R/tree/main/diffusion_models) R for "renderer" e.g. no [MLLM](bernini.md#bernini-mllm)
 - early wf: [bernini_testing_01](workflows/wan/kj-bernini_testing_01.json)
 - wf: [lucifer-Bernini_testing_video_edit_with reference](workflows/bernini/lucifer-Bernini_testing_video_edit_with reference.json)
+- wf in [PR#14216](https://github.com/Comfy-Org/ComfyUI/pull/14216)
 
 Change merged to main in ComfyUI.
 Use `Bernini Conditioning` node.
@@ -25,13 +27,13 @@ Use `Bernini Conditioning` node.
 
 > 144 frames at 24fps
 
-mxfp8 Bernini:
-[HF:Kijai/WanVideo_comfy_fp8_scaled:Bernini/Wan22_Bernini_HIGH_mxfp8](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/blob/main/Bernini/Wan22_Bernini_HIGH_mxfp8.safetensors)
-[HF:Kijai/WanVideo_comfy_fp8_scaled/blob/main/Bernini/Wan22_Bernini_LOW_mxfp8](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/blob/main/Bernini/Wan22_Bernini_LOW_mxfp8.safetensors)
+djbfilmz:
+> I tested 400 frames with Bernini and it worked ... Resolution was half-HD (just below 720p) ... i2v
 
 Recommended:
 ![kj-wan-mem-effective-sage](screenshots/nodes/kj-wan-mem-effective-sage.webp)
 
+Re fps: "possibly it's better to run the model at 16 fps"
 
 JohnDopamine: [GH:CCpt5/ComfyUI-BerniniStudio](https://github.com/CCpt5/ComfyUI-BerniniStudio)
 > AIO Bernini + Ollama + Prompt preset node  
@@ -84,6 +86,11 @@ Stef:
 > the woman and looking angry, and sits on the tree hunk behind him in image1.
 > The woman keeps her face turned towards the soldier." And indeed, the first frame
 > of the clip is my image0 and the last frame of the clip is my image1
+
+> there are unexpected surprises with Bernini which is theoratically t2v: my i2v lora works, my t2v lora doesn't. Mystery
+
+> It doesn't like having only one ref image in i2v, it works better if you feed it with 2-3 images or even more.
+> And you have to mention them in the prompt as image0, image1, etc. Start your prompt with something like "the scene starts with image0 depicting..." or something like that
                                              
 Qwen3.6 35b was tested in ollama
 
@@ -91,6 +98,34 @@ slmonker: [GH:AIMixer/ComfyUI-Bernini](https://github.com/AIMixer/ComfyUI-Bernin
 
 > is bernini lora possible or nah cause it has a new layer or something ?  
 > it has no new layers
+
+BNP4535353:
+
+> to ensure the minimum quality requirement, the long side can be set to 1536  
+> 536x1024 121f, took about 9 minutes, and the result, after upscaling optimization, is production-ready
+
+> the main cause of problems for me is when the total frame count exceeds 121, which leads to issues like faded colors and jittery motion
+
+John Dopamine:
+> I find I2V is really dependant on length of prompt.....if your prompt is long it can drop the reference frame and use something similar but not the exact start frame
+
+[Drozbay](hidden-knowledge.md#drozbay):
+> Context windows always do better with strong control signals that are consistently strong throughout the whole video. eg. depth map + reference, source video + edit + reference, etc
+
+vs SCAIL-2
+> Bernini isn't trained to do pose control, it can work through the edit feature, but it's not pose control model
+
+## Bernini MLLM
+
+Apparently MLLM - multmodal.. was released alongside Bernini. However no work has been on it within the context of ComfyUI.
+
+> it's [very] complicated  
+> I had it running but it just makes outputs worse
+
+> the full pipeline they use is so ... heavy APG with 3 model passes or something per step  
+> so imagine Bernini with full steps and 3x slower than when using lightx2v
+
+> the MLLM itself isn't too heavy, maybe ~10-20 secs each time you change prompt
 
 ## 190Gb Model
 

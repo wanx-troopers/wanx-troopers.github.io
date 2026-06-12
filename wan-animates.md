@@ -18,6 +18,10 @@ which may later be merged to comfyui main. These nodes enable looping workflows 
 constructed like this
 ![kj-scail2-looping](workflows/scail/kj-scail2-looping.png)
 
+> The loop nodes don't really do anything different than just doing the extension with multiple sampler groups does, just makes it cleaner to do
+
+> pose end setting ... should work with 1.0, it's more a inference time saving setting as you really don't need the last steps to use the pose
+
 Actual WF: [Wan21_SCAIL2_looping_test_KJ_01](workflows/scail/Wan21_SCAIL2_looping_test_KJ_01.json)
 
 ### SCAIL-2 Main
@@ -26,7 +30,15 @@ June 2026 SCAL 2 has been released and support merged into ComfyUI native.
 
 [HF:Comfy-Org/SCAIL-2:diffusion_models](https://huggingface.co/Comfy-Org/SCAIL-2/tree/main/diffusion_models)
 
-Important note on masks and colors: [GH:zai-org/SCAIL-2#mask-semantics ](https://github.com/zai-org/SCAIL-2#mask-semantics)
+Important note on masks and colors: [GH:zai-org/SCAIL-2#mask-semantics](https://github.com/zai-org/SCAIL-2#mask-semantics)
+
+Nodes:
+- `WanSCAILToVideo`
+- `Create SCAIL-2 Colored Mask`
+- `WanAnimatePlus SCAIL_2 Embeds` from [GH:wuwukaka/ComfyUI-WanAnimatePlus](https://github.com/wuwukaka/ComfyUI-WanAnimatePlus)
+
+>  it uses colored masks to distinguish the different people
+
 
 > it's very versatile, works with all kinds of pose rigs or none at all  
 > extension like WanAnimate, so don't have to use the super slow context windowing
@@ -40,6 +52,18 @@ Important note on masks and colors: [GH:zai-org/SCAIL-2#mask-semantics ](https:/
 - WF: [kj-Wan21_SCAIL2_Testing](workflows/scail/kj-Wan21_SCAIL2_Testing.json)
 - Unmerged [PR#14394](https://github.com/Comfy-Org/ComfyUI/pull/14394) including WF - improves context windows support for SCAIL-2
 
+[Drozbay](hidden-knowledge.md#drozbay):
+> `Wan Context Windows (Manual)`
+> standard 20ish frame overlap for 81 frames;  
+> context_overlap: 20 or 24  
+> context_schedule: standard_uniform  
+> freenoise: true  
+> freenoise is probably always good and should probably be default on
+
+on Context Windows vs extensions:
+> if it's like WanAnimate it's the only choice after some length anyway;
+> the extensions can't hold the full quality
+
 slmonker about reference image:
 > for the replacement task of scail2, better to use black bg image
 
@@ -48,11 +72,21 @@ slmonker about reference image:
 > The detection on every frame slows it down but it's needed when there's any occlusion etc.
 > Or if object appears later
 
-`WanSCAILToVideo` node
-
->  it uses colored masks to distinguish the different people
-
 Draken: "scail2 is such a good example of, 'just skip the whole trying to make a skeleton from the input, just use the input'"
+
+## SCAIL-2 Multiple References
+
+Up to 5 including one for background. Views of the character from different angles are ok as separate images.
+Slmonker's wf: [slmonker-scail2-multi-ref-testing](workflows/scail/slmonker-scail2-multi-ref-testing.json).
+Above wf requires: [GH:wuwukaka/ComfyUI-WanAnimatePlus](https://github.com/wuwukaka/ComfyUI-WanAnimatePlus).
+Recommended specifically to use [HF:Kijai/WanVideo_comfy:main/umt5-xxl-enc-fp8_e4m3fn](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/umt5-xxl-enc-fp8_e4m3fn.safetensors).
+
+![slmonker-scail-2-multiple-ref](screenshots/nodes/scail/slmonker-scail-2-multiple-ref.webp)
+
+> seems working
+
+PhoenixRisen:
+> You have to match the size and location [of reference image to 1st frame of driving video; when using SCAIL-2 for replacement]
 
 ## 2025 Universal Pose Scaling
 
@@ -68,6 +102,12 @@ it has been named `Pose Detection OneToAll Animation`.
 
 ![kj-one-to-all-pose-alignment](screenshots/kj-one-to-all-pose-alignment.webp)
 [kj-one-to-all-pose-alignment](screenshots/kj-one-to-all-pose-alignment.webp)
+
+## Vs Bernini
+
+> SCAIL doesn't use start image so it works way better, the issue is just the background needing to pretty much be static, no camera moves, and it's S L O W  
+> though in replace mode where background is also driven it should be fine;
+> it's easily 3-5 time slower than normal gen of same length
 
 ## SCAIL-1
 

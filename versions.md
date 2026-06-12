@@ -2,11 +2,13 @@
 
 The page needs a brush-up. Bugs referenced have been fixed or worked around. Still might be useful info.
 
-## 2026.06.10
+## 2026.06 Speed-Up Nodes
 
 `Patch Triton VAE` from `KJNodes` - less VRAM and faster decode on 4090.
 
 Wan Chunk, WanVideo Mem are the other speed-up nodes.
+
+## 2026.06.10
 
 > sageattention never actually utilized it's quantization to reduce VRAM, they just focused on speed
 > so what I've done is fill that gap
