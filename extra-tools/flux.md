@@ -4,6 +4,14 @@
 
 [GH:42lux/ComfyUI-42lux-Hildegard-Refiner](https://github.com/42lux/ComfyUI-42lux-Hildegard-Refiner) tile-based FLUX.2 Klein refiner
 
+Nekodificator:
+- [YT:8wBXI-QCy0w](https://youtu.be/8wBXI-QCy0w) Klein tools by Nekodificator
+- [CA:2684849/nkd-haze-slider](https://civitai.com/models/2684849/nkd-haze-slider)
+- [CA:2620811/nkd-focal-length-slider](https://civitai.com/models/2620811/nkd-focal-length-slider)
+
+Other LoRAs:
+- [HF:gilfoyle0813/flux2_klein_9b_depth_control](https://huggingface.co/gilfoyle0813/flux2_klein_9b_depth_control)
+
 ## 2026.05
 
 [GH:ethanfel/Comfyui-PainterKleinImageEdit](https://github.com/ethanfel/Comfyui-PainterKleinImageEdit)

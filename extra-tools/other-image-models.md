@@ -3,6 +3,10 @@
 A number of image generation models are being released.
 This website doesn't go deep into details but aims to at least list them.
 
+## Ideogram
+
+Ideogram is a powerful model but it is released under a non-commercial license
+
 ## MS Lens
 
 [HF:microsoft/Lens](https://huggingface.co/microsoft/Lens)

@@ -1,12 +1,12 @@
 # News
 
+2026.06 [HF:RunDiffusion/Juggernaut-Z-Image/tree/main](https://huggingface.co/RunDiffusion/Juggernaut-Z-Image/tree/main) and [HF:RunDiffusion/Juggernaut-Z-Image-Fast](https://huggingface.co/RunDiffusion/Juggernaut-Z-Image-Fast) released
+
 2026.06 [SCAIL-2](wan-animates.md#scail-2) released
 
 2026.06 [Bernini](bernini.md) released - edit model based on Wan 2.2
 
 2026.05 Direct to pixel image generation has started: [pid](extra-tools/pid.md)
-
-2026.05.07 [HF:RunDiffusion/Juggernaut-Z-Image/tree/main](https://huggingface.co/RunDiffusion/Juggernaut-Z-Image/tree/main) released
 
 2026.04.26 Kijai released experimental implementation for [Sapiens2](tools-list.md#sapiens2) pose detection - faster than sd-pose
 

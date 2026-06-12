@@ -115,6 +115,13 @@ John Dopamine:
 vs SCAIL-2
 > Bernini isn't trained to do pose control, it can work through the edit feature, but it's not pose control model
 
+> what's suitable lightx for bernini?  
+> djbfilmz: I used 1030 on high and 480 rank 64 on low and it worked fine for me
+
+> devnullblackcat: Wondering about different samplers to try. I have been using dpmpp_sde_gpu and beta for quite a while, curious what others use.  
+> djbfilmz: I ... did a couple tests. I think dpmpp-sde is good, alsso euler, and res-multi were good.  
+> scf: isn't this i2v? In workflows I found they use t2v loras
+
 ## Bernini MLLM
 
 Apparently MLLM - multmodal.. was released alongside Bernini. However no work has been on it within the context of ComfyUI.

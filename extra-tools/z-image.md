@@ -6,9 +6,10 @@
 - [LLM Nodes](llm-nodes.md)
 - [LLM Prompts](llm-prompts.md)
 
-## 2026.05
+## 2026.05-2026.06
 
-[HF:RunDiffusion/Juggernaut-Z-Image/tree/main](https://huggingface.co/RunDiffusion/Juggernaut-Z-Image/tree/main) released.
+[HF:RunDiffusion/Juggernaut-Z-Image-Fast](https://huggingface.co/RunDiffusion/Juggernaut-Z-Image-Fast) released.
+[HF:RunDiffusion/Juggernaut-Z-Image](https://huggingface.co/RunDiffusion/Juggernaut-Z-Image/tree/main) released.
 [Juggernaut Prompt Guide](https://www.rundiffusion.com/juggernaut-z-prompt-guide?utm_source=huggingface&utm_medium=model_card&utm_campaign=juggernaut_z_v1&utm_content=prompt_guide_badge).
 
 "luminescent strands" for lense distortion and flares

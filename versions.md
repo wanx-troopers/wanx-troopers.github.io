@@ -4,9 +4,9 @@ The page needs a brush-up. Bugs referenced have been fixed or worked around. Sti
 
 ## 2026.06 Speed-Up Nodes
 
-`Patch Triton VAE` from `KJNodes` - less VRAM and faster decode on 4090.
-
-Wan Chunk, WanVideo Mem are the other speed-up nodes.
+- `Patch Triton VAE` from `KJNodes` - less VRAM and faster decode on 4090.
+- `Wan Chunk FeedForward`
+- `WanVideo Mem Eff Sage Attention`
 
 ## 2026.06.10
 
