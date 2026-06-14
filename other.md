@@ -2,6 +2,7 @@
 
 ## Promising For Comfy
 
+* suggestions on speeding up LTX generation a bit [GH:sayakpaul/ltx2-simple-optims](https://github.com/sayakpaul/ltx2-simple-optims)
 * Ditto - finetune of wan - posted their local edit model [HF:QingyanBai/Ditto_models/tree/main/models](https://huggingface.co/QingyanBai/Ditto_models/tree/main/models) [discussions/3](https://huggingface.co/QingyanBai/Ditto_models/discussions/3)
 * [GH:https://tin2tin.github.io/Pallaidium](https://tin2tin.github.io/Pallaidium/) [YT:jmSZlEV_ZLw](https://www.youtube.com/watch?v=jmSZlEV_ZLw) AI film-making/prototyping studio based on Blender
 * [davidcharatan.com/millivid](https://davidcharatan.com/millivid/) Hierarchical Latents for Long-Range Consistency in Video Generation

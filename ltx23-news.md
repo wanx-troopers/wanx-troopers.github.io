@@ -4,6 +4,7 @@
 
 Echo is work based on LTX 2.3
 
+- original [GH:jd-opensource/JoyAI-Echo](https://github.com/jd-opensource/JoyAI-Echo)
 - a seemingly random related github repo [GH:smthemex/ComfyUI_JoyAI_Echo](https://github.com/smthemex/ComfyUI_JoyAI_Echo)
 
 ## 2026.05

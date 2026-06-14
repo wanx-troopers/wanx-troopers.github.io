@@ -6,6 +6,8 @@ It might be advisable to set width and height as multiples of 32 (128 was sugges
 Frame count native to LTX 2.3 is `1 + 8 * N` since 1st frame is encoded separately and subsequent ones have
 one latent span 8 frames in time dimension.
 
+N0NSens: "with IC [LoRA your video size has to be a multiple of] - 64"; "i2v you can do 960x544 (16x9). with IC it will be 960x512"
+
 RuneX: "LTX was trained on 1536 1280 and 1024 as far as I remember. So using one of those values might give better results"; huddadad: "1536x832 is usually solid ... I boost to 1920 if i think it will help".
 
 832 x 480, 241 frames works as well, possibly better than 960 x 540.
