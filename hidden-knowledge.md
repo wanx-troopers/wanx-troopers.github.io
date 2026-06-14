@@ -9,6 +9,8 @@
 > fp16 is faster (with the fast accum) and better than bf16 when it works  
 > bf16 is safer and many models require using it
 
+![fp32-ft16-bf16-e5m2-e4me](screenshots/fp32-ft16-bf16-e5m2-e4me.webp)
+
 > 5090 can run on fp8 or mxfp8 which is lot faster
 
 > GGUF is kinda pointless format for diffusion models

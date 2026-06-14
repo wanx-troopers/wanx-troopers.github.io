@@ -3,14 +3,16 @@
 ByteDance released open weights for Bernini edit model based on Wan 2.2.
 Has high and low noise weights exactly like Wan 2.2.
 
-Original sources [bernini-ai.github.io](https://bernini-ai.github.io/),
-[HF:ByteDance/Bernini](https://huggingface.co/ByteDance/Bernini/tree/main)
+Original publications from ByteDance
+- [bernini-ai.github.io](https://bernini-ai.github.io/)
+- [HF:ByteDance/Bernini](https://huggingface.co/ByteDance/Bernini/tree/main)
+- [HF:ByteDance/Bernini-Diffusers](https://huggingface.co/ByteDance/Bernini-Diffusers/tree/main) updated one published 2026.06.11 Relven: "+ 7b VL qwen"
 
-- mxfp8: [HF:Kijai/WanVideo_comfy_fp8_scaled/tree/main/Bernini](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/tree/main/Bernini)
-- [HF:Comfy-Org/Bernini-R:diffusion_models](https://huggingface.co/Comfy-Org/Bernini-R/tree/main/diffusion_models) R for "renderer" e.g. no [MLLM](bernini.md#bernini-mllm)
+- [HF:Comfy-Org/Bernini-R:diffusion_models](https://huggingface.co/Comfy-Org/Bernini-R/tree/main/diffusion_models) R for "renderer" e.g. no [MLLM](bernini.md#bernini-mllm); uses T5
 - early wf: [bernini_testing_01](workflows/wan/kj-bernini_testing_01.json)
 - wf: [lucifer-Bernini_testing_video_edit_with reference](workflows/bernini/lucifer-Bernini_testing_video_edit_with reference.json)
 - wf in [PR#14216](https://github.com/Comfy-Org/ComfyUI/pull/14216)
+- another wf: [djbfilmz-WanBernini-Native](workflows/bernini/djbfilmz-WanBernini-Native.json) djbfilmz: "Ignore the first lora, it's a character I made. But the second ones help speed up the generatio"
 
 Change merged to main in ComfyUI.
 Use `Bernini Conditioning` node.
@@ -91,6 +93,8 @@ Stef:
 
 > It doesn't like having only one ref image in i2v, it works better if you feed it with 2-3 images or even more.
 > And you have to mention them in the prompt as image0, image1, etc. Start your prompt with something like "the scene starts with image0 depicting..." or something like that
+
+> you need to write "from image0", "from image1", "from image2", etc., John mentioned that on his github page as well. Saying "in image1" or "as shown in image2" won't work as well
                                              
 Qwen3.6 35b was tested in ollama
 
@@ -105,6 +109,10 @@ BNP4535353:
 > 536x1024 121f, took about 9 minutes, and the result, after upscaling optimization, is production-ready
 
 > the main cause of problems for me is when the total frame count exceeds 121, which leads to issues like faded colors and jittery motion
+
+> The most reliable way for me to use Bernini i2v right now is to first give Bernini’s official prompt guide to GPT/Grok,
+> then give them the image to generate prompts; this is an analysis and self-improvement process,
+> and I find it hard to achieve the same effect with local LLMs or even external APIs
 
 John Dopamine:
 > I find I2V is really dependant on length of prompt.....if your prompt is long it can drop the reference frame and use something similar but not the exact start frame
@@ -144,3 +152,24 @@ Funnily enough it seems fully over 190Gb FP32 Bernini weights have been made pub
 > so potentially it replaces/modifies T5 embeds
 
 > the qwenVL seems finetuned a bit... not sure how important that is, could maybe just make a lora
+
+## Bernini I2V, Keyframing
+
+Stef suggested
+
+![stef-bernini-sequential](screenshots/bernini/stef-bernini-sequential.png) makes Bernini use keyframes
+
+> With this prompt, I was able to force Bernini, in i2v mode (with 4 ref images in this particular case), into a sequential  output.
+> The output definitely started at image0, transitioned to image1, then to image2 and closed on image3.
+> If you use @JohnDopamine Bernini Studio node and apply the LLM prompt enhancement,
+> you need to modify the system template for i2v to force the LLM to mention the images explicitly,
+> otherwise the vision LLM (was qwen3.6 + ollama in my case) will describe your images but won't mention them.
+> I did a few runs and if the images are not referred to in the prompt, Bernini tends not to use them all.
+> Also, you need to write "from image0", "from image1", "from image2", etc., John mentioned that on his github page as well.
+> Saying "in image1" or "as shown in image2" won't work as well for some strange reason probably tied to how they trained it. ...
+> Last but not least, it worked pushing to 161 frames but degraded (inconsistencies) at 241 frames.
+
+BNP4535353:
+> The safest values are 81f or 121f; above that the chance of success or failure is 50/50, and given the generation time it's not worth pulling.
+> At the same time, if you want the generated content to be free from the "industrial garbage" problem, a long-edge resolution of 1920 appears to be necessary,
+> which in turn causes a substantial increase in generation time.

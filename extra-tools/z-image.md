@@ -43,6 +43,9 @@ WF uploaded by "uncertain where I got wf" buggz: [buggz-ZturbotoPiDv2](../workfl
 > huddadudd: yeah zit best left simple i think
 
 
+ramonguthrie:
+> KJ ideogram prompt builder node, kinda works with Z-Image-Turbo too, but you need to be watchful of tokens and use them wisely, so you don't get compositional prompt drift
+
 ## 2026.04
 
 > z image for realism is amazing with low 0.2 denoise and fast

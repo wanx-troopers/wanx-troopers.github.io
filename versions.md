@@ -8,6 +8,13 @@ The page needs a brush-up. Bugs referenced have been fixed or worked around. Sti
 - `Wan Chunk FeedForward`
 - `WanVideo Mem Eff Sage Attention`
 
+> Q: bernini sage+chunk ff+mem eff sage is a bit slower than just sage. is it expected?  
+> A: only if it fits memory without them 
+
+## 2026.06.14
+
+> kornia==0.7.3 works
+
 ## 2026.06.10
 
 > sageattention never actually utilized it's quantization to reduce VRAM, they just focused on speed

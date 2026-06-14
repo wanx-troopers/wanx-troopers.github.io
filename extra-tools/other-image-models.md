@@ -3,6 +3,15 @@
 A number of image generation models are being released.
 This website doesn't go deep into details but aims to at least list them.
 
+## Anima
+
+Anima is a specialized, open-weights text-to-image AI model with 2 billion parameters,
+created by CircleStone Labs in collaboration with Comfy Org.
+Unlike general-purpose models, it is specifically fine-tuned for high-quality anime, manga,
+and non-photorealistic artistic illustrations.
+
+License allows commercial use of generated images.
+
 ## Ideogram
 
 Ideogram is a powerful model but it is released under a non-commercial license

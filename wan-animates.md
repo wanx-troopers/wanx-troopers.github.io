@@ -24,6 +24,14 @@ constructed like this
 
 Actual WF: [Wan21_SCAIL2_looping_test_KJ_01](workflows/scail/Wan21_SCAIL2_looping_test_KJ_01.json)
 
+### SCAIL-2 Replacement
+
+Replacement - keeping the background from original video while putting a new character well does not always work perfectly. Suggested ways to improve:
+
+- add DPO LoRA (see above)
+- "... and then also switched the clip vision encode to use only the character on black bg"
+- "lightx2v at 0.5 [down from 1?] strength brings the bg even closer, but animation suffers"
+
 ### SCAIL-2 Main
 
 June 2026 SCAL 2 has been released and support merged into ComfyUI native.
@@ -31,6 +39,7 @@ June 2026 SCAL 2 has been released and support merged into ComfyUI native.
 [HF:Comfy-Org/SCAIL-2:diffusion_models](https://huggingface.co/Comfy-Org/SCAIL-2/tree/main/diffusion_models)
 
 Important note on masks and colors: [GH:zai-org/SCAIL-2#mask-semantics](https://github.com/zai-org/SCAIL-2#mask-semantics)
+"For single character it's the blue mask on white bg for replacement, black for animate mode, and reference bg always the opposite of that with same character id"
 
 Nodes:
 - `WanSCAILToVideo`
@@ -76,6 +85,9 @@ Draken: "scail2 is such a good example of, 'just skip the whole trying to make a
 
 ## SCAIL-2 Multiple References
 
+Multi-reference for SCAIL-2 not pushed to Comfy code as of 2026.06.14 but will be later.
+Currently it is only supported through a 3rd party node descrbide bellow.
+
 Up to 5 including one for background. Views of the character from different angles are ok as separate images.
 Slmonker's wf: [slmonker-scail2-multi-ref-testing](workflows/scail/slmonker-scail2-multi-ref-testing.json).
 Above wf requires: [GH:wuwukaka/ComfyUI-WanAnimatePlus](https://github.com/wuwukaka/ComfyUI-WanAnimatePlus).
@@ -87,6 +99,8 @@ Recommended specifically to use [HF:Kijai/WanVideo_comfy:main/umt5-xxl-enc-fp8_e
 
 PhoenixRisen:
 > You have to match the size and location [of reference image to 1st frame of driving video; when using SCAIL-2 for replacement]
+
+BNP4535353: "res-muti simple"
 
 ## 2025 Universal Pose Scaling
 
@@ -119,6 +133,9 @@ djbfilmz:
 > I used Sapiens for posing with Animate and found it to be the best, followed by SDpose, then DWpose.
 
 Official git [repo](https://github.com/zai-org/SCAIL) - pls. put starts to make it easier for the team to obtain more resources for future training!
+
+> Q: For EverAnimate, do the stages, 1,2, and 3, go into the lora loader?  
+> slmonk A: No. The team said they trained two versions for 480p due to unsatisfactory results. They recommend using either the 480p Stage2 or the 720p LoRA
 
 ### SCAIL 2025.12.17
 

@@ -1,5 +1,9 @@
 # Context Windows
 
+## 2026.06
+
+Kijai added `Context Windows Visualizer (KJ)` to `KJNodes` which is a massive help
+
 ## 2026.04
 
 [ComfyUI#13325](https://github.com/Comfy-Org/ComfyUI/pull/13325) PR to add context windows support for LTX 2.x

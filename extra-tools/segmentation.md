@@ -52,3 +52,5 @@ Sam3 masking wf from djbfilmz: ![sam3-masking](workflows/sam3-masking.webp)
 
 > cant we use sam 3 insted of sam 3.1?  
 > why? they perform about the same, 3.1 better with multiple people
+
+`people:2` may be required to segment out two characters

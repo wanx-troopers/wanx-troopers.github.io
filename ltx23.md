@@ -201,6 +201,9 @@ What is this?.. ![kjnodes-enhance](screenshots/nodes/kjnodes-enhance.png)
 
 IC LoRa generally stands for "in-context LoRa" a _type_ of LoRa. In colloquial speak "IC LoRa" generally refers to one of the IC LoRa-s released alongside LTX 2.3:
 [Union Control](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Union-Control), Motion Track or Depth/Canny/Pose.
+
+It is possible `Union Control` LoRA can also use unprocessed source video as input.
+
 Additional Python code to use them: [GH:Lightricks/ComfyUI-LTXVideo](https://github.com/Lightricks/ComfyUI-LTXVideo/).
 
 [Alisson Pereira](https://huggingface.co/Alissonerdx):
@@ -613,6 +616,8 @@ Draken:
 
 ## Node Packs, LoRA-s and WF-s
 
+- see also: [Director Nodes](directors.md) including `LTX Director` from WhatDreamsCost and Bernini Studio from JohnDopamine
+- see also: [Workflows and Workflow Collections](ltx23#workflows-and-workflow-collections) for VRGameDevGirl84's wf and nodes
 - [GH:sumitchatterjee13/nuke-nodes-comfyui](https://github.com/sumitchatterjee13/nuke-nodes-comfyui)
 - [Richard Servello](https://www.eastoflavfx.com/)'s [GH:richservo/rs-nodes](https://github.com/richservo/rs-nodes):
   - `RS LogC3 HDR Decode` (hdr_linear, raw, sdr_preview), `RS EXR Sequence Save`
@@ -636,6 +641,9 @@ Draken:
 - [GH:dorpxam/ComfyUI-LTX2-Microscope](https://github.com/dorpxam/ComfyUI-LTX2-Microscope) tool to view what exactly LTX 2.3 is doing during sampling
 - [GH:kijai/ComfyUI-NativeLooping_testing](https://github.com/kijai/ComfyUI-NativeLooping_testing) experimental nodes for latent looping including `TensorForLoopOpen`
 - `LTXRetakeDesigner` is in the making
+- Burgstall created an adapter node to vary the strength of IC lora application along the time axis;
+  [GH:Burgstall-labs/ComfyUI-Gradual-IC-LoRA](https://github.com/Burgstall-labs/ComfyUI-Gradual-IC-LoRA),
+  [R:i_made_a_nodepack_to_gradually_apply_iclora/](https://www.reddit.com/r/StableDiffusion/comments/1u5gxwf/i_made_a_nodepack_to_gradually_apply_iclora/)
 
 ### Fredbliss' Node Packs, LoRA-s and WF-s
 
@@ -672,6 +680,7 @@ looping workflow, automated prompt generation and timing:
     - "step 1. 20 sec of the real video + 2s of frozen first two seconds of real video's audio... generate the audio with ltx and overlay on frozen video clip.
       step 2: pass the audio generated from step 1 as frozen audio, using 3 keyframes as init + "two men talking" (just randomly picked 3 from the 20s video above here),
       and generate the new video with audio from step 1."
+
 
 Created an extensive suite of Claude skills and other tooling to work both on code and workflows
 
@@ -801,7 +810,8 @@ Created an extensive suite of Claude skills and other tooling to work both on co
 - [HF:LiconStudio/LTX-2.3-Multiple-Subject-Reference](https://huggingface.co/LiconStudio/LTX-2.3-Multiple-Subject-Reference),
   [HF:LiconStudio/LTX2.3-Mutiple-Subject-Reference](https://huggingface.co/LiconStudio/LTX2.3-Mutiple-Subject-Reference)
   comes with a comfy node [liconstudio/ComfyUI-Licon-MSR](https://github.com/liconstudio/ComfyUI-Licon-MSR)
-  "The reference image resolution must exactly match the target video resolution"
+  "The reference image resolution must exactly match the target video resolution";
+  incorporated into VRGameDevGirl84's WF; she reports it working even better in combination with OmniNFT LoRA
 - malibux lora (malibu bay films)
 - animation LoRa-s
   - [CA:2634377/cyberpunk-edgerunners-style-lora-ltx-23?2957805 ](https://civitai.red/models/2634377/cyberpunk-edgerunners-style-lora-ltx-23?modelVersionId=2957805) by crinklypaper
@@ -809,6 +819,10 @@ Created an extensive suite of Claude skills and other tooling to work both on co
   - Sir_Axe's [HF:siraxe/TTM_IC-lora_ltx2.3](https://huggingface.co/siraxe/TTM_IC-lora_ltx2.3) cartoony time to move for LTX 2.3;
   - Crinklypaper's [CA:2650155/environmental-anime-style-mix-makoto-shinkai-ltx-23?2975759](https://civitai.red/models/2650155/environmental-anime-style-mix-makoto-shinkai-ltx-23?modelVersionId=2975759)
     "focuses on environmental shots" "just t2v"
+- audioreactive
+  - above fblissjr's audioreactive LoRA mentioned
+  - [HF:fal/ltx2.3-audio-reactive-lora](https://huggingface.co/fal/ltx2.3-audio-reactive-lora) deemed good
+  - [HF:100percentrobot/LTX-2.3-Audio-Reactive-LORA ](https://huggingface.co/100percentrobot/LTX-2.3-Audio-Reactive-LORA) deemed less good than above ome from fal
 - RuneX recommended
   - [HF:100percentrobot/LTX-2.3-Audio-Reactive-LORA](https://huggingface.co/100percentrobot/LTX-2.3-Audio-Reactive-LORA)
   - RealisDance - similar to wan animate? charcter replacment?..
@@ -846,7 +860,9 @@ Created an extensive suite of Claude skills and other tooling to work both on co
   some of them using [GH:ckinpdx/ComfyUI-LTXAVTools](https://github.com/ckinpdx/ComfyUI-LTXAVTools) nodes
 - [GH:vrgamegirl19/comfyui-vrgamedevgirl:Workflows](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl/tree/main/Workflows) workflows from one of the masters;
   - [YT:LwG-zxY684M](https://www.youtube.com/watch?v=LwG-zxY684M) a walkthrough of the famous music video workflow
+  - [YT:J77BlIfDluM](https://www.youtube.com/watch?v=J77BlIfDluM)
   - [GH:vrgamegirl19/comfyui-vrgamedevgirl:dev/music-video-builder-ui-test-v3](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl/tree/dev/music-video-builder-ui-test-v3)
+  - note as of 2026.06.14 `V8` dev branch is the most advanced
 
 - N0NSense's "Boeing Cockpit" WF [LTX_2.3_IC_N0N](workflows/ltx/LTX_2.3_IC_N0N.json)
 
