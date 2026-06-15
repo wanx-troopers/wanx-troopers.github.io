@@ -102,7 +102,14 @@ PhoenixRisen:
 
 BNP4535353: "res-muti simple"
 
-## 2025 Universal Pose Scaling
+## SCAIL-2 Vs Bernini
+
+> SCAIL doesn't use start image so it works way better, the issue is just the background needing to pretty much be static, no camera moves, and it's S L O W  
+> though in replace mode where background is also driven it should be fine;
+> it's easily 3-5 time slower than normal gen of same length
+
+
+## OLD: 2025 Universal Pose Scaling
 
 A common issue with this series of models is that the proportions of the character
 in the video where the pose is being extracted from differ from the proportions
@@ -116,12 +123,6 @@ it has been named `Pose Detection OneToAll Animation`.
 
 ![kj-one-to-all-pose-alignment](screenshots/kj-one-to-all-pose-alignment.webp)
 [kj-one-to-all-pose-alignment](screenshots/kj-one-to-all-pose-alignment.webp)
-
-## Vs Bernini
-
-> SCAIL doesn't use start image so it works way better, the issue is just the background needing to pretty much be static, no camera moves, and it's S L O W  
-> though in replace mode where background is also driven it should be fine;
-> it's easily 3-5 time slower than normal gen of same length
 
 ## SCAIL-1
 
