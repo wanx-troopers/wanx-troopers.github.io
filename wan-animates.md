@@ -8,7 +8,7 @@ See also: [Bernini](bernini.md) which can perform character replacements too amo
 
 ### 2026.06.11
 
-Now extracted as LoRA:
+DPO LoRA - extracted from some sort of a SCAIL-2 finetune
 [HF:Comfy-Org/SCAIL-2:wan2.1_SCAIL_2_DPO_lora_bf16](https://huggingface.co/Comfy-Org/SCAIL-2/blob/main/loras/wan2.1_SCAIL_2_DPO_lora_bf16.safetensors)
 > it can improve things like hands and faces in the results;
 > experiment with different strenghts as it may not apply exactly as intended at 1.0 in comfy
