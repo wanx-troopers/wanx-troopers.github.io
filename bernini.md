@@ -130,6 +130,11 @@ vs SCAIL-2
 > djbfilmz: I ... did a couple tests. I think dpmpp-sde is good, alsso euler, and res-multi were good.  
 > scf: isn't this i2v? In workflows I found they use t2v loras
 
+> Q: in Bernini, can we use a latent mask to localize the edits?   
+> A: You wouldn't use latent masking, at least alone, that's not how it's trained.
+> Instead you could try masking the area in the input video already and tell the model to fill that area or something like that.
+> It's not an inpaint model trained to understand masks specifically (like VACE is), but an edit model that tries to follow the instructions 
+
 ## Bernini MLLM
 
 Apparently MLLM - multmodal.. was released alongside Bernini. However no work has been on it within the context of ComfyUI.

@@ -59,7 +59,8 @@ Nodes:
 
 - WF part of this merged [PR#14373](https://github.com/Comfy-Org/ComfyUI/pull/14373)
 - WF: [kj-Wan21_SCAIL2_Testing](workflows/scail/kj-Wan21_SCAIL2_Testing.json)
-- Unmerged [PR#14394](https://github.com/Comfy-Org/ComfyUI/pull/14394) including WF - improves context windows support for SCAIL-2
+- Merged [PR#14394](https://github.com/Comfy-Org/ComfyUI/pull/14394) including WF - improves context windows support for SCAIL-2
+- Simple SCAIL-2 character replacement WF from VK [VK_Wan21_SCAIL2_V](workflows/scail/VK_Wan21_SCAIL2_V.json)
 
 [Drozbay](hidden-knowledge.md#drozbay):
 > `Wan Context Windows (Manual)`
@@ -98,7 +99,8 @@ Recommended specifically to use [HF:Kijai/WanVideo_comfy:main/umt5-xxl-enc-fp8_e
 > seems working
 
 PhoenixRisen:
-> You have to match the size and location [of reference image to 1st frame of driving video; when using SCAIL-2 for replacement]
+> You have to match the size and location [of reference image to 1st frame of driving video; when using SCAIL-2 for replacement]  
+> just realized the reference image must be the same size as the video or else background might have issues
 
 BNP4535353: "res-muti simple"
 
