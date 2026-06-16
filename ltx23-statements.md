@@ -2,6 +2,13 @@
 
 Main article: [LTX 2.3](ltx23.md)
 
+## 2026.06
+
+Huddadudd: "playing with stuff like this. the stg and modality scaling" "the stg values might help with the messiness and the strength of the effect"
+
+Nokodificator: "BTW, if you wanna use advance controls like STG in the multimodal guider, you need to replace the stg.py from LTXVideo nodes with this one, otherwise you can't use NAG or STG"
+[stg.py](bobs/stg.py)
+
 ## 2026.05
 
 David Show: "I am using the lora loader advanced, with audio and audio to video set to 0, but that's about it." 

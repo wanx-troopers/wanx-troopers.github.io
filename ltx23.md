@@ -821,8 +821,10 @@ Created an extensive suite of Claude skills and other tooling to work both on co
     "focuses on environmental shots" "just t2v"
 - audioreactive
   - above fblissjr's audioreactive LoRA mentioned
-  - [HF:fal/ltx2.3-audio-reactive-lora](https://huggingface.co/fal/ltx2.3-audio-reactive-lora) deemed good
-  - [HF:100percentrobot/LTX-2.3-Audio-Reactive-LORA ](https://huggingface.co/100percentrobot/LTX-2.3-Audio-Reactive-LORA) deemed less good than above ome from fal
+  - [HF:fal/ltx2.3-audio-reactive-lora](https://huggingface.co/fal/ltx2.3-audio-reactive-lora) recommended by RuneX; see also: [llm-prompts#2026-06](extra-tools/llm-prompts.md#2026-06); v2 added
+    RuneX: "yeah LTX can do some by its own, dance moves etc for sure. The lora does cubes, geometric shapes, camera etc a bit stronger though"
+  - [HF:100percentrobot/LTX-2.3-Audio-Reactive-LORA](https://huggingface.co/100percentrobot/LTX-2.3-Audio-Reactive-LORA) deemed less good than above ome from fal
+  - Nekodifactor's [NKD-LTX-Audio-to-Motion-V3](workflows/ltx/NKD-LTX-Audio-to-Motion-V3.json) [YT:eDjp5WoRkwM](https://www.youtube.com/watch?v=eDjp5WoRkwM) audioreactive wf guide from [YT:nekodificador](https://youtube.com/nekodificador)
 - RuneX recommended
   - [HF:100percentrobot/LTX-2.3-Audio-Reactive-LORA](https://huggingface.co/100percentrobot/LTX-2.3-Audio-Reactive-LORA)
   - RealisDance - similar to wan animate? charcter replacment?..
