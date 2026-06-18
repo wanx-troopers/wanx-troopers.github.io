@@ -27,3 +27,6 @@ Apparently unlike LMStudio, VLLM can do parallel queries.
 - `gemma-4-26B-A4B-it-UD-IQ2_M.gguf`
 - `gemma-4-...-mmproj..` to enable Gemma to "see" images
 
+Stef:
+> I used both Qwen3.6 and Gemma4. Both are equally good at describing the reference images, I had the impression Gemma4 folllows specific
+> instructions a bit better (as "mention the reference images always as 'from image0', 'from image1' etc. Qwen 3.6 sometimes forgot that)

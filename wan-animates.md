@@ -61,6 +61,9 @@ Nodes:
 - WF: [kj-Wan21_SCAIL2_Testing](workflows/scail/kj-Wan21_SCAIL2_Testing.json)
 - Merged [PR#14394](https://github.com/Comfy-Org/ComfyUI/pull/14394) including WF - improves context windows support for SCAIL-2
 - Simple SCAIL-2 character replacement WF from VK [VK_Wan21_SCAIL2_V](workflows/scail/VK_Wan21_SCAIL2_V.json)
+- Produced a nice pig video [kj-Wan21SCAIL2_ContextWin_v1](workflows/scail/kj-Wan21SCAIL2_ContextWin_v1.json)
+- Multiref WF : [GH:user-attachments:Wan21_SCAIL2_multiref_test](https://github.com/user-attachments/files/29022886/Wan21_SCAIL2_multiref_test.json)
+  taken from [PR#14509](https://github.com/Comfy-Org/ComfyUI/pull/14509)
 
 [Drozbay](hidden-knowledge.md#drozbay):
 > `Wan Context Windows (Manual)`
@@ -83,6 +86,28 @@ slmonker about reference image:
 > Or if object appears later
 
 Draken: "scail2 is such a good example of, 'just skip the whole trying to make a skeleton from the input, just use the input'"
+
+ucren:
+
+> scail2: id persistence is much better if you paint over faces in your driving video and just let scail-2 animate them on its own.
+> i find that scail adopts the shape of the mouth and nose from the driving animation too much"
+> [ucren-paint-over-face-mouth](screenshots/scail/ucren-paint-over-face-mouth.webp)
+> sam supports an initial mask ... like i just draw a mask over the face and pass that to sam3
+
+> I honestly couldn't really tell a difference between extensions, or context frames [context windows] in my tests.
+> scail-2 is already really good at consistency ...
+> there are people out there using it like svi without any driving animations
+> to create consistent long extended I2V context frames was mainly a lot slower
+
+> Trained with mixed resolutions and fps.
+> End-to-end driven supports both 512p and 704p.
+> Pose-driven performs better under 704p.
+> H and W should be both divisible by 32
+> (e.g. 704*1280) if using other resolutions.
+
+[Drozbay](hidden-knowledge.md#drozbay):
+> SCAIL2 was trained to accept a fixed number of frames (specifically 5 frames) as a clean history at the start of the video to allow for extending.
+> The `video_frame_offset` is just a way of telling the node how far along in the pose/mask videos it should be grabbing the frames for that generation.
 
 ## SCAIL-2 Multiple References
 

@@ -45,7 +45,7 @@ RuneX's prompt for [HF:fal/ltx2.3-audio-reactive-lora](https://huggingface.co/fa
 >  
 > DO NOT add preamble, explanation, or analysis notes to the output — return only the finished prompt ready to paste into the model.
 
-Urabevve:
+Urabewe:
 
 > system prompt form LTX then prefix user's prompt with  
 > an audio reactive video, the prompt should emphasize that the video reacts to the audio, the beat of the snare, kick drum, hi hats move the action, the guitars also drive the action.

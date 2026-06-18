@@ -17,6 +17,9 @@
 
 `Image Transform KJ` node allows cropping a video
 
+[Ingi](https://x.com/ingi_erlingsson) released [systms-ai/TimeSlice-Nodes](https://github.com/systms-ai/TimeSlice-Nodes)
+which implement a bit of AE style motion graphics effect in ComfyUI
+
 ## 2026.05
 
 Script to convert LoRa-s to comfy format by renaming keys, from Gleb Tretyak: [convert_to_comfy_lora.py](bobs/convert_to_comfy_lora.py).

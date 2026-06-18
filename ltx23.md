@@ -881,5 +881,6 @@ Created an extensive suite of Claude skills and other tooling to work both on co
 
 - [HF:TheBurgstall/ltx-2.3-googlyeyes-lora](https://huggingface.co/TheBurgstall/ltx-2.3-googlyeyes-lora)
 - [HF:kabachuha/ltx23-pop](https://huggingface.co/kabachuha/ltx23-pop) anime-style pop LoRa
+- [HF:TheBurgstall/tsantsalize](https://huggingface.co/TheBurgstall/tsantsalize) small heads thin voices
 
 

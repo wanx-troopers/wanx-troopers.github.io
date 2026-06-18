@@ -12,7 +12,11 @@ Original publications from ByteDance
 - early wf: [bernini_testing_01](workflows/wan/kj-bernini_testing_01.json)
 - wf: [lucifer-Bernini_testing_video_edit_with reference](workflows/bernini/lucifer-Bernini_testing_video_edit_with reference.json)
 - wf in [PR#14216](https://github.com/Comfy-Org/ComfyUI/pull/14216)
+  JohnDopamine: "... uses the old popular Wan2.1 v2 t2 distill lora at 2.5 to 3. The low is less important"
+  Stef: "advice to use the old Wan2.1 t2v  lightx2v loras instead of the Wan2.2 ones  is golden. Results are so much better, the fast forward look is gone, but keeping incredible good dynamics compared to regular Wan"
+  "Btw, after a few runs I prefer the rank 256 one to the rank 64 one" 
 - another wf: [djbfilmz-WanBernini-Native](workflows/bernini/djbfilmz-WanBernini-Native.json) djbfilmz: "Ignore the first lora, it's a character I made. But the second ones help speed up the generatio"
+- VK's character swap wf: [VK-BerniniSwapVK](workflows/bernini/VK-BerniniSwapVK.json)
 
 Change merged to main in ComfyUI.
 Use `Bernini Conditioning` node.
@@ -135,6 +139,18 @@ vs SCAIL-2
 > Instead you could try masking the area in the input video already and tell the model to fill that area or something like that.
 > It's not an inpaint model trained to understand masks specifically (like VACE is), but an edit model that tries to follow the instructions 
 
+PhoenixRisen:
+> I noticed Bernini is resolution sensitive. The higher res the object it is replacing, the more details it can add from the reference images.
+
+aiacsp On Lightx2v LoRAs:
+> tried out a few combo's and for now (for bernini with r2v) it looks like:  
+> HIGH: lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank64_bf16.safetensors | strength 4.00  
+> LOW:  lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors    | strength 2.00  
+> has been working really great for me at 161 frames in case you wanted to check it out as well  
+> I've used it with LCM | Simple
+
+`Batch Images` node sometimes used connected to `reference_images` input
+
 ## Bernini MLLM
 
 Apparently MLLM - multmodal.. was released alongside Bernini. However no work has been on it within the context of ComfyUI.
@@ -157,6 +173,9 @@ Funnily enough it seems fully over 190Gb FP32 Bernini weights have been made pub
 > so potentially it replaces/modifies T5 embeds
 
 > the qwenVL seems finetuned a bit... not sure how important that is, could maybe just make a lora
+
+[Dkamacho](https://www.linkedin.com/in/danielkamhaji/) on composing Berning prompt:
+> Start from the back. Use ref image 2 for the back. Etc.
 
 ## Bernini I2V, Keyframing
 

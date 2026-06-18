@@ -4,6 +4,14 @@
 
 Kijai added `Context Windows Visualizer (KJ)` to `KJNodes` which is a massive help
 
+`cond_retain_index_list` field added
+![ContextWindowsManul-cond_retain_index_list](..screenshots/nodes/ContextWindowsManul-cond_retain_index_list.webp)
+Stef:
+> If you guys use the `cond_retain_index_list` field, be aware those are latents.
+> 0 would be your input image, 1 would be your first (or second, not sure here) latent frame,
+> putting you 4 real frames forward and so on.
+> I think therefore the maximum value is 16, which would refer to the latest latent, not 81 obviously
+
 ## 2026.04
 
 [ComfyUI#13325](https://github.com/Comfy-Org/ComfyUI/pull/13325) PR to add context windows support for LTX 2.x

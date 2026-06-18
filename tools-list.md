@@ -103,6 +103,8 @@ See also: [Qwen Edit - VACE](wan-t2v-advanced.md#vace-with-qwen-image-edit).
 | ComfyUI-HunyuanVideo-Foley | synchformer_state_dict_fp16 |
 | ComfyUI-HunyuanVideo-Foley | vae_128d_48k_fp16 |
 
+Note: [GH:ethanfel/ComfyUI-HunyuanVideo-FoleyTune](https://github.com/ethanfel/ComfyUI-HunyuanVideo-FoleyTune) - tool to train foley LoRAs.
+
 # More Foley-s
 
 - Woosh - superios to LTX 2.3 but tries to generate sound as ppl move spead; N0NSens put together a masking wf to solve this: [N0NSens-Woosh-SFX.json](workflows/N0NSens-Woosh-SFX.json)
