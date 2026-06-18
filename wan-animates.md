@@ -86,8 +86,9 @@ Draken: "scail2 is such a good example of, 'just skip the whole trying to make a
 
 ## SCAIL-2 Multiple References
 
-Multi-reference for SCAIL-2 not pushed to Comfy code as of 2026.06.14 but will be later.
-Currently it is only supported through a 3rd party node descrbide bellow.
+Multi-reference for SCAIL-2 has been merged to main branch for Comfy 2026.06.
+
+Before it was merged multi-reference could only be used via a 3rd party node. Following paragraph relates to that pre-comfy 3rd party node.
 
 Up to 5 including one for background. Views of the character from different angles are ok as separate images.
 Slmonker's wf: [slmonker-scail2-multi-ref-testing](workflows/scail/slmonker-scail2-multi-ref-testing.json).

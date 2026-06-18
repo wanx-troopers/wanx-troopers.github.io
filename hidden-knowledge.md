@@ -15,6 +15,8 @@
 
 > GGUF is kinda pointless format for diffusion models
 
+`Image Transform KJ` node allows cropping a video
+
 ## 2026.05
 
 Script to convert LoRa-s to comfy format by renaming keys, from Gleb Tretyak: [convert_to_comfy_lora.py](bobs/convert_to_comfy_lora.py).

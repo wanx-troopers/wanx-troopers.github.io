@@ -2,6 +2,7 @@
 
 ## Promising For Comfy
 
+* [HF:GD-ML/DreamX-World-5B](https://huggingface.co/GD-ML/DreamX-World-5B), [YT:6IWCQWWgPNU](https://www.youtube.com/watch?v=6IWCQWWgPNU)
 * suggestions on speeding up LTX generation a bit [GH:sayakpaul/ltx2-simple-optims](https://github.com/sayakpaul/ltx2-simple-optims)
 * Ditto - finetune of wan - posted their local edit model [HF:QingyanBai/Ditto_models/tree/main/models](https://huggingface.co/QingyanBai/Ditto_models/tree/main/models) [discussions/3](https://huggingface.co/QingyanBai/Ditto_models/discussions/3)
 * [GH:https://tin2tin.github.io/Pallaidium](https://tin2tin.github.io/Pallaidium/) [YT:jmSZlEV_ZLw](https://www.youtube.com/watch?v=jmSZlEV_ZLw) AI film-making/prototyping studio based on Blender

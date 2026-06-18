@@ -137,15 +137,24 @@ WhatDreamsCost's [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/W
 
 - ltx-2.3-22b-dev, separate distilled model, alternatively a distillation LoRa
 - ltx-2.3-spatial-upscaler-x2-1.1, ltx-2.3-spatial-upscaler-x1.5-1.0, ltx-2.3-temporal-upscaler-x2-1.0
+
+[docs.ltx.video/open-source-model/integration-tools/ic-lo-ra-adapters](https://docs.ltx.video/open-source-model/integration-tools/ic-lo-ra-adapters) presents a collection of LoRA-s including but not limited to
 - LTX-2.3-22b-IC-LoRA-Union-Control
 - LTX-2.3-22b-IC-LoRA-Motion-Track-Control
+- [HF:Lightricks/LTX-2.3-22b-IC-LoRA-LipDub](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-LipDub)
+  gated LoRa for re-dubbing vidoes - the intent was to keep the original voice; based on [GH:justdubit/just-dub-it](https://github.com/justdubit/just-dub-it) undetlying research.
+- [HF:Lightricks/LTX-2.3-22b-IC-LoRA-In-Outpainting](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-In-Outpainting/tree/main) was released, the long-awaited inpainting LoRA;
+  wf: [GH:Lightricks/ComfyUI-LTXVideo:example_workflows/2.3/LTX-2.3_ICLoRA_Inpaint_Two_Stage_Distilled](https://github.com/Lightricks/ComfyUI-LTXVideo/blob/master/example_workflows/2.3/LTX-2.3_ICLoRA_Inpaint_Two_Stage_Distilled.json)
+  gated LoRA
+- [HF:Lightricks/LTX-2.3-22b-IC-LoRA-Ingredients](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Ingredients)
+
+Note: [R:big_update_to_the_ltx_trainer_one_framework_many](https://www.reddit.com/r/StableDiffusion/comments/1u8c5ob/big_update_to_the_ltx_trainer_one_framework_many/)
+June 2026 announcement of the new LoRA trainer ( [GH:Lightricks/LTX-2:packages/ltx-trainer](https://github.com/Lightricks/LTX-2/tree/main/packages/ltx-trainer)
+[GH:Lightricks/LTX-2:ltx-trainer/docs](https://github.com/Lightricks/LTX-2/tree/main/packages/ltx-trainer/docs) ) and the new Lightricks-trained models.
 
 They also provide under LTX-2 umbrella
 
 - Lightricks/LTX-2-19b-IC-LoRA-Detailer "still usable with 2.3 , thought it was only available for 2"
-
-May 2026 saw addition of [HF:Lightricks/LTX-2.3-22b-IC-LoRA-LipDub](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-LipDub)
-gated LoRa for re-dubbing vidoes - the intent was to keep the original voice; based on [GH:justdubit/just-dub-it](https://github.com/justdubit/just-dub-it) undetlying research.
 
 ## Alternative Weights Packagings
 
