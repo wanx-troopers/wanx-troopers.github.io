@@ -151,6 +151,10 @@ aiacsp On Lightx2v LoRAs:
 
 `Batch Images` node sometimes used connected to `reference_images` input
 
+## Bernini LoRA-s
+
+- Alisson Pereira shared first community-trained Bernini LoRA: [CA:2027766/bfs-best-face-swap?3050039](https://civitai.red/models/2027766/bfs-best-face-swap?modelVersionId=3050039)
+
 ## Bernini MLLM
 
 Apparently MLLM - multmodal.. was released alongside Bernini. However no work has been on it within the context of ComfyUI.

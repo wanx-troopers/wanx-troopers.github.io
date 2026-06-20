@@ -12,6 +12,12 @@ Nekodificator:
 Other LoRAs:
 - [HF:gilfoyle0813/flux2_klein_9b_depth_control](https://huggingface.co/gilfoyle0813/flux2_klein_9b_depth_control)
 
+ramonguthrie showed that `qwen_3_vl_8b_nvfp4.safetensors` works better than `qwen_3_8b_fp4mixed.safetensors` as TE for image editing with Klein
+"Also you can use qwen_3_vl_8b_nvfp4.safetensors for this"
+
+> most people are making mistakes between Flux.2.0 Klein 9B and Flux.2.0 Klein 9B kv, if you are using Flux.2.0 Klein 9B kv
+> [then use `Flux KV Cache` node] 
+
 ## 2026.05
 
 [GH:ethanfel/Comfyui-PainterKleinImageEdit](https://github.com/ethanfel/Comfyui-PainterKleinImageEdit)

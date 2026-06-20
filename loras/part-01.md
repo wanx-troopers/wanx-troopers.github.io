@@ -187,6 +187,7 @@ Wan 2.2 LoRa-s 2026
 
 Wan 2.1 and 2.2 LoRA-s:
 
+* [HF:systms/SYSTMS-TRNS-LoRA-Wan22](https://huggingface.co/systms/SYSTMS-TRNS-LoRA-Wan22) from [ingi//SYSTMS](https://x.com/ingi_erlingsson)
 * [HF:Ashmotv/water_morping_wan](https://huggingface.co/Ashmotv/water_morping_wan)
 * [HF:Ashmotv/exploded_effect_wan](https://huggingface.co/Ashmotv/exploded_effect_wan) exploded effect WAN; there should be a slow motion explode somewhere nearby
 * [HF:benjamin-paine/steamboat-willie-14b](https://huggingface.co/benjamin-paine/steamboat-willie-14b) steamboat willy / steampunk willy

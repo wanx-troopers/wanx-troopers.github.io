@@ -36,7 +36,9 @@ Replacement - keeping the background from original video while putting a new cha
 
 June 2026 SCAL 2 has been released and support merged into ComfyUI native.
 
-[HF:Comfy-Org/SCAIL-2:diffusion_models](https://huggingface.co/Comfy-Org/SCAIL-2/tree/main/diffusion_models)
+- [HF:Comfy-Org/SCAIL-2:diffusion_models](https://huggingface.co/Comfy-Org/SCAIL-2/tree/main/diffusion_models)
+- [HF:Comfy-Org/SCAIL-2:diffusion_models/wan2.1_14B_SCAIL_2_nvfp4_mxpf8_mix](ttps://huggingface.co/Comfy-Org/SCAIL-2/blob/main/diffusion_models/wan2.1_14B_SCAIL_2_nvfp4_mxpf8_mix.safetensors)
+  mix of nvfp4 and fp8 from Kijai
 
 Important note on masks and colors: [GH:zai-org/SCAIL-2#mask-semantics](https://github.com/zai-org/SCAIL-2#mask-semantics)
 "For single character it's the blue mask on white bg for replacement, black for animate mode, and reference bg always the opposite of that with same character id"
@@ -64,6 +66,7 @@ Nodes:
 - Produced a nice pig video [kj-Wan21SCAIL2_ContextWin_v1](workflows/scail/kj-Wan21SCAIL2_ContextWin_v1.json)
 - Multiref WF : [GH:user-attachments:Wan21_SCAIL2_multiref_test](https://github.com/user-attachments/files/29022886/Wan21_SCAIL2_multiref_test.json)
   taken from [PR#14509](https://github.com/Comfy-Org/ComfyUI/pull/14509)
+- WF from asd: [asd-scail-2](workflows/scail/asd-scail-2.json) smooth dancing dogs
 
 [Drozbay](hidden-knowledge.md#drozbay):
 > `Wan Context Windows (Manual)`

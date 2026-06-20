@@ -1,6 +1,5 @@
 ﻿# LTX 2.3
 
-
 LTX 2.3 uses Gemma 3 12B as multi-modal text encoder. Gemma is by Google.
 It might be advisable to set width and height as multiples of 32 (128 was suggested to fix some sort of issues).
 Frame count native to LTX 2.3 is `1 + 8 * N` since 1st frame is encoded separately and subsequent ones have
@@ -131,6 +130,8 @@ WhatDreamsCost's [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/W
 > final resolution, using a partially masked audio to get it to increase in quality without totally losing the content.
 > No context sliding specifically. I'm injecting the first frame into each window as a pseudo-reference. It doesn't always end up looking that good.
 
+[PR#13325](https://github.com/Comfy-Org/ComfyUI/pull/13325) Context Windows sampling with LTX2 models and IC-LoRa guides has been mergeda, PR includes a WF.
+
 ## From The Makers
 
 [HF:Lightricks](https://huggingface.co/Lightricks) provide
@@ -147,6 +148,10 @@ WhatDreamsCost's [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/W
   wf: [GH:Lightricks/ComfyUI-LTXVideo:example_workflows/2.3/LTX-2.3_ICLoRA_Inpaint_Two_Stage_Distilled](https://github.com/Lightricks/ComfyUI-LTXVideo/blob/master/example_workflows/2.3/LTX-2.3_ICLoRA_Inpaint_Two_Stage_Distilled.json)
   gated LoRA
 - [HF:Lightricks/LTX-2.3-22b-IC-LoRA-Ingredients](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Ingredients)
+  vrgamedevgirl: "I found that using just a character ref sheet works really well with the ingredients LoRA"
+  her wf: [LTX-2.3_VRGDG_ingredients_LoRa_WORKFLOW](workflows/ltx/LTX-2.3_VRGDG_ingredients_LoRa_WORKFLOW.json)
+  see also her: [ltx-2-3-ingredients-sheet-builder](https://chatgpt.com/g/g-6a33363e05a48191b4dee3a993cbc6b1-ltx-2-3-ingredients-sheet-builder)
+  [ltx-2-3-image-2-structured-prompt-builder](https://chatgpt.com/g/g-6a33397cb2f081918f8695e89d18dabf-ltx-2-3-image-2-structured-prompt-builder)
 
 Note: [R:big_update_to_the_ltx_trainer_one_framework_many](https://www.reddit.com/r/StableDiffusion/comments/1u8c5ob/big_update_to_the_ltx_trainer_one_framework_many/)
 June 2026 announcement of the new LoRA trainer ( [GH:Lightricks/LTX-2:packages/ltx-trainer](https://github.com/Lightricks/LTX-2/tree/main/packages/ltx-trainer)

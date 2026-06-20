@@ -1,5 +1,18 @@
 ﻿# Statements
 
+## 2026.06
+
+Alisson Pereira on training an "in-context" LoRA for Bernini
+
+> VAE-encode the guide video and the head reference image as clean latents, using the same Wan latent space as the target.  
+> Concatenate those latents into the same self-attention sequence as the noisy target, with each segment tagged by its own source_id RoPE phase:  
+> Target: source_id = 0  
+> Guide: source_id = 1  
+> Reference: source_id = 2  
+> This per-source phase is how Bernini distinguishes the different segments. It’s computed dynamically, so it doesn’t require additional learned weights.  
+> Compute the loss only on the target tokens, masking out the guide and reference tokens.  
+> ... the references must be placed correctly inside the latent sequence, with the proper source_id.
+
 ## 2026.05
 
 > I cloned by voice with Fish audio ai because its way better than eleven labs, and use that for the voice over
