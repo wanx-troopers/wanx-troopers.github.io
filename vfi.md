@@ -49,3 +49,8 @@ Kijai's Github contains [ComfyUI-GIMM-VFI](https://github.com/kijai/ComfyUI-GIMM
 ## FrameFusion
 
 A tiny 10M parameters model probably running on CPU: [GH:BurguerJohn/FrameFusion-Model](https://github.com/BurguerJohn/FrameFusion-Model/tree/main); [announcement](https://www.reddit.com/r/StableDiffusion/comments/1sezpz7/open_sourcing_my_10m_model_for_video/)
+
+## FlowFrames
+
+[GH:n00mkrad/flowframes](https://github.com/n00mkrad/flowframes) windows python desktop app for frame interpolation, "blast from the past", what ppl were using before Comfy
+
