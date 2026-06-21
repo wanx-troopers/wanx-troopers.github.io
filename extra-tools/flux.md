@@ -1,4 +1,4 @@
-# Flux Image Generation Models
+ï»¿# Flux Image Generation Models
 
 ## 2026.06
 
@@ -19,9 +19,8 @@ ramonguthrie showed that `qwen_3_vl_8b_nvfp4.safetensors` works better than `qwe
 > [then use `Flux KV Cache` node] 
 
 victor.oli:
-> I made a multiple région masking, manual and automatic masking with sam3 using Claude Opus 4.8. It also has prompt enhancing with gemma4. If you want to test it
+> I made a multiple region masking, manual and automatic masking with sam3 using Claude Opus 4.8. It also has prompt enhancing with gemma4. If you want to test it
 > [GH:aiolicollective/aioli-node](https://github.com/aiolicollective/aioli-node)
-
 ## 2026.05
 
 [GH:ethanfel/Comfyui-PainterKleinImageEdit](https://github.com/ethanfel/Comfyui-PainterKleinImageEdit)
