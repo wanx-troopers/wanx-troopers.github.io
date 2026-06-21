@@ -17,6 +17,7 @@ Original publications from ByteDance
   "Btw, after a few runs I prefer the rank 256 one to the rank 64 one" 
 - another wf: [djbfilmz-WanBernini-Native](workflows/bernini/djbfilmz-WanBernini-Native.json) djbfilmz: "Ignore the first lora, it's a character I made. But the second ones help speed up the generatio"
 - VK's character swap wf: [VK-BerniniSwapVK](workflows/bernini/VK-BerniniSwapVK.json)
+- [Mark DK Berry](https://markdkberry.com)'s low VRAM Bernini i2v [mdkb-i2v_bernini_lowvram_v8](workflows/bernini/mdkb-i2v_bernini_lowvram_v8.json) - building structure
 
 Change merged to main in ComfyUI.
 Use `Bernini Conditioning` node.
