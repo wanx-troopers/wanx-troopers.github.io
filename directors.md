@@ -7,9 +7,12 @@ in pages for individual AI video generation models.
 
 ## LTX Director
 
-WhatDreamsCost's [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI) poweful node for audio and video loading and trimming (generated with help from Gemini),
-including the new `LTX Director` - I2V, T2V, FLFF, Prompt Relay, Custom Audio - [tutorial 1](https://www.youtube.com/watch?v=fZgtkRcu4_k), [tutorial 2](https://www.youtube.com/watch?v=vM60pJJqqEI)
-based on Prompt Relay; note [PR#60](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI/pull/60/changes)
+- WhatDreamsCost's [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI) poweful node for audio and video loading and trimming (generated with help from Gemini),
+  including the new `LTX Director` - I2V, T2V, FLFF, Prompt Relay, Custom Audio
+- [v2 tutorial](https://youtu.be/o0l6Ikvn5Q0)
+- [tutorial 1](https://www.youtube.com/watch?v=fZgtkRcu4_k)
+- [tutorial 2](https://www.youtube.com/watch?v=vM60pJJqqEI)
+- based on Prompt Relay; note [PR#60](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI/pull/60/changes)
 
 ## WanLooperDesigner
 

@@ -1,5 +1,9 @@
 ﻿# SVI 2.0 Pro
 
+## 2026
+
+Official comfy templates include `WanImageToVideoSVIProFLF_Sample` wf.
+
 ## 2025.02.28
 
 [GH:Well-Made/ComfyUI-Wan-SVI2Pro-FLF](https://github.com/Well-Made/ComfyUI-Wan-SVI2Pro-FLF) claims to be
