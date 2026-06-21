@@ -18,6 +18,9 @@ Kijai's [adaptation](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LoRAs
 * global_style
 * sim2real
 
+Also
+* [HF:QingyanBai/Ditto_models/blob/main/models_comfy/ditto_local_comfy](https://huggingface.co/QingyanBai/Ditto_models/blob/main/models_comfy/ditto_local_comfy.safetensors)
+
 Mora LoRa-s are [promised](https://github.com/EzioBy/Ditto/issues/3) in the future.
 
 Each works on top of for VACE + WAN 2.1 + CausVid;
@@ -64,7 +67,4 @@ Not recommended for I2V, a user:
 ## Reward Loras
 
 Re HPS and MPS "reward" loras: "if it's not human-domain these loras are not going to well well do to rewards heavily biased towards people aesthetics. So say, doing a demon, it'll be more human than demon".
-
-
-
 

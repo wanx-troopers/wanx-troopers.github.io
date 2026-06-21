@@ -152,7 +152,9 @@ WhatDreamsCost's [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/W
   her wf: [LTX-2.3_VRGDG_ingredients_LoRa_WORKFLOW](workflows/ltx/LTX-2.3_VRGDG_ingredients_LoRa_WORKFLOW.json)
   see also her: [ltx-2-3-ingredients-sheet-builder](https://chatgpt.com/g/g-6a33363e05a48191b4dee3a993cbc6b1-ltx-2-3-ingredients-sheet-builder)
   [ltx-2-3-image-2-structured-prompt-builder](https://chatgpt.com/g/g-6a33397cb2f081918f8695e89d18dabf-ltx-2-3-image-2-structured-prompt-builder)
-  VK: "Random tip: Try using the ingredients lora with no refs. Just T2V"
+  VK: "Random tip: Try using the ingredients lora with no refs. Just T2V";
+  zelgo_: "Try increasing the strength of the Lora up to 1.4";
+  it is possible that MSR LoRA is better and definitely faster
 
 Note: [R:big_update_to_the_ltx_trainer_one_framework_many](https://www.reddit.com/r/StableDiffusion/comments/1u8c5ob/big_update_to_the_ltx_trainer_one_framework_many/)
 June 2026 announcement of the new LoRA trainer ( [GH:Lightricks/LTX-2:packages/ltx-trainer](https://github.com/Lightricks/LTX-2/tree/main/packages/ltx-trainer)
