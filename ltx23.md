@@ -139,6 +139,14 @@ WhatDreamsCost's [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/W
 - ltx-2.3-22b-dev, separate distilled model, alternatively a distillation LoRa
 - ltx-2.3-spatial-upscaler-x2-1.1, ltx-2.3-spatial-upscaler-x1.5-1.0, ltx-2.3-temporal-upscaler-x2-1.0
 
+Dev + distilled 1.1 LoRA possibly at strength lowered bellow 1.0 seems to be the most advised suggestion.
+
+David Show:
+> ltx-2.3-22b-distilled-lora-384-1.1.safetensors is the one I use.
+> Kijai has a much smaller version too
+> [HF:Kijai/LTX2.3_comfy:loras/ltx-2.3-22b-distilled-1.1_lora-dynamic_fro09_avg_rank_111_bf16](https://huggingface.co/Kijai/LTX2.3_comfy/blob/main/loras/ltx-2.3-22b-distilled-1.1_lora-dynamic_fro09_avg_rank_111_bf16.safetensors),
+> if memory is an issue.
+
 [docs.ltx.video/open-source-model/integration-tools/ic-lo-ra-adapters](https://docs.ltx.video/open-source-model/integration-tools/ic-lo-ra-adapters) presents a collection of LoRA-s including but not limited to
 - LTX-2.3-22b-IC-LoRA-Union-Control
 - LTX-2.3-22b-IC-LoRA-Motion-Track-Control
@@ -155,6 +163,8 @@ WhatDreamsCost's [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/W
   VK: "Random tip: Try using the ingredients lora with no refs. Just T2V";
   zelgo_: "Try increasing the strength of the Lora up to 1.4";
   it is possible that MSR LoRA is better and definitely faster
+- [HF:Lightricks/LTX-2.3-22b-IC-LoRA-Water-Simulation](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Water-Simulation) water simulation LoRA - adds lots of water
+- [LTX-2_V2V_Detailer](https://github.com/Lightricks/ComfyUI-LTXVideo/blob/master/example_workflows/2.0/LTX-2_V2V_Detailer.json) detailer WF using looping sampler
 
 Note: [R:big_update_to_the_ltx_trainer_one_framework_many](https://www.reddit.com/r/StableDiffusion/comments/1u8c5ob/big_update_to_the_ltx_trainer_one_framework_many/)
 June 2026 announcement of the new LoRA trainer ( [GH:Lightricks/LTX-2:packages/ltx-trainer](https://github.com/Lightricks/LTX-2/tree/main/packages/ltx-trainer)
@@ -645,13 +655,14 @@ Draken:
     can be completely customized by plugging in any node you want
     does spatial and temporal upscale"
 - [Ckinpdx](https://github.com/ckinpdx)'s
-  `LTXVAVLoopingSampler` from [GH:ckinpdx/ComfyUI-LTXAVTools](https://github.com/ckinpdx/ComfyUI-LTXAVTools), a derivative of Lightricks' `LTXVLoopingSampler`;
-  "optional conditioning images allows you to input batches images as keyframes whose index you specify.
-  Optional guiding latents allows ic lora use.
-  Optional positive conditioning allows use of the multi prompt provider, allowing indexed text conditioning";
-  "All modalities, t2v, i2v, i+a2v, v2v"; tested up to 90 seconds;
-  "for v2v lora application, outpainting for example, the limit is how many video frames you can load from your source ... 2 minutes"
-  work is ongoing on enhacing native context window nodes too, to which this is similar
+  - `LTXVAVLoopingSampler` from [GH:ckinpdx/ComfyUI-LTXAVTools](https://github.com/ckinpdx/ComfyUI-LTXAVTools), a derivative of Lightricks' `LTXVLoopingSampler`;
+    "optional conditioning images allows you to input batches images as keyframes whose index you specify.
+    Optional guiding latents allows ic lora use.
+    Optional positive conditioning allows use of the multi prompt provider, allowing indexed text conditioning";
+    "All modalities, t2v, i2v, i+a2v, v2v"; tested up to 90 seconds;
+    "for v2v lora application, outpainting for example, the limit is how many video frames you can load from your source ... 2 minutes"
+    work is ongoing on enhacing native context window nodes too, to which this is similar
+  - [GH:ckinpdx/ckinpdx_comfyui_workflows:LTX23](https://github.com/ckinpdx/ckinpdx_comfyui_workflows/tree/main/LTX23) workflows
 - WhatDreamsCost's [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI) poweful node for audio and video loading and trimming (generated with help from Gemini),
   including the new `LTX Director` - I2V, T2V, FLFF, Prompt Relay, Custom Audio - [tutorial 1](https://www.youtube.com/watch?v=fZgtkRcu4_k), [tutorial 2](https://www.youtube.com/watch?v=vM60pJJqqEI)
   based on Prompt Relay; note [PR#60](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI/pull/60/changes)

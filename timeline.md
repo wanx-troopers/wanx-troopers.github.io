@@ -1,5 +1,7 @@
 # News
 
+2026.06.23 [Krea-2](krea.md) weights released
+
 2026.06 [HF:RunDiffusion/Juggernaut-Z-Image/tree/main](https://huggingface.co/RunDiffusion/Juggernaut-Z-Image/tree/main) and [HF:RunDiffusion/Juggernaut-Z-Image-Fast](https://huggingface.co/RunDiffusion/Juggernaut-Z-Image-Fast) released
 
 2026.06 [SCAIL-2](wan-animates.md#scail-2) released

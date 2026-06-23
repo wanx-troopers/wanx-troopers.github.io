@@ -164,6 +164,8 @@ huddadudd:
 
 ## cfg_pp Samplers
 
+`cfg_pp` also known as `cfg++`
+
 [Drozbay](hidden-knowledge.md#drozbay):
 > fyi: any of the cfg_pp samplers will always run both a positive and negative conditioning pass even on cfg 1.0.
 > So if you're comparing euler_ancestral at cfg 1.0 to euler_ancestral_cfg_pp at cfg 1.0, the latter will always be 2x slower

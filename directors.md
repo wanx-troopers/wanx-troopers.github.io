@@ -14,9 +14,9 @@ in pages for individual AI video generation models.
 - [tutorial 2](https://www.youtube.com/watch?v=vM60pJJqqEI)
 - based on Prompt Relay; note [PR#60](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI/pull/60/changes)
 
-## WanLooperDesigner
+## JohnDopamine
 
-From JohnDopamine
+### WanLooperDesigner
 
 [JohnDopamine-ComfyUI-WanLooperDesigner-v1250.zip](code/JohnDopamine-ComfyUI-WanLooperDesigner-v1250.zip)
 
@@ -24,10 +24,16 @@ From JohnDopamine
 
 SVI2.2 Pro extensions, it is possible Bernini can be used when extension is not required - as 1st shot or after a cut.
 
-## Bernini Studio
+standard static, context length of 81, 32 overlap,  stride 1, closed loop off, no freenoise, pyramid, retain 1st on
+
+### Bernini Studio
 
 From JohnDopamine
 
 [GH:CCpt5/ComfyUI-BerniniStudio](https://github.com/CCpt5/ComfyUI-BerniniStudio)
 > AIO Bernini + Ollama + Prompt preset node  
 > "replace the X with the Y from image0, image1, and image2"
+
+### Scail2Looper Studio
+
+[JohnDopamine-ComfyUI-Scail2LooperStudio](code/JohnDopamine-ComfyUI-Scail2LooperStudio.zip)

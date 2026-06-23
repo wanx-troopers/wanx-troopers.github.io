@@ -64,9 +64,15 @@ Nodes:
 - Merged [PR#14394](https://github.com/Comfy-Org/ComfyUI/pull/14394) including WF - improves context windows support for SCAIL-2
 - Simple SCAIL-2 character replacement WF from VK [VK_Wan21_SCAIL2_V](workflows/scail/VK_Wan21_SCAIL2_V.json)
 - Produced a nice pig video [kj-Wan21SCAIL2_ContextWin_v1](workflows/scail/kj-Wan21SCAIL2_ContextWin_v1.json)
-- Multiref WF : [GH:user-attachments:Wan21_SCAIL2_multiref_test](https://github.com/user-attachments/files/29022886/Wan21_SCAIL2_multiref_test.json)
-  taken from [PR#14509](https://github.com/Comfy-Org/ComfyUI/pull/14509)
 - WF from asd: [asd-scail-2](workflows/scail/asd-scail-2.json) smooth dancing dogs
+- [droz_scail2_looping_extension_v1.1](workflows/scail/droz_scail2_looping_extension_v1.1.json)
+- Multiref
+  - [GH:user-attachments:Wan21_SCAIL2_multiref_test](https://github.com/user-attachments/files/29022886/Wan21_SCAIL2_multiref_test.json)
+    taken from [PR#14509](https://github.com/Comfy-Org/ComfyUI/pull/14509);
+    this is possibly very similar [kj-scail2_multiref_context_test](workflows/scail/kj-scail2_multiref_context_test.json)
+  - Another from Dream Making: [DreamMaking-Wan21_SCAIL2_multiref_test](workflows/scail/DreamMaking-Wan21_SCAIL2_multiref_test.json)
+    "but it is only multiref one character; I have no idea if it is possibile to do the same with multiple character AND multiple refs with SCAIL 2"
+  - ...and one from Flipping Sigmas [FlippingSigmas-Wan21_SCAIL2_multiref-Trent](workflows/scail/FlippingSigmas-Wan21_SCAIL2_multiref-Trent.json) - with context windows
 
 [Drozbay](hidden-knowledge.md#drozbay):
 > `Wan Context Windows (Manual)`
@@ -107,6 +113,19 @@ ucren:
 > Pose-driven performs better under 704p.
 > H and W should be both divisible by 32
 > (e.g. 704*1280) if using other resolutions.
+
+> Scail-2 follows best at the exact dimensions it was trained on, this model has a tendency to distort at anything but - including adding bars / wrapping the video around edges.
+> So I religiously use 512x864 or 704x1280 and nothing else.
+
+> Read their note:  
+> Trained with mixed resolutions and fps.  
+> End-to-end driven supports both 512p and 704p.  
+> Pose-driven performs better under 704p.  
+> H and W should be both divisible by 32  
+> (e.g. 704*1280) if using other resolutions.
+
+Visionmaster2:
+> It works really well at 1792 by 656 for me
 
 [Drozbay](hidden-knowledge.md#drozbay):
 > SCAIL2 was trained to accept a fixed number of frames (specifically 5 frames) as a clean history at the start of the video to allow for extending.

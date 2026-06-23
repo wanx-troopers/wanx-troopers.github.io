@@ -64,6 +64,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 ## Tools
 
 * Image Tools
+  * [Krea-2](krea.md)
   * [Cross Image Modesl](extra-tools/cross-image-models.md)
   * [Pixel Models](extra-tools/pid.md)
   * [Z-Image-Turbo](extra-tools/z-image.md)
