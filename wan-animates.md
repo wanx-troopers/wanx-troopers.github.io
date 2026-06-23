@@ -6,6 +6,10 @@ See also: [Bernini](bernini.md) which can perform character replacements too amo
 
 ## SCAIL-2
 
+### 2026.06.23
+
+`WanVideoNAG` now works with SCAIL-2 on default settings.
+
 ### 2026.06.11
 
 DPO LoRA - extracted from some sort of a SCAIL-2 finetune

@@ -2,6 +2,7 @@
 
 ## Promising For Comfy
 
+* [aliothchen.github.io/projects/ST-DRC](https://aliothchen.github.io/projects/ST-DRC/)
 * [shariqfarooq123.github.io/LooseControlVideo](https://shariqfarooq123.github.io/LooseControlVideo/) based on Wan 2.2 from Adobe Research, allows controlling motion through moving color cube videos
 * [HF:GD-ML/DreamX-World-5B](https://huggingface.co/GD-ML/DreamX-World-5B), [YT:6IWCQWWgPNU](https://www.youtube.com/watch?v=6IWCQWWgPNU)
 * suggestions on speeding up LTX generation a bit [GH:sayakpaul/ltx2-simple-optims](https://github.com/sayakpaul/ltx2-simple-optims)
