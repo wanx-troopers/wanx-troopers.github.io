@@ -2,6 +2,8 @@
 
 ## 2026.06
 
+![wan22-speed-diff-quants](screenshots/wan22-speed-diff-quants.png)
+
 > Q: is there an easy way to merge loras with ltxv23 distilled model?  
 > prab100 A: There is merge_lora_with_model in musbubi tuner ltx fork. Donno if it works with distilled. 
 

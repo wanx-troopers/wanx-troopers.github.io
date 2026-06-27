@@ -2,6 +2,8 @@
 
 ## Promising For Comfy
 
+* [sagipolaczek.github.io/Sync-LoRA](https://sagipolaczek.github.io/Sync-LoRA/) In-Context Sync-LoRA for Portrait Video Editing LTX 1?
+* [R:your_blender_blockout_for_ai_video_can_be](https://www.reddit.com/r/comfyui/comments/1uez0nb/your_blender_blockout_for_ai_video_can_be/) controlling the camera in Seedance with crude 3d rectangles to control camera and blocking
 * [aliothchen.github.io/projects/ST-DRC](https://aliothchen.github.io/projects/ST-DRC/)
 * [shariqfarooq123.github.io/LooseControlVideo](https://shariqfarooq123.github.io/LooseControlVideo/) based on Wan 2.2 from Adobe Research, allows controlling motion through moving color cube videos
 * [HF:GD-ML/DreamX-World-5B](https://huggingface.co/GD-ML/DreamX-World-5B), [YT:6IWCQWWgPNU](https://www.youtube.com/watch?v=6IWCQWWgPNU)

@@ -10,6 +10,17 @@ See also: [Bernini](bernini.md) which can perform character replacements too amo
 
 `WanVideoNAG` now works with SCAIL-2 on default settings.
 
+for multiple characters (multiple references have so far been used for same character viewed from different sides):
+> Don't do the reference tracking on a batch, it's treating it as 3 frame video.
+> The reference should be single image instead, can just concat them.
+
+> They trained it with only single ref IMAGE.
+> The multiref feature wasn't trained in, but it somewhat works with single subject at least
+> the actual trained multi people is the color coding.
+
+> Q: does the reference need to be the same aspect ratio as the driving animation?  
+> A: [probably] so
+
 ### 2026.06.11
 
 DPO LoRA - extracted from some sort of a SCAIL-2 finetune

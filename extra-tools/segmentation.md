@@ -54,3 +54,6 @@ Sam3 masking wf from djbfilmz: ![sam3-masking](workflows/sam3-masking.webp)
 > why? they perform about the same, 3.1 better with multiple people
 
 `people:2` may be required to segment out two characters
+
+ucren:
+> sam assigns the colors based on what you pick in the drop down, by default left to right. but if you want to mask three separate ids you need to have them in a single image so sam detects them as three distinct ids

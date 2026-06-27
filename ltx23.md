@@ -165,6 +165,7 @@ David Show:
   it is possible that MSR LoRA is better and definitely faster
 - [HF:Lightricks/LTX-2.3-22b-IC-LoRA-Water-Simulation](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Water-Simulation) water simulation LoRA - adds lots of water
 - [LTX-2_V2V_Detailer](https://github.com/Lightricks/ComfyUI-LTXVideo/blob/master/example_workflows/2.0/LTX-2_V2V_Detailer.json) detailer WF using looping sampler
+- [HF:fal/LTX-2.3-3DREAL-LoRA](https://huggingface.co/fal/LTX-2.3-3DREAL-LoRA) 3D render to Photoreal
 
 Note: [R:big_update_to_the_ltx_trainer_one_framework_many](https://www.reddit.com/r/StableDiffusion/comments/1u8c5ob/big_update_to_the_ltx_trainer_one_framework_many/)
 June 2026 announcement of the new LoRA trainer ( [GH:Lightricks/LTX-2:packages/ltx-trainer](https://github.com/Lightricks/LTX-2/tree/main/packages/ltx-trainer)
@@ -339,7 +340,10 @@ N0NSense controls camera using a schematic video or a box/room everything happen
 [Cseti](https://www.youtube.com/@ChetiArt)'s LoRa to replicate camera motion from one video to another [HF:Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1);
 README and workflow: [HFdatasets:Cseti/ComfyUI-Workflows:ltx/2.3/ic-lora-cameraman](https://huggingface.co/datasets/Cseti/ComfyUI-Workflows/blob/main/ltx/2.3/ic-lora-cameraman/README.md);
 "This one took around 20-24 hours to train with 77 video pairs. And I also made two more runs one with 128 and another with around 40 pairs. But this one looks the best so far" "I used videos from pexels"
-WF: [LTX-2.3-Cameraman](workflows/ltx/LTX-2.3-Cameraman.json)
+WF: [LTX-2.3-Cameraman](workflows/ltx/LTX-2.3-Cameraman.json).
+
+[Cseti](https://www.youtube.com/@ChetiArt)'s v2 [HF:Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v2](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v2),
+[wf](https://huggingface.co/datasets/Cseti/ComfyUI-Workflows/tree/main/ltx/2.3/ic-lora-cameraman-v2)
 
 ## I2V
 
@@ -733,6 +737,7 @@ Created an extensive suite of Claude skills and other tooling to work both on co
   [HF:Alissonerdx/LTX-LoRAs:ltx23_edit_anything_v1](https://huggingface.co/Alissonerdx/LTX-LoRAs/blob/main/workflows/ltx23_edit_anything_v1.json)
   2026.05: [HF:Alissonerdx/EditAnything](https://huggingface.co/Alissonerdx/EditAnything/tree/main) "I think the one with the largest module would be the most interesting"
   "prompt for one change at a time"; replying to [Ingi](https://x.com/ingi_erlingsson): "in your case you are using first frame conditioning_p, I am using a negative latent for this, I don't use the first frame";
+  might be able to remove remove text/subtitles/watermark
   [Ingi](https://x.com/ingi_erlingsson): "Yeah same here - I’m using a ref latent at -8" [about coming soon character replace LoRa]
   "So you are using add latent guide node at -8.  Any specific reason for using -8?" "not sure why it's 8 specifically, it works at -4 too, but if you put it at 0 then you get the flashing frame at the start as it's competing with the video ref"
 - [HF:Alissonerdx/EditAnything:edit_anything_v1.1_r256](https://huggingface.co/Alissonerdx/EditAnything/blob/main/edit_anything_v1.1_r256.safetensors) "that's model for editing without using references"
@@ -858,7 +863,8 @@ Created an extensive suite of Claude skills and other tooling to work both on co
   - RealisDance - similar to wan animate? charcter replacment?..
   - "video restoration", aritfiact fixing?
     - [HF:Zlikwid/LTX_2.3_Upscale_IC_Lora](https://huggingface.co/Zlikwid/LTX_2.3_Upscale_IC_Lora)
-    - [HF:joyfox/LTX2.3-ICEdit-Insight](https://huggingface.co/joyfox/LTX2.3-ICEdit-Insight) 
+    - [HF:joyfox/LTX2.3-ICEdit-Insight](https://huggingface.co/joyfox/LTX2.3-ICEdit-Insight) "remove text/subtitles/watermark"
+      also discussions on [issue 136](https://huggingface.co/RuneXX/LTX-2.3-Workflows/discussions/136)
 - TheBurgstall
   - [HF:TheBurgstall/VR-360-Outpaint-LTX2.3-IC-LoRA](https://huggingface.co/TheBurgstall/VR-360-Outpaint-LTX2.3-IC-LoRA) outpaint LoRA for 360° equirectangular projection for immersive/VR viewing;
     note: [GH:ProGamerGov/html-360-viewer](https://github.com/ProGamerGov/html-360-viewer) could be used to view

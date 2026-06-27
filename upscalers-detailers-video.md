@@ -1,5 +1,9 @@
 # Video Upscalers and Detailers
 
+## 2026
+
+[GH:lquesada/ComfyUI-Inpaint-CropAndStitch](https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch) node is reported to work well with Bernini
+
 ## NVidiea Super Resolution
 
 [GH:Comfy-Org/Nvidia_RTX_Nodes_ComfyUI](https://github.com/Comfy-Org/Nvidia_RTX_Nodes_ComfyUI)

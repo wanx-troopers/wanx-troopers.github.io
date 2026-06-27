@@ -1,8 +1,19 @@
 # LongCat
 
-## 2025.12.07
+- Test [workflow](workflows/longcat_test.json) from 2025.12.07
+- [MBEDIT-LongCat_Avatar_15_v1](workflows/MBEDIT-LongCat_Avatar_15_v1.json)
 
-Test [workflow](workflows/longcat_test.json).
+- [HF:Kijai/LongCat-Video_comfy](https://huggingface.co/Kijai/LongCat-Video_comfy/tree/main).
+- [HF:Kijai/WanVideo_comfy:LongCat](https://huggingface.co/Kijai/WanVideo_comfy/tree/main/LongCat) v1.5?
+- [HF:szwagros/LongCat-Video-Avatar-1.5-fp8](https://huggingface.co/szwagros/LongCat-Video-Avatar-1.5-fp8/tree/main)
+- LongCat-Avatar-15_dmd_distill_lora_rank128_bf16
+
+## 2026
+
+[Mark DK Berry](https://markdkberry.com):
+> seems longcat slows down if u use sage attn or sdpa. apoarently it needs flash attention
+
+> distillation is a bit hideous
 
 LongCat had an issue with sage 1.0.6
 

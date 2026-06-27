@@ -10,6 +10,7 @@ WAN 2.1/2.2, and Open Source Video AI generation in general. Discussions in Issu
 ## 2026
 
 * [Bernini](bernini.md)
+* [DomainShuttle](domain-shuttle.md)
 * [Wan NEWS](wan-news.md)
 
 ## 2025

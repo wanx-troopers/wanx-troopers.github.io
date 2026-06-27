@@ -5,7 +5,7 @@ Has high and low noise weights exactly like Wan 2.2.
 
 Original publications from ByteDance
 - [bernini-ai.github.io](https://bernini-ai.github.io/)
-- [HF:ByteDance/Bernini](https://huggingface.co/ByteDance/Bernini/tree/main)
+- [HF:ByteDance/Bernini](https://huggingface.co/ByteDance/Bernini/tree/main) - hmm Bytedance has pulled this one down
 - [HF:ByteDance/Bernini-Diffusers](https://huggingface.co/ByteDance/Bernini-Diffusers/tree/main) updated one published 2026.06.11 Relven: "+ 7b VL qwen"
 
 - [HF:Comfy-Org/Bernini-R:diffusion_models](https://huggingface.co/Comfy-Org/Bernini-R/tree/main/diffusion_models) R for "renderer" e.g. no [MLLM](bernini.md#bernini-mllm); uses T5

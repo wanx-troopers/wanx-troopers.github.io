@@ -14,6 +14,8 @@ in pages for individual AI video generation models.
 - [tutorial 2](https://www.youtube.com/watch?v=vM60pJJqqEI)
 - based on Prompt Relay; note [PR#60](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI/pull/60/changes)
 
+Here is an article presenting a node based on WhatDreamsCosts's original: [R:just_released_ltx_director_motion_brush_nodes_for](https://www.reddit.com/r/comfyui/comments/1uf4441/just_released_ltx_director_motion_brush_nodes_for/)
+
 ## JohnDopamine
 
 ### WanLooperDesigner
