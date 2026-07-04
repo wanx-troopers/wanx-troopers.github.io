@@ -1,5 +1,15 @@
 ﻿# Hidden Knowledge
 
+## 2026.07
+
+On running int8 models:
+
+> need cuda130+ too (pytorch build and driver support, not the toolkit  
+> [not PyTorch: 2.11.0+cu128 but +cu130]
+
+djbfilmz:
+> I turned off "enable_fp16_accu" and bypassed "torchcompile" and now it's seems to work
+
 ## 2026.06
 
 ![wan22-speed-diff-quants](screenshots/wan22-speed-diff-quants.png)

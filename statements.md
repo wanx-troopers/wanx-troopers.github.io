@@ -1,5 +1,11 @@
 ﻿# Statements
 
+## 2026.07
+
+Draken:
+> colab they slow as ass at updating getting new stuffz now;
+> colab is just god deal. $10 for like 100hours of l4 [Ada nvidia card]
+
 ## 2026.06
 
 Alisson Pereira on training an "in-context" LoRA for Bernini

@@ -132,12 +132,16 @@ WhatDreamsCost's [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/W
 
 [PR#13325](https://github.com/Comfy-Org/ComfyUI/pull/13325) Context Windows sampling with LTX2 models and IC-LoRa guides has been mergeda, PR includes a WF.
 
-## From The Makers
+## Core Models And LoRAs - Mostly From Lighttricks
 
 [HF:Lightricks](https://huggingface.co/Lightricks) provide
 
 - ltx-2.3-22b-dev, separate distilled model, alternatively a distillation LoRa
 - ltx-2.3-spatial-upscaler-x2-1.1, ltx-2.3-spatial-upscaler-x1.5-1.0, ltx-2.3-temporal-upscaler-x2-1.0
+
+Int8 for 30xx
+
+- [HF:Kijai:ltx-2.3-22b-distilled-1.1_transformer_only_int8_convrot](https://huggingface.co/Kijai/LTX2.3_comfy/blob/main/diffusion_models/ltx-2.3-22b-distilled-1.1_transformer_only_int8_convrot.safetensors)
 
 Dev + distilled 1.1 LoRA possibly at strength lowered bellow 1.0 seems to be the most advised suggestion.
 
