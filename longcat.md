@@ -8,6 +8,11 @@
 - [HF:szwagros/LongCat-Video-Avatar-1.5-fp8](https://huggingface.co/szwagros/LongCat-Video-Avatar-1.5-fp8/tree/main)
 - LongCat-Avatar-15_dmd_distill_lora_rank128_bf16
 
+> 1.5 avatar ... it's basically the infinite talk continuation  
+> longcat is actually same team as infinitetalk, so that's the continuation of their work  
+> it's just image and audio to video  
+> we dont' really have proper implementation of the latest longcat avatar though currently
+
 ## 2026
 
 [Mark DK Berry](https://markdkberry.com):
@@ -16,6 +21,8 @@
 > distillation is a bit hideous
 
 LongCat had an issue with sage 1.0.6
+
+> one thing that causes black output (nans) with longcat always was running it in fp16, it requires bf16
 
 ## 2025.12.05
 

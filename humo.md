@@ -1,5 +1,27 @@
 # HuMO
 
+## 2026.06
+
+[Drozbay](hidden-knowledge.md#drozbay):
+> HuMo with a latent mask for inpainting ... more trouble to use than Bernini because you have to mask everything yourself,
+> but its reference ID retention and lip sync is still the sota for character inpainting.
+
+> CFG 2.0, lightx2v I2V lora at strength 0.7, shift 9 beta scheduler, denoise of 0.4 to 0.5 at 6 steps, euler_ancestral.
+> The big part is just the mask generation and the cropping. I generate a mask for the face, then use a bounding box crop node
+> to crop the face and some of the surrounding, and perform sampling only on that section with a blurred expanded face mask and
+> differential diffusion enabled. Then I paste that back in at the end
+
+> You need to mask if you want to inpaint a video. It's not designed for use with masking, this is non-standard usage of HuMo. But yeah I am using SAM3 just fine.
+> You have to play with the mask a bit, including the amount of blur, differential diffusion, how large the mask is, and also it's important to calibrate how many steps it takes so it has room to settle into the scene.
+> Otherwise you'll get inpainted area moving really weird compared to the rest of the video
+
+> I had to make some custom code to get the crop and stitching stuff to work right, so I'd have to package that up, but it's basically
+> just latent noise mask inpainting with HuMo as the model. Yes I used context windows, works great here. Faster than Bernini because
+> no in context control signals, but of course you have to mask everything yoruself carefully with the right tools.
+
+> I don't think WanAnimate compares at all to HuMo in terms of matching the likeness of the person, but it does much better at matching facial expressions.
+> I think as a combo all of these tools together make up a full kit to do almost anything, but getting them to all work together is the hard part.
+
 ## 2026.04
 
 [HF:Comfy-Org/HuMo_ComfyUI:diffusion_models](https://huggingface.co/Comfy-Org/HuMo_ComfyUI/tree/main/split_files/diffusion_models) HuMo 1.7B - original one was 17B.

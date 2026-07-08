@@ -17,6 +17,10 @@ Stef:
 
 > unfortunately it will change other things than your character's expressions, it is because Wan2.1 reencodes the video - if the camera moves it can hallucinate things which were not in your source video 
 
+djbfilmz:
+> Here is mine [workflow]: [djbfilmz-UPDATE-Wan-InfiniteTalk-Vid-Native](workflows/djbfilmz-UPDATE-Wan-InfiniteTalk-Vid-Native.json)  
+> Here is wrapper if you prefer: [djbfilmz-Wan-InfiniteTalk-Wrapper](workflows/djbfilmz-Wan-InfiniteTalk-Wrapper.json)
+
 ## 2025.01.22
 
 InfiniteTalk support has been added to ComfyUI native. Sample wf: [infinitetalk_multi_test_native](workflows/kj_infinitetalk_multi_test_native.json)

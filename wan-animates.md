@@ -21,6 +21,9 @@ for multiple characters (multiple references have so far been used for same char
 > Q: does the reference need to be the same aspect ratio as the driving animation?  
 > A: [probably] so
 
+> Q: scail do lipsync?  
+> djbfilmz A: Yea, it's not bad. Not as good as IntTalk because it's doing it pixel based on not on actual sound, but it's pretty good.
+
 ### 2026.06.11
 
 DPO LoRA - extracted from some sort of a SCAIL-2 finetune

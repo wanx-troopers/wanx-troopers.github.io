@@ -19,6 +19,9 @@ Alisson Pereira on training an "in-context" LoRA for Bernini
 > Compute the loss only on the target tokens, masking out the guide and reference tokens.  
 > ... the references must be placed correctly inside the latent sequence, with the proper source_id.
 
+djbfilmz
+> HuMo seems to have better fidelity than InfiniteTalk, however, Talk seems to have better lipsync perfomance for me.
+
 ## 2026.05
 
 > I cloned by voice with Fish audio ai because its way better than eleven labs, and use that for the voice over
