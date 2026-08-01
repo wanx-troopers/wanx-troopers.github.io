@@ -1,5 +1,15 @@
 ﻿# LTX 2.3
 
+## 2026.07
+
+Support merged into Comfy UI for PrunaVAED - a 1.7x faster VAE for LTX 2.3 promising nearly identical quality to the stock one.
+
+[GH:drozbay/MaskVidExperiments](https://github.com/drozbay/MaskVidExperiments) declared ready for use - crop out masked subject from video, process and paste back without jitter - inpainting for LTX and beyond.
+
+Unmerged [PR#14370](https://github.com/Comfy-Org/ComfyUI/pull/14370) for Sam3D-Body is widely discussed - seems to have some relation to colored bodies by Kijai.
+
+## LTX 2.3 Main
+
 LTX 2.3 uses Gemma 3 12B as multi-modal text encoder. Gemma is by Google.
 It might be advisable to set width and height as multiples of 32 (128 was suggested to fix some sort of issues).
 Frame count native to LTX 2.3 is `1 + 8 * N` since 1st frame is encoded separately and subsequent ones have

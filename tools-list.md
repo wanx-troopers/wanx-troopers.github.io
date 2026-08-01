@@ -262,3 +262,21 @@ Experimental implementation for ComfyUI: [GH:kijai/ComfyUI-Sapiens2](https://git
 
 > Q: DWpose ... deprecated now, considering we have Sapiens2?
 > A: I'd keep it around. Sapiens looks really good tho
+
+## PR-14370
+
+Discussion of [PR#14370](https://github.com/Comfy-Org/ComfyUI/pull/14370) for Sam3D-Body
+
+PhoenixResin asking questions:
+
+Q: Is there anyway you can share the blender file of this sam3body rigged in Blender? I would rather prefer to have the mesh animated in Blender. Is the face rigged as well in Blender?
+
+A: there's GLB or BVH export too
+
+Q: Does the BHV export contain the mesh rigged with a skeleton?
+
+A: BVH is only animation, GLB has both
+
+A: Face is blendshapes, it's the [MHR rig](https://github.com/facebookresearch/MHR)
+
+Q: Not familiar with that rig. The ones I know are mixamo, ue5 and rigify. Looking forward to when it gets merged. Will have to study the rig if I need to animate or mocap  it in Blender

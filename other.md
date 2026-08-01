@@ -2,6 +2,8 @@
 
 ## Promising For Comfy
 
+* [Momentum Human Rig aka MHR](https://github.com/facebookresearch/MHR) Python package for ... a parametric 3D human body model with identity, pose, and facial expression parameterization
+face is blendshapes"
 * [sagipolaczek.github.io/Sync-LoRA](https://sagipolaczek.github.io/Sync-LoRA/) In-Context Sync-LoRA for Portrait Video Editing LTX 1?
 * [R:your_blender_blockout_for_ai_video_can_be](https://www.reddit.com/r/comfyui/comments/1uez0nb/your_blender_blockout_for_ai_video_can_be/) controlling the camera in Seedance with crude 3d rectangles to control camera and blocking
 * [aliothchen.github.io/projects/ST-DRC](https://aliothchen.github.io/projects/ST-DRC/), [issues#1](https://github.com/AliothChen/ST-DRC/issues/1)
