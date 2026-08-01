@@ -266,6 +266,7 @@ Experimental implementation for ComfyUI: [GH:kijai/ComfyUI-Sapiens2](https://git
 ## PR-14370
 
 Discussion of [PR#14370](https://github.com/Comfy-Org/ComfyUI/pull/14370) for Sam3D-Body
+Seems related to [HF:Kijai/LTX2-IC-LoRAs](https://huggingface.co/Kijai/LTX2-IC-LoRAs/tree/main)
 
 PhoenixResin asking questions:
 
@@ -280,3 +281,5 @@ A: BVH is only animation, GLB has both
 A: Face is blendshapes, it's the [MHR rig](https://github.com/facebookresearch/MHR)
 
 Q: Not familiar with that rig. The ones I know are mixamo, ue5 and rigify. Looking forward to when it gets merged. Will have to study the rig if I need to animate or mocap  it in Blender
+
+`Redner 3D Body Pose` node seems relevant.

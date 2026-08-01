@@ -2,6 +2,7 @@
 
 ## Promising For Comfy
 
+* [Parallel Decoding Distillation, PDD](https://fxtwitter.com/ArashVahdat/status/2082489307651322014/video/1)
 * [Momentum Human Rig aka MHR](https://github.com/facebookresearch/MHR) Python package for ... a parametric 3D human body model with identity, pose, and facial expression parameterization
 face is blendshapes"
 * [sagipolaczek.github.io/Sync-LoRA](https://sagipolaczek.github.io/Sync-LoRA/) In-Context Sync-LoRA for Portrait Video Editing LTX 1?

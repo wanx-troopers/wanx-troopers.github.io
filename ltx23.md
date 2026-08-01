@@ -8,6 +8,13 @@ Support merged into Comfy UI for PrunaVAED - a 1.7x faster VAE for LTX 2.3 promi
 
 Unmerged [PR#14370](https://github.com/Comfy-Org/ComfyUI/pull/14370) for Sam3D-Body is widely discussed - seems to have some relation to colored bodies by Kijai.
 
+Hashu implemented a custom node inspired by Joy-Ai Echo; Multi-scene with memory across video to video; concept of "memory banks" relevant
+> switch to using Lcm instead of Euler, that’s closer to the echo code. I stopped getting the bleeding of previous memory when I switched to it 
+
+Some sort of relight LoRA is making rounds but reception is luke-warm, it doesn't follow the ref ball.
+
+Kijai released "LTX Scail" LoRA
+
 ## LTX 2.3 Main
 
 LTX 2.3 uses Gemma 3 12B as multi-modal text encoder. Gemma is by Google.
@@ -99,6 +106,15 @@ Settings to view linear EXR created with this LoRa in AfterEffects with OCIO eng
 herpderpleton's model versions for 3090: [herpderpleton-model-versions](screenshots/ltx/herpderpleton-model-versions.webp) David Show:
 "btw, running dev with the distill lora will produce better results at the same step count. it will take a little longer, but it will be in the region of 30-40 seconds. You're also using the older distill model."
 
+## HDR-Like
+
+HDR-Like LoRA-s e.g. auxiliary tools for working on real videos
+
+- [HF:FuzzPuppy/LTX-2.3-Black-Magic-LoRA](https://huggingface.co/FuzzPuppy/LTX-2.3-Black-Magic-LoRA)
+  adds details to underexposed dark videos.
+- [HF:JanKanta/ltx-2.3-22b-ic-lora-lens_remover](https://huggingface.co/JanKanta/ltx-2.3-22b-ic-lora-lens_remover)
+  "removes lens flares, veiling glare,lens dirt and another optical artifacts"
+
 ## Prompt Relay
 
 Prompt relay is a new technique which sub-prompts to specific parts of the video only though attention masking.
@@ -149,9 +165,14 @@ WhatDreamsCost's [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/W
 - ltx-2.3-22b-dev, separate distilled model, alternatively a distillation LoRa
 - ltx-2.3-spatial-upscaler-x2-1.1, ltx-2.3-spatial-upscaler-x1.5-1.0, ltx-2.3-temporal-upscaler-x2-1.0
 
-Int8 for 30xx
+[HF:Kijai/LTX2.3_comfy:diffusion_models](https://huggingface.co/Kijai/LTX2.3_comfy/tree/main/diffusion_models)
+
+Int8 for 30xx, Int4
 
 - [HF:Kijai:ltx-2.3-22b-distilled-1.1_transformer_only_int8_convrot](https://huggingface.co/Kijai/LTX2.3_comfy/blob/main/diffusion_models/ltx-2.3-22b-distilled-1.1_transformer_only_int8_convrot.safetensors)
+- [HF:Winnougan/LTX-2.3-INT8](https://huggingface.co/Winnougan/LTX-2.3-INT8/tree/main for checkpoints) for checkpoints
+- [HF:Hippotes/LTX-2.3-quants](https://huggingface.co/Hippotes/LTX-2.3-quants/tree/main) RuneX: "Int4 runs great, same as int8 speed ish"
+
 
 Dev + distilled 1.1 LoRA possibly at strength lowered bellow 1.0 seems to be the most advised suggestion.
 
@@ -180,6 +201,7 @@ David Show:
 - [HF:Lightricks/LTX-2.3-22b-IC-LoRA-Water-Simulation](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Water-Simulation) water simulation LoRA - adds lots of water
 - [LTX-2_V2V_Detailer](https://github.com/Lightricks/ComfyUI-LTXVideo/blob/master/example_workflows/2.0/LTX-2_V2V_Detailer.json) detailer WF using looping sampler
 - [HF:fal/LTX-2.3-3DREAL-LoRA](https://huggingface.co/fal/LTX-2.3-3DREAL-LoRA) 3D render to Photoreal
+- [HF:Lightricks/LTX-2.3-22b-IC-LoRA-Clean-Plate](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Clean-Plate) remove ppl from a busy street
 
 Note: [R:big_update_to_the_ltx_trainer_one_framework_many](https://www.reddit.com/r/StableDiffusion/comments/1u8c5ob/big_update_to_the_ltx_trainer_one_framework_many/)
 June 2026 announcement of the new LoRA trainer ( [GH:Lightricks/LTX-2:packages/ltx-trainer](https://github.com/Lightricks/LTX-2/tree/main/packages/ltx-trainer)
@@ -205,6 +227,11 @@ They also provide under LTX-2 umbrella
 > [Fredblis](https://fredbliss.com/): A: I thought the weights were fp32 in ltx. They're not. Use what you have. 
 > I'm upcasting the audio vae to fp32 thougy. That's the important part. It wont break it if you don't upcast
 > but ... better fidelity ... Although I think comfy auto does this 
+
+## Almost Core
+
+[HF:TenStrip/LTX2.3_DMD_Lora](https://huggingface.co/TenStrip/LTX2.3_DMD_Lora) an alternative to distillation LoRA?
+RuneX gave positive feedback at strength of 0.6
 
 ## Nodes Of Interest
 
@@ -681,6 +708,12 @@ Draken:
     "for v2v lora application, outpainting for example, the limit is how many video frames you can load from your source ... 2 minutes"
     work is ongoing on enhacing native context window nodes too, to which this is similar
   - [GH:ckinpdx/ckinpdx_comfyui_workflows:LTX23](https://github.com/ckinpdx/ckinpdx_comfyui_workflows/tree/main/LTX23) workflows
+  - [LTX23_AVLoopingSampler_MSRlorawlatentinpaint](workflows/ltx/ckinpdx-LTX23_AVLoopingSampler_MSRlorawlatentinpaint.json)
+    workflow which allows to track a face, replace it with noise and inpaint a different face using MSR LoRa and image reference;
+    "with the looping sampler keeping the same character through a long generation is easy with the msr and id lora.
+    multiple subjects and multiple voices within the same generation was trickier. while they still need to be segregated
+    by looping chunk ive made it so conditioning can be referenced per chunk within a generation, to include msr reference
+    images and reference audio for the talkvid lora."
 - WhatDreamsCost's [GH:WhatDreamsCost/WhatDreamsCost-ComfyUI](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI) poweful node for audio and video loading and trimming (generated with help from Gemini),
   including the new `LTX Director` - I2V, T2V, FLFF, Prompt Relay, Custom Audio - [tutorial 1](https://www.youtube.com/watch?v=fZgtkRcu4_k), [tutorial 2](https://www.youtube.com/watch?v=vM60pJJqqEI)
   based on Prompt Relay; note [PR#60](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI/pull/60/changes)
@@ -690,6 +723,10 @@ Draken:
 - Burgstall created an adapter node to vary the strength of IC lora application along the time axis;
   [GH:Burgstall-labs/ComfyUI-Gradual-IC-LoRA](https://github.com/Burgstall-labs/ComfyUI-Gradual-IC-LoRA),
   [R:i_made_a_nodepack_to_gradually_apply_iclora/](https://www.reddit.com/r/StableDiffusion/comments/1u5gxwf/i_made_a_nodepack_to_gradually_apply_iclora/)
+- [GF:melMass/comfy_mtb](https://github.com/melMass/comfy_mtb) not certain what it is but getting traction 2026.07
+- [GH:TenStrip/10S-Comfy-nodes](https://github.com/TenStrip/10S-Comfy-nodes) tiled latent upscaler,
+  [HF:Alissonerdx/LTX-Best-Face-ID](https://huggingface.co/Alissonerdx/LTX-Best-Face-ID) combined with i2v conditioning,
+  references for i2v, regularizers, etc
 
 ### Fredbliss' Node Packs, LoRA-s and WF-s
 
@@ -777,6 +814,7 @@ Created an extensive suite of Claude skills and other tooling to work both on co
   [ap-ltx23_masked_ref_inpaint_v1](workflows/ltx/ap-ltx23_masked_ref_inpaint_v1.json);
 - BFS LoRa "which does head swapping" [HF:Alissonerdx/BFS-Best-Face-Swap-Video](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap-Video)
 - "There's also a motion transfer LoRa that I trained, it works well for slow-motion videos but is bad for fast-motion videos"
+- [GH:alisson-anjos/ComfyUI-BFSNodes](https://github.com/alisson-anjos/ComfyUI-BFSNodes) "general video composition helpers and the LTXV Edit Anything nodes required by Edit Anything LoRAs"
 
 ### More LoRa-s and WF-s
 
@@ -786,6 +824,7 @@ Created an extensive suite of Claude skills and other tooling to work both on co
   wf: [LTX-2.3_Upscale_IC-LoRA](workflows/ltx/Zlikwid-LTX-2.3_Upscale_IC-LoRA.json)
 - Cseti's [HF:Cseti/LTX2.3-22B_ReStyle_IC-LoRA](https://huggingface.co/Cseti/LTX2.3-22B_ReStyle_IC-LoRA)
 - Defu-Shaun's [LTX 2.3 ICL: Obscura Remova](https://civitai.com/models/2590144?modelVersionId=2909707)
+  Note: Lightricks/LTX-2.3-22b-IC-LoRA-Clean-Plate mentioned above has similar intent
 - LTX 2.3 Fight LoRa [CA:2489766/ltx-23-fight](https://civitai.com/models/2489766/ltx-23-fight) - Torny advices to combine with VBVR V3 at 0.75 strength to further help with motion, also middle frames via guides
 - Defu-Shaun working on ltx23_obscura_remova LoRa, apparently not shared as of now
 - David Show
@@ -808,6 +847,7 @@ Created an extensive suite of Claude skills and other tooling to work both on co
   - Sir_Axe's [HF:siraxe/MergeGreen_IC-lora_ltx2.3](https://huggingface.co/siraxe/MergeGreen_IC-lora_ltx2.3) merge one video with another; apparently some green frame is involved - as a separator?..;
     "takes couple of seed tries and description of what changes, but it's also not perfect but better than just inserting start/end frames imo"
   - [HF:joyfox/LTX-2.3-Transition-LORA](https://huggingface.co/joyfox/LTX-2.3-Transition-LORA) suggested by RuneX
+  - [HF:systms/SYSTMS-FLW-IC-LORA-LTX-2.3](https://huggingface.co/systms/SYSTMS-FLW-IC-LORA-LTX-2.3)
   - LTX-2.3-22b_RL_Lora_Merge?? used by avataraim
 - Oumoumad [HF:oumoumad/models](https://huggingface.co/oumoumad/models)
   - Refocus LoRa: [HF:oumoumad/LTX-2.3-22b-IC-LoRA-ReFocus](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-ReFocus) - undoes shallow depth of field; only works as detailer if source video has been blurred first
@@ -875,6 +915,7 @@ Created an extensive suite of Claude skills and other tooling to work both on co
 - RuneX recommended
   - [HF:100percentrobot/LTX-2.3-Audio-Reactive-LORA](https://huggingface.co/100percentrobot/LTX-2.3-Audio-Reactive-LORA)
   - RealisDance - similar to wan animate? charcter replacment?..
+    [HF:Kijai/LTX2-IC-LoRAs](https://huggingface.co/Kijai/LTX2-IC-LoRAs/tree/main)
   - "video restoration", aritfiact fixing?
     - [HF:Zlikwid/LTX_2.3_Upscale_IC_Lora](https://huggingface.co/Zlikwid/LTX_2.3_Upscale_IC_Lora)
     - [HF:joyfox/LTX2.3-ICEdit-Insight](https://huggingface.co/joyfox/LTX2.3-ICEdit-Insight) "remove text/subtitles/watermark"
@@ -889,7 +930,7 @@ Created an extensive suite of Claude skills and other tooling to work both on co
 - [HF:joyfox/LTX2.3-ICEdit-Insight](https://huggingface.co/joyfox/LTX2.3-ICEdit-Insight) a family of LoRa-s for video restoration and cleanup - deblur, remove subtitles etc;
   extra details: [GH:Valiant-Cat/LTX2-ICEdit-Insight](https://github.com/Valiant-Cat/LTX2-ICEdit-Insight); edit-insight which comes as a full model merge - might be a re-use of a pre-existing LoRa
 - Luxe Sensual
-- Sulphur, 10euros
+- Sulphur, 10euros, [HF:TenStrip](https://huggingface.co/TenStrip)
 
 ### Non LTX 2.3 LoRa-s Relevant to LTX 2.3
 

@@ -1,5 +1,9 @@
 ﻿# Hints On LTX 2.3
 
+## 2026.07
+
+`LTX2 LoRA Loader Advanced` allows tweaking how much IC LoRA impacts audio
+
 ## 2026.05
 
 [X:2054900232693973279](Nekodificador/https://x.com/Nekodificador/status/2054900232693973279) controlling LTX 2.3 animation with voice.

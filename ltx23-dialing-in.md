@@ -137,6 +137,26 @@ BNP4535353
 > For me right now, 1920 1080 resolution with two stages + 50fps is the basic approach that can initially ensure no strange results.
 > And setting OmniRL [OmniNFT] Lora to 2 seems to have become standard practice, as it increases LTX's intelligence.
 
+Huddadudd suggested [ManulSigmas](screenshots/huddadudd-ManulSigmas.webp),
+madlyR suggested [madlyR-sigmas1.webp](screenshots/madlyR-sigmas1.webp), [madlyR-sigmas2](screenshots/madlyR-sigmas2.webp),
+[madlyR-sigmas3](screenshots/madlyR-sigmas3.webp).
+
+MadlyR:
+> In the first pass of the dev model, I use a slightly different Linear Quadratic curve slope - it’s still linear-quadratic,
+> but I make the transition less steep in the critical section where sigmas drops sharply,
+> and I shift the points on the curve slightly so that there are more transitions there.
+> With 24 steps, this isn’t noticeable, but with 14–16 steps, additional points appear in
+> that section compared to the typical curve.
+
+- [sigmas-explained24](screenshots/madlyR-sigmas-explained24.webp)
+- [sigmas-explained14](screenshots/madlyR-sigmas-explained14.webp)
+
+huddadudd::
+
+> I'm generally at .4/.02
+> so similar;
+> I don't denoise at all though
+
 ## Samplers
 
 > res_2s is good with teeth

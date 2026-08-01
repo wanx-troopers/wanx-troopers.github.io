@@ -2,6 +2,13 @@
 
 Main article: [LTX 2.3](ltx23.md)
 
+## 2026.07
+
+> Q: `LTXVAddGuideMulti` ... if I change the strength of the second frame ... it increases the inference time by a lot .. ?  
+> A: it's expected because the strength is set by attention mask, and sageattn doesn't support attn masks, so it falls back to sdpa  
+> we could probably just implement attn mask into sage in comfy-kitchen  
+> it's already done for sm89 .. the nvidia dev started it .. it's still missing older archs I think
+
 ## 2026.06
 
 Huddadudd: "playing with stuff like this. the stg and modality scaling" "the stg values might help with the messiness and the strength of the effect"
