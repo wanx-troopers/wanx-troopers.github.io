@@ -233,3 +233,7 @@ Youtube tutorial on installing SageAttention 2.2 on Windows - unconfirmed, advic
 > the quality loss from sage is so small in most cases that you can more than offset it from the speed gain
 
 > Flash Attention is something you have to install if you want to use the actual flash attention, the sdpa flash is different thing
+
+## Various Useful Node Packs
+
+AnythingEverywhere - model, clip, and vaes

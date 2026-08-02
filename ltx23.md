@@ -639,6 +639,9 @@ Hicho:
 
 ## ID LoRa
 
+Update: Just a talking head LoRA?.. [HF:Comfy-Org/ltx-2.3:split_files/loras](https://huggingface.co/Comfy-Org/ltx-2.3/tree/main/split_files/loras)
+ID-Lora has a node in comfy standard. [GH:TenStrip/10S-Comfy-nodes](https://github.com/TenStrip/10S-Comfy-nodes) has extra support for ID Lora.
+
 ID-LoRa apparently provides both visual and audio character likeness. Additionally it seems to support timed prompting otherwise not available on vanilla LTX 2.3.
 Because one of the checkpoints is called "talkvid" ID-LoRa is also referred to as "talkvid".
 
@@ -677,6 +680,11 @@ Draken:
 > it helps in the sense that the lora itself might do better at perversing the ID in i2v mode though
 
 [HF:Lightricks/LTX-2.3-22b-IC-LoRA-LipDub](Additionally [HF:https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-LipDub) is related IC LoRa.
+
+Other talking head workflows:
+[HF:RuneXX/LTX-2.3-Workflows:Talking-Avatar-TTS](https://huggingface.co/RuneXX/LTX-2.3-Workflows/tree/main/Talking-Avatar-TTS),
+[HF:RuneXX/LTX-2.3-Workflows/tree/main/Custom-Audio](https://huggingface.co/RuneXX/LTX-2.3-Workflows/tree/main/Custom-Audio), 
+[HF:elix3r/LTX-2.3-22b-AV-LoRA-talking-head ](https://huggingface.co/elix3r/LTX-2.3-22b-AV-LoRA-talking-head). 
 
 ## Basics
 
@@ -849,6 +857,9 @@ Created an extensive suite of Claude skills and other tooling to work both on co
   - [HF:joyfox/LTX-2.3-Transition-LORA](https://huggingface.co/joyfox/LTX-2.3-Transition-LORA) suggested by RuneX
   - [HF:systms/SYSTMS-FLW-IC-LORA-LTX-2.3](https://huggingface.co/systms/SYSTMS-FLW-IC-LORA-LTX-2.3)
   - LTX-2.3-22b_RL_Lora_Merge?? used by avataraim
+- LTX 2.3 Foley LoRAs
+  - [GH:Lightricks/LTX-2.3-22b-LoRA-Foley-V2A](https://huggingface.co/Lightricks/LTX-2.3-22b-LoRA-Foley-V2A/tree/main)
+  - [GH:FuzzPuppy/LTX-2.3-Foley-LoRA](https://huggingface.co/FuzzPuppy/LTX-2.3-Foley-LoRA)
 - Oumoumad [HF:oumoumad/models](https://huggingface.co/oumoumad/models)
   - Refocus LoRa: [HF:oumoumad/LTX-2.3-22b-IC-LoRA-ReFocus](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-ReFocus) - undoes shallow depth of field; only works as detailer if source video has been blurred first
   - [HF:oumoumad/LTX-2.3-22b-IC-LoRA-Uncompress](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Uncompress)

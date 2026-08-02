@@ -2,6 +2,11 @@
 
 Main article: [LTX 2.3](ltx23.md)
 
+## 2026.08
+
+MysteryShack:
+> it's worth it, the multimodal guider. That was the only way I ever got really good video synced with audio
+
 ## 2026.07
 
 > Q: `LTXVAddGuideMulti` ... if I change the strength of the second frame ... it increases the inference time by a lot .. ?  
