@@ -1,4 +1,4 @@
-# Dialing In LTX 2.3 Workflow
+ï»¿# Dialing In LTX 2.3 Workflow
 
 Main article: [LTX 2.3](ltx23.md)
 
@@ -143,10 +143,10 @@ madlyR suggested [madlyR-sigmas1.webp](screenshots/madlyR-sigmas1.webp), [madlyR
 [madlyR-sigmas3](screenshots/madlyR-sigmas3.webp), [madlyR-sigmas4](screenshots/madlyR-sigmas4.webp).
 
 MadlyR:
-> In the first pass of the dev model, I use a slightly different Linear Quadratic curve slope - it’s still linear-quadratic,
+> In the first pass of the dev model, I use a slightly different Linear Quadratic curve slope - itâ€™s still linear-quadratic,
 > but I make the transition less steep in the critical section where sigmas drops sharply,
 > and I shift the points on the curve slightly so that there are more transitions there.
-> With 24 steps, this isn’t noticeable, but with 14–16 steps, additional points appear in
+> With 24 steps, this isn't noticeable, but with 14-16 steps, additional points appear in
 > that section compared to the typical curve.
 
 - [sigmas-explained24](screenshots/madlyR-sigmas-explained24.webp)

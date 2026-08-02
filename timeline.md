@@ -1,4 +1,4 @@
-# News
+﻿# News
 
 2026.07 Open weights for Flux video and MiniMax new H3 have been promised
 
