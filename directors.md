@@ -16,6 +16,8 @@ in pages for individual AI video generation models.
 
 Here is an article presenting a node based on WhatDreamsCosts's original: [R:just_released_ltx_director_motion_brush_nodes_for](https://www.reddit.com/r/comfyui/comments/1uf4441/just_released_ltx_director_motion_brush_nodes_for/)
 
+madlyR is using CGlide fork of LTX Director 2.
+
 ## JohnDopamine
 
 ### WanLooperDesigner

@@ -81,6 +81,7 @@ huddadudd:
 > I prefer sampling to high frame rate and even resolution, i do most of mine at 1536x832  
 > in post i  clean up with a neat video pass
 
+[Huddadudd-ZIT+WanSecondPasss+WanFaceDetailer](workflows/ltx/Huddadudd-ZIT+WanSecondPasss+WanFaceDetailer.json)
 
 ## 2026.04.24
 
@@ -139,7 +140,7 @@ BNP4535353
 
 Huddadudd suggested [ManulSigmas](screenshots/huddadudd-ManulSigmas.webp),
 madlyR suggested [madlyR-sigmas1.webp](screenshots/madlyR-sigmas1.webp), [madlyR-sigmas2](screenshots/madlyR-sigmas2.webp),
-[madlyR-sigmas3](screenshots/madlyR-sigmas3.webp).
+[madlyR-sigmas3](screenshots/madlyR-sigmas3.webp), [madlyR-sigmas4](screenshots/madlyR-sigmas4.webp).
 
 MadlyR:
 > In the first pass of the dev model, I use a slightly different Linear Quadratic curve slope - it’s still linear-quadratic,
