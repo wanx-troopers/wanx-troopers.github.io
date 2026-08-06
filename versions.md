@@ -2,6 +2,10 @@
 
 The page needs a brush-up. Bugs referenced have been fixed or worked around. Still might be useful info.
 
+## 2026.07
+
+H3: Python 3.12+, Cuda 13 recommended, PyTorch 2.10-12
+
 ## 2026.06 Speed-Up Nodes
 
 - `Patch Triton VAE` from `KJNodes` - less VRAM and faster decode on 4090.

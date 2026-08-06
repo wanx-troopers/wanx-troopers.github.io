@@ -1,6 +1,8 @@
 ﻿# News
 
-2026.07 Open weights for Flux video and MiniMax new H3 have been promised
+2026.07.03 [MiniMax H3](h3.md) has been released
+
+2026.07 Open weights for Flux video have been promised
 
 2026.06.23 [Krea-2](krea.md) weights released
 
