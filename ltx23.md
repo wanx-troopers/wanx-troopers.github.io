@@ -15,6 +15,8 @@ Some sort of relight LoRA is making rounds but reception is luke-warm, it doesn'
 
 Kijai released "LTX Scail" LoRA
 
+[YT:38ceSbq4YyU&t=16s](https://www.youtube.com/watch?v=38ceSbq4YyU&t=16s) a video on upscaling H3-generated videos with LTX to fix very long H3 generation times for 10-15sec videos.
+
 ## LTX 2.3 Main
 
 LTX 2.3 uses Gemma 3 12B as multi-modal text encoder. Gemma is by Google.
