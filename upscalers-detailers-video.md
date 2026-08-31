@@ -2,6 +2,8 @@
 
 ## 2026
 
+[Drozbay](hidden-knowledge.md#drozbay) has created useful crop and detail nodes
+
 [GH:lquesada/ComfyUI-Inpaint-CropAndStitch](https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch) node is reported to work well with Bernini
 
 ## NVidiea Super Resolution
@@ -21,6 +23,9 @@ Can also do images, has been used on z-image-turbo produced images.
 ...
 
 Native ComfyUI support being added: [PR#14110](https://github.com/Comfy-Org/ComfyUI/pull/14110)
+
+- [GH:LacklusterOpsec/ComfyUI-Lackluster-SeedVR2-VideoUpscaler](https://github.com/LacklusterOpsec/ComfyUI-Lackluster-SeedVR2-VideoUpscaler)
+- [GH:vrgamegirl19/VRGDG-SeedVR2-TensorRT-Studio](https://github.com/vrgamegirl19/VRGDG-SeedVR2-TensorRT-Studio) - as a standalone up using TensorRT
 
 ## FL13
 
